@@ -5,6 +5,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="R5MjYmM1PcvrzXa95Gh0JwuT2o0PCLWlXHl0vb5JgV4" />
         {/* Google Analytics */}
         {GA_TRACKING_ID && (
           <>
