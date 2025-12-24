@@ -29,7 +29,8 @@ export default function FAQ({
   
   return (
     <section className={`py-[50px] ${bgClass} ${className}`}>
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="flex containers w-full justify-center">
+        <div className="max-w-4xl w-full">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="bg-white text-[#666666] hover:bg-white font-normal px-4 py-1.5 mb-6 border border-[#E8E8E8]">
             {badgeText}
@@ -68,6 +69,7 @@ export default function FAQ({
         ) : (
           <p className="text-center text-[#666666]">No FAQs available.</p>
         )}
+        </div>
       </div>
     </section>
   )

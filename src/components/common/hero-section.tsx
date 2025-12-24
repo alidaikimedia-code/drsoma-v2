@@ -67,9 +67,9 @@ export default function HeroSection({
   const isHome = variant === "home"
   
   return (
-    <section className={`relative ${isHome ? 'bg-gradient-to-b from-[#FAFAF9] to-white py-16 md:py-20 overflow-hidden' : 'bg-gradient-to-br from-[#FAFAF9] via-white to-[#FEF3EE] py-20 md:py-28 lg:py-32'}`}>
-      <div className={`container mx-auto ${isHome ? 'px-4' : ''} relative`}>
-        <div className={`grid lg:grid-cols-2 ${isHome ? 'gap-12' : 'gap-16 lg:gap-20'} items-center`}>
+    <section className={`relative ${isHome ? 'bg-gradient-to-b from-[#FAFAF9] to-white py-[50px] overflow-hidden' : 'bg-gradient-to-br from-[#FAFAF9] via-white to-[#FEF3EE] py-[50px]'}`}>
+      <div className={`flex containers w-full ${isHome ? 'px-4' : ''} relative`}>
+        <div className={`grid lg:grid-cols-2 ${isHome ? 'gap-12' : 'gap-16 lg:gap-20'} items-center w-full`}>
           {/* Left content */}
           <div className={`${isHome ? 'text-center lg:text-left' : 'text-center lg:text-left space-y-8'}`}>
             {badgeText && (

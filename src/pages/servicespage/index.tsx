@@ -302,7 +302,7 @@ const Services = () => {
               isVisible('section-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
               <Link
-                href={"/servicespage/breast-lift"}
+                href={"/breast/breast-lift-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.1s' : '0s' }}
               >

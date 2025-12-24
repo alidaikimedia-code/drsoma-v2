@@ -57,13 +57,13 @@ export default function CTASection({
   
   return (
     <section className={isHome
-      ? "relative bg-gradient-to-b from-white to-[#FAFAF9] py-16 md:py-20"
-      : "py-20 md:py-24 lg:py-28 bg-gradient-to-br from-[#1A1A1A] via-[#2A2A2A] to-[#1A1A1A]"
+      ? "relative bg-gradient-to-b from-white to-[#FAFAF9] py-[50px]"
+      : "py-[50px] bg-gradient-to-br from-[#1A1A1A] via-[#2A2A2A] to-[#1A1A1A]"
     }>
-      <div className={`container mx-auto ${isHome ? 'px-4' : 'text-center'}`}>
+      <div className={`flex containers w-full ${isHome ? 'px-4' : 'text-center'}`}>
         <div className={isHome
-          ? "grid lg:grid-cols-2 gap-12 items-center"
-          : "space-y-8 max-w-4xl mx-auto"
+          ? "grid lg:grid-cols-2 gap-12 items-center w-full"
+          : "space-y-8 max-w-4xl mx-auto w-full"
         }>
           {/* Image (home page only) */}
           {isHome && image && (

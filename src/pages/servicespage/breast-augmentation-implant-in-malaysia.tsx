@@ -317,7 +317,7 @@ const BreastAugmentationImplant = () => {
             title: "Breast Lift",
             description: "Restore youthful breast position and shape with advanced lift techniques",
             image: "/images/breast_lift.png",
-            href: "/servicespage/breast-lift",
+            href: "/breast/breast-lift-malaysia",
             badge: "Related",
             badgeColor: "primary"
           },
