@@ -333,7 +333,7 @@ const BreastAugmentationImplant = () => {
             title: "Breast Reduction",
             description: "Reduce breast size for comfort and improved proportions",
             image: "/images/safe_breast_reduction.png",
-            href: "/servicespage/safe-breast-reduction-in-malaysia",
+            href: "/breast/breast-reduction-malaysia",
             badge: "Popular",
             badgeColor: "blue"
           },

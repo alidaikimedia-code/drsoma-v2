@@ -338,7 +338,7 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/safe-breast-reduction-in-malaysia"}
+                href={"/breast/breast-reduction-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.3s' : '0s' }}
               >

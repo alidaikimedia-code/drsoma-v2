@@ -2080,9 +2080,14 @@ export default function BreastTreatmentPage({ treatment }: PageProps) {
 }
 
 export async function getStaticPaths() {
-  const paths = Object.keys(breastTreatmentsData as Record<string, TreatmentData>).map((slug) => ({
-    params: { slug },
-  }))
+  // Exclude slugs that have their own static pages
+  const excludedSlugs = ['breast-reduction-malaysia', 'fat-transfer-breast-augmentation-malaysia'];
+
+  const paths = Object.keys(breastTreatmentsData as Record<string, TreatmentData>)
+    .filter((slug) => !excludedSlugs.includes(slug))
+    .map((slug) => ({
+      params: { slug },
+    }))
 
   return {
     paths,
