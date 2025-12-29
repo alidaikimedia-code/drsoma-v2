@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Head from "next/head";
 import { getFullUrl } from "@/utils/helper";
 
@@ -138,7 +138,7 @@ const About = () => {
                 isVisible('section-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2">
-                  <Image
+                  <BaseImage
                     src="/images/dr_soma_small_pic.png"
                     width={140}
                     height={140}
@@ -217,7 +217,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/highly_skilled_doctor.png" 
                     width={180} 
                     height={180} 
@@ -230,7 +230,7 @@ const About = () => {
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/aesthetic_services.png" 
                     width={180} 
                     height={180} 
@@ -243,7 +243,7 @@ const About = () => {
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/trained_staffs.png" 
                     width={180} 
                     height={180} 
@@ -256,7 +256,7 @@ const About = () => {
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/doctor_patient_relationship.png" 
                     width={180} 
                     height={180} 
@@ -269,7 +269,7 @@ const About = () => {
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/contactability.png" 
                     width={180} 
                     height={180} 
@@ -282,7 +282,7 @@ const About = () => {
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
-                  <Image 
+                  <BaseImage 
                     src="/images/strategic_location.png" 
                     width={180} 
                     height={180} 

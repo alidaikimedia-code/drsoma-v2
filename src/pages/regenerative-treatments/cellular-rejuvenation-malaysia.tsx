@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import React from "react";
 import RelatedTopicsGrid from "@/components/related-topics-grid";
 
@@ -19,7 +19,7 @@ const CellularRejuvenationTherapies = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
-                <Image
+                <BaseImage
                   src="/images/face_image.png"
                   width={500}
                   height={350}

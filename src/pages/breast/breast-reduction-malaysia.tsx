@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -111,7 +111,7 @@ export default function BreastReductionMalaysia() {
 
             {/* Right Image */}
             <div data-animate="hero-image" className={`relative h-[600px] w-full rounded-3xl overflow-hidden transition-all duration-700 delay-200 ${isVisible('hero-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <Image
+              <BaseImage
                 src="/images/safe_breast_reduction.png"
                 alt="Dr. Soma performing breast reduction surgery"
                 fill

@@ -1,3 +1,13 @@
+// Base path for subdirectory deployment (e.g., '/staging')
+// Change this value when deploying to a different subdirectory or use '' for localhost/root
+export const BASE_PATH = '';
+
+// Helper to get asset URL with basePath for CSS backgrounds
+export const getAssetPath = (path: string): string => {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${BASE_PATH}${cleanPath}`;
+};
+
 export function currencyFormatter(amount: number, currency = "INR") {
     const formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',

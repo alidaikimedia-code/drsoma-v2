@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl } from "@/utils/helper";
@@ -378,7 +378,7 @@ const MaleHub = () => {
             }`}>
               <div className="relative">
                 <div className="relative w-[400px] h-[500px] rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
-                  <Image
+                  <BaseImage
                     src="/images/Male Cosmetic Surgery.jpg"
                     fill
                     alt="Male Cosmetic Surgery"
@@ -541,7 +541,7 @@ const MaleHub = () => {
 
                   {/* Image */}
                   <div className="relative h-[240px] overflow-hidden">
-                    <Image
+                    <BaseImage
                       src={treatment.image}
                       fill
                       alt={treatment.title}
@@ -667,7 +667,7 @@ const MaleHub = () => {
             <div className={`flex-1 ${isVisible("section-4") ? "animate-slideInLeft" : "opacity-0"}`}>
               <div className="relative">
                 <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/images/natural.jpg"
                     fill
                     alt="Natural Results for Men"

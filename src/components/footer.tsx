@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import EmailIcon from "../../public/icons/email_dr_icon.svg";
 import PhoneIcon from "../../public/icons/cell_dr_icon.svg";
 import YoutubeIcon from "../../public/icons/youtube.svg";
@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex w-full flex-col">
               <div className="flex w-full gap-50 lg:gap-[92px] items-center py-50 lg:!flex-nowrap">
                 <div className="flex">
-                  <Image src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
+                  <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
                 </div>
                 <div className="flex gap-50 lg:gap-[92px] w-full max-w-[934px] justify-start md:justify-center">
                   <div className="flex flex-col gap-10 w-full max-w-[125px]">

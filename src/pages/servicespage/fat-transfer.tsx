@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import React, { useState } from "react";
 import CloseIcon from "../../../public/icons/close_new_icon.svg";
 import PlusIcon from "../../../public/icons/plus_new_icon.svg";
@@ -51,7 +51,7 @@ const FatTransfer = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
-                <Image
+                <BaseImage
                   src="/images/liposuction.png"
                   width={500}
                   height={350}
@@ -339,7 +339,7 @@ const FatTransfer = () => {
             title: "6-Pack Enhancement",
             description: "Achieve defined abdominal muscles with surgical enhancement",
             image: "/images/pack_enhancement.png",
-            href: "/servicespage/six-pack-enhancement",
+            href: "/body/six-pack-enhancement-malaysia",
             badge: "Trending",
             badgeColor: "green"
           },
@@ -347,7 +347,7 @@ const FatTransfer = () => {
             title: "Male Breast Reduction",
             description: "Flatter, more masculine chest contour with gynecomastia surgery",
             image: "/images/male_breast_reduction.png",
-            href: "/servicespage/male-breast-reduction",
+            href: "/male/male-breast-reduction-malaysia",
             badge: "Specialized",
             badgeColor: "purple"
           }

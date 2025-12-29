@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -224,7 +224,7 @@ export default function ArmLiposuctionMalaysia() {
 
             {/* Hero Image */}
             <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <Image
+              <BaseImage
                 src="/images/Arm Liposuction.jpg"
                 alt="Arm Liposuction Malaysia"
                 fill
@@ -339,7 +339,7 @@ export default function ArmLiposuctionMalaysia() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
             <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <Image
+              <BaseImage
                 src="/images/Arm Liposuction 1.jpg"
                 alt="Arm Liposuction Consultation"
                 fill

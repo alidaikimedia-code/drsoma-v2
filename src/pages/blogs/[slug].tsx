@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { fetchBlogBySlug, BlogPost } from "@/utils/api";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
-import { getFullUrl } from "@/utils/helper";
+import { getFullUrl, getAssetPath } from "@/utils/helper";
 
 const BlogDetail = () => {
   const router = useRouter();
@@ -220,7 +220,7 @@ const BlogDetail = () => {
       </Head>
 
       {/* Banner Section */}
-      <section className="flex bg-[url(/images/blog_page_banner_image.png)] bg-no-repeat bg-cover py-100 lg:py-[175px]" ref={bannerRef} id="banner">
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef} id="banner">
         <div className="flex containers w-full">
           <div className="flex w-full flex-col gap-[10px] max-w-[528px]">
             <h1 className="text-secondary max-[768px]:!text-[54px] max-[512px]:!text-[42px]">Blog</h1>
@@ -246,7 +246,7 @@ const BlogDetail = () => {
             {/* Blog Image */}
             {safeGetImageUrl(blog) && (
               <div className="w-full h-64 md:h-96 relative rounded-lg overflow-hidden mb-8">
-                <Image
+                <BaseImage
                   src={safeGetImageUrl(blog)}
                   alt={blog.title || 'Blog image'}
                   fill
@@ -260,7 +260,7 @@ const BlogDetail = () => {
             <div className="flex items-center justify-between mb-8 p-4 bg-gray-50 rounded-lg">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 relative rounded-full overflow-hidden">
-                  <Image
+                  <BaseImage
                     src={safeGetAuthorAvatar(blog)}
                     alt={safeGetAuthorName(blog)}
                     fill

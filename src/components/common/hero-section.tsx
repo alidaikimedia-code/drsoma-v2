@@ -1,4 +1,4 @@
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
@@ -202,7 +202,7 @@ export default function HeroSection({
           {image && (
             <div className={`relative ${isHome ? '' : 'hidden lg:block'}`}>
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                <Image
+                <BaseImage
                   src={image}
                   alt={imageAlt || (typeof title === 'string' ? title : 'Hero image')}
                   fill

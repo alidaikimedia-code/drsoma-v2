@@ -1,4 +1,4 @@
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Phone, MessageCircle, ArrowRight } from "lucide-react"
@@ -69,7 +69,7 @@ export default function CTASection({
           {isHome && image && (
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                <Image
+                <BaseImage
                   src={image}
                   alt={imageAlt || title}
                   fill

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import React, { useState } from "react";
 import CloseIcon from "../../../public/icons/close_new_icon.svg";
 import PlusIcon from "../../../public/icons/plus_new_icon.svg";
@@ -50,7 +50,7 @@ const KeloidScarTreatment = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
-                <Image
+                <BaseImage
                   src="/images/keloid_treatment.png"
                   width={500}
                   height={350}

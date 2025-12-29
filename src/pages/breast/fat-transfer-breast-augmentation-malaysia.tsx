@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 
@@ -108,7 +108,7 @@ const FatTransferBreastAugmentation = () => {
           {/* Visual Abstract */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-zinc-100 border border-zinc-100 shadow-2xl">
-              <Image
+              <BaseImage
                 src="/images/fat-transfer-breast-augmentation.jpg"
                 alt="Fat Transfer Breast Augmentation"
                 fill

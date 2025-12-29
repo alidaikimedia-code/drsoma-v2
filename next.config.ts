@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   // Enable static export for live server deployment
   output: 'export',
   trailingSlash: true,
+  // Subdirectory deployment configuration (uncomment for staging deployment)
+  // basePath: '/staging',
+  // assetPrefix: '/staging',
   images: {
     // Required for static export
     unoptimized: true,

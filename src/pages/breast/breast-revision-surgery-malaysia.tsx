@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -452,7 +452,7 @@ export default function BreastRevisionSurgeryMalaysia() {
 
             {/* Hero Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <Image
+              <BaseImage
                 src="/breast/breast-revision.avif"
                 alt="Aesthetic Medical Precision"
                 fill
@@ -618,7 +618,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               {/* Image */}
               <div data-animate="process-image" className={`order-2 lg:order-1 relative transition-all duration-700 ${isVisible('process-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500">
-                  <Image
+                  <BaseImage
                     src="/images/Plastic Surgeon.jpg"
                     alt="Dr. Soma - Plastic Surgeon"
                     fill

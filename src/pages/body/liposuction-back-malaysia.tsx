@@ -1,6 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
-import Link from "next/link"
+import BaseImage from "@/components/BaseImage"
 import { useState, useEffect } from "react"
 
 export default function BackLiposuctionMalaysia() {
@@ -204,7 +203,7 @@ export default function BackLiposuctionMalaysia() {
 
             {/* Hero Image */}
             <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <Image
+              <BaseImage
                 src="/images/Back Liposuction.jpg"
                 alt="Back Liposuction Malaysia"
                 fill
@@ -285,7 +284,7 @@ export default function BackLiposuctionMalaysia() {
 
             {/* Image 2 */}
             <div data-animate="img-2" className={`relative rounded-2xl overflow-hidden shadow-2xl h-[500px] transition-all duration-700 ${isVisible('img-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <Image
+              <BaseImage
                 src="/images/Back Liposuction 2.jpg"
                 alt="Back fitness aesthetic"
                 fill
@@ -332,7 +331,7 @@ export default function BackLiposuctionMalaysia() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image 3 */}
             <div data-animate="img-3" className={`order-2 lg:order-1 relative rounded-2xl overflow-hidden shadow-2xl h-[550px] border border-zinc-800 transition-all duration-700 ${isVisible('img-3') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <Image
+              <BaseImage
                 src="/images/Back Liposuction 1.jpg"
                 alt="Clinic Consultation"
                 fill

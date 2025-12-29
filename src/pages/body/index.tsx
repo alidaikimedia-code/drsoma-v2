@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
-import { getFullUrl } from "@/utils/helper";
+import { getFullUrl, getAssetPath } from "@/utils/helper";
 
 const BodyHub = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -307,7 +307,8 @@ const BodyHub = () => {
 
       {/* ==================== HERO SECTION ==================== */}
       <section
-        className="relative bg-[url(/images/body_background.png)] bg-no-repeat bg-cover bg-center py-20 lg:py-32 overflow-hidden"
+        className="relative bg-no-repeat bg-cover bg-center py-20 lg:py-32 overflow-hidden"
+        style={{ backgroundImage: `url(${getAssetPath('/images/body_background.png')})` }}
         ref={heroRef}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
@@ -373,7 +374,7 @@ const BodyHub = () => {
               isVisible("section-0") ? "animate-slideInRight" : "opacity-0"
             }`}>
               <div className="relative">
-                <Image
+                <BaseImage
                   src="/images/liposuction.png"
                   width={450}
                   height={400}
@@ -428,7 +429,7 @@ const BodyHub = () => {
                 <div className="flex flex-col lg:flex-row gap-8 mb-10 bg-secondary rounded-2xl overflow-hidden">
                   {/* Category Image */}
                   <div className="relative w-full lg:w-[300px] h-[200px] lg:h-auto flex-shrink-0">
-                    <Image
+                    <BaseImage
                       src={category.categoryImage}
                       fill
                       alt={category.category}
@@ -469,7 +470,7 @@ const BodyHub = () => {
                         {/* Image Section with Padding */}
                         <div className="p-4">
                           <div className="relative h-[200px] rounded-xl overflow-hidden">
-                            <Image
+                            <BaseImage
                               src={treatment.image}
                               fill
                               alt={treatment.title}
@@ -651,7 +652,7 @@ const BodyHub = () => {
               isVisible("section-3") ? "animate-slideInRight" : "opacity-0"
             }`}>
               <div className="relative group">
-                <Image
+                <BaseImage
                   src="/images/body_lift.jpg"
                   width={500}
                   height={400}
@@ -674,7 +675,7 @@ const BodyHub = () => {
               isVisible("section-4") ? "animate-slideInLeft" : "opacity-0"
             }`}>
               <div className="relative group">
-                <Image
+                <BaseImage
                   src="/images/dr_soma_pic.png"
                   width={500}
                   height={450}

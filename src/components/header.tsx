@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import ClockIcon from "../../public/icons/clock_icon.svg";
 import MenuIcon from "../../public/icons/menu_icon.svg";
 import MenuCloseIcon from "../../public/icons/menu_close.svg";
@@ -44,7 +44,7 @@ const Header = () => {
           <div className="flex containers w-full">
             <div className="flex w-full justify-between gap-30 items-center">
               <div className="flex">
-                <Image src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
+                <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
               </div>
               <div className="lg:flex hidden gap-40 items-center">
                 <Link href={"/"}>
@@ -87,7 +87,7 @@ const Header = () => {
         <div className="flex flex-col gap-20 w-full">
           <div className="flex w-full justify-between items-center px-30">
             <div className="flex">
-              <Image src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
+              <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
             </div>
             <div className="flex cursor-pointer p-10" onClick={handleSideNav}>
               <MenuCloseIcon />

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { fetchBlogs, BlogPost } from "@/utils/api";
-import { getFullUrl } from "@/utils/helper";
+import { getFullUrl, getAssetPath } from "@/utils/helper";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
@@ -91,7 +91,7 @@ const Blogs = () => {
         <meta name="twitter:image" content={getFullUrl('/images/blog_page_banner_image.png')} />
         <link rel="canonical" href={getFullUrl('/blogs')} />
       </Head>
-      <section className="flex bg-[url(/images/blog_page_banner_image.png)] bg-no-repeat bg-cover py-100 lg:py-[175px]" ref={bannerRef}>
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef}>
         <div className="flex containers w-full">
           <div className={`flex w-full flex-col gap-[10px] max-w-[406px] transition-all duration-700 ${
             isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -137,7 +137,7 @@ const Blogs = () => {
                     style={{ animationDelay: `${(index + 1) * 0.1}s` }}
                   >
                     <div className="relative overflow-hidden">
-                      <Image
+                      <BaseImage
                         src={blog.asset?.imageInfo?.url || blog.asset?.url || "/images/blog_image.png"}
                         alt={blog.asset?.altText || blog.title}
                         width={400}

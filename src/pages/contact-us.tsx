@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Head from "next/head";
 import ContactForm from "@/components/contact-form";
 import { getFullUrl } from "@/utils/helper";
@@ -64,7 +64,7 @@ const ContactUs = () => {
       <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center overflow-hidden" ref={bannerRef}>
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-primary/30">
-          <Image
+          <BaseImage
             src="/images/contact_banner.png"
             alt="Contact Us Banner"
             fill

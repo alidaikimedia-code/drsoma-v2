@@ -1,7 +1,7 @@
 import Certificates from "@/components/certificates";
 import ContactForm from "@/components/contact-form";
 import AnnouncementTicker, { Announcement } from "@/components/announcement-ticker";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import CertificateEightIcon from "../../public/icons/certificate_eight.svg";
 import CertificateElevenIcon from "../../public/icons/certificate_eleven.svg";
 import CertificateFiveIcon from "../../public/icons/certificate_five.svg";
@@ -19,7 +19,7 @@ import PopupModal from "@/components/popup-modal";
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { useRouter } from 'next/router';
-import { getFullUrl } from "@/utils/helper";
+import { getFullUrl, getAssetPath } from "@/utils/helper";
 import { fetchAnnouncements } from "@/utils/api";
 
 const certificateData = [
@@ -147,7 +147,7 @@ const Index = () => {
         <meta name="twitter:image" content={getFullUrl('/images/home_page_banner_image.png')} />
         <link rel="canonical" href={getFullUrl('/')} />
       </Head>
-      <section className="flex bg-[url(/images/home_page_banner_image.png)] bg-no-repeat bg-cover py-100 lg:py-[278px]">
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[278px]" style={{ backgroundImage: `url(${getAssetPath('/images/home_page_banner_image.png')})` }}>
         <div className="flex containers w-full">
           <div className="flex w-full flex-col gap-[4px]">
             <h3 className="text-white max-[512px]:!text-[20px]">
@@ -197,7 +197,7 @@ const Index = () => {
             </div>
             <div className="flex w-full gap-[50px] justify-center items-end">
               <div className="flex w-full max-w-[600px]">
-                <Image
+                <BaseImage
                   src="/images/dr_soma_pic.png"
                   width={600}
                   height={600}
@@ -364,7 +364,7 @@ const Index = () => {
               {/* Breast Card */}
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white">
                 <div className="aspect-square relative overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/images/breast_image.png"
                     width={350}
                     height={350}
@@ -386,7 +386,7 @@ const Index = () => {
                   <div className="flex justify-center">
                     <button 
                       className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 text-sm"
-                      onClick={() => router.push('/servicespage/breast-augmentation-implant-in-malaysia')}
+                      onClick={() => router.push('/breast/breast-augmentation-malaysia')}
                     >
                       Learn More
                     </button>
@@ -397,7 +397,7 @@ const Index = () => {
               {/* Face Card */}
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white">
                 <div className="aspect-square relative overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/images/face_image.png"
                     width={350}
                     height={350}
@@ -419,7 +419,7 @@ const Index = () => {
                   <div className="flex justify-center">
                     <button 
                       className="px-6 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 text-sm"
-                      onClick={() => router.push('/servicespage/face-lift-malaysia-to-combat-aging')}
+                      onClick={() => router.push('/face/face-lift-malaysia')}
                     >
                       Learn More
                     </button>
@@ -430,7 +430,7 @@ const Index = () => {
               {/* Body Card */}
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white">
                 <div className="aspect-square relative overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/images/body_image.png"
                     width={350}
                     height={350}
@@ -478,7 +478,7 @@ const Index = () => {
       </section>
 
       
-      <section className="flex bg-[url(/images/plastic_surgery.png)] bg-no-repeat bg-cover py-50 lg:pt-[127px] lg:pb-[122px]" ref={costRef}>
+      <section className="flex bg-no-repeat bg-cover py-50 lg:pt-[127px] lg:pb-[122px]" style={{ backgroundImage: `url(${getAssetPath('/images/plastic_surgery.png')})` }} ref={costRef}>
         <div className="flex w-full containers">
           <div className={`flex flex-col gap-[44px] w-full justify-center items-center transition-all duration-700 ${
             isVisible('section-5') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -487,7 +487,7 @@ const Index = () => {
               SHOW THE COST OF PLASTIC SURGERY
             </h2>
             <div className="flex flex-col gap-30 items-center">
-              <div className="flex w-full max-w-[812px] bg-[url(/images/linear_image.png)] border border-stroke bg-no-repeat bg-cover py-20 px-30 rounded-[15px]">
+              <div className="flex w-full max-w-[812px] border border-stroke bg-no-repeat bg-cover py-20 px-30 rounded-[15px]" style={{ backgroundImage: `url(${getAssetPath('/images/linear_image.png')})` }}>
                 <h3 className="text-para-white text-center">
                   <span className="text-primary">&ldquo;</span>Aesthetic Surgery For
                   The Face, Eyes, Breasts<span className="text-primary">&rdquo;</span>

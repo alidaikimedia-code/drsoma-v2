@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import React from "react";
 import RelatedTopicsGrid from "@/components/related-topics-grid";
 
@@ -19,7 +19,7 @@ const OtoplastyPinnaplasty = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
-                <Image
+                <BaseImage
                   src="/images/pinnaplasty_in_ear.png"
                   width={500}
                   height={350}
@@ -168,7 +168,7 @@ const OtoplastyPinnaplasty = () => {
             title: "Eyelid Reduction",
             description: "Refresh your appearance with advanced eyelid surgery techniques",
             image: "/images/eyelid_reduction.png",
-            href: "/servicespage/blepharoplasty-eyelid-reduction",
+            href: "/face/eyelid-surgery-malaysia",
             badge: "Popular",
             badgeColor: "blue"
           },
@@ -184,7 +184,7 @@ const OtoplastyPinnaplasty = () => {
             title: "Thread Lift",
             description: "Non-surgical facial rejuvenation with advanced thread technology",
             image: "/images/Safe_thread_in_face.png",
-            href: "/servicespage/safe-thread-lift-in-malaysia",
+            href: "/aesthetic-treatments/thread-lift-malaysia",
             badge: "Non-Surgical",
             badgeColor: "green"
           }

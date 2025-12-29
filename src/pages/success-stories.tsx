@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Head from "next/head";
-import { getFullUrl } from "@/utils/helper";
+import { getFullUrl, getAssetPath } from "@/utils/helper";
 import { fetchTestimonials, Testimonial } from "@/utils/api";
 
 const SuccessStories = () => {
@@ -90,7 +90,7 @@ const SuccessStories = () => {
         <meta name="twitter:image" content={getFullUrl('/images/success_stories_banner_image.png')} />
         <link rel="canonical" href={getFullUrl('/success-stories')} />
       </Head>
-      <section className="flex bg-[url(/images/success_stories_banner_image.png)] bg-no-repeat bg-cover py-100 lg:py-[175px]" ref={bannerRef}>
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/success_stories_banner_image.png')})` }} ref={bannerRef}>
         <div className="flex containers w-full">
           <div className={`flex w-full flex-col gap-[10px] max-w-[406px] transition-all duration-700 ${
             isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -136,7 +136,7 @@ const SuccessStories = () => {
                   >
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <Image
+                        <BaseImage
                           src={testimonial.clientAvatar?.url || testimonial.author?.avatarInfo?.url || "/images/default_user_icon.png"}
                           alt={testimonial.clientAvatar?.alt || testimonial.clientName || "Patient"}
                           width={48}

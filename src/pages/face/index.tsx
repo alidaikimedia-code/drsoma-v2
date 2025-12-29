@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl } from "@/utils/helper";
@@ -321,7 +321,7 @@ const FaceHub = () => {
       >
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <Image
+          <BaseImage
             src="/images/face_background.png"
             fill
             alt="Facial Surgery Malaysia"
@@ -406,7 +406,7 @@ const FaceHub = () => {
               <div className="relative">
                 {/* Main Image Container */}
                 <div className="relative w-[400px] h-[500px] rounded-3xl overflow-hidden border border-white/10">
-                  <Image
+                  <BaseImage
                     src="/images/face_image.png"
                     fill
                     alt="Facial Surgery"
@@ -580,7 +580,7 @@ const FaceHub = () => {
 
                   {/* Image */}
                   <div className="relative h-[240px] overflow-hidden">
-                    <Image
+                    <BaseImage
                       src={treatment.image}
                       fill
                       alt={treatment.title}
@@ -714,7 +714,7 @@ const FaceHub = () => {
             <div className={`flex-1 ${isVisible("section-4") ? "animate-slideInLeft" : "opacity-0"}`}>
               <div className="relative">
                 <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden">
-                  <Image
+                  <BaseImage
                     src="/images/face_lift_image.png"
                     fill
                     alt="Natural Results"

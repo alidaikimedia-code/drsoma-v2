@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -246,7 +246,7 @@ export default function BreastImplantRemovalMalaysia() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-zinc-50 to-orange-50/30"></div>
                 <div className="relative z-10 grid grid-cols-2 gap-4 w-full h-full opacity-80">
                   <div className="relative w-full h-full rounded-xl overflow-hidden shadow-sm">
-                    <Image
+                    <BaseImage
                       src="/breast/breast-implant-removal.png"
                       alt="Natural Aesthetics"
                       fill

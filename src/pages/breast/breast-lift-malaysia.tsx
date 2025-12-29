@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -190,7 +190,7 @@ export default function BreastLiftMalaysia() {
             </div>
 
             <div className="relative h-[600px] w-full rounded-3xl overflow-hidden animate-fadeInRight opacity-0 group" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <Image src="/images/breast_lift.png" alt="Breast Lift Surgery" fill className="object-cover transition-transform duration-700 group-hover:scale-105" priority />
+              <BaseImage src="/images/breast_lift.png" alt="Breast Lift Surgery" fill className="object-cover transition-transform duration-700 group-hover:scale-105" priority />
               <div className="absolute inset-0 bg-gradient-to-tr from-zinc-900/20 to-transparent mix-blend-multiply"></div>
               <div className="absolute bottom-8 left-8 bg-[#FE7623] px-8 py-5 rounded-xl shadow-xl max-w-xs animate-float">
                 <p className="text-sm font-bold text-white">Certified Plastic Surgeon</p>

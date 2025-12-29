@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowRight, Sparkles, RefreshCw, Minus, Droplets, XCircle, Settings, AlertCircle, Phone, MessageCircle } from "lucide-react"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import Head from "next/head"
 
@@ -172,7 +172,7 @@ function HeroSection() {
           {/* Hero Image */}
           <div className="relative hidden lg:block">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
+              <BaseImage
                 src="/breast/breast-hero.png"
                 alt="Breast surgery consultation"
                 fill
@@ -259,7 +259,7 @@ function TreatmentCard({ treatment }: { treatment: typeof breastTreatments[0] })
     <Card className="group bg-white border-0 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full flex flex-col">
       {/* Treatment Image */}
       <div className="relative h-56 w-full overflow-hidden flex-shrink-0">
-        <Image
+        <BaseImage
           src={treatment.image}
           alt={treatment.title}
           fill
@@ -419,7 +419,7 @@ function CTASection() {
           {/* CTA Image */}
           <div className="relative hidden lg:block">
             <div className="relative aspect-square rounded-2xl overflow-hidden">
-              <Image
+              <BaseImage
                 src="/breast/breast-cta.jpeg"
                 alt="Book a consultation"
                 fill

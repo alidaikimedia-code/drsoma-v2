@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
+import { getAssetPath } from "@/utils/helper";
 
 const Services = () => {
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
@@ -45,7 +46,7 @@ const Services = () => {
 
   return (
     <>
-      <section className="flex bg-[url(/images/service_page_banner_image.png)] bg-no-repeat bg-cover bg-center py-100 lg:py-[175px] relative">
+      <section className="flex bg-no-repeat bg-cover bg-center py-100 lg:py-[175px] relative" style={{ backgroundImage: `url(${getAssetPath('/images/service_page_banner_image.png')})` }}>
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="flex containers w-full relative z-10">
           <div className="flex w-full flex-col gap-[10px] max-w-[406px]">
@@ -62,9 +63,9 @@ const Services = () => {
       <section className="py-30 lg:py-60" ref={bodyRef}>
         <div className="flex containers w-full">
           <div className="flex flex-col gap-30 w-full">
-            <div className={`flex w-full bg-[url(/images/body_background.png)] bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
+            <div className={`flex w-full bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
               isVisible('section-0') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
+            }`} style={{ backgroundImage: `url(${getAssetPath('/images/body_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
                 <h2 className="text-header-black">BODY</h2>
                 <p className="text-header-black">
@@ -80,7 +81,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-0') ? '0.1s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/liposuction.png"
                   width={280}
                   height={320}
@@ -98,7 +99,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-0') ? '0.2s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/tummy_tuck.png"
                   width={280}
                   height={320}
@@ -116,7 +117,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-0') ? '0.3s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/keloid_treatment.png"
                   width={280}
                   height={320}
@@ -148,9 +149,9 @@ const Services = () => {
       <section className="pb-30 lg:pb-60" ref={faceRef}>
         <div className="flex containers w-full">
           <div className="flex flex-col gap-30 w-full">
-            <div className={`flex w-full bg-[url(/images/face_background.png)] bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
+            <div className={`flex w-full bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
               isVisible('section-1') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
+            }`} style={{ backgroundImage: `url(${getAssetPath('/images/face_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
                 <h2 className="text-header-black">FACE</h2>
                 <p className="text-header-black">
@@ -166,7 +167,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.1s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/face_lift.png"
                   width={280}
                   height={320}
@@ -180,11 +181,11 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/blepharoplasty-eyelid-reduction"}
+                href={"/face/eyelid-surgery-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.2s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/eyelid_reduction.png"
                   width={280}
                   height={320}
@@ -202,7 +203,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.3s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/rhinoplasty_in_nose.png"
                   width={280}
                   height={320}
@@ -216,11 +217,11 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/safe-thread-lift-in-malaysia"}
+                href={"/aesthetic-treatments/thread-lift-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.4s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/Safe_thread_in_face.png"
                   width={280}
                   height={320}
@@ -238,7 +239,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.5s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/pinnaplasty_in_ear.png"
                   width={280}
                   height={320}
@@ -252,11 +253,11 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/lip-filler-malaysia-no-surgery-needed"}
+                href={"/aesthetic-treatments/lip-filler-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.6s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/lip_filler.png"
                   width={280}
                   height={320}
@@ -288,9 +289,9 @@ const Services = () => {
       <section className="pb-30 lg:pb-60" ref={breastRef}>
         <div className="flex containers w-full">
           <div className="flex flex-col gap-30 w-full">
-            <div className={`flex w-full bg-[url(/images/breast_background.png)] bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
+            <div className={`flex w-full bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
               isVisible('section-2') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
+            }`} style={{ backgroundImage: `url(${getAssetPath('/images/breast_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
                 <h2 className="text-header-black">BREAST</h2>
                 <p className="text-header-black">
@@ -306,7 +307,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.1s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/breast_lift.png"
                   width={280}
                   height={320}
@@ -324,7 +325,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.2s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/breast_augmentation.png"
                   width={280}
                   height={320}
@@ -342,7 +343,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.3s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/safe_breast_reduction.png"
                   width={280}
                   height={320}
@@ -360,7 +361,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.4s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/arion_breast_implant.png"
                   width={280}
                   height={320}
@@ -404,7 +405,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="hidden md:flex flex-shrink-0 w-[250px] ml-auto self-stretch">
-                <Image
+                <BaseImage
                   src="/images/natural.jpg"
                   width={250}
                   height={200}
@@ -417,11 +418,11 @@ const Services = () => {
               isVisible('section-3') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
               <Link
-                href={"/servicespage/six-pack-enhancement"}
+                href={"/body/six-pack-enhancement-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-3') ? '0.1s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/pack_enhancement.png"
                   width={280}
                   height={320}
@@ -435,11 +436,11 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/male-breast-reduction"}
+                href={"/male/male-breast-reduction-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-3') ? '0.2s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/male_breast_reduction.png"
                   width={280}
                   height={320}
@@ -453,11 +454,11 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/penile-enhancement"}
+                href={"/male/penile-enhancement-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-3') ? '0.3s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/Penile Enhancement men.jpg"
                   width={280}
                   height={320}
@@ -507,7 +508,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.1s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/liposuction.png"
                   width={280}
                   height={320}
@@ -525,7 +526,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.2s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/skin_care_image.png"
                   width={280}
                   height={320}
@@ -543,7 +544,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.3s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/face_image.png"
                   width={280}
                   height={320}
@@ -561,7 +562,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.4s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/pinnaplasty_in_ear.png"
                   width={280}
                   height={320}
@@ -579,7 +580,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.5s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/advanced_wound_management.png"
                   width={280}
                   height={320}
@@ -597,7 +598,7 @@ const Services = () => {
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.6s' : '0s' }}
               >
-                <Image
+                <BaseImage
                   src="/images/cellular_rejuvenation.png"
                   width={280}
                   height={320}

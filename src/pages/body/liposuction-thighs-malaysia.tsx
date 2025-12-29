@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -214,7 +214,7 @@ export default function ThighLiposuctionMalaysia() {
 
             {/* Hero Image */}
             <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <Image
+              <BaseImage
                 src="/images/Thigh Liposuction.jpg"
                 alt="Thigh Liposuction Malaysia"
                 fill
