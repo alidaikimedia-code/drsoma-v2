@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import BaseImage from "@/components/BaseImage";
 import CloseIcon from "../../../public/icons/close_new_icon.svg";
 import PlusIcon from "../../../public/icons/plus_new_icon.svg";
