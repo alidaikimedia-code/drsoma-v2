@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: any) {
 
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full overflow-x-hidden">
         <Head>
           <link rel="icon" type="image/ico" href={"/favicon.ico"} />
         </Head>

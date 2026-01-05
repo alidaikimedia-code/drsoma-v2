@@ -62,30 +62,14 @@ export const fetchWPBlogs = async (page: number = 1, perPage: number = 12): Prom
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-    // Use proxy in development to avoid CORS issues
-    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
-
-    let apiUrl: string;
-    let fetchOptions: RequestInit;
-
-    if (useProxy) {
-      // Use local API proxy with basePath
-      apiUrl = `/staging/api/blogs?page=${page}&per_page=${perPage}`;
-      fetchOptions = {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' },
-        signal: controller.signal,
-      };
-    } else {
-      // Direct WordPress API call
-      apiUrl = `${WP_BLOG_API_URL}/blogs?page=${page}&per_page=${perPage}`;
-      fetchOptions = {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' },
-        mode: 'cors',
-        signal: controller.signal,
-      };
-    }
+    // Always use direct WordPress API call (API routes don't work with static export)
+    const apiUrl = `${WP_BLOG_API_URL}/blogs?page=${page}&per_page=${perPage}`;
+    const fetchOptions: RequestInit = {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' },
+      mode: 'cors',
+      signal: controller.signal,
+    };
 
     console.log('Fetching blogs from:', apiUrl);
 
@@ -122,11 +106,8 @@ export const fetchWPBlogById = async (id: number): Promise<WPBlogPost | null> =>
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 15000);
 
-    // Use proxy in development to avoid CORS issues
-    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
-    const apiUrl = useProxy
-      ? `/staging/api/blogs?id=${id}`
-      : `${WP_BLOG_API_URL}/blogs/${id}`;
+    // Always use direct WordPress API call (API routes don't work with static export)
+    const apiUrl = `${WP_BLOG_API_URL}/blogs/${id}`;
 
     console.log('Fetching blog by ID:', apiUrl);
 
@@ -135,6 +116,7 @@ export const fetchWPBlogById = async (id: number): Promise<WPBlogPost | null> =>
       headers: {
         'Accept': 'application/json',
       },
+      mode: 'cors',
       signal: controller.signal,
     });
 
@@ -170,11 +152,8 @@ export const fetchWPBlogBySlug = async (slug: string): Promise<WPBlogPost | null
     // Clean the slug - remove trailing slashes
     const cleanSlug = slug.replace(/\/+$/, '').trim();
 
-    // Use proxy in development to avoid CORS issues
-    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
-    const apiUrl = useProxy
-      ? `/staging/api/blogs?slug=${encodeURIComponent(cleanSlug)}`
-      : `${WP_BLOG_API_URL}/blog/${encodeURIComponent(cleanSlug)}`;
+    // Always use direct WordPress API call (API routes don't work with static export)
+    const apiUrl = `${WP_BLOG_API_URL}/blog/${encodeURIComponent(cleanSlug)}`;
 
     console.log('Fetching blog by slug:', apiUrl, 'Clean slug:', cleanSlug);
 
@@ -183,6 +162,7 @@ export const fetchWPBlogBySlug = async (slug: string): Promise<WPBlogPost | null
       headers: {
         'Accept': 'application/json',
       },
+      mode: 'cors',
       signal: controller.signal,
     });
 
