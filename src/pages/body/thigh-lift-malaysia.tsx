@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import BaseImage from "@/components/BaseImage";
 import CloseIcon from "../../../public/icons/close_new_icon.svg";
 import PlusIcon from "../../../public/icons/plus_new_icon.svg";
 
-const ArmLiftMalaysia = () => {
+const ThighLiftMalaysia = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Scroll Animation Effect
@@ -32,42 +33,42 @@ const ArmLiftMalaysia = () => {
 
   const faqData = [
     {
-      question: "1. What is an arm lift?",
+      question: "1. What is a thigh lift?",
       answer:
-        "An arm lift is a surgical procedure that removes excess skin and fat from the upper arms to improve contour and firmness.",
+        "A thigh lift is a surgical procedure that removes excess skin and fat from the thighs to improve contour and firmness.",
     },
     {
-      question: "2. Is arm lift surgery safe?",
+      question: "2. Is thigh lift surgery safe?",
       answer:
-        "Yes, when performed by a certified plastic surgeon in a regulated medical facility, arm lift surgery is considered safe and well-established.",
+        "Yes, when performed by a certified plastic surgeon in a regulated medical facility, thigh lift surgery is considered safe and well-established.",
     },
     {
-      question: "3. How long does recovery take after an arm lift?",
+      question: "3. How long does recovery take after a thigh lift?",
       answer:
-        "Most patients return to daily activities within 1-2 weeks, with full recovery over several months.",
+        "Most patients return to normal daily activities within 2 weeks, with full recovery over several months.",
     },
     {
-      question: "4. Will there be visible scars after an arm lift?",
+      question: "4. Will there be scars after a thigh lift?",
       answer:
-        "Yes, scars are expected, but they are placed strategically along the inner arm and fade gradually with time.",
+        "Yes, scars are expected but are placed strategically and typically fade over time.",
     },
     {
-      question: "5. Is arm lift surgery painful?",
+      question: "5. Is thigh lift surgery painful?",
       answer:
-        "Discomfort is usually mild to moderate and well-controlled with prescribed medication.",
+        "Postoperative discomfort is usually manageable with prescribed pain medication.",
     },
     {
-      question: "6. Can an arm lift be combined with other procedures?",
+      question: "6. Can a thigh lift be combined with other procedures?",
       answer:
-        "Yes, it is commonly combined with liposuction or other body-contouring procedures.",
+        "Yes, thigh lift surgery is often combined with liposuction or other body-contouring procedures.",
     },
     {
-      question: "7. Are arm lift results permanent?",
+      question: "7. Are thigh lift results permanent?",
       answer:
-        "Results are long-lasting if body weight remains stable and healthy lifestyle habits are maintained.",
+        "Results are long-lasting as long as weight remains stable and healthy lifestyle habits are maintained.",
     },
     {
-      question: "8. Who is not suitable for arm lift surgery?",
+      question: "8. Who is not a good candidate for thigh lift surgery?",
       answer:
         "Patients with unstable weight, uncontrolled medical conditions, or unrealistic expectations may not be suitable candidates.",
     },
@@ -80,8 +81,8 @@ const ArmLiftMalaysia = () => {
   return (
     <>
       <Head>
-        <title>Arm Lift in Malaysia | Dr. Soma Plastic Surgery</title>
-        <meta name="description" content="Arm lift surgery (brachioplasty) in Malaysia by Dr. Soma. Remove excess skin and fat from upper arms for firmer, contoured arms. Book your consultation today." />
+        <title>Thigh Lift in Malaysia | Dr. Soma Plastic Surgery</title>
+        <meta name="description" content="Thigh lift surgery (thighplasty) in Malaysia by Dr. Soma. Remove excess skin and fat from thighs for smoother, firmer contours. Book your consultation today." />
       </Head>
 
       {/* Hero Section */}
@@ -95,11 +96,11 @@ const ArmLiftMalaysia = () => {
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-white border border-orange-100 px-4 py-1.5 rounded-full shadow-sm animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-xs font-semibold text-primary tracking-widest uppercase">ARM LIFT IN MALAYSIA</span>
+                <span className="text-xs font-semibold text-primary tracking-widest uppercase">THIGH LIFT IN MALAYSIA</span>
               </div>
 
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-zinc-900 leading-[1.1] tracking-tight animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-                Brachioplasty for Firmer, <span className="text-primary">Contoured Upper Arms</span>
+                Thighplasty for Firmer, <span className="text-primary">Smoother Thigh Contours</span>
               </h1>
 
               <p className="text-lg text-zinc-900 font-medium border-l-4 border-primary pl-6 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
@@ -108,7 +109,7 @@ const ArmLiftMalaysia = () => {
 
               <div className="prose prose-zinc text-zinc-600 max-w-lg animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
                 <p>
-                  Loose or sagging upper-arm skin—often referred to as &quot;bat wings&quot;—is a common concern after significant weight loss, ageing, or genetic predisposition. An arm lift, medically known as brachioplasty, is a surgical procedure designed to remove excess skin and fat from the upper arms, restoring a firmer, more defined contour.
+                  Loose or sagging thigh skin, particularly along the inner thighs, is a common concern after significant weight loss, ageing, or genetic factors. A thigh lift, medically referred to as thighplasty, is a surgical procedure designed to remove excess skin and fat from the thighs, restoring smoother contours and improved firmness.
                 </p>
               </div>
 
@@ -123,7 +124,7 @@ const ArmLiftMalaysia = () => {
                   </div>
                   <div className="space-y-3">
                     <p className="text-sm text-zinc-600 leading-relaxed">
-                      In Malaysia, arm lift surgery is considered a regulated surgical procedure and must be performed by a registered medical practitioner in a licensed healthcare facility, under the governance of the Ministry of Health Malaysia, which regulates surgical safety and private medical services.
+                      In Malaysia, thigh lift surgery is classified as a regulated surgical procedure and must be performed by a registered medical practitioner in a licensed medical facility, in accordance with standards set by the Ministry of Health Malaysia, which oversees surgical safety and private healthcare services.
                     </p>
                     <p className="text-xs font-semibold text-zinc-900 uppercase tracking-wide flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
@@ -135,7 +136,7 @@ const ArmLiftMalaysia = () => {
 
               <div className="space-y-4 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
                 <p className="text-sm font-medium text-zinc-800">
-                  At Dr. Soma Plastic Surgery, all arm lift procedures are performed personally by Dr. Soma, ensuring surgical precision, patient safety, and structured aftercare.
+                  At Dr. Soma Plastic Surgery, all thigh lift procedures are performed personally by Dr. Soma, ensuring precise surgical planning and comprehensive postoperative care.
                 </p>
                 <a href="#" className="inline-flex items-center gap-2 bg-zinc-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-zinc-800 hover:scale-105 transition-all duration-300 shadow-md">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -148,7 +149,7 @@ const ArmLiftMalaysia = () => {
 
             {/* Hero Image */}
             <div className="relative h-full min-h-[500px] lg:h-[650px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white animate-scaleIn" style={{ animationDelay: '0.3s' }}>
-              <BaseImage src="/images/armlift.jpg" alt="Arm Lift Surgery Malaysia" width={800} height={650} className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <BaseImage src="/images/thighlift.jpg" alt="Thigh Lift Surgery Malaysia" width={800} height={650} className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -159,20 +160,20 @@ const ArmLiftMalaysia = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">What Is an Arm Lift (Brachioplasty)?</h2>
+            <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">What Is a Thigh Lift (Thighplasty)?</h2>
             <p className="text-zinc-600 leading-relaxed text-lg animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
-              An arm lift is a body-contouring surgery that removes loose skin and excess fat from the inner or back portion of the upper arms, typically from the armpit to the elbow. The procedure improves arm shape and firmness when exercise and weight control alone are insufficient.
+              A thigh lift is a body-contouring surgery that removes excess skin and fat from the inner, outer, or front of the thighs, depending on individual anatomy and concerns. The procedure is particularly effective when skin laxity persists despite exercise and weight control.
             </p>
 
             <div className="bg-orange-50/50 p-6 rounded-xl border-l-4 border-primary animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-200 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
               <p className="text-sm text-zinc-800 italic mb-2 font-medium">
-                &quot;Major medical institutions describe brachioplasty as an effective option for patients with significant skin laxity following weight loss or ageing.&quot;
+                &quot;Major medical institutions describe thighplasty as a suitable option for patients with significant thigh skin laxity following weight loss or ageing.&quot;
               </p>
-              <span className="text-xs font-bold text-primary uppercase tracking-wider">Clinical overview from: Mayo Clinic – Arm Lift (Brachioplasty)</span>
+              <span className="text-xs font-bold text-primary uppercase tracking-wider">Clinical overview from: Mayo Clinic – Thigh Lift (Thighplasty)</span>
             </div>
 
             <p className="text-sm text-zinc-500 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-300 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
-              Arm lift surgery is not a weight-loss procedure, but a contouring solution for excess skin.
+              Thigh lift surgery is not intended for weight loss but for reshaping and contour improvement.
             </p>
           </div>
         </div>
@@ -181,21 +182,22 @@ const ArmLiftMalaysia = () => {
       {/* How It Is Performed */}
       <section className="py-24 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-12 text-center animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">How Arm Lift Surgery Is Performed</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-4 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">How Thigh Lift Surgery Is Performed</h2>
+            <p className="text-zinc-500 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">A typical thigh lift procedure may involve:</p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Step 1 */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.1s' }}>
               <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m12 19 7-7 3 3-7 7-3-3z"/>
-                  <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                  <path d="m2 2 7.586 7.586"/>
-                  <circle cx="11" cy="11" r="2"/>
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
                 </svg>
               </div>
-              <h3 className="font-semibold text-zinc-900 mb-2">Preoperative Marking</h3>
-              <p className="text-sm text-zinc-500">Preoperative marking of excess skin.</p>
+              <h3 className="font-semibold text-zinc-900 mb-2">Preoperative Assessment</h3>
+              <p className="text-sm text-zinc-500">Preoperative assessment and marking of the surgical area.</p>
             </div>
 
             {/* Step 2 */}
@@ -209,8 +211,8 @@ const ArmLiftMalaysia = () => {
                   <path d="M14.8 14.8 20 20"/>
                 </svg>
               </div>
-              <h3 className="font-semibold text-zinc-900 mb-2">Skin &amp; Fat Removal</h3>
-              <p className="text-sm text-zinc-500">Removal of loose skin and underlying fat.</p>
+              <h3 className="font-semibold text-zinc-900 mb-2">Tissue Removal</h3>
+              <p className="text-sm text-zinc-500">Removal of excess skin and fat for contouring.</p>
             </div>
 
             {/* Step 3 */}
@@ -222,22 +224,20 @@ const ArmLiftMalaysia = () => {
                   <path d="M12 8v8"/>
                 </svg>
               </div>
-              <h3 className="font-semibold text-zinc-900 mb-2">Refinement</h3>
-              <p className="text-sm text-zinc-500">Possible combination with liposuction for refinement.</p>
+              <h3 className="font-semibold text-zinc-900 mb-2">Liposuction</h3>
+              <p className="text-sm text-zinc-500">Possible combination with liposuction for enhanced results.</p>
             </div>
 
             {/* Step 4 */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-zinc-100 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.4s' }}>
               <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="4 14 10 14 10 20"/>
-                  <polyline points="20 10 14 10 14 4"/>
-                  <line x1="14" x2="21" y1="10" y2="3"/>
-                  <line x1="3" x2="10" y1="21" y2="14"/>
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
                 </svg>
               </div>
               <h3 className="font-semibold text-zinc-900 mb-2">Incision Placement</h3>
-              <p className="text-sm text-zinc-500">Strategic incision placement along the inner arm.</p>
+              <p className="text-sm text-zinc-500">Strategic placement in groin, inner thigh, or outer thigh.</p>
             </div>
 
             {/* Step 5 */}
@@ -250,7 +250,7 @@ const ArmLiftMalaysia = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-zinc-900 mb-2">Layered Closure</h3>
-              <p className="text-sm text-zinc-500">Layered closure to support optimal healing.</p>
+              <p className="text-sm text-zinc-500">Precise layered closure to support proper healing.</p>
             </div>
 
             {/* Step 6 */}
@@ -261,12 +261,12 @@ const ArmLiftMalaysia = () => {
                 </svg>
               </div>
               <h3 className="font-semibold text-zinc-900 mb-2">Compression</h3>
-              <p className="text-sm text-zinc-500">Application of compression garments.</p>
+              <p className="text-sm text-zinc-500">Compression garment application to reduce swelling.</p>
             </div>
           </div>
 
           <div className="mt-8 text-center bg-white p-4 rounded-xl border border-zinc-100 inline-block w-full">
-            <p className="text-sm text-zinc-600">The incision pattern depends on the degree of skin laxity and is discussed during consultation.</p>
+            <p className="text-sm text-zinc-600">The incision pattern depends on the type of thigh lift required.</p>
           </div>
         </div>
       </section>
@@ -274,33 +274,43 @@ const ArmLiftMalaysia = () => {
       {/* Types of Procedures */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Types of Arm Lift Procedures</h2>
+          <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Types of Thigh Lift Procedures</h2>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Mini */}
-            <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.1s' }}>
-              <span className="text-primary font-bold text-sm uppercase tracking-wider mb-2 block">Level 1</span>
-              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Mini Arm Lift</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">Limited skin removal near the armpit.</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Inner */}
+            <div className="group relative bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.1s' }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors"></div>
+              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Common</span>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Inner (Medial) Thigh Lift</h3>
+              <p className="text-zinc-600">Targets inner thigh laxity.</p>
             </div>
 
-            {/* Standard */}
-            <div className="bg-primary text-white rounded-2xl p-8 shadow-xl relative overflow-hidden hover:-translate-y-2 transition-all duration-300 animate-on-scroll opacity-0 scale-95 [&.animate-visible]:opacity-100 [&.animate-visible]:scale-100" style={{ transitionDelay: '0.2s' }}>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
-              <span className="text-orange-100 font-bold text-sm uppercase tracking-wider mb-2 block">Most Common</span>
-              <h3 className="text-xl font-semibold text-white mb-4">Standard Arm Lift</h3>
-              <p className="text-orange-50 text-sm leading-relaxed">Skin removal from armpit to elbow.</p>
+            {/* Outer */}
+            <div className="group relative bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.2s' }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors"></div>
+              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Contouring</span>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Outer (Lateral) Thigh Lift</h3>
+              <p className="text-zinc-600">Improves outer thigh and hip contour.</p>
+            </div>
+
+            {/* Mini */}
+            <div className="group relative bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.3s' }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors"></div>
+              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Minimal</span>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Mini Thigh Lift</h3>
+              <p className="text-zinc-600">Limited skin removal near the groin.</p>
             </div>
 
             {/* Extended */}
-            <div className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.3s' }}>
-              <span className="text-primary font-bold text-sm uppercase tracking-wider mb-2 block">Level 3</span>
-              <h3 className="text-xl font-semibold text-zinc-900 mb-4">Extended Arm Lift</h3>
-              <p className="text-zinc-600 text-sm leading-relaxed">Includes side chest or lateral chest wall.</p>
+            <div className="group relative bg-zinc-50 rounded-2xl p-8 border border-zinc-100 hover:shadow-lg hover:-translate-y-2 transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.4s' }}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors"></div>
+              <span className="text-primary font-bold text-xs uppercase tracking-wider mb-2 block">Comprehensive</span>
+              <h3 className="text-xl font-semibold text-zinc-900 mb-2">Extended Thigh Lift</h3>
+              <p className="text-zinc-600">Addresses extensive skin laxity.</p>
             </div>
           </div>
 
-          <p className="mt-8 text-zinc-500 text-sm animate-on-scroll opacity-0 [&.animate-visible]:opacity-100 transition-all duration-500 delay-300">The appropriate technique is selected based on anatomy and goals.</p>
+          <p className="mt-8 text-zinc-500 text-sm animate-on-scroll opacity-0 [&.animate-visible]:opacity-100 transition-all duration-500 delay-300">Procedure selection is individualized during consultation.</p>
         </div>
       </section>
 
@@ -323,8 +333,11 @@ const ArmLiftMalaysia = () => {
                   <span className="text-xs md:text-sm font-bold">W1</span>
                 </div>
                 <div className="flex-1 px-5 py-6 md:px-6 md:py-8 rounded-xl border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                  <div className="font-semibold text-zinc-900 mb-2">Week 1</div>
-                  <div className="text-sm text-zinc-500">Swelling, mild discomfort, compression garment use.</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-semibold text-zinc-900">Week 1</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Healing</span>
+                  </div>
+                  <div className="text-sm text-zinc-500">Swelling, bruising, compression garment use.</div>
                 </div>
               </div>
 
@@ -334,8 +347,11 @@ const ArmLiftMalaysia = () => {
                   <span className="text-xs md:text-sm font-bold">W2</span>
                 </div>
                 <div className="flex-1 px-5 py-6 md:px-6 md:py-8 rounded-xl border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                  <div className="font-semibold text-zinc-900 mb-2">Week 2</div>
-                  <div className="text-sm text-zinc-500">Return to desk-based work.</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-semibold text-zinc-900">Week 2</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Progress</span>
+                  </div>
+                  <div className="text-sm text-zinc-500">Gradual return to routine activities.</div>
                 </div>
               </div>
 
@@ -345,8 +361,11 @@ const ArmLiftMalaysia = () => {
                   <span className="text-[10px] md:text-xs font-bold">W4-6</span>
                 </div>
                 <div className="flex-1 px-5 py-6 md:px-6 md:py-8 rounded-xl border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                  <div className="font-semibold text-zinc-900 mb-2">Week 4–6</div>
-                  <div className="text-sm text-zinc-500">Improved arm contour, reduced swelling.</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-semibold text-zinc-900">Week 4–6</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Mobility</span>
+                  </div>
+                  <div className="text-sm text-zinc-500">Improved thigh contour and mobility.</div>
                 </div>
               </div>
 
@@ -356,19 +375,23 @@ const ArmLiftMalaysia = () => {
                   <span className="text-xs md:text-sm font-bold">M3</span>
                 </div>
                 <div className="flex-1 px-5 py-6 md:px-6 md:py-8 rounded-xl border border-zinc-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-                  <div className="font-semibold text-zinc-900 mb-2">Month 3</div>
-                  <div className="text-sm text-zinc-500">Final results become more apparent.</div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-semibold text-zinc-900">Month 3</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-wider">Result</span>
+                  </div>
+                  <div className="text-sm text-zinc-500">Final results as swelling resolves.</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="mt-12 bg-white p-6 rounded-xl border-t-4 border-primary shadow-sm">
-            <p className="text-sm text-zinc-600 mb-3">Postoperative care principles used in arm lift surgery align with internationally accepted patient safety and surgical recovery standards.</p>
+            <p className="text-sm text-zinc-600 mb-3">Postoperative recovery protocols used in thigh lift surgery align with internationally recognised surgical safety and postoperative care principles.</p>
             <div className="flex items-center gap-2 text-xs font-semibold text-zinc-900 uppercase">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" x2="22" y1="12" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
               Clinical guidance aligned with: World Health Organization – Safe Surgery &amp; Postoperative Care
             </div>
@@ -380,48 +403,53 @@ const ArmLiftMalaysia = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Benefits of an Arm Lift</h2>
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Benefits of a Thigh Lift</h2>
               <ul className="space-y-4">
                 <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-50 transition-colors border border-transparent hover:border-zinc-100 animate-on-scroll opacity-0 translate-x-[-20px] transition-all duration-500 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.1s' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1 flex-shrink-0">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                  <span className="text-zinc-600">Removes loose, sagging upper-arm skin</span>
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <span className="text-zinc-700 font-medium">Removes loose, sagging thigh skin</span>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-50 transition-colors border border-transparent hover:border-zinc-100 animate-on-scroll opacity-0 translate-x-[-20px] transition-all duration-500 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.2s' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1 flex-shrink-0">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                  <span className="text-zinc-600">Improves arm contour and firmness</span>
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <span className="text-zinc-700 font-medium">Improves thigh shape and smoothness</span>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-50 transition-colors border border-transparent hover:border-zinc-100 animate-on-scroll opacity-0 translate-x-[-20px] transition-all duration-500 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.3s' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1 flex-shrink-0">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                  <span className="text-zinc-600">Enhances confidence in fitted or sleeveless clothing</span>
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <span className="text-zinc-700 font-medium">Reduces skin irritation or chafing</span>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-50 transition-colors border border-transparent hover:border-zinc-100 animate-on-scroll opacity-0 translate-x-[-20px] transition-all duration-500 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.4s' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1 flex-shrink-0">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                  <span className="text-zinc-600">Long-lasting results with stable weight</span>
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <span className="text-zinc-700 font-medium">Enhances comfort in fitted clothing</span>
                 </li>
                 <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-zinc-50 transition-colors border border-transparent hover:border-zinc-100 animate-on-scroll opacity-0 translate-x-[-20px] transition-all duration-500 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.5s' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mt-1 flex-shrink-0">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
-                  </svg>
-                  <span className="text-zinc-600">Can be combined with liposuction for improved definition</span>
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                  </span>
+                  <span className="text-zinc-700 font-medium">Long-lasting results with stable weight</span>
                 </li>
               </ul>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl animate-on-scroll opacity-0 scale-95 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:scale-100">
-              <BaseImage src="/images/lift2.jpg" alt="Arm Lift Surgery Results" width={800} height={500} className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <div className="order-1 lg:order-2 relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl animate-on-scroll opacity-0 scale-95 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:scale-100">
+              <BaseImage src="/images/lift2.jpg" alt="Thigh Lift Surgery Results" width={800} height={600} className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
         </div>
@@ -437,14 +465,12 @@ const ArmLiftMalaysia = () => {
             <div className="bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-primary/50 transition-colors animate-on-scroll opacity-0 translate-x-[-30px] transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.1s' }}>
               <h3 className="text-xl font-semibold text-primary mb-6 flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                  <line x1="9" x2="9.01" y1="9" y2="9"/>
-                  <line x1="15" x2="15.01" y1="9" y2="9"/>
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <polyline points="16 11 18 13 22 9"/>
                 </svg>
-                Ideal Candidates
+                Ideal Candidates generally:
               </h3>
-              <p className="text-zinc-400 mb-4 text-sm">Ideal candidates typically:</p>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3">
                   <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
@@ -452,7 +478,7 @@ const ArmLiftMalaysia = () => {
                       <polyline points="20 6 9 17 4 12"/>
                     </svg>
                   </span>
-                  <span className="text-zinc-200">Have significant upper-arm skin laxity</span>
+                  <span className="text-zinc-200">Have significant thigh skin laxity</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
@@ -460,7 +486,7 @@ const ArmLiftMalaysia = () => {
                       <polyline points="20 6 9 17 4 12"/>
                     </svg>
                   </span>
-                  <span className="text-zinc-200">Are at a stable body weight</span>
+                  <span className="text-zinc-200">Maintain a stable body weight</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
@@ -468,7 +494,7 @@ const ArmLiftMalaysia = () => {
                       <polyline points="20 6 9 17 4 12"/>
                     </svg>
                   </span>
-                  <span className="text-zinc-200">Are in good general health</span>
+                  <span className="text-zinc-200">Are in good overall health</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
@@ -491,18 +517,18 @@ const ArmLiftMalaysia = () => {
 
             {/* Note */}
             <div className="bg-zinc-800 p-8 rounded-2xl border border-zinc-700 flex flex-col justify-center hover:border-primary/50 transition-colors animate-on-scroll opacity-0 translate-x-[30px] transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-x-0" style={{ transitionDelay: '0.2s' }}>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-10 h-10 rounded-full bg-zinc-700 flex items-center justify-center text-zinc-400 shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-zinc-700 flex items-center justify-center text-zinc-400 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 16v-4"/>
                     <path d="M12 8h.01"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Important Consideration</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">Important Consideration</h3>
                   <p className="text-zinc-400 leading-relaxed">
-                    Patients planning major future weight loss may be advised to postpone surgery.
+                    Patients planning further major weight changes may be advised to delay surgery to ensure the longevity of their results.
                   </p>
                 </div>
               </div>
@@ -515,75 +541,18 @@ const ArmLiftMalaysia = () => {
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center text-white">
-          <h2 className="text-3xl font-semibold mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Arm Lift and Liposuction</h2>
-          <p className="text-lg text-orange-50 leading-relaxed max-w-2xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-150 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
-            Liposuction alone removes fat but cannot tighten loose skin. In many cases, arm lift surgery is combined with liposuction for enhanced contouring.
+          <h2 className="text-3xl font-semibold mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Thigh Lift and Liposuction</h2>
+          <p className="text-lg text-orange-50 leading-relaxed max-w-2xl mx-auto mb-8 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-150 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
+            Liposuction can remove excess fat but does not tighten loose skin. A thigh lift may be combined with liposuction to refine contour when appropriate.
           </p>
-        </div>
-      </section>
-
-      {/* Post Surgery Aftercare */}
-      <section className="py-24 bg-zinc-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold text-zinc-900 tracking-tight mb-12 text-center animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">Post-Surgery Aftercare</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Item 1 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.1s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Wear compression garments for 4–6 weeks</p>
-            </div>
-            {/* Item 2 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.2s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <path d="m6.5 6.5 11 11"/>
-                <path d="m21 21-1-1"/>
-                <path d="m3 3 1 1"/>
-                <path d="m18 22 4-4"/>
-                <path d="m2 6 4-4"/>
-                <path d="m3 10 7-7"/>
-                <path d="m14 21 7-7"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Avoid heavy lifting initially</p>
-            </div>
-            {/* Item 3 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.3s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-                <line x1="16" x2="16" y1="2" y2="6"/>
-                <line x1="8" x2="8" y1="2" y2="6"/>
-                <line x1="3" x2="21" y1="10" y2="10"/>
-                <path d="m9 16 2 2 4-4"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Attend scheduled follow-up visits</p>
-            </div>
-            {/* Item 4 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.4s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
-                <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Keep incisions clean and dry</p>
-            </div>
-            {/* Item 5 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.5s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Gradually resume physical activity as advised</p>
-            </div>
-            {/* Item 6 */}
-            <div className="bg-white p-6 rounded-xl border border-zinc-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.6s' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary mb-4">
-                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
-                <circle cx="12" cy="12" r="3"/>
-              </svg>
-              <p className="text-zinc-700 font-medium">Scars fade gradually over time and are monitored during follow-up</p>
-            </div>
-          </div>
-
-          <p className="mt-8 text-center text-zinc-500 text-sm animate-on-scroll opacity-0 [&.animate-visible]:opacity-100 transition-all duration-500 delay-500">After arm lift surgery, following these guidelines is crucial for optimal healing.</p>
+          <Link href="/body/liposuction-malaysia" className="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:bg-orange-50 hover:scale-105 transition-all duration-300 shadow-lg animate-on-scroll opacity-0 translate-y-8 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0" style={{ transitionDelay: '0.3s' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16l4-4-4-4"/>
+              <path d="M8 12h8"/>
+            </svg>
+            Learn more about Liposuction
+          </Link>
         </div>
       </section>
 
@@ -629,10 +598,10 @@ const ArmLiftMalaysia = () => {
       <section className="py-24 bg-zinc-50 border-t border-zinc-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-zinc-900 tracking-tight mb-6 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
-            Achieve firmer, more confident upper arms with surgeon-performed arm lift surgery in Malaysia.
+            Restore smoother, firmer thigh contours with surgeon-performed thigh lift surgery in Malaysia.
           </h2>
           <p className="text-lg text-zinc-500 mb-12 max-w-2xl mx-auto animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
-            Dr. Soma delivers personalized body-contouring solutions with a focus on safety, proportion, and natural-looking outcomes.
+            Dr. Soma combines surgical expertise with patient-focused care to deliver natural, balanced results.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-200 [&.animate-visible]:opacity-100 [&.animate-visible]:translate-y-0">
@@ -649,7 +618,7 @@ const ArmLiftMalaysia = () => {
                 <line x1="8" x2="8" y1="2" y2="6"/>
                 <line x1="3" x2="21" y1="10" y2="10"/>
               </svg>
-              Schedule Your Consultation Today
+              Book Your Consultation Today
             </a>
           </div>
         </div>
@@ -659,4 +628,4 @@ const ArmLiftMalaysia = () => {
   );
 };
 
-export default ArmLiftMalaysia;
+export default ThighLiftMalaysia;
