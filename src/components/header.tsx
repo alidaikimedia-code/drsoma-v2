@@ -19,10 +19,8 @@ const Header = () => {
   }, []);
 
   const linkClasses = (path: string) =>
-    `relative text-[15px] font-medium tracking-wide transition-all duration-300 ${
-      scrolled
-        ? router.pathname === path ? "text-white font-bold" : "text-white/90 hover:text-white"
-        : router.pathname === path ? "text-primary" : "text-black hover:text-primary"
+    `relative text-[15px] font-medium tracking-wide transition-all duration-300 hover:text-primary ${
+      router.pathname === path ? "text-primary" : "text-black"
     }`;
 
   const mobileLinkClasses = (path: string) =>
@@ -43,8 +41,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md lg:shadow-md ${
-          scrolled ? "lg:bg-primary lg:shadow-lg lg:shadow-primary/30" : "lg:bg-white"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white ${
+          scrolled ? "shadow-lg shadow-black/10" : "shadow-md"
         }`}
       >
         <div className="containers px-[30px]">
@@ -61,13 +59,10 @@ const Header = () => {
               </div>
             </nav>
             <div className="hidden lg:flex items-center flex-shrink-0">
-              <a href={bookingLink} target="_blank" rel="noopener noreferrer" className={`group relative inline-flex items-center gap-2 px-6 py-3 text-[14px] font-bold uppercase tracking-wider rounded-sm overflow-hidden transition-all duration-300 ${
-                scrolled
-                  ? "bg-white text-primary hover:bg-white/90 hover:shadow-lg hover:shadow-white/30"
-                  : "bg-primary text-white hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30"
-              }`}>
+              <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-[14px] font-bold uppercase tracking-wider rounded-sm overflow-hidden transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">
                 <span className="relative z-10">Book Consultation</span>
                 <svg className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-[#ff7a4d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
             <button className="flex lg:hidden items-center justify-center w-10 h-10 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu"><MenuIcon className="w-6 h-6" /></button>
