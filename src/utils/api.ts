@@ -1,6 +1,229 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const API_KEY = process.env.NEXT_PUBLIC_CMS_API_KEY;
 
+// WordPress Blog API URL
+const WP_BLOG_API_URL = 'https://drsomaplasticsurgery.com.my/wp-json/custom/v1';
+
+// WordPress Blog Post Interface
+export interface WPBlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  content: string;
+  excerpt: string;
+  featured_image: {
+    full: string;
+    large: string;
+    medium: string;
+    thumbnail: string;
+  };
+  categories: {
+    id: number;
+    name: string;
+    slug: string;
+  }[];
+  tags: {
+    id: number;
+    name: string;
+    slug: string;
+  }[];
+  author: {
+    id: number;
+    name: string;
+    avatar: string;
+  };
+  date: string;
+  date_formatted: string;
+  modified: string;
+  link: string;
+  comment_count: number;
+  read_time: string;
+  related_posts?: WPBlogPost[];
+}
+
+// WordPress API Response Interface
+export interface WPBlogsResponse {
+  success: boolean;
+  total_posts: number;
+  total_pages: number;
+  current_page: number;
+  per_page: number;
+  blogs: WPBlogPost[];
+}
+
+export interface WPSingleBlogResponse {
+  success: boolean;
+  blog: WPBlogPost;
+}
+
+// Fetch WordPress Blogs with Pagination
+export const fetchWPBlogs = async (page: number = 1, perPage: number = 12): Promise<WPBlogsResponse> => {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+    // Use proxy in development to avoid CORS issues
+    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+
+    let apiUrl: string;
+    let fetchOptions: RequestInit;
+
+    if (useProxy) {
+      // Use local API proxy with basePath
+      apiUrl = `/staging/api/blogs?page=${page}&per_page=${perPage}`;
+      fetchOptions = {
+        method: 'GET',
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal,
+      };
+    } else {
+      // Direct WordPress API call
+      apiUrl = `${WP_BLOG_API_URL}/blogs?page=${page}&per_page=${perPage}`;
+      fetchOptions = {
+        method: 'GET',
+        headers: { 'Accept': 'application/json' },
+        mode: 'cors',
+        signal: controller.signal,
+      };
+    }
+
+    console.log('Fetching blogs from:', apiUrl);
+
+    const response = await fetch(apiUrl, fetchOptions);
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Blogs fetched successfully:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching WordPress blogs:', error);
+    if (error instanceof TypeError && error.message === 'Failed to fetch') {
+      console.error('CORS Error: Make sure WordPress has proper CORS headers enabled');
+    }
+    return {
+      success: false,
+      total_posts: 0,
+      total_pages: 0,
+      current_page: 1,
+      per_page: perPage,
+      blogs: []
+    };
+  }
+};
+
+// Fetch Single WordPress Blog by ID
+export const fetchWPBlogById = async (id: number): Promise<WPBlogPost | null> => {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+    // Use proxy in development to avoid CORS issues
+    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+    const apiUrl = useProxy
+      ? `/staging/api/blogs?id=${id}`
+      : `${WP_BLOG_API_URL}/blogs/${id}`;
+
+    console.log('Fetching blog by ID:', apiUrl);
+
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data: WPSingleBlogResponse = await response.json();
+    console.log('Blog fetched by ID:', data);
+
+    if (data.success && data.blog) {
+      return data.blog;
+    }
+
+    return null;
+  } catch (error) {
+    console.error('Error fetching WordPress blog by ID:', error);
+    if (error instanceof TypeError && error.message === 'Failed to fetch') {
+      console.error('CORS Error: Make sure WordPress has proper CORS headers enabled');
+    }
+    return null;
+  }
+};
+
+// Fetch Single WordPress Blog by Slug
+export const fetchWPBlogBySlug = async (slug: string): Promise<WPBlogPost | null> => {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+    // Clean the slug - remove trailing slashes
+    const cleanSlug = slug.replace(/\/+$/, '').trim();
+
+    // Use proxy in development to avoid CORS issues
+    const useProxy = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+    const apiUrl = useProxy
+      ? `/staging/api/blogs?slug=${encodeURIComponent(cleanSlug)}`
+      : `${WP_BLOG_API_URL}/blog/${encodeURIComponent(cleanSlug)}`;
+
+    console.log('Fetching blog by slug:', apiUrl, 'Clean slug:', cleanSlug);
+
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
+    // Get response text first for debugging
+    const responseText = await response.text();
+    console.log('Response status:', response.status);
+    console.log('Response text:', responseText.substring(0, 500));
+
+    if (!response.ok) {
+      console.error('API Error:', response.status, responseText);
+      return null;
+    }
+
+    // Parse JSON
+    let data;
+    try {
+      data = JSON.parse(responseText);
+    } catch (e) {
+      console.error('Failed to parse JSON:', e);
+      return null;
+    }
+
+    console.log('Blog fetched by slug:', data);
+
+    if (data.success && data.blog) {
+      return data.blog;
+    }
+
+    return null;
+  } catch (error) {
+    console.error('Error fetching WordPress blog by slug:', error);
+    if (error instanceof TypeError && error.message === 'Failed to fetch') {
+      console.error('CORS Error: Make sure WordPress has proper CORS headers enabled');
+    }
+    return null;
+  }
+};
+
+// Legacy BlogPost interface (keeping for backward compatibility)
 export interface BlogPost {
   id: string;
   title: string;
@@ -33,7 +256,7 @@ export interface BlogPost {
     name?: string;
     avatarInfo?: { url?: string };
   };
-  category?: { 
+  category?: {
     id?: string;
     name?: string;
     created_at?: string;
@@ -50,7 +273,7 @@ export interface BlogPost {
     };
   };
   tags?: { name?: string; urlSlug?: string }[];
-  asset?: { 
+  asset?: {
     url?: string;
     altText?: string;
     imageName?: string;
@@ -62,7 +285,6 @@ export interface BlogPost {
       url: string;
     };
   } | null;
-  // Add any other fields you need
 }
 
 export interface Testimonial {

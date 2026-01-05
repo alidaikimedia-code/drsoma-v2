@@ -1,14 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static export for live server deployment
+  // NOTE: Comment out 'output: export' for development to enable API routes
   output: 'export',
   trailingSlash: true,
-  // Subdirectory deployment configuration (uncomment for staging deployment)
-  // basePath: '/staging',
-  // assetPrefix: '/staging',
+  // Staging subdirectory - comment these 2 lines for production
+  basePath: '/staging',
+  assetPrefix: '/staging',
   images: {
-    // Required for static export
     unoptimized: true,
     remotePatterns: [
       {
@@ -22,6 +21,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'drsomaplasticsurgery.com.my',
       },
     ],
   },
