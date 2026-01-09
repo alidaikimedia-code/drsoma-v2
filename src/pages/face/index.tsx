@@ -340,9 +340,9 @@ const FaceHub = () => {
         <div className="flex containers w-full relative z-10 py-20">
           <div className="flex flex-col lg:flex-row items-center gap-16 w-full">
             {/* Left Content */}
-            <div className={`flex-1 max-w-2xl ${isVisible("section-0") ? "animate-slideInLeft" : "opacity-0"}`}>
+            <div className={`flex-1 max-w-2xl text-center sm:text-left ${isVisible("section-0") ? "animate-slideInLeft" : "opacity-100 sm:opacity-0"}`}>
               {/* Luxury Badge */}
-              <div className={`inline-flex items-center gap-3 mb-8 ${isVisible("section-0") ? "animate-fadeInUp" : "opacity-0"}`}>
+              <div className={`inline-flex items-center gap-3 mb-8 justify-center sm:justify-start ${isVisible("section-0") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
                 <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
                   Facial Surgery Hub
@@ -350,42 +350,42 @@ const FaceHub = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
               </div>
 
-              <h1 className={`text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 ${
-                isVisible("section-0") ? "animate-fadeInUp delay-100" : "opacity-0"
+              <h1 className={`text-white max-sm:text-4xl text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 ${
+                isVisible("section-0") ? "animate-fadeInUp delay-100" : "opacity-100 sm:opacity-0"
               }`}>
                 Facial Cosmetic Surgery
                 <span className="block text-primary font-semibold mt-2">in Malaysia</span>
               </h1>
 
-              <p className={`text-white text-lg md:text-xl font-light leading-relaxed mb-4 ${
-                isVisible("section-0") ? "animate-fadeInUp delay-200" : "opacity-0"
+              <p className={`text-white text-base sm:text-lg md:text-xl font-light leading-relaxed mb-4 ${
+                isVisible("section-0") ? "animate-fadeInUp delay-200" : "opacity-100 sm:opacity-0"
               }`}>
                 A calm place to explore facial changes that still look like you
               </p>
 
-              <p className={`text-white text-base leading-relaxed mb-8 max-w-xl ${
-                isVisible("section-0") ? "animate-fadeInUp delay-300" : "opacity-0"
+              <p className={`text-white text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto sm:mx-0 ${
+                isVisible("section-0") ? "animate-fadeInUp delay-300" : "opacity-100 sm:opacity-0"
               }`}>
                 Your face is personal. Most patients want something simple: to look like themselves again, just more refreshed, balanced, and confident.
               </p>
 
               {/* CTA Buttons */}
-              <div className={`flex flex-wrap gap-4 mb-8 ${
-                isVisible("section-0") ? "animate-fadeInUp delay-400" : "opacity-0"
+              <div className={`flex flex-wrap gap-4 mb-8 justify-center sm:justify-start ${
+                isVisible("section-0") ? "animate-fadeInUp delay-400" : "opacity-100 sm:opacity-0"
               }`}>
                 <Link
                   href="/contact-us"
-                  className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-8 py-4 rounded-full transition-all duration-500 overflow-hidden"
+                  className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-500 overflow-hidden text-sm sm:text-base"
                 >
                   <span className="relative z-10">Book a Private Consultation</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 </Link>
                 <Link
                   href="https://wa.me/60142616007"
-                  className="group border border-white/20 hover:border-primary/50 text-white font-medium px-8 py-4 rounded-full transition-all duration-300 flex items-center gap-3 hover:bg-white/5"
+                  className="group border border-white/20 hover:border-primary/50 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 flex items-center gap-3 hover:bg-white/5 text-sm sm:text-base"
                 >
-                  <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  <svg className="w-7 h-7" viewBox="0 0 24 24">
+                    <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
                   WhatsApp Us
                 </Link>
@@ -393,7 +393,7 @@ const FaceHub = () => {
 
               {/* Disclaimer */}
               <p className={`text-white/30 text-xs italic ${
-                isVisible("section-0") ? "animate-fadeInUp delay-500" : "opacity-0"
+                isVisible("section-0") ? "animate-fadeInUp delay-500" : "opacity-100 sm:opacity-0"
               }`}>
                 Every face is different. Results vary. A consultation is needed to confirm suitability, safety, and the best approach.
               </p>
@@ -401,7 +401,7 @@ const FaceHub = () => {
 
             {/* Right Side - Stats Card */}
             <div className={`flex-1 hidden lg:flex justify-end ${
-              isVisible("section-0") ? "animate-slideInRight" : "opacity-0"
+              isVisible("section-0") ? "animate-slideInRight" : "opacity-100 sm:opacity-0"
             }`}>
               <div className="relative">
                 {/* Main Image Container */}
@@ -442,34 +442,34 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== WHY CHOOSE SOMA SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-white relative overflow-hidden" ref={trustRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-white relative overflow-hidden" ref={trustRef}>
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary/50 to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
 
         <div className="flex containers w-full relative z-10">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 w-full">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 lg:gap-24 w-full">
             {/* Left Content */}
-            <div className={`flex-1 ${isVisible("section-1") ? "animate-slideInLeft" : "opacity-0"}`}>
-              <div className="sticky top-32">
+            <div className={`flex-1 text-center sm:text-left ${isVisible("section-1") ? "animate-slideInLeft" : "opacity-100 sm:opacity-0"}`}>
+              <div className="sm:sticky sm:top-32">
                 <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                   Why Choose Us
                 </span>
-                <h2 className="text-header-black text-3xl lg:text-4xl font-semibold leading-tight mb-6">
+                <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-6">
                   Why patients choose Soma for
                   <span className="text-primary block">facial surgery in Malaysia</span>
                 </h2>
 
-                <p className="text-para-black text-lg mb-6">
+                <p className="text-para-black text-base sm:text-lg mb-6">
                   When people search facial cosmetic surgery in Malaysia, they usually feel two things at once:
                 </p>
 
-                <div className="flex gap-8 mb-8">
-                  <div className="flex-1 border-l-2 border-primary pl-4">
+                <div className="flex gap-4 sm:gap-8 mb-8 justify-center sm:justify-start">
+                  <div className="flex-1 border-l-2 border-primary pl-4 text-left">
                     <p className="text-header-black font-semibold">Hope</p>
                     <p className="text-para-black text-sm">for a better reflection</p>
                   </div>
-                  <div className="flex-1 border-l-2 border-gray-200 pl-4">
+                  <div className="flex-1 border-l-2 border-gray-200 pl-4 text-left">
                     <p className="text-header-black font-semibold">Worry</p>
                     <p className="text-para-black text-sm">about looking unnatural</p>
                   </div>
@@ -482,23 +482,23 @@ const FaceHub = () => {
             </div>
 
             {/* Right - Trust Points */}
-            <div className={`flex-1 ${isVisible("section-1") ? "animate-slideInRight" : "opacity-0"}`}>
-              <div className="space-y-6">
+            <div className={`flex-1 ${isVisible("section-1") ? "animate-slideInRight" : "opacity-100 sm:opacity-0"}`}>
+              <div className="space-y-4 sm:space-y-6">
                 {trustPoints.map((point, index) => (
                   <div
                     key={index}
-                    className={`group bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-500 ${
-                      isVisible("section-1") ? "animate-fadeInUp" : "opacity-0"
+                    className={`group bg-white rounded-2xl p-4 sm:p-6 border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-500 ${
+                      isVisible("section-1") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"
                     }`}
                     style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                   >
-                    <div className="flex items-start gap-5">
-                      <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center flex-shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <div className="flex items-start gap-4 sm:gap-5">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-secondary flex items-center justify-center flex-shrink-0 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                         {point.icon}
                       </div>
                       <div>
-                        <h4 className="text-header-black font-semibold text-lg mb-1 normal-case">{point.title}</h4>
-                        <p className="text-para-black">{point.description}</p>
+                        <h4 className="text-header-black font-semibold text-base sm:text-lg mb-1 normal-case">{point.title}</h4>
+                        <p className="text-para-black text-sm sm:text-base">{point.description}</p>
                       </div>
                     </div>
                   </div>
@@ -506,16 +506,16 @@ const FaceHub = () => {
               </div>
 
               {/* Trust Badges */}
-              <div className="grid grid-cols-2 gap-4 mt-10">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-6 sm:mt-10">
                 {trustBadges.map((badge, index) => (
                   <div
                     key={index}
-                    className={`bg-secondary/50 rounded-xl px-5 py-4 text-center ${
-                      isVisible("section-1") ? "animate-scaleUp" : "opacity-0"
+                    className={`bg-secondary/50 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-center ${
+                      isVisible("section-1") ? "animate-scaleUp" : "opacity-100 sm:opacity-0"
                     }`}
                     style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                   >
-                    <p className="text-header-black text-sm font-medium">{badge.label}</p>
+                    <p className="text-header-black text-xs sm:text-sm font-medium">{badge.label}</p>
                   </div>
                 ))}
               </div>
@@ -525,24 +525,45 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== TREATMENTS SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-[#fafafa]" ref={treatmentsRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-[#fafafa]" ref={treatmentsRef}>
         <div className="flex containers w-full">
-          <div className="flex flex-col gap-12 w-full">
+          <div className="flex flex-col gap-8 sm:gap-12 w-full">
             {/* Section Header */}
-            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-2") ? "animate-fadeInUp" : "opacity-0"}`}>
+            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-2") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                 Our Expertise
               </span>
-              <h2 className="text-header-black text-3xl lg:text-4xl font-semibold mb-4">
+              <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Explore <span className="text-primary">Facial Treatments</span>
               </h2>
-              <p className="text-para-black text-lg">
+              <p className="text-para-black text-base sm:text-lg">
                 Each treatment below has its own full page with details, recovery, and FAQs.
               </p>
             </div>
 
-            {/* Filter Tabs */}
-            <div className={`flex flex-wrap justify-center gap-3 ${isVisible("section-2") ? "animate-fadeInUp delay-200" : "opacity-0"}`}>
+            {/* Mobile Dropdown */}
+            <div className={`sm:hidden mb-0 ${isVisible("section-2") ? "animate-fadeInUp delay-200" : "opacity-100"}`}>
+              <select
+                value={activeFilter}
+                onChange={(e) => setActiveFilter(e.target.value)}
+                className="w-full h-14 px-6 bg-white border border-gray-200 rounded-full text-[14px] font-semibold text-[#1A1A1A] shadow-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 1.5rem center',
+                  backgroundSize: '1.25rem'
+                }}
+              >
+                {filterCategories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Desktop Filter Tabs */}
+            <div className={`hidden sm:flex flex-wrap justify-center gap-3 ${isVisible("section-2") ? "animate-fadeInUp delay-200" : "opacity-100 sm:opacity-0"}`}>
               {filterCategories.map((category) => (
                 <button
                   key={category.id}
@@ -559,19 +580,19 @@ const FaceHub = () => {
             </div>
 
             {/* Treatments Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredTreatments.map((treatment, index) => (
                 <Link
                   key={index}
                   href={treatment.href}
-                  className={`group relative bg-white rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl ${
+                  className={`group relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl ${
                     treatment.featured ? "md:col-span-2 lg:col-span-1" : ""
-                  } ${isVisible("section-2") ? "animate-fadeInUp" : "opacity-0"}`}
+                  } ${isVisible("section-2") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}
                   style={{ animationDelay: `${0.1 + index * 0.05}s` }}
                 >
                   {/* Featured Badge */}
                   {treatment.featured && (
-                    <div className="absolute top-6 left-6 z-20">
+                    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
                       <span className="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                         Popular Choice
                       </span>
@@ -579,7 +600,7 @@ const FaceHub = () => {
                   )}
 
                   {/* Image */}
-                  <div className="relative h-[240px] overflow-hidden">
+                  <div className="relative h-[200px] sm:h-[240px] overflow-hidden">
                     <BaseImage
                       src={treatment.image}
                       fill
@@ -587,30 +608,23 @@ const FaceHub = () => {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-
-                    {/* Category Badge */}
-                    <div className="absolute bottom-4 left-6">
-                      <span className="text-white/80 text-xs font-medium uppercase tracking-wider">
-                        {filterCategories.find((c) => c.id === treatment.category)?.label}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 lg:p-8">
-                    <div className="mb-4">
-                      <h3 className="text-header-black text-xl font-bold mb-1 group-hover:text-primary transition-colors normal-case">
+                  <div className="px-6 py-5 sm:p-6 lg:p-8">
+                    <div className="mb-3 sm:mb-4">
+                      <h3 className="text-header-black text-lg sm:text-xl font-bold mb-1 group-hover:text-primary transition-colors normal-case">
                         {treatment.title}
                       </h3>
                       <p className="text-primary text-sm font-medium">{treatment.subtitle}</p>
                     </div>
 
-                    <p className="text-para-black text-sm leading-relaxed mb-5">
+                    <p className="text-para-black text-sm leading-relaxed mb-4 sm:mb-5">
                       {treatment.description}
                     </p>
 
                     {/* Best For Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
                       {treatment.bestFor.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
@@ -622,10 +636,10 @@ const FaceHub = () => {
                     </div>
 
                     {/* CTA */}
-                    <div className="flex items-center justify-between pt-5 border-t border-gray-100">
+                    <div className="flex items-center justify-between pt-4 sm:pt-5 border-t border-gray-100">
                       <span className="text-primary font-semibold text-sm">View Treatment</span>
-                      <div className="w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all duration-300">
-                        <svg className="w-5 h-5 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all duration-300">
+                        <svg className="w-4 h-4 sm:w-6 sm:h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </div>
@@ -639,23 +653,23 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== DECISION GUIDE SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-secondary relative overflow-hidden" ref={guideRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-secondary relative overflow-hidden" ref={guideRef}>
         {/* Decorative Elements */}
         <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div className="flex containers w-full relative z-10">
-          <div className="flex flex-col gap-14 w-full">
+          <div className="flex flex-col gap-8 sm:gap-14 w-full">
             {/* Section Header */}
-            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-3") ? "animate-fadeInUp" : "opacity-0"}`}>
+            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-3") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                 Quick Guide
               </span>
-              <h2 className="text-header-black text-3xl lg:text-4xl font-semibold mb-4">
+              <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Not sure which facial procedure
                 <span className="text-primary block">fits your concern?</span>
               </h2>
-              <p className="text-para-black text-lg">
+              <p className="text-para-black text-base sm:text-lg">
                 This quick guide helps you choose the right page.
               </p>
             </div>
@@ -666,20 +680,20 @@ const FaceHub = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className={`group relative bg-white rounded-2xl p-6 lg:p-8 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-500 ${
-                    isVisible("section-3") ? "animate-fadeInUp" : "opacity-0"
+                  className={`group relative bg-white rounded-2xl p-5 sm:p-6 lg:p-8 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-500 text-center sm:text-left ${
+                    isVisible("section-3") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"
                   }`}
                   style={{ animationDelay: `${0.1 + index * 0.05}s` }}
                 >
                   {/* Number */}
-                  <div className="absolute top-6 right-6 text-primary/10 text-5xl font-bold">
+                  <div className="hidden sm:block absolute top-4 right-4 sm:top-6 sm:right-6 text-primary/10 text-4xl sm:text-5xl font-bold">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
                   <div className="relative">
-                    <p className="text-header-black text-lg mb-4 pr-12 font-medium">{item.concern}</p>
-                    <div className="flex items-center gap-3">
-                      <div className="h-px flex-1 bg-gradient-to-r from-primary to-transparent"></div>
+                    <p className="text-header-black text-base sm:text-lg mb-4 pr-8 sm:pr-12 font-medium">{item.concern}</p>
+                    <div className="flex items-center gap-3 justify-center sm:justify-start">
+                      <div className="h-px flex-1 bg-gradient-to-r from-primary to-transparent hidden sm:block"></div>
                       <span className="text-primary font-semibold text-sm">{item.solution}</span>
                       <svg className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -691,13 +705,13 @@ const FaceHub = () => {
             </div>
 
             {/* CTA */}
-            <div className={`text-center ${isVisible("section-3") ? "animate-fadeInUp delay-600" : "opacity-0"}`}>
+            <div className={`text-center ${isVisible("section-3") ? "animate-fadeInUp delay-600" : "opacity-100 sm:opacity-0"}`}>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white font-medium px-10 py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/30"
+                className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 text-sm sm:text-base"
               >
                 Book a Private Consultation
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
@@ -707,11 +721,11 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== WHAT NATURAL MEANS SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-white relative overflow-hidden" ref={naturalRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-white relative overflow-hidden" ref={naturalRef}>
         <div className="flex containers w-full">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center w-full">
+          <div className="flex flex-col lg:flex-row gap-10 sm:gap-16 lg:gap-24 items-center w-full">
             {/* Left Image */}
-            <div className={`flex-1 ${isVisible("section-4") ? "animate-slideInLeft" : "opacity-0"}`}>
+            <div className={`flex-1 hidden sm:block ${isVisible("section-4") ? "animate-slideInLeft" : "opacity-100 sm:opacity-0"}`}>
               <div className="relative">
                 <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden">
                   <BaseImage
@@ -735,41 +749,41 @@ const FaceHub = () => {
             </div>
 
             {/* Right Content */}
-            <div className={`flex-1 ${isVisible("section-4") ? "animate-slideInRight" : "opacity-0"}`}>
+            <div className={`flex-1 text-center sm:text-left ${isVisible("section-4") ? "animate-slideInRight" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                 Our Philosophy
               </span>
-              <h2 className="text-header-black text-3xl lg:text-4xl font-semibold mb-6">
+              <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6">
                 What &ldquo;natural&rdquo; means
                 <span className="text-primary block">in facial surgery</span>
               </h2>
 
-              <div className="bg-secondary/50 rounded-2xl p-6 mb-8">
-                <p className="text-header-black text-lg font-medium mb-2">
+              <div className="bg-secondary/50 rounded-2xl p-5 sm:p-6 mb-6 sm:mb-8">
+                <p className="text-header-black text-base sm:text-lg font-medium mb-2">
                   Natural does not mean &ldquo;no change.&rdquo;
                 </p>
-                <p className="text-para-black">
+                <p className="text-para-black text-sm sm:text-base">
                   Natural means people notice you look well, not that you had surgery.
                 </p>
               </div>
 
-              <p className="text-para-black text-lg font-medium mb-6">Our goal is:</p>
+              <p className="text-para-black text-base sm:text-lg font-medium mb-4 sm:mb-6">Our goal is:</p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {naturalResults.map((item, index) => (
                   <div
                     key={index}
-                    className={`flex items-center gap-4 ${
-                      isVisible("section-4") ? "animate-fadeInUp" : "opacity-0"
+                    className={`flex items-center gap-3 sm:gap-4 justify-center sm:justify-start ${
+                      isVisible("section-4") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"
                     }`}
                     style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p className="text-header-black text-lg">{item}</p>
+                    <p className="text-header-black text-sm sm:text-lg text-left">{item}</p>
                   </div>
                 ))}
               </div>
@@ -779,25 +793,25 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== JOURNEY SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-secondary" ref={journeyRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-secondary" ref={journeyRef}>
         <div className="flex containers w-full">
-          <div className="flex flex-col gap-16 w-full">
+          <div className="flex flex-col gap-10 sm:gap-16 w-full">
             {/* Section Header */}
-            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-5") ? "animate-fadeInUp" : "opacity-0"}`}>
+            <div className={`text-center max-w-3xl mx-auto ${isVisible("section-5") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                 The Process
               </span>
-              <h2 className="text-header-black text-3xl lg:text-4xl font-semibold">
+              <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold">
                 Your journey, <span className="text-primary">step by step</span>
               </h2>
             </div>
 
             {/* Journey Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {journeySteps.map((step, index) => (
                 <div
                   key={index}
-                  className={`relative ${isVisible("section-5") ? "animate-fadeInUp" : "opacity-0"}`}
+                  className={`relative ${isVisible("section-5") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}
                   style={{ animationDelay: `${0.1 + index * 0.15}s` }}
                 >
                   {/* Connector Line */}
@@ -805,13 +819,13 @@ const FaceHub = () => {
                     <div className="hidden lg:block absolute top-12 left-[60%] w-full h-px bg-gradient-to-r from-primary/50 to-transparent"></div>
                   )}
 
-                  <div className="bg-white rounded-3xl p-8 h-full relative hover:shadow-xl transition-shadow duration-300">
-                    <div className="relative">
-                      <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-lg font-bold mb-6">
+                  <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-full relative hover:shadow-xl transition-shadow duration-300 text-center sm:text-left">
+                    <div className="relative flex flex-col items-center sm:items-start">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-primary text-white flex items-center justify-center text-base sm:text-lg font-bold mb-4 sm:mb-6">
                         {step.num}
                       </div>
-                      <h4 className="text-header-black text-xl font-bold mb-4 normal-case">{step.title}</h4>
-                      <p className="text-para-black leading-relaxed">{step.description}</p>
+                      <h4 className="text-header-black text-lg sm:text-xl font-bold mb-3 sm:mb-4 normal-case">{step.title}</h4>
+                      <p className="text-para-black text-sm sm:text-base leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                 </div>
@@ -822,44 +836,44 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== FAQ SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-para-white" ref={faqRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-para-white" ref={faqRef}>
         <div className="flex containers w-full">
-          <div className="flex flex-col gap-14 w-full max-w-4xl mx-auto">
+          <div className="flex flex-col gap-8 sm:gap-14 w-full max-w-4xl mx-auto">
             {/* Centered Header */}
-            <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp" : "opacity-0"}`}>
+            <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
                 Got Questions?
               </span>
-              <h2 className="text-header-black text-3xl lg:text-4xl font-semibold mb-4">
+              <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
                 Facial Cosmetic Surgery <span className="text-primary">FAQs</span>
               </h2>
-              <p className="text-para-black text-lg max-w-2xl mx-auto">
+              <p className="text-para-black text-base sm:text-lg max-w-2xl mx-auto">
                 Find answers to common questions about facial cosmetic surgery procedures in Malaysia.
               </p>
             </div>
 
             {/* FAQ Accordion */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {faqData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`bg-white rounded-2xl overflow-hidden transition-all duration-300 border ${
+                  className={`bg-white rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 border ${
                     openIndex === index
                       ? "border-primary/20 shadow-lg"
                       : "border-gray-100 hover:border-gray-200 hover:shadow-md"
-                  } ${isVisible("section-6") ? "animate-fadeInUp" : "opacity-0"}`}
+                  } ${isVisible("section-6") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}
                   style={{ animationDelay: `${0.1 + index * 0.05}s` }}
                 >
                   <button
-                    className="w-full flex items-center justify-between px-6 py-5 lg:px-8 lg:py-6 text-left"
+                    className="w-full flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 text-left gap-4"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <span className={`font-semibold text-base lg:text-lg pr-6 transition-colors ${
+                    <span className={`font-semibold text-[14px] sm:text-base lg:text-lg transition-colors flex-1 ${
                       openIndex === index ? "text-primary" : "text-header-black"
                     }`}>
                       {faq.question}
                     </span>
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold transition-all duration-300 ${
+                    <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 min-w-[32px] sm:min-w-[40px] rounded-full flex items-center justify-center text-lg sm:text-xl font-bold transition-all duration-300 ${
                       openIndex === index
                         ? "bg-primary text-white"
                         : "bg-secondary text-primary"
@@ -870,7 +884,7 @@ const FaceHub = () => {
                   <div className={`overflow-hidden transition-all duration-500 ${
                     openIndex === index ? "max-h-[500px]" : "max-h-0"
                   }`}>
-                    <div className="px-6 pb-6 lg:px-8 lg:pb-8 text-para-black leading-relaxed">
+                    <div className="px-4 pt-[10px] pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8 text-para-black text-sm sm:text-base leading-relaxed border-t border-gray-100">
                       {faq.answer}
                     </div>
                   </div>
@@ -879,11 +893,11 @@ const FaceHub = () => {
             </div>
 
             {/* Bottom CTA */}
-            <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp delay-500" : "opacity-0"}`}>
-              <p className="text-para-black mb-4">Still have questions?</p>
+            <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp delay-500" : "opacity-100 sm:opacity-0"}`}>
+              <p className="text-para-black mb-4 text-sm sm:text-base">Still have questions?</p>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium px-8 py-4 rounded-full transition-all duration-300 hover:shadow-lg"
+                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-lg text-sm sm:text-base"
               >
                 Contact Us
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -896,7 +910,7 @@ const FaceHub = () => {
       </section>
 
       {/* ==================== FINAL CTA SECTION ==================== */}
-      <section className="py-24 lg:py-32 bg-[#0a0a0a] relative overflow-hidden" ref={ctaRef}>
+      <section className="py-12 sm:py-24 lg:py-32 bg-[#0a0a0a] relative overflow-hidden" ref={ctaRef}>
         {/* Decorative Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -904,42 +918,42 @@ const FaceHub = () => {
         </div>
 
         <div className="flex containers w-full relative z-10">
-          <div className={`text-center max-w-3xl mx-auto ${isVisible("section-7") ? "animate-fadeInUp" : "opacity-0"}`}>
+          <div className={`text-center max-w-3xl mx-auto ${isVisible("section-7") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
             {/* Decorative Line */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
+            <div className="flex items-center justify-center gap-4 mb-6 sm:mb-8">
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-primary"></div>
               <div className="w-2 h-2 rounded-full bg-primary"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary"></div>
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-primary"></div>
             </div>
 
-            <h2 className={`text-white text-3xl lg:text-5xl font-light mb-6 ${
-              isVisible("section-7") ? "animate-fadeInUp delay-100" : "opacity-0"
+            <h2 className={`text-white text-2xl sm:text-3xl lg:text-5xl font-light mb-4 sm:mb-6 ${
+              isVisible("section-7") ? "animate-fadeInUp delay-100" : "opacity-100 sm:opacity-0"
             }`}>
               Ready to begin a
               <span className="text-primary font-semibold block mt-2">private consultation?</span>
             </h2>
 
-            <p className={`text-white/60 text-lg mb-10 max-w-xl mx-auto ${
-              isVisible("section-7") ? "animate-fadeInUp delay-200" : "opacity-0"
+            <p className={`text-white text-base sm:text-lg mb-8 sm:mb-10 max-w-xl mx-auto ${
+              isVisible("section-7") ? "animate-fadeInUp delay-200" : "opacity-100 sm:opacity-0"
             }`}>
               Take the first step towards feeling more confident. We are here to listen, guide, and support your journey.
             </p>
 
             <div className={`flex flex-wrap justify-center gap-4 ${
-              isVisible("section-7") ? "animate-fadeInUp delay-300" : "opacity-0"
+              isVisible("section-7") ? "animate-fadeInUp delay-300" : "opacity-100 sm:opacity-0"
             }`}>
               <Link
                 href="/contact-us"
-                className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-10 py-5 rounded-full transition-all duration-500 overflow-hidden shadow-xl shadow-primary/30"
+                className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-10 py-3 sm:py-5 rounded-full transition-all duration-500 overflow-hidden shadow-xl shadow-primary/30 text-sm sm:text-base"
               >
                 <span className="relative z-10">Book a Private Consultation</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </Link>
               <Link
                 href="https://wa.me/60142616007"
-                className="group border border-white/20 hover:border-green-500/50 text-white font-medium px-10 py-5 rounded-full transition-all duration-300 flex items-center gap-3 hover:bg-green-500/10"
+                className="group border border-white/20 hover:border-green-500/50 text-white font-medium px-6 sm:px-10 py-3 sm:py-5 rounded-full transition-all duration-300 flex items-center gap-3 hover:bg-green-500/10 text-sm sm:text-base"
               >
-                <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
                 WhatsApp Us
@@ -947,8 +961,8 @@ const FaceHub = () => {
             </div>
 
             {/* Trust Note */}
-            <p className={`text-white/30 text-sm mt-10 ${
-              isVisible("section-7") ? "animate-fadeInUp delay-400" : "opacity-0"
+            <p className={`text-white/30 text-xs sm:text-sm mt-8 sm:mt-10 ${
+              isVisible("section-7") ? "animate-fadeInUp delay-400" : "opacity-100 sm:opacity-0"
             }`}>
               Your privacy is respected. Consultations are confidential and without obligation.
             </p>
