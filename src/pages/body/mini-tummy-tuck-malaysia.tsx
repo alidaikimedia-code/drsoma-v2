@@ -3,10 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import CloseIcon from "../../../public/icons/close_new_icon.svg";
-import PlusIcon from "../../../public/icons/plus_new_icon.svg";
 import { getFullUrl, getAssetPath } from "@/utils/helper";
-import { ShieldCheck, PenTool, Scissors, Activity, Minus, CircleOff, Clock, ThumbsUp, CheckCircle2, Smile, AlertCircle, Check, X, MessageCircle, Calendar, ChevronDown, HelpCircle } from 'lucide-react';
+import { ShieldCheck, PenTool, Scissors, Activity, Minus, CircleOff, Clock, ThumbsUp, CheckCircle2, Smile, AlertCircle, Check, X, MessageCircle, Calendar, HelpCircle } from 'lucide-react';
 
 const MiniTummyTuckMalaysia = () => {
   const router = useRouter();
@@ -566,22 +564,26 @@ const MiniTummyTuckMalaysia = () => {
             {faqData.map((item, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl border shadow-sm overflow-hidden transition-all duration-200 ${
-                  openIndex === index ? 'ring-1 ring-primary/10 border-primary/30' : 'border-zinc-200/80 hover:border-primary/30'
+                className={`bg-white rounded-2xl border shadow-sm overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? 'border-[#FE7623] shadow-lg shadow-orange-100' : 'border-zinc-200 hover:border-zinc-300 hover:shadow-md'
                 }`}
               >
                 <div
-                  className="flex items-center justify-between px-5 py-4 sm:p-6 lg:p-7 cursor-pointer select-none hover:bg-zinc-50/50 transition-colors gap-3 sm:gap-4"
+                  className={`flex items-center justify-between px-5 py-4 sm:p-6 lg:p-7 cursor-pointer select-none transition-colors gap-3 sm:gap-4 ${
+                    openIndex === index ? 'bg-gradient-to-r from-orange-50/50 to-white' : 'hover:bg-zinc-50/50'
+                  }`}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span className="text-sm sm:text-base lg:text-[17px] font-medium text-zinc-900">{item.question}</span>
-                  <span className={`text-zinc-400 transition-transform duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180 text-primary' : ''}`}>
-                    <ChevronDown className="w-6 h-6" />
+                  <span className={`text-sm sm:text-base lg:text-[17px] font-semibold transition-colors duration-300 ${
+                    openIndex === index ? 'text-[#FE7623]' : 'text-zinc-900'
+                  }`}>{item.question}</span>
+                  <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
+                    {openIndex === index ? "−" : "+"}
                   </span>
                 </div>
                 {openIndex === index && (
                   <div className="px-5 sm:px-6 lg:px-7 pb-5 sm:pb-6 lg:pb-7 pt-0">
-                    <p className="text-zinc-600 leading-relaxed text-sm sm:text-base">{item.answer}</p>
+                    <p className="text-zinc-600 leading-relaxed text-sm sm:text-base border-l-2 border-[#FE7623]/20 pl-4">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -601,11 +603,11 @@ const MiniTummyTuckMalaysia = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-lg hover:bg-[#20bd5a] transition-all shadow-lg shadow-green-500/20 text-sm sm:text-base">
-              <MessageCircle className="w-6 h-6" /> Chat with Us on WhatsApp
+            <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#20bd5a] transition-all shadow-lg shadow-green-500/20 text-sm sm:text-base">
+              <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" /> Chat with Us on WhatsApp
             </a>
-            <Link href="/contact-us" className="inline-flex justify-center items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 text-sm sm:text-base">
-              <Calendar className="w-6 h-6" /> Book a Consultation Today
+            <Link href="/contact-us" className="inline-flex justify-center items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 text-sm sm:text-base">
+              <Calendar className="w-6 h-6 sm:w-7 sm:h-7" /> Book a Consultation Today
             </Link>
           </div>
         </div>

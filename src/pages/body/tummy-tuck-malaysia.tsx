@@ -1,7 +1,5 @@
 import BaseImage from "@/components/BaseImage";
 import React, { useState } from "react";
-import CloseIcon from "../../../public/icons/close_new_icon.svg";
-import PlusIcon from "../../../public/icons/plus_new_icon.svg";
 import RelatedTopicsGrid from "@/components/related-topics-grid";
 
 const TummyTuckSurgery = () => {
@@ -252,20 +250,26 @@ const TummyTuckSurgery = () => {
               {faqData.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-10 w-full border border-stroke bg-para-white rounded-[12px] py-[14px] px-[24px]"
+                  className={`flex flex-col gap-10 w-full border rounded-2xl py-[14px] px-[24px] transition-all duration-300 ${
+                    openIndex === index
+                      ? 'border-[#FE7623] shadow-lg shadow-orange-100 bg-white'
+                      : 'border-zinc-200 bg-white hover:border-zinc-300 hover:shadow-md'
+                  }`}
                 >
                   <div
                     className="flex justify-between !flex-nowrap w-full cursor-pointer items-center"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <h5 className="text-primary">{item.question}</h5>
-                    <div className="hidden lg:flex">
-                      {openIndex === index ? <CloseIcon /> : <PlusIcon />}
-                    </div>
+                    <h5 className={`transition-colors duration-300 pr-4 ${
+                      openIndex === index ? 'text-[#FE7623]' : 'text-primary'
+                    }`}>{item.question}</h5>
+                    <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
                   </div>
                   {openIndex === index && (
                     <div className="flex">
-                      <p className="text-para-black">{item.answer}</p>
+                      <p className="text-para-black border-l-2 border-[#FE7623]/20 pl-4">{item.answer}</p>
                     </div>
                   )}
                 </div>
