@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import FAQ from "@/components/common/faq"
@@ -127,44 +128,44 @@ const faqs = [
 // Components
 function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-b from-[#FAFAF9] to-white py-[50px]">
+    <section className="relative bg-gradient-to-b from-[#FAFAF9] to-white py-8 sm:py-[50px]">
       <div className="flex containers w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left space-y-6">
-          <Badge variant="secondary" className="bg-[#F5F5F5] text-[#666666] hover:bg-[#F5F5F5] font-normal px-4 py-1.5">
+          <div className="text-center lg:text-left space-y-3">
+          <Badge variant="secondary" className="bg-[#F5F5F5] text-[#666666] hover:bg-[#F5F5F5] font-normal px-3 sm:px-4 py-1.5 text-xs sm:text-sm">
             Breast Cosmetic Surgery Hub
           </Badge>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-[1.1] tracking-tight">
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] leading-[1.1] tracking-tight">
             Breast Surgery in Malaysia
           </h1>
-          
-          <p className="text-xl md:text-2xl text-[#555555] max-w-2xl mx-auto font-light">
+
+          <p className="text-lg sm:text-xl md:text-2xl text-[#555555] max-w-2xl mx-auto lg:mx-0 font-light">
             A calm place to explore your options and feel clear again
           </p>
-          
-          <Separator className="max-w-24 mx-auto bg-[#E8E8E8]" />
-          
-          <p className="text-[16px] text-[#666666] max-w-2xl mx-auto leading-relaxed">
+
+          <Separator className="max-w-24 mx-auto lg:mx-0 bg-[#E8E8E8]" />
+
+          <p className="text-[14px] sm:text-[16px] text-[#666666] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             Breast concerns are not only about size. They can be about balance, comfort, confidence, and feeling like yourself in your own clothes.
           </p>
-          <p className="text-[16px] text-[#666666] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[14px] sm:text-[16px] text-[#666666] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             This Breast Hub is the simple starting point. You can explore each breast procedure page below, compare what each treatment is for, and book a private consultation when you are ready.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-4">
-            <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-md font-medium h-12 px-8">
+            <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
               <Phone className="w-4 h-4 mr-2" />
               Book a Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-md font-medium h-12 px-8">
+            <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
               <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp Us
             </Button>
           </div>
-          
-          <p className="text-[13px] text-[#999999] italic pt-2">
+
+          <p className="text-[12px] sm:text-[13px] text-[#999999] italic pt-2">
             Results vary from person to person. A consultation is needed to confirm suitability and safety.
           </p>
         </div>
@@ -191,11 +192,12 @@ function HeroSection() {
 }
 
 function TreatmentsSection() {
+  const [selectedCategory, setSelectedCategory] = React.useState("enhancement")
   const enhancementTreatments = breastTreatments.filter(t => t.category === "enhancement")
   const revisionTreatments = breastTreatments.filter(t => t.category === "revision")
 
   return (
-    <section className="py-[50px] bg-gradient-to-b from-[#FAFAF9] to-white relative overflow-hidden">
+    <section className="py-8 sm:py-[50px] bg-gradient-to-b from-[#FAFAF9] to-white relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
@@ -203,30 +205,61 @@ function TreatmentsSection() {
       <div className="flex containers w-full relative z-10">
         <div className="flex flex-col w-full">
           {/* Section Header */}
-          <div className="text-center mb-14 w-full">
-            <span className="inline-block text-primary text-sm font-semibold tracking-[0.15em] uppercase mb-4">
+          <div className="text-center mb-8 sm:mb-14 w-full">
+            <span className="inline-block text-primary text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase mb-3 sm:mb-4">
               Our Treatments
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-5 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4 sm:mb-5 tracking-tight">
               Explore Breast Treatments <span className="text-primary">In Malaysia</span>
             </h2>
-            <p className="text-[17px] text-[#666666] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[14px] sm:text-[17px] text-[#666666] max-w-2xl mx-auto leading-relaxed">
               Pick the page that matches your goal. Each treatment has its own full page with details, recovery, and FAQs.
             </p>
           </div>
 
-          {/* Tabs */}
-          <Tabs defaultValue="enhancement" className="w-full">
-            <TabsList className="flex w-full max-w-lg mx-auto grid-cols-2 mb-14 h-16 bg-white p-2 rounded-2xl shadow-lg border border-gray-100">
+          {/* Mobile Dropdown */}
+          <div className="sm:hidden mb-8">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="w-full h-14 px-6 bg-white border border-gray-200 rounded-full text-[14px] font-semibold text-[#1A1A1A] shadow-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1.5rem' }}
+            >
+              <option value="enhancement">Enhancement</option>
+              <option value="revision">Revision & Correction</option>
+            </select>
+          </div>
+
+          {/* Mobile Content */}
+          <div className="sm:hidden">
+            {selectedCategory === "enhancement" && (
+              <div className="grid grid-cols-1 gap-4">
+                {enhancementTreatments.map((treatment, idx) => (
+                  <TreatmentCard key={idx} treatment={treatment} />
+                ))}
+              </div>
+            )}
+            {selectedCategory === "revision" && (
+              <div className="grid grid-cols-1 gap-4">
+                {revisionTreatments.map((treatment, idx) => (
+                  <TreatmentCard key={idx} treatment={treatment} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Desktop/Tablet Tabs */}
+          <Tabs defaultValue="enhancement" className="w-full hidden sm:block">
+            <TabsList className="flex w-full max-w-lg mx-auto mb-14 h-16 bg-white p-2 rounded-2xl shadow-lg border border-gray-100">
               <TabsTrigger
                 value="enhancement"
-                className="flex-1 text-[15px] font-semibold rounded-xl h-full transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md"
+                className="flex-1 text-[15px] font-semibold rounded-xl h-full transition-all duration-300 px-4 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Enhancement
               </TabsTrigger>
               <TabsTrigger
                 value="revision"
-                className="flex-1 text-[15px] font-semibold rounded-xl h-full transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md"
+                className="flex-1 text-[15px] font-semibold rounded-xl h-full transition-all duration-300 px-4 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md"
               >
                 Revision & Correction
               </TabsTrigger>
@@ -256,43 +289,43 @@ function TreatmentsSection() {
 
 function TreatmentCard({ treatment }: { treatment: typeof breastTreatments[0] }) {
   return (
-    <Card className="group bg-white border-0 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full flex flex-col">
+    <Card className="group bg-white border-0 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 h-full flex flex-col">
       {/* Treatment Image */}
-      <div className="relative h-56 w-full overflow-hidden flex-shrink-0">
+      <div className="relative h-44 sm:h-56 w-full overflow-hidden flex-shrink-0">
         <BaseImage
           src={treatment.image}
           alt={treatment.title}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <Badge className="absolute top-4 right-4 text-[12px] text-white border-0 bg-primary font-medium px-4 py-1.5 rounded-full shadow-lg">
+        <Badge className="absolute top-3 right-3 sm:top-4 sm:right-4 text-[10px] sm:text-[12px] text-white border-0 bg-primary font-medium px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-lg">
           {treatment.location}
         </Badge>
       </div>
 
-      <CardHeader className="pb-3 pt-5 px-6 flex-shrink-0">
-        <CardTitle className="text-lg font-bold text-[#1A1A1A] mb-2">
+      <CardHeader className="pb-2 sm:pb-3 pt-4 sm:pt-5 px-4 sm:px-6 flex-shrink-0">
+        <CardTitle className="text-base sm:text-lg font-bold text-[#1A1A1A] mb-2">
           {treatment.title}
         </CardTitle>
-        <CardDescription className="text-[15px] text-[#555555] leading-relaxed">
+        <CardDescription className="text-[13px] sm:text-[15px] text-[#555555] leading-relaxed">
           {treatment.description}
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="pb-4 px-6 flex-grow">
-        <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">Best For:</p>
-        <div className="flex flex-wrap gap-2">
+      <CardContent className="pb-3 sm:pb-4 px-4 sm:px-6 flex-grow">
+        <p className="text-[10px] sm:text-xs font-semibold text-primary uppercase tracking-wider mb-2 sm:mb-3">Best For:</p>
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {treatment.bestFor.map((tag, i) => (
-            <Badge key={i} variant="secondary" className="bg-gradient-to-r from-primary/10 to-orange-100 text-primary hover:from-primary/20 hover:to-orange-200 text-[12px] font-medium px-3 py-1.5 rounded-full border-0 transition-colors">
+            <Badge key={i} variant="secondary" className="bg-gradient-to-r from-primary/10 to-orange-100 text-primary hover:from-primary/20 hover:to-orange-200 text-[10px] sm:text-[12px] font-medium px-2 sm:px-3 py-1 sm:py-1.5 rounded-full border-0 transition-colors">
               {tag}
             </Badge>
           ))}
         </div>
       </CardContent>
 
-      <CardFooter className="pt-0 pb-6 px-6 mt-auto flex-shrink-0">
+      <CardFooter className="pt-0 pb-4 sm:pb-6 px-4 sm:px-6 mt-auto flex-shrink-0">
         <Link href={treatment.href} className="w-full">
-          <Button className="w-full bg-primary hover:bg-[#d14e1e] text-white rounded-xl font-semibold text-[13px] h-12 px-4 transition-all duration-300 shadow-md hover:shadow-lg group-hover:scale-[1.02] whitespace-normal text-center leading-tight">
+          <Button className="w-full bg-primary hover:bg-[#d14e1e] text-white rounded-full font-semibold text-[12px] sm:text-[13px] h-auto py-3 sm:py-4 px-6 sm:px-8 transition-all duration-300 shadow-md hover:shadow-lg group-hover:scale-[1.02] whitespace-normal text-center leading-tight">
             View Details
             <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -304,48 +337,48 @@ function TreatmentCard({ treatment }: { treatment: typeof breastTreatments[0] })
 
 function QuickGuideSection() {
   return (
-    <section className="py-[50px] bg-[#FAFAF9] relative overflow-hidden">
+    <section className="py-8 sm:py-[50px] bg-[#FAFAF9] relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#E8E8E8_1px,transparent_1px),linear-gradient(to_bottom,#E8E8E8_1px,transparent_1px)] bg-[size:80px_80px] opacity-30" />
-      
+
       <div className="flex containers w-full relative">
         <div className="flex flex-col w-full">
           {/* Header */}
-          <div className="text-center mb-16 w-full">
-            <p className="text-[13px] uppercase tracking-[0.2em] text-[#E65A27] font-medium mb-4">
+          <div className="text-center mb-8 sm:mb-16 w-full">
+            <p className="text-[11px] sm:text-[13px] uppercase tracking-[0.2em] text-[#E65A27] font-medium mb-3 sm:mb-4">
               Find Your Match
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-5 tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4 sm:mb-5 tracking-tight">
               Not sure which breast procedure is right for you?
             </h2>
-            <p className="text-[18px] text-[#666666] max-w-lg mx-auto">
+            <p className="text-[14px] sm:text-[18px] text-[#666666] max-w-lg mx-auto">
               Use this quick guide, then open the matching page.
             </p>
           </div>
 
           {/* Guide Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {quickGuide.map((item, idx) => (
               <Link key={idx} href={item.href} className="block group">
-                <Card className="h-full bg-white border-0 transition-all rounded-2xl overflow-hidden flex flex-col">
+                <Card className="h-full bg-white border-0 transition-all rounded-xl sm:rounded-2xl overflow-hidden flex flex-col">
                   <CardContent className="p-0 flex flex-col h-full">
                     {/* Top accent bar */}
-                    
-                    <div className="p-7 flex flex-col h-full">
+
+                    <div className="p-6 sm:p-7 flex flex-col h-full text-center sm:text-left">
                       {/* Number badge */}
-                      <div className="flex items-center justify-between mb-5">
-                        <span className="text-[12px] font-semibold text-[#E65A27] bg-[#FEF3EE] px-3 py-1.5 rounded-full">
+                      <div className="flex items-center justify-center sm:justify-between mb-4 sm:mb-5">
+                        <span className="text-[10px] sm:text-[12px] font-semibold text-[#E65A27] bg-[#FEF3EE] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full">
                           Option {idx + 1}
                         </span>
-                        <ArrowRight className="w-5 h-5 text-[#CCCCCC] group-hover:text-[#E65A27] group-hover:translate-x-1 transition-all duration-300" />
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#CCCCCC] group-hover:text-[#E65A27] group-hover:translate-x-1 transition-all duration-300 hidden sm:block" />
                       </div>
-                      
+
                       {/* Content */}
-                      <div className="space-y-3 flex-grow">
-                        <p className="text-[15px] text-[#777777] leading-relaxed">
+                      <div className="space-y-2 sm:space-y-3 flex-grow">
+                        <p className="text-[13px] sm:text-[15px] text-[#777777] leading-relaxed">
                           {item.goal}
                         </p>
-                        <h3 className="text-[20px] font-bold text-[#1A1A1A] group-hover:text-[#E65A27] transition-colors tracking-normal font-medium">
+                        <h3 className="text-[16px] sm:text-[20px] font-bold text-[#1A1A1A] group-hover:text-[#E65A27] transition-colors tracking-normal">
                           {item.procedure}
                         </h3>
                       </div>
@@ -357,16 +390,16 @@ function QuickGuideSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-16 text-center">
-            <Card className="inline-block bg-[#1A1A1A] border-0 rounded-2xl overflow-hidden">
-              <CardContent className="px-[80px] py-[30px] flex flex-col sm:flex-row items-center gap-6">
-                <div className="text-left">
-                  <p className="text-white text-[14px] mb-1">Still not sure?</p>
-                  <p className="text-white text-[18px] font-semibold">Let us help you decide</p>
+          <div className="mt-10 sm:mt-16 text-center">
+            <Card className="inline-block bg-[#1A1A1A] border-0 rounded-xl sm:rounded-2xl overflow-hidden w-full sm:w-auto">
+              <CardContent className="px-6 sm:px-[80px] py-6 sm:py-[30px] flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                <div className="text-center sm:text-left">
+                  <p className="text-white text-[12px] sm:text-[14px] mb-1">Still not sure?</p>
+                  <p className="text-white text-[16px] sm:text-[18px] font-semibold">Let us help you decide</p>
                 </div>
-                <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-xl font-medium h-14 px-8 text-[15px] whitespace-nowrap">
+                <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 text-[13px] sm:text-[15px] whitespace-nowrap w-full sm:w-auto">
                   Book a Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
               </CardContent>
             </Card>
@@ -379,26 +412,26 @@ function QuickGuideSection() {
 
 function DifferentiatorsSection() {
   return (
-    <section className="py-[50px] bg-white">
+    <section className="py-8 sm:py-[50px] bg-white">
       <div className="flex containers w-full">
         <div className="flex flex-col w-full">
-          <div className="text-center mb-14 w-full">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4 tracking-tight">
+          <div className="text-center mb-8 sm:mb-14 w-full">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-3 sm:mb-4 tracking-tight">
               What makes our breast care different
             </h2>
-            <p className="text-[16px] text-[#666666] max-w-2xl mx-auto">
+            <p className="text-[14px] sm:text-[16px] text-[#666666] max-w-2xl mx-auto">
               When people search for breast surgery in Malaysia, most are not only looking for a procedure. They are looking for trust. At Soma Plastic Surgery (Clinical Aesthetics), we focus on:
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
             {differentiators.map((item, idx) => (
-              <Card key={idx} className="border-[#E8E8E8] shadow-none rounded-xl hover:border-[#D4D4D4] hover:shadow-sm transition-all">
-                <CardContent className="p-8 text-center">
-                  <CardTitle className="text-[18px] font-semibold text-[#1A1A1A] mb-3">
+              <Card key={idx} className="border-[#E8E8E8] shadow-none rounded-lg sm:rounded-xl hover:border-[#D4D4D4] hover:shadow-sm transition-all">
+                <CardContent className="p-5 sm:p-8 text-center">
+                  <CardTitle className="text-[16px] sm:text-[18px] font-semibold text-[#1A1A1A] mb-2 sm:mb-3">
                     {item.title}
                   </CardTitle>
-                  <p className="text-[15px] text-[#666666] leading-relaxed">
+                  <p className="text-[13px] sm:text-[15px] text-[#666666] leading-relaxed">
                     {item.description}
                   </p>
                 </CardContent>
@@ -413,9 +446,9 @@ function DifferentiatorsSection() {
 
 function CTASection() {
   return (
-    <section className="py-[50px] bg-white">
+    <section className="py-8 sm:py-[50px] bg-white">
       <div className="flex containers w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* CTA Image */}
           <div className="relative hidden lg:block">
             <div className="relative aspect-square rounded-2xl overflow-hidden">
@@ -427,23 +460,23 @@ function CTASection() {
               />
             </div>
           </div>
-          
+
           {/* CTA Content */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-5 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-5 sm:mb-8 tracking-tight">
               Ready to explore your options with clarity?
             </h2>
-            <p className="text-[17px] text-[#666666] mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-[14px] sm:text-[17px] text-[#666666] mb-6 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               You do not need to decide today. Start with a conversation, get honest guidance, and move forward only when you feel ready.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-lg font-medium h-14 px-8 py-4 text-[16px]">
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
                 Book a Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-lg font-medium h-14 px-8 py-4 text-[16px]">
-                <MessageCircle className="w-5 h-5 mr-2" />
+              <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 WhatsApp Us
               </Button>
             </div>

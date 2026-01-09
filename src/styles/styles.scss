@@ -148,6 +148,12 @@ section {
   width: 100%;
 }
 
+@media (max-width: 640px) {
+  section {
+    padding-inline: 20px;
+  }
+}
+
 .containers {
   max-width: 1166px;
   width: 100%;
