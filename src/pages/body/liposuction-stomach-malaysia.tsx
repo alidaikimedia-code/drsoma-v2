@@ -171,7 +171,7 @@ export default function StomachLiposuctionMalaysia() {
 
       <main className="stomach-lipo-page bg-white text-zinc-900">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-20 md:pt-36 md:pb-32 px-6 overflow-hidden border-b border-zinc-100">
+        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden border-b border-zinc-100">
           <div className="absolute top-0 left-0 right-0 h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-50/60 via-zinc-50/20 to-transparent -z-10"></div>
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -191,8 +191,8 @@ export default function StomachLiposuctionMalaysia() {
                 At Dr. Soma Plastic Surgery, every stomach liposuction procedure is performed by Dr. Soma, utilizing advanced <strong className="text-zinc-700">MicroAire Power-Assisted Liposuction (PAL)</strong> for smoother results and more uniform contouring.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-lg text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  <svg className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                <a href="https://wa.me/60142616007" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                   Book Consultation (WhatsApp)
                 </a>
               </div>
@@ -213,7 +213,7 @@ export default function StomachLiposuctionMalaysia() {
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-zinc-400">Goal</p>
+                    <p className="text-xs font-bold uppercase tracking-wide text-zinc-900">Goal</p>
                     <p className="text-sm font-semibold text-zinc-900">Natural Contour</p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function StomachLiposuctionMalaysia() {
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine">
                       <div className="flex items-center gap-3">
-                        <svg className="w-6 h-6 text-zinc-400 group-hover:text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-400 group-hover:text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span className="text-sm font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{area.name}</span>
@@ -315,8 +315,8 @@ export default function StomachLiposuctionMalaysia() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, i) => (
                 <div key={i} data-animate={`benefit-${i}`} className={`p-6 rounded-xl border border-zinc-200 bg-white shadow-sm card-3d card-shine hover:border-[#FE7623] transition-all duration-700 ${isVisible(`benefit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center text-[#FE7623] mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} /></svg>
+                  <div className="w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-[#FE7623] mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} /></svg>
                   </div>
                   <h3 className="text-sm font-bold text-zinc-900 mb-2">{benefit.title}</h3>
                   <p className="text-xs text-zinc-500">{benefit.desc}</p>
@@ -343,7 +343,7 @@ export default function StomachLiposuctionMalaysia() {
                 <ul className="space-y-4">
                   {["Stable weight", "Localised belly fat pockets", "Good skin elasticity", "Non-smoker or willing to stop temporarily", "Realistic expectations"].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
-                      <svg className="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
                     </li>
                   ))}
@@ -361,7 +361,7 @@ export default function StomachLiposuctionMalaysia() {
                 <ul className="space-y-4">
                   {["Significant loose skin or muscle separation is the main issue", "Severe obesity", "Poor skin elasticity"].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-500 hover:text-zinc-700 transition-colors duration-300">
-                      <svg className="w-4 h-4 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      <svg className="w-7 h-7 sm:w-8 sm:h-8 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                       {item}
                     </li>
                   ))}
@@ -475,36 +475,19 @@ export default function StomachLiposuctionMalaysia() {
                   }`}
                 >
                   <button
-                    className={`w-full flex items-center justify-between p-6 text-left group transition-all duration-300 ${
+                    className={`w-full flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:py-5 text-left transition-colors gap-4 ${
                       openFaq === index ? 'bg-gradient-to-r from-orange-50/50 to-white' : 'hover:bg-zinc-50/50'
                     }`}
                     onClick={() => toggleFaq(index)}
                   >
-                    <div className="flex items-center gap-4">
-                      <span className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
-                        openFaq === index
-                          ? 'bg-[#FE7623] text-white'
-                          : 'bg-zinc-100 text-zinc-600 group-hover:bg-orange-50 group-hover:text-[#FE7623]'
-                      }`}>
-                        {index + 1}
-                      </span>
-                      <span className={`text-sm font-semibold transition-colors duration-300 ${
-                        openFaq === index ? 'text-[#FE7623]' : 'text-zinc-800 group-hover:text-[#FE7623]'
-                      }`}>{faq.question}</span>
-                    </div>
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                      openFaq === index
-                        ? 'bg-[#FE7623] text-white rotate-180'
-                        : 'bg-zinc-100 text-zinc-600 group-hover:bg-orange-50 group-hover:text-[#FE7623]'
-                    }`}>
-                      <svg className="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
+                    <h5 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h5>
+                    <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
                   <div className={`overflow-hidden transition-all duration-500 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="px-6 pb-6 pt-2">
-                      <div className="pl-12 text-sm text-zinc-600 leading-relaxed border-l-2 border-[#FE7623]/20 ml-4">
+                    <div className="px-4 pb-4 sm:px-6 sm:pb-6 pt-2">
+                      <div className="text-sm text-zinc-600 leading-relaxed">
                         {faq.answer}
                       </div>
                     </div>
@@ -531,14 +514,14 @@ export default function StomachLiposuctionMalaysia() {
               Dr. Soma combines medical precision, MicroAire PAL technology, and safety-first technique to deliver natural, long-lasting waistline refinement.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://wa.me/" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-2xl text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
-                <svg className="w-6 h-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+              <a href="https://wa.me/60142616007" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
-              <a href="#" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-2xl text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 Book a Consultation Today
-                <svg className="w-6 h-6 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </a>
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
             </div>
 
             {/* SEO Tags */}
