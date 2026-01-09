@@ -121,7 +121,7 @@ const Footer = () => {
               <hr className="flex w-full border border-primary" />
               <div className="flex w-full justify-center py-20">
                 <p className="text-[#EBEBEB] opacity-90 text-center">
-                  Copyright © 2023. SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A).
+                  Copyright © 2026. SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A).
                   All Rights Reserved.
                 </p>
               </div>

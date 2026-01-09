@@ -1,7 +1,5 @@
 import Certificates from "@/components/certificates";
 import BaseImage from "@/components/BaseImage";
-import CloseIcon from "../../public/icons/close_new_icon.svg";
-import PlusIcon from "../../public/icons/plus_new_icon.svg";
 
 // Animation styles
 const animationStyles = `
@@ -302,7 +300,7 @@ const NewHome = () => {
 
       {/* Hero Section - Calm, Trust-Focused */}
       <section ref={heroRef} className="relative w-full min-h-screen bg-gradient-to-b from-stone-50 to-white overflow-hidden">
-        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-28 transition-all duration-1000 ${isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] transition-all duration-1000 ${isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
 
             {/* Text Content */}
@@ -686,7 +684,7 @@ const NewHome = () => {
       </section>
 
       {/* Areas of Care We Support */}
-      <section ref={servicesRef} className="py-12 sm:py-16 lg:py-32 bg-white">
+      <section ref={servicesRef} className="pt-[50px] pb-[50px] sm:py-16 lg:py-32 bg-white">
         <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${isVisible('section-5') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-stone-800 leading-tight mb-4 sm:mb-6">
@@ -697,7 +695,7 @@ const NewHome = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
 
             {/* Facial and Rejuvenation Care */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.1s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <Smile className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -717,7 +715,7 @@ const NewHome = () => {
             </div>
 
             {/* Breast Care and Balance */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <Heart className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -737,7 +735,7 @@ const NewHome = () => {
             </div>
 
             {/* Body Contouring Support */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <PersonStanding className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -757,7 +755,7 @@ const NewHome = () => {
             </div>
 
             {/* Reconstructive Support */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <Hammer className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -777,7 +775,7 @@ const NewHome = () => {
             </div>
 
             {/* Non Surgical Aesthetic Options */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <Sparkles className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -797,7 +795,7 @@ const NewHome = () => {
             </div>
 
             {/* Male Procedures */}
-            <div className="bg-stone-50 p-5 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
+            <div className="bg-stone-50 py-[26px] px-[10px] sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl border border-stone-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fadeInUp opacity-0 text-center sm:text-left" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
               <div className="w-14 h-14 sm:w-14 sm:h-14 mb-4 sm:mb-6 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary transition-colors mx-auto sm:mx-0">
                 <Users className="w-7 h-7 sm:w-7 sm:h-7 text-stone-600 group-hover:text-white transition-colors" />
               </div>
@@ -892,15 +890,15 @@ const NewHome = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
+              <div className="inline-flex items-center gap-2 sm:gap-4 pt-4 sm:pt-6">
                 <button
-                  className="px-6 sm:px-8 py-3 sm:py-3.5 bg-white text-stone-800 font-medium rounded-lg sm:rounded-xl hover:bg-stone-100 transition-colors text-sm sm:text-base"
+                  className="px-2.5 sm:px-8 py-2 sm:py-3.5 bg-white text-stone-800 font-medium rounded-full hover:bg-stone-100 transition-colors text-[8px] sm:text-base whitespace-nowrap"
                   onClick={() => router.push('/about-dr-soma')}
                 >
                   Read Full Profile
                 </button>
                 <button
-                  className="px-6 sm:px-8 py-3 sm:py-3.5 border border-stone-600 text-white font-medium rounded-lg sm:rounded-xl hover:bg-stone-700 transition-colors text-sm sm:text-base"
+                  className="px-2.5 sm:px-8 py-2 sm:py-3.5 border border-stone-600 text-white font-medium rounded-full hover:bg-stone-700 transition-colors text-[8px] sm:text-base whitespace-nowrap"
                   onClick={() => {
                     const certSection = document.getElementById('certificates-section');
                     certSection?.scrollIntoView({ behavior: 'smooth' });
@@ -1059,20 +1057,28 @@ const NewHome = () => {
               {faqData.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col gap-4 sm:gap-6 lg:gap-10 w-full border border-stroke bg-para-white rounded-[10px] sm:rounded-[12px] py-3 sm:py-[14px] px-4 sm:px-[24px]"
+                  className={`flex flex-col gap-4 sm:gap-6 lg:gap-10 w-full border rounded-[10px] sm:rounded-[12px] py-3 sm:py-[14px] px-4 sm:px-[24px] transition-all duration-300 ${
+                    openIndex === index
+                      ? 'border-[#FE7623] shadow-lg shadow-orange-100 bg-white'
+                      : 'border-zinc-200 bg-white hover:border-zinc-300 hover:shadow-md'
+                  }`}
                 >
                   <div
-                    className="flex justify-between !flex-nowrap w-full cursor-pointer items-center gap-3"
+                    className={`flex justify-between !flex-nowrap w-full cursor-pointer items-center gap-3 ${
+                      openIndex === index ? 'bg-gradient-to-r from-orange-50/50 to-white' : ''
+                    }`}
                     onClick={() => toggleAccordion(index)}
                   >
-                    <h5 className="text-primary text-sm sm:text-base lg:text-lg">{item.question}</h5>
-                    <div className="flex flex-shrink-0">
-                      {openIndex === index ? <CloseIcon className="w-5 h-5 sm:w-6 sm:h-6" /> : <PlusIcon className="w-5 h-5 sm:w-6 sm:h-6" />}
-                    </div>
+                    <h5 className={`text-sm sm:text-base lg:text-lg font-semibold transition-colors duration-300 ${
+                      openIndex === index ? 'text-[#FE7623]' : 'text-primary'
+                    }`}>{item.question}</h5>
+                    <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
+                      {openIndex === index ? "−" : "+"}
+                    </span>
                   </div>
                   {openIndex === index && (
                     <div className="flex">
-                      <p className="text-para-black text-sm sm:text-base">{item.answer}</p>
+                      <p className="text-para-black text-sm sm:text-base border-l-2 border-[#FE7623]/20 pl-4">{item.answer}</p>
                     </div>
                   )}
                 </div>
@@ -1093,7 +1099,7 @@ const NewHome = () => {
             Deciding to explore aesthetic care is personal. There is no right time except when you feel ready. If you are thinking about change, start with a private conversation.
           </p>
 
-          <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 shadow-lg border border-stone-100 max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl sm:rounded-3xl py-[25px] px-[15px] sm:p-8 lg:p-12 shadow-lg border border-stone-100 max-w-3xl mx-auto">
 
             {/* Clinic Info */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-10 pb-6 sm:pb-10 border-b border-stone-100">
