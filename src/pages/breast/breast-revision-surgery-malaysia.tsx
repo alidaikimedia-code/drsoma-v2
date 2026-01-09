@@ -439,13 +439,13 @@ export default function BreastRevisionSurgeryMalaysia() {
                 Breast revision is not just a &ldquo;repeat surgery.&rdquo; It is a complex corrective procedure designed to fix implant problems, restore symmetry, and achieve long-term stability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/" className="btn-press inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-lg text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 group animate-glow">
-                  <svg className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                <a href="https://wa.me/60142616007" className="btn-press inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 group animate-glow">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                   Book Consultation (WhatsApp)
                 </a>
-                <a href="#problems" className="btn-press inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-header-black px-8 py-4 rounded-lg text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <a href="#problems" className="btn-press inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-header-black px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                   View Key Problems
-                  <svg className="w-5 h-5 group-hover:translate-y-1 group-hover:scale-110 transition-all duration-300 animate-bounce-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:translate-y-1 group-hover:scale-110 transition-all duration-300 animate-bounce-slow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
             </div>
@@ -519,7 +519,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div data-animate="problem-1" className={`bg-white p-8 rounded-2xl border border-zinc-200 hover:border-[#FE7623] hover:-translate-y-3 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group md:col-span-2 cursor-pointer card-shine parallax-card ${isVisible('problem-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 rounded-xl bg-orange-50 text-[#FE7623] group-hover:scale-110 group-hover:rotate-6 group-hover:bg-[#FE7623] group-hover:text-white transition-all duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" /></svg>
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" /></svg>
                   </div>
                   <span className="text-xs font-bold text-zinc-300 uppercase group-hover:text-[#FE7623] transition-colors duration-300">Problem 01</span>
                 </div>
@@ -551,7 +551,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div data-animate="problem-2" className={`bg-white p-8 rounded-2xl border border-zinc-200 hover:border-[#FE7623] hover:-translate-y-3 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group cursor-pointer card-shine parallax-card ${isVisible('problem-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '100ms'}}>
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 rounded-xl bg-zinc-50 text-header-black group-hover:text-white group-hover:bg-[#FE7623] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4l4 4m8 8l4 4M4 20l4-4m8-8l4-4m-8 4a4 4 0 100 8 4 4 0 000-8z" /></svg>
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4l4 4m8 8l4 4M4 20l4-4m8-8l4-4m-8 4a4 4 0 100 8 4 4 0 000-8z" /></svg>
                   </div>
                   <span className="text-xs font-bold text-zinc-300 uppercase group-hover:text-[#FE7623] transition-colors duration-300">Problem 02</span>
                 </div>
@@ -569,7 +569,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div data-animate="problem-3" className={`bg-white p-8 rounded-2xl border border-zinc-200 hover:border-[#FE7623] hover:-translate-y-3 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group cursor-pointer card-shine parallax-card ${isVisible('problem-3') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '200ms'}}>
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 rounded-xl bg-zinc-50 text-header-black group-hover:text-white group-hover:bg-[#FE7623] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
                   </div>
                   <span className="text-xs font-bold text-zinc-300 uppercase group-hover:text-[#FE7623] transition-colors duration-300">Problem 03</span>
                 </div>
@@ -587,7 +587,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div data-animate="problem-4" className={`bg-white p-8 rounded-2xl border border-zinc-200 hover:border-[#FE7623] hover:-translate-y-3 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group md:col-span-2 cursor-pointer card-shine parallax-card ${isVisible('problem-4') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: '300ms'}}>
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 rounded-xl bg-zinc-50 text-header-black group-hover:text-white group-hover:bg-[#FE7623] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
                   </div>
                   <span className="text-xs font-bold text-zinc-300 uppercase group-hover:text-[#FE7623] transition-colors duration-300">Problem 04</span>
                 </div>
@@ -629,7 +629,7 @@ export default function BreastRevisionSurgeryMalaysia() {
                 {/* Floating card */}
                 <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[280px] animate-float">
                   <div className="flex items-center gap-2 mb-3">
-                    <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <span className="text-sm font-bold text-header-black">Dr. Soma Difference</span>
                   </div>
                   <p className="text-xs text-para-black leading-relaxed">
@@ -765,7 +765,7 @@ export default function BreastRevisionSurgeryMalaysia() {
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/" className="btn-press block w-full text-center bg-[#FE7623] text-white py-4 rounded-xl text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40">
+                <a href="https://wa.me/60142616007" className="btn-press block w-full text-center bg-[#FE7623] text-white py-4 rounded-full text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -775,7 +775,7 @@ export default function BreastRevisionSurgeryMalaysia() {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-8">
                 <div className="p-2 bg-orange-50 rounded-lg">
-                  <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
                   <h2 data-animate="faq-header" className={`text-2xl font-semibold text-header-black transition-all duration-700 ${isVisible('faq-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Frequently Asked Questions</h2>
@@ -793,45 +793,23 @@ export default function BreastRevisionSurgeryMalaysia() {
                     }`}
                   >
                     <button
-                      className={`w-full flex items-center justify-between p-6 text-left group transition-all duration-300 ${
+                      className={`w-full flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:py-5 text-left transition-colors gap-4 ${
                         openFaq === index ? 'bg-gradient-to-r from-orange-50/50 to-white' : 'hover:bg-zinc-50/50'
                       }`}
                       onClick={() => toggleFaq(index)}
                     >
-                      <div className="flex items-center gap-4">
-                        <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
-                          openFaq === index
-                            ? 'bg-[#FE7623] text-white'
-                            : 'bg-zinc-100 text-para-black group-hover:bg-orange-50 group-hover:text-[#FE7623]'
-                        }`}>
-                          {index + 1}
-                        </span>
-                        <span className={`text-sm font-semibold transition-colors duration-300 ${
-                          openFaq === index ? 'text-[#FE7623]' : 'text-header-black group-hover:text-[#FE7623]'
-                        }`}>{faq.question}</span>
-                      </div>
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        openFaq === index
-                          ? 'bg-[#FE7623] text-white rotate-180'
-                          : 'bg-zinc-100 text-para-black group-hover:bg-orange-50 group-hover:text-[#FE7623]'
-                      }`}>
-                        <svg
-                          className="w-4 h-4 transition-transform duration-300"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </div>
+                      <h5 className="text-sm sm:text-base text-primary font-medium flex-1">{faq.question}</h5>
+                      <span className={`flex-shrink-0 text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]`}>
+                        {openFaq === index ? "−" : "+"}
+                      </span>
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-500 ${
                         openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                       }`}
                     >
-                      <div className="px-6 pb-6 pt-2">
-                        <div className="pl-12 text-sm text-para-black leading-relaxed border-l-2 border-[#FE7623]/20 ml-4">
+                      <div className="px-4 pb-4 sm:px-6 sm:pb-6 pt-2">
+                        <div className="text-sm text-para-black leading-relaxed">
                           {faq.answer}
                         </div>
                       </div>
@@ -924,14 +902,14 @@ export default function BreastRevisionSurgeryMalaysia() {
               Dr. Soma combines advanced corrective technique with safety-first planning to deliver balanced, stable, long-lasting results.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://wa.me/" className="btn-press w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-xl text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 group animate-glow">
-                <svg className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+              <a href="https://wa.me/60142616007" className="btn-press w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 group animate-glow">
+                <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat on WhatsApp
               </a>
-              <a href="#" className="btn-press w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border-2 border-zinc-200 px-8 py-4 rounded-xl text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-2 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact-us" className="btn-press w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border-2 border-zinc-200 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-2 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 Book Consultation
-                <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              </a>
+                <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              </Link>
             </div>
 
             {/* SEO Tags */}
