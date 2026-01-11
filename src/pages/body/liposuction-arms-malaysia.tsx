@@ -221,7 +221,7 @@ export default function ArmLiposuctionMalaysia() {
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <BaseImage
                 src="/images/Arm Liposuction.jpg"
                 alt="Arm Liposuction Malaysia"
@@ -229,15 +229,15 @@ export default function ArmLiposuctionMalaysia() {
                 className="object-cover opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white backdrop-blur-md p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-wide text-zinc-400">Technique</p>
-                      <p className="text-base font-semibold text-zinc-900">MicroAire PAL Precision</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Technique</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">MicroAire PAL Precision</p>
                     </div>
                   </div>
                 </div>
@@ -263,13 +263,17 @@ export default function ArmLiposuctionMalaysia() {
                 <div className="grid grid-cols-2 gap-4">
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50/50 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine">
-                      <div className="flex items-center gap-3 mb-2">
-                        <svg className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-400 group-hover:text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                        <span className="text-sm font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{area.name}</span>
+                      <div className="flex flex-row items-start gap-3">
+                        <div className="flex-shrink-0">
+                          <svg className="w-6 h-6 text-zinc-400 group-hover:text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </div>
+                        <div className="flex-1">
+                          <span className="text-sm font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{area.name}</span>
+                          <p className="text-xs text-zinc-500 mt-1">{area.desc}</p>
+                        </div>
                       </div>
-                      <p className="text-xs text-zinc-500 pl-9">{area.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -297,7 +301,7 @@ export default function ArmLiposuctionMalaysia() {
                   <ul className="space-y-3 text-sm text-zinc-600">
                     {tech.features.map((feature, j) => (
                       <li key={j} className="flex items-center gap-3 hover:text-[#FE7623] hover:translate-x-2 transition-all duration-300">
-                        <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                        <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         {feature}
                       </li>
                     ))}
@@ -333,7 +337,7 @@ export default function ArmLiposuctionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
-            <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/4] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[4/4] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <BaseImage
                 src="/images/Arm Liposuction 1.jpg"
                 alt="Arm Liposuction Consultation"
@@ -361,19 +365,18 @@ export default function ArmLiposuctionMalaysia() {
 
               <div className="rounded-3xl overflow-hidden bg-white shadow-2xl border border-zinc-100 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.15)] transition-all duration-500">
                 {/* Table Header */}
-                <div className="grid grid-cols-3 gap-4 p-6 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900">
-                  <div className="text-white/70 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                <div className="grid grid-cols-3 gap-2 md:gap-4 p-3 md:p-6 bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900">
+                  <div className="text-white/70 text-[10px] md:text-xs font-bold uppercase tracking-widest">
                     Feature
                   </div>
                   <div className="text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#FE7623] to-orange-500 rounded-full text-white text-xs font-bold uppercase tracking-wide shadow-lg shadow-orange-500/30">
-                      <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                      Liposuction
+                    <div className="inline-flex items-center gap-1 md:gap-2 px-2 py-1 md:px-4 md:py-2 bg-gradient-to-r from-[#FE7623] to-orange-500 rounded-full text-white text-[10px] md:text-xs font-bold uppercase tracking-wide shadow-lg shadow-orange-500/30">
+                      <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-white animate-pulse"></span>
+                      Lipo
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white/90 text-xs font-bold uppercase tracking-wide">
+                    <div className="inline-flex items-center gap-1 md:gap-2 px-2 py-1 md:px-4 md:py-2 bg-white/10 rounded-full text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-wide">
                       Arm Lift
                     </div>
                   </div>
@@ -388,30 +391,27 @@ export default function ArmLiposuctionMalaysia() {
                     { feat: "Downtime", featIcon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z", lipo: "1–2 Weeks", lipoHighlight: true, lift: "2–4 Weeks" },
                     { feat: "Anesthesia", featIcon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z", lipo: "Local/Twilight", lipoHighlight: true, lift: "General" }
                   ].map((row, i) => (
-                    <div key={i} className="grid grid-cols-3 gap-4 px-6 py-5 items-center hover:bg-gradient-to-r hover:from-orange-50/50 hover:via-white hover:to-orange-50/30 transition-all duration-300 group cursor-pointer">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-zinc-100 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:scale-110 transition-all duration-300">
-                          <svg className="w-5 h-5 text-zinc-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={row.featIcon} /></svg>
-                        </div>
-                        <span className="font-semibold text-zinc-900 text-sm group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</span>
+                    <div key={i} className="grid grid-cols-3 gap-2 md:gap-4 px-3 md:px-6 py-3 md:py-5 items-center hover:bg-gradient-to-r hover:from-orange-50/50 hover:via-white hover:to-orange-50/30 transition-all duration-300 group cursor-pointer">
+                      <div className="flex items-center">
+                        <span className="font-semibold text-zinc-900 text-[11px] md:text-sm group-hover:text-[#FE7623] transition-colors duration-300 leading-tight">{row.feat}</span>
                       </div>
                       <div className="text-center">
-                        <div className={`inline-flex flex-col items-center gap-1 px-4 py-2 rounded-xl ${row.lipoHighlight ? 'bg-green-50 border border-green-200' : row.lipoIcon ? 'bg-green-50' : row.lipoX ? 'bg-zinc-50' : 'bg-orange-50'}`}>
-                          <div className="flex items-center gap-2">
-                            {row.lipoIcon && <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                            {row.lipoX && <svg className="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
-                            <span className={`text-sm font-semibold ${row.lipoHighlight ? 'text-green-700' : row.lipoIcon ? 'text-green-600' : row.lipoX ? 'text-zinc-500' : 'text-[#FE7623]'}`}>{row.lipo}</span>
+                        <div className={`inline-flex flex-col items-center gap-0.5 md:gap-1 px-2 py-1 md:px-4 md:py-2 rounded-xl ${row.lipoHighlight ? 'bg-green-50 border border-green-200' : row.lipoIcon ? 'bg-green-50' : row.lipoX ? 'bg-zinc-50' : 'bg-orange-50'}`}>
+                          <div className="flex items-center gap-1 md:gap-2">
+                            {row.lipoIcon && <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
+                            {row.lipoX && <svg className="w-4 h-4 md:w-5 md:h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
+                            <span className={`text-[10px] md:text-sm font-semibold ${row.lipoHighlight ? 'text-green-700' : row.lipoIcon ? 'text-green-600' : row.lipoX ? 'text-zinc-500' : 'text-[#FE7623]'}`}>{row.lipo}</span>
                           </div>
-                          {row.lipoSubtext && <span className="text-xs text-zinc-400">{row.lipoSubtext}</span>}
+                          {row.lipoSubtext && <span className="text-[8px] md:text-xs text-zinc-400 hidden md:block">{row.lipoSubtext}</span>}
                         </div>
                       </div>
                       <div className="text-center">
-                        <div className={`inline-flex flex-col items-center gap-1 px-4 py-2 rounded-xl ${row.liftIcon ? 'bg-green-50' : 'bg-zinc-50'}`}>
-                          <div className="flex items-center gap-2">
-                            {row.liftIcon && <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                            <span className={`text-sm font-medium ${row.liftIcon ? 'text-green-600' : 'text-zinc-600'}`}>{row.lift}</span>
+                        <div className={`inline-flex flex-col items-center gap-0.5 md:gap-1 px-2 py-1 md:px-4 md:py-2 rounded-xl ${row.liftIcon ? 'bg-green-50' : 'bg-zinc-50'}`}>
+                          <div className="flex items-center gap-1 md:gap-2">
+                            {row.liftIcon && <svg className="w-4 h-4 md:w-5 md:h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
+                            <span className={`text-[10px] md:text-sm font-medium ${row.liftIcon ? 'text-green-600' : 'text-zinc-600'}`}>{row.lift}</span>
                           </div>
-                          {row.liftSubtext && <span className="text-xs text-zinc-400">{row.liftSubtext}</span>}
+                          {row.liftSubtext && <span className="text-[8px] md:text-xs text-zinc-400 hidden md:block">{row.liftSubtext}</span>}
                         </div>
                       </div>
                     </div>
@@ -419,21 +419,17 @@ export default function ArmLiposuctionMalaysia() {
                 </div>
 
                 {/* Table Footer */}
-                <div className="px-6 py-4 bg-gradient-to-r from-orange-50 to-white border-t border-zinc-100">
-                  <div className="flex items-center justify-between">
-                    <p className="text-xs text-zinc-500 flex items-center gap-2">
-                      <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <div className="px-3 md:px-6 py-3 md:py-4 bg-gradient-to-r from-orange-50 to-white border-t border-zinc-100">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+                    <p className="text-[10px] md:text-xs text-zinc-500">
                       Recommended procedure depends on your skin elasticity
                     </p>
-                    <div className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-gradient-to-r from-[#FE7623] to-orange-400"></span>
-                      <span className="text-xs font-medium text-zinc-600">Liposuction preferred for fat removal</span>
-                    </div>
+                    <span className="text-[10px] md:text-xs font-medium text-zinc-600">Liposuction preferred for fat removal</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8">
+              <div className="mt-8 text-center md:text-left">
                 <Link href="/body/arm-lift-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
                   View Arm Lift Details
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -451,10 +447,7 @@ export default function ArmLiposuctionMalaysia() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Good Candidate */}
               <div data-animate="candidate-good" className={`bg-white p-8 rounded-2xl border border-zinc-200 card-3d transition-all duration-700 ${isVisible('candidate-good') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  </div>
+                <div className="mb-6">
                   <h3 className="text-lg font-bold text-[#FE7623]">Ideal Candidate</h3>
                 </div>
                 <ul className="space-y-4">
@@ -476,10 +469,7 @@ export default function ArmLiposuctionMalaysia() {
 
               {/* Not Suitable */}
               <div data-animate="candidate-bad" className={`bg-white p-8 rounded-2xl border border-zinc-200 opacity-90 card-3d transition-all duration-700 ${isVisible('candidate-bad') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-500">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                  </div>
+                <div className="mb-6">
                   <h3 className="text-lg font-bold text-[#FE7623]">Not Suitable If</h3>
                 </div>
                 <ul className="space-y-4">
