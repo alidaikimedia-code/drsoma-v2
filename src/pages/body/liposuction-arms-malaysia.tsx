@@ -203,7 +203,7 @@ export default function ArmLiposuctionMalaysia() {
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Arm Liposuction in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[30px] tracking-[1px] transition-colors duration-300 cursor-default">Slimmer Arms. Better Definition.</span>
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default">Slimmer Arms. Better Definition.</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
                 <p style={{fontSize: '14px'}}>Stubborn upper arm fat around triceps, inner arms, or armpits often won&apos;t respond to diet or exercise. Arm liposuction removes localized fat, refines your arm shape, and creates smooth, natural-looking contours. Performed by Dr. Soma, a board-certified plastic surgeon using advanced techniques for better definition with minimal trauma.</p>
@@ -247,7 +247,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Definition & Areas Grid */}
-        <section className="py-12 px-6 bg-white border-b border-zinc-100">
+        <section className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -279,7 +279,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Techniques & Process */}
-        <section id="process" className="py-24 px-6 bg-zinc-50">
+        <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Arm Liposuction</h2>
@@ -330,7 +330,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-24 px-6 bg-white overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
             <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/4] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -444,7 +444,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Candidates Section */}
-        <section className="py-24 px-6 bg-zinc-50">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-4xl mx-auto">
             <h2 data-animate="candidate-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('candidate-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
 
@@ -464,9 +464,11 @@ export default function ArmLiposuctionMalaysia() {
                     { bold: "Good skin elasticity", text: " (vital for tightening)." },
                     { bold: "", text: "Non-smoker or willing to stop temporarily." }
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span><strong>{item.bold}</strong>{item.text}</span>
+                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
+                      <div className="flex-shrink-0">
+                        <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      </div>
+                      <span className="flex-1"><strong>{item.bold}</strong>{item.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -486,9 +488,11 @@ export default function ArmLiposuctionMalaysia() {
                     "Severe obesity or fluctuating weight.",
                     "Poor skin elasticity (skin may not retract)."
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
-                      <svg className="w-7 h-7 sm:w-8 sm:h-8 text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                      <span>{item}</span>
+                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
+                      <div className="flex-shrink-0">
+                        <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </div>
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -498,7 +502,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Recovery Timeline */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <h2 data-animate="recovery-header" className={`text-3xl font-semibold tracking-tight text-[#FE7623] mb-12 text-center transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Recovery Timeline</h2>
 
@@ -513,7 +517,7 @@ export default function ArmLiposuctionMalaysia() {
                 { time: "Month 3-6", title: "Final Result", desc: "Full tissue tightening. Final definition revealed." }
               ].map((step, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative z-10 flex flex-col items-center text-center group cursor-pointer hover:-translate-y-2 transition-all duration-500 ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="w-16 h-16 rounded-2xl bg-white border border-zinc-200 shadow-sm flex items-center justify-center mb-6 group-hover:border-[#FE7623] group-hover:shadow-xl group-hover:shadow-orange-500/10 group-hover:bg-[#FE7623] group-hover:scale-110 transition-all duration-300">
+                  <div className="w-24 md:w-16 h-16 rounded-2xl bg-white border border-zinc-200 shadow-sm flex items-center justify-center mb-6 group-hover:border-[#FE7623] group-hover:shadow-xl group-hover:shadow-orange-500/10 group-hover:bg-[#FE7623] group-hover:scale-110 transition-all duration-300">
                     <span className="text-sm font-bold text-zinc-900 group-hover:text-white transition-colors duration-300">{step.time}</span>
                   </div>
                   <h3 className="text-sm font-bold text-zinc-900 mb-2 group-hover:text-[#FE7623] transition-colors duration-300">{step.title}</h3>
@@ -525,7 +529,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-24 px-6 bg-zinc-50">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -549,12 +553,12 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Pricing & FAQ Section */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <section className="py-8 md:py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
 
             {/* Left: Pricing Sticky */}
             <div className="lg:col-span-1">
-              <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl sticky top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl lg:sticky lg:top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FE7623]/10 rounded-full blur-3xl"></div>
 
                 <div className="flex items-center gap-3 mb-6">
@@ -625,7 +629,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Authority & Science Links */}
-        <section className="py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
+        <section className="py-8 md:py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-3 mb-10">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow">
@@ -655,7 +659,7 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-6 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-50/40 rounded-full blur-3xl animate-float"></div>
@@ -675,8 +679,8 @@ export default function ArmLiposuctionMalaysia() {
                 Chat with Us on WhatsApp
               </a>
               <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
-                <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
               </Link>
             </div>
 
