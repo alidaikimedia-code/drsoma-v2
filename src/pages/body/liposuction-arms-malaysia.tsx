@@ -203,15 +203,13 @@ export default function ArmLiposuctionMalaysia() {
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Arm Liposuction in Malaysia.</span> <br />
-                <span className="text-zinc-400 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Slimmer Arms. Better Definition.</span>
+                <span className="text-[#FE7623] text-[30px] tracking-[1px] transition-colors duration-300 cursor-default">Slimmer Arms. Better Definition.</span>
               </h1>
-              <div className="text-base text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 space-y-4" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p>Upper arm fat can be frustrating. Many patients notice persistent fullness around the triceps area, inner arms, or near the armpit region that does not respond well to dieting or exercise. Even with weight loss, the upper arms can remain bulky due to localized fat distribution and genetics.</p>
-                <p>Arm liposuction is a surgeon-performed body contouring procedure designed to remove stubborn fat from the upper arms and refine the arm silhouette. The goal is not simply to &ldquo;make the arms smaller,&rdquo; but to create smoother, more balanced contour and improved definition that looks natural from every angle.</p>
-                <p>At Dr. Soma Plastic Surgery, every arm liposuction procedure is performed by Dr. Soma, a board-certified plastic surgeon experienced in advanced fat-removal techniques, including MicroAire Power-Assisted Liposuction (PAL) for smoother contouring and reduced tissue trauma.</p>
+              <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                <p style={{fontSize: '14px'}}>Stubborn upper arm fat around triceps, inner arms, or armpits often won&apos;t respond to diet or exercise. Arm liposuction removes localized fat, refines your arm shape, and creates smooth, natural-looking contours. Performed by Dr. Soma, a board-certified plastic surgeon using advanced techniques for better definition with minimal trauma.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Liposuction%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                   Book Consultation
                 </a>
@@ -249,22 +247,19 @@ export default function ArmLiposuctionMalaysia() {
         </section>
 
         {/* Definition & Areas Grid */}
-        <section className="py-24 px-6 bg-white border-b border-zinc-100">
+        <section className="py-12 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-6">What Is Arm Liposuction?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Arm Liposuction?</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
                   Arm liposuction is a surgical procedure that removes excess subcutaneous fat from the upper arms using small, hidden incisions. It targets areas that commonly create the &ldquo;bat wing&rdquo; appearance or cause arms to look bulky in fitted clothing.
                 </p>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  The goal is not simply to &ldquo;make the arms smaller,&rdquo; but to create a smoother, more balanced contour and improved definition that looks natural.
-                </p>
-              </div>
+                              </div>
 
               {/* Areas Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-wide mb-6">Common Treatment Areas</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Treatment Areas</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50/50 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine">
@@ -287,7 +282,7 @@ export default function ArmLiposuctionMalaysia() {
         <section id="process" className="py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">Types of Arm Liposuction</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Arm Liposuction</h2>
               <p className="text-zinc-500 text-sm">Dr. Soma selects the specific method based on your fat volume and skin elasticity.</p>
             </div>
 
@@ -297,7 +292,7 @@ export default function ArmLiposuctionMalaysia() {
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${tech.highlight ? 'bg-gradient-to-br from-[#FE7623] to-orange-400 text-white animate-pulse-slow' : 'bg-zinc-100 text-zinc-900'} group-hover:scale-125 group-hover:rotate-12 transition-all duration-500`}>
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3">{tech.title}</h3>
+                  <h3 className="text-lg font-bold text-[#FE7623] mb-3">{tech.title}</h3>
                   <p className="text-sm text-zinc-500 leading-relaxed mb-4">{tech.desc}</p>
                   <ul className="space-y-3 text-sm text-zinc-600">
                     {tech.features.map((feature, j) => (
@@ -313,7 +308,7 @@ export default function ArmLiposuctionMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-wide mb-10 text-center">How It Works</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">How It Works</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0"></div>
 
@@ -338,7 +333,7 @@ export default function ArmLiposuctionMalaysia() {
         <section className="py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
-            <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            <div data-animate="compare-image" className={`relative rounded-2xl overflow-hidden aspect-[4/4] shadow-2xl order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('compare-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <BaseImage
                 src="/images/Arm Liposuction 1.jpg"
                 alt="Arm Liposuction Consultation"
@@ -359,7 +354,7 @@ export default function ArmLiposuctionMalaysia() {
 
             {/* Table Content */}
             <div data-animate="compare-content" className={`order-2 transition-all duration-700 ${isVisible('compare-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">Arm Liposuction vs. Arm Lift</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Arm Liposuction vs. Arm Lift</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
                 Understanding the difference between fat removal and skin removal is crucial for the best outcome.
               </p>
@@ -451,7 +446,7 @@ export default function ArmLiposuctionMalaysia() {
         {/* Candidates Section */}
         <section className="py-24 px-6 bg-zinc-50">
           <div className="max-w-4xl mx-auto">
-            <h2 data-animate="candidate-header" className={`text-2xl font-semibold text-center mb-12 text-zinc-900 transition-all duration-700 ${isVisible('candidate-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
+            <h2 data-animate="candidate-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('candidate-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Good Candidate */}
@@ -460,7 +455,7 @@ export default function ArmLiposuctionMalaysia() {
                   <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900">Ideal Candidate</h3>
+                  <h3 className="text-lg font-bold text-[#FE7623]">Ideal Candidate</h3>
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -483,7 +478,7 @@ export default function ArmLiposuctionMalaysia() {
                   <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-500">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900">Not Suitable If</h3>
+                  <h3 className="text-lg font-bold text-[#FE7623]">Not Suitable If</h3>
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -505,7 +500,7 @@ export default function ArmLiposuctionMalaysia() {
         {/* Recovery Timeline */}
         <section className="py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="recovery-header" className={`text-3xl font-semibold tracking-tight text-zinc-900 mb-12 text-center transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Recovery Timeline</h2>
+            <h2 data-animate="recovery-header" className={`text-3xl font-semibold tracking-tight text-[#FE7623] mb-12 text-center transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Recovery Timeline</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
               <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-px bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0"></div>
@@ -532,7 +527,7 @@ export default function ArmLiposuctionMalaysia() {
         {/* Testimonials */}
         <section className="py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { text: "My arms finally look slimmer and more defined. The change is natural and my sleeves fit so much better.", name: "Hana, 31" },
@@ -577,7 +572,7 @@ export default function ArmLiposuctionMalaysia() {
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Liposuction%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -590,7 +585,7 @@ export default function ArmLiposuctionMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-zinc-900">Frequently Asked Questions</h2>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
                   <p className="text-sm text-zinc-500">Get answers to common concerns about arm liposuction</p>
                 </div>
               </div>
@@ -636,7 +631,7 @@ export default function ArmLiposuctionMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-widest">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Scientific Evidence & References</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -670,12 +665,12 @@ export default function ArmLiposuctionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-zinc-900 mb-6 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Get slimmer, more defined arms.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Get slimmer, more defined arms.</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
               Dr. Soma combines precision contouring, advanced MicroAire PAL technology, and safety-first technique to deliver natural, long-lasting arm refinement.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://wa.me/60142616007" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Liposuction%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
