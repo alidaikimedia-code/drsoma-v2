@@ -345,7 +345,7 @@ export default function ArmLiposuctionMalaysia() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-zinc-900/10"></div>
-              <div className="absolute bottom-8 left-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[280px] animate-float">
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-auto md:max-w-[280px] bg-white p-4 md:p-6 rounded-xl shadow-xl border border-zinc-100 animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <span className="text-sm font-bold text-zinc-900">Dr. Soma&apos;s Note</span>
@@ -621,11 +621,11 @@ export default function ArmLiposuctionMalaysia() {
         {/* Authority & Science Links */}
         <section className="py-8 md:py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow">
+            <div className="flex flex-row items-start gap-3 mb-10">
+              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
