@@ -196,39 +196,38 @@ export default function ThighLiposuctionMalaysia() {
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Thigh Liposuction in Malaysia.</span> <br />
-                <span className="text-zinc-400 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Slimmer Legs. Smoother Shape.</span>
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Slimmer Legs. Smoother Shape.</span>
               </h1>
-              <p className="text-lg text-zinc-500 leading-relaxed mb-6 max-w-lg animate-fadeInUp opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                Thigh fat is one of the most common areas patients struggle to change. Inner thigh fullness causes friction, while outer thigh fat (&ldquo;saddlebags&rdquo;) affects proportion. Thigh liposuction refines leg shape with precision.
-              </p>
-              <p className="text-sm text-zinc-500 leading-relaxed mb-8 max-w-lg border-l-2 border-[#FE7623] pl-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.35s', animationFillMode: 'forwards'}}>
-                At Dr. Soma Plastic Surgery, every thigh liposuction is performed by Dr. Soma using advanced <strong className="text-zinc-700">MicroAire Power-Assisted Liposuction (PAL)</strong> for better uniformity and reduced tissue trauma.
-              </p>
+              <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                <p style={{fontSize: '14px'}}>Thigh fat is one of the most common areas patients struggle to change. Inner thigh fullness causes friction, while outer thigh fat (&ldquo;saddlebags&rdquo;) affects proportion. Thigh liposuction refines leg shape with precision using advanced MicroAire Power-Assisted Liposuction (PAL) for better uniformity and reduced tissue trauma.</p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thigh%20Liposuction%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                  Book Consultation (WhatsApp)
+                  Book Consultation
                 </a>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <BaseImage
                 src="/images/Thigh Liposuction.jpg"
                 alt="Thigh Liposuction Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/30 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg flex items-center gap-4 group-hover:translate-y-[-5px] transition-transform duration-500">
-                  <div className="p-2.5 bg-orange-50 text-[#FE7623] rounded-lg">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-zinc-900">Goal</p>
-                    <p className="text-sm font-semibold text-zinc-900">Natural Proportion</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                    </div>
+                    <div>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Technology</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">MicroAire Power-Assisted (PAL)</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -237,21 +236,21 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Definition & Areas */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-6">What Is Thigh Liposuction?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Thigh Liposuction?</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-3 text-justify">
                   Thigh liposuction is a surgical procedure that removes excess subcutaneous fat from the thighs to improve shape, reduce bulk, and create better proportion between hips, thighs, and lower legs.
                 </p>
-                <p className="text-zinc-500 text-sm leading-relaxed font-medium">
+                <p className="text-zinc-500 text-sm leading-relaxed font-medium text-justify">
                   It is a precision sculpting technique for areas resistant to diet and exercise, not a weight-loss treatment.
                 </p>
               </div>
 
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-xs font-bold text-zinc-400 uppercase tracking-widest mb-6">Common Areas Treated</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Areas Treated</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine">
@@ -269,15 +268,15 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* How it Works & Results */}
-        <section className="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div data-animate="process" className={`transition-all duration-700 ${isVisible('process') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-8">How Thigh Liposuction Works</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-8">How Thigh Liposuction Works</h2>
               <div className="space-y-6">
                 {processSteps.map((step, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-all duration-300">
-                    <div className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 text-xs font-bold text-zinc-900 group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">{step.num}</div>
-                    <div>
+                  <div key={i} className="flex flex-row items-start gap-4 group cursor-pointer hover:translate-x-2 transition-all duration-300">
+                    <div className="w-8 h-8 min-w-[32px] rounded-full bg-white border border-zinc-200 flex items-center justify-center flex-shrink-0 text-xs font-bold text-zinc-900 group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">{step.num}</div>
+                    <div className="flex-1">
                       <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{step.title}</h4>
                       <p className="text-xs text-zinc-500 mt-1">{step.desc}</p>
                     </div>
@@ -293,10 +292,7 @@ export default function ThighLiposuctionMalaysia() {
             </div>
 
             <div data-animate="timeline" className={`bg-zinc-900 text-white p-8 rounded-2xl shadow-xl h-fit card-3d transition-all duration-700 ${isVisible('timeline') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                When Will I See Results?
-              </h3>
+              <h3 className="text-xl font-semibold mb-6">When Will I See Results?</h3>
               <div className="space-y-8 relative">
                 <div className="absolute top-2 bottom-2 left-[7px] w-px bg-zinc-700"></div>
                 {[
@@ -316,9 +312,9 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Benefits Grid */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="benefits-header" className={`text-3xl font-semibold tracking-tight text-center text-zinc-900 mb-12 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Benefits of Thigh Liposuction</h2>
+            <h2 data-animate="benefits-header" className={`text-2xl font-semibold tracking-tight text-center text-[#FE7623] mb-12 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Benefits of Thigh Liposuction</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, i) => (
                 <div key={i} data-animate={`benefit-${i}`} className={`p-6 rounded-xl border border-zinc-200 bg-white shadow-sm card-3d card-shine hover:border-[#FE7623] transition-all duration-700 ${isVisible(`benefit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
@@ -334,11 +330,11 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Types & Comparison */}
-        <section className="py-24 px-6 bg-zinc-50">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             {/* Types */}
             <div className="mb-20">
-              <h2 data-animate="types-header" className={`text-3xl font-semibold tracking-tight text-center text-zinc-900 mb-10 transition-all duration-700 ${isVisible('types-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Types of Thigh Liposuction Offered</h2>
+              <h2 data-animate="types-header" className={`text-2xl font-semibold tracking-tight text-center text-[#FE7623] mb-10 transition-all duration-700 ${isVisible('types-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Types of Thigh Liposuction Offered</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {lipoTypes.map((type, i) => (
                   <div key={i} data-animate={`type-${i}`} className={`bg-white p-6 rounded-xl border border-zinc-200 card-3d card-shine ${type.highlight ? 'animate-border-glow' : ''} transition-all duration-700 ${isVisible(`type-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
@@ -399,40 +395,30 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Candidates Section */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-5xl mx-auto">
-            <h2 data-animate="candidate-header" className={`text-3xl font-semibold tracking-tight text-center text-zinc-900 mb-12 transition-all duration-700 ${isVisible('candidate-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
+            <h2 data-animate="candidate-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('candidate-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div data-animate="candidate-good" className={`bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm card-3d transition-all duration-700 ${isVisible('candidate-good') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="p-2 bg-green-50 text-green-600 rounded-full">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                  </span>
-                  <h3 className="text-lg font-bold text-zinc-900">Ideal Candidate</h3>
-                </div>
+                <h3 className="text-lg font-bold text-zinc-900 mb-6">Ideal Candidate</h3>
                 <ul className="space-y-4">
                   {["Stable weight", "Localised fat pockets (Inner/Outer)", "Good skin elasticity", "Non-smoker or willing to stop temporarily"].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
-                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      {item}
+                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 hover:text-zinc-900 transition-colors duration-300">
+                      <svg className="w-6 h-6 min-w-[24px] text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div data-animate="candidate-bad" className={`bg-zinc-50 p-8 rounded-2xl border border-zinc-200/60 opacity-90 card-3d transition-all duration-700 ${isVisible('candidate-bad') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="p-2 bg-red-50 text-red-500 rounded-full">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                  </span>
-                  <h3 className="text-lg font-bold text-zinc-900">Not Suitable If</h3>
-                </div>
+              <div data-animate="candidate-bad" className={`bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm card-3d transition-all duration-700 ${isVisible('candidate-bad') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                <h3 className="text-lg font-bold text-zinc-900 mb-6">Not Suitable If</h3>
                 <ul className="space-y-4">
                   {["Significant loose skin is the primary issue", "Severe obesity", "Poor skin elasticity"].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-500 hover:text-zinc-700 transition-colors duration-300">
-                      <svg className="w-7 h-7 sm:w-8 sm:h-8 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                      {item}
+                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-500 hover:text-zinc-700 transition-colors duration-300">
+                      <svg className="w-6 h-6 min-w-[24px] text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -494,9 +480,9 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Recovery Timeline */}
-        <section className="py-24 px-6 bg-white overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="recovery-header" className={`text-3xl font-semibold tracking-tight text-center text-zinc-900 mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Recovery Timeline</h2>
+            <h2 data-animate="recovery-header" className={`text-2xl font-semibold tracking-tight text-center text-[#FE7623] mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Recovery Timeline</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center relative">
               <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-zinc-100 via-[#FE7623]/30 to-zinc-100 z-0"></div>
@@ -525,9 +511,9 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-zinc-900 text-center mb-12 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Experiences</h2>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-[#FE7623] text-center mb-12 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Experiences</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, i) => (
                 <div key={i} data-animate={`testimonial-${i}`} className={`p-8 rounded-2xl bg-white shadow-sm border border-zinc-100 card-3d card-shine transition-all duration-700 ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
@@ -545,9 +531,9 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Pricing Guide */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 data-animate="pricing-header" className={`text-2xl font-semibold text-zinc-900 mb-6 transition-all duration-700 ${isVisible('pricing-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Pricing Guide</h2>
+            <h2 data-animate="pricing-header" className={`text-2xl font-semibold text-[#FE7623] mb-6 transition-all duration-700 ${isVisible('pricing-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Pricing Guide</h2>
             <p className="text-sm text-zinc-500 mb-8">Thigh liposuction cost varies depending on individual factors.</p>
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-8 text-left">
               <h4 className="text-sm font-bold text-zinc-900 mb-4">Cost Factors Include:</h4>
@@ -567,13 +553,13 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Scientific Evidence */}
-        <section className="py-24 px-6 bg-zinc-50 border-t border-zinc-200">
+        <section className="py-12 md:py-24 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow">
+            <div className="flex flex-row items-start gap-3 mb-10">
+              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-xs font-bold text-zinc-400 uppercase tracking-widest">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
@@ -597,14 +583,14 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-lg animate-float">
                 <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <div>
-                <h2 className="text-2xl font-semibold text-zinc-900">Frequently Asked Questions</h2>
+                <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
                 <p className="text-sm text-zinc-500">Get answers to common concerns about thigh liposuction</p>
               </div>
             </div>
@@ -643,7 +629,7 @@ export default function ThighLiposuctionMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-6 bg-white relative overflow-hidden">
+        <section className="pt-4 pb-8 md:pt-12 md:pb-24 px-6 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-50/40 rounded-full blur-3xl animate-float"></div>
@@ -653,16 +639,16 @@ export default function ThighLiposuctionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-zinc-900 mb-6 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Refine your legs with surgeon-performed thigh liposuction.</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Refine your legs with surgeon-performed thigh liposuction.</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
               Dr. Soma combines medical precision, MicroAire PAL technology, and safety-first technique to deliver smoother, slimmer, long-lasting thigh contour improvement.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://wa.me/60142616007" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 md:px-0">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thigh%20Liposuction%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
-              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 Book a Consultation Today
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
