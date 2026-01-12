@@ -415,17 +415,17 @@ export default function LiposuctionMalaysia() {
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Liposuction in Malaysia.</span> <br />
-                <span className="text-zinc-400 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Precise. Safe. Lasting.</span>
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Precise. Safe. Lasting.</span>
               </h1>
-              <p className="text-lg text-zinc-600 leading-relaxed mb-8 max-w-lg animate-fadeInUp opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                Some fat pockets do not respond to dieting. We use advanced MicroAire (PAL) technology to safely remove stubborn fat and reshape your body with hospital-grade precision.
-              </p>
+              <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                <p style={{fontSize: '14px'}}>Some fat pockets do not respond to dieting. We use advanced MicroAire (PAL) technology to safely remove stubborn fat and reshape your body with hospital-grade precision.</p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007" className="btn-press inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Liposuction%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                   Book Consultation
                 </a>
-                <a href="#process" className="btn-press inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <a href="#process" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
                   How It Works
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
@@ -433,7 +433,7 @@ export default function LiposuctionMalaysia() {
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <BaseImage
                 src="/images/Liposuction in Malaysia.jpg"
                 alt="Liposuction in Malaysia"
@@ -441,15 +441,15 @@ export default function LiposuctionMalaysia() {
                 className="object-cover opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white backdrop-blur-md p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-wide text-zinc-400">Technology</p>
-                      <p className="text-base font-semibold text-zinc-900">MicroAire Power-Assisted (PAL)</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Technology</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">MicroAire Power-Assisted (PAL)</p>
                     </div>
                   </div>
                 </div>
@@ -459,12 +459,12 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Definition & Areas Grid */}
-        <section className="py-24 px-6 bg-white border-b border-zinc-100">
+        <section className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-6">What Is Liposuction?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Liposuction?</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
                   Liposuction (Lipoplasty) is a surgical procedure that removes excess subcutaneous fat to reshape specific areas of the body. It is <strong>not</strong> a weight-loss treatment, but a precision sculpting technique for areas resistant to diet and exercise.
                 </p>
                 <div className="flex flex-col gap-3">
@@ -481,7 +481,7 @@ export default function LiposuctionMalaysia() {
 
               {/* Areas Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-wide mb-6">Common Treatment Areas</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Treatment Areas</h3>
                 <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -498,10 +498,10 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Techniques & Process */}
-        <section id="process" className="py-24 px-6 bg-zinc-50">
+        <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">Advanced Techniques</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Advanced Techniques</h2>
               <p className="text-zinc-500 text-sm">Dr. Soma selects the specific method based on your fat volume and desired outcome.</p>
             </div>
 
@@ -511,12 +511,12 @@ export default function LiposuctionMalaysia() {
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${tech.highlight ? 'bg-gradient-to-br from-[#FE7623] to-orange-400 text-white animate-pulse-slow' : 'bg-zinc-100 text-zinc-900'} group-hover:scale-125 group-hover:rotate-12 transition-all duration-500`}>
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-3 group-hover:text-[#FE7623] transition-colors duration-300">{tech.title}</h3>
+                  <h3 className="text-lg font-bold text-[#FE7623] mb-3">{tech.title}</h3>
                   <p className="text-sm text-zinc-500 leading-relaxed mb-4">{tech.desc}</p>
                   <ul className="space-y-3 text-sm text-zinc-600">
                     {tech.features.map((feature, j) => (
-                      <li key={j} className="flex items-center gap-3 group/item hover:text-[#FE7623] hover:translate-x-2 transition-all duration-300">
-                        <svg className="w-5 h-5 text-[#FE7623] group-hover/item:scale-125 group-hover/item:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <li key={j} className="flex items-center gap-3 hover:text-[#FE7623] hover:translate-x-2 transition-all duration-300">
+                        <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         {feature}
                       </li>
                     ))}
@@ -527,7 +527,7 @@ export default function LiposuctionMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-wide mb-10 text-center">The Procedure Steps</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">How It Works</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
@@ -549,7 +549,7 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Why Dr. Soma Section */}
-        <section className="py-24 px-6 bg-white overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {/* Image Section */}
@@ -575,7 +575,7 @@ export default function LiposuctionMalaysia() {
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-6">Why Dr. Soma?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Dr. Soma?</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
                 Liposuction requires an artistic eye and surgical precision. Dr. Soma combines medical expertise with advanced MicroAire technology to deliver natural, balanced results.
               </p>
@@ -614,10 +614,10 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-24 bg-zinc-50">
-          <div className="flex containers w-full">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
+          <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-zinc-900 transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Liposuction vs. Tummy Tuck</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Liposuction vs. Tummy Tuck</h2>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
@@ -650,9 +650,9 @@ export default function LiposuctionMalaysia() {
               </div>
 
               <div className="mt-8 text-center">
-                <Link href="/body/tummy-tuck-malaysia" className="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-[#FE7623] text-[#FE7623] rounded-full text-sm font-semibold hover:bg-[#FE7623] hover:text-white hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/10 hover:shadow-xl hover:shadow-orange-500/20 group btn-magnetic">
+                <Link href="/body/tummy-tuck-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
                   View Tummy Tuck Details
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
             </div>
@@ -660,10 +660,10 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Recovery Timeline */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">Post-Operative Recovery</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Post-Operative Recovery</h2>
               <p className="text-zinc-500 text-sm">Clear Timeline for Your Healing Journey</p>
             </div>
 
@@ -702,7 +702,7 @@ export default function LiposuctionMalaysia() {
               ].map((step, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-8 rounded-2xl border border-zinc-200 shadow-sm card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   {/* Time Badge */}
-                  <div className="absolute -top-4 left-6 px-5 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-300 z-10">
+                  <div className="absolute -top-4 left-6 px-7 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-300 z-10">
                     {step.time}
                   </div>
 
@@ -720,10 +720,10 @@ export default function LiposuctionMalaysia() {
                   <ul className="space-y-3">
                     {step.points.map((point, j) => (
                       <li key={j} className="flex items-start gap-3 text-sm text-zinc-600 group-hover:text-zinc-800 hover:translate-x-2 transition-all duration-300">
-                        <svg className="w-5 h-5 text-[#FE7623] mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        {point}
+                        <span>{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -748,10 +748,9 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-24 px-6 bg-zinc-50 overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-4 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Testimonials</h2>
-            <p className="text-zinc-500 text-sm text-center mb-12">Real experiences from our satisfied patients</p>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { text: "My tummy and flanks look so much more sculpted now. Dr. Soma explained everything clearly and my recovery was smooth.", name: "Aida, 38" },
@@ -759,23 +758,13 @@ export default function LiposuctionMalaysia() {
                 { text: "Professional, safe, and the difference is massive. Highly recommended.", name: "Rizal, 35" }
               ].map((testimonial, i) => (
                 <div key={i} data-animate={`testimonial-${i}`} className={`p-8 bg-white rounded-2xl border border-zinc-100 shadow-lg card-3d card-shine hover:border-[#FE7623] ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
-                  {/* Quote Icon */}
-                  <div className="mb-4 text-[#FE7623]/20 group-hover:text-[#FE7623]/40 transition-colors duration-300">
-                    <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                  </div>
                   <div className="flex gap-1 text-[#FE7623] mb-4">
                     {[...Array(5)].map((_, j) => (
-                      <svg key={j} className="w-5 h-5 fill-current group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" style={{transitionDelay: `${j * 50}ms`}} viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                      <svg key={j} className="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     ))}
                   </div>
-                  <p className="text-sm text-zinc-600 italic mb-6 leading-relaxed group-hover:text-zinc-800 transition-colors duration-300">&ldquo;{testimonial.text}&rdquo;</p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FE7623] to-orange-400 flex items-center justify-center text-white text-base font-bold group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500">{testimonial.name.charAt(0)}</div>
-                    <div>
-                      <p className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{testimonial.name}</p>
-                      <p className="text-xs text-zinc-500">Verified Patient</p>
-                    </div>
-                  </div>
+                  <p className="text-sm text-zinc-600 italic mb-6 leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
+                  <p className="text-sm font-bold text-zinc-900">— {testimonial.name}</p>
                 </div>
               ))}
             </div>
@@ -783,13 +772,12 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Pricing & FAQ Section */}
-        <section className="py-24 px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <section className="py-8 md:py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
 
             {/* Left: Pricing Sticky */}
             <div className="lg:col-span-1">
-              <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl sticky top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                {/* Decorative Element */}
+              <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl lg:sticky lg:top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FE7623]/10 rounded-full blur-3xl"></div>
 
                 <div className="flex items-center gap-3 mb-6">
@@ -801,13 +789,13 @@ export default function LiposuctionMalaysia() {
                 <p className="text-zinc-400 text-sm mb-6">Liposuction cost varies depending on several factors:</p>
                 <ul className="space-y-4 mb-8">
                   {["Number of areas", "Amount of fat to remove", "Surgery complexity", "Operating time"].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 group/item cursor-pointer hover:text-white hover:translate-x-2 transition-all duration-300">
-                      <svg className="w-6 h-6 text-[#FE7623] mt-0.5 group-hover/item:scale-125 group-hover/item:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/50 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Liposuction%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -820,7 +808,7 @@ export default function LiposuctionMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 data-animate="faq-header" className={`text-2xl font-semibold text-zinc-900 transition-all duration-700 ${isVisible('faq-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Frequently Asked Questions</h2>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
                   <p className="text-sm text-zinc-500">Get answers to common concerns about liposuction</p>
                 </div>
               </div>
@@ -860,13 +848,13 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Authority & Science Links */}
-        <section className="py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
+        <section className="py-8 md:py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow">
+            <div className="flex flex-row items-start gap-3 mb-10">
+              <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 data-animate="science-header" className={`text-sm font-bold text-zinc-900 uppercase tracking-widest transition-all duration-700 ${isVisible('science-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -890,7 +878,7 @@ export default function LiposuctionMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-6 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -902,14 +890,14 @@ export default function LiposuctionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-zinc-900 mb-6 hover:text-[#FE7623] transition-colors duration-300 cursor-default">Get a smoother, more sculpted body.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Get a smoother, more sculpted body.</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
               Dr. Soma combines medical precision, aesthetics, and safety to deliver natural, long-lasting contour results.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <a href="https://wa.me/60142616007" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Liposuction%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat on WhatsApp
+                Chat with Us on WhatsApp
               </a>
               <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 Book Consultation
