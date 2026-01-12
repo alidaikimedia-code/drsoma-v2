@@ -257,16 +257,16 @@ export default function BreastImplantRemovalMalaysia() {
                     <div className="bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-float">
                       <div className="flex items-center gap-2 mb-2">
                         <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                        <span className="text-xs font-bold text-header-black">Safety First</span>
+                        <span className="text-sm font-bold text-header-black">Safety First</span>
                       </div>
-                      <p className="text-[10px] text-para-black">Board-certified surgeon performed procedure.</p>
+                      <p className="text-[14px] text-para-black">Board-certified surgeon performed procedure.</p>
                     </div>
                     <div className="bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-float" style={{animationDelay: '0.5s'}}>
                       <div className="flex items-center gap-2 mb-2">
                         <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                        <span className="text-xs font-bold text-header-black">Natural Feel</span>
+                        <span className="text-sm font-bold text-header-black">Natural Feel</span>
                       </div>
-                      <p className="text-[10px] text-para-black">Restoring your body&apos;s own contour.</p>
+                      <p className="text-[14px] text-para-black">Restoring your body&apos;s own contour.</p>
                     </div>
                   </div>
                 </div>
@@ -276,12 +276,12 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Definition & Context */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Left: What Is It */}
               <div data-animate="def-1" className={`transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-header-black mb-6">What Is Breast Implant Removal?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Breast Implant Removal?</h2>
                 <div className="text-para-black leading-relaxed space-y-4">
                   <p>
                     Also known as <span className="text-[#FE7623] font-medium">explant surgery</span>, this procedure removes one or both breast implants. Depending on the condition of the implant and the surrounding capsule (the natural scar tissue layer the body forms), the surgery is tailored to your specific needs.
@@ -291,9 +291,11 @@ export default function BreastImplantRemovalMalaysia() {
                   </p>
                   <ul className="space-y-3 mt-4">
                     {["Implant removal only", "Partial or Total Capsulectomy", "En bloc capsulectomy (when appropriate)", "Explant with Breast Lift (Mastopexy)"].map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 group cursor-pointer hover:translate-x-2 transition-all duration-300">
-                        <span className="w-2 h-2 bg-[#FE7623] rounded-full group-hover:scale-125 transition-transform duration-300"></span>
-                        <span className="group-hover:text-[#FE7623] transition-colors duration-300">{item}</span>
+                      <li key={i} className="flex flex-row items-start gap-3 group cursor-pointer hover:translate-x-2 transition-all duration-300">
+                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                          <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                        <span className="flex-1 text-sm group-hover:text-[#FE7623] transition-colors duration-300">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -302,15 +304,16 @@ export default function BreastImplantRemovalMalaysia() {
 
               {/* Right: Reasons */}
               <div data-animate="def-2" className={`bg-zinc-50 rounded-2xl p-8 border border-zinc-100 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-header-black uppercase tracking-wide mb-6 flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">
                   Common Reasons for Removal
                 </h3>
                 <div className="space-y-3">
                   {removalReasons.map((reason, i) => (
-                    <div key={i} className="flex items-center gap-3 group cursor-pointer p-2 rounded-lg hover:bg-white hover:shadow-md hover:translate-x-1 transition-all duration-300">
-                      <svg className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 text-para-black group-hover:text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span className="text-sm text-para-black group-hover:text-header-black transition-colors duration-300">{reason}</span>
+                    <div key={i} className="flex flex-row items-start gap-3 group cursor-pointer p-2 rounded-lg hover:bg-white hover:shadow-md hover:translate-x-1 transition-all duration-300">
+                      <div className="flex-shrink-0 w-6 h-6">
+                        <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      </div>
+                      <span className="flex-1 text-sm text-zinc-600 group-hover:text-zinc-900 transition-colors duration-300">{reason}</span>
                     </div>
                   ))}
                 </div>
@@ -320,7 +323,7 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* The Capsule Section (Educational) */}
-        <section className="py-16 px-6 bg-zinc-900 text-white">
+        <section className="py-8 md:py-16 px-6 bg-zinc-900 text-white">
           <div data-animate="capsule" className={`max-w-4xl mx-auto text-center transition-all duration-700 ${isVisible('capsule') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-[#FE7623] mb-6">
               <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -345,11 +348,11 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Options Section (Bento Grid) */}
-        <section id="options" className="py-24 px-6 bg-zinc-50">
+        <section id="options" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="options-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('options-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-header-black mb-4">Options After Removal</h2>
-              <p className="text-para-black text-sm">Explant is not one-size-fits-all. Dr. Soma will recommend the most suitable option based on your tissue quality and goals.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Options After Removal</h2>
+              <p className="text-zinc-500 text-sm">Explant is not one-size-fits-all. Dr. Soma will recommend the most suitable option based on your tissue quality and goals.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -394,58 +397,75 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-24 bg-white border-t border-zinc-100">
-          <div className="flex containers w-full">
-            <div className="flex flex-col w-full">
-              <div data-animate="comparison" className={`w-full transition-all duration-700 ${isVisible('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-2xl font-semibold mb-10 text-center">Procedure Comparison</h2>
+        <section className="py-8 md:py-24 px-6 bg-white border-t border-zinc-100">
+          <div className="max-w-7xl mx-auto">
+            <div data-animate="comparison" className={`w-full transition-all duration-700 ${isVisible('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-2xl font-semibold mb-10 text-center text-[#FE7623]">Procedure Comparison</h2>
 
-                <div className="w-full border border-zinc-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
-                  {/* Header */}
-                  <div className="grid grid-cols-4 bg-zinc-50 px-6 py-6 border-b border-zinc-200 text-xs font-bold uppercase tracking-wider text-para-black">
-                    <div>Feature</div>
-                    <div className="text-[#FE7623]">Implant Removal</div>
-                    <div>Implant Exchange</div>
-                    <div>Breast Lift</div>
+              {/* Desktop Table - Full Width */}
+              <div className="hidden md:block w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-x-auto">
+                {/* Header */}
+                <div className="grid grid-cols-4 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-8 py-6 border-b border-zinc-200 text-xs font-bold uppercase tracking-wider text-zinc-500">
+                  <div>Feature</div>
+                  <div className="text-[#FE7623] flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>Implant Removal</div>
+                  <div>Implant Exchange</div>
+                  <div>Breast Lift</div>
+                </div>
+
+                {/* Rows */}
+                {[
+                  { feat: "Removes Implants", removal: "Yes", exchange: "Yes (Replaces)", lift: "No", removalHighlight: true, liftHighlight: false },
+                  { feat: "Adds Volume", removal: "No", exchange: "Yes", lift: "No", removalHighlight: false, liftHighlight: false },
+                  { feat: "Improves Sagging", removal: "Limited", exchange: "Sometimes", lift: "Yes (Primary Goal)", removalHighlight: false, liftHighlight: true },
+                  { feat: "Fixes Contracture", removal: "Yes", exchange: "Yes", lift: "Not Primary", removalHighlight: true, liftHighlight: false }
+                ].map((row, i) => (
+                  <div key={i} className="grid grid-cols-4 px-8 py-7 border-b border-zinc-100 items-center text-sm hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
+                    <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors">{row.feat}</div>
+                    <div className={`${row.removalHighlight ? 'text-[#FE7623]' : 'text-zinc-600'}`}>{row.removal}</div>
+                    <div className="text-zinc-600">{row.exchange}</div>
+                    <div className="text-zinc-600">{row.lift}</div>
                   </div>
+                ))}
+              </div>
 
-                  {/* Rows */}
-                  {[
-                    { feat: "Removes Implants", removal: "Yes", exchange: "Yes (Replaces)", lift: "No", removalHighlight: true, liftHighlight: false },
-                    { feat: "Adds Volume", removal: "No", exchange: "Yes", lift: "No", removalHighlight: false, liftHighlight: false },
-                    { feat: "Improves Sagging", removal: "Limited", exchange: "Sometimes", lift: "Yes (Primary Goal)", removalHighlight: false, liftHighlight: true },
-                    { feat: "Fixes Contracture", removal: "Yes", exchange: "Yes", lift: "Not Primary", removalHighlight: true, liftHighlight: false }
-                  ].map((row, i) => (
-                    <div key={i} className="grid grid-cols-4 px-6 py-6 border-b border-zinc-100 items-center text-sm hover:bg-zinc-50 transition-colors">
-                      <div className="font-medium text-header-black">{row.feat}</div>
-                      <div className={`flex items-center gap-2 ${row.removalHighlight ? 'text-[#FE7623]' : 'text-para-black'}`}>
-                        {row.removalHighlight && <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                        {row.removal}
+              {/* Mobile Cards */}
+              <div className="md:hidden space-y-4">
+                {[
+                  { feat: "Removes Implants", removal: "Yes", exchange: "Yes (Replaces)", lift: "No" },
+                  { feat: "Adds Volume", removal: "No", exchange: "Yes", lift: "No" },
+                  { feat: "Improves Sagging", removal: "Limited", exchange: "Sometimes", lift: "Yes (Primary)" },
+                  { feat: "Fixes Contracture", removal: "Yes", exchange: "Yes", lift: "Not Primary" }
+                ].map((row, i) => (
+                  <div key={i} className="bg-white rounded-lg p-4 border border-zinc-200 shadow-sm">
+                    <h4 className="font-semibold text-zinc-900 mb-3 text-sm">{row.feat}</h4>
+                    <div className="space-y-2 text-xs">
+                      <div className="flex justify-between items-start">
+                        <span className="text-[#FE7623] font-medium">Removal:</span>
+                        <span className="text-zinc-700 text-right">{row.removal}</span>
                       </div>
-                      <div className="text-para-black flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                        {row.exchange}
+                      <div className="flex justify-between items-start">
+                        <span className="text-zinc-500 font-medium">Exchange:</span>
+                        <span className="text-zinc-600 text-right">{row.exchange}</span>
                       </div>
-                      <div className={`flex items-center gap-2 ${row.liftHighlight ? 'text-para-black' : 'text-para-black'}`}>
-                        {!row.liftHighlight && row.lift === "No" && <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
-                        {row.liftHighlight && <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                        {row.lift}
+                      <div className="flex justify-between items-start">
+                        <span className="text-zinc-500 font-medium">Lift:</span>
+                        <span className="text-zinc-600 text-right">{row.lift}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
         {/* Recovery Timeline */}
-        <section className="py-24 px-6 bg-zinc-50">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <div>
-                <h2 className="text-3xl font-semibold text-header-black mb-2">Recovery Timeline</h2>
-                <p className="text-para-black text-sm">Typical healing process for standard explant surgery.</p>
+                <h2 className="text-3xl font-semibold text-[#FE7623] mb-2">Recovery Timeline</h2>
+                <p className="text-zinc-500 text-sm">Typical healing process for standard explant surgery.</p>
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-[#FE7623] bg-orange-50 px-3 py-1.5 rounded-full">
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -453,22 +473,24 @@ export default function BreastImplantRemovalMalaysia() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-              {/* Connect Line */}
-              <div className="hidden md:block absolute top-6 left-6 right-6 h-0.5 bg-zinc-200 -z-10"></div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
               {[
                 { num: "0", title: "Immediate", items: ["Support bra applied", "Mild soreness/tightness", "Walking encouraged"], active: true },
                 { num: "1", title: "Week 1-2", items: ["Swelling peaks then drops", "Bruising improves", "Desk work resumes"], active: false },
                 { num: "4", title: "Week 4-6", items: ["Light exercise resumes", "Breasts feel softer", "Scar care begins"], active: false },
                 { num: "M3", title: "Month 3-6", items: ["Contour stabilizes", "Scars fade progressively", "Final shape visible"], active: false }
               ].map((step, i) => (
-                <div key={i} data-animate={`recovery-${i}`} className={`bg-white p-8 rounded-2xl border border-zinc-200 relative shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className={`w-14 h-14 ${step.active ? 'bg-zinc-900 text-white' : 'bg-white text-header-black border border-zinc-200'} rounded-xl flex items-center justify-center font-bold text-lg mb-5 shadow-lg`}>{step.num}</div>
-                  <h4 className="font-bold text-header-black mb-3 text-lg">{step.title}</h4>
-                  <ul className="space-y-2 text-sm text-para-black">
+                <div key={i} data-animate={`recovery-${i}`} className={`bg-white p-8 rounded-2xl border border-zinc-200 relative shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-[#FE7623] transition-all duration-300 ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <div className={`w-14 h-14 ${step.active ? 'bg-gradient-to-r from-[#FE7623] to-orange-400 text-white' : 'bg-white text-zinc-900 border border-zinc-200'} rounded-xl flex items-center justify-center font-bold text-lg mb-5 shadow-lg`}>{step.num}</div>
+                  <h4 className="font-bold text-zinc-900 mb-3 text-lg">{step.title}</h4>
+                  <ul className="space-y-3 text-sm text-zinc-600">
                     {step.items.map((item, j) => (
-                      <li key={j}>• {item}</li>
+                      <li key={j} className="flex flex-row items-start gap-3">
+                        <div className="flex-shrink-0 w-6 h-6">
+                          <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                        </div>
+                        <span className="flex-1">{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -478,9 +500,9 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Authority & Science */}
-        <section className="py-24 px-6 bg-white border-b border-zinc-100">
+        <section className="py-8 md:py-24 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
-            <h3 data-animate="science-header" className={`text-sm font-bold text-header-black uppercase tracking-wide mb-8 transition-all duration-700 ${isVisible('science-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Scientific Evidence & Clinical Standards</h3>
+            <h3 data-animate="science-header" className={`text-sm font-bold text-[#FE7623] uppercase tracking-widest mb-8 transition-all duration-700 ${isVisible('science-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Scientific Evidence & Clinical Standards</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { name: "Mayo Clinic", url: "https://www.mayoclinic.org/", desc: "Discusses removal for complications like rupture and contracture, emphasizing individualized planning." },
@@ -500,12 +522,12 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* FAQ & Pricing */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             {/* FAQ Column */}
             <div className="lg:col-span-2">
-              <h2 data-animate="faq-header" className={`text-2xl font-semibold text-header-black mb-8 transition-all duration-700 ${isVisible('faq-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Frequently Asked Questions</h2>
+              <h2 data-animate="faq-header" className={`text-2xl font-semibold text-[#FE7623] mb-8 transition-all duration-700 ${isVisible('faq-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Frequently Asked Questions</h2>
               <div className="space-y-3">
                 {faqs.map((faq, index) => (
                   <div
@@ -553,8 +575,11 @@ export default function BreastImplantRemovalMalaysia() {
                 <p className="text-zinc-400 text-sm mb-6">Costs vary based on complexity. Key factors include:</p>
                 <ul className="space-y-3 mb-8">
                   {["Capsulectomy requirement", "Need for Lift or Fat Transfer", "Operating theatre time", "Implant placement (Over/Under muscle)"].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-zinc-300 group/item cursor-pointer hover:text-white transition-colors duration-300">
-                      <div className="w-2 h-2 rounded-full bg-[#FE7623] group-hover/item:scale-125 transition-transform duration-300"></div> {item}
+                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 group/item cursor-pointer hover:text-white transition-colors duration-300">
+                      <div className="flex-shrink-0 w-6 h-6">
+                        <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      </div>
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -564,21 +589,21 @@ export default function BreastImplantRemovalMalaysia() {
               </div>
 
               {/* Mini Testimonial */}
-              <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 hover:border-[#FE7623] hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer">
+              <div className="p-6 bg-white rounded-2xl border border-zinc-100 hover:border-[#FE7623] hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer">
                 <div className="flex gap-1 text-[#FE7623] mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 fill-current group-hover:scale-110 transition-transform duration-300" style={{transitionDelay: `${i * 50}ms`}} viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                    <svg key={i} className="w-7 h-7 fill-current group-hover:scale-110 transition-transform duration-300" style={{transitionDelay: `${i * 50}ms`}} viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                   ))}
                 </div>
-                <p className="text-sm text-para-black italic mb-4 group-hover:text-header-black transition-colors duration-300">&ldquo;My capsular contracture pain is gone. The whole process felt safe and professional.&rdquo;</p>
-                <p className="text-xs font-bold text-header-black group-hover:text-[#FE7623] transition-colors duration-300">— Yvonne, 39</p>
+                <p className="text-sm text-zinc-600 italic mb-4 group-hover:text-zinc-900 transition-colors duration-300">&ldquo;My capsular contracture pain is gone. The whole process felt safe and professional.&rdquo;</p>
+                <p className="text-xs font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">— Yvonne, 39</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Related Procedures */}
-        <section className="py-12 px-6 bg-zinc-50 border-t border-zinc-200">
+        <section className="py-8 md:py-12 px-6 bg-zinc-50 border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap gap-6 justify-center text-center items-center">
               <Link href="/breast/breast-lift-malaysia" className="text-sm text-para-black hover:text-[#FE7623] transition-all duration-300 hover:scale-105 relative group">
@@ -600,10 +625,11 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
           <div data-animate="cta" className={`max-w-4xl mx-auto text-center transition-all duration-700 ${isVisible('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-header-black mb-6">Ready for a Change?</h2>
-            <p className="text-lg text-para-black mb-10 max-w-xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6">Ready for a Change?</h2>
+            <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
               Dr. Soma combines medical precision with aesthetic judgement to ensure your explant journey is safe, comfortable, and results in a natural look.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
