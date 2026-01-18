@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // NOTE: Comment out 'output: export' for development to enable API routes
-  output: 'export',
+  reactStrictMode: true,
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -25,7 +24,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  webpack: (config, {}) => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
