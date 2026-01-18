@@ -10,6 +10,9 @@ const Header = () => {
   const [sideNavOpened, setSideNavOpened] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Check if we're on the new-home page for transparent header
+  const isHomePage = router.pathname === '/new-home' || router.pathname === '/';
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -18,9 +21,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Determine if header should be transparent (only on home page when not scrolled)
+  const isTransparent = isHomePage && !scrolled;
+
   const linkClasses = (path: string) =>
     `relative text-[15px] font-medium tracking-wide transition-all duration-300 hover:text-primary ${
-      router.pathname === path ? "text-primary" : "text-black"
+      router.pathname === path ? "text-primary" : isTransparent ? "text-gray-800" : "text-black"
     }`;
 
   const mobileLinkClasses = (path: string) =>
@@ -41,8 +47,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white ${
-          scrolled ? "shadow-lg shadow-black/10" : "shadow-md"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isTransparent
+            ? "bg-transparent"
+            : "bg-white shadow-lg shadow-black/10"
         }`}
       >
         <div className="containers px-[30px]">
@@ -69,7 +77,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="h-[80px] lg:h-[90px]"></div>
+      {!isHomePage && <div className="h-[80px] lg:h-[90px]"></div>}
       <div className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden transition-opacity duration-300 ${sideNavOpened ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={handleSideNav}></div>
       <div className={`fixed top-0 left-0 z-[70] flex flex-col w-[300px] max-w-[85vw] h-screen bg-white lg:hidden transition-transform duration-500 ease-out ${sideNavOpened ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex flex-nowrap items-center justify-between p-6 border-b border-black/10">

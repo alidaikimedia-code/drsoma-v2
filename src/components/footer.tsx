@@ -1,135 +1,118 @@
 import React from "react";
+import { useRouter } from 'next/router';
+import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
 import BaseImage from "@/components/BaseImage";
-import EmailIcon from "../../public/icons/email_dr_icon.svg";
-import PhoneIcon from "../../public/icons/cell_dr_icon.svg";
-import YoutubeIcon from "../../public/icons/youtube.svg";
-import FacebookIcon from "../../public/icons/facebook.svg";
-import InstagramIcon from "../../public/icons/instagram.svg";
-import WhatsappIcon from "../../public/icons/whatsapp_icon.svg";
-import TiktokIcon from "../../public/icons/tiktok.svg";
-import Link from "next/link";
 
 const Footer = () => {
+  const router = useRouter();
+
   return (
-    <>
-      <footer className="flex w-full">
-        <section className="flex w-full bg-black">
-          <div className="flex containers w-full">
-            <div className="flex w-full flex-col">
-              <div className="flex w-full gap-50 lg:gap-[92px] items-center py-50 lg:!flex-nowrap">
-                <div className="flex">
-                  <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={120} height={120} />
-                </div>
-                <div className="flex gap-50 lg:gap-[92px] w-full max-w-[934px] justify-start md:justify-center">
-                  <div className="flex flex-col gap-10 w-full max-w-[125px]">
-                    <h4 className="text-primary">Pages</h4>
-                    <div className="flex flex-col gap-[6px]">
-                      <Link href={"/"}>
-                        <p className="text-para-white opacity-90">Home</p>
-                      </Link>
-                      <Link href={"/about-dr-soma"}>
-                        <p className="text-para-white opacity-90">About</p>
-                      </Link>
-                      <Link href={"/servicespage"}>
-                        <p className="text-para-white opacity-90">Services</p>
-                      </Link>
-                      <Link href={"/success-stories"}>
-                        <p className="text-para-white opacity-90">
-                          Success Stories
-                        </p>
-                      </Link>
-                      <Link href={"/blogs"}>
-                        <p className="text-para-white opacity-90">Blog</p>
-                      </Link>
-                      <Link href={"/contact-us"}>
-                        <p className="text-para-white opacity-90">Contact</p>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-50 lg:gap-20 w-full max-w-[312px]">
-                    <div className="flex flex-col gap-10 w-full">
-                      <h4 className="text-primary">Business Hours</h4>
-                      <div className="flex flex-col gap-[6px]">
-                        <p className="text-[#EBEBEB] opacity-90">
-                          Mon-Fri: 9am-5pm
-                        </p>
-                        <p className="text-[#EBEBEB] opacity-90">
-                          Sat: 9am-1pm
-                        </p>
-                        <p className="text-[#EBEBEB] opacity-90">
-                          Sunday & Public Holiday: Closed
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-10 w-full">
-                      <h4 className="text-primary">Reach Us</h4>
-                      <h5 className="text-[#EBEBEB] opacity-90">
-                        Klinik Plastic Surgery Soma <br /> 45B, 2nd Floor, Jalan SS15/5A,<br /> 47500, Subang Jaya, Selangor, Malaysia
-                      </h5>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-50 lg:gap-20 w-full max-w-[312px]">
-                    <div className="flex flex-col gap-10 w-full max-w-[313px]">
-                      <h4 className="text-primary">Contact Us</h4>
-                      <div className="flex flex-col gap-[6px]">
-                        <div className="flex gap-x-3 items-center">
-                          <div className="flex">
-                            <EmailIcon />
-                          </div>
-                          <p className="text-para-white opacity-90">
-                             enquiry.drsoma@gmail.com
-                          </p>
-                        </div>
-                        <div className="flex gap-x-3 items-center">
-                          <div className="flex">
-                            <PhoneIcon />
-                          </div>
-                          <p className="text-para-white opacity-90">
-                             603 5887 4422
-                          </p>
-                        </div>
-                        <div className="flex gap-x-3 items-center">
-                          <div className="flex">
-                            <WhatsappIcon />
-                          </div>
-                          <p className="text-para-white opacity-90">
-                            014 261 6007
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-10 w-full max-w-[313px]">
-                      <h4 className="text-primary">Follow Us On</h4>
-                      <div className="flex gap-15 items-center !flex-nowrap">
-                        <a href="https://www.facebook.com/somasurgery" target="_blank" rel="noopener noreferrer" className="flex">
-                          <FacebookIcon />
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCo6puB2cXTvirx0jm_lIOEQ" target="_blank" rel="noopener noreferrer" className="flex">
-                          <YoutubeIcon />
-                        </a>
-                        <a href="https://www.instagram.com/drsomaplasticsurgery/" target="_blank" rel="noopener noreferrer" className="flex">
-                          <InstagramIcon />
-                        </a>
-                        <a href="https://tiktok.com/drsomaplasticsurgery" target="_blank" rel="noopener noreferrer" className="flex">
-                          <TiktokIcon />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr className="flex w-full border border-primary" />
-              <div className="flex w-full justify-center py-20">
-                <p className="text-[#EBEBEB] opacity-90 text-center">
-                  Copyright © 2026. SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A).
-                  All Rights Reserved.
-                </p>
-              </div>
+    <footer className="bg-[#111827] text-white pt-16 pb-12">
+      {/* Footer Content */}
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-4 gap-12">
+          {/* Brand Column */}
+          <div className="col-span-1 md:col-span-1">
+            <div className="mb-6">
+              <BaseImage
+                src="/images/dr_soma_logo.png"
+                alt="Dr. Soma Plastic Surgery Logo"
+                width={80}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Professional Plastic Surgery &amp; Aesthetic Medicine tailored to your needs.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/somasurgery"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#EA622F] transition-colors cursor-pointer"
+              >
+                <Facebook className="w-[18px] h-[18px]" />
+              </a>
+              <a
+                href="https://www.instagram.com/drsomaplasticsurgery/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#EA622F] transition-colors cursor-pointer"
+              >
+                <Instagram className="w-[18px] h-[18px]" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCo6puB2cXTvirx0jm_lIOEQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#EA622F] transition-colors cursor-pointer"
+              >
+                <Youtube className="w-[18px] h-[18px]" />
+              </a>
             </div>
           </div>
-        </section>
-      </footer>
-    </>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/about-dr-soma')}>About Dr. Soma</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/servicespage')}>Our Services</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/success-stories')}>Success Stories</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/blogs')}>Patient Resources</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-bold text-lg mb-6">Contact</h4>
+            <ul className="space-y-4 text-gray-400 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin className="text-[#EA622F] w-[18px] h-[18px] shrink-0 mt-0.5" />
+                <div className="flex flex-col">
+                  <span>Klinik Plastic Surgery Soma</span>
+                  <span>45B, 2nd Floor, Jalan SS15/5A,</span>
+                  <span>47500, Subang Jaya, Selangor,</span>
+                  <span>Malaysia</span>
+                </div>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="text-[#EA622F] w-[18px] h-[18px] shrink-0" />
+                <span>603 5887 4422</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="text-[#EA622F] w-[18px] h-[18px] shrink-0" />
+                <span>enquiry.drsoma@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Clinic Hours */}
+          <div>
+            <h4 className="font-bold text-lg mb-6">Clinic Hours</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="flex justify-between">
+                <span>Mon - Fri</span>
+                <span>9:00 AM - 5:00 PM</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Saturday</span>
+                <span>9:00 AM - 1:00 PM</span>
+              </li>
+              <li className="flex justify-between text-[#EA622F]">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-xs">
+          &copy; {new Date().getFullYear()} SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A). All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   );
 };
 
