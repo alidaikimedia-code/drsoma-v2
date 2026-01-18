@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   // NOTE: Comment out 'output: export' for development to enable API routes
   output: 'export',
   trailingSlash: true,
-  // Staging subdirectory - comment these 2 lines for production
-  basePath: '/staging',
-  assetPrefix: '/staging',
   images: {
     unoptimized: true,
     remotePatterns: [

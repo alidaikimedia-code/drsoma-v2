@@ -10,8 +10,7 @@
     "build:production": "cp .env.production .env.local && next build",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "generate-dynamic-sitemap": "node next-sitemap.config.js",
-    "build:staging": "node build-staging.js"
+    "generate-dynamic-sitemap": "node next-sitemap.config.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
