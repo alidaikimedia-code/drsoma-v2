@@ -315,7 +315,7 @@ const NewHome = () => {
             <div className="relative max-w-sm mx-auto">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gray-100 relative z-10">
                 <BaseImage
-                  src="/images/dr_soma_pic.png"
+                  src="/images/dr-soma-surgeon.jpg"
                   alt="Dr. Somasundaram Sathappan"
                   width={400}
                   height={533}
