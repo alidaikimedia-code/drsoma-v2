@@ -221,37 +221,55 @@ export default function FatTransferBreastAugmentation() {
 
       <main className="fat-transfer-page bg-white text-zinc-900">
         {/* Hero Section */}
-        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-transparent -z-10"></div>
+        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
+          <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="order-1 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
                 Natural Breast Enhancement
               </div>
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-zinc-900 leading-[1.1] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-zinc-900 leading-[1.1] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Fat Transfer Breast Augmentation in Malaysia</span> <br />
                 <span className="text-[#FE7623] text-[16px] md:text-[22px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">No Implants. Softer Feel. Natural Volume.</span>
               </h1>
-              <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
                 <p style={{fontSize: '14px'}} className="mb-4">Not everyone wants breast implants. Some patients prefer a more natural approach, aiming for subtle enhancement, improved shape, and gentle upper fullness without foreign material. Fat transfer breast augmentation is a surgeon-performed procedure that uses your own body fat to enhance breast volume and contour.</p>
                 <p style={{fontSize: '14px'}}>At Dr. Soma Plastic Surgery, every fat transfer breast augmentation is performed by Dr. Soma, a board-certified plastic surgeon with extensive experience in both body contouring and breast aesthetics. The procedure combines careful liposuction, precise fat purification, and layered fat grafting to improve breast shape while maintaining natural softness and proportion.</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60126919919?text=Hi%20Dr.%20Soma%2C%20I%27m%20interested%20in%20Fat%20Transfer%20Breast%20Augmentation.%20Can%20I%20get%20more%20information%3F" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
+                <a href="https://wa.me/60126919919?text=Hi%20Dr.%20Soma%2C%20I%27m%20interested%20in%20Fat%20Transfer%20Breast%20Augmentation.%20Can%20I%20get%20more%20information%3F" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                  Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                  Book a Consultation (WhatsApp)
                 </a>
-                <a href="#what-is" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                <a href="#what-is" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
+                  How It Works
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
+              </div>
+
+              {/* Trusted by patients */}
+              <div className="flex items-center gap-4 mt-8 animate-fadeInUp opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
+                <div className="flex -space-x-2">
+                  {[
+                    'https://randomuser.me/api/portraits/women/44.jpg',
+                    'https://randomuser.me/api/portraits/men/32.jpg',
+                    'https://randomuser.me/api/portraits/women/68.jpg',
+                    'https://randomuser.me/api/portraits/men/75.jpg',
+                    'https://randomuser.me/api/portraits/women/89.jpg'
+                  ].map((img, i) => (
+                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
+                      <img src={img} alt={`Patient ${i + 1}`} className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
                 src="/images/fat-transfer-breast-augmentation.jpg"
                 alt="Fat Transfer Breast Augmentation Malaysia"
@@ -259,7 +277,7 @@ export default function FatTransferBreastAugmentation() {
                 className="object-cover opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+              <div className="hidden md:block absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
                 <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
@@ -277,7 +295,7 @@ export default function FatTransferBreastAugmentation() {
         </section>
 
         {/* What Is Fat Transfer Section */}
-        <section id="what-is" className="py-8 md:py-24 px-6 bg-white border-b border-zinc-100">
+        <section id="what-is" className="pt-4 pb-8 md:py-24 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
               <div data-animate="def-1" className={`transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -458,7 +476,7 @@ export default function FatTransferBreastAugmentation() {
                 <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-4 py-2 rounded-full mb-6 inline-block">Good Candidate</span>
                 <ul className="space-y-3">
                   {goodCandidate.map((item, i) => (
-                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600">
+                    <li key={i} className="flex flex-row items-center gap-3 text-sm text-zinc-600">
                       <div className="flex-shrink-0 w-6 h-6">
                         <svg className="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       </div>
@@ -473,7 +491,7 @@ export default function FatTransferBreastAugmentation() {
                 <span className="text-xs font-bold text-red-700 bg-red-100 px-4 py-2 rounded-full mb-6 inline-block">Not Suitable If</span>
                 <ul className="space-y-3">
                   {notSuitable.map((item, i) => (
-                    <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600">
+                    <li key={i} className="flex flex-row items-center gap-3 text-sm text-zinc-600">
                       <div className="flex-shrink-0 w-6 h-6">
                         <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       </div>
@@ -703,8 +721,8 @@ export default function FatTransferBreastAugmentation() {
                 { text: "My breasts feel completely natural. Dr. Soma explained the process clearly and set the right expectations.", name: "Elaine, 39" },
                 { text: "Soft, feminine results and the recovery was manageable. The overall body contour change was a bonus.", name: "Nur, 36" }
               ].map((testimonial, i) => (
-                <div key={i} data-animate={`testimonial-${i}`} className={`p-8 bg-zinc-50 rounded-2xl border border-zinc-100 shadow-sm card-3d card-shine hover:border-[#FE7623] ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
-                  <div className="flex gap-1 text-[#FE7623] mb-4">
+                <div key={i} data-animate={`testimonial-${i}`} className={`p-8 bg-zinc-50 rounded-2xl border border-zinc-100 shadow-sm card-3d card-shine hover:border-[#FE7623] text-center sm:text-left ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
+                  <div className="flex justify-center sm:justify-start gap-1 text-[#FE7623] mb-4">
                     {[...Array(5)].map((_, j) => (
                       <svg key={j} className="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     ))}
@@ -835,8 +853,8 @@ export default function FatTransferBreastAugmentation() {
                 Chat with Us on WhatsApp
               </a>
               <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
-                <svg className="w-6 h-6 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
               </Link>
             </div>
           </div>

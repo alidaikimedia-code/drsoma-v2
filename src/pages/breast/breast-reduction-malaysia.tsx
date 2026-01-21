@@ -194,36 +194,58 @@ export default function BreastReductionMalaysia() {
 
       <main className="breast-reduction-page bg-white text-header-black">
         {/* Hero Section */}
-        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden border-b border-zinc-100">
-          <div className="absolute top-0 left-0 right-0 h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-50/60 via-zinc-50/20 to-transparent -z-10"></div>
+        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden border-b border-zinc-100" style={{backgroundColor: '#F8FAFC'}}>
+          <div className="absolute top-0 left-0 right-0 h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-50/60 via-[#F8FAFC] to-transparent -z-10"></div>
 
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-8 shadow-sm animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="order-1 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 shadow-sm animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
                 Certified Plastic Surgeon
               </div>
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+              <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
                 <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Breast Reduction in Malaysia</span> <br />
                 <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Lighter. Proportionate. More Comfortable.</span>
               </h1>
-              <div className="text-zinc-600 leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
                 <p style={{fontSize: '14px'}} className="mb-4">Large, heavy breasts can cause more than aesthetic concerns. Many patients experience chronic neck, shoulder, and back pain, posture strain, bra-strap grooving, skin irritation under the breast fold, and difficulty exercising or finding comfortable clothing. Clinical guidance from the UK NHS recognises breast reduction surgery as a treatment option when large breasts contribute to ongoing physical discomfort and daily functional limitation.</p>
                 <p style={{fontSize: '14px'}}>At Dr. Soma Plastic Surgery, every breast reduction procedure is performed by Dr. Soma, a board-certified plastic surgeon with extensive experience in aesthetic and functional breast surgery. The goal is not simply to &quot;make breasts smaller&quot; but to achieve a balanced size, improved symmetry, healthier nipple position, and long-term comfort using careful planning and safety-focused technique.</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%20Dr.%20Soma%2C%20I%27m%20interested%20in%20Breast%20Reduction%20surgery.%20Can%20I%20get%20more%20information%3F" className="inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-8 py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
+                <a href="https://wa.me/60142616007?text=Hi%20Dr.%20Soma%2C%20I%27m%20interested%20in%20Breast%20Reduction%20surgery.%20Can%20I%20get%20more%20information%3F" className="inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group">
                   Book Consultation
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
+                <a href="#procedure" className="inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
+                  How It Works
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                </a>
+              </div>
+
+              {/* Trusted by patients */}
+              <div className="flex items-center gap-4 mt-8 animate-fadeInUp opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
+                <div className="flex -space-x-2">
+                  {[
+                    'https://randomuser.me/api/portraits/women/44.jpg',
+                    'https://randomuser.me/api/portraits/men/32.jpg',
+                    'https://randomuser.me/api/portraits/women/68.jpg',
+                    'https://randomuser.me/api/portraits/men/75.jpg',
+                    'https://randomuser.me/api/portraits/women/89.jpg'
+                  ].map((img, i) => (
+                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
+                      <img src={img} alt={`Patient ${i + 1}`} className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] md:aspect-[4/3] group animate-fadeInRight opacity-0 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-shadow duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage src="/images/safe_breast_reduction.png" alt="Breast Reduction Surgery Malaysia" fill className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-105" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+              <div className="hidden md:block absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
                 <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
@@ -241,7 +263,7 @@ export default function BreastReductionMalaysia() {
         </section>
 
         {/* Definition & Reasons */}
-        <section id="procedure" className="py-8 md:py-24 px-4 sm:px-6 bg-zinc-50">
+        <section id="procedure" className="pt-4 pb-8 md:py-24 px-4 sm:px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
               {/* What is it */}
@@ -484,10 +506,10 @@ export default function BreastReductionMalaysia() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
               <div data-animate="candidates" className={`transition-all duration-700 text-center sm:text-left ${isVisible('candidates') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                 <h3 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-4 sm:mb-6">Who Is a Good Candidate?</h3>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4 mb-8 text-left">
                   {["Large or heavy breasts causing discomfort.", "Chronic back, neck, or shoulder strain.", "Skin irritation or rashes under breasts.", "Stable body weight.", "Non-smoker or willing to stop temporarily."].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4 group cursor-pointer">
-                      <div className="mt-1 min-w-[24px] text-[#FE7623] group-hover:scale-110 transition-transform"><svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                    <li key={i} className="flex items-center gap-4 group cursor-pointer">
+                      <div className="min-w-[24px] text-[#FE7623] group-hover:scale-110 transition-transform"><svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
                       <span className="text-sm text-header-black font-medium group-hover:text-[#FE7623] transition-colors">{item}</span>
                     </li>
                   ))}
@@ -537,7 +559,7 @@ export default function BreastReductionMalaysia() {
               <div key={i} className="bg-zinc-800 p-4 sm:p-6 rounded-lg sm:rounded-xl border border-zinc-700 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl hover:shadow-[#FE7623]/10 transition-all duration-500 group cursor-pointer">
                 <svg className="w-12 h-12 text-[#FE7623] mb-3 sm:mb-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} /></svg>
                 <h4 className="font-bold text-white mb-1 sm:mb-2 text-xs sm:text-sm group-hover:text-[#FE7623] transition-colors">{item.title}</h4>
-                <p className="text-[10px] sm:text-xs text-para-black group-hover:text-white/70 transition-colors">{item.desc}</p>
+                <p className="text-[10px] sm:text-xs text-white group-hover:text-white/70 transition-colors">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -553,16 +575,16 @@ export default function BreastReductionMalaysia() {
                 { text: "I didn't realize how much heavy breasts affected my posture until after surgery. Dr. Soma was extremely professional.", name: "Cheryl, 40" },
                 { text: "The results are proportional and feminine, not flat. Recovery was well guided and the clinic was supportive.", name: "Nurul, 35" }
               ].map((review, i) => (
-                <div key={i} data-animate={`review-${i}`} className={`bg-zinc-50 p-8 rounded-2xl border border-zinc-100 hover:shadow-xl hover:border-[#FE7623]/30 transition-all duration-500 group ${isVisible(`review-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 100}ms` }}>
-                  <div className="flex gap-1 text-[#FE7623] mb-6">
+                <div key={i} data-animate={`review-${i}`} className={`bg-zinc-50 p-8 rounded-2xl border border-zinc-100 hover:shadow-xl hover:border-[#FE7623]/30 transition-all duration-500 group text-center sm:text-left ${isVisible(`review-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 100}ms` }}>
+                  <div className="flex justify-center sm:justify-start gap-1 text-[#FE7623] mb-6">
                     {[...Array(5)].map((_, j) => (
                       <svg key={j} className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     ))}
                   </div>
                   <p className="text-sm text-para-black leading-relaxed mb-6">&quot;{review.text}&quot;</p>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center sm:justify-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-xs font-bold text-para-black group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all">{review.name[0]}</div>
-                    <div>
+                    <div className="text-left">
                       <p className="text-sm font-bold text-header-black">{review.name}</p>
                       <p className="text-xs text-para-black">Patient</p>
                     </div>
@@ -590,7 +612,7 @@ export default function BreastReductionMalaysia() {
         </section>
 
         {/* FAQ Section */}
-        <section className="pt-4 pb-8 md:pt-12 md:pb-24 bg-[#FAFAF9]">
+        <section className="pt-0 pb-8 md:pt-0 md:pb-24 bg-[#FAFAF9]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div data-animate="faq-header" className={`text-center mb-8 sm:mb-12 lg:mb-16 transition-all duration-700 ${isVisible('faq-header') ? 'opacity-100 translate-y-0' : 'opacity-100 sm:opacity-0 sm:translate-y-10'}`}>
               <span className="inline-block bg-white text-para-black font-normal px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-6 border border-[#E8E8E8] rounded-full text-xs sm:text-sm hover:border-[#FE7623] hover:text-[#FE7623] transition-colors cursor-pointer">
@@ -641,7 +663,7 @@ export default function BreastReductionMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section id="contact" className="pt-4 pb-8 md:pt-12 md:pb-24 px-4 sm:px-6 bg-zinc-50">
+        <section id="contact" className="pt-0 pb-8 md:pt-0 md:pb-24 px-4 sm:px-6 bg-zinc-50">
           <div data-animate="cta" className={`max-w-4xl mx-auto text-center transition-all duration-700 ${isVisible('cta') ? 'opacity-100 translate-y-0' : 'opacity-100 sm:opacity-0 sm:translate-y-10'}`}>
             <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-4 sm:mb-6">Relieve Heaviness & Restore Comfort</h2>
             <p className="text-sm sm:text-base lg:text-lg text-para-black mb-6 sm:mb-8 lg:mb-10 max-w-xl mx-auto px-2">Dr. Soma combines medical precision, aesthetic planning, and safety-first technique to deliver lighter, balanced, and long-lasting contour improvement.</p>
@@ -653,8 +675,8 @@ export default function BreastReductionMalaysia() {
                 Chat on WhatsApp
               </a>
               <Link href="/contact-us" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border border-zinc-200 px-8 py-3 sm:py-3.5 rounded-full text-sm font-medium hover:bg-zinc-50 hover:border-[#FE7623] hover:text-[#FE7623] hover:scale-105 transition-all duration-300 group">
-                Book a Consultation Today
-                <svg className="w-6 h-6 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                <svg className="w-6 h-6 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                Book Consultation
               </Link>
             </div>
             <p className="mt-6 sm:mt-8 text-[10px] sm:text-xs text-para-black">Certified Plastic Surgeon - Kuala Lumpur, Malaysia</p>
