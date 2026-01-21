@@ -73,7 +73,11 @@ const Header = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-[#ff7a4d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
-            <button className="flex lg:hidden items-center justify-center w-10 h-10 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu"><MenuIcon className="w-6 h-6" /></button>
+            <button className="flex lg:hidden items-center justify-center w-12 h-12 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/>
+              </svg>
+            </button>
           </div>
         </div>
       </header>

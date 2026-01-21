@@ -158,7 +158,7 @@ const Home = () => {
             </p>
 
             {/* Checkmarks - 2x2 grid */}
-            <div className="grid grid-cols-2 gap-y-4 gap-x-6 mb-10">
+            <div className="grid grid-cols-2 gap-y-4 gap-x-6 mb-16">
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -196,14 +196,14 @@ const Home = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20"
+                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20 min-w-[200px]"
                 onClick={() => router.push('/contact-us')}
               >
                 Book A Consultation
               </button>
               <button
-                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base"
-                onClick={() => router.push('/face')}
+                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base min-w-[200px]"
+                onClick={() => router.push('/servicespage')}
               >
                 Explore Procedures
               </button>
@@ -216,7 +216,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="py-6 md:py-8 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100 border-x border-gray-100">
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
@@ -373,13 +373,13 @@ const Home = () => {
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-14 px-8 min-w-[200px]"
                   onClick={() => router.push('/about-dr-soma')}
                 >
                   Read Full Profile
                 </button>
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-12 px-6 py-2"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 px-8 min-w-[200px]"
                   onClick={() => router.push('/about-dr-soma')}
                 >
                   View Credentials
@@ -496,7 +496,7 @@ const Home = () => {
                 <p className="text-gray-600 mb-8">Can&apos;t find what you&apos;re looking for? Get in touch with our friendly team.</p>
                 <div className="flex gap-4 justify-center md:justify-start">
                   <button
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-14 px-8 min-w-[200px]"
                     onClick={() => router.push('/contact-us')}
                   >
                     Contact Us
@@ -505,7 +505,7 @@ const Home = () => {
                     href="https://wa.me/60142616007?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-sm h-12 px-6 py-2"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-sm h-14 px-8 min-w-[200px]"
                   >
                     WhatsApp Now
                   </a>
