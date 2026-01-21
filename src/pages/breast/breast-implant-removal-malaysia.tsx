@@ -212,61 +212,70 @@ export default function BreastImplantRemovalMalaysia() {
 
       <main className="implant-removal-page bg-white text-header-black">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-20 md:pt-36 md:pb-28 px-6 overflow-hidden border-b border-zinc-100">
-          <div className="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative">
+        <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
+          <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative">
 
-            <div className="lg:col-span-7 z-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-para-black text-xs font-semibold mb-8 uppercase tracking-wider animate-fadeInUp opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623]"></span>
+            <div className="order-1 lg:order-1 z-10">
+              <div className="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
                 Explant Surgery Malaysia
               </div>
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-header-black leading-[1.05] mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                Safe Removal. <br />
-                <span className="text-para-black">Thoughtful Reshaping.</span>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-zinc-900 leading-[1.1] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Safe Removal.</span> <br />
+                <span className="text-[#FE7623] text-[16px] md:text-[22px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Thoughtful Reshaping.</span>
               </h1>
-              <p className="text-lg text-para-black leading-relaxed mb-8 max-w-xl animate-fadeInUp opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                Breast implants are not lifetime devices. Whether for comfort, health, or lifestyle, Dr. Soma performs safe explant surgery to restore natural proportions and peace of mind.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007" className="inline-flex justify-center items-center gap-2 bg-[#FE7623] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#e56010] hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/30 group">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                  Book Consultation (WhatsApp)
+              <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                <p style={{fontSize: '14px'}}>Breast implants are not lifetime devices. Whether for comfort, health, or lifestyle, Dr. Soma performs safe explant surgery to restore natural proportions and peace of mind.</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
+                <a href="https://wa.me/60142616007" className="inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group">
+                  Book Consultation
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
-                <a href="#options" className="inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-header-black px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <a href="#options" className="inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
                   View Options
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:translate-y-1 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
+              </div>
+
+              {/* Trusted by patients */}
+              <div className="flex items-center gap-4 mt-8 animate-fadeInUp opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
+                <div className="flex -space-x-2">
+                  {[
+                    'https://randomuser.me/api/portraits/women/44.jpg',
+                    'https://randomuser.me/api/portraits/men/32.jpg',
+                    'https://randomuser.me/api/portraits/women/68.jpg',
+                    'https://randomuser.me/api/portraits/men/75.jpg',
+                    'https://randomuser.me/api/portraits/women/89.jpg'
+                  ].map((img, i) => (
+                    <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
+                      <img src={img} alt={`Patient ${i + 1}`} className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
               </div>
             </div>
 
-            {/* Abstract Visual */}
-            <div className="lg:col-span-5 relative hidden lg:block animate-fadeInRight opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              <div className="relative rounded-2xl overflow-hidden aspect-square bg-zinc-50 border border-zinc-100 shadow-2xl p-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-white via-zinc-50 to-orange-50/30"></div>
-                <div className="relative z-10 grid grid-cols-2 gap-4 w-full h-full opacity-80">
-                  <div className="relative w-full h-full rounded-xl overflow-hidden shadow-sm">
-                    <BaseImage
-                      src="/breast/breast-implant-removal.png"
-                      alt="Natural Aesthetics"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-4 pt-12">
-                    <div className="bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-float">
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                        <span className="text-sm font-bold text-header-black">Safety First</span>
-                      </div>
-                      <p className="text-[14px] text-para-black">Board-certified surgeon performed procedure.</p>
+            {/* Hero Image */}
+            <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
+              <BaseImage
+                src="/breast/breast-implant-removal.png"
+                alt="Breast Implant Removal Malaysia"
+                fill
+                className="object-cover opacity-95"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
+              <div className="hidden md:block absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <div className="p-2 md:p-3 bg-white border border-zinc-200 text-[#FE7623] rounded-xl shadow-sm">
+                      <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
-                    <div className="bg-white p-4 rounded-xl shadow-lg border border-zinc-100 animate-float" style={{animationDelay: '0.5s'}}>
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-4 h-4 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                        <span className="text-sm font-bold text-header-black">Natural Feel</span>
-                      </div>
-                      <p className="text-[14px] text-para-black">Restoring your body&apos;s own contour.</p>
+                    <div>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Certified Plastic Surgeon</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Performed by Dr. Soma</p>
                     </div>
                   </div>
                 </div>
@@ -276,7 +285,7 @@ export default function BreastImplantRemovalMalaysia() {
         </section>
 
         {/* Definition & Context */}
-        <section className="py-8 md:py-24 px-6 bg-white">
+        <section className="pt-4 pb-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Left: What Is It */}
@@ -589,8 +598,8 @@ export default function BreastImplantRemovalMalaysia() {
               </div>
 
               {/* Mini Testimonial */}
-              <div className="p-6 bg-white rounded-2xl border border-zinc-100 hover:border-[#FE7623] hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer">
-                <div className="flex gap-1 text-[#FE7623] mb-3">
+              <div className="p-6 bg-white rounded-2xl border border-zinc-100 hover:border-[#FE7623] hover:shadow-xl hover:-translate-y-1 transition-all duration-500 group cursor-pointer text-center sm:text-left">
+                <div className="flex justify-center sm:justify-start gap-1 text-[#FE7623] mb-3">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-7 h-7 fill-current group-hover:scale-110 transition-transform duration-300" style={{transitionDelay: `${i * 50}ms`}} viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                   ))}
@@ -638,8 +647,8 @@ export default function BreastImplantRemovalMalaysia() {
                 Chat on WhatsApp
               </a>
               <Link href="/contact-us" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border-2 border-zinc-200 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+                <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
-                <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
               </Link>
             </div>
 
