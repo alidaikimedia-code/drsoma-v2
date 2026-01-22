@@ -597,9 +597,9 @@ export default function ChinLiposuctionMalaysia() {
                     }`}
                     onClick={() => toggleFaq(index)}
                   >
-                    <span className={`text-sm font-semibold transition-colors duration-300 pr-4 flex-1 ${
+                    <h4 className={`text-sm font-semibold transition-colors duration-300 pr-4 flex-1 ${
                       openFaq === index ? 'text-[#FE7623]' : 'text-zinc-800 group-hover:text-[#FE7623]'
-                    }`}>{faq.question}</span>
+                    }`}>{faq.question}</h4>
                     <span className="flex-shrink-0 min-w-[24px] text-xl sm:text-2xl font-light transition-all duration-300 text-[#FE7623]">
                       {openFaq === index ? "−" : "+"}
                     </span>

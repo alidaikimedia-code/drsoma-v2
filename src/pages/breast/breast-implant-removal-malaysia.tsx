@@ -553,7 +553,7 @@ export default function BreastImplantRemovalMalaysia() {
                       }`}
                       onClick={() => toggleFaq(index)}
                     >
-                      <h5 className="text-sm sm:text-base text-primary font-medium flex-1">{faq.question}</h5>
+                      <h4 className="text-sm sm:text-base text-primary font-medium flex-1">{faq.question}</h4>
                       <span className={`flex-shrink-0 text-2xl sm:text-3xl font-light transition-all duration-300 ${
                         openFaq === index
                           ? "text-[#FE7623]"

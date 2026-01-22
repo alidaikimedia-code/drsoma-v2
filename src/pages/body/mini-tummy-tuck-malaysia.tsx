@@ -574,9 +574,9 @@ const MiniTummyTuckMalaysia = () => {
                   }`}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span className={`text-sm sm:text-base lg:text-[17px] font-semibold transition-colors duration-300 ${
+                  <h4 className={`text-sm sm:text-base lg:text-[17px] font-semibold transition-colors duration-300 ${
                     openIndex === index ? 'text-[#FE7623]' : 'text-zinc-900'
-                  }`}>{item.question}</span>
+                  }`}>{item.question}</h4>
                   <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
                     {openIndex === index ? "−" : "+"}
                   </span>

@@ -488,7 +488,7 @@ export default function StomachLiposuctionMalaysia() {
                     }`}
                     onClick={() => toggleFaq(index)}
                   >
-                    <h5 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h5>
+                    <h4 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h4>
                     <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
                       {openFaq === index ? "−" : "+"}
                     </span>

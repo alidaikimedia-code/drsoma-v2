@@ -794,11 +794,11 @@ const BodyHub = () => {
                     className="w-full flex items-center justify-between gap-4 px-6 py-5 lg:px-8 lg:py-6 text-left"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <span className={`font-semibold flex-1 text-sm lg:text-base transition-colors ${
+                    <h4 className={`font-semibold flex-1 text-sm lg:text-base transition-colors ${
                       openIndex === index ? "text-primary" : "text-header-black"
                     }`}>
                       {faq.question}
-                    </span>
+                    </h4>
                     <div className={`flex-shrink-0 min-w-[32px] w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold transition-all duration-300 ${
                       openIndex === index
                         ? "bg-primary text-white"

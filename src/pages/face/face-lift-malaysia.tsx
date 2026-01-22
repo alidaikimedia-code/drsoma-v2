@@ -234,7 +234,7 @@ const FaceLift = () => {
                     className="flex justify-between !flex-nowrap w-full cursor-pointer items-center"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <h5 className="text-primary">{item.question}</h5>
+                    <h4 className="text-primary">{item.question}</h4>
                     <div className="hidden lg:flex">
                       {openIndex === index ? <CloseIcon /> : <PlusIcon />}
                     </div>

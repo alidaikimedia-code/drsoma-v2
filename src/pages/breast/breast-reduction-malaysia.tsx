@@ -642,7 +642,7 @@ export default function BreastReductionMalaysia() {
                     }`}
                     onClick={() => toggleFaq(index)}
                   >
-                    <h5 className={`text-sm sm:text-base text-primary font-medium transition-colors flex-1`}>{faq.question}</h5>
+                    <h4 className={`text-sm sm:text-base text-primary font-medium transition-colors flex-1`}>{faq.question}</h4>
                     <div className="flex-shrink-0 w-6 h-6 min-w-[24px] flex items-center justify-center text-lg font-bold transition-all duration-300 text-[#FE7623]">
                       {openFaq === index ? "−" : "+"}
                     </div>

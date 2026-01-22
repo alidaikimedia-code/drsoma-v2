@@ -807,11 +807,11 @@ const MaleHub = () => {
                     className="w-full flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 text-left gap-4"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <span className={`font-semibold text-[14px] sm:text-base lg:text-lg transition-colors flex-1 ${
+                    <h4 className={`font-semibold text-[14px] sm:text-base lg:text-lg transition-colors flex-1 ${
                       openIndex === index ? "text-primary" : "text-header-black"
                     }`}>
                       {faq.question}
-                    </span>
+                    </h4>
                     <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 min-w-[32px] sm:min-w-[40px] rounded-full flex items-center justify-center text-lg sm:text-xl font-bold transition-all duration-300 ${
                       openIndex === index
                         ? "bg-primary text-white"

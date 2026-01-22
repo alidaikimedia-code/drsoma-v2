@@ -780,7 +780,7 @@ export default function FatTransferBreastAugmentation() {
                 {faqs.map((faq, index) => (
                   <div key={index} className={`border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === index ? 'border-[#FE7623] shadow-lg shadow-orange-100 bg-white' : 'border-zinc-200 bg-white hover:border-zinc-300 hover:shadow-md'}`}>
                     <button className={`w-full flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 text-left transition-colors gap-4 ${openFaq === index ? 'bg-gradient-to-r from-orange-50/50 to-white' : 'hover:bg-zinc-50/50'}`} onClick={() => toggleFaq(index)}>
-                      <h5 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h5>
+                      <h4 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h4>
                       <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light text-[#FE7623]">
                         {openFaq === index ? "−" : "+"}
                       </span>

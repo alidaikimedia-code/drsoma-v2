@@ -553,7 +553,7 @@ const FatGraftingButtockMalaysia = () => {
                   className="flex justify-between !flex-nowrap w-full cursor-pointer items-center gap-4"
                   onClick={() => toggleAccordion(index)}
                 >
-                  <h5 className="text-primary">{item.question}</h5>
+                  <h4 className="text-primary">{item.question}</h4>
                   <div className="shrink-0">
                     {openIndex === index ? (
                       <CloseIcon />

@@ -526,7 +526,7 @@ const Home = () => {
                       className="w-full py-6 flex items-start justify-between text-left hover:text-[#EA622F] transition-colors gap-4"
                       onClick={() => toggleFaq(index)}
                     >
-                      <span className="font-medium text-lg text-[#101010] flex-1">{faq.question}</span>
+                      <h4 className="font-medium text-lg text-[#101010] flex-1">{faq.question}</h4>
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EA622F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-1">
                         <path d="M5 12h14"></path>
                         <path d="M12 5v14"></path>

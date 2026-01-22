@@ -260,9 +260,9 @@ const TummyTuckSurgery = () => {
                     className="flex justify-between !flex-nowrap w-full cursor-pointer items-center"
                     onClick={() => toggleAccordion(index)}
                   >
-                    <h5 className={`transition-colors duration-300 pr-4 ${
+                    <h4 className={`transition-colors duration-300 pr-4 ${
                       openIndex === index ? 'text-[#FE7623]' : 'text-primary'
-                    }`}>{item.question}</h5>
+                    }`}>{item.question}</h4>
                     <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
                       {openIndex === index ? "−" : "+"}
                     </span>
