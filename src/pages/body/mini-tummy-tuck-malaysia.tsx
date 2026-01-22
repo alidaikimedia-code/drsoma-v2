@@ -410,7 +410,8 @@ export default function MiniTummyTuckMalaysia() {
                 <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Targeted. Precise. Faster Recovery.</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A mini tummy tuck is a refined surgical solution for individuals with mild looseness limited to the lower abdomen. It removes excess skin and tightens lower abdominal muscles—without repositioning the belly button.</p>
+                <p style={{fontSize: '14px'}}>A mini tummy tuck, also called mini abdominoplasty, is a refined surgical solution for individuals with mild looseness limited to the lower abdomen, usually below the navel. This condition commonly appears after pregnancy, modest weight changes, or early skin laxity, even in people who maintain a healthy lifestyle.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>Unlike a full tummy tuck, a mini tummy tuck focuses only on the lower abdominal area. It removes excess skin and, when necessary, tightens the lower abdominal muscles—without repositioning the belly button. The result is a smoother, firmer lower abdomen achieved with a shorter incision, reduced surgical extent, and faster recovery.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Mini%20Tummy%20Tuck%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
@@ -631,10 +632,10 @@ export default function MiniTummyTuckMalaysia() {
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
-                <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[13px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-2">
+                <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-3 md:gap-4">
                   <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>Mini Tummy Tuck</div>
-                  <div>Full Tummy Tuck</div>
+                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>Mini Tummy</span></div>
+                  <div>Full Tummy</div>
                 </div>
 
                 {/* Rows */}
@@ -646,7 +647,7 @@ export default function MiniTummyTuckMalaysia() {
                   { feat: "Scar Length", mini: "Shorter", full: "Longer" },
                   { feat: "Typical Downtime", mini: "1–2 Weeks", full: "3–4 Weeks" }
                 ].map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[13px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
+                  <div key={i} className="grid grid-cols-3 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-3 md:gap-4 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
                     <div className={`flex items-center gap-1 md:gap-2 ${row.miniIcon ? 'text-[#FE7623]' : row.miniX ? 'text-zinc-400' : 'text-[#FE7623]'}`}>
                       {row.miniIcon && <svg className="w-4 h-4 md:w-6 md:h-6 group-hover:scale-125 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
