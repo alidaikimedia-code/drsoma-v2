@@ -651,7 +651,7 @@ export default function FatTransferMalaysia() {
         </section>
 
         {/* Safety & Regulation Section */}
-        <section className="pt-5 pb-8 md:pt-7 md:pb-20 px-6 bg-gradient-to-b from-white to-zinc-50 border-t border-zinc-200 overflow-hidden">
+        <section className="pt-12 pb-8 md:pt-7 md:pb-20 px-6 bg-gradient-to-b from-white to-zinc-50 border-t border-zinc-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-row items-start gap-3 mb-7">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">

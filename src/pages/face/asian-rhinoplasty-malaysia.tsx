@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function RhinoplastyMalaysia() {
+export default function AsianRhinoplastyMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,75 +36,74 @@ export default function RhinoplastyMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is rhinoplasty?", answer: "Rhinoplasty is a surgical procedure that reshapes the nose to improve appearance, breathing, or both." },
-    { question: "Is rhinoplasty safe?", answer: "When performed by a qualified surgeon in a licensed medical facility, rhinoplasty is considered safe and well established." },
-    { question: "How long does recovery take after rhinoplasty?", answer: "Most patients return to daily activities within 1–2 weeks, with final results developing over up to a year." },
-    { question: "Will there be visible scars?", answer: "In closed rhinoplasty, scars are inside the nose. In open rhinoplasty, the external scar is small and usually fades well." },
-    { question: "Is rhinoplasty permanent?", answer: "Yes. Results are long lasting, although natural ageing can subtly affect nasal appearance over time." },
-    { question: "Can rhinoplasty fix breathing problems?", answer: "Yes. Functional rhinoplasty can correct structural issues like a deviated septum to improve airflow." }
+    { question: "What is Asian rhinoplasty?", answer: "Asian rhinoplasty is a nose surgery technique tailored to Asian nasal anatomy, focusing on enhancement while preserving ethnic features." },
+    { question: "How is Asian rhinoplasty different from regular rhinoplasty?", answer: "It often involves augmentation and structural support rather than reduction, with special consideration for thicker skin and cartilage strength." },
+    { question: "Is Asian rhinoplasty safe?", answer: "Yes, when performed by an experienced surgeon in a licensed medical facility, it is considered safe and well established." },
+    { question: "How long does recovery take?", answer: "Most patients return to daily activities within 1–2 weeks, with final results developing over several months." },
+    { question: "Will implants always be used?", answer: "Not always. Many cases use cartilage grafts, implants, or a combination depending on anatomy and goals." },
+    { question: "Will my nose look Westernised?", answer: "No. The goal is natural enhancement that fits your facial structure and ethnic identity." }
   ]
 
-  const suitableFor = [
-    "Are bothered by the shape or size of their nose",
-    "Have breathing difficulties related to nasal structure",
-    "Have completed facial growth (usually after late teens)",
-    "Are in good general health",
-    "Have realistic expectations"
+  const anatomicalDifferences = [
+    "Lower or flatter nasal bridge",
+    "Thicker nasal skin",
+    "Softer or weaker cartilage support",
+    "Wider nasal base",
+    "Less tip projection"
+  ]
+
+  const commonGoals = [
+    "Improved bridge height",
+    "Better tip definition and projection",
+    "Balanced nasal width",
+    "Enhanced side profile",
+    "Functional breathing improvement when needed"
   ]
 
   const techniques = [
-    { title: "Open Rhinoplasty", desc: "A small incision is made at the base of the nose, allowing full visibility of nasal structures. Often used for complex reshaping and revision cases." },
-    { title: "Closed Rhinoplasty", desc: "All incisions are placed inside the nostrils. There is no visible external scar, and recovery may be slightly faster for suitable cases." },
-    { title: "Preservation Rhinoplasty", desc: "A modern approach that maintains natural nasal structures while making subtle refinements. It aims for softer, more natural results." },
-    { title: "Revision Rhinoplasty", desc: "Performed to correct or improve the outcome of a previous nose surgery. These cases are more complex and require advanced expertise." }
-  ]
-
-  const procedureSteps = [
-    "Detailed preoperative facial analysis",
-    "Surgical reshaping of bone and cartilage",
-    "Structural support for long-term stability",
-    "Precise closure of incisions",
-    "Application of nasal splint for protection"
+    { title: "Structural Cartilage Grafting", desc: "Cartilage from the septum, ear, or rib is often used to build support and shape. This provides long-term stability and natural integration." },
+    { title: "Implant-Augmented Rhinoplasty", desc: "Medical-grade implants may be used selectively for bridge augmentation. Proper sizing, placement, and surgeon experience are critical to avoid complications." },
+    { title: "Tip Refinement Techniques", desc: "Cartilage shaping and support techniques are used to refine the nasal tip without pinching or stiffness." },
+    { title: "Open Asian Rhinoplasty", desc: "Provides full visibility for precise structural work. Often chosen for augmentation, cartilage grafting, and complex cases." }
   ]
 
   const benefits = [
+    "Enhanced nasal definition",
     "Improved facial balance",
-    "Enhanced nasal symmetry",
-    "Better breathing function (when structural issues are corrected)",
-    "Long-lasting results",
-    "Increased confidence"
+    "Preservation of ethnic identity",
+    "Long-lasting structural support",
+    "Natural, proportionate results"
   ]
 
   const limitations = [
-    "Swelling can take months to fully resolve",
-    "Perfect symmetry is not realistic",
-    "Revision surgery, while uncommon, may be needed",
-    "Skin thickness affects final definition"
+    "Thicker skin limits ultra-fine definition",
+    "Over-augmentation can look unnatural",
+    "Cartilage availability varies between patients",
+    "Revision surgery is more complex"
   ]
 
-  const recoveryTips = [
-    "Keep the head elevated",
-    "Avoid strenuous activity initially",
-    "Protect the nose from impact",
-    "Attend scheduled follow-up visits"
-  ]
-
-  const facialHarmony = [
-    "Forehead–nose–chin alignment",
-    "Lip and nasal tip angle",
-    "Width of the nasal base relative to the eyes",
-    "Ethnic and gender-specific features"
+  const comparisonData = [
+    { feature: "Primary Goal", asian: "Augmentation & refinement", conventional: "Reduction & reshaping" },
+    { feature: "Bridge Work", asian: "Often increased", conventional: "Often reduced" },
+    { feature: "Skin Consideration", asian: "Thicker skin", conventional: "Thinner skin" },
+    { feature: "Cartilage Support", asian: "Critical", conventional: "Important" },
+    { feature: "Ethnic Preservation", asian: "Core focus", conventional: "Variable" }
   ]
 
   return (
     <>
       <Head>
-        <title>Rhinoplasty Malaysia | Nose Reshaping Surgery – Dr. Soma</title>
-        <meta name="description" content="Rhinoplasty in Malaysia by Dr. Soma. Precision nose reshaping for facial harmony and improved breathing. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <title>Asian Rhinoplasty Malaysia | Ethnic Nose Surgery – Dr. Soma</title>
+        <meta name="description" content="Asian rhinoplasty in Malaysia by Dr. Soma. Ethnically sensitive nose surgery for natural facial harmony. Preserve your identity with expert augmentation. Book consultation today." />
       </Head>
 
       <style jsx global>{`
-        .rhinoplasty-page ::selection {
+        html, body {
+          overflow-x: hidden;
+          max-width: 100vw;
+        }
+
+        .asian-rhinoplasty-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -229,7 +228,8 @@ export default function RhinoplastyMalaysia() {
         }
       `}</style>
 
-      <main className="rhinoplasty-page bg-white text-zinc-900 overflow-x-hidden">
+      <div className="w-full max-w-full overflow-x-hidden">
+      <main className="asian-rhinoplasty-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -241,15 +241,15 @@ export default function RhinoplastyMalaysia() {
                 Board Certified Plastic Surgeon
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Rhinoplasty in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Precision Nose Reshaping for Facial Harmony and Function</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Asian Rhinoplasty in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Ethnically Sensitive Nose Surgery for Natural Facial Harmony</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Rhinoplasty, commonly known as a nose job, is a surgical procedure that reshapes the nose to improve facial balance, breathing function, or both. It is one of the most technically demanding procedures in plastic surgery because even small changes can significantly affect appearance and airflow.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, rhinoplasty is a regulated surgical procedure performed by registered medical practitioners in licensed facilities under the Ministry of Health Malaysia. The goal is not to create a &quot;perfect nose,&quot; but a nose that fits the face and functions well.</p>
+                <p style={{fontSize: '14px'}}>Asian rhinoplasty is a specialised form of nose surgery that focuses on enhancing the nose while preserving ethnic identity. Unlike traditional Western rhinoplasty, which often reduces nasal size, Asian rhinoplasty more commonly involves structural augmentation, refinement, and support to achieve balanced facial harmony without erasing natural features.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, Asian rhinoplasty is a regulated surgical procedure performed by registered medical practitioners in licensed facilities under the Ministry of Health Malaysia. When planned correctly, Asian rhinoplasty delivers subtle, proportionate results that look natural within Asian facial anatomy.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Rhinoplasty" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -282,7 +282,7 @@ export default function RhinoplastyMalaysia() {
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
                 src="/images/rhinoplasty_in_nose.png"
-                alt="Rhinoplasty Malaysia"
+                alt="Asian Rhinoplasty Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -295,7 +295,7 @@ export default function RhinoplastyMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Facial Harmony & Function</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Ethnic Preservation & Harmony</p>
                     </div>
                   </div>
                 </div>
@@ -304,55 +304,50 @@ export default function RhinoplastyMalaysia() {
           </div>
         </section>
 
-        {/* What Is Rhinoplasty Section */}
+        {/* What Is Asian Rhinoplasty Section */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Rhinoplasty?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Asian Rhinoplasty?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Rhinoplasty is a surgical procedure that modifies the bone, cartilage, skin, or internal nasal structures to change the shape, size, or function of the nose. It can be cosmetic, functional, or a combination of both.
+                  Asian rhinoplasty is a surgical procedure designed around the unique anatomical characteristics commonly seen in Asian noses. These may include a lower nasal bridge, thicker skin, weaker cartilage support, and a rounder nasal tip.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Major clinical institutions such as the Mayo Clinic describe rhinoplasty as a procedure that can improve nasal appearance while also correcting breathing problems caused by structural abnormalities like a deviated septum.
+                  Clinical institutions such as the Mayo Clinic emphasise that rhinoplasty must be tailored to individual anatomy rather than applied as a standard template. In Asian rhinoplasty, this principle is especially critical.
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>Note:</strong> Rhinoplasty is not a one-size-fits-all surgery. Each nose has unique anatomy, and the surgical plan must be tailored to facial proportions, skin thickness, and functional needs.</p>
+                  <p className="text-sm text-zinc-700"><strong>Key Principle:</strong> The goal is enhancement, not Westernisation. A successful outcome improves definition while maintaining ethnic balance and facial proportions.</p>
                 </div>
               </div>
 
-              {/* Cosmetic vs Functional */}
+              {/* Key Anatomical Differences */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Cosmetic vs Functional Rhinoplasty</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Key Anatomical Differences Addressed</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Understanding the difference helps set realistic expectations.
+                  Asian rhinoplasty planning considers several structural factors. Ignoring these differences can lead to unstable results, implant visibility, or an unnatural appearance.
                 </p>
-                <div className="space-y-4">
-                  <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100">
-                    <h4 className="text-sm font-bold text-zinc-900 mb-2">Cosmetic Rhinoplasty</h4>
-                    <p className="text-sm text-zinc-500">Focuses on appearance. This may include refining the nasal tip, reducing a hump, narrowing the bridge, or improving symmetry.</p>
-                  </div>
-                  <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100">
-                    <h4 className="text-sm font-bold text-zinc-900 mb-2">Functional Rhinoplasty</h4>
-                    <p className="text-sm text-zinc-500">Addresses breathing issues. It may involve correcting a deviated septum, strengthening weak nasal valves, or improving airflow.</p>
-                  </div>
-                  <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                    <p className="text-sm text-zinc-700"><strong>Combined Approach:</strong> Many patients undergo both cosmetic and functional rhinoplasty, achieving aesthetic refinement and better breathing in one surgery.</p>
-                  </div>
+                <div className="space-y-3">
+                  {anatomicalDifferences.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Who Rhinoplasty Is For */}
+        {/* Common Goals Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
             {/* Image Section */}
-            <div data-animate="candidate-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('candidate-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div data-animate="goals-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('goals-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <BaseImage
                 src="/images/rhinoplasty_in_nose.png"
-                alt="Rhinoplasty Consultation"
+                alt="Asian Rhinoplasty Goals"
                 fill
                 className="object-cover"
               />
@@ -360,14 +355,14 @@ export default function RhinoplastyMalaysia() {
             </div>
 
             {/* Content Section */}
-            <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Rhinoplasty Is For</h2>
+            <div data-animate="goals-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('goals-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Common Goals of Asian Rhinoplasty</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Rhinoplasty is suitable for patients who meet the following criteria:
+                Patients typically seek the following improvements. The emphasis is always on proportion and stability, not exaggeration.
               </p>
 
               <div className="grid grid-cols-1 gap-3 mb-6">
-                {suitableFor.map((item, i) => (
+                {commonGoals.map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300 p-3 bg-white rounded-lg border border-zinc-200 hover:border-[#FE7623]">
                     <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     <span className="flex-1">{item}</span>
@@ -375,19 +370,19 @@ export default function RhinoplastyMalaysia() {
                 ))}
               </div>
 
-              <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-                <p className="text-sm text-red-700"><strong>Not recommended</strong> for patients seeking drastic changes that do not align with facial anatomy or those with untreated medical conditions that increase surgical risk.</p>
+              <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
+                <p className="text-sm text-zinc-700"><strong>Note:</strong> This procedure is sought by patients who want improved nasal definition, better bridge height, refined tip projection, or functional improvement — without a nose that looks artificial or out of place.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Types of Rhinoplasty Techniques */}
+        {/* Techniques Section */}
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="techniques-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('techniques-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Rhinoplasty Techniques</h2>
-              <p className="text-zinc-500 text-sm">Technique selection depends on anatomy, goals, and surgical judgment.</p>
+            <div data-animate="techniques-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('techniques-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Techniques Used in Asian Rhinoplasty</h2>
+              <p className="text-zinc-500 text-sm">According to the American Society of Plastic Surgeons, structural support is the foundation of durable rhinoplasty outcomes, especially in augmentation-based procedures.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
@@ -404,45 +399,53 @@ export default function RhinoplastyMalaysia() {
           </div>
         </section>
 
-        {/* How Rhinoplasty Is Performed */}
+        {/* Comparison Table Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,98,47,0.15),transparent_40%)]"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <div data-animate="procedure-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('procedure-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">How Rhinoplasty Surgery Is Performed</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Rhinoplasty is typically performed under general anaesthesia in a hospital setting.</p>
+            <div data-animate="comparison-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">Asian Rhinoplasty vs Conventional Rhinoplasty</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Asian rhinoplasty demands a different mindset and technique.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              {procedureSteps.map((step, i) => (
-                <div key={i} data-animate={`proc-${i}`} className={`p-6 rounded-2xl bg-zinc-800/50 border border-zinc-700/50 hover:bg-zinc-800 hover:border-[#FE7623]/50 transition-all duration-300 group ${isVisible(`proc-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="text-[#FE7623] font-bold text-lg mb-3">{i + 1}</div>
-                  <p className="text-zinc-300 text-sm">{step}</p>
-                </div>
-              ))}
+            <div className="overflow-x-auto px-4 md:px-8">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-zinc-700">
+                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">Feature</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Asian Rhinoplasty</th>
+                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">Conventional Rhinoplasty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="border-b border-zinc-800 hover:bg-zinc-800/50 transition-colors duration-300">
+                      <td className="py-4 px-4 text-zinc-300 font-medium">{row.feature}</td>
+                      <td className="py-4 px-4 text-white">{row.asian}</td>
+                      <td className="py-4 px-4 text-zinc-400">{row.conventional}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-
-            <p className="text-sm text-zinc-400 mt-8 text-center max-w-2xl mx-auto">
-              According to guidance from the American Society of Plastic Surgeons, long-term success in rhinoplasty depends on structural support, not just surface appearance.
-            </p>
           </div>
         </section>
 
         {/* Results Timeline */}
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="results-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('results-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">What Results Can You Expect?</h2>
-              <p className="text-zinc-500 text-sm">Rhinoplasty results develop gradually. Patience is essential.</p>
+            <div data-animate="results-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('results-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Results and Healing Timeline</h2>
+              <p className="text-zinc-500 text-sm">Healing follows a gradual process. Thicker skin may take longer to settle, which is expected and normal.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
               {[
-                { time: "Week 1–2", desc: "Swelling, bruising, nasal splint in place" },
-                { time: "Week 3–4", desc: "Major swelling reduces, nose shape becomes clearer" },
-                { time: "Month 3–6", desc: "Refinement continues" },
-                { time: "12 Months", desc: "Final shape stabilises" }
+                { time: "Week 1", desc: "Swelling, nasal splint in place" },
+                { time: "Week 2", desc: "Splint removal, early shape visible" },
+                { time: "Month 1–3", desc: "Progressive refinement" },
+                { time: "Month 6–12", desc: "Final contour and definition" }
               ].map((item, i) => (
                 <div key={i} data-animate={`timeline-${i}`} className={`relative bg-zinc-50 pt-14 pb-6 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`timeline-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-4 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
@@ -452,38 +455,17 @@ export default function RhinoplastyMalaysia() {
                 </div>
               ))}
             </div>
-
-            <p className="text-sm text-zinc-500 mt-8 text-center max-w-2xl mx-auto">
-              Thicker skin may take longer to reveal fine definition, while thinner skin shows changes earlier.
-            </p>
           </div>
         </section>
 
-        {/* Facial Harmony Section */}
+        {/* Benefits Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div data-animate="harmony-content" className={`transition-all duration-700 ${isVisible('harmony-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Rhinoplasty and Facial Harmony</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  A successful rhinoplasty does not draw attention to the nose. Instead, it improves overall facial balance. The aim is harmony, not exaggeration.
-                </p>
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Surgeons Evaluate:</h4>
-                <div className="grid grid-cols-1 gap-3">
-                  {facialHarmony.map((item, i) => (
-                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
-                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span className="flex-1">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Benefits */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="benefits-content" className={`transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Benefits of Rhinoplasty</h3>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Asian Rhinoplasty</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  For many patients, the emotional impact of feeling comfortable with their appearance is just as important as the physical change.
+                  When performed correctly, the nose does not look &quot;done&quot; — it looks like it always belonged.
                 </p>
                 <div className="space-y-3">
                   {benefits.map((item, i) => (
@@ -494,46 +476,21 @@ export default function RhinoplastyMalaysia() {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Limitations Section */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
-          <div className="max-w-4xl mx-auto">
-            <div data-animate="limits-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('limits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Limitations and Honest Trade-Offs</h2>
-              <p className="text-zinc-500 text-sm">Rhinoplasty has limitations that should be understood clearly. Clear communication and realistic expectations lead to better satisfaction.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {limitations.map((item, i) => (
-                <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-zinc-50 rounded-xl border border-zinc-200">
-                  <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                  <span className="flex-1">{item}</span>
+              {/* Limitations */}
+              <div data-animate="limits-content" className={`transition-all duration-700 ${isVisible('limits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Limitations and Honest Considerations</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  Asian rhinoplasty requires careful planning. Clear communication and conservative planning reduce these risks.
+                </p>
+                <div className="space-y-3">
+                  {limitations.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-white rounded-xl border border-zinc-200">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                      <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Recovery Section */}
-        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div data-animate="recovery-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Aftercare</h2>
-              <p className="text-zinc-500 text-sm">Discomfort is usually mild to moderate and well managed with medication. Breathing may feel blocked temporarily due to swelling.</p>
-            </div>
-
-            <div className="max-w-2xl mx-auto">
-              <h4 className="text-sm font-bold text-zinc-900 mb-6 text-center">After rhinoplasty, patients are typically advised to:</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {recoveryTips.map((item, i) => (
-                  <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-white rounded-xl border border-zinc-200">
-                    <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    <span className="flex-1">{item}</span>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -554,16 +511,16 @@ export default function RhinoplastyMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Rhinoplasty cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Asian rhinoplasty cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Complexity of reshaping", "Open vs closed technique", "Functional corrections needed", "Operating time", "Facility and anaesthesia fees"].map((item, i) => (
+                  {["Complexity of augmentation", "Cartilage grafting requirements", "Implant usage if needed", "Operating time", "Facility and anaesthesia fees"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Rhinoplasty" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -577,7 +534,7 @@ export default function RhinoplastyMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about rhinoplasty</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about Asian rhinoplasty</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -618,21 +575,21 @@ export default function RhinoplastyMalaysia() {
         {/* Safety & Regulation Section */}
         <section className="pt-12 pb-8 md:pt-7 md:pb-20 px-6 bg-white border-t border-zinc-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row items-start gap-3 mb-7">
+            <div className="flex flex-row items-start gap-3 mb-7 px-4 md:px-8">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety and Regulation in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">Rhinoplasty in Malaysia is governed by the Ministry of Health Malaysia.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety, Regulation, and Standards in Malaysia</h3>
+                <p className="text-zinc-500 text-sm mt-1">Asian rhinoplasty is performed under surgical standards regulated by the Ministry of Health Malaysia.</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-4 md:px-8">
               {[
-                { name: "Surgical Facilities", desc: "All procedures performed in licensed and regulated facilities", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Anaesthesia Standards", desc: "Strict anaesthesia protocols and monitoring", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Practitioner Qualifications", desc: "Performed by registered and credentialed surgeons", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
-                { name: "Postoperative Care", desc: "Structured postoperative protocols and follow-up", color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
+                { name: "Licensed Facilities", desc: "All procedures performed in licensed and regulated surgical facilities", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+                { name: "Anaesthesia Safety", desc: "Strict anaesthesia protocols and patient monitoring standards", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: "Infection Control", desc: "Comprehensive infection control and sterility protocols", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
+                { name: "Postoperative Care", desc: "Structured postoperative monitoring aligned with WHO frameworks", color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
               ].map((source, i) => (
                 <div key={i} className="block px-6 py-6 rounded-2xl border border-zinc-200 bg-zinc-50 card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center gap-3 mb-3">
@@ -650,7 +607,7 @@ export default function RhinoplastyMalaysia() {
 
         {/* Final CTA */}
         <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden w-full">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-zinc-50 to-zinc-50 -z-10"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-50/40 rounded-full blur-3xl animate-float"></div>
 
@@ -661,13 +618,13 @@ export default function RhinoplastyMalaysia() {
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Perspective</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Rhinoplasty in Malaysia is a precision procedure that balances aesthetic refinement with functional improvement.
+              Asian rhinoplasty in Malaysia offers patients a way to enhance their nasal appearance while preserving their ethnic identity.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed by a qualified surgeon with proper planning and realistic expectations, it delivers natural results that enhance facial harmony without drawing attention to the nose itself. The goal is not perfection — it is proportion, balance, and a nose that fits the face.
+              When performed by a skilled surgeon with proper planning and realistic expectations, the results are natural, stable, and balanced. The goal is not to change who you are — it is to bring out the best version of your natural features.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Rhinoplasty" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -679,13 +636,14 @@ export default function RhinoplastyMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["rhinoplasty Malaysia", "nose job", "nose reshaping", "facial harmony", "nasal surgery"].map((tag, i) => (
+              {["Asian rhinoplasty Malaysia", "ethnic nose surgery", "nose augmentation", "facial harmony", "nasal bridge enhancement"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
           </div>
         </section>
       </main>
+      </div>
     </>
   )
 }
