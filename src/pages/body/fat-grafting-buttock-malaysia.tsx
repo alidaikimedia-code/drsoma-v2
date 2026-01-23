@@ -335,10 +335,10 @@ export default function FatGraftingButtockMalaysia() {
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
                   Fat grafting to the buttocks is a surgical technique in which fat is harvested, purified, and carefully injected into specific layers of the buttocks to enhance shape and volume.
                 </p>
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   {processSteps.map((step, i) => (
-                    <div key={i} className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-center hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 group">
-                      <div className="w-10 h-10 mx-auto bg-white rounded-lg flex items-center justify-center text-[#FE7623] mb-3 group-hover:bg-[#FE7623] group-hover:text-white transition-all duration-300">
+                    <div key={i} className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-center">
+                      <div className="w-10 h-10 mx-auto bg-white rounded-lg flex items-center justify-center text-[#FE7623] mb-3">
                         <span className="text-lg font-bold">{i + 1}</span>
                       </div>
                       <h4 className="text-sm font-bold text-zinc-900 mb-1">{step.title}</h4>
@@ -437,8 +437,8 @@ export default function FatGraftingButtockMalaysia() {
               <div className="space-y-4">
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
                   <div className="flex flex-row items-start gap-3">
-                    <div className="w-12 h-12 rounded-lg bg-[#FE7623] flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-lg">60-80%</span>
+                    <div className="flex items-center justify-center flex-shrink-0">
+                      <span className="text-[#FE7623] font-bold text-lg">60-80%</span>
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-zinc-900 mb-1">Fat Survival Rate</h4>
