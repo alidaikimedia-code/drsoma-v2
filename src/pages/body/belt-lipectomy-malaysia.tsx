@@ -344,11 +344,11 @@ export default function BeltLipectomyMalaysia() {
                   A common misconception is that a tummy tuck can replace a belt lipectomy. Anatomically, they address different problems.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="p-5 rounded-xl border border-zinc-200 bg-white hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
+                  <div className="p-3 rounded-lg border border-zinc-200 bg-white hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
                     <h4 className="text-sm font-bold text-zinc-900 mb-2">Tummy Tuck</h4>
                     <p className="text-xs text-zinc-500">Treats only the <strong>front</strong> of the abdomen</p>
                   </div>
-                  <div className="p-5 rounded-xl border-2 border-[#FE7623] bg-orange-50/30 hover:shadow-lg transition-all duration-300 group animate-border-glow">
+                  <div className="p-3 rounded-lg border border-zinc-200 bg-white hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
                     <h4 className="text-sm font-bold text-[#FE7623] mb-2">Belt Lipectomy</h4>
                     <p className="text-xs text-zinc-700">Treats the <strong>entire circumference</strong> of the lower torso</p>
                   </div>
@@ -510,28 +510,22 @@ export default function BeltLipectomyMalaysia() {
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-2">
                   <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>Belt Lipectomy</div>
+                  <div className="text-[#FE7623]">Belt Lipectomy</div>
                   <div>Lower Body Lift</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Primary Focus", lipo: "Circumferential skin excision", lipoIcon: true, tummy: "Extensive thigh & buttock reshaping" },
-                  { feat: "Waist Contouring", lipo: "Primary focus", lipoIcon: true, tummy: "Included" },
-                  { feat: "Thigh Reshaping", lipo: "Indirect", tummy: "More extensive", tummyIcon: true },
-                  { feat: "Buttock Lift", lipo: "Through repositioning", lipoIcon: true, tummy: "More extensive reshaping", tummyIcon: true },
+                  { feat: "Primary Focus", lipo: "Circumferential skin excision", tummy: "Extensive thigh & buttock reshaping" },
+                  { feat: "Waist Contouring", lipo: "Primary focus", tummy: "Included" },
+                  { feat: "Thigh Reshaping", lipo: "Indirect", tummy: "More extensive" },
+                  { feat: "Buttock Lift", lipo: "Through repositioning", tummy: "More extensive reshaping" },
                   { feat: "Best For", lipo: "Waist-focused laxity", tummy: "Full lower body laxity" }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
-                    <div className={`flex items-center gap-1 md:gap-2 ${row.lipoIcon ? 'text-[#FE7623]' : 'text-zinc-600'}`}>
-                      {row.lipoIcon && <svg className="hidden md:block w-5 h-5 group-hover:scale-125 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                      <span className="group-hover:font-semibold transition-all duration-300">{row.lipo}</span>
-                    </div>
-                    <div className="text-zinc-600 flex items-center gap-1 md:gap-2">
-                      {row.tummyIcon && <svg className="hidden md:block w-5 h-5 text-green-500 group-hover:scale-125 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                      <span className="group-hover:text-zinc-900 transition-colors duration-300">{row.tummy}</span>
-                    </div>
+                    <div className="text-zinc-600 group-hover:text-[#FE7623] group-hover:font-semibold transition-all duration-300">{row.lipo}</div>
+                    <div className="text-zinc-600 group-hover:text-zinc-900 transition-colors duration-300">{row.tummy}</div>
                   </div>
                 ))}
               </div>
@@ -691,9 +685,9 @@ export default function BeltLipectomyMalaysia() {
         </section>
 
         {/* Safety & Regulation Section */}
-        <section className="py-8 md:py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200 overflow-hidden">
+        <section className="pt-5 pb-8 md:pt-7 md:pb-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row items-start gap-3 mb-10">
+            <div className="flex flex-row items-start gap-3 mb-7">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
@@ -709,7 +703,7 @@ export default function BeltLipectomyMalaysia() {
                 { name: "Accredited Facilities", desc: "All procedures performed in licensed hospital settings with full monitoring and sterile environments.", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${source.color} flex items-center justify-center`}>
                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={source.icon} /></svg>
@@ -741,7 +735,7 @@ export default function BeltLipectomyMalaysia() {
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
               A belt lipectomy is not about aesthetics alone. It is a reconstructive procedure that restores comfort, movement, and proportion after massive weight loss.
             </p>
-            <p className="text-sm text-zinc-600 mb-10 max-w-3xl mx-auto px-4">
+            <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
               When performed under regulated medical standards in Malaysia, it offers durable, life-changing results for the right candidate. A successful outcome depends on proper patient selection, experienced surgical hands, and disciplined postoperative care.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
@@ -756,7 +750,7 @@ export default function BeltLipectomyMalaysia() {
             </div>
 
             {/* SEO Tags */}
-            <div className="mt-16 flex flex-wrap justify-center gap-3 px-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
               {["belt lipectomy", "circumferential body lift", "360° contouring", "excess skin removal", "post-bariatric surgery"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
