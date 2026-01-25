@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function EyelidSurgeryMalaysia() {
+export default function AsianEyelidSurgeryMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,58 +35,70 @@ export default function EyelidSurgeryMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is eyelid surgery?", answer: "Eyelid surgery is a procedure that removes or repositions excess skin and fat from the eyelids to improve appearance and function." },
-    { question: "Is blepharoplasty safe?", answer: "Yes, when performed by a certified plastic surgeon in a regulated medical facility." },
-    { question: "Will eyelid surgery change my eye shape?", answer: "The goal is to restore natural contours, not alter ethnic or personal eye shape." },
-    { question: "Is eyelid surgery painful?", answer: "Discomfort is usually mild and well controlled with medication." },
-    { question: "How long do results last?", answer: "Results are long-lasting, often for many years, especially with healthy aging." },
-    { question: "Will there be visible scars?", answer: "Scars are placed in natural creases and usually fade significantly over time." },
-    { question: "When can I return to work?", answer: "Most patients return to work within 1-2 weeks after the procedure." }
+    { question: "What is Asian eyelid surgery?", answer: "It is a procedure that creates a natural-looking double eyelid while preserving Asian facial features." },
+    { question: "Will my eyes look Westernised?", answer: "No. Properly performed surgery enhances definition without altering ethnic identity." },
+    { question: "Is double eyelid surgery permanent?", answer: "Incisional techniques offer permanent results; suture techniques may fade over time." },
+    { question: "Is the procedure painful?", answer: "Discomfort is mild and usually well controlled." },
+    { question: "How long before I see final results?", answer: "Most results settle within 1–2 months." },
+    { question: "Will there be visible scars?", answer: "Scars are minimal and typically hidden within the new crease." },
+    { question: "Can both eyes be done differently?", answer: "Yes, adjustments are often made to improve symmetry." },
+    { question: "Is Asian eyelid surgery safe in Malaysia?", answer: "Yes, when performed by a certified surgeon in a licensed medical facility." }
   ]
 
-  const surgeryTypes = [
-    { title: "Upper Eyelid Surgery", desc: "Focused on removing excess skin and fat that cause drooping or heaviness. In some patients, this improves peripheral vision in addition to appearance." },
-    { title: "Lower Eyelid Surgery", desc: "Addresses under-eye bags, puffiness, and loose skin. Fat may be removed, repositioned, or combined with tightening techniques to avoid a hollowed look." },
-    { title: "Combined Upper and Lower Blepharoplasty", desc: "Performed when both eyelids show aging changes. This provides balanced rejuvenation in a single surgical plan." },
-    { title: "Functional Blepharoplasty", desc: "Indicated when eyelid droop interferes with vision. In selected cases, this may have medical justification rather than being purely cosmetic." }
+  const keyDifferences = [
+    "Preserves epicanthal folds unless modification is specifically indicated",
+    "Respects thicker eyelid skin and unique fat distribution",
+    "Focuses on crease height, depth, and continuity rather than eye size"
+  ]
+
+  const anatomyFactors = [
+    "Lower or absent supratarsal crease",
+    "Thicker preseptal fat pads",
+    "Different levator muscle attachments",
+    "Presence of epicanthal folds"
+  ]
+
+  const techniques = [
+    { title: "Incisional Technique", desc: "A precise incision is made to create a permanent crease. Suitable for thicker eyelids or patients with excess skin and fat." },
+    { title: "Non-Incisional (Suture) Technique", desc: "Uses internal sutures without external incisions. Best for thin eyelids with minimal excess skin." },
+    { title: "Partial-Incision Technique", desc: "Combines elements of both approaches, offering balance between durability and minimal scarring." }
   ]
 
   const procedureSteps = [
-    "Precise preoperative marking with the patient seated",
-    "Incisions placed along natural eyelid creases or inside the lower lid",
-    "Conservative removal or repositioning of fat",
-    "Skin tightening without excessive tension",
-    "Fine suturing to minimise scarring"
+    "Detailed preoperative crease simulation with the patient awake",
+    "Precise crease height selection to match facial proportions",
+    "Conservative fat handling to avoid hollowing",
+    "Fine closure to ensure smooth crease formation"
   ]
 
   const benefits = [
-    "A more rested, alert appearance",
-    "Reduction of eyelid heaviness or hooding",
-    "Smoother under-eye contours",
-    "Improved facial balance and symmetry",
-    "Long-lasting results with natural expression"
+    "Defined yet natural eyelid crease",
+    "Brighter, more alert eye appearance",
+    "Improved symmetry between eyes",
+    "Long-lasting results",
+    "No loss of ethnic identity"
   ]
 
   const candidateCriteria = [
-    "Have drooping eyelids or under-eye bags affecting appearance or comfort",
-    "Are in good overall health",
-    "Do not have uncontrolled eye conditions (such as severe dry eye or glaucoma)",
-    "Understand scarring, healing, and realistic outcomes"
+    "Desire a natural-looking double eyelid",
+    "Have stable eye health",
+    "Are medically fit for minor surgery",
+    "Understand that subtlety is the goal"
   ]
 
   const comparisonData = [
-    { aspect: "Skin removal", surgery: "Yes", nonSurgical: "No" },
-    { aspect: "Fat repositioning", surgery: "Yes", nonSurgical: "Limited" },
-    { aspect: "Longevity", surgery: "Long-term", nonSurgical: "Temporary" },
-    { aspect: "Recovery", surgery: "Days to weeks", nonSurgical: "Minimal" },
-    { aspect: "Best for", surgery: "Moderate–severe aging", nonSurgical: "Early or mild changes" }
+    { aspect: "Primary goal", asian: "Crease creation", standard: "Skin/fat removal" },
+    { aspect: "Ethnic considerations", asian: "Central", standard: "Minimal" },
+    { aspect: "Crease design", asian: "Customised", standard: "Pre-existing" },
+    { aspect: "Risk of overcorrection", asian: "Higher if inexperienced", standard: "Lower" },
+    { aspect: "Aesthetic focus", asian: "Natural harmony", standard: "Rejuvenation" }
   ]
 
   return (
     <>
       <Head>
-        <title>Eyelid Surgery Malaysia | Blepharoplasty – Dr. Soma</title>
-        <meta name="description" content="Eyelid surgery (blepharoplasty) in Malaysia by Dr. Soma. Brighter, refreshed, and youthful eyes. Expert eye rejuvenation in licensed facility. Book consultation today." />
+        <title>Asian Eyelid Surgery Malaysia | Double Eyelid Surgery – Dr. Soma</title>
+        <meta name="description" content="Asian eyelid surgery (double eyelid surgery) in Malaysia by Dr. Soma. Natural crease creation respecting Asian facial anatomy. Expert blepharoplasty. Book consultation today." />
       </Head>
 
       <style jsx global>{`
@@ -95,7 +107,7 @@ export default function EyelidSurgeryMalaysia() {
           max-width: 100vw;
         }
 
-        .eyelid-surgery-page ::selection {
+        .asian-eyelid-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -221,7 +233,7 @@ export default function EyelidSurgeryMalaysia() {
       `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
-      <main className="eyelid-surgery-page bg-white text-zinc-900 w-full max-w-full">
+      <main className="asian-eyelid-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -233,15 +245,15 @@ export default function EyelidSurgeryMalaysia() {
                 Board Certified Plastic Surgeon
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Eyelid Surgery in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Blepharoplasty for Brighter, Refreshed, and Youthful Eyes</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Asian Eyelid Surgery in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Natural Double Eyelid Surgery Respecting Asian Facial Anatomy</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Eyes age faster than almost any other facial feature. Skin here is thin, constantly moving, and unforgiving to gravity, sun exposure, and genetics. Droopy upper eyelids, puffy lower lids, and under-eye bags can make the face look tired, angry, or older than it actually is.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>Eyelid surgery, medically known as blepharoplasty, is designed to correct these changes with precision rather than exaggeration. When done correctly, it does not change who you are; it restores clarity, openness, and balance to the eyes while respecting natural anatomy and ethnicity.</p>
+                <p style={{fontSize: '14px'}}>Asian eyelid anatomy is diverse, nuanced, and deeply tied to ethnic identity. The goal of Asian eyelid surgery is not Westernisation, enlargement, or exaggeration — it is definition with restraint.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>For individuals with a single eyelid or low, indistinct crease, double eyelid surgery (Asian blepharoplasty) creates a natural-looking fold that enhances eye openness while preserving ethnic harmony and facial balance.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Eyelid%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Eyelid%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -274,7 +286,7 @@ export default function EyelidSurgeryMalaysia() {
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
                 src="/images/eyelid_reduction.png"
-                alt="Eyelid Surgery Malaysia"
+                alt="Asian Eyelid Surgery Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -287,7 +299,7 @@ export default function EyelidSurgeryMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Eye Rejuvenation</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Ethnic-Sensitive Crease Creation</p>
                     </div>
                   </div>
                 </div>
@@ -296,31 +308,20 @@ export default function EyelidSurgeryMalaysia() {
           </div>
         </section>
 
-        {/* What Is Eyelid Surgery Section */}
+        {/* What Is Asian Eyelid Surgery Section */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Eyelid Surgery (Blepharoplasty)?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Asian Eyelid Surgery?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Blepharoplasty is a surgical procedure that removes or repositions excess skin, fat, and sometimes muscle from the upper eyelids, lower eyelids, or both. The goal is to improve eyelid contour, eye openness, and facial harmony while preserving normal blinking and eye function.
+                  Asian eyelid surgery, commonly referred to as double eyelid surgery, is a procedure designed to create or enhance a supratarsal crease in patients who naturally lack a visible eyelid fold or have an unstable crease.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  It is important to understand that eyelid surgery is not about making eyes bigger or different, but about correcting structural changes caused by aging, genetics, or weight fluctuation.
-                </p>
-                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>Clinical Note:</strong> International clinical bodies such as the Mayo Clinic and the American Society of Plastic Surgeons describe blepharoplasty as both a cosmetic and functional procedure, particularly when excess upper-lid skin interferes with vision.</p>
-                </div>
-              </div>
-
-              {/* Benefits Preview */}
-              <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Benefits of Eyelid Surgery</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Eyelid surgery offers both aesthetic and functional benefits. When performed conservatively, results age gracefully rather than appearing &quot;done.&quot;
+                  Unlike conventional blepharoplasty, this procedure has unique considerations specific to Asian anatomy.
                 </p>
                 <div className="space-y-3">
-                  {benefits.map((item, i) => (
+                  {keyDifferences.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -328,43 +329,62 @@ export default function EyelidSurgeryMalaysia() {
                   ))}
                 </div>
               </div>
+
+              {/* Anatomy Factors */}
+              <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Asian Eyelid Anatomy: Why Technique Matters</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  Asian eyelids often differ from Caucasian eyelids in several key ways. Because of this, techniques used in standard blepharoplasty may not translate well.
+                </p>
+                <div className="space-y-3">
+                  {anatomyFactors.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-orange-50 rounded-lg border border-orange-100">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100 mt-6">
+                  <p className="text-sm text-zinc-700"><strong>Important:</strong> The surgical plan must be tailored to eyelid thickness, eye shape, brow position, and facial proportions.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Types of Eyelid Surgery */}
+        {/* Techniques Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="types-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('types-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Eyelid Surgery</h2>
-              <p className="text-zinc-500 text-sm">Each type addresses specific concerns and can be tailored to individual anatomy and goals.</p>
+            <div data-animate="techniques-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('techniques-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Techniques Used in Asian Double Eyelid Surgery</h2>
+              <p className="text-zinc-500 text-sm">The choice of technique depends on anatomy, lifestyle, and long-term expectations.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
-              {surgeryTypes.map((type, i) => (
-                <div key={i} data-animate={`type-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`type-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8">
+              {techniques.map((tech, i) => (
+                <div key={i} data-animate={`tech-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`tech-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {i + 1}
                   </div>
-                  <h3 className="text-base font-bold text-zinc-900 mb-3 group-hover:text-[#FE7623] transition-colors duration-300">{type.title}</h3>
-                  <p className="text-sm text-zinc-500">{type.desc}</p>
+                  <h3 className="text-base font-bold text-zinc-900 mb-3 group-hover:text-[#FE7623] transition-colors duration-300">{tech.title}</h3>
+                  <p className="text-sm text-zinc-500">{tech.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* How Surgery Is Performed */}
+        {/* How Procedure Is Performed */}
         <section className="py-8 md:py-24 px-6 bg-zinc-900 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(234,98,47,0.15),transparent_40%)]"></div>
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="procedure-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('procedure-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">How Eyelid Surgery Is Performed</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Eyelid surgery is usually performed as a day-care procedure under local anaesthesia with sedation or general anaesthesia, depending on the extent of surgery and patient comfort.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">How the Procedure Is Performed</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Asian eyelid surgery is typically performed as a day procedure under local anaesthesia with or without sedation. Attention to millimetres — not centimetres — is what defines excellence in this surgery.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 md:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-8">
               {procedureSteps.map((step, i) => (
                 <div key={i} data-animate={`proc-${i}`} className={`p-6 rounded-2xl bg-zinc-800/50 border border-zinc-700/50 hover:bg-zinc-800 hover:border-[#FE7623]/50 transition-all duration-300 group ${isVisible(`proc-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="text-[#FE7623] font-bold text-lg mb-3">{i + 1}</div>
@@ -372,21 +392,17 @@ export default function EyelidSurgeryMalaysia() {
                 </div>
               ))}
             </div>
-
-            <p className="text-sm text-zinc-400 mt-8 text-center max-w-2xl mx-auto px-4 md:px-8">
-              Incisions are designed to heal inconspicuously and usually become difficult to detect once fully healed.
-            </p>
           </div>
         </section>
 
-        {/* Who Is a Good Candidate */}
+        {/* Benefits Section */}
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
             {/* Image Section */}
-            <div data-animate="candidate-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('candidate-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('benefits-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <BaseImage
                 src="/images/eyelid_reduction.png"
-                alt="Eyelid Surgery Candidate"
+                alt="Asian Eyelid Surgery Benefits"
                 fill
                 className="object-cover"
               />
@@ -394,14 +410,14 @@ export default function EyelidSurgeryMalaysia() {
             </div>
 
             {/* Content Section */}
-            <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate?</h2>
+            <div data-animate="benefits-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Asian Eyelid Surgery</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                A detailed consultation is essential to evaluate eyelid anatomy, eye health, and facial proportions before surgery. Ideal candidates for blepharoplasty generally:
+                The best results are those others notice without being able to identify why.
               </p>
 
               <div className="grid grid-cols-1 gap-3 mb-6">
-                {candidateCriteria.map((item, i) => (
+                {benefits.map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300 p-3 bg-zinc-50 rounded-lg border border-zinc-200 hover:border-[#FE7623]">
                     <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     <span className="flex-1">{item}</span>
@@ -412,64 +428,82 @@ export default function EyelidSurgeryMalaysia() {
           </div>
         </section>
 
-        {/* Comparison Table Section */}
+        {/* Who Is Ideal Candidate */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
+              <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is an Ideal Candidate?</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  Suitable candidates generally meet the following criteria:
+                </p>
+                <div className="space-y-3">
+                  {candidateCriteria.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="p-4 bg-red-50 rounded-xl border border-red-100 mt-6">
+                  <p className="text-sm text-red-700"><strong>Note:</strong> Patients seeking dramatic changes or unrealistic eye enlargement may not be appropriate candidates.</p>
+                </div>
+              </div>
+
+              {/* Recovery Timeline */}
+              <div data-animate="recovery-content" className={`transition-all duration-700 ${isVisible('recovery-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Recovery and Healing Timeline</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  Recovery is generally straightforward:
+                </p>
+                <div className="space-y-4">
+                  {[
+                    { time: "Days 1–3", desc: "Swelling and mild bruising" },
+                    { time: "Week 1", desc: "Stitch removal (if incisional)" },
+                    { time: "Week 2", desc: "Most swelling subsides" },
+                    { time: "Weeks 4–8", desc: "Crease softens and settles naturally" }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-zinc-200">
+                      <div className="px-3 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-lg">
+                        {item.time}
+                      </div>
+                      <p className="text-sm text-zinc-600">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table Section */}
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto">
             <div data-animate="comparison-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Eyelid Surgery vs Non-Surgical Eye Treatments</h2>
-              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Non-surgical treatments can complement surgery but cannot replace it when true excess skin is present.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Asian Eyelid Surgery vs Standard Blepharoplasty</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Understanding the key differences helps set appropriate expectations.</p>
             </div>
 
             <div className="overflow-x-auto px-4 md:px-8">
-              <table className="w-full text-sm bg-white rounded-2xl overflow-hidden shadow-lg">
+              <table className="w-full text-sm bg-zinc-50 rounded-2xl overflow-hidden shadow-lg">
                 <thead>
                   <tr className="border-b border-zinc-200 bg-zinc-100">
                     <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Aspect</th>
-                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Eyelid Surgery</th>
-                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Non-Surgical Treatments</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Asian Eyelid Surgery</th>
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Standard Blepharoplasty</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((row, i) => (
-                    <tr key={i} className="border-b border-zinc-100 hover:bg-zinc-50 transition-colors duration-300">
+                    <tr key={i} className="border-b border-zinc-100 bg-white hover:bg-zinc-50 transition-colors duration-300">
                       <td className="py-4 px-4 text-zinc-700 font-medium">{row.aspect}</td>
-                      <td className="py-4 px-4 text-zinc-900">{row.surgery}</td>
-                      <td className="py-4 px-4 text-zinc-500">{row.nonSurgical}</td>
+                      <td className="py-4 px-4 text-zinc-900">{row.asian}</td>
+                      <td className="py-4 px-4 text-zinc-500">{row.standard}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </div>
-        </section>
-
-        {/* Recovery Timeline */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div data-animate="recovery-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline and Healing</h2>
-              <p className="text-zinc-500 text-sm">Recovery after blepharoplasty is gradual and predictable.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
-              {[
-                { time: "Days 1–5", desc: "Swelling, bruising, mild tightness; cold compresses advised" },
-                { time: "Week 1", desc: "Sutures removed (if external), bruising begins to fade" },
-                { time: "Week 2–3", desc: "Most patients return to work and social activities" },
-                { time: "Week 6–12", desc: "Final contour refinement as residual swelling resolves" }
-              ].map((item, i) => (
-                <div key={i} data-animate={`timeline-${i}`} className={`relative bg-zinc-50 pt-14 pb-6 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`timeline-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="absolute -top-4 left-4 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    {item.time}
-                  </div>
-                  <p className="text-sm text-zinc-600">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-sm text-zinc-500 mt-8 text-center max-w-2xl mx-auto px-4 md:px-8">
-              Postoperative care protocols follow internationally accepted surgical safety principles aligned with guidance from the World Health Organization on surgical care and recovery.
-            </p>
           </div>
         </section>
 
@@ -488,16 +522,16 @@ export default function EyelidSurgeryMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Eyelid surgery cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Asian eyelid surgery cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Upper, lower, or combined procedure", "Complexity of correction", "Functional vs cosmetic indication", "Anaesthesia requirements", "Facility fees"].map((item, i) => (
+                  {["Incisional vs non-incisional technique", "Complexity of crease design", "Symmetry correction requirements", "Anaesthesia requirements", "Facility fees"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Eyelid%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Eyelid%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -511,7 +545,7 @@ export default function EyelidSurgeryMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about eyelid surgery</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about Asian eyelid surgery</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -558,15 +592,15 @@ export default function EyelidSurgeryMalaysia() {
               </div>
               <div>
                 <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety and Regulation in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">Blepharoplasty in Malaysia must be performed by a registered medical practitioner in a licensed facility regulated by the Ministry of Health Malaysia.</p>
+                <p className="text-zinc-500 text-sm mt-1">Asian eyelid surgery is a specialised procedure performed in licensed medical facilities under Ministry of Health Malaysia regulations.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-4 md:px-8">
               {[
                 { name: "Licensed Facilities", desc: "All procedures in MOH-regulated medical facilities", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Certified Surgeons", desc: "Plastic surgeons with hospital privileges", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Eye Safety Priority", desc: "Special protocols for delicate eye anatomy", color: "from-purple-500 to-purple-600", icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" },
-                { name: "Postoperative Care", desc: "Comprehensive follow-up and monitoring", color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
+                { name: "Certified Surgeons", desc: "Experienced in ethnic-specific techniques", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: "Cultural Sensitivity", desc: "Preserving ethnic identity in all procedures", color: "from-purple-500 to-purple-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
+                { name: "WHO Standards", desc: "Postoperative care aligned with global frameworks", color: "from-orange-500 to-orange-600", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" }
               ].map((source, i) => (
                 <div key={i} className="block px-6 py-6 rounded-2xl border border-zinc-200 bg-zinc-50 card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center gap-3 mb-3">
@@ -593,15 +627,15 @@ export default function EyelidSurgeryMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Restore Clarity and Balance to Your Eyes</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Thoughts</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Eyelid surgery offers a way to refresh your appearance without changing who you are.
+              Asian eyelid surgery is as much an art as it is a technical procedure. It requires cultural awareness, anatomical precision, and the discipline to stop before overcorrection.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed by a qualified surgeon with proper planning and realistic expectations, blepharoplasty delivers natural, long-lasting results that help you look as rested and alert as you feel.
+              In Malaysia, the combination of regulated medical practice and experienced facial plastic surgeons makes it a reliable option for patients seeking refinement rather than reinvention. The most successful outcome is not a dramatic transformation — but eyes that look naturally awake, balanced, and unmistakably yours.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Eyelid%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Asian%20Eyelid%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -613,7 +647,7 @@ export default function EyelidSurgeryMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["eyelid surgery Malaysia", "blepharoplasty", "eye bag removal", "droopy eyelid correction", "eye rejuvenation"].map((tag, i) => (
+              {["Asian eyelid surgery Malaysia", "double eyelid surgery", "Asian blepharoplasty", "natural crease creation", "ethnic eyelid surgery"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
