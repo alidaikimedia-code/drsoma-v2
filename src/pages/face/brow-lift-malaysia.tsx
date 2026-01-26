@@ -478,8 +478,8 @@ export default function BrowLiftMalaysia() {
         </section>
 
         {/* Comparison Table Section */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-8 md:py-24 px-4 md:px-8 lg:px-16 bg-white overflow-hidden">
+          <div className="w-full max-w-[1400px] mx-auto">
             <div data-animate="comparison-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Brow Lift vs Botox</h2>
               <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Understanding the key differences helps determine which approach is best suited to your concerns.</p>
