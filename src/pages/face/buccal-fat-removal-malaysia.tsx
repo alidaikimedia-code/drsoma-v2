@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function NeckLiftMalaysia() {
+export default function BuccalFatRemovalMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,61 +35,59 @@ export default function NeckLiftMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a neck lift?", answer: "A neck lift is surgery that tightens neck muscles and skin to restore a youthful neck and jawline." },
-    { question: "Will a neck lift look natural?", answer: "Yes, when performed using modern techniques, results are natural and balanced." },
-    { question: "How long do neck lift results last?", answer: "Results typically last many years, depending on ageing and lifestyle factors." },
-    { question: "Is neck lift surgery painful?", answer: "Discomfort is usually mild to moderate and well controlled with medication." },
-    { question: "Will there be visible scars?", answer: "Scars are discreetly placed behind the ears and under the chin." },
-    { question: "How long is recovery after a neck lift?", answer: "Most patients return to normal activities within 2–3 weeks." },
-    { question: "Can a neck lift be combined with a face lift?", answer: "Yes, it is commonly combined for comprehensive rejuvenation." },
-    { question: "Is neck lift surgery safe in Malaysia?", answer: "Yes, when performed by a certified plastic surgeon in a licensed facility." }
-  ]
-
-  const neckLiftTypes = [
-    { title: "Cervicoplasty", desc: "Focuses on removing excess neck skin for a smoother contour." },
-    { title: "Platysmaplasty", desc: "Tightens the neck muscles to correct banding and restore definition." },
-    { title: "Neck Lift with Liposuction", desc: "Removes excess fat while tightening skin and muscle for enhanced results." },
-    { title: "Neck Lift with Face Lift", desc: "Combines facial and neck rejuvenation for balanced, comprehensive results." }
+    { question: "What is buccal fat removal?", answer: "It is a surgical procedure that reduces cheek fat to create a slimmer, more defined face." },
+    { question: "Will my face look hollow after surgery?", answer: "No, when performed conservatively by an experienced surgeon." },
+    { question: "Is buccal fat removal permanent?", answer: "Yes, the removed fat does not return." },
+    { question: "How long is recovery after buccal fat removal?", answer: "Most patients resume normal activities within a week." },
+    { question: "Will there be visible scars?", answer: "No, incisions are made inside the mouth so there are no external scars." },
+    { question: "Can buccal fat removal be combined with other procedures?", answer: "Yes, it can be combined with chin liposuction or other facial contouring procedures." },
+    { question: "Is buccal fat removal safe in Malaysia?", answer: "Yes, when performed by a certified plastic surgeon in a licensed facility." },
+    { question: "Who should avoid buccal fat removal?", answer: "Patients with very thin faces or significant facial volume loss from ageing are not ideal candidates." }
   ]
 
   const procedureSteps = [
-    "Small incisions behind the ears and under the chin",
-    "Tightening and repositioning of the platysma muscles",
-    "Removal of excess skin",
-    "Refinement of neck contour and jawline",
-    "Careful closure to minimise visible scarring"
+    "Small incision made inside the mouth",
+    "Gentle exposure of the buccal fat pad",
+    "Controlled removal of excess fat",
+    "Internal suturing with no external scars"
   ]
 
   const benefits = [
-    "Sharpens jawline definition",
-    "Eliminates neck bands and sagging",
-    "Restores a youthful neck profile",
-    "Long-lasting correction",
-    "Natural-looking results",
-    "Can be combined with facial rejuvenation procedures"
+    "Permanent reduction of cheek fullness",
+    "Slimmer, more contoured facial appearance",
+    "No visible scarring",
+    "Short recovery time",
+    "Can enhance jawline and cheek definition",
+    "Complements other facial procedures"
   ]
 
   const candidateCriteria = [
-    "Have loose or sagging neck skin",
-    "Notice jawline blurring or neck banding",
-    "Are in good overall health",
+    "Have naturally full or rounded cheeks",
     "Maintain stable body weight",
-    "Have realistic expectations"
+    "Are in good general health",
+    "Have realistic expectations",
+    "Desire long-term facial contouring"
+  ]
+
+  const notRecommended = [
+    "Very thin faces",
+    "Older patients with significant facial volume loss",
+    "Patients seeking temporary changes"
   ]
 
   const comparisonData = [
-    { aspect: "Longevity", neckLift: "Years", nonSurgical: "Months" },
-    { aspect: "Muscle tightening", neckLift: "Yes", nonSurgical: "No" },
-    { aspect: "Skin tightening", neckLift: "Significant", nonSurgical: "Mild" },
-    { aspect: "Downtime", neckLift: "Moderate", nonSurgical: "Minimal" },
-    { aspect: "Best for", neckLift: "Structural neck ageing", nonSurgical: "Early changes" }
+    { aspect: "Control", buccalFat: "Surgical precision", ageing: "Unpredictable" },
+    { aspect: "Timing", buccalFat: "Planned", ageing: "Gradual" },
+    { aspect: "Hollowing risk", buccalFat: "Managed", ageing: "Variable" },
+    { aspect: "Longevity", buccalFat: "Permanent", ageing: "Progressive" },
+    { aspect: "Aesthetic goal", buccalFat: "Defined contour", ageing: "Volume loss" }
   ]
 
   return (
     <>
       <Head>
-        <title>Neck Lift Malaysia | Cervicoplasty Surgery – Dr. Soma</title>
-        <meta name="description" content="Neck lift (cervicoplasty) surgery in Malaysia by Dr. Soma. Restore a defined jawline and youthful neck contour. Expert surgical rejuvenation. Book consultation today." />
+        <title>Buccal Fat Removal Malaysia | Cheek Reduction Surgery – Dr. Soma</title>
+        <meta name="description" content="Buccal fat removal surgery in Malaysia by Dr. Soma. Facial contouring for a slimmer, more defined look. Expert cheek reduction surgery. Book consultation today." />
       </Head>
 
       <style jsx global>{`
@@ -98,7 +96,7 @@ export default function NeckLiftMalaysia() {
           max-width: 100vw;
         }
 
-        .neck-lift-page ::selection {
+        .buccal-fat-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -224,7 +222,7 @@ export default function NeckLiftMalaysia() {
       `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
-      <main className="neck-lift-page bg-white text-zinc-900 w-full max-w-full">
+      <main className="buccal-fat-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -236,15 +234,15 @@ export default function NeckLiftMalaysia() {
                 Board Certified Plastic Surgeon
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Neck Lift in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Restore a Defined Jawline and a Youthful Neck Contour</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Buccal Fat Removal in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Facial Contouring for a Slimmer, More Defined Look</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>The neck often reveals age earlier than the face. Skin laxity, vertical muscle bands, and loss of jawline definition can create a heavy or aged appearance even when the face itself looks relatively youthful.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>A neck lift, medically referred to as cervicoplasty or platysmaplasty, is a surgical procedure designed to tighten neck muscles, remove excess skin, and redefine the jawline for a smoother, more youthful contour.</p>
+                <p style={{fontSize: '14px'}}>Some faces retain a rounded or &quot;baby-face&quot; fullness despite a healthy weight and lifestyle. This fullness often comes from enlarged buccal fat pads, natural fat pockets located deep in the lower cheeks.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>Buccal fat removal is a surgical facial contouring procedure designed to selectively reduce this fat, creating sharper cheek definition and a more sculpted lower face.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Neck%20Lift%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Buccal%20Fat%20Removal" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -276,8 +274,8 @@ export default function NeckLiftMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/Neck Lift.jpg"
-                alt="Neck Lift Surgery Malaysia"
+                src="/images/Buccal Fat Removal.jpg"
+                alt="Buccal Fat Removal Surgery Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -290,7 +288,7 @@ export default function NeckLiftMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Jawline & Neck Rejuvenation</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Facial Slimming & Contouring</p>
                     </div>
                   </div>
                 </div>
@@ -299,24 +297,24 @@ export default function NeckLiftMalaysia() {
           </div>
         </section>
 
-        {/* What Is a Neck Lift Section */}
+        {/* What Is Buccal Fat Removal Section */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Neck Lift?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Buccal Fat Removal?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A neck lift is a surgical procedure that improves visible signs of ageing in the neck and jawline. Clinical studies indexed on PubMed support that platysma muscle repair and structural neck lifting provide longer-lasting and more natural results than skin tightening alone.
+                  Buccal fat removal is a surgical procedure that reduces the size of the buccal fat pads located in the mid-to-lower cheeks. Clinical literature indexed on PubMed highlights the importance of conservative fat removal to avoid excessive hollowing as the face naturally ages.
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A neck lift is not a fat-removal-only procedure. Structural correction is essential for durable outcomes.
+                  Buccal fat removal is not a weight-loss procedure and does not affect overall body fat. The goal is refinement, not drastic alteration.
                 </p>
                 <div className="space-y-3">
                   {[
-                    "Tightening loose neck skin",
-                    "Repairing separated neck muscles (platysma)",
-                    "Reducing vertical neck bands",
-                    "Defining the jawline and chin–neck angle"
+                    "Slim a round or bulky lower face",
+                    "Enhance cheekbone definition",
+                    "Improve facial angles and contour",
+                    "Create a more mature, sculpted appearance"
                   ].map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
@@ -326,11 +324,11 @@ export default function NeckLiftMalaysia() {
                 </div>
               </div>
 
-              {/* How Neck Lift Surgery Works */}
+              {/* How Buccal Fat Removal Works */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">How Neck Lift Surgery Works</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">How Buccal Fat Removal Works</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Neck lift surgery focuses on rebuilding the underlying framework of the neck. The surgery is performed under general anaesthesia in a hospital setting.
+                  The procedure is precise and minimally invasive. The surgery is usually performed under local anaesthesia with sedation or general anaesthesia, depending on patient preference.
                 </p>
                 <div className="space-y-3">
                   {procedureSteps.map((item, i) => (
@@ -340,30 +338,31 @@ export default function NeckLiftMalaysia() {
                     </div>
                   ))}
                 </div>
-                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100 mt-6">
-                  <p className="text-sm text-zinc-700"><strong>Important:</strong> International clinical authorities such as the Mayo Clinic and the American Society of Plastic Surgeons recognise modern neck lift techniques as safe and effective for correcting neck ageing and jawline blurring.</p>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Types of Neck Lift Section */}
+        {/* Results and Recovery Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="types-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('types-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Neck Lift Procedures</h2>
-              <p className="text-zinc-500 text-sm">The appropriate technique is selected based on anatomy and ageing pattern.</p>
+            <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Results and Recovery Timeline</h2>
+              <p className="text-zinc-500 text-sm">Recovery is generally straightforward. Postoperative recovery principles align with international surgical safety and infection-control standards outlined by the World Health Organization.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
-              {neckLiftTypes.map((type, i) => (
-                <div key={i} data-animate={`type-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`type-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
+              {[
+                { time: "Week 1", desc: "Swelling and mild tightness" },
+                { time: "Week 2", desc: "Noticeable facial slimming begins" },
+                { time: "Week 4–6", desc: "Improved contour and definition" },
+                { time: "Month 3", desc: "Final facial shape becomes apparent" }
+              ].map((item, i) => (
+                <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    {i + 1}
+                    {item.time}
                   </div>
-                  <h3 className="text-base font-bold text-zinc-900 mb-3 group-hover:text-[#FE7623] transition-colors duration-300">{type.title}</h3>
-                  <p className="text-sm text-zinc-500">{type.desc}</p>
+                  <p className="text-sm text-zinc-600">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -376,8 +375,8 @@ export default function NeckLiftMalaysia() {
             {/* Image Section */}
             <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('benefits-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <BaseImage
-                src="/images/Neck Lift.jpg"
-                alt="Neck Lift Benefits"
+                src="/images/Buccal Fat Removal.jpg"
+                alt="Buccal Fat Removal Benefits"
                 fill
                 className="object-cover"
               />
@@ -386,9 +385,9 @@ export default function NeckLiftMalaysia() {
 
             {/* Content Section */}
             <div data-animate="benefits-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Neck Lift Surgery</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Buccal Fat Removal</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                A neck lift refines what gravity has blurred.
+                The goal is refinement, not drastic alteration.
               </p>
 
               <div className="grid grid-cols-1 gap-3 mb-6">
@@ -406,11 +405,11 @@ export default function NeckLiftMalaysia() {
         {/* Who Is Ideal Candidate */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Mild cases may benefit from non-surgical treatments, while moderate to advanced laxity requires surgical correction. Ideal candidates typically:
+                  Proper patient selection is critical for natural outcomes. Ideal candidates typically:
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
@@ -422,29 +421,22 @@ export default function NeckLiftMalaysia() {
                 </div>
               </div>
 
-              {/* Recovery Timeline */}
-              <div data-animate="recovery-content" className={`transition-all duration-700 ${isVisible('recovery-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Results and Recovery Timeline</h3>
+              {/* Not Recommended */}
+              <div data-animate="not-recommended" className={`transition-all duration-700 ${isVisible('not-recommended') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Not Recommended For</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Recovery generally progresses as follows:
+                  Buccal fat removal may not be suitable for everyone:
                 </p>
-                <div className="space-y-4">
-                  {[
-                    { time: "Week 1", desc: "Swelling, tightness, compression support" },
-                    { time: "Week 2", desc: "Improved comfort, return to light activities" },
-                    { time: "Week 3–4", desc: "Clear jawline definition emerges" },
-                    { time: "Month 3–6", desc: "Final contour as tissues fully settle" }
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-zinc-200">
-                      <div className="px-3 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-lg whitespace-nowrap">
-                        {item.time}
-                      </div>
-                      <p className="text-sm text-zinc-600">{item.desc}</p>
+                <div className="space-y-3">
+                  {notRecommended.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-red-50 rounded-lg border border-red-100">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      <span className="flex-1">{item}</span>
                     </div>
                   ))}
                 </div>
                 <div className="p-4 bg-blue-50 rounded-xl border border-blue-100 mt-6">
-                  <p className="text-sm text-blue-700"><strong>Note:</strong> Postoperative care follows internationally accepted surgical recovery standards outlined by the World Health Organization.</p>
+                  <p className="text-sm text-blue-700"><strong>Note:</strong> When done conservatively, buccal fat removal complements natural facial structure without creating a hollow appearance.</p>
                 </div>
               </div>
             </div>
@@ -455,8 +447,8 @@ export default function NeckLiftMalaysia() {
         <section className="py-8 md:py-24 px-4 md:px-8 lg:px-16 bg-white overflow-hidden">
           <div className="w-full max-w-[1400px] mx-auto">
             <div data-animate="comparison-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Neck Lift vs Non-Surgical Treatments</h2>
-              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Non-surgical treatments can complement surgery but cannot replicate its results.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Buccal Fat Removal vs Facial Fat Loss from Ageing</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">When done conservatively, buccal fat removal complements natural facial structure.</p>
             </div>
 
             <div className="overflow-x-auto">
@@ -464,16 +456,16 @@ export default function NeckLiftMalaysia() {
                 <thead>
                   <tr className="border-b border-zinc-200 bg-zinc-100">
                     <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Feature</th>
-                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Neck Lift</th>
-                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Injectables / Energy Devices</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Buccal Fat Removal</th>
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Natural Ageing</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((row, i) => (
                     <tr key={i} className="border-b border-zinc-100 bg-white hover:bg-zinc-50 transition-colors duration-300">
                       <td className="py-4 px-4 text-zinc-700 font-medium">{row.aspect}</td>
-                      <td className="py-4 px-4 text-zinc-900">{row.neckLift}</td>
-                      <td className="py-4 px-4 text-zinc-500">{row.nonSurgical}</td>
+                      <td className="py-4 px-4 text-zinc-900">{row.buccalFat}</td>
+                      <td className="py-4 px-4 text-zinc-500">{row.ageing}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -497,16 +489,16 @@ export default function NeckLiftMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Neck lift surgery cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Buccal fat removal cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of neck lift technique selected", "Extent of correction required", "Combination with other procedures", "Anaesthesia and facility fees", "Surgeon's expertise and experience"].map((item, i) => (
+                  {["Amount of fat to be removed", "Anaesthesia type selected", "Combination with other procedures", "Facility and surgical fees", "Surgeon's expertise and experience"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Neck%20Lift%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Buccal%20Fat%20Removal" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -520,7 +512,7 @@ export default function NeckLiftMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about neck lift surgery</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about buccal fat removal</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -571,13 +563,13 @@ export default function NeckLiftMalaysia() {
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Thoughts</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Restore definition, balance, and confidence with surgeon-performed neck lift surgery in Malaysia.
+              Achieve a slimmer, more defined facial contour with surgeon-performed buccal fat removal in Malaysia.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When the neck is rejuvenated with precision, the face finally looks complete.
+              When performed conservatively by a certified plastic surgeon, buccal fat removal enhances your natural facial structure for lasting, balanced results.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Neck%20Lift%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Buccal%20Fat%20Removal" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -589,7 +581,7 @@ export default function NeckLiftMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Neck lift Malaysia", "cervicoplasty surgery", "platysmaplasty", "jawline rejuvenation", "neck contouring"].map((tag, i) => (
+              {["Buccal fat removal Malaysia", "cheek reduction surgery", "facial slimming", "cheek contouring", "facial sculpting"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
