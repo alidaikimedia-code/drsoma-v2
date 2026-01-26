@@ -116,7 +116,7 @@ const MaleHub = () => {
       subtitle: "Chest Reshaping",
       description: "For men with enlarged breast tissue that affects confidence and clothing fit.",
       bestFor: ["Firm gland tissue", "Chest reshaping", "Flatter chest contour"],
-      href: "/contact-us",
+      href: "/male/gynecomastia-surgery-malaysia",
       image: "/images/Gynecomastia Surgery men.jpg",
       featured: true,
     },
@@ -182,7 +182,7 @@ const MaleHub = () => {
 
   // Decision guide data
   const decisionGuide = [
-    { concern: "Chest looks enlarged or puffy", solution: "Gynecomastia Surgery or Male Breast Reduction", href: "/male/male-breast-reduction-malaysia" },
+    { concern: "Chest looks enlarged or puffy", solution: "Gynecomastia Surgery or Male Breast Reduction", href: "/male/gynecomastia-surgery-malaysia" },
     { concern: "Hairline recession or thinning", solution: "Hair Transplant", href: "/contact-us" },
     { concern: "Want a stronger jawline", solution: "Jawline Enhancement", href: "/contact-us" },
     { concern: "Chin looks weak in profile", solution: "Chin Implant", href: "/contact-us" },

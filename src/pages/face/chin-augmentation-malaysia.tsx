@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function MaleBreastReductionMalaysia() {
+export default function ChinAugmentationMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,44 +35,58 @@ export default function MaleBreastReductionMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is male breast reduction surgery?", answer: "It is a surgical procedure to remove excess fat and glandular tissue from the male chest." },
-    { question: "Is male breast reduction the same as gynecomastia surgery?", answer: "Yes. Male breast reduction is the surgical treatment for gynecomastia." },
-    { question: "Is the surgery permanent?", answer: "Yes. Removed glandular tissue does not grow back." },
-    { question: "Will there be scars?", answer: "Scars are minimal and usually hidden around the areola." },
-    { question: "How long does recovery take?", answer: "Most patients return to work within 7–10 days." },
-    { question: "Can exercise fix gynecomastia?", answer: "Exercise may reduce fat but cannot remove glandular tissue." },
-    { question: "Is the procedure painful?", answer: "Pain is typically mild to moderate and well controlled with medication." },
-    { question: "Is male breast reduction safe?", answer: "Yes, when performed by a qualified plastic surgeon in a regulated facility." }
+    { question: "What is chin augmentation?", answer: "Chin augmentation is surgery that enhances chin projection to improve facial balance." },
+    { question: "Will chin augmentation look natural?", answer: "Yes, when planned according to facial proportions and anatomy." },
+    { question: "How long do chin augmentation results last?", answer: "Results are long-lasting and often permanent." },
+    { question: "Is chin augmentation painful?", answer: "Discomfort is usually mild to moderate and well controlled with medication." },
+    { question: "Will there be visible scars?", answer: "Incisions are typically made inside the mouth or under the chin, making scars minimal or hidden." },
+    { question: "Can chin augmentation be combined with other procedures?", answer: "Yes, it is commonly combined with rhinoplasty or neck lift for comprehensive facial enhancement." },
+    { question: "Is chin augmentation safe in Malaysia?", answer: "Yes, when performed by a certified plastic surgeon in a licensed facility." },
+    { question: "What is the difference between implant and genioplasty?", answer: "Implants add projection using biocompatible material, while genioplasty repositions the actual chin bone for structural correction." }
   ]
 
-  const surgicalTechniques = [
-    { title: "Liposuction", desc: "For fatty enlargement." },
-    { title: "Excision", desc: "For firm glandular tissue." },
-    { title: "Combined Technique", desc: "For mixed cases." }
+  const surgicalApproaches = [
+    { title: "Chin Implant Augmentation", desc: "A biocompatible implant is placed over the chin bone to enhance projection and shape." },
+    { title: "Sliding Genioplasty", desc: "The chin bone itself is repositioned and secured for structural correction." }
   ]
 
-  const causesOfEnlargement = [
-    "Hormonal imbalance (estrogen–testosterone ratio)",
-    "Puberty-related changes",
-    "Medications or anabolic steroids",
-    "Weight gain and fat accumulation",
-    "Certain medical conditions"
+  const procedureSteps = [
+    "Small incision inside the mouth or under the chin",
+    "Precise placement or repositioning",
+    "Secure fixation",
+    "Layered closure to minimise scarring"
+  ]
+
+  const benefits = [
+    "Improves facial balance and proportions",
+    "Enhances jawline definition",
+    "Strengthens side-profile aesthetics",
+    "Long-lasting structural correction",
+    "Natural results when properly planned",
+    "Can complement rhinoplasty or neck lift"
   ]
 
   const candidateCriteria = [
-    "Have persistent male breast enlargement",
-    "Are in good general health",
-    "Have stable body weight",
-    "Do not respond to exercise or diet alone",
+    "Have a weak or recessed chin",
+    "Desire improved facial harmony",
+    "Are in good overall health",
+    "Maintain stable body weight",
     "Have realistic expectations"
+  ]
+
+  const comparisonData = [
+    { aspect: "Longevity", chinAug: "Permanent / Long-term", fillers: "Temporary" },
+    { aspect: "Structural correction", chinAug: "Yes", fillers: "No" },
+    { aspect: "Precision", chinAug: "High", fillers: "Moderate" },
+    { aspect: "Downtime", chinAug: "Short", fillers: "Minimal" },
+    { aspect: "Best for", chinAug: "True chin deficiency", fillers: "Mild enhancement" }
   ]
 
   return (
     <>
       <Head>
-        <title>Male Breast Reduction Malaysia | Gynecomastia Surgery by Plastic Surgeon</title>
-        <meta name="description" content="Male breast reduction surgery in Malaysia treats enlarged male chest caused by gynecomastia or fat. Learn procedure, safety, recovery, and FAQs." />
-        <link rel="canonical" href="https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia" />
+        <title>Chin Augmentation Malaysia | Genioplasty Surgery – Dr. Soma</title>
+        <meta name="description" content="Chin augmentation (genioplasty) surgery in Malaysia by Dr. Soma. Enhance facial balance and jawline definition. Expert chin enhancement surgery. Book consultation today." />
       </Head>
 
       <style jsx global>{`
@@ -81,7 +95,7 @@ export default function MaleBreastReductionMalaysia() {
           max-width: 100vw;
         }
 
-        .male-breast-page ::selection {
+        .chin-aug-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -207,7 +221,7 @@ export default function MaleBreastReductionMalaysia() {
       `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
-      <main className="male-breast-page bg-white text-zinc-900 w-full max-w-full">
+      <main className="chin-aug-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -216,18 +230,19 @@ export default function MaleBreastReductionMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Regulated by Ministry of Health Malaysia
+                Board Certified Plastic Surgeon
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Male Breast Reduction in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Surgical Correction of Enlarged Male Chest (Gynecomastia)</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Chin Augmentation in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Enhancing Facial Balance and Jawline Definition</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Male breast reduction is a surgical procedure designed to treat enlarged male breasts caused by glandular tissue, excess fat, or a combination of both. The goal is to create a flatter, firmer, and more masculine chest contour.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, male breast reduction surgery must be performed in licensed medical facilities under the oversight of the Ministry of Health Malaysia, ensuring patient safety and regulated surgical standards.</p>
+                <p style={{fontSize: '14px'}}>Facial harmony depends on proportion. When the chin is under-projected or recessed, the entire face can appear unbalanced — making the nose look larger, the jawline softer, and the neck less defined. Chin augmentation, also known as genioplasty or chin enhancement, is a surgical procedure designed to strengthen the chin profile and improve overall facial balance.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, chin augmentation is a regulated surgical procedure and must be performed by a registered medical practitioner in a licensed medical facility under standards enforced by the Ministry of Health Malaysia. When performed by a certified plastic surgeon, chin augmentation delivers subtle but powerful improvements to facial structure without changing identity.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>Globally, institutions such as the Mayo Clinic and professional bodies like the American Society of Plastic Surgeons recognise chin augmentation as an effective solution for correcting chin deficiency and enhancing lower-face aesthetics.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Chin%20Augmentation" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -241,11 +256,11 @@ export default function MaleBreastReductionMalaysia() {
               <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 mt-8 animate-fadeInUp opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
                 <div className="flex -space-x-2">
                   {[
+                    'https://randomuser.me/api/portraits/women/44.jpg',
                     'https://randomuser.me/api/portraits/men/32.jpg',
-                    'https://randomuser.me/api/portraits/men/44.jpg',
-                    'https://randomuser.me/api/portraits/men/68.jpg',
+                    'https://randomuser.me/api/portraits/women/68.jpg',
                     'https://randomuser.me/api/portraits/men/75.jpg',
-                    'https://randomuser.me/api/portraits/men/89.jpg'
+                    'https://randomuser.me/api/portraits/women/89.jpg'
                   ].map((img, i) => (
                     <div key={i} className="w-12 h-12 rounded-full border-2 border-white overflow-hidden shadow-md">
                       <img src={img} alt={`Patient ${i + 1}`} className="w-full h-full object-cover" />
@@ -259,8 +274,8 @@ export default function MaleBreastReductionMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/male_breast_reduction.png"
-                alt="Male Breast Reduction Surgery Malaysia"
+                src="/images/Chin Augmentation.jpg"
+                alt="Chin Augmentation Surgery Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -273,7 +288,7 @@ export default function MaleBreastReductionMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Male Chest Contouring</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Facial Balance & Profile Enhancement</p>
                     </div>
                   </div>
                 </div>
@@ -282,30 +297,43 @@ export default function MaleBreastReductionMalaysia() {
           </div>
         </section>
 
-        {/* What Is Male Breast Reduction Section */}
+        {/* What Is Chin Augmentation Section */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Male Breast Reduction?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Chin Augmentation?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Male breast reduction is a surgical treatment for gynecomastia, a condition involving abnormal enlargement of male breast tissue. The procedure removes excess glandular tissue, fat, and sometimes loose skin to restore normal chest proportions.
+                  Chin augmentation is a surgical procedure that increases chin projection, width, or height to improve facial proportions. Clinical literature indexed on PubMed highlights the importance of precise sizing and placement to achieve natural, long-term results.
                 </p>
-                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">According to the <strong>Mayo Clinic</strong>, gynecomastia often does not resolve without surgery when firm glandular tissue is present.</p>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
+                  Chin augmentation is not purely cosmetic; in some patients, it also improves functional balance between facial structures.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "Balance facial profile",
+                    "Enhance jawline definition",
+                    "Improve chin–neck angle",
+                    "Support overall facial symmetry"
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Causes of Male Breast Enlargement */}
+              {/* How Chin Augmentation Works */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Causes of Male Breast Enlargement</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">How Chin Augmentation Works</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Male breast enlargement may result from:
+                  Surgery is performed under general anaesthesia in a hospital setting. The procedure typically involves:
                 </p>
                 <div className="space-y-3">
-                  {causesOfEnlargement.map((item, i) => (
-                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
-                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  {procedureSteps.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-orange-50 rounded-lg border border-orange-100">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                       <span className="flex-1">{item}</span>
                     </div>
                   ))}
@@ -315,42 +343,62 @@ export default function MaleBreastReductionMalaysia() {
           </div>
         </section>
 
-        {/* How Surgery Is Performed Section */}
+        {/* Surgical Approaches Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="surgery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('surgery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Male Breast Reduction Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm">The surgical approach depends on chest composition:</p>
+            <div data-animate="approaches-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('approaches-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Surgical Approaches</h2>
+              <p className="text-zinc-500 text-sm">There are two primary surgical approaches for chin augmentation.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8">
-              {surgicalTechniques.map((item, i) => (
-                <div key={i} data-animate={`technique-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`technique-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
+              {surgicalApproaches.map((approach, i) => (
+                <div key={i} data-animate={`approach-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`approach-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {i + 1}
                   </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-2 group-hover:text-[#FE7623] transition-colors">{item.title}</h3>
-                  <p className="text-sm text-zinc-500">{item.desc}</p>
+                  <h3 className="text-base font-bold text-zinc-900 mb-3 group-hover:text-[#FE7623] transition-colors duration-300">{approach.title}</h3>
+                  <p className="text-sm text-zinc-500">{approach.desc}</p>
                 </div>
               ))}
-            </div>
-
-            <div className="px-4 md:px-8 mt-8">
-              <div className="p-4 bg-white rounded-xl border border-zinc-200">
-                <p className="text-sm text-zinc-600 text-center">Small incisions are typically placed along the areola or natural chest folds to reduce visible scarring.</p>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Safety and Clinical Standards */}
+        {/* Results and Recovery Section */}
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Results and Recovery Timeline</h2>
+              <p className="text-zinc-500 text-sm">Recovery follows a structured timeline. Postoperative recovery principles align with international surgical safety standards outlined by the World Health Organization.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
+              {[
+                { time: "Week 1", desc: "Swelling, mild tightness, soft diet" },
+                { time: "Week 2", desc: "Improved comfort and facial movement" },
+                { time: "Week 4–6", desc: "Chin shape becomes more defined" },
+                { time: "Month 3", desc: "Final contour as swelling resolves" }
+              ].map((item, i) => (
+                <div key={i} data-animate={`recovery-${i}`} className={`relative bg-zinc-50 pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
+                    {item.time}
+                  </div>
+                  <p className="text-sm text-zinc-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
             {/* Image Section */}
-            <div data-animate="safety-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('safety-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('benefits-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <BaseImage
-                src="/images/male_breast_reduction.png"
-                alt="Male Breast Reduction Safety"
+                src="/images/Chin Augmentation.jpg"
+                alt="Chin Augmentation Benefits"
                 fill
                 className="object-cover"
               />
@@ -358,96 +406,75 @@ export default function MaleBreastReductionMalaysia() {
             </div>
 
             {/* Content Section */}
-            <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Clinical Standards</h2>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Male breast reduction surgery is considered safe when performed by trained plastic surgeons following established surgical safety protocols.
+            <div data-animate="benefits-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Chin Augmentation</h2>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                A well-planned chin augmentation often improves the appearance of the entire face, not just the chin.
               </p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                General principles of surgical safety align with global recommendations from the <strong>World Health Organization (WHO)</strong> for safe operative care.
-              </p>
-              <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> Preoperative assessment ensures suitability and minimizes complications.</p>
+
+              <div className="grid grid-cols-1 gap-3 mb-6">
+                {benefits.map((item, i) => (
+                  <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300 p-3 bg-white rounded-lg border border-zinc-200 hover:border-[#FE7623]">
+                    <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <span className="flex-1">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Recovery Section */}
-        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery After Male Breast Reduction</h2>
-              <p className="text-zinc-500 text-sm">Post-operative recovery follows timelines consistent with guidance from the NHS for cosmetic and reconstructive procedures.</p>
+        {/* Who Is Ideal Candidate */}
+        <section className="py-8 md:py-24 px-4 md:px-8 lg:px-16 bg-white overflow-hidden">
+          <div className="w-full max-w-[1400px] mx-auto">
+            <div data-animate="candidate-content" className={`text-center mb-12 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Who Is a Good Candidate?</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Patients with jaw misalignment may require additional evaluation before surgery. Ideal candidates typically:</p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
-              {[
-                { time: "First 5–7 days", desc: "Swelling, mild discomfort" },
-                { time: "7–10 days", desc: "Return to desk work" },
-                { time: "3–4 weeks", desc: "Resume light exercise" },
-                { time: "6 weeks", desc: "Full activity allowed" },
-                { time: "3 months", desc: "Final chest contour visible" }
-              ].map((item, i) => (
-                <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    {item.time}
-                  </div>
-                  <p className="text-sm text-zinc-500">{item.desc}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {candidateCriteria.map((item, i) => (
+                <div key={i} data-animate={`candidate-${i}`} className={`flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-zinc-50 rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300 ${isVisible(`candidate-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  <span className="flex-1">{item}</span>
                 </div>
               ))}
             </div>
-
-            <div className="px-4 md:px-8 mt-8">
-              <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                <p className="text-sm text-blue-700 text-center"><strong>Note:</strong> Compression garments are worn to support healing and contour.</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* Who Is a Suitable Candidate */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
-              <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be a good candidate if you:
-                </p>
-                <div className="space-y-3">
-                  {candidateCriteria.map((item, i) => (
-                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
-                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span className="flex-1">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        {/* Comparison Table Section */}
+        <section className="py-8 md:py-24 px-4 md:px-8 lg:px-16 bg-zinc-50 overflow-hidden">
+          <div className="w-full max-w-[1400px] mx-auto">
+            <div data-animate="comparison-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Chin Augmentation vs Non-Surgical Fillers</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Fillers may be useful for temporary assessment but cannot replace structural augmentation.</p>
+            </div>
 
-              {/* Additional Info */}
-              <div data-animate="additional-content" className={`transition-all duration-700 ${isVisible('additional-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl shadow-2xl">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-[#FE7623]/20 rounded-lg">
-                      <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
-                  </div>
-                  <p className="text-zinc-300 text-sm mb-4">
-                    Exercise may reduce fat but cannot remove glandular tissue. Surgical treatment is required for definitive correction of true gynecomastia.
-                  </p>
-                  <p className="text-zinc-400 text-sm">
-                    A consultation will determine the best approach based on your individual anatomy and goals.
-                  </p>
-                </div>
-              </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm bg-white rounded-2xl overflow-hidden shadow-lg">
+                <thead>
+                  <tr className="border-b border-zinc-200 bg-zinc-100">
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Feature</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Chin Augmentation</th>
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Dermal Fillers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="border-b border-zinc-100 bg-white hover:bg-zinc-50 transition-colors duration-300">
+                      <td className="py-4 px-4 text-zinc-700 font-medium">{row.aspect}</td>
+                      <td className="py-4 px-4 text-zinc-900">{row.chinAug}</td>
+                      <td className="py-4 px-4 text-zinc-500">{row.fillers}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
         {/* Pricing & FAQ Section */}
-        <section className="pt-8 pb-16 md:pt-24 md:pb-32 px-6 bg-zinc-50 overflow-hidden">
+        <section className="pt-8 pb-16 md:pt-24 md:pb-32 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-8">
 
             {/* Left: Pricing Sticky */}
@@ -461,16 +488,16 @@ export default function MaleBreastReductionMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Male breast reduction cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Chin augmentation cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of surgical technique selected", "Extent of tissue removal required", "Combination with liposuction", "Anaesthesia and facility fees", "Surgeon's expertise and experience"].map((item, i) => (
+                  {["Type of procedure (implant vs genioplasty)", "Implant type and size", "Combination with other procedures", "Anaesthesia and facility fees", "Surgeon's expertise and experience"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Chin%20Augmentation" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -484,7 +511,7 @@ export default function MaleBreastReductionMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about male breast reduction</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about chin augmentation</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -523,8 +550,8 @@ export default function MaleBreastReductionMalaysia() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden w-full">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 relative overflow-hidden w-full">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-zinc-50 to-zinc-50 -z-10"></div>
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-50/40 rounded-full blur-3xl animate-float"></div>
 
@@ -533,15 +560,15 @@ export default function MaleBreastReductionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Achieve a Flatter, More Confident Chest</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Thoughts</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Take the first step towards a masculine chest contour with male breast reduction surgery.
+              Achieve facial balance and a stronger profile with surgeon-performed chin augmentation in Malaysia.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              Schedule your consultation with our expert team today.
+              When performed by a certified plastic surgeon, chin augmentation delivers subtle but powerful improvements to facial structure — enhancing harmony without changing who you are.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Chin%20Augmentation" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -553,7 +580,7 @@ export default function MaleBreastReductionMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Male breast reduction Malaysia", "gynecomastia surgery", "chest contouring", "male plastic surgery", "enlarged male chest"].map((tag, i) => (
+              {["Chin augmentation Malaysia", "genioplasty surgery", "chin implant", "facial balance", "jawline enhancement"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

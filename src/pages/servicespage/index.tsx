@@ -217,21 +217,21 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/aesthetic-treatments/thread-lift-malaysia"}
+                href={"/face/neck-lift-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.4s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/Safe_thread_in_face.png"
+                  src="/images/Neck Lift.jpg"
                   width={280}
                   height={320}
                   loading="lazy"
-                  alt="Safe Thread Lift"
+                  alt="Neck Lift"
                   className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Safe Thread Lift
+                  Neck Lift
                 </h4>
               </Link>
               <Link
@@ -253,21 +253,21 @@ const Services = () => {
                 </h4>
               </Link>
               <Link
-                href={"/aesthetic-treatments/lip-filler-malaysia"}
+                href={"/face/buccal-fat-removal-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-1') ? '0.6s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/lip_filler.png"
+                  src="/images/Buccal Fat Removal.jpg"
                   width={280}
                   height={320}
                   loading="lazy"
-                  alt="Filler"
+                  alt="Buccal Fat Removal"
                   className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Filler
+                  Buccal Fat Removal
                 </h4>
               </Link>
             </div>

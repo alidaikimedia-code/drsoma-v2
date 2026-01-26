@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function MaleBreastReductionMalaysia() {
+export default function GynecomastiaSurgeryMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,44 +35,56 @@ export default function MaleBreastReductionMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is male breast reduction surgery?", answer: "It is a surgical procedure to remove excess fat and glandular tissue from the male chest." },
-    { question: "Is male breast reduction the same as gynecomastia surgery?", answer: "Yes. Male breast reduction is the surgical treatment for gynecomastia." },
-    { question: "Is the surgery permanent?", answer: "Yes. Removed glandular tissue does not grow back." },
-    { question: "Will there be scars?", answer: "Scars are minimal and usually hidden around the areola." },
-    { question: "How long does recovery take?", answer: "Most patients return to work within 7–10 days." },
-    { question: "Can exercise fix gynecomastia?", answer: "Exercise may reduce fat but cannot remove glandular tissue." },
-    { question: "Is the procedure painful?", answer: "Pain is typically mild to moderate and well controlled with medication." },
-    { question: "Is male breast reduction safe?", answer: "Yes, when performed by a qualified plastic surgeon in a regulated facility." }
+    { question: "What is gynecomastia surgery?", answer: "It is a surgical procedure that removes excess male breast tissue to create a flatter chest." },
+    { question: "Is gynecomastia surgery permanent?", answer: "Yes, removed glandular tissue does not regrow under normal conditions." },
+    { question: "Will there be visible scars?", answer: "Scars are minimal and typically fade well over time." },
+    { question: "Is the surgery painful?", answer: "Discomfort is usually mild to moderate and manageable with medication." },
+    { question: "How long is recovery after surgery?", answer: "Most patients return to normal activities within 1–2 weeks." },
+    { question: "Can gynecomastia return after surgery?", answer: "Recurrence is rare unless caused by new hormonal imbalance or medication." },
+    { question: "Is gynecomastia surgery safe in Malaysia?", answer: "Yes, when performed by a qualified plastic surgeon in a licensed facility under the Ministry of Health Malaysia, the procedure is safe and follows international standards." }
   ]
 
   const surgicalTechniques = [
-    { title: "Liposuction", desc: "For fatty enlargement." },
-    { title: "Excision", desc: "For firm glandular tissue." },
-    { title: "Combined Technique", desc: "For mixed cases." }
+    { title: "Liposuction", desc: "Used when excess fat is the primary component." },
+    { title: "Glandular Excision", desc: "Required for firm glandular breast tissue resistant to diet and exercise." },
+    { title: "Combined Technique", desc: "Most common approach—removes both fat and glandular tissue for optimal contouring." }
   ]
 
-  const causesOfEnlargement = [
-    "Hormonal imbalance (estrogen–testosterone ratio)",
+  const gynecomastiaCauses = [
+    "Hormonal imbalance (estrogen–androgen ratio)",
     "Puberty-related changes",
-    "Medications or anabolic steroids",
-    "Weight gain and fat accumulation",
-    "Certain medical conditions"
+    "Weight fluctuations",
+    "Certain medications or medical conditions"
+  ]
+
+  const benefits = [
+    "Flatter, firmer chest contour",
+    "Improved body confidence and posture",
+    "Permanent removal of excess glandular tissue",
+    "Better clothing fit",
+    "Enhanced physical and psychological well-being"
   ]
 
   const candidateCriteria = [
     "Have persistent male breast enlargement",
-    "Are in good general health",
-    "Have stable body weight",
-    "Do not respond to exercise or diet alone",
-    "Have realistic expectations"
+    "Are at a stable, healthy weight",
+    "Are physically healthy",
+    "Have realistic expectations",
+    "Experience discomfort or self-consciousness due to chest shape"
+  ]
+
+  const comparisonData = [
+    { aspect: "Removes gland tissue", surgery: "Yes", exercise: "No" },
+    { aspect: "Permanent correction", surgery: "Yes", exercise: "No" },
+    { aspect: "Improves chest shape", surgery: "Yes", exercise: "Limited" },
+    { aspect: "Effective for true gynecomastia", surgery: "Yes", exercise: "No" }
   ]
 
   return (
     <>
       <Head>
-        <title>Male Breast Reduction Malaysia | Gynecomastia Surgery by Plastic Surgeon</title>
-        <meta name="description" content="Male breast reduction surgery in Malaysia treats enlarged male chest caused by gynecomastia or fat. Learn procedure, safety, recovery, and FAQs." />
-        <link rel="canonical" href="https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia" />
+        <title>Gynecomastia Surgery Malaysia | Male Breast Reduction – Dr. Soma</title>
+        <meta name="description" content="Gynecomastia surgery in Malaysia by Dr. Soma. Male breast reduction for a firmer, masculine chest. Expert surgical treatment. Book consultation today." />
       </Head>
 
       <style jsx global>{`
@@ -81,7 +93,7 @@ export default function MaleBreastReductionMalaysia() {
           max-width: 100vw;
         }
 
-        .male-breast-page ::selection {
+        .gynecomastia-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -207,7 +219,7 @@ export default function MaleBreastReductionMalaysia() {
       `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
-      <main className="male-breast-page bg-white text-zinc-900 w-full max-w-full">
+      <main className="gynecomastia-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -216,18 +228,18 @@ export default function MaleBreastReductionMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Regulated by Ministry of Health Malaysia
+                Board Certified Plastic Surgeon
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Male Breast Reduction in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Surgical Correction of Enlarged Male Chest (Gynecomastia)</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Gynecomastia Surgery in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Male Breast Reduction for a Firmer, Masculine Chest</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Male breast reduction is a surgical procedure designed to treat enlarged male breasts caused by glandular tissue, excess fat, or a combination of both. The goal is to create a flatter, firmer, and more masculine chest contour.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, male breast reduction surgery must be performed in licensed medical facilities under the oversight of the Ministry of Health Malaysia, ensuring patient safety and regulated surgical standards.</p>
+                <p style={{fontSize: '14px'}}>A masculine chest contour is closely tied to confidence, posture, and self-image. When excess breast tissue develops in men—a condition known as gynecomastia—it can lead to physical discomfort and psychological distress, regardless of fitness level.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>Gynecomastia surgery, or male breast reduction, is a definitive surgical solution to restore a flatter, firmer, and more masculine chest. In Malaysia, gynecomastia surgery is a regulated procedure that must be performed by a qualified medical practitioner in a licensed facility under the Ministry of Health Malaysia.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Gynecomastia%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -260,7 +272,7 @@ export default function MaleBreastReductionMalaysia() {
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
                 src="/images/male_breast_reduction.png"
-                alt="Male Breast Reduction Surgery Malaysia"
+                alt="Gynecomastia Surgery Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -282,28 +294,20 @@ export default function MaleBreastReductionMalaysia() {
           </div>
         </section>
 
-        {/* What Is Male Breast Reduction Section */}
+        {/* What Is Gynecomastia Section */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Male Breast Reduction?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Gynecomastia?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Male breast reduction is a surgical treatment for gynecomastia, a condition involving abnormal enlargement of male breast tissue. The procedure removes excess glandular tissue, fat, and sometimes loose skin to restore normal chest proportions.
+                  Gynecomastia is the benign enlargement of male breast tissue. It is important to distinguish true gynecomastia (glandular tissue) from pseudogynecomastia (fat accumulation). Clinical evaluation is essential, as management differs for each.
                 </p>
-                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">According to the <strong>Mayo Clinic</strong>, gynecomastia often does not resolve without surgery when firm glandular tissue is present.</p>
-                </div>
-              </div>
-
-              {/* Causes of Male Breast Enlargement */}
-              <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Causes of Male Breast Enlargement</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Male breast enlargement may result from:
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
+                  Reputable medical institutions such as the Mayo Clinic recognize surgery as the most effective treatment for persistent or severe gynecomastia.
                 </p>
                 <div className="space-y-3">
-                  {causesOfEnlargement.map((item, i) => (
+                  {gynecomastiaCauses.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -311,83 +315,46 @@ export default function MaleBreastReductionMalaysia() {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* How Surgery Is Performed Section */}
-        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <div data-animate="surgery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('surgery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Male Breast Reduction Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm">The surgical approach depends on chest composition:</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8">
-              {surgicalTechniques.map((item, i) => (
-                <div key={i} data-animate={`technique-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`technique-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    {i + 1}
-                  </div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-2 group-hover:text-[#FE7623] transition-colors">{item.title}</h3>
-                  <p className="text-sm text-zinc-500">{item.desc}</p>
+              {/* How Gynecomastia Surgery Works */}
+              <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">How Gynecomastia Surgery Works</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  The surgical approach is tailored to the tissue composition and severity. The procedure is typically performed under general anesthesia with small, discreet incisions placed around the areola or chest crease.
+                </p>
+                <div className="space-y-3">
+                  {surgicalTechniques.map((item, i) => (
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-orange-50 rounded-lg border border-orange-100">
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <div className="flex-1">
+                        <strong className="text-zinc-700">{item.title}:</strong> <span>{item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-
-            <div className="px-4 md:px-8 mt-8">
-              <div className="p-4 bg-white rounded-xl border border-zinc-200">
-                <p className="text-sm text-zinc-600 text-center">Small incisions are typically placed along the areola or natural chest folds to reduce visible scarring.</p>
+                <div className="p-4 bg-orange-50 rounded-xl border border-orange-100 mt-6">
+                  <p className="text-sm text-zinc-700"><strong>Important:</strong> International clinical authorities such as the American Society of Plastic Surgeons and academic surgical literature indexed on PubMed support gynecomastia surgery as safe and effective.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Safety and Clinical Standards */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
-            {/* Image Section */}
-            <div data-animate="safety-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('safety-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <BaseImage
-                src="/images/male_breast_reduction.png"
-                alt="Male Breast Reduction Safety"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-zinc-900/10"></div>
-            </div>
-
-            {/* Content Section */}
-            <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Clinical Standards</h2>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Male breast reduction surgery is considered safe when performed by trained plastic surgeons following established surgical safety protocols.
-              </p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                General principles of surgical safety align with global recommendations from the <strong>World Health Organization (WHO)</strong> for safe operative care.
-              </p>
-              <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> Preoperative assessment ensures suitability and minimizes complications.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Recovery Section */}
+        {/* Recovery Timeline Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery After Male Breast Reduction</h2>
-              <p className="text-zinc-500 text-sm">Post-operative recovery follows timelines consistent with guidance from the NHS for cosmetic and reconstructive procedures.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Results Timeline</h2>
+              <p className="text-zinc-500 text-sm">Recovery generally progresses as follows:</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
               {[
-                { time: "First 5–7 days", desc: "Swelling, mild discomfort" },
-                { time: "7–10 days", desc: "Return to desk work" },
-                { time: "3–4 weeks", desc: "Resume light exercise" },
-                { time: "6 weeks", desc: "Full activity allowed" },
-                { time: "3 months", desc: "Final chest contour visible" }
+                { time: "First 3–5 days", desc: "Swelling, tightness, compression garment required" },
+                { time: "1–2 weeks", desc: "Return to light activities" },
+                { time: "4–6 weeks", desc: "Resume exercise and full activity" },
+                { time: "3 months", desc: "Chest contour stabilizes" },
+                { time: "6 months", desc: "Final results visible" }
               ].map((item, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
@@ -400,24 +367,57 @@ export default function MaleBreastReductionMalaysia() {
 
             <div className="px-4 md:px-8 mt-8">
               <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                <p className="text-sm text-blue-700 text-center"><strong>Note:</strong> Compression garments are worn to support healing and contour.</p>
+                <p className="text-sm text-blue-700"><strong>Note:</strong> Postoperative safety and recovery protocols align with global surgical standards supported by the World Health Organization.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Who Is a Suitable Candidate */}
+        {/* Benefits Section */}
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
+            {/* Image Section */}
+            <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('benefits-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <BaseImage
+                src="/images/male_breast_reduction.png"
+                alt="Gynecomastia Surgery Benefits"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-zinc-900/10"></div>
+            </div>
+
+            {/* Content Section */}
+            <div data-animate="benefits-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Gynecomastia Surgery</h2>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+                The procedure addresses both aesthetic and emotional concerns, often with life-changing impact.
+              </p>
+
+              <div className="grid grid-cols-1 gap-3 mb-6">
+                {benefits.map((item, i) => (
+                  <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300 p-3 bg-zinc-50 rounded-lg border border-zinc-200 hover:border-[#FE7623]">
+                    <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    <span className="flex-1">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Who Is Ideal Candidate */}
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is an Ideal Candidate?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be a good candidate if you:
+                  Underlying hormonal or medical causes should be evaluated before surgery. You may be a good candidate if you:
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
-                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </div>
@@ -427,21 +427,45 @@ export default function MaleBreastReductionMalaysia() {
 
               {/* Additional Info */}
               <div data-animate="additional-content" className={`transition-all duration-700 ${isVisible('additional-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl shadow-2xl">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-[#FE7623]/20 rounded-lg">
-                      <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
-                  </div>
-                  <p className="text-zinc-300 text-sm mb-4">
-                    Exercise may reduce fat but cannot remove glandular tissue. Surgical treatment is required for definitive correction of true gynecomastia.
-                  </p>
-                  <p className="text-zinc-400 text-sm">
-                    A consultation will determine the best approach based on your individual anatomy and goals.
-                  </p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Important Distinction</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                  It is important to distinguish true gynecomastia (glandular tissue) from pseudogynecomastia (fat accumulation). Clinical evaluation is essential, as management differs for each.
+                </p>
+                <div className="p-4 bg-amber-50 rounded-xl border border-amber-100">
+                  <p className="text-sm text-amber-800"><strong>Note:</strong> Exercise improves fitness but cannot eliminate glandular breast tissue.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table Section */}
+        <section className="py-8 md:py-24 px-4 md:px-8 lg:px-16 bg-white overflow-hidden">
+          <div className="w-full max-w-[1400px] mx-auto">
+            <div data-animate="comparison-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Gynecomastia Surgery vs Fat Reduction Alone</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Exercise improves fitness but cannot eliminate glandular breast tissue.</p>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm bg-zinc-50 rounded-2xl overflow-hidden shadow-lg">
+                <thead>
+                  <tr className="border-b border-zinc-200 bg-zinc-100">
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Aspect</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Gynecomastia Surgery</th>
+                    <th className="text-left py-4 px-4 text-zinc-600 font-semibold">Fat Loss / Exercise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="border-b border-zinc-100 bg-white hover:bg-zinc-50 transition-colors duration-300">
+                      <td className="py-4 px-4 text-zinc-700 font-medium">{row.aspect}</td>
+                      <td className="py-4 px-4 text-zinc-900">{row.surgery}</td>
+                      <td className="py-4 px-4 text-zinc-500">{row.exercise}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -461,7 +485,7 @@ export default function MaleBreastReductionMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Male breast reduction cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Gynecomastia surgery cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
                   {["Type of surgical technique selected", "Extent of tissue removal required", "Combination with liposuction", "Anaesthesia and facility fees", "Surgeon's expertise and experience"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
@@ -470,7 +494,7 @@ export default function MaleBreastReductionMalaysia() {
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Gynecomastia%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -484,7 +508,7 @@ export default function MaleBreastReductionMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about male breast reduction</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about gynecomastia surgery</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -533,15 +557,15 @@ export default function MaleBreastReductionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Achieve a Flatter, More Confident Chest</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Ready to Restore Your Confidence?</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Take the first step towards a masculine chest contour with male breast reduction surgery.
+              Take the first step towards a flatter, firmer, and more masculine chest.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
               Schedule your consultation with our expert team today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Gynecomastia%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -553,7 +577,7 @@ export default function MaleBreastReductionMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Male breast reduction Malaysia", "gynecomastia surgery", "chest contouring", "male plastic surgery", "enlarged male chest"].map((tag, i) => (
+              {["Gynecomastia Malaysia", "male breast reduction", "chest contouring", "male surgery", "plastic surgeon Malaysia"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
