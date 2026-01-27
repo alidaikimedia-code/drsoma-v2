@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function ThreadLiftMalaysia() {
+export default function LaserScarRemovalMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,57 +35,69 @@ export default function ThreadLiftMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a thread lift?", answer: "A thread lift is a non-surgical procedure that uses dissolvable threads to lift and tighten sagging skin on the face and neck." },
-    { question: "Is a thread lift painful?", answer: "Mild discomfort may occur during the procedure, but local anesthesia is used to minimize pain. Most patients tolerate it well." },
-    { question: "How long do thread lift results last?", answer: "Results typically last 1 to 2 years, depending on the thread type, skin condition, and lifestyle factors." },
-    { question: "Is there downtime after a thread lift?", answer: "Downtime is minimal. Most patients resume normal activities within a few days, though some swelling and bruising may occur." },
-    { question: "Can a thread lift be combined with other treatments?", answer: "Yes, thread lifts can be combined with fillers, Botox, or skin tightening procedures for enhanced results." },
-    { question: "Are thread lifts safe?", answer: "When performed by a qualified practitioner using approved materials, thread lifts are considered safe with a low risk of complications." },
-    { question: "Will a thread lift look natural?", answer: "Yes, thread lifts are designed to provide subtle, natural-looking lifting without the dramatic change of a surgical facelift." },
-    { question: "Who is not suitable for a thread lift?", answer: "Those with active skin infections, severe skin laxity, or certain medical conditions may not be ideal candidates. A consultation is essential." }
+    { question: "What is laser scar removal?", answer: "Laser scar removal uses concentrated light beams to resurface skin, stimulate collagen production, and reduce the appearance of scars." },
+    { question: "Is laser scar treatment painful?", answer: "Most patients experience mild discomfort. Topical anaesthesia or cooling devices are used to minimize pain during treatment." },
+    { question: "How many laser sessions are needed?", answer: "The number of sessions varies based on scar type, size, and severity. Most patients require 3-6 sessions for optimal results." },
+    { question: "What types of scars can laser treat?", answer: "Laser can effectively treat acne scars, surgical scars, burn scars, traumatic scars, and stretch marks." },
+    { question: "How long do laser scar removal results last?", answer: "Results are long-lasting, especially when combined with good skin care. Collagen remodelling continues for months after treatment." },
+    { question: "Is there downtime after laser treatment?", answer: "Downtime varies by laser type. Ablative lasers may require 1-2 weeks recovery, while non-ablative lasers have minimal downtime." },
+    { question: "Are laser scar treatments safe?", answer: "Yes, when performed by qualified practitioners using appropriate laser settings for your skin type and scar condition." },
+    { question: "Who should avoid laser scar treatment?", answer: "Patients with active infections, certain skin disorders, or unrealistic expectations may not be suitable candidates." }
+  ]
+
+  const laserTypes = [
+    { title: "Fractional CO2 Laser", desc: "Ablative laser for deep scar resurfacing and collagen stimulation" },
+    { title: "Erbium YAG Laser", desc: "Precise ablative laser with shorter recovery time" },
+    { title: "Pulsed Dye Laser", desc: "Targets blood vessels to reduce redness in scars" },
+    { title: "Nd:YAG Laser", desc: "Safe for darker skin tones with deep penetration" },
+    { title: "Fractional Non-Ablative", desc: "Stimulates collagen without removing skin layers" },
+    { title: "Picosecond Laser", desc: "Ultra-fast pulses for scar texture improvement" }
+  ]
+
+  const scarTypes = [
+    "Acne scars (boxcar, icepick, rolling)",
+    "Surgical scars from previous procedures",
+    "Burn scars and contractures",
+    "Traumatic injury scars",
+    "Keloid and hypertrophic scars",
+    "Stretch marks (striae)"
   ]
 
   const howItWorks = [
-    { title: "Thread Insertion", desc: "Fine threads are inserted beneath the skin using a thin needle or cannula" },
-    { title: "Tissue Repositioning", desc: "Threads grip and lift sagging tissue to a more youthful position" },
-    { title: "Collagen Stimulation", desc: "Threads stimulate natural collagen production for long-term skin firming" }
-  ]
-
-  const areasForTreatment = [
-    "Mid-face and cheeks for lifted, defined contours",
-    "Jawline to reduce jowls and restore definition",
-    "Neck for improved tone and reduced sagging",
-    "Brow area for subtle eyebrow lifting"
+    { title: "Skin Assessment", desc: "Comprehensive evaluation of scar type, depth, and skin condition" },
+    { title: "Laser Selection", desc: "Choosing the appropriate laser technology for your specific scar" },
+    { title: "Treatment Delivery", desc: "Precise laser energy applied to targeted scar tissue" },
+    { title: "Collagen Response", desc: "Stimulation of natural healing and collagen remodelling" }
   ]
 
   const benefits = [
-    { title: "Non-Surgical", desc: "No incisions or general anesthesia required" },
-    { title: "Minimal Downtime", desc: "Return to daily activities within days" },
-    { title: "Natural Results", desc: "Subtle lifting without an overdone look" },
-    { title: "Collagen Boost", desc: "Stimulates long-term skin rejuvenation" }
+    { title: "Precision Treatment", desc: "Targeted energy delivery to scar tissue only" },
+    { title: "Collagen Stimulation", desc: "Triggers natural skin renewal and healing" },
+    { title: "Customizable", desc: "Settings adjusted for individual skin and scar types" },
+    { title: "Progressive Results", desc: "Continued improvement over weeks and months" }
   ]
 
   const candidateCriteria = [
-    "Have mild to moderate skin laxity on the face or neck",
-    "Are looking for a non-surgical alternative to a facelift",
-    "Have realistic expectations about results",
-    "Are in good general health",
-    "Want to enhance facial contours without surgery"
+    "Have visible scars affecting appearance or self-confidence",
+    "Are in good general health with no active skin infections",
+    "Have realistic expectations about treatment outcomes",
+    "Are committed to following pre and post-treatment care",
+    "Have appropriate skin type for the selected laser"
   ]
 
   const recoveryTimeline = [
-    { time: "Day 1-3", desc: "Mild swelling, bruising, and tenderness at insertion points" },
-    { time: "Day 4-7", desc: "Swelling subsides, avoid strenuous activity and facial massage" },
-    { time: "Week 2-4", desc: "Final results become visible as threads settle" },
-    { time: "1-3 Months", desc: "Collagen production continues to improve skin firmness" }
+    { time: "Day 1-3", desc: "Redness, swelling, and mild discomfort at treatment site" },
+    { time: "Day 4-7", desc: "Skin begins to heal, peeling may occur with ablative lasers" },
+    { time: "Week 2-4", desc: "New skin emerges, initial improvement visible" },
+    { time: "Month 2-6", desc: "Continued collagen remodelling and scar improvement" }
   ]
 
   return (
     <>
       <Head>
-        <title>Thread Lift in Malaysia | Non-Surgical Face &amp; Neck Lifting Treatment</title>
-        <meta name="description" content="Thread lift in Malaysia for non-surgical lifting of the face, jawline, and neck. Learn about procedure details, benefits, safety, recovery, and frequently asked questions." />
-        <link rel="canonical" href="https://drsomaplasticsurgery.com/aesthetic-treatments/thread-lift-malaysia" />
+        <title>Laser Scar Removal in Malaysia | Advanced Scar Treatment Technology</title>
+        <meta name="description" content="Laser scar removal in Malaysia using advanced technology for acne scars, surgical scars, and burn scars. Learn about laser types, treatment process, and results." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/aesthetic-treatments/laser-scar-removal-malaysia" />
       </Head>
 
       <style jsx global>{`
@@ -94,7 +106,7 @@ export default function ThreadLiftMalaysia() {
           max-width: 100vw;
         }
 
-        .thread-lift-page ::selection {
+        .laser-scar-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -220,7 +232,7 @@ export default function ThreadLiftMalaysia() {
       `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
-      <main className="thread-lift-page bg-white text-zinc-900 w-full max-w-full">
+      <main className="laser-scar-page bg-white text-zinc-900 w-full max-w-full">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -229,18 +241,18 @@ export default function ThreadLiftMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Non-Surgical Treatment
+                Advanced Technology
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Thread Lift in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Non-Surgical Face &amp; Neck Lifting Treatment</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Laser Scar Removal in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Advanced Scar Treatment with Precision Technology</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A thread lift is a minimally invasive cosmetic procedure designed to lift and tighten sagging skin on the face and neck without the need for surgery. Using dissolvable threads inserted beneath the skin, this treatment provides subtle, natural-looking results with minimal downtime.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>Thread lifts are ideal for individuals seeking facial rejuvenation without the commitment and recovery time of a traditional facelift. Results are immediate with continued improvement over time as collagen production is stimulated.</p>
+                <p style={{fontSize: '14px'}}>Laser scar removal represents the intersection of medical science and precision technology — offering patients a structured, evidence-based path to visible scar improvement. Using concentrated light energy, laser treatments resurface skin and stimulate natural collagen production.</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>When guided by proper diagnosis, appropriate laser choice, and medically supervised care, scar treatment becomes less about hiding the past and more about restoring confidence in the present.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thread%20Lift" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Laser%20Scar%20Removal" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
@@ -255,7 +267,7 @@ export default function ThreadLiftMalaysia() {
                 <div className="flex -space-x-2">
                   {[
                     'https://randomuser.me/api/portraits/women/32.jpg',
-                    'https://randomuser.me/api/portraits/women/44.jpg',
+                    'https://randomuser.me/api/portraits/men/44.jpg',
                     'https://randomuser.me/api/portraits/women/68.jpg',
                     'https://randomuser.me/api/portraits/men/75.jpg',
                     'https://randomuser.me/api/portraits/women/89.jpg'
@@ -272,8 +284,8 @@ export default function ThreadLiftMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/Safe_thread_in_face.png"
-                alt="Thread Lift Malaysia"
+                src="/images/scar_care_image.png"
+                alt="Laser Scar Removal Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -286,7 +298,7 @@ export default function ThreadLiftMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Treatment Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Face &amp; Neck Lifting</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">Laser Scar Removal</p>
                     </div>
                   </div>
                 </div>
@@ -295,59 +307,80 @@ export default function ThreadLiftMalaysia() {
           </div>
         </section>
 
-        {/* What Is Thread Lift Section */}
+        {/* What Is Laser Scar Removal + Types of Lasers */}
         <section id="learn-more" className="py-8 md:py-12 px-6 bg-white border-b border-zinc-100 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Thread Lift?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Laser Scar Removal?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A thread lift is a cosmetic procedure that uses temporary, dissolvable sutures to produce a subtle but visible lift in the skin. Instead of surgically removing loose facial skin, the practitioner suspends it by inserting thin threads beneath the skin, which then pull the skin back slightly to lift and tighten the face.
+                  Laser scar removal uses concentrated beams of light to precisely target scar tissue. The laser energy breaks down damaged skin cells and stimulates the body&apos;s natural healing response, promoting new collagen formation and healthier skin regeneration.
+                </p>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
+                  Different laser technologies are used depending on the scar type, depth, and patient&apos;s skin characteristics. This allows for customized treatment plans that maximize results while minimizing side effects.
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">Thread lifts also stimulate the body&apos;s natural healing response, triggering <strong>collagen production</strong> in treated areas for continued improvement over time.</p>
+                  <p className="text-sm text-zinc-700">Laser technology has revolutionized scar treatment by offering <strong>precise, controlled energy delivery</strong> that targets only the affected tissue while preserving surrounding healthy skin.</p>
                 </div>
               </div>
 
-              {/* How Thread Lift Works */}
+              {/* Scars Treated */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">How Thread Lift Works</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Types of Scars Treated</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  The procedure involves three key mechanisms:
+                  Laser treatment can effectively address various types of scars:
                 </p>
                 <div className="space-y-3">
-                  {howItWorks.map((item, i) => (
+                  {scarTypes.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-zinc-50 rounded-lg border border-zinc-200">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <div className="flex-1">
-                        <span className="font-semibold text-zinc-700">{item.title}:</span> {item.desc}
-                      </div>
+                      <span className="flex-1">{item}</span>
                     </div>
                   ))}
-                </div>
-                <div className="mt-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
-                  <p className="text-xs text-zinc-600">Threads are made from biocompatible materials such as <strong>PDO (Polydioxanone)</strong>, <strong>PLLA</strong>, or <strong>PCL</strong>, which safely dissolve over time.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Areas Treated Section */}
+        {/* Types of Lasers Used */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div data-animate="options-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('options-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Areas Treated with Thread Lift</h2>
-              <p className="text-zinc-500 text-sm">Thread lifts can address multiple areas of the face and neck for comprehensive facial rejuvenation:</p>
+            <div data-animate="lasers-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('lasers-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Lasers Used</h2>
+              <p className="text-zinc-500 text-sm">We use various laser technologies, each suited for specific scar types and skin conditions:</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
-              {areasForTreatment.map((item, i) => (
-                <div key={i} data-animate={`option-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`option-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
-                  <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    {i + 1}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
+              {laserTypes.map((item, i) => (
+                <div key={i} data-animate={`laser-${i}`} className={`relative bg-white p-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`laser-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   </div>
-                  <p className="text-sm text-zinc-600 font-medium">{item}</p>
+                  <h3 className="text-lg font-semibold text-zinc-800 mb-2">{item.title}</h3>
+                  <p className="text-sm text-zinc-500">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div data-animate="howit-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('howit-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Laser Scar Treatment Works</h2>
+              <p className="text-zinc-500 text-sm">The treatment process involves precise steps to ensure optimal results:</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
+              {howItWorks.map((item, i) => (
+                <div key={i} data-animate={`howit-${i}`} className={`relative bg-zinc-50 p-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`howit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-lg">{i + 1}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-zinc-800 mb-2">{item.title}</h3>
+                  <p className="text-sm text-zinc-500">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -355,16 +388,16 @@ export default function ThreadLiftMalaysia() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="benefits-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Benefits of Thread Lift</h2>
-              <p className="text-zinc-500 text-sm">Thread lifts offer several advantages over traditional surgical facelifts:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Benefits of Laser Scar Treatment</h2>
+              <p className="text-zinc-500 text-sm">Laser technology offers several advantages for scar treatment:</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
               {benefits.map((item, i) => (
-                <div key={i} data-animate={`benefit-${i}`} className={`relative bg-zinc-50 p-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`benefit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                <div key={i} data-animate={`benefit-${i}`} className={`relative bg-white p-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`benefit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="w-12 h-12 bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   </div>
@@ -376,14 +409,14 @@ export default function ThreadLiftMalaysia() {
           </div>
         </section>
 
-        {/* Safety and Medical Standards */}
-        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
+        {/* Safety Section */}
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center px-4 md:px-8">
             {/* Image Section */}
             <div data-animate="safety-image" className={`relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('safety-image') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <BaseImage
-                src="/images/Safe_thread_in_face.png"
-                alt="Thread Lift Safety"
+                src="/images/skin_healing_image.png"
+                alt="Laser Scar Treatment Safety"
                 fill
                 className="object-cover"
               />
@@ -392,31 +425,31 @@ export default function ThreadLiftMalaysia() {
 
             {/* Content Section */}
             <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Medical Standards</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety &amp; Expectations</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Thread lifts are considered safe when performed by qualified practitioners using approved, medical-grade threads. The procedure has a low risk of complications compared to surgical alternatives.
+                Laser scar treatment is safe when performed by qualified practitioners using appropriate laser settings. The technology allows for precise control over treatment depth and intensity.
               </p>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Common temporary side effects include mild swelling, bruising, and tenderness at insertion points, which typically resolve within a few days to a week.
+                Results are progressive — initial improvement is visible after healing, with continued enhancement over 3-6 months as collagen remodelling occurs. Multiple sessions may be needed for optimal results.
               </p>
               <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> Always ensure your procedure is performed by a certified practitioner in a licensed medical facility.</p>
+                <p className="text-sm text-green-800"><strong>Important:</strong> A thorough skin assessment ensures the right laser type and settings are used for your specific skin type and scar condition.</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Recovery Timeline Section */}
-        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
+        {/* Recovery Timeline */}
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline</h2>
-              <p className="text-zinc-500 text-sm">Thread lift recovery is minimal compared to surgical facelifts. Here&apos;s what to expect:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery &amp; Results Timeline</h2>
+              <p className="text-zinc-500 text-sm">Understanding the healing process and when to expect results:</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
               {recoveryTimeline.map((item, i) => (
-                <div key={i} data-animate={`recovery-${i}`} className={`relative bg-zinc-50 pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {item.time}
                   </div>
@@ -427,40 +460,22 @@ export default function ThreadLiftMalaysia() {
           </div>
         </section>
 
-        {/* Who Is an Ideal Candidate */}
-        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
+        {/* Who Is a Suitable Candidate */}
+        <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
+            <div className="px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is an Ideal Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be a suitable candidate for a thread lift if you:
+                  Laser scar treatment may be suitable for individuals who:
                 </p>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {candidateCriteria.map((item, i) => (
-                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
+                    <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-zinc-50 rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
                     </div>
                   ))}
-                </div>
-              </div>
-
-              {/* Additional Info */}
-              <div data-animate="additional-content" className={`transition-all duration-700 ${isVisible('additional-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl shadow-2xl">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 bg-[#FE7623]/20 rounded-lg">
-                      <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
-                  </div>
-                  <p className="text-zinc-300 text-sm mb-4">
-                    Thread lifts are best suited for individuals with mild to moderate skin laxity. Those with significant sagging may benefit more from surgical options.
-                  </p>
-                  <p className="text-zinc-400 text-sm">
-                    A personalized consultation is essential to determine the most appropriate treatment approach for your unique needs and goals.
-                  </p>
                 </div>
               </div>
             </div>
@@ -468,7 +483,7 @@ export default function ThreadLiftMalaysia() {
         </section>
 
         {/* Pricing & FAQ Section */}
-        <section className="pt-8 pb-16 md:pt-24 md:pb-32 px-6 bg-white overflow-hidden">
+        <section className="pt-8 pb-16 md:pt-24 md:pb-32 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-8">
 
             {/* Left: Pricing Sticky */}
@@ -482,16 +497,16 @@ export default function ThreadLiftMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Thread lift cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Laser scar treatment cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Number of threads used", "Treatment areas (face, neck, or both)", "Type of threads (PDO, PLLA, PCL)", "Practitioner&apos;s expertise", "Clinic location and facilities"].map((item, i) => (
+                  {["Type of laser technology used", "Size and depth of scar", "Number of sessions required", "Treatment area complexity", "Combination treatments needed"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span className="flex-1" dangerouslySetInnerHTML={{ __html: item }}></span>
+                      <span className="flex-1">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thread%20Lift" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Laser%20Scar%20Removal" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -505,7 +520,7 @@ export default function ThreadLiftMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common questions about thread lift</p>
+                  <p className="text-sm text-zinc-500">Get answers to common questions about laser scar removal</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -543,6 +558,23 @@ export default function ThreadLiftMalaysia() {
           </div>
         </section>
 
+        {/* Final Perspective Section */}
+        <section className="py-8 md:py-16 px-6 bg-white overflow-hidden">
+          <div className="max-w-4xl mx-auto px-4 md:px-8">
+            <div data-animate="perspective" className={`bg-zinc-50 p-8 md:p-12 rounded-2xl border border-zinc-200 shadow-lg transition-all duration-700 ${isVisible('perspective') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-xl">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                </div>
+                <h2 className="text-2xl font-semibold text-[#FE7623]">Final Perspective</h2>
+              </div>
+              <p className="text-zinc-600 text-base leading-relaxed">
+                Laser scar removal in Malaysia represents the intersection of medical science and precision technology — offering patients a structured, evidence-based path to visible scar improvement. When guided by proper diagnosis, appropriate laser choice, and medically supervised care, scar treatment becomes less about hiding the past and more about <strong>restoring confidence in the present</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 relative overflow-hidden w-full">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-zinc-50 to-zinc-50 -z-10"></div>
@@ -551,18 +583,18 @@ export default function ThreadLiftMalaysia() {
 
           <div data-animate="cta" className={`max-w-5xl mx-auto text-center relative z-10 transition-all duration-700 ${isVisible('cta') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#FE7623] to-orange-400 rounded-2xl mb-8 shadow-xl shadow-orange-500/30 animate-bounce-slow">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Rejuvenate Your Appearance Without Surgery</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Transform Your Skin with Laser Technology</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Discover the benefits of a thread lift for natural-looking facial rejuvenation with minimal downtime.
+              Experience advanced laser scar removal treatment for visible, lasting improvement in scar appearance.
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              Schedule a consultation to learn if a thread lift is the right choice for your aesthetic goals.
+              Schedule a consultation to discuss your scar concerns and discover the right laser treatment for you.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thread%20Lift" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Laser%20Scar%20Removal" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -574,7 +606,7 @@ export default function ThreadLiftMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Thread lift Malaysia", "non-surgical facelift", "PDO threads", "face lifting treatment", "skin tightening"].map((tag, i) => (
+              {["Laser scar removal Malaysia", "CO2 laser treatment", "acne scar laser", "fractional laser", "scar resurfacing"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
