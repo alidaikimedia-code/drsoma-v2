@@ -142,7 +142,7 @@ const MaleHub = () => {
       subtitle: "Hairline Restoration",
       description: "For men who want to restore hairline density and a more confident appearance.",
       bestFor: ["Hairline recession", "Thinning hair", "Crown density"],
-      href: "/contact-us",
+      href: "/male/hair-transplant-malaysia",
       image: "/images/Hair Transplant men.jpg",
     },
     {
@@ -150,7 +150,7 @@ const MaleHub = () => {
       subtitle: "Lower Face Definition",
       description: "For men who want a stronger jawline, sharper lower face definition, and better profile balance.",
       bestFor: ["Jawline definition", "Masculine structure", "Profile balance"],
-      href: "/contact-us",
+      href: "/male/jawline-enhancement-malaysia",
       image: "/images/Jawline Enhancement men.jpg",
       featured: true,
     },
@@ -159,7 +159,7 @@ const MaleHub = () => {
       subtitle: "Profile Enhancement",
       description: "For men who feel their chin is weak and want stronger profile balance.",
       bestFor: ["Side profile", "Facial balance", "Masculine contour"],
-      href: "/contact-us",
+      href: "/male/chin-implant-malaysia",
       image: "/images/Chin Implant men.jpg",
     },
     {
@@ -167,7 +167,7 @@ const MaleHub = () => {
       subtitle: "Nose Reshaping",
       description: "For men who want nose reshaping while keeping strong, masculine facial proportions.",
       bestFor: ["Nose shape balance", "Profile harmony", "Masculine proportions"],
-      href: "/contact-us",
+      href: "/male/male-rhinoplasty-malaysia",
       image: "/images/Male Rhinoplasty men.jpg",
     },
     {
@@ -175,7 +175,7 @@ const MaleHub = () => {
       subtitle: "Abdominal Definition",
       description: "For men who want more visible abdominal definition through detailed contouring in selected candidates.",
       bestFor: ["Athletic definition", "Abdominal shaping", "Body contouring"],
-      href: "/contact-us",
+      href: "/male/six-pack-enhancement-malaysia",
       image: "/images/six_pack_enhancement.jpg",
     },
   ];
@@ -183,11 +183,11 @@ const MaleHub = () => {
   // Decision guide data
   const decisionGuide = [
     { concern: "Chest looks enlarged or puffy", solution: "Gynecomastia Surgery or Male Breast Reduction", href: "/male/gynecomastia-surgery-malaysia" },
-    { concern: "Hairline recession or thinning", solution: "Hair Transplant", href: "/contact-us" },
-    { concern: "Want a stronger jawline", solution: "Jawline Enhancement", href: "/contact-us" },
-    { concern: "Chin looks weak in profile", solution: "Chin Implant", href: "/contact-us" },
-    { concern: "Want nose reshaping that stays masculine", solution: "Male Rhinoplasty", href: "/contact-us" },
-    { concern: "Want more ab definition", solution: "Six Pack Enhancement", href: "/contact-us" },
+    { concern: "Hairline recession or thinning", solution: "Hair Transplant", href: "/male/hair-transplant-malaysia" },
+    { concern: "Want a stronger jawline", solution: "Jawline Enhancement", href: "/male/jawline-enhancement-malaysia" },
+    { concern: "Chin looks weak in profile", solution: "Chin Implant", href: "/male/chin-implant-malaysia" },
+    { concern: "Want nose reshaping that stays masculine", solution: "Male Rhinoplasty", href: "/male/male-rhinoplasty-malaysia" },
+    { concern: "Want more ab definition", solution: "Six Pack Enhancement", href: "/male/six-pack-enhancement-malaysia" },
     { concern: "Exploring intimate confidence concerns", solution: "Penile Enhancement (consultation required)", href: "/male/penile-enhancement-malaysia" },
   ];
 
