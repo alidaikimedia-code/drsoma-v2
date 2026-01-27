@@ -5,13 +5,13 @@ import { getAssetPath } from "@/utils/helper";
 
 const Services = () => {
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
-  
+
   // Create refs for each section
   const bodyRef = useRef<HTMLDivElement>(null);
   const faceRef = useRef<HTMLDivElement>(null);
   const breastRef = useRef<HTMLDivElement>(null);
   const maleRef = useRef<HTMLDivElement>(null);
-  const othersRef = useRef<HTMLDivElement>(null);
+  const aestheticRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -31,7 +31,7 @@ const Services = () => {
     }, observerOptions);
 
     // Observe all sections
-    const sections = [bodyRef, faceRef, breastRef, maleRef, othersRef];
+    const sections = [bodyRef, faceRef, breastRef, maleRef, aestheticRef];
     sections.forEach((ref, index) => {
       if (ref.current) {
         ref.current.setAttribute('data-section', `section-${index}`);
@@ -487,129 +487,86 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="pb-30 lg:pb-60" ref={othersRef}>
+      <section className="pb-30 lg:pb-60" ref={aestheticRef}>
         <div className="flex containers w-full">
           <div className="flex flex-col gap-30 w-full">
-            <div className={`flex w-full py-[33px] px-40 rounded-[16px] bg-para-white transition-all duration-700 ${
+            <div className={`flex w-full bg-no-repeat bg-cover py-[33px] px-40 rounded-[16px] transition-all duration-700 ${
               isVisible('section-4') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}>
-              <div className="flex w-full flex-col gap-[10px]">
-                <h2 className="text-header-black">Others</h2>
+            }`} style={{ backgroundImage: `url(${getAssetPath('/images/face_background.png')})` }}>
+              <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
+                <h2 className="text-header-black">AESTHETIC TREATMENTS</h2>
                 <p className="text-header-black">
-                  Advanced aesthetic treatments and specialized procedures that complement our surgical services. From fat transfer techniques to cellular rejuvenation therapies, we offer innovative solutions for comprehensive beauty enhancement.
+                  Non-surgical solutions for facial rejuvenation, skin improvement, and subtle enhancement. From injectables to advanced skin treatments, explore options that fit your lifestyle with minimal downtime.
                 </p>
               </div>
             </div>
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full transition-all duration-700 ${
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 w-full transition-all duration-700 ${
               isVisible('section-4') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
               <Link
-                href={"/servicespage/fat-transfer"}
+                href={"/aesthetic-treatments/thread-lift-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/liposuction.png"
+                  src="/images/Safe_thread_in_face.png"
                   width={280}
                   height={320}
                   loading="lazy"
-                  alt="Fat Transfer"
+                  alt="Thread Lift"
                   className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Fat Transfer
+                  Thread Lift
                 </h4>
               </Link>
               <Link
-                href={"/servicespage/skin-care"}
+                href={"/aesthetic-treatments/lip-filler-malaysia"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/skin_care_image.png"
+                  src="/images/lip_filler.png"
                   width={280}
                   height={320}
                   loading="lazy"
-                  alt="Advanced Skin Care"
+                  alt="Lip Filler"
                   className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Advanced Skin Care
+                  Lip Filler
                 </h4>
               </Link>
               <Link
-                href={"/regenerative-treatments/cellular-rejuvenation-malaysia"}
-                className="group relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
+                href={"/aesthetic-treatments/keloid-treatment-malaysia"}
+                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-4') ? '0.3s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/face_image.png"
+                  src="/images/keloid_treatment.png"
                   width={280}
                   height={320}
                   loading="lazy"
-                  alt="Cellular Rejuvenation Therapies"
-                  className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center leading-tight">
-                  Cellular Rejuvenation Therapies
-                </h4>
-              </Link>
-              <Link
-                href={"/regenerative-treatments/exion-treatment-malaysia"}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
-                style={{ animationDelay: isVisible('section-4') ? '0.4s' : '0s' }}
-              >
-                <BaseImage
-                  src="/images/pinnaplasty_in_ear.png"
-                  width={280}
-                  height={320}
-                  loading="lazy"
-                  alt="EXION"
+                  alt="Keloid Treatment"
                   className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  EXION
+                  Keloid Treatment
                 </h4>
               </Link>
+            </div>
+            <div className="flex justify-center mt-8">
               <Link
-                href={"/servicespage/advanced-wound-management"}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
-                style={{ animationDelay: isVisible('section-4') ? '0.5s' : '0s' }}
+                href="/aesthetic-treatments"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <BaseImage
-                  src="/images/advanced_wound_management.png"
-                  width={280}
-                  height={320}
-                  loading="lazy"
-                  alt="Advanced Wound Management"
-                  className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Advanced Wound Management
-                </h4>
-              </Link>
-              <Link
-                href={"/servicespage/exosomes-therapy"}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
-                style={{ animationDelay: isVisible('section-4') ? '0.6s' : '0s' }}
-              >
-                <BaseImage
-                  src="/images/cellular_rejuvenation.png"
-                  width={280}
-                  height={320}
-                  loading="lazy"
-                  alt="Exosomes Therapy"
-                  className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Exosomes Therapy
-                </h4>
+                View All Aesthetic Treatments
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
               </Link>
             </div>
           </div>

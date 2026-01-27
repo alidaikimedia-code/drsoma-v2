@@ -3,7 +3,7 @@ import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
-export default function LipFillerMalaysia() {
+export default function DermalFillersMalaysia() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,51 +35,56 @@ export default function LipFillerMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What are lip fillers made of?", answer: "Most lip fillers are made from hyaluronic acid, a naturally occurring substance that attracts moisture and adds volume." },
-    { question: "Are lip fillers safe?", answer: "Yes, when performed by a qualified medical practitioner using approved products in a regulated clinic." },
-    { question: "Will lip fillers look natural?", answer: "When injected conservatively and with proper technique, lip fillers are designed to look soft, balanced, and natural." },
-    { question: "Is the lip filler procedure painful?", answer: "Discomfort is usually minimal. Many fillers contain local anesthetic, and additional numbing can be used if needed." },
-    { question: "How long do lip fillers last?", answer: "Results typically last between 6 and 9 months, depending on individual metabolism and product used." },
-    { question: "Is there downtime after lip fillers?", answer: "Most patients return to daily activities immediately, though mild swelling may occur for a few days." },
-    { question: "Can lip fillers be reversed?", answer: "Yes, hyaluronic acid fillers can be dissolved using a specific enzyme if medically indicated." },
-    { question: "Who should avoid lip fillers?", answer: "Pregnant or breastfeeding individuals, those with active infections, or certain medical conditions may be advised to postpone treatment." }
+    { question: "What are dermal fillers made of?", answer: "Most modern dermal fillers are made from hyaluronic acid, a substance naturally present in the skin that helps retain moisture and volume." },
+    { question: "Are dermal fillers safe?", answer: "Yes, when performed by a qualified medical practitioner using approved products in a regulated clinical setting." },
+    { question: "How long do dermal fillers last?", answer: "Results typically last between 6 and 18 months depending on the filler type, treatment area, and individual factors." },
+    { question: "Is the procedure painful?", answer: "Discomfort is usually minimal. Most fillers contain local anesthetic, and additional numbing may be used if needed." },
+    { question: "Will my face look unnatural or overfilled?", answer: "When performed conservatively and with proper anatomical planning, results are designed to look natural and balanced." },
+    { question: "Is there downtime after dermal fillers?", answer: "Most patients return to daily activities immediately, though mild swelling or bruising may occur for a few days." },
+    { question: "Can dermal fillers be reversed?", answer: "Hyaluronic acid fillers can be dissolved using a specific enzyme if medically indicated." },
+    { question: "Who should avoid dermal fillers?", answer: "Pregnant or breastfeeding individuals, those with active infections, or certain medical conditions may be advised to postpone treatment." }
   ]
 
-  const treatmentGoals = [
-    { name: "Enhancing Volume", desc: "Fuller, plumper lips" },
-    { name: "Shape & Definition", desc: "Improved lip contour" },
-    { name: "Correcting Asymmetry", desc: "Balanced proportions" },
-    { name: "Volume Restoration", desc: "Age-related loss" },
-    { name: "Hydration", desc: "Smoother texture" },
-    { name: "Natural Enhancement", desc: "Subtle refinement" }
+  const treatmentAreas = [
+    { name: "Lips", desc: "Volume, shape, hydration" },
+    { name: "Cheeks", desc: "Mid-face lift and contour" },
+    { name: "Jawline", desc: "Definition and balance" },
+    { name: "Chin", desc: "Projection and profile" },
+    { name: "Nasolabial Folds", desc: "Smile lines correction" },
+    { name: "Under-Eyes", desc: "Tear trough correction" }
   ]
 
   const benefits = [
-    "Immediate visible improvement",
+    "Immediate visible results",
     "Minimal downtime",
-    "Non-surgical and reversible options",
-    "Customizable volume and shape",
-    "Gradual, natural-looking enhancement"
+    "Non-surgical facial enhancement",
+    "Temporary and adjustable outcomes",
+    "Combination potential with other treatments"
   ]
 
   const candidateCriteria = [
-    "Desire fuller or better-defined lips",
-    "Have lip asymmetry or volume loss",
-    "Prefer non-surgical enhancement",
+    "Have age-related volume loss",
+    "Desire facial contour enhancement",
+    "Prefer non-surgical treatment options",
     "Are in good general health",
     "Have realistic expectations"
+  ]
+
+  const longevityData = [
+    { area: "Lips", duration: "6–12 months" },
+    { area: "Cheeks, Jawline, Chin", duration: "9–18 months" }
   ]
 
   return (
     <>
       <Head>
-        <title>Lip Filler in Malaysia | Natural Lip Enhancement & Volume Restoration</title>
-        <meta name="description" content="Lip filler in Malaysia for natural volume, shape, and hydration. Learn benefits, safety, results, downtime, and suitability." />
-        <link rel="canonical" href="https://drsomaplasticsurgery.com/aesthetic-treatments/lip-filler-malaysia" />
+        <title>Dermal Fillers in Malaysia | Facial Volume Restoration & Contouring</title>
+        <meta name="description" content="Dermal fillers in Malaysia for facial rejuvenation, contouring, and volume restoration. Learn benefits, safety, recovery, and suitability." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/aesthetic-treatments/dermal-fillers-malaysia" />
       </Head>
 
       <style jsx global>{`
-        .lip-filler-page ::selection {
+        .dermal-fillers-page ::selection {
           background-color: #FE7623;
           color: white;
         }
@@ -221,7 +226,7 @@ export default function LipFillerMalaysia() {
         .stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
       `}</style>
 
-      <main className="lip-filler-page bg-white text-zinc-900">
+      <main className="dermal-fillers-page bg-white text-zinc-900">
         {/* Hero Section */}
         <section className="relative pt-[50px] pb-[50px] md:pt-[60px] md:pb-[60px] px-6 overflow-hidden" style={{backgroundColor: '#F8FAFC'}}>
           <div className="absolute top-0 left-0 right-0 h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-50/50 via-[#F8FAFC] to-transparent -z-10"></div>
@@ -233,20 +238,20 @@ export default function LipFillerMalaysia() {
                 MOH Regulated Treatment
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Lip Filler in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Subtle Lip Enhancement with Medical Precision</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Dermal Fillers in Malaysia.</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Non-Surgical Facial Rejuvenation & Contour Enhancement</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Lip fillers are non-surgical injectable treatments designed to enhance lip volume, improve shape, restore hydration, and refine symmetry. In Malaysia, lip filler treatments are commonly performed using hyaluronic acid–based fillers, offering customizable and reversible results when administered by qualified medical professionals.</p>
+                <p style={{fontSize: '14px'}}>Dermal fillers are injectable treatments designed to restore lost volume, enhance facial contours, and soften static lines. In Malaysia, dermal fillers are widely used for lips, cheeks, jawline, chin, nasolabial folds, and under-eye hollows, offering noticeable improvement without surgery or extended downtime.</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.35s', animationFillMode: 'forwards'}}>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Lip%20Filler%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Dermal%20Fillers%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
                   Book Consultation
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
-                <a href="#goals" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Treatment Goals
+                <a href="#areas" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
+                  Treatment Areas
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -256,7 +261,7 @@ export default function LipFillerMalaysia() {
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
                 src="/images/lip_filler.png"
-                alt="Lip Filler in Malaysia"
+                alt="Dermal Fillers in Malaysia"
                 fill
                 className="object-cover opacity-95"
               />
@@ -269,7 +274,7 @@ export default function LipFillerMalaysia() {
                     </div>
                     <div>
                       <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Treatment Time</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">20–30 Minutes</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">30–45 Minutes</p>
                     </div>
                   </div>
                 </div>
@@ -278,33 +283,33 @@ export default function LipFillerMalaysia() {
           </div>
         </section>
 
-        {/* What Is Lip Filler + Treatment Goals Combined */}
-        <section id="goals" className="py-8 md:py-16 px-6 bg-white border-b border-zinc-100">
+        {/* What Are Dermal Fillers + Treatment Areas Combined */}
+        <section id="areas" className="py-8 md:py-16 px-6 bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div data-animate="what-1" className={`transition-all duration-700 ${isVisible('what-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Lip Filler?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Are Dermal Fillers?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Lip filler involves the injection of a soft, gel-like substance, most commonly hyaluronic acid (HA), into specific areas of the lips to enhance contour and volume while maintaining natural movement.
+                  Dermal fillers are gel-like substances injected beneath the skin to add volume, support facial structures, and improve contour. The most commonly used fillers are hyaluronic acid (HA)-based, a substance naturally found in the body.
                 </p>
                 <div className="bg-zinc-50 border border-zinc-200 rounded-xl" style={{padding: '10px', paddingLeft: '20px'}}>
                   <div className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <p className="text-sm text-zinc-600">
-                      The U.S. Food and Drug Administration (FDA) regulates dermal fillers and defines approved indications, product standards, and safety requirements for aesthetic use.
+                      The U.S. Food and Drug Administration (FDA) classifies dermal fillers as medical devices and defines their approved aesthetic indications and safety requirements.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div data-animate="what-2" className={`transition-all duration-700 ${isVisible('what-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-xl font-semibold tracking-tight text-zinc-900 mb-4">Goals of Lip Filler Treatment</h3>
-                <p className="text-zinc-500 text-sm mb-6">Lip fillers are tailored to individual anatomy and aesthetic goals. Clinical guidance from the Mayo Clinic highlights that lip enhancement should prioritize facial balance and proportion.</p>
+                <h3 className="text-xl font-semibold tracking-tight text-zinc-900 mb-4">Common Treatment Areas</h3>
+                <p className="text-zinc-500 text-sm mb-6">Dermal fillers can be used to enhance or restore multiple facial regions. Clinical guidance emphasizes respecting natural anatomy and facial proportions.</p>
                 <div className="grid grid-cols-2 gap-4">
-                  {treatmentGoals.map((goal, i) => (
+                  {treatmentAreas.map((area, i) => (
                     <div key={i} className="bg-zinc-50 p-4 rounded-xl border border-zinc-200 hover:border-[#FE7623] group transition-all duration-300">
-                      <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{goal.name}</h4>
-                      <p className="text-xs text-zinc-500">{goal.desc}</p>
+                      <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{area.name}</h4>
+                      <p className="text-xs text-zinc-500">{area.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -319,7 +324,7 @@ export default function LipFillerMalaysia() {
             <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden shadow-2xl img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 min-h-[300px] ${isVisible('benefits-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <BaseImage
                 src="/images/lip_filler.png"
-                alt="Benefits of Lip Fillers"
+                alt="Benefits of Dermal Fillers"
                 fill
                 className="object-cover"
               />
@@ -327,9 +332,9 @@ export default function LipFillerMalaysia() {
             </div>
 
             <div data-animate="benefits-content" className={`transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Lip Fillers</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Dermal Fillers</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Because hyaluronic acid is naturally present in the body, HA fillers integrate smoothly with lip tissue when injected correctly.
+                Because most HA fillers are reversible, they are often chosen for first-time aesthetic patients seeking subtle enhancement.
               </p>
 
               <div className="space-y-4">
@@ -351,7 +356,7 @@ export default function LipFillerMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div data-animate="safety-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('safety-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Safety, Risks, and Expectations</h2>
-              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Lip fillers are generally safe when performed by trained medical professionals. Temporary effects may include swelling, tenderness, or bruising. Rare complications can occur if injections are improperly placed, emphasizing the importance of anatomical expertise.</p>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Like all medical procedures, dermal fillers carry potential risks, including swelling, bruising, asymmetry, and rarely vascular complications. Proper patient assessment, correct injection technique, and anatomical knowledge are essential.</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-zinc-200 p-8 shadow-lg">
@@ -362,7 +367,7 @@ export default function LipFillerMalaysia() {
                 <div>
                   <h3 className="text-lg font-bold text-zinc-900 mb-2">Medical Evidence</h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">
-                    Medical literature indexed by the National Center for Biotechnology Information (NCBI) notes that complication rates are low when fillers are administered using proper technique and approved products.
+                    Medical literature indexed by the National Center for Biotechnology Information (NCBI) highlights that complication rates are low when fillers are administered by trained medical professionals using approved products.
                   </p>
                 </div>
               </div>
@@ -375,36 +380,26 @@ export default function LipFillerMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div data-animate="procedure-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('procedure-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Procedure, Downtime, and Longevity</h2>
-              <p className="text-zinc-500 text-sm">Lip filler treatment usually takes 20–30 minutes. Mild swelling is common for the first few days and gradually subsides.</p>
+              <p className="text-zinc-500 text-sm">Dermal filler treatment is typically completed within 30–45 minutes. Mild swelling or redness may occur and usually resolves within a few days.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div data-animate="longevity-0" className={`bg-zinc-50 rounded-2xl border border-zinc-200 card-hover ${isVisible('longevity-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{padding: '15px'}}>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 mb-2">Lip Fillers</h3>
-                    <p className="text-sm text-zinc-500">Results typically last</p>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-2xl font-bold text-[#FE7623]">6–9 months</span>
-                  </div>
-                </div>
-              </div>
-
-              <div data-animate="longevity-1" className={`bg-zinc-50 rounded-2xl border border-zinc-200 card-hover ${isVisible('longevity-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{padding: '15px', transitionDelay: '100ms'}}>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-lg font-bold text-zinc-900 mb-2">Treatment Duration</h3>
-                    <p className="text-sm text-zinc-500">Quick procedure time</p>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-2xl font-bold text-[#FE7623]">20–30 min</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {longevityData.map((item, i) => (
+                <div key={i} data-animate={`longevity-${i}`} className={`bg-zinc-50 p-8 rounded-2xl border border-zinc-200 card-hover ${isVisible(`longevity-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-zinc-900 mb-2">{item.area}</h3>
+                      <p className="text-sm text-zinc-500">Results typically last</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-2xl font-bold text-[#FE7623]">{item.duration}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
 
-            <p className="text-center text-sm text-zinc-500 mt-8">Duration varies depending on metabolism, product type, and injection technique.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8">Longevity varies based on product type, treatment area, and individual metabolism.</p>
           </div>
         </section>
 
@@ -414,7 +409,7 @@ export default function LipFillerMalaysia() {
             <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                A medical consultation is essential to assess lip anatomy and determine appropriate filler volume.
+                A medical consultation is essential to determine suitability and customize treatment planning.
               </p>
 
               <div className="space-y-4">
@@ -432,7 +427,7 @@ export default function LipFillerMalaysia() {
             <div data-animate="candidate-image" className={`relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl img-zoom ${isVisible('candidate-image') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <BaseImage
                 src="/images/lip_filler.png"
-                alt="Lip Filler Candidate"
+                alt="Dermal Fillers Candidate"
                 fill
                 className="object-cover"
               />
@@ -454,16 +449,16 @@ export default function LipFillerMalaysia() {
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Consultation</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Lip filler pricing varies based on:</p>
+                <p className="text-zinc-400 text-sm mb-6">Dermal filler pricing varies based on:</p>
                 <ul className="space-y-4 mb-8">
-                  {["Amount of filler needed", "Type of filler used", "Individual lip anatomy", "Desired results"].map((item, i) => (
+                  {["Treatment area", "Amount of filler needed", "Type of filler used", "Individual goals"].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Lip%20Filler%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
+                <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Dermal%20Fillers%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
                   Get Quote via WhatsApp
                 </a>
               </div>
@@ -477,7 +472,7 @@ export default function LipFillerMalaysia() {
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about lip fillers</p>
+                  <p className="text-sm text-zinc-500">Get answers to common concerns about dermal fillers</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -528,10 +523,10 @@ export default function LipFillerMalaysia() {
 
             <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Final Note</h2>
             <p className="text-lg text-zinc-500 max-w-3xl mx-auto" style={{marginBottom: '10px'}}>
-              Lip fillers offer a subtle yet effective way to enhance your natural beauty. When performed by qualified professionals with proper technique and realistic expectations, lip enhancement supports facial harmony while preserving your unique identity.
+              Dermal fillers are a powerful yet nuanced tool in facial aesthetics. When guided by anatomy, medical ethics, and realistic expectations, they enhance features without changing identity — supporting facial harmony rather than overpowering it.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4" style={{marginTop: '20px'}}>
-              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Lip%20Filler%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow" style={{paddingLeft: '20px', paddingRight: '20px'}}>
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Dermal%20Fillers%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow" style={{paddingLeft: '20px', paddingRight: '20px'}}>
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
@@ -543,7 +538,7 @@ export default function LipFillerMalaysia() {
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["lip filler", "lip enhancement", "hyaluronic acid", "lip volume", "natural lips", "lip augmentation"].map((tag, i) => (
+              {["hyaluronic acid", "facial fillers", "lip enhancement", "cheek fillers", "jawline contouring", "volume restoration"].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20">{tag}</span>
               ))}
             </div>
