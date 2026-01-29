@@ -389,7 +389,7 @@ export default function BodyLiftMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Body Lift?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">What Is a Body Lift?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
                   A body lift is a reconstructive and contouring surgical procedure that removes excess skin and fat from multiple body areas, most commonly in patients who have experienced massive weight loss following bariatric surgery, medical treatment, or lifestyle changes.
                 </p>
@@ -410,7 +410,7 @@ export default function BodyLiftMalaysia() {
 
               {/* Why Body Lift Is Necessary */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why a Body Lift Is Often Necessary</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6 text-center md:text-left">Why a Body Lift Is Often Necessary</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
                   From a biological perspective, skin behaves like an elastic material only up to a point. Prolonged stretching during obesity leads to structural damage of collagen and elastin fibres. Once this damage occurs, the skin cannot fully retract, even after substantial fat loss.
                 </p>
@@ -454,8 +454,8 @@ export default function BodyLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="process-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('process-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Body Lift Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm">Body lift surgery is performed in a hospital setting under general anaesthesia. The operation is technically demanding and requires advanced surgical planning.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4 text-center md:text-left">How Body Lift Surgery Is Performed</h2>
+              <p className="text-zinc-500 text-sm text-center md:text-left">Body lift surgery is performed in a hospital setting under general anaesthesia. The operation is technically demanding and requires advanced surgical planning.</p>
             </div>
 
             <div className="border-t border-zinc-200 pt-12">
@@ -545,8 +545,7 @@ export default function BodyLiftMalaysia() {
               <div className="absolute inset-0 bg-zinc-900/10"></div>
               {/* Floating Badge */}
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                <div className="mb-2">
                   <span className="text-sm font-bold text-zinc-900">Personalised Care</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
@@ -557,30 +556,30 @@ export default function BodyLiftMalaysia() {
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate?</h2>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">Who Is a Good Candidate?</h2>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8 text-center md:text-left">
                 Suitable candidates for body lift surgery generally meet specific criteria to ensure safe and effective results.
               </p>
 
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Good Candidates Checklist</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4 text-center md:text-left">Good Candidates Checklist</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
-                      <svg className="w-6 h-6 flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      <span>{item}</span>
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                      <span className="flex-1">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="p-6 bg-red-50 rounded-xl border border-red-100">
-                <h4 className="text-sm font-bold text-red-700 mb-4">May Need Further Optimisation</h4>
+                <h4 className="text-sm font-bold text-red-700 mb-4 text-center md:text-left">May Need Further Optimisation</h4>
                 <div className="space-y-2">
                   {notRecommended.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-red-600">
-                      <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                      <span>{item}</span>
+                      <svg className="w-6 h-6 min-w-[24px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                      <span className="flex-1">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -615,11 +614,11 @@ export default function BodyLiftMalaysia() {
                   <div key={i} className="grid grid-cols-3 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
                     <div className={`flex items-center gap-1 md:gap-2 ${row.lipoIcon ? 'text-[#FE7623]' : 'text-[#FE7623]'}`}>
-                      {row.lipoIcon && <svg className="w-4 h-4 md:w-6 md:h-6 group-hover:scale-125 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
+                      {row.lipoIcon && <svg className="hidden md:block w-4 h-4 md:w-6 md:h-6 group-hover:scale-125 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
                       <span className="group-hover:font-semibold transition-all duration-300">{row.lipo}</span>
                     </div>
                     <div className="text-zinc-600 flex items-center gap-1 md:gap-2">
-                      {row.tummyX && <svg className="w-4 h-4 md:w-6 md:h-6 text-zinc-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
+                      {row.tummyX && <svg className="hidden md:block w-4 h-4 md:w-6 md:h-6 text-zinc-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
                       <span className="group-hover:text-zinc-900 transition-colors duration-300">{row.tummy}</span>
                     </div>
                   </div>
@@ -713,13 +712,13 @@ export default function BodyLiftMalaysia() {
               <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl lg:sticky lg:top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FE7623]/10 rounded-full blur-3xl"></div>
 
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex flex-col md:flex-row items-center md:items-center gap-3 mb-6">
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Body lift cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">Body lift cost varies depending on several factors:</p>
                 <ul className="space-y-4 mb-8">
                   {["Extent of skin removal", "Number of areas treated", "Staged vs single procedure", "Operating time", "Hospital stay duration"].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
@@ -736,11 +735,11 @@ export default function BodyLiftMalaysia() {
 
             {/* Right: FAQs */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex flex-col md:flex-row items-center md:items-center gap-4 mb-8">
                 <div className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-lg group hover:scale-110 hover:rotate-6 transition-all duration-300 animate-float">
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
                   <p className="text-sm text-zinc-500">Get answers to common concerns about body lift surgery</p>
                 </div>
@@ -783,11 +782,11 @@ export default function BodyLiftMalaysia() {
         {/* Safety & Regulation Section */}
         <section className="py-8 md:py-20 px-6 bg-gradient-to-b from-zinc-50 to-white border-t border-zinc-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row items-start gap-3 mb-10">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3 mb-10">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <div>
+              <div className="text-center md:text-left">
                 <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety, Regulation & Medical Standards</h3>
                 <p className="text-zinc-500 text-sm mt-1">In Malaysia, body lift surgery falls under private healthcare services regulated by the Ministry of Health Malaysia.</p>
               </div>

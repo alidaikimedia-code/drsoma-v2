@@ -302,7 +302,7 @@ export default function SixPackEnhancementMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Six Pack Enhancement?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">What Is Six Pack Enhancement?</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
                   Six pack enhancement, also known as high-definition abdominal liposculpture, is an advanced form of liposuction that selectively removes fat around the natural contours of the rectus abdominis muscles. Instead of flattening the abdomen uniformly, the surgeon sculpts around muscle borders to enhance visible definition.
                 </p>
@@ -316,7 +316,7 @@ export default function SixPackEnhancementMalaysia() {
 
               {/* Who Is It For */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Who Six Pack Enhancement Is For</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6 text-center md:text-left">Who Six Pack Enhancement Is For</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
                   This procedure is designed for a very specific group of patients. It is suitable for individuals who:
                 </p>
@@ -329,7 +329,7 @@ export default function SixPackEnhancementMalaysia() {
                   ))}
                 </div>
                 <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-                  <h4 className="text-sm font-bold text-red-700 mb-3">Not Intended For</h4>
+                  <h4 className="text-sm font-bold text-red-700 mb-3 text-center md:text-left">Not Intended For</h4>
                   <div className="space-y-2">
                     {notSuitableFor.map((item, i) => (
                       <div key={i} className="flex flex-row items-start gap-3 text-sm text-red-600">
@@ -348,8 +348,8 @@ export default function SixPackEnhancementMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="process-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('process-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Six Pack Enhancement Works</h2>
-              <p className="text-zinc-500 text-sm">Six pack enhancement follows a structured, anatomy-driven approach.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4 text-center md:text-left">How Six Pack Enhancement Works</h2>
+              <p className="text-zinc-500 text-sm text-center md:text-left">Six pack enhancement follows a structured, anatomy-driven approach.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
@@ -450,8 +450,8 @@ export default function SixPackEnhancementMalaysia() {
 
             {/* Content Section */}
             <div data-animate="benefits-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Six Pack Enhancement</h2>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8">
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">Benefits of Six Pack Enhancement</h2>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8 text-center md:text-left">
                 For many patients, the biggest benefit is alignment: their physical appearance finally reflects their fitness efforts.
               </p>
 
@@ -520,13 +520,13 @@ export default function SixPackEnhancementMalaysia() {
               <div data-animate="pricing" className={`bg-gradient-to-br from-zinc-900 to-zinc-800 text-white p-8 rounded-2xl lg:sticky lg:top-24 shadow-2xl transition-all duration-700 hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] group card-shine ${isVisible('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FE7623]/10 rounded-full blur-3xl"></div>
 
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex flex-col md:flex-row items-center md:items-center gap-3 mb-6">
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Six pack enhancement cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">Six pack enhancement cost varies depending on:</p>
                 <ul className="space-y-4 mb-8">
                   {["Extent of sculpting required", "Patient anatomy and goals", "Operating time", "Facility and anaesthesia fees"].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
@@ -543,11 +543,11 @@ export default function SixPackEnhancementMalaysia() {
 
             {/* Right: FAQs */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex flex-col md:flex-row items-center md:items-center gap-4 mb-8">
                 <div className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl shadow-lg group hover:scale-110 hover:rotate-6 transition-all duration-300 animate-float">
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
                   <p className="text-sm text-zinc-500">Get answers to common concerns about six pack enhancement</p>
                 </div>
@@ -590,11 +590,11 @@ export default function SixPackEnhancementMalaysia() {
         {/* Safety & Regulation Section */}
         <section className="pt-12 pb-8 md:pt-7 md:pb-20 px-6 bg-white border-t border-zinc-200 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-row items-start gap-3 mb-7">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-3 mb-7">
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <div>
+              <div className="text-center md:text-left">
                 <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety, Regulation, and Standards in Malaysia</h3>
                 <p className="text-zinc-500 text-sm mt-1">Six pack enhancement is performed under cosmetic surgical services regulated by the Ministry of Health Malaysia.</p>
               </div>

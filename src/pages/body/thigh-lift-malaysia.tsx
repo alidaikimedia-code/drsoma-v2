@@ -514,8 +514,7 @@ export default function ThighLiftMalaysia() {
               <div className="absolute inset-0 bg-zinc-900/10"></div>
               {/* Floating Badge */}
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                <div className="mb-2">
                   <span className="text-sm font-bold text-zinc-900">Long-Lasting Results</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
@@ -540,11 +539,11 @@ export default function ThighLiftMalaysia() {
                   { title: "Restores Body Proportion", desc: "Balances body contours after weight loss." },
                   { title: "Long-Lasting Results", desc: "Permanent improvement when weight remains stable." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
-                    <div className="flex-shrink-0 w-14 h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
-                      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <div key={i} className="flex flex-row items-start gap-3 md:gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
+                      <svg className="w-6 h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <div>
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{item.title}</h4>
                       <p className="text-xs text-zinc-500 mt-1">{item.desc}</p>
                     </div>
@@ -622,12 +621,12 @@ export default function ThighLiftMalaysia() {
                   <div key={i} className="grid grid-cols-3 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-3 md:gap-4 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
                     <div className={`flex items-center gap-1 md:gap-2 ${row.thighliftIcon ? 'text-[#FE7623]' : 'text-zinc-600'}`}>
-                      {row.thighliftIcon && <svg className="w-4 h-4 md:w-6 md:h-6 group-hover:scale-125 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
+                      {row.thighliftIcon && <svg className="hidden md:block w-4 h-4 md:w-6 md:h-6 group-hover:scale-125 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
                       <span className="group-hover:font-semibold transition-all duration-300">{row.thighlift}</span>
                     </div>
                     <div className="text-zinc-600 flex items-center gap-1 md:gap-2">
-                      {row.lipoIcon && <svg className="w-4 h-4 md:w-6 md:h-6 text-green-500 group-hover:scale-125 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
-                      {row.lipoX && <svg className="w-4 h-4 md:w-6 md:h-6 text-zinc-400 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
+                      {row.lipoIcon && <svg className="hidden md:block w-4 h-4 md:w-6 md:h-6 text-green-500 group-hover:scale-125 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>}
+                      {row.lipoX && <svg className="hidden md:block w-4 h-4 md:w-6 md:h-6 text-zinc-400 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>}
                       <span className="group-hover:text-zinc-900 transition-colors duration-300">{row.lipo}</span>
                     </div>
                   </div>
@@ -738,30 +737,30 @@ export default function ThighLiftMalaysia() {
                   Scarring is an unavoidable aspect of thigh lift surgery, but careful planning minimizes visibility. Realistic expectations regarding scars are an essential part of preoperative counselling.
                 </p>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
-                    <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <div>
+                  <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
+                    <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-zinc-900">Natural Crease Placement</h4>
                       <p className="text-xs text-zinc-500 mt-1">Scars are placed in natural creases when possible.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
-                    <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <div>
+                  <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
+                    <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-zinc-900">Gradual Fading</h4>
                       <p className="text-xs text-zinc-500 mt-1">Scars fade gradually over 6–12 months.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
-                    <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <div>
+                  <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
+                    <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-zinc-900">Proper Wound Care</h4>
                       <p className="text-xs text-zinc-500 mt-1">Wound care and sun protection improve scar quality.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
-                    <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <div>
+                  <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
+                    <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-sm font-bold text-zinc-900">Individual Healing</h4>
                       <p className="text-xs text-zinc-500 mt-1">Final appearance depends on skin type and healing response.</p>
                     </div>

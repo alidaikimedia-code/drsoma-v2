@@ -339,7 +339,7 @@ export default function FatTransferMalaysia() {
 
               {/* Why Fat Transfer Is Preferred */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Fat Transfer Is Increasingly Preferred</h3>
+                <h3 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Fat Transfer Is Increasingly Preferred</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
                   Many patients prefer fat transfer over artificial fillers or implants for one simple reason: it feels and looks natural. Transferred fat behaves like normal tissue once it establishes blood supply, integrating into the body rather than sitting as a foreign material.
                 </p>
