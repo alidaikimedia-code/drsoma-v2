@@ -582,6 +582,39 @@ export default function EyelidSurgeryMalaysia() {
           </div>
         </section>
 
+        {/* Related Procedures Section */}
+        <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div data-animate="related-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('related-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Related Procedures</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Explore other facial procedures that complement eyelid surgery for comprehensive rejuvenation.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
+              {[
+                { title: "Asian Eyelid Surgery", desc: "Double eyelid surgery for natural crease creation", href: "/face/asian-eyelid-surgery-malaysia", icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" },
+                { title: "Brow Lift", desc: "Elevate sagging brows for a refreshed look", href: "/face/brow-lift-malaysia", icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" },
+                { title: "Face Lift", desc: "Comprehensive facial rejuvenation surgery", href: "/face/face-lift-malaysia", icon: "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { title: "Neck Lift", desc: "Restore definition to the jawline and neck", href: "/face/neck-lift-malaysia", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" }
+              ].map((procedure, i) => (
+                <Link key={i} href={procedure.href} className="block p-6 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-[#FE7623] to-orange-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={procedure.icon} /></svg>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-bold text-zinc-900 mb-2 group-hover:text-[#FE7623] transition-colors duration-300">{procedure.title}</h3>
+                  <p className="text-sm text-zinc-500 mb-4">{procedure.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#FE7623] group-hover:gap-3 transition-all duration-300">
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-8 md:py-24 px-6 bg-white relative overflow-hidden w-full">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/50 via-white to-white -z-10"></div>
@@ -611,11 +644,23 @@ export default function EyelidSurgeryMalaysia() {
               </Link>
             </div>
 
-            {/* SEO Tags */}
+            {/* Related Links */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["eyelid surgery Malaysia", "blepharoplasty", "eye bag removal", "droopy eyelid correction", "eye rejuvenation"].map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
-              ))}
+              <Link href="/face" className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
+                All Face Procedures
+              </Link>
+              <Link href="/face/asian-eyelid-surgery-malaysia" className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
+                Asian Eyelid Surgery
+              </Link>
+              <Link href="/face/brow-lift-malaysia" className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
+                Brow Lift
+              </Link>
+              <Link href="/face/face-lift-malaysia" className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
+                Face Lift
+              </Link>
+              <Link href="/face/rhinoplasty-malaysia" className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
+                Rhinoplasty
+              </Link>
             </div>
           </div>
         </section>

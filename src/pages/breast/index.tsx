@@ -155,14 +155,18 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-4">
-            <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
-              <Phone className="w-4 h-4 mr-2" />
-              Book a Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp Us
-            </Button>
+            <Link href="/contact-us">
+              <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
+                <Phone className="w-4 h-4 mr-2" />
+                Book a Consultation
+              </Button>
+            </Link>
+            <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Surgery">
+              <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
+                <MessageCircle className="w-4 h-4 mr-2" />
+                WhatsApp Us
+              </Button>
+            </a>
           </div>
 
           <p className="text-[12px] sm:text-[13px] text-[#999999] italic pt-2">
@@ -397,10 +401,12 @@ function QuickGuideSection() {
                   <p className="text-white text-[12px] sm:text-[14px] mb-1">Still not sure?</p>
                   <p className="text-white text-[16px] sm:text-[18px] font-semibold">Let us help you decide</p>
                 </div>
-                <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 text-[13px] sm:text-[15px] whitespace-nowrap w-full sm:w-auto">
-                  Book a Consultation
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                </Button>
+                <Link href="/contact-us">
+                  <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 text-[13px] sm:text-[15px] whitespace-nowrap w-full sm:w-auto">
+                    Book a Consultation
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -471,14 +477,18 @@ function CTASection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
-                Book a Consultation
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                WhatsApp Us
-              </Button>
+              <Link href="/contact-us">
+                <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
+                  Book a Consultation
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                </Button>
+              </Link>
+              <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Surgery">
+                <Button size="lg" variant="outline" className="border-[#D4D4D4] text-[#2B2B2B] hover:bg-[#FAFAF9] rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  WhatsApp Us
+                </Button>
+              </a>
             </div>
           </div>
         </div>

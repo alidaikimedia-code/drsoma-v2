@@ -95,7 +95,7 @@ export default function RhinoplastyRevisionMalaysia() {
     <>
       <Head>
         <title>Revision Rhinoplasty Malaysia | Corrective Nose Surgery – Dr. Soma</title>
-        <meta name="description" content="Revision rhinoplasty in Malaysia by Dr. Soma. Corrective nose surgery for function, structure, and balance. Expert reconstruction for failed rhinoplasty. Book consultation today." />
+        <meta name="description" content="Revision rhinoplasty in Malaysia by Dr. Soma. Corrective nose surgery to restore function, structure, and balance after failed rhinoplasty." />
       </Head>
 
       <style jsx global>{`

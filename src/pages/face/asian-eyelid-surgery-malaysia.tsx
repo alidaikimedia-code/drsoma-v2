@@ -98,7 +98,7 @@ export default function AsianEyelidSurgeryMalaysia() {
     <>
       <Head>
         <title>Asian Eyelid Surgery Malaysia | Double Eyelid Surgery – Dr. Soma</title>
-        <meta name="description" content="Asian eyelid surgery (double eyelid surgery) in Malaysia by Dr. Soma. Natural crease creation respecting Asian facial anatomy. Expert blepharoplasty. Book consultation today." />
+        <meta name="description" content="Asian eyelid surgery in Malaysia by Dr. Soma. Natural double eyelid creation that respects Asian facial anatomy with expert blepharoplasty care." />
       </Head>
 
       <style jsx global>{`
