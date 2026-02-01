@@ -304,6 +304,41 @@ const FaceHub = () => {
         <meta property="og:url" content={getFullUrl("/face")} />
         <meta property="og:image" content={getFullUrl("/images/face_lift.png")} />
         <link rel="canonical" href={getFullUrl("/face")} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsomaplasticsurgery.com/face#faq",
+              "mainEntity": [
+                {"@type": "Question", "name": "What is facial cosmetic surgery?", "acceptedAnswer": {"@type": "Answer", "text": "Facial cosmetic surgery includes procedures that refine facial features, restore balance, or refresh appearance while preserving your natural identity."}},
+                {"@type": "Question", "name": "Is facial cosmetic surgery about changing how I look?", "acceptedAnswer": {"@type": "Answer", "text": "Most patients are not looking to change who they are. The goal is usually to look more refreshed, balanced, and confident while still looking like themselves."}},
+                {"@type": "Question", "name": "How do I know if facial surgery is right for me?", "acceptedAnswer": {"@type": "Answer", "text": "You do not need to be sure before booking. A consultation helps clarify whether surgery is suitable and which option, if any, fits your concerns."}},
+                {"@type": "Question", "name": "Do I need to decide on a procedure before a consultation?", "acceptedAnswer": {"@type": "Answer", "text": "No. Most patients start with a concern, not a procedure name. The consultation helps match concerns to the right options."}},
+                {"@type": "Question", "name": "Can multiple facial areas be treated together?", "acceptedAnswer": {"@type": "Answer", "text": "Some patients combine procedures to improve overall harmony, such as nose and chin balance or face and neck lifting. This depends on suitability and safety."}},
+                {"@type": "Question", "name": "Is facial cosmetic surgery permanent?", "acceptedAnswer": {"@type": "Answer", "text": "Surgical changes are long-lasting, but natural ageing continues. The goal is improvement, not stopping time."}},
+                {"@type": "Question", "name": "What if I am worried about making the wrong decision?", "acceptedAnswer": {"@type": "Answer", "text": "That concern is very common. Consultations are meant to provide clarity and honest guidance, not pressure to proceed."}},
+                {"@type": "Question", "name": "Is facial cosmetic surgery only for older patients?", "acceptedAnswer": {"@type": "Answer", "text": "No. Patients of different ages seek facial surgery for different reasons, from structural concerns to early signs of ageing."}}
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsomaplasticsurgery.com/face#service",
+              "name": "Facial Cosmetic Surgery in Malaysia | Dr. Soma Clinical Aesthetics",
+              "url": "https://drsomaplasticsurgery.com/face",
+              "description": "Explore facial cosmetic surgery options in Malaysia with Dr. Soma. From rhinoplasty to face lift, find procedures that enhance your natural beauty in a safe, professional environment.",
+              "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127},
+              "image": "https://drsomaplasticsurgery.com/images/face_lift.png"
+            })
+          }}
+        />
       </Head>
 
       {/* ==================== LUXURIOUS HERO SECTION ==================== */}

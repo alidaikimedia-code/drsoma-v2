@@ -99,6 +99,100 @@ export default function AsianEyelidSurgeryMalaysia() {
       <Head>
         <title>Asian Eyelid Surgery Malaysia | Double Eyelid Surgery – Dr. Soma</title>
         <meta name="description" content="Asian eyelid surgery in Malaysia by Dr. Soma. Natural double eyelid creation that respects Asian facial anatomy with expert blepharoplasty care." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/asian-eyelid-surgery-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Asian eyelid surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a procedure that creates a natural-looking double eyelid while preserving Asian facial features."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my eyes look Westernised?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Properly performed surgery enhances definition without altering ethnic identity."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is double eyelid surgery permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisional techniques offer permanent results; suture techniques may fade over time."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the procedure painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is mild and usually well controlled."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long before I see final results?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most results settle within 1–2 months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars are minimal and typically hidden within the new crease."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can both eyes be done differently?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, adjustments are often made to improve symmetry."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Asian eyelid surgery safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified surgeon in a licensed medical facility."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/asian-eyelid-surgery-malaysia/#service",
+              "name": "Asian Eyelid Surgery Malaysia | Double Eyelid Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/asian-eyelid-surgery-malaysia/",
+              "description": "Asian eyelid surgery in Malaysia by Dr. Soma. Natural double eyelid creation that respects Asian facial anatomy with expert blepharoplasty care.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

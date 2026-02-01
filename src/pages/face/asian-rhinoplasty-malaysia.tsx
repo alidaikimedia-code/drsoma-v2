@@ -95,6 +95,84 @@ export default function AsianRhinoplastyMalaysia() {
       <Head>
         <title>Asian Rhinoplasty Malaysia | Ethnic Nose Surgery – Dr. Soma</title>
         <meta name="description" content="Asian rhinoplasty in Malaysia by Dr. Soma — expert ethnic nose surgery that enhances facial harmony while preserving your natural features. Book a consultation." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/asian-rhinoplasty-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Asian rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Asian rhinoplasty is a nose surgery technique tailored to Asian nasal anatomy, focusing on enhancement while preserving ethnic features."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is Asian rhinoplasty different from regular rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It often involves augmentation and structural support rather than reduction, with special consideration for thicker skin and cartilage strength."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Asian rhinoplasty safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by an experienced surgeon in a licensed medical facility, it is considered safe and well established."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does recovery take?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to daily activities within 1–2 weeks, with final results developing over several months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will implants always be used?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not always. Many cases use cartilage grafts, implants, or a combination depending on anatomy and goals."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my nose look Westernised?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The goal is natural enhancement that fits your facial structure and ethnic identity."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/asian-rhinoplasty-malaysia/#service",
+              "name": "Asian Rhinoplasty Malaysia | Ethnic Nose Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/asian-rhinoplasty-malaysia/",
+              "description": "Asian rhinoplasty in Malaysia by Dr. Soma — expert ethnic nose surgery that enhances facial harmony while preserving your natural features. Book a consultation.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

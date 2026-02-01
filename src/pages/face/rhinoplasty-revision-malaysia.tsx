@@ -96,6 +96,92 @@ export default function RhinoplastyRevisionMalaysia() {
       <Head>
         <title>Revision Rhinoplasty Malaysia | Corrective Nose Surgery – Dr. Soma</title>
         <meta name="description" content="Revision rhinoplasty in Malaysia by Dr. Soma. Corrective nose surgery to restore function, structure, and balance after failed rhinoplasty." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/rhinoplasty-revision-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is revision rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Revision rhinoplasty is corrective nose surgery performed after a previous rhinoplasty to fix functional or aesthetic problems."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long should I wait before revision surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most surgeons recommend waiting at least 9–12 months after the initial surgery."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is revision rhinoplasty riskier than primary rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. It is more complex due to scar tissue and altered anatomy, but safe when performed by experienced surgeons."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will I need cartilage grafts?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In many cases, yes. Grafts help restore support and correct deformities."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can breathing problems be fixed during revision?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Functional correction is a key goal of revision rhinoplasty."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my nose ever look \"normal\" again?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In most cases, significant improvement is achievable, though perfection is not guaranteed."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is recovery longer than the first surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Often yes, especially when extensive reconstruction or cartilage grafting is required."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/rhinoplasty-revision-malaysia/#service",
+              "name": "Revision Rhinoplasty Malaysia | Corrective Nose Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/rhinoplasty-revision-malaysia/",
+              "description": "Revision rhinoplasty in Malaysia by Dr. Soma. Corrective nose surgery to restore function, structure, and balance after failed rhinoplasty.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

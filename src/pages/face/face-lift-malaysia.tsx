@@ -88,6 +88,100 @@ export default function FaceLiftMalaysia() {
       <Head>
         <title>Face Lift Malaysia | Rhytidectomy Surgery – Dr. Soma</title>
         <meta name="description" content="Face lift (rhytidectomy) surgery in Malaysia by Dr. Soma. Surgical facial rejuvenation for natural, long-lasting results. Expert facial contouring. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/face-lift-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is a face lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A face lift is surgery that repositions facial tissues and removes excess skin to restore a youthful appearance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will a face lift look unnatural?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, when performed using modern techniques, results are natural and balanced."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do face lift results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Typically 8–12 years, depending on ageing and lifestyle factors."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is face lift surgery painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate and well controlled with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars are placed along natural creases and hairlines, making them discreet."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long is recovery after a face lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to normal activities within 2–3 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can a face lift be combined with other procedures?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, commonly with eyelid surgery, fat transfer, or neck lift."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is face lift surgery safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified plastic surgeon in a licensed facility."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/face-lift-malaysia/#service",
+              "name": "Face Lift Malaysia | Rhytidectomy Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/face-lift-malaysia/",
+              "description": "Face lift (rhytidectomy) surgery in Malaysia by Dr. Soma. Surgical facial rejuvenation for natural, long-lasting results. Expert facial contouring. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

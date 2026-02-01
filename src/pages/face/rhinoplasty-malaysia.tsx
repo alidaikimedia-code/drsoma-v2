@@ -101,6 +101,84 @@ export default function RhinoplastyMalaysia() {
       <Head>
         <title>Rhinoplasty Malaysia | Nose Reshaping Surgery – Dr. Soma</title>
         <meta name="description" content="Rhinoplasty in Malaysia by Dr. Soma. Precision nose reshaping for facial harmony and improved breathing. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/rhinoplasty-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Rhinoplasty is a surgical procedure that reshapes the nose to improve appearance, breathing, or both."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is rhinoplasty safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When performed by a qualified surgeon in a licensed medical facility, rhinoplasty is considered safe and well established."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does recovery take after rhinoplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to daily activities within 1–2 weeks, with final results developing over up to a year."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In closed rhinoplasty, scars are inside the nose. In open rhinoplasty, the external scar is small and usually fades well."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is rhinoplasty permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Results are long lasting, although natural ageing can subtly affect nasal appearance over time."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can rhinoplasty fix breathing problems?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Functional rhinoplasty can correct structural issues like a deviated septum to improve airflow."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/rhinoplasty-malaysia/#service",
+              "name": "Rhinoplasty Malaysia | Nose Reshaping Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/rhinoplasty-malaysia/",
+              "description": "Rhinoplasty in Malaysia by Dr. Soma. Precision nose reshaping for facial harmony and improved breathing. Certified plastic surgeon with hospital-grade safety. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

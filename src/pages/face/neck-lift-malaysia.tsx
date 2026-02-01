@@ -90,6 +90,100 @@ export default function NeckLiftMalaysia() {
       <Head>
         <title>Neck Lift Malaysia | Cervicoplasty Surgery – Dr. Soma</title>
         <meta name="description" content="Neck lift (cervicoplasty) surgery in Malaysia by Dr. Soma. Restore a defined jawline and youthful neck contour. Expert surgical rejuvenation. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/neck-lift-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is a neck lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A neck lift is surgery that tightens neck muscles and skin to restore a youthful neck and jawline."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will a neck lift look natural?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed using modern techniques, results are natural and balanced."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do neck lift results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Results typically last many years, depending on ageing and lifestyle factors."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is neck lift surgery painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate and well controlled with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars are discreetly placed behind the ears and under the chin."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long is recovery after a neck lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to normal activities within 2–3 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can a neck lift be combined with a face lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it is commonly combined for comprehensive rejuvenation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is neck lift surgery safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified plastic surgeon in a licensed facility."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/neck-lift-malaysia/#service",
+              "name": "Neck Lift Malaysia | Cervicoplasty Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/neck-lift-malaysia/",
+              "description": "Neck lift (cervicoplasty) surgery in Malaysia by Dr. Soma. Restore a defined jawline and youthful neck contour. Expert surgical rejuvenation. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

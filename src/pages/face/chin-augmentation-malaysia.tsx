@@ -87,6 +87,100 @@ export default function ChinAugmentationMalaysia() {
       <Head>
         <title>Chin Augmentation Malaysia | Genioplasty Surgery – Dr. Soma</title>
         <meta name="description" content="Chin augmentation (genioplasty) surgery in Malaysia by Dr. Soma. Enhance facial balance and jawline definition. Expert chin enhancement surgery. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/chin-augmentation-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is chin augmentation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Chin augmentation is surgery that enhances chin projection to improve facial balance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will chin augmentation look natural?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when planned according to facial proportions and anatomy."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do chin augmentation results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Results are long-lasting and often permanent."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is chin augmentation painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate and well controlled with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisions are typically made inside the mouth or under the chin, making scars minimal or hidden."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can chin augmentation be combined with other procedures?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it is commonly combined with rhinoplasty or neck lift for comprehensive facial enhancement."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is chin augmentation safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified plastic surgeon in a licensed facility."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the difference between implant and genioplasty?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Implants add projection using biocompatible material, while genioplasty repositions the actual chin bone for structural correction."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/chin-augmentation-malaysia/#service",
+              "name": "Chin Augmentation Malaysia | Genioplasty Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/chin-augmentation-malaysia/",
+              "description": "Chin augmentation (genioplasty) surgery in Malaysia by Dr. Soma. Enhance facial balance and jawline definition. Expert chin enhancement surgery. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

@@ -90,6 +90,100 @@ export default function BrowLiftMalaysia() {
       <Head>
         <title>Brow Lift Malaysia | Forehead Lift Surgery – Dr. Soma</title>
         <meta name="description" content="Brow lift (forehead lift) surgery in Malaysia by Dr. Soma. Restore a youthful, refreshed brow position with natural-looking results. Expert facial rejuvenation. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/brow-lift-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is a brow lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A brow lift surgically elevates a sagging forehead and brow to restore a more alert appearance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will I look surprised after surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "With modern techniques, the results are natural — not frozen or startled."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can a brow lift be combined with other procedures?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it is often combined with eyelid surgery or facelift for comprehensive facial rejuvenation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the procedure painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is mild and easily managed with prescribed medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do the results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Results typically last 5–10 years depending on skin quality and lifestyle."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisions are hidden in the hairline or brow, and scars are typically not noticeable once healed."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the recovery time?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to daily activities within 1–2 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is brow lift surgery safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a board-certified plastic surgeon in an accredited facility."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/brow-lift-malaysia/#service",
+              "name": "Brow Lift Malaysia | Forehead Lift Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/brow-lift-malaysia/",
+              "description": "Brow lift (forehead lift) surgery in Malaysia by Dr. Soma. Restore a youthful, refreshed brow position with natural-looking results. Expert facial rejuvenation. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

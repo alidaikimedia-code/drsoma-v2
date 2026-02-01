@@ -87,6 +87,92 @@ export default function EyelidSurgeryMalaysia() {
       <Head>
         <title>Eyelid Surgery Malaysia | Blepharoplasty – Dr. Soma</title>
         <meta name="description" content="Eyelid surgery (blepharoplasty) in Malaysia by Dr. Soma. Brighter, refreshed, and youthful eyes. Expert eye rejuvenation in licensed facility. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/eyelid-surgery-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is eyelid surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Eyelid surgery is a procedure that removes or repositions excess skin and fat from the eyelids to improve appearance and function."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is blepharoplasty safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified plastic surgeon in a regulated medical facility."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will eyelid surgery change my eye shape?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The goal is to restore natural contours, not alter ethnic or personal eye shape."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is eyelid surgery painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild and well controlled with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Results are long-lasting, often for many years, especially with healthy aging."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars are placed in natural creases and usually fade significantly over time."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When can I return to work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to work within 1-2 weeks after the procedure."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/eyelid-surgery-malaysia/#service",
+              "name": "Eyelid Surgery Malaysia | Blepharoplasty – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/eyelid-surgery-malaysia/",
+              "description": "Eyelid surgery (blepharoplasty) in Malaysia by Dr. Soma. Brighter, refreshed, and youthful eyes. Expert eye rejuvenation in licensed facility. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

@@ -88,6 +88,100 @@ export default function BuccalFatRemovalMalaysia() {
       <Head>
         <title>Buccal Fat Removal Malaysia | Cheek Reduction Surgery – Dr. Soma</title>
         <meta name="description" content="Buccal fat removal surgery in Malaysia by Dr. Soma. Facial contouring for a slimmer, more defined look. Expert cheek reduction surgery. Book consultation today." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/face/buccal-fat-removal-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is buccal fat removal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a surgical procedure that reduces cheek fat to create a slimmer, more defined face."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my face look hollow after surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, when performed conservatively by an experienced surgeon."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is buccal fat removal permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the removed fat does not return."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long is recovery after buccal fat removal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients resume normal activities within a week."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, incisions are made inside the mouth so there are no external scars."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can buccal fat removal be combined with other procedures?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, it can be combined with chin liposuction or other facial contouring procedures."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is buccal fat removal safe in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a certified plastic surgeon in a licensed facility."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who should avoid buccal fat removal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Patients with very thin faces or significant facial volume loss from ageing are not ideal candidates."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/face/buccal-fat-removal-malaysia/#service",
+              "name": "Buccal Fat Removal Malaysia | Cheek Reduction Surgery – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/face/buccal-fat-removal-malaysia/",
+              "description": "Buccal fat removal surgery in Malaysia by Dr. Soma. Facial contouring for a slimmer, more defined look. Expert cheek reduction surgery. Book consultation today.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
