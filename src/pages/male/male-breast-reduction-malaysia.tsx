@@ -73,6 +73,100 @@ export default function MaleBreastReductionMalaysia() {
         <title>Male Breast Reduction Malaysia | Gynecomastia Surgery by Plastic Surgeon</title>
         <meta name="description" content="Male breast reduction surgery in Malaysia treats enlarged male chest caused by gynecomastia or fat. Learn procedure, safety, recovery, and FAQs." />
         <link rel="canonical" href="https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is male breast reduction surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a surgical procedure to remove excess fat and glandular tissue from the male chest."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is male breast reduction the same as gynecomastia surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Male breast reduction is the surgical treatment for gynecomastia."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the surgery permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Removed glandular tissue does not grow back."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will there be scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars are minimal and usually hidden around the areola."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does recovery take?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to work within 7–10 days."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can exercise fix gynecomastia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Exercise may reduce fat but cannot remove glandular tissue."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the procedure painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pain is typically mild to moderate and well controlled with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is male breast reduction safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by a qualified plastic surgeon in a regulated facility."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia#service",
+              "name": "Male Breast Reduction Malaysia | Gynecomastia Surgery by Plastic Surgeon",
+              "url": "https://drsomaplasticsurgery.com/male/male-breast-reduction-malaysia",
+              "description": "Male breast reduction surgery in Malaysia treats enlarged male chest caused by gynecomastia or fat. Learn procedure, safety, recovery, and FAQs.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`

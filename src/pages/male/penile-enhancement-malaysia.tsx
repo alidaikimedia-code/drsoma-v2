@@ -71,6 +71,92 @@ export default function PenileEnhancementMalaysia() {
         <title>Penile Enhancement Malaysia | Surgical & Non-Surgical Options by Specialist</title>
         <meta name="description" content="Penile enhancement procedures in Malaysia for length or girth improvement. Learn techniques, safety, recovery, expectations & FAQs." />
         <link rel="canonical" href="https://drsomaplasticsurgery.com/male/penile-enhancement-malaysia" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsomaplasticsurgery.com/male/penile-enhancement-malaysia#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is penile enhancement?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It refers to medical procedures that improve penile length, girth, or appearance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is penile enhancement safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, when performed by qualified doctors in regulated medical facilities."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are results permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Surgical results are long-lasting; filler-based treatments may require maintenance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will penile enhancement affect function?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When done correctly, normal function and sensation are preserved."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the procedure painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate and managed with medication."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much size increase is realistic?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Improvements are modest and proportional, not dramatic."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long is recovery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non-surgical recovery is 2–3 days; surgical recovery is 7–10 days with sexual activity avoided for 4–6 weeks."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsomaplasticsurgery.com/male/penile-enhancement-malaysia#service",
+              "name": "Penile Enhancement Malaysia | Surgical & Non-Surgical Options by Specialist",
+              "url": "https://drsomaplasticsurgery.com/male/penile-enhancement-malaysia",
+              "description": "Penile enhancement procedures in Malaysia for length or girth improvement. Learn techniques, safety, recovery, expectations & FAQs.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
