@@ -73,6 +73,19 @@ export default function StomachLiposuctionMalaysia() {
       <Head>
         <title>Stomach Liposuction Malaysia | Belly Fat Removal – Dr. Soma</title>
         <meta name="description" content="Stomach Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn belly fat and refine waistline using MicroAire PAL." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/liposuction-stomach-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is stomach liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "A surgical fat-removal procedure that contours the abdomen by removing excess subcutaneous fat."}}, {"@type": "Question", "name": "When will I see results?", "acceptedAnswer": {"@type": "Answer", "text": "Visible changes usually appear at 4–6 weeks, with final results at 3–6 months."}}, {"@type": "Question", "name": "How long do results last?", "acceptedAnswer": {"@type": "Answer", "text": "Long-lasting, because removed fat cells do not regenerate. Stable weight maintains contour."}}, {"@type": "Question", "name": "Does stomach liposuction remove loose skin?", "acceptedAnswer": {"@type": "Answer", "text": "No. It removes fat. If loose skin is significant, a tummy tuck may be more suitable."}}, {"@type": "Question", "name": "Is it painful?", "acceptedAnswer": {"@type": "Answer", "text": "Discomfort is usually mild to moderate and feels like muscle soreness. Medication helps."}}, {"@type": "Question", "name": "Is stomach liposuction safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a proper medical facility, it is generally safe. Risks are explained during consultation."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/liposuction-stomach-malaysia/#service", "name": "Stomach Liposuction Malaysia | Belly Fat Removal – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/liposuction-stomach-malaysia/", "description": "Stomach Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn belly fat and refine waistline using MicroAire PAL.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

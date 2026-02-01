@@ -118,6 +118,19 @@ export default function TummyTuckMalaysia() {
       <Head>
         <title>Tummy Tuck Malaysia by Specialist Plastic Surgeon | Abdominoplasty - Dr. Soma</title>
         <meta name="description" content="Looking for tummy tuck in Malaysia? Dr. Soma offers comprehensive abdominoplasty to restore a flatter, firmer abdomen with surgical precision and structured postoperative care." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/tummy-tuck-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is a tummy tuck?", "acceptedAnswer": {"@type": "Answer", "text": "A tummy tuck is a surgical procedure that removes excess abdominal skin and fat while tightening weakened abdominal muscles to create a flatter abdomen."}}, {"@type": "Question", "name": "Is a tummy tuck the same as liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "No. Liposuction removes fat only, while a tummy tuck also removes loose skin and tightens muscles."}}, {"@type": "Question", "name": "Is tummy tuck surgery safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a regulated facility, it is considered a safe and well-established procedure."}}, {"@type": "Question", "name": "How long does recovery take?", "acceptedAnswer": {"@type": "Answer", "text": "Most patients return to daily activities within 2-4 weeks, with final results visible over 3-6 months."}}, {"@type": "Question", "name": "Will there be a scar?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but it is placed low on the abdomen and typically hidden by underwear or swimwear."}}, {"@type": "Question", "name": "Are tummy tuck results permanent?", "acceptedAnswer": {"@type": "Answer", "text": "Results are long-lasting if body weight remains stable."}}, {"@type": "Question", "name": "Can pregnancy affect tummy tuck results?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pregnancy can stretch the abdomen again, so surgery is best after completing childbearing."}}, {"@type": "Question", "name": "Who should consider a tummy tuck?", "acceptedAnswer": {"@type": "Answer", "text": "Patients with loose abdominal skin, muscle laxity, stable weight, and realistic expectations."}}, {"@type": "Question", "name": "Can a tummy tuck improve posture?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Muscle repair can enhance core support and posture."}}, {"@type": "Question", "name": "Can it be combined with other procedures?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is commonly combined with liposuction for enhanced contouring."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/tummy-tuck-malaysia/#service", "name": "Tummy Tuck Malaysia by Specialist Plastic Surgeon | Abdominoplasty - Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/tummy-tuck-malaysia/", "description": "Looking for tummy tuck in Malaysia? Dr. Soma offers comprehensive abdominoplasty to restore a flatter, firmer abdomen with surgical precision and structured postoperative care.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

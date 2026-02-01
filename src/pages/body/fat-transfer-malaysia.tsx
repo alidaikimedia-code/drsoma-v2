@@ -109,6 +109,19 @@ export default function FatTransferMalaysia() {
       <Head>
         <title>Fat Transfer Malaysia | Natural Volume Restoration – Dr. Soma</title>
         <meta name="description" content="Fat transfer surgery in Malaysia by Dr. Soma. Natural volume restoration using your own body fat for face, breast, buttocks and body contouring. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/fat-transfer-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is fat transfer surgery?", "acceptedAnswer": {"@type": "Answer", "text": "Fat transfer is a surgical procedure that removes fat from one area of the body and injects it into another area to restore volume and improve contour."}}, {"@type": "Question", "name": "Is fat transfer permanent?", "acceptedAnswer": {"@type": "Answer", "text": "The fat that survives after the first few months is generally permanent, as long as body weight remains stable."}}, {"@type": "Question", "name": "Is fat transfer safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a licensed medical facility, fat transfer is considered a safe and established procedure."}}, {"@type": "Question", "name": "How long does recovery take?", "acceptedAnswer": {"@type": "Answer", "text": "Most patients return to normal daily activities within 1–2 weeks, with final results visible after several months."}}, {"@type": "Question", "name": "Will the transferred fat feel natural?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Because it is your own tissue, transferred fat feels soft and natural once healed."}}, {"@type": "Question", "name": "Can fat transfer be combined with other procedures?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is commonly combined with liposuction, body contouring, or facial rejuvenation procedures."}}, {"@type": "Question", "name": "How much fat survives after transfer?", "acceptedAnswer": {"@type": "Answer", "text": "Typically, 60–80% of transferred fat survives long term, depending on technique and individual healing."}}, {"@type": "Question", "name": "Who should not undergo fat transfer?", "acceptedAnswer": {"@type": "Answer", "text": "Patients with very low body fat, unstable weight, or uncontrolled medical conditions may not be suitable candidates."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/fat-transfer-malaysia/#service", "name": "Fat Transfer Malaysia | Natural Volume Restoration – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/fat-transfer-malaysia/", "description": "Fat transfer surgery in Malaysia by Dr. Soma. Natural volume restoration using your own body fat for face, breast, buttocks and body contouring. Certified plastic surgeon with hospital-grade safety. Book consultation today.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

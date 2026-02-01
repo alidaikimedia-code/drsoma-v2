@@ -87,6 +87,19 @@ export default function ThighLiposuctionMalaysia() {
       <Head>
         <title>Thigh Liposuction Malaysia | Inner & Outer Thigh Fat Removal – Dr. Soma</title>
         <meta name="description" content="Thigh Liposuction in Malaysia by Certified Plastic Surgeon. Slimmer legs and smoother shape using MicroAire PAL. Inner and Outer thigh fat removal." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/liposuction-thighs-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is thigh liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "A surgical fat-removal procedure that contours the inner and/or outer thighs by removing excess subcutaneous fat to improve leg shape and proportion."}}, {"@type": "Question", "name": "How is thigh liposuction done?", "acceptedAnswer": {"@type": "Answer", "text": "Small incisions are made, a fine cannula is used to suction fat after tumescent infiltration, and MicroAire Power-Assisted technology helps support smoother, more uniform contouring."}}, {"@type": "Question", "name": "When will I see results after thigh liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "You'll start noticing changes at 4–6 weeks, with final contour visible between 3–6 months as swelling fully resolves."}}, {"@type": "Question", "name": "How long does thigh liposuction last?", "acceptedAnswer": {"@type": "Answer", "text": "Results are long-lasting because fat cells removed do not regenerate. Maintaining stable weight helps preserve thigh contour."}}, {"@type": "Question", "name": "Does thigh liposuction help with inner thigh rubbing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. By reducing inner thigh bulk, many patients experience less friction and improved walking comfort."}}, {"@type": "Question", "name": "Does thigh liposuction tighten loose skin?", "acceptedAnswer": {"@type": "Answer", "text": "It can provide mild tightening if your skin elasticity is good. If loose hanging skin is significant, a thigh lift may be recommended."}}, {"@type": "Question", "name": "How painful is thigh liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "Pain is usually mild to moderate and often described as soreness. Medication keeps discomfort manageable."}}, {"@type": "Question", "name": "How long is downtime after thigh liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "Most patients return to desk work within 5–7 days. Exercise is typically resumed around 4–6 weeks with surgeon approval."}}, {"@type": "Question", "name": "Does thigh liposuction leave scars?", "acceptedAnswer": {"@type": "Answer", "text": "Incisions are tiny (3–4mm) and placed discreetly. Scars fade significantly over time."}}, {"@type": "Question", "name": "Is thigh liposuction safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a proper medical facility, thigh liposuction is generally safe. Risks exist like any surgery and are discussed during consultation."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/liposuction-thighs-malaysia/#service", "name": "Thigh Liposuction Malaysia | Inner & Outer Thigh Fat Removal – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/liposuction-thighs-malaysia/", "description": "Thigh Liposuction in Malaysia by Certified Plastic Surgeon. Slimmer legs and smoother shape using MicroAire PAL. Inner and Outer thigh fat removal.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

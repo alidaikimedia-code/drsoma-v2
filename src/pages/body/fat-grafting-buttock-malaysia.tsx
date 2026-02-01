@@ -93,6 +93,19 @@ export default function FatGraftingButtockMalaysia() {
       <Head>
         <title>Fat Grafting to Buttocks Malaysia | Natural Buttock Enhancement – Dr. Soma</title>
         <meta name="description" content="Fat grafting to buttocks (gluteal fat transfer) in Malaysia by Dr. Soma. Natural buttock enhancement using your own fat. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/fat-grafting-buttock-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is fat grafting to the buttocks?", "acceptedAnswer": {"@type": "Answer", "text": "A procedure that uses a patient's own fat to enhance buttock shape and volume."}}, {"@type": "Question", "name": "Is it safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a trained plastic surgeon following established safety guidelines, it is considered safe."}}, {"@type": "Question", "name": "How long do results last?", "acceptedAnswer": {"@type": "Answer", "text": "Surviving fat is permanent if body weight remains stable."}}, {"@type": "Question", "name": "Will I lose volume over time?", "acceptedAnswer": {"@type": "Answer", "text": "Some early fat loss is expected; final results stabilise by 3–4 months."}}, {"@type": "Question", "name": "Is the procedure painful?", "acceptedAnswer": {"@type": "Answer", "text": "Discomfort is usually mild to moderate and managed with medication."}}, {"@type": "Question", "name": "Can it be combined with other procedures?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, commonly with liposuction or body contouring surgeries."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/fat-grafting-buttock-malaysia/#service", "name": "Fat Grafting to Buttocks Malaysia | Natural Buttock Enhancement – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/fat-grafting-buttock-malaysia/", "description": "Fat grafting to buttocks (gluteal fat transfer) in Malaysia by Dr. Soma. Natural buttock enhancement using your own fat. Certified plastic surgeon with hospital-grade safety. Book consultation today.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

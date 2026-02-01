@@ -89,6 +89,19 @@ export default function ChinLiposuctionMalaysia() {
       <Head>
         <title>Chin Liposuction Malaysia | Double Chin Removal & Jawline – Dr. Soma</title>
         <meta name="description" content="Chin Liposuction in Malaysia by Certified Plastic Surgeon. Remove double chin fat and define the jawline for a sharper neck angle and natural profile." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/liposuction-chin-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is chin liposuction?", "acceptedAnswer": {"@type": "Answer", "text": "A surgical procedure that removes excess subcutaneous fat under the chin to reduce double chin and improve jawline definition."}}, {"@type": "Question", "name": "How is chin liposuction done?", "acceptedAnswer": {"@type": "Answer", "text": "Small hidden incisions (2-3mm) are made, tumescent solution is infiltrated, and fat is gently removed with a fine cannula using controlled sculpting for smooth, natural contour."}}, {"@type": "Question", "name": "When will I see results?", "acceptedAnswer": {"@type": "Answer", "text": "Many patients see visible improvement by 3–4 weeks, with final refinement around 2–3 months as swelling fully resolves."}}, {"@type": "Question", "name": "How long do results last?", "acceptedAnswer": {"@type": "Answer", "text": "Results are long-lasting because removed fat cells do not regenerate. Jawline definition is permanent provided weight remains stable."}}, {"@type": "Question", "name": "Does chin liposuction tighten loose skin?", "acceptedAnswer": {"@type": "Answer", "text": "It can help skin retract if elasticity is good. If loose skin is significant, tightening procedures may be recommended."}}, {"@type": "Question", "name": "Is it painful?", "acceptedAnswer": {"@type": "Answer", "text": "Discomfort is usually mild to moderate and manageable with medication. Tightness and soreness are common early on rather than severe pain."}}, {"@type": "Question", "name": "How long is downtime?", "acceptedAnswer": {"@type": "Answer", "text": "Most patients return to desk work in 1–3 days. A compression strap is worn as instructed. Full recovery takes about 2–3 months."}}, {"@type": "Question", "name": "Will there be scars?", "acceptedAnswer": {"@type": "Answer", "text": "Incisions are tiny (2-3mm) and placed discreetly under the chin or near the ears. Scars typically fade significantly over time."}}, {"@type": "Question", "name": "Can chin liposuction be combined with other procedures?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is often combined with neck liposuction or face procedures for comprehensive facial contouring. This is discussed during consultation."}}, {"@type": "Question", "name": "Is chin liposuction safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a proper medical facility, chin liposuction is generally safe. Risks exist like any surgery and are explained during consultation."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/liposuction-chin-malaysia/#service", "name": "Chin Liposuction Malaysia | Double Chin Removal & Jawline – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/liposuction-chin-malaysia/", "description": "Chin Liposuction in Malaysia by Certified Plastic Surgeon. Remove double chin fat and define the jawline for a sharper neck angle and natural profile.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`

@@ -114,6 +114,19 @@ export default function BodyLiftMalaysia() {
       <Head>
         <title>Body Lift Malaysia | Comprehensive Body Contouring After Weight Loss – Dr. Soma</title>
         <meta name="description" content="Body lift surgery in Malaysia by Dr. Soma. Comprehensive body contouring after massive weight loss to remove excess skin and reshape your body. Book consultation today." />
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "@id": "https://drsomaplasticsurgery.com/body/body-lift-malaysia/#faq", "mainEntity": [{"@type": "Question", "name": "What is a body lift?", "acceptedAnswer": {"@type": "Answer", "text": "A body lift is a surgical procedure that removes excess skin and fat from multiple body areas to improve contour after major weight loss."}}, {"@type": "Question", "name": "Is body lift surgery safe?", "acceptedAnswer": {"@type": "Answer", "text": "When performed by a certified plastic surgeon in a licensed hospital setting, it is a well-established and safe procedure."}}, {"@type": "Question", "name": "How long does recovery take?", "acceptedAnswer": {"@type": "Answer", "text": "Initial recovery takes about 2–3 weeks, with full healing over several months."}}, {"@type": "Question", "name": "Will there be scars?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Scarring is unavoidable but strategically placed and typically fades over time."}}, {"@type": "Question", "name": "Is the surgery painful?", "acceptedAnswer": {"@type": "Answer", "text": "Postoperative discomfort is expected but usually well controlled with medication."}}, {"@type": "Question", "name": "Can a body lift be done in one surgery?", "acceptedAnswer": {"@type": "Answer", "text": "Some patients undergo a single-stage procedure; others benefit from a staged approach."}}, {"@type": "Question", "name": "Are the results permanent?", "acceptedAnswer": {"@type": "Answer", "text": "Results are long-lasting if body weight remains stable."}}, {"@type": "Question", "name": "Who should avoid body lift surgery?", "acceptedAnswer": {"@type": "Answer", "text": "Patients with unstable weight, uncontrolled medical conditions, or unrealistic expectations."}}]})
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({"@context": "https://schema.org", "@type": "Service", "@id": "https://drsomaplasticsurgery.com/body/body-lift-malaysia/#service", "name": "Body Lift Malaysia | Comprehensive Body Contouring After Weight Loss – Dr. Soma", "url": "https://drsomaplasticsurgery.com/body/body-lift-malaysia/", "description": "Body lift surgery in Malaysia by Dr. Soma. Comprehensive body contouring after massive weight loss to remove excess skin and reshape your body. Book consultation today.", "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127}})
+          }}
+        />
       </Head>
 
       <style jsx global>{`
