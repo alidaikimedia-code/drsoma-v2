@@ -1,0 +1,108 @@
+{
+  "url": "https://drsoma-v2.vercel.app/body/thigh-lift-malaysia/",
+  "canonical": "https://drsoma-v2.vercel.app/body/thigh-lift-malaysia/",
+  "title": "Thigh Lift Malaysia by Specialist Plastic Surgeon | Remove Loose Thigh Skin Safely – Dr. Soma",
+  "description": "Looking for safe, surgeon-performed thigh lift (thighplasty) in Malaysia? Dr. Soma offers advanced body contouring to remove excess thigh skin for firmer, smoother contours.",
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://drsoma-v2.vercel.app/body/thigh-lift-malaysia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a thigh lift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A thigh lift is a surgical procedure that removes excess skin and fat from the thighs to improve firmness and contour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a thigh lift the same as thigh liposuction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Liposuction removes fat only, while a thigh lift removes loose skin and reshapes the thighs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is thigh lift surgery safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When performed by a certified plastic surgeon in a regulated facility, it is considered a safe and established procedure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does recovery take after a thigh lift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most patients resume daily activities within 2–4 weeks, with full recovery over several months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will there be visible scars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but scars are placed strategically and fade over time with proper care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are thigh lift results permanent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results are long-lasting if body weight remains stable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a thigh lift be combined with other procedures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is often combined with tummy tuck or body lift surgery after weight loss."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does exercise help after a thigh lift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exercise improves muscle tone but cannot replace surgical skin removal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should consider a thigh lift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Patients with loose thigh skin after weight loss or ageing and stable weight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is age a limiting factor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Overall health and skin condition are more important than age alone."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://drsoma-v2.vercel.app/body/thigh-lift-malaysia/#service",
+      "name": "Thigh Lift Malaysia by Specialist Plastic Surgeon | Remove Loose Thigh Skin Safely – Dr. Soma",
+      "url": "https://drsoma-v2.vercel.app/body/thigh-lift-malaysia/",
+      "description": "Looking for safe, surgeon-performed thigh lift (thighplasty) in Malaysia? Dr. Soma offers advanced body contouring to remove excess thigh skin for firmer, smoother contours.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 127
+      }
+    }
+  ]
+}

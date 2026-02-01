@@ -1,0 +1,84 @@
+{
+  "url": "https://drsoma-v2.vercel.app/body/belt-lipectomy-malaysia/",
+  "canonical": "https://drsoma-v2.vercel.app/body/belt-lipectomy-malaysia/",
+  "title": "Belt Lipectomy Malaysia | Circumferential Body Contouring After Weight Loss – Dr. Soma",
+  "description": "Belt lipectomy surgery in Malaysia by Dr. Soma. 360° circumferential body contouring after massive weight loss to remove excess skin around the entire lower torso. Book consultation today.",
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://drsoma-v2.vercel.app/body/belt-lipectomy-malaysia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a belt lipectomy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A circumferential surgery that removes excess skin and fat around the waist, abdomen, and lower back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is belt lipectomy safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When performed by a qualified plastic surgeon in a licensed hospital, it is a well-established and safe procedure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is recovery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Initial recovery takes 2–3 weeks, with continued healing over several months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will there be scars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Scars are unavoidable but placed strategically and tend to fade with time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the surgery painful?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Postoperative discomfort is expected but usually controlled with medication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are results permanent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results are long-lasting if body weight remains stable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should avoid this surgery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Patients with unstable weight, uncontrolled medical illness, or unrealistic expectations."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://drsoma-v2.vercel.app/body/belt-lipectomy-malaysia/#service",
+      "name": "Belt Lipectomy Malaysia | Circumferential Body Contouring After Weight Loss – Dr. Soma",
+      "url": "https://drsoma-v2.vercel.app/body/belt-lipectomy-malaysia/",
+      "description": "Belt lipectomy surgery in Malaysia by Dr. Soma. 360° circumferential body contouring after massive weight loss to remove excess skin around the entire lower torso. Book consultation today.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 127
+      }
+    }
+  ]
+}

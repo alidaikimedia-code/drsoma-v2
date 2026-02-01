@@ -1,0 +1,108 @@
+{
+  "url": "https://drsoma-v2.vercel.app/body/liposuction-arms-malaysia/",
+  "canonical": "https://drsoma-v2.vercel.app/body/liposuction-arms-malaysia/",
+  "title": "Arm Liposuction Malaysia | Slimmer Arms & Definition – Dr. Soma",
+  "description": "Arm Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn tricep and underarm fat using MicroAire PAL for natural, defined results.",
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://drsoma-v2.vercel.app/body/liposuction-arms-malaysia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is arm liposuction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arm liposuction is a surgical procedure that removes excess subcutaneous fat from the upper arms to improve contour and definition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is arm liposuction done?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Small incisions are made, a fine cannula is inserted, and fat is removed using tumescent technique and MicroAire Power-Assisted Liposuction to support smoother results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When will I see results after arm liposuction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You will notice gradual improvement as swelling reduces. Many patients see visible changes at 4–6 weeks, with final results around 3–6 months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do arm liposuction results last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results are long-lasting because removed fat cells do not regenerate. Maintaining stable weight preserves contour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does arm liposuction tighten loose skin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can provide mild tightening if your skin elasticity is good. If loose hanging skin is significant, an arm lift may be recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How painful is arm liposuction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Discomfort is usually mild to moderate and is well managed with medication. Most patients describe soreness rather than sharp pain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is downtime after arm liposuction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most patients return to desk work within 5–7 days. Exercise is typically resumed around 4–6 weeks with surgeon approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will arm liposuction leave scars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scars are minimal because incisions are small and placed discreetly. They fade significantly over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is arm liposuction safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When performed by a certified plastic surgeon in a proper medical facility, arm liposuction is generally safe. Risks exist like any surgery and are discussed during consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many areas can be treated in one session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many patients treat both arms in a single procedure. Adjacent contouring areas may be added depending on safety and surgical planning."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://drsoma-v2.vercel.app/body/liposuction-arms-malaysia/#service",
+      "name": "Arm Liposuction Malaysia | Slimmer Arms & Definition – Dr. Soma",
+      "url": "https://drsoma-v2.vercel.app/body/liposuction-arms-malaysia/",
+      "description": "Arm Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn tricep and underarm fat using MicroAire PAL for natural, defined results.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 127
+      }
+    }
+  ]
+}
