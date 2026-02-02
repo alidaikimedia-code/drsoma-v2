@@ -130,7 +130,7 @@ const Home = () => {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] flex items-center bg-[#F9FAFB] overflow-hidden pt-32 lg:pt-36 pb-20 lg:pb-24">
+      <section className="relative w-full min-h-[80vh] md:min-h-[90vh] flex items-center bg-[#F9FAFB] overflow-hidden pt-24 md:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
         {/* Background Image - CSS background-image on right side */}
         <div
           className="absolute right-0 top-0 w-full md:w-1/2 h-full bg-cover bg-center md:bg-left-top z-0 opacity-5 md:opacity-100"
@@ -140,76 +140,76 @@ const Home = () => {
         </div>
 
         {/* Content Container */}
-        <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="max-w-2xl">
             {/* Badge */}
-            <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-[#EA622F] text-xs font-bold tracking-widest uppercase mb-6">
+            <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-[#EA622F] text-[10px] md:text-xs font-bold tracking-widest uppercase mb-4 md:mb-6">
               Premier Plastic Surgery Clinic
             </span>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#101010] leading-[1.1] mb-6">
-              Bring Out The <span className="text-[#EA622F]">Natural Beauty</span> <br /> In You
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#101010] leading-[1.15] mb-4 md:mb-6">
+              Bring Out The <span className="text-[#EA622F]">Natural Beauty</span> In You
             </h1>
 
             {/* Description */}
-            <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-lg leading-relaxed">
               Experience world-class cosmetic and reconstructive surgery with a focus on safety, artistry, and personalized care.
             </p>
 
-            {/* Checkmarks - 2x2 grid */}
-            <div className="grid grid-cols-2 gap-y-4 gap-x-6 mb-[52px]">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            {/* Checkmarks - 1 col on mobile, 2 cols on larger */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-y-4 md:gap-x-6 mb-8 md:mb-[52px]">
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-sm">Honest &amp; Ethical Guidance</span>
+                <span className="text-gray-700 font-medium text-xs md:text-sm">Honest &amp; Ethical Guidance</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-sm">Board Certified Surgeon</span>
+                <span className="text-gray-700 font-medium text-xs md:text-sm">Board Certified Surgeon</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-sm">Safety First Protocols</span>
+                <span className="text-gray-700 font-medium text-xs md:text-sm">Safety First Protocols</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-sm">Natural Looking Results</span>
+                <span className="text-gray-700 font-medium text-xs md:text-sm">Natural Looking Results</span>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20 min-w-[200px] group"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-12 md:h-14 rounded-full px-6 md:px-8 text-sm md:text-base shadow-lg shadow-orange-500/20 w-full sm:w-auto group"
                 onClick={() => router.push('/contact')}
               >
                 Book A Consultation
-                <svg className="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-7 md:h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </button>
               <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base min-w-[200px] group"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-12 md:h-14 rounded-full px-6 md:px-8 text-sm md:text-base w-full sm:w-auto group"
                 onClick={() => router.push('/treatments')}
               >
                 Explore Procedures
-                <svg className="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-7 md:h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>
@@ -224,7 +224,7 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-6 md:py-8 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100 border-x border-gray-100">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 sm:border-x border-gray-100">
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-6 h-6" />
@@ -503,11 +503,16 @@ const Home = () => {
         </div>
 
         {/* Auto-scrolling certificates */}
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full max-w-full overflow-hidden">
           <style jsx>{`
             @keyframes scroll {
               0% { transform: translateX(0); }
               100% { transform: translateX(-50%); }
+            }
+            .certificates-wrapper {
+              width: 100%;
+              max-width: 100vw;
+              overflow: hidden;
             }
             .certificates-scroll {
               display: flex;
@@ -520,45 +525,48 @@ const Home = () => {
               animation-play-state: paused;
             }
             .certificates-scroll img {
-              height: 160px;
+              height: 120px;
               width: auto;
               flex-shrink: 0;
-              margin: 0 32px;
+              margin: 0 20px;
             }
             @media (min-width: 768px) {
               .certificates-scroll img {
                 height: 200px;
+                margin: 0 32px;
               }
             }
           `}</style>
-          <div className="certificates-scroll">
-            <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
-            <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
-            <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
-            <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
-            <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
-            <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
-            <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
-            <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
-            <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
-            <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
-            <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
-            <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
-            <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
-            {/* Duplicate for seamless loop */}
-            <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
-            <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
-            <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
-            <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
-            <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
-            <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
-            <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
-            <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
-            <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
-            <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
-            <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
-            <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
-            <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
+          <div className="certificates-wrapper">
+            <div className="certificates-scroll">
+              <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
+              <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
+              <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
+              <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
+              <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
+              <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
+              <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
+              <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
+              <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
+              <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
+              <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
+              <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
+              <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
+              {/* Duplicate for seamless loop */}
+              <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
+              <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
+              <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
+              <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
+              <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
+              <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
+              <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
+              <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
+              <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
+              <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
+              <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
+              <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
+              <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
+            </div>
           </div>
         </div>
       </section>
