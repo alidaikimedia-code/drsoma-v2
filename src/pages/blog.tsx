@@ -133,13 +133,13 @@ const Blogs = () => {
         <meta property="og:title" content="Blog - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta property="og:description" content="Read informative articles about plastic surgery, aesthetic treatments, and beauty tips from Dr. Soma Clinical Aesthetics in Malaysia." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={getFullUrl('/blogs')} />
+        <meta property="og:url" content={getFullUrl('/blog')} />
         <meta property="og:image" content={getFullUrl('/images/blog_page_banner_image.png')} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta name="twitter:description" content="Read informative articles about plastic surgery, aesthetic treatments, and beauty tips from Dr. Soma Clinical Aesthetics in Malaysia." />
         <meta name="twitter:image" content={getFullUrl('/images/blog_page_banner_image.png')} />
-        <link rel="canonical" href={getFullUrl('/blogs')} />
+        <link rel="canonical" href={getFullUrl('/blog')} />
       </Head>
       <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef}>
         <div className="flex containers w-full">
@@ -187,7 +187,7 @@ const Blogs = () => {
                   {blogs.map((blog, index) => (
                     <Link
                       key={blog.id}
-                      href={`/blogs/${blog.id}`}
+                      href={`/blog/${blog.id}`}
                       className={`group bg-white rounded-2xl overflow-hidden transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-primary/20 ${
                         isVisible('section-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                       }`}

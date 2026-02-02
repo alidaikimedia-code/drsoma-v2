@@ -327,7 +327,7 @@ const Exion = () => {
             title: "Exosomes Therapy",
             description: "Cellular therapy for regeneration and healing",
             image: "/images/cellular_rejuvenation.png",
-            href: "/servicespage/exosomes-therapy",
+            href: "/treatments/exosomes-therapy",
             badge: "Related",
             badgeColor: "primary"
           },
@@ -343,7 +343,7 @@ const Exion = () => {
             title: "Advanced Skin Care",
             description: "Comprehensive skin care treatments for optimal skin health",
             image: "/images/skin_care_image.png",
-            href: "/servicespage/skin-care",
+            href: "/treatments/skin-care",
             badge: "Non-Surgical",
             badgeColor: "green"
           },
@@ -351,7 +351,7 @@ const Exion = () => {
             title: "Advanced Wound Management",
             description: "Specialized treatment protocols for optimal healing",
             image: "/images/advanced_wound_management.png",
-            href: "/servicespage/advanced-wound-management",
+            href: "/treatments/advanced-wound-management",
             badge: "Specialized",
             badgeColor: "purple"
           }

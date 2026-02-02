@@ -92,6 +92,116 @@ export default function BreastAugmentationMalaysia() {
       <Head>
         <title>Breast Augmentation Malaysia | Implants by Specialist Plastic Surgeon – Dr. Soma</title>
         <meta name="description" content="Looking for breast augmentation in Malaysia? Dr. Soma offers safe, natural-looking breast implants using premium silicone gel. Personalised consultation, hospital-grade safety." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-augmentation-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Is breast augmentation surgery painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients experience moderate discomfort for the first 3–5 days, managed with prescribed medication. Dr. Soma uses muscle-sparing techniques that reduce post-operative pain."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I choose the right implant size?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "During your consultation, Dr. Soma uses 3D imaging and sizers to help visualise outcomes. The goal is to match your body frame, lifestyle, and personal preference for a natural result."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my breast implants look natural?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes — when placed correctly by a certified plastic surgeon, implants look and feel natural. Dr. Soma selects the appropriate implant profile and placement for your anatomy."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I still breastfeed after augmentation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Most techniques preserve milk ducts and nerves, so breastfeeding remains possible. Incisions placed around the areola may carry a slightly higher risk, but it's generally safe."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do breast implants last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Modern implants are durable and can last 10–20 years or longer. Routine monitoring (ultrasound or MRI) is recommended every few years to ensure implant integrity."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What's the difference between saline and silicone implants?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Silicone implants feel softer and more like natural breast tissue. Saline implants are filled after insertion and may feel firmer. Dr. Soma primarily uses high-quality silicone gel implants for optimal results."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is capsular contracture?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It's when scar tissue around the implant tightens, causing firmness or discomfort. Dr. Soma uses advanced surgical techniques and textured implants to minimise this risk."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will I have visible scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisions are placed in discreet locations — under the breast fold, around the areola, or in the armpit. Scars typically fade significantly within 6–12 months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When can I return to work after surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients return to desk jobs within 5–7 days. Physical or strenuous work may require 3–4 weeks off."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can breast augmentation fix sagging breasts?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Implants add volume but don't lift. If you have significant sagging, Dr. Soma may recommend combining augmentation with a breast lift (mastopexy) for the best outcome."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-augmentation-malaysia/#service",
+              "name": "Breast Augmentation Malaysia | Implants by Specialist Plastic Surgeon – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/breast/breast-augmentation-malaysia/",
+              "description": "Looking for breast augmentation in Malaysia? Dr. Soma offers safe, natural-looking breast implants using premium silicone gel. Personalised consultation, hospital-grade safety.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -938,7 +1048,7 @@ export default function BreastAugmentationMalaysia() {
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
-              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>

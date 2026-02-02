@@ -51,13 +51,13 @@ const ContactUs = () => {
         <meta property="og:title" content="Contact Us - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta property="og:description" content="Contact Dr. Soma Clinical Aesthetics in Subang Jaya, Malaysia. Get in touch for consultations, appointments, and inquiries about plastic surgery and aesthetic treatments." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={getFullUrl('/contact-us')} />
+        <meta property="og:url" content={getFullUrl('/contact')} />
         <meta property="og:image" content={getFullUrl('/images/contact_banner.png')} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact Us - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta name="twitter:description" content="Contact Dr. Soma Clinical Aesthetics in Subang Jaya, Malaysia. Get in touch for consultations, appointments, and inquiries about plastic surgery and aesthetic treatments." />
         <meta name="twitter:image" content={getFullUrl('/images/contact_banner.png')} />
-        <link rel="canonical" href={getFullUrl('/contact-us')} />
+        <link rel="canonical" href={getFullUrl('/contact')} />
       </Head>
 
       {/* Hero Banner Section */}

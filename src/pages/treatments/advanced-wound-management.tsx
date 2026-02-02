@@ -282,7 +282,7 @@ const AdvancedWoundManagement = () => {
             title: "Fat Transfer",
             description: "Natural enhancement using your body's own fat for volume restoration",
             image: "/images/eyelid_reduction.png",
-            href: "/servicespage/fat-transfer",
+            href: "/treatments/fat-transfer",
             badge: "Popular",
             badgeColor: "blue"
           },
@@ -290,7 +290,7 @@ const AdvancedWoundManagement = () => {
             title: "Advanced Skin Care",
             description: "Comprehensive skin care treatments for optimal skin health",
             image: "/images/rhinoplasty_in_nose.png",
-            href: "/servicespage/skin-care",
+            href: "/treatments/skin-care",
             badge: "Non-Surgical",
             badgeColor: "green"
           },

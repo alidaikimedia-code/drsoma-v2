@@ -155,7 +155,7 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-4">
-            <Link href="/contact-us">
+            <Link href="/contact">
               <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 px-6 sm:px-8 text-sm sm:text-base">
                 <Phone className="w-4 h-4 mr-2" />
                 Book a Consultation
@@ -401,7 +401,7 @@ function QuickGuideSection() {
                   <p className="text-white text-[12px] sm:text-[14px] mb-1">Still not sure?</p>
                   <p className="text-white text-[16px] sm:text-[18px] font-semibold">Let us help you decide</p>
                 </div>
-                <Link href="/contact-us">
+                <Link href="/contact">
                   <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 text-[13px] sm:text-[15px] whitespace-nowrap w-full sm:w-auto">
                     Book a Consultation
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
@@ -477,7 +477,7 @@ function CTASection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Link href="/contact-us">
+              <Link href="/contact">
                 <Button size="lg" className="bg-[#E65A27] hover:bg-[#D14E1E] text-white rounded-full font-medium h-12 sm:h-14 px-6 sm:px-8 py-4 text-[14px] sm:text-[16px]">
                   Book a Consultation
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
@@ -505,6 +505,24 @@ export default function BreastHubPage() {
         <title>Breast Surgery in Malaysia | Breast Procedures and Treatments</title>
         <meta name="description" content="Explore breast surgery options in Malaysia including breast augmentation, breast lift, breast reduction, fat transfer, implant removal, revision surgery, and capsular contracture correction. View each treatment page and book a private consultation." />
         {/* Alternative Meta Title: Breast Treatments Malaysia | Augmentation, Lift, Reduction and Revision */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/#service",
+              "name": "Breast Surgery in Malaysia | Breast Procedures and Treatments",
+              "url": "https://drsoma-v2.vercel.app/breast/",
+              "description": "Explore breast surgery options in Malaysia including breast augmentation, breast lift, breast reduction, fat transfer, implant removal, revision surgery, and capsular contracture correction. View each treatment page and book a private consultation.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
       
       <main className="min-h-screen bg-white">

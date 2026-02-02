@@ -103,7 +103,7 @@ const BlogDetail = () => {
               {error}
             </p>
             <button
-              onClick={() => router.push('/blogs')}
+              onClick={() => router.push('/blog')}
               className="bg-[#EA622F] text-white px-6 py-3 rounded-lg hover:bg-[#d55a2a] transition-colors"
             >
               Back to Blogs
@@ -127,7 +127,7 @@ const BlogDetail = () => {
               The blog you&apos;re looking for doesn&apos;t exist.
             </p>
             <button
-              onClick={() => router.push('/blogs')}
+              onClick={() => router.push('/blog')}
               className="bg-[#EA622F] text-white px-6 py-3 rounded-lg hover:bg-[#d55a2a] transition-colors"
             >
               Back to Blogs
@@ -151,13 +151,13 @@ const BlogDetail = () => {
         <meta property="og:title" content={`${blog.title} - Dr. Soma Clinical Aesthetics`} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={getFullUrl(`/blogs/${blog.id}`)} />
+        <meta property="og:url" content={getFullUrl(`/blog/${blog.id}`)} />
         <meta property="og:image" content={blog.featured_image?.large || blog.featured_image?.full || ''} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${blog.title} - Dr. Soma Clinical Aesthetics`} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={blog.featured_image?.large || blog.featured_image?.full || ''} />
-        <link rel="canonical" href={getFullUrl(`/blogs/${blog.id}`)} />
+        <link rel="canonical" href={getFullUrl(`/blog/${blog.id}`)} />
       </Head>
 
       {/* Banner Section */}
@@ -296,7 +296,7 @@ const BlogDetail = () => {
                   {blog.related_posts.map((relatedBlog) => (
                     <Link
                       key={relatedBlog.id}
-                      href={`/blogs/${relatedBlog.id}`}
+                      href={`/blog/${relatedBlog.id}`}
                       className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
                     >
                       <div className="relative overflow-hidden h-40">
@@ -323,7 +323,7 @@ const BlogDetail = () => {
             {/* Back to Blogs Button */}
             <div className="text-center mt-8">
               <Link
-                href="/blogs"
+                href="/blog"
                 className="inline-flex items-center px-6 py-3 bg-[#EA622F] text-white rounded-lg hover:bg-[#d55a2a] transition-colors"
               >
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

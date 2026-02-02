@@ -203,7 +203,7 @@ const SkinCare = () => {
             title: "Exosomes Therapy",
             description: "Cellular therapy for regeneration and healing",
             image: "/images/cellular_rejuvenation.png",
-            href: "/servicespage/exosomes-therapy",
+            href: "/treatments/exosomes-therapy",
             badge: "Popular",
             badgeColor: "blue"
           },
@@ -219,7 +219,7 @@ const SkinCare = () => {
             title: "Advanced Wound Management",
             description: "Specialized treatment protocols for optimal healing",
             image: "/images/advanced_wound_management.png",
-            href: "/servicespage/advanced-wound-management",
+            href: "/treatments/advanced-wound-management",
             badge: "Specialized",
             badgeColor: "purple"
           }

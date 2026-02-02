@@ -357,7 +357,7 @@ const Services = () => {
                 </h4>
               </Link>
               {/* <Link
-                href={"/servicespage/ariom-breast-implant"}
+                href={"/treatments/ariom-breast-implant"}
                 className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
                 style={{ animationDelay: isVisible('section-2') ? '0.4s' : '0s' }}
               >

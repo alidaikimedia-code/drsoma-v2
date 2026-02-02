@@ -105,6 +105,116 @@ export default function FatTransferBreastAugmentation() {
       <Head>
         <title>Fat Transfer Breast Augmentation Malaysia | Natural Enhancement – Dr. Soma</title>
         <meta name="description" content="Fat Transfer Breast Augmentation in Malaysia by certified plastic surgeon Dr. Soma. No implants, natural softness, subtle enhancement using your own body fat." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/fat-transfer-breast-augmentation-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is fat transfer breast augmentation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is a surgical procedure that enhances breast volume using your own body fat, harvested by liposuction, purified, and transferred into the breasts."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is fat transfer to the breast done?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fat is removed from donor areas, processed to keep only healthy fat cells, and injected into the breast in small layers to improve survival and create a smooth contour."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much bigger will my breasts get with fat transfer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients achieve a subtle increase. The exact change depends on your donor fat, breast tissue capacity, and how much fat survives long-term."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long do fat transfer breast results last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The fat that successfully integrates becomes long-lasting. Some fat is reabsorbed during the first 1–3 months, after which results stabilize."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will all the transferred fat survive?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. A portion is naturally reabsorbed. Surgical technique, patient biology, and aftercare influence retention."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can fat transfer replace breast implants?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For patients wanting a modest, natural enhancement, yes. For larger size goals, implants may be more suitable."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is fat transfer breast augmentation safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When performed by a certified plastic surgeon using careful harvesting and injection techniques, it is generally safe. Risks and limitations are discussed during consultation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does fat transfer cause lumps?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Small lumps or firmness can occur if fat healing is uneven. Proper technique and layered injection reduce this risk, and most minor firmness improves with time."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will it affect mammograms?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your radiology team should be informed about prior fat transfer. Imaging can still be performed, and medical documentation helps interpretation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is recovery easier than implants?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many patients find breast discomfort mild, but donor site soreness from liposuction can be more noticeable. Overall recovery is usually manageable."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/fat-transfer-breast-augmentation-malaysia/#service",
+              "name": "Fat Transfer Breast Augmentation Malaysia | Natural Enhancement – Dr. Soma",
+              "url": "https://drsoma-v2.vercel.app/breast/fat-transfer-breast-augmentation-malaysia/",
+              "description": "Fat Transfer Breast Augmentation in Malaysia by certified plastic surgeon Dr. Soma. No implants, natural softness, subtle enhancement using your own body fat.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -852,7 +962,7 @@ export default function FatTransferBreastAugmentation() {
                 <svg className="w-6 h-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
-              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>

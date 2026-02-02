@@ -58,9 +58,9 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/about-dr-soma')}>About Dr. Soma</li>
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/servicespage')}>Our Services</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/treatments')}>Our Services</li>
               <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/success-stories')}>Success Stories</li>
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/blogs')}>Patient Resources</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/blog')}>Patient Resources</li>
             </ul>
           </div>
 

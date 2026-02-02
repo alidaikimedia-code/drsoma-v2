@@ -88,6 +88,116 @@ export default function BreastRevisionSurgeryMalaysia() {
       <Head>
         <title>Breast Revision Surgery Malaysia | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon performed Breast Revision in Malaysia. Correct capsular contracture, implant malposition, and asymmetry. Restore natural balance." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-revision-surgery-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is breast revision surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Breast revision is corrective surgery performed after previous breast implant or breast surgery to fix complications, improve breast shape, correct implant position, or replace/remove implants."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I know if I need breast revision?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Common signs include hardness, pain, visible implant shift, asymmetry, rippling, abnormal breast shape, or dissatisfaction with size and contour. A surgical evaluation confirms the cause."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is breast revision more complex than first-time breast augmentation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Revision surgery typically involves working with scar tissue, pocket changes, and tissue stretching from prior surgery, making planning and technique more demanding."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does revision surgery always require new implants?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Revision may involve implant exchange, implant removal, or reshaping without implants depending on your goals and medical findings."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is capsular contracture and can it be fixed?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Capsular contracture is tightening and hardening of scar tissue around the implant that can cause pain and distortion. It can be treated with capsule release or removal and often implant exchange or pocket adjustment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When will I see results after breast revision?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You may see an early improvement immediately, but swelling and settling take time. Most patients see stable progress at 4–6 weeks, with final refinement from 3–6 months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will a breast lift be needed during revision?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If sagging, nipple position issues, or stretched skin is present, a lift may be recommended to achieve a natural, youthful contour after correction."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are scars worse with revision surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Scars depend on the revision steps required. Dr. Soma typically uses existing scars when possible and places incisions strategically for the best healing outcome."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is breast revision surgery safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When performed by a certified plastic surgeon in an appropriate medical facility, breast revision is generally safe. Risks exist like all surgeries and are explained during consultation. The safest plan is always based on a full assessment of the implant, capsule, pocket stability, and your goals, with the revision technique chosen to match the specific problem being corrected."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How many revision surgeries can a person have?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on tissue condition, implant history, and the underlying issue. The goal is to plan a stable, long-term correction to reduce the need for repeated surgeries."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-revision-surgery-malaysia/#service",
+              "name": "Breast Revision Surgery Malaysia | Dr. Soma Plastic Surgery",
+              "url": "https://drsoma-v2.vercel.app/breast/breast-revision-surgery-malaysia/",
+              "description": "Certified Plastic Surgeon performed Breast Revision in Malaysia. Correct capsular contracture, implant malposition, and asymmetry. Restore natural balance.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -942,7 +1052,7 @@ export default function BreastRevisionSurgeryMalaysia() {
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat with Us on WhatsApp
               </a>
-              <Link href="/contact-us" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>

@@ -197,7 +197,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20 min-w-[200px] group"
-                onClick={() => router.push('/contact-us')}
+                onClick={() => router.push('/contact')}
               >
                 Book A Consultation
                 <svg className="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,7 +206,7 @@ const Home = () => {
               </button>
               <button
                 className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base min-w-[200px] group"
-                onClick={() => router.push('/servicespage')}
+                onClick={() => router.push('/treatments')}
               >
                 Explore Procedures
                 <svg className="w-7 h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -576,7 +576,7 @@ const Home = () => {
                 <div className="flex gap-4 justify-center md:justify-start">
                   <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-14 px-8 min-w-[200px]"
-                    onClick={() => router.push('/contact-us')}
+                    onClick={() => router.push('/contact')}
                   >
                     Contact Us
                   </button>

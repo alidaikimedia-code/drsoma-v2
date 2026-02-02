@@ -197,7 +197,7 @@ const NewHome = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20"
-                onClick={() => router.push('/contact-us')}
+                onClick={() => router.push('/contact')}
               >
                 Book A Consultation
               </button>
@@ -497,7 +497,7 @@ const NewHome = () => {
                 <div className="flex gap-4 justify-center md:justify-start">
                   <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
-                    onClick={() => router.push('/contact-us')}
+                    onClick={() => router.push('/contact')}
                   >
                     Contact Us
                   </button>

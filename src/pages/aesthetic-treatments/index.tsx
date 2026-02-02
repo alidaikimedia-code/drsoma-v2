@@ -293,7 +293,7 @@ const AestheticTreatmentsHub = () => {
                 isVisible("section-0") ? "animate-fadeInUp delay-400" : "opacity-0"
               }`}>
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   className="bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg uppercase tracking-wide text-sm animate-pulseGlow"
                 >
                   Book a Consultation
@@ -753,7 +753,7 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-7") ? "animate-fadeInUp delay-400" : "opacity-0"
             }`}>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg uppercase tracking-wide text-sm hover:shadow-2xl"
               >
                 Book a Consultation

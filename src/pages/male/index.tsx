@@ -233,6 +233,141 @@ const MaleHub = () => {
         <meta property="og:url" content={getFullUrl("/male")} />
         <meta property="og:image" content={getFullUrl("/images/Male Cosmetic Surgery.jpg")} />
         <link rel="canonical" href={getFullUrl("/male")} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsomaplasticsurgery.com/male#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is male cosmetic surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Male cosmetic surgery includes procedures designed to improve body or facial appearance while preserving masculine proportions and a natural look."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is cosmetic surgery common among men in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Many men seek cosmetic procedures for confidence, comfort, and self-image, often choosing to keep it private."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will male cosmetic surgery look obvious?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most men want subtle improvements. When planned correctly, results aim to look natural and fit your build, face, and age."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will people be able to tell I had surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The goal is discreet change. Many people simply notice that you look fitter or more confident, not that you had a procedure."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is male cosmetic surgery safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "All procedures carry risks. Safety depends on proper assessment, realistic planning, and careful surgical technique."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to decide on a procedure before booking?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Many men start with a concern rather than a procedure name. The consultation helps clarify suitable options."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is male cosmetic surgery confidential?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Consultations and treatments are handled with strict privacy and discretion."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I talk openly without being judged?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Consultations are respectful, professional, and focused on your concerns, not assumptions or pressure."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can multiple treatments be combined?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Some men combine treatments for better overall balance. This depends on health, goals, and safety assessment."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is male cosmetic surgery only for younger men?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Men of different ages seek cosmetic surgery for different reasons, from body contouring to facial balance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will results last long term?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Surgical changes are long-lasting, but maintaining results depends on lifestyle, weight stability, and ageing."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What if I am unsure or nervous about surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "That is very common. A consultation is meant to give clarity and honest guidance, not push you into a decision."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How do I start male cosmetic surgery in Malaysia?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The first step is a private consultation to discuss your concerns, options, and suitability."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsomaplasticsurgery.com/male#service",
+              "name": "Male Cosmetic Surgery in Malaysia | Dr. Soma Clinical Aesthetics",
+              "url": "https://drsomaplasticsurgery.com/male",
+              "description": "Private, respectful male cosmetic surgery in Malaysia. Gynecomastia, hair transplant, jawline enhancement, rhinoplasty, and more. Natural results that preserve masculine proportions.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              },
+              "image": "https://drsomaplasticsurgery.com/images/Male Cosmetic Surgery.jpg"
+            })
+          }}
+        />
       </Head>
 
       {/* ==================== HERO SECTION ==================== */}
@@ -276,7 +411,7 @@ const MaleHub = () => {
                 isVisible("section-0") ? "animate-fadeInUp delay-400" : "opacity-0"
               }`}>
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   className="bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg uppercase tracking-wide text-sm animate-pulseGlow"
                 >
                   Book a Private Consultation
@@ -449,7 +584,7 @@ const MaleHub = () => {
             }`}>
               <p className="text-para-black mb-4">Can&apos;t find what you&apos;re looking for?</p>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-block bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-sm"
               >
                 Book a Private Consultation
@@ -516,7 +651,7 @@ const MaleHub = () => {
               isVisible("section-2") ? "animate-fadeInUp delay-700" : "opacity-0"
             }`}>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-block bg-primary hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Book a Private Consultation
@@ -714,7 +849,7 @@ const MaleHub = () => {
               isVisible("section-7") ? "animate-fadeInUp delay-400" : "opacity-0"
             }`}>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg uppercase tracking-wide text-sm hover:shadow-2xl"
               >
                 Book a Private Consultation

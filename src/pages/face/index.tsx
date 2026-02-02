@@ -401,7 +401,7 @@ const FaceHub = () => {
                 isVisible("section-0") ? "animate-fadeInUp delay-400" : "opacity-100 sm:opacity-0"
               }`}>
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-500 overflow-hidden text-sm sm:text-base"
                 >
                   <span className="relative z-10">Book a Private Consultation</span>
@@ -720,7 +720,7 @@ const FaceHub = () => {
             {/* CTA */}
             <div className={`text-center ${isVisible("section-3") ? "animate-fadeInUp delay-600" : "opacity-100 sm:opacity-0"}`}>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 text-sm sm:text-base"
               >
                 Book a Private Consultation
@@ -909,7 +909,7 @@ const FaceHub = () => {
             <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp delay-500" : "opacity-100 sm:opacity-0"}`}>
               <p className="text-para-black mb-4 text-sm sm:text-base">Still have questions?</p>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-lg text-sm sm:text-base"
               >
                 Contact Us
@@ -956,7 +956,7 @@ const FaceHub = () => {
               isVisible("section-7") ? "animate-fadeInUp delay-300" : "opacity-100 sm:opacity-0"
             }`}>
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-8 sm:px-12 py-3 sm:py-5 rounded-full transition-all duration-500 overflow-hidden shadow-xl shadow-primary/30 text-sm sm:text-base"
               >
                 <span className="relative z-10">Book a Private Consultation</span>

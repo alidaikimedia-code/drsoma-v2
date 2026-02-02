@@ -67,6 +67,100 @@ export default function BreastImplantRemovalMalaysia() {
       <Head>
         <title>Breast Implant Removal Malaysia (Explant Surgery) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Safe breast implant removal (explant) and capsulectomy in Malaysia. Performed by certified plastic surgeon Dr. Soma. Restoration of natural proportions." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-implant-removal-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Do I need a capsulectomy?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not always. Capsulectomy is recommended when the capsule is thick, tight, painful, or abnormal. If the tissue is healthy and thin, simple removal may suffice. Dr. Soma will advise you based on safety."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will my breasts sag after removal?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sagging depends on your skin elasticity and how large the implants were. If significant sagging is expected, a breast lift (mastopexy) can be performed simultaneously to reshape the breast."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the surgery painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most patients describe the pain as mild to moderate, often less than the original augmentation. Tightness is common in the first week. Oral medication is usually sufficient."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I replace them with smaller implants?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. This is called an Implant Exchange. It allows you to downsize while maintaining some fullness. Pocket repair may be needed to ensure the smaller implant sits correctly."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long before I can return to work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Desk work is often possible within 1-2 weeks. Full physical activity typically resumes after 4-6 weeks with guidance."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will I need drains?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Drains are used only in selected cases, depending on the complexity of the capsulectomy and individual factors."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can implants be removed and replaced in one surgery?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, implant exchange is an option if desired. This can be discussed during your consultation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is implant removal permanent?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Once removed, implants are gone unless you choose to have new ones placed in a future procedure."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-implant-removal-malaysia/#service",
+              "name": "Breast Implant Removal Malaysia (Explant Surgery) | Dr. Soma Plastic Surgery",
+              "url": "https://drsoma-v2.vercel.app/breast/breast-implant-removal-malaysia/",
+              "description": "Safe breast implant removal (explant) and capsulectomy in Malaysia. Performed by certified plastic surgeon Dr. Soma. Restoration of natural proportions.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -646,7 +740,7 @@ export default function BreastImplantRemovalMalaysia() {
                 <svg className="w-7 h-7 sm:w-8 sm:h-8 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 Chat on WhatsApp
               </a>
-              <Link href="/contact-us" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border-2 border-zinc-200 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
+              <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border-2 border-zinc-200 px-8 py-4 rounded-full text-sm font-medium hover:bg-zinc-50 hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>

@@ -61,9 +61,9 @@ const Header = () => {
             <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
               <div className="flex flex-nowrap items-center gap-[50px]">
                 <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>About</span></Link>
-                <Link href="/servicespage"><span className={linkClasses("/servicespage")}>Services</span></Link>
-                <Link href="/blogs"><span className={linkClasses("/blogs")}>Blog</span></Link>
-                <Link href="/contact-us"><span className={linkClasses("/contact-us")}>Contact</span></Link>
+                <Link href="/treatments"><span className={linkClasses("/treatments")}>Services</span></Link>
+                <Link href="/blog"><span className={linkClasses("/blog")}>Blog</span></Link>
+                <Link href="/contact"><span className={linkClasses("/contact")}>Contact</span></Link>
               </div>
             </nav>
             <div className="hidden lg:flex items-center flex-shrink-0">
@@ -95,9 +95,9 @@ const Header = () => {
         <nav className="flex flex-col flex-1 p-6 pt-10">
           <div className="flex flex-col gap-8">
             <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>About</span></Link>
-            <Link href="/servicespage" onClick={handleSideNav}><span className={mobileLinkClasses("/servicespage")}>Services</span></Link>
-            <Link href="/blogs" onClick={handleSideNav}><span className={mobileLinkClasses("/blogs")}>Blog</span></Link>
-            <Link href="/contact-us" onClick={handleSideNav}><span className={mobileLinkClasses("/contact-us")}>Contact</span></Link>
+            <Link href="/treatments" onClick={handleSideNav}><span className={mobileLinkClasses("/treatments")}>Services</span></Link>
+            <Link href="/blog" onClick={handleSideNav}><span className={mobileLinkClasses("/blog")}>Blog</span></Link>
+            <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>Contact</span></Link>
           </div>
           <div className="mt-auto pb-8">
             <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="flex flex-nowrap items-center justify-center gap-2 w-full px-6 py-4 bg-primary text-white text-[14px] font-bold uppercase tracking-wider rounded-sm transition-all duration-300 hover:bg-primary/90" onClick={handleSideNav}>

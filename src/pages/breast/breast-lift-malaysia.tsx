@@ -53,6 +53,116 @@ export default function BreastLiftMalaysia() {
       <Head>
         <title>Breast Lift Malaysia (Mastopexy) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon for Breast Lift in Malaysia. Lift, reshape and restore natural youthful contour." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-lift-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is a breast lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A breast lift (mastopexy) is a surgical procedure that lifts and reshapes sagging breasts by removing excess skin and repositioning the nipple and breast tissue."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is a breast lift done?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisions are made based on the degree of sagging, excess skin is removed, breast tissue is reshaped, and the nipple and areola are repositioned to a higher, natural level."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When will I see results?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You will notice an immediate lift, but swelling takes time to settle. Most patients see a more stable shape at 4-6 weeks, with final refinement from 3-6 months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does a breast lift last?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Results are long-lasting, but aging, gravity, pregnancy, and weight changes can affect the breasts over time. Stable weight and good support help maintain results."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does a breast lift make breasts bigger?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A breast lift primarily reshapes and elevates. It can make breasts appear fuller due to improved positioning, but it does not add volume. For larger size, implants can be combined."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is a breast lift painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate in the first week and is controlled with medication. Most patients describe tightness rather than sharp pain."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I breastfeed after a lift?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many patients can breastfeed, depending on the technique and tissue changes. This is discussed during consultation based on your future plans."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does a breast lift leave scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, but incision placement is planned to be as discreet as possible. Scars fade significantly over time with proper aftercare and scar management."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is a breast lift safe?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When performed by a certified plastic surgeon in a proper medical facility, breast lift surgery is generally safe. Risks exist like all surgeries and are explained during consultation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What happens if I get pregnant after?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pregnancy can stretch breast skin and affect the lifted shape. If pregnancy is planned soon, it may be better to delay surgery for longer-lasting results."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-lift-malaysia/#service",
+              "name": "Breast Lift Malaysia (Mastopexy) | Dr. Soma Plastic Surgery",
+              "url": "https://drsoma-v2.vercel.app/breast/breast-lift-malaysia/",
+              "description": "Certified Plastic Surgeon for Breast Lift in Malaysia. Lift, reshape and restore natural youthful contour.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -642,7 +752,7 @@ export default function BreastLiftMalaysia() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <Link href="/contact-us" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border border-zinc-200 px-8 py-3 sm:py-3.5 rounded-full text-sm font-medium hover:bg-zinc-50 hover:border-[#FE7623] hover:text-[#FE7623] hover:scale-105 transition-all duration-300 group">
+              <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border border-zinc-200 px-8 py-3 sm:py-3.5 rounded-full text-sm font-medium hover:bg-zinc-50 hover:border-[#FE7623] hover:text-[#FE7623] hover:scale-105 transition-all duration-300 group">
                 <svg className="w-6 h-6 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>

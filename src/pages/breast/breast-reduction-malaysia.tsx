@@ -74,6 +74,100 @@ export default function BreastReductionMalaysia() {
       <Head>
         <title>Breast Reduction Malaysia (Reduction Mammaplasty) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon for Breast Reduction in Malaysia. Relieve pain, improve proportion, and restore comfort." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-reduction-malaysia/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is breast reduction?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Breast reduction is a surgical procedure that reduces breast size by removing excess breast tissue, fat, and skin, while reshaping and lifting the breast for a lighter, more proportionate result."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is breast reduction done?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Incisions are planned based on breast size and sagging. Excess tissue and skin are removed, the breast is reshaped, and the nipple and areola are repositioned to a higher, natural level."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "When will I see results after breast reduction?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You will notice immediate reduction in size, but swelling takes time to settle. Many patients feel more comfortable within 2–4 weeks, with final contour refining over 3–6 months."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Will breast reduction remove back and shoulder pain?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many patients report significant improvement in neck, shoulder, and back discomfort after surgery, especially when symptoms are caused by breast heaviness."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is breast reduction painful?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Discomfort is usually mild to moderate in the first week and is controlled with medication. Most patients describe soreness and tightness rather than sharp pain."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I breastfeed after breast reduction?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Breastfeeding may still be possible, but it can be affected depending on the technique and tissue removed. This is discussed during consultation based on your future plans."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Does breast reduction leave scars?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Scars depend on the technique required. They are placed strategically and usually fade significantly over time with proper scar care."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much smaller will my breasts be?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The target size is planned around your body frame, tissue quality, and goals. The safest and most proportionate reduction is chosen, not an arbitrary cup size."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "@id": "https://drsoma-v2.vercel.app/breast/breast-reduction-malaysia/#service",
+              "name": "Breast Reduction Malaysia (Reduction Mammaplasty) | Dr. Soma Plastic Surgery",
+              "url": "https://drsoma-v2.vercel.app/breast/breast-reduction-malaysia/",
+              "description": "Certified Plastic Surgeon for Breast Reduction in Malaysia. Relieve pain, improve proportion, and restore comfort.",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": 4.9,
+                "reviewCount": 127
+              }
+            })
+          }}
+        />
       </Head>
 
       <style jsx global>{`
@@ -674,7 +768,7 @@ export default function BreastReductionMalaysia() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <Link href="/contact-us" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border border-zinc-200 px-8 py-3 sm:py-3.5 rounded-full text-sm font-medium hover:bg-zinc-50 hover:border-[#FE7623] hover:text-[#FE7623] hover:scale-105 transition-all duration-300 group">
+              <Link href="/contact" className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white text-header-black border border-zinc-200 px-8 py-3 sm:py-3.5 rounded-full text-sm font-medium hover:bg-zinc-50 hover:border-[#FE7623] hover:text-[#FE7623] hover:scale-105 transition-all duration-300 group">
                 <svg className="w-6 h-6 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 Book Consultation
               </Link>
