@@ -490,6 +490,79 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Certifications & Memberships Section */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col gap-3 mb-10 items-center text-center">
+            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Credentials</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#101010] leading-[1.15]">Certifications & Memberships</h2>
+            <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
+              Recognized by leading medical organizations worldwide.
+            </p>
+          </div>
+        </div>
+
+        {/* Auto-scrolling certificates */}
+        <div className="relative w-full overflow-hidden">
+          <style jsx>{`
+            @keyframes scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .certificates-scroll {
+              display: flex;
+              flex-wrap: nowrap;
+              align-items: center;
+              animation: scroll 40s linear infinite;
+              width: max-content;
+            }
+            .certificates-scroll:hover {
+              animation-play-state: paused;
+            }
+            .certificates-scroll img {
+              height: 160px;
+              width: auto;
+              flex-shrink: 0;
+              margin: 0 32px;
+            }
+            @media (min-width: 768px) {
+              .certificates-scroll img {
+                height: 200px;
+              }
+            }
+          `}</style>
+          <div className="certificates-scroll">
+            <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
+            <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
+            <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
+            <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
+            <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
+            <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
+            <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
+            <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
+            <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
+            <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
+            <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
+            <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
+            <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
+            {/* Duplicate for seamless loop */}
+            <img src="/icons/certificate_one.svg" alt="International Society of Aesthetic Plastic Surgery Member" />
+            <img src="/icons/certificate_two.svg" alt="Malaysian Medical Association Member" />
+            <img src="/icons/certificate_three.svg" alt="Royal College of Surgeons Fellowship" />
+            <img src="/icons/certificate_four.svg" alt="Asian Pacific Association of Plastic Surgeons" />
+            <img src="/icons/certificate_five.svg" alt="Board Certified Plastic Surgeon" />
+            <img src="/icons/certificate_six.svg" alt="Malaysian Society of Plastic Surgeons" />
+            <img src="/icons/certificate_seven.svg" alt="Aesthetic Surgery Certification" />
+            <img src="/icons/certificate_eight.svg" alt="International Confederation for Plastic Surgery" />
+            <img src="/icons/certificate_nine.svg" alt="Medical Specialist Registration" />
+            <img src="/icons/certificate_ten.svg" alt="Professional Medical License Malaysia" />
+            <img src="/icons/certificate_eleven.svg" alt="Reconstructive Surgery Certification" />
+            <img src="/icons/certificate_twevel.svg" alt="Advanced Aesthetic Training Certificate" />
+            <img src="/icons/certificate_thirteen.svg" alt="Continuing Medical Education Certificate" />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4 md:px-6">
