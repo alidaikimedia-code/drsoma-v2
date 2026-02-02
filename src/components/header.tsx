@@ -60,9 +60,10 @@ const Header = () => {
             </Link>
             <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
               <div className="flex flex-nowrap items-center gap-[50px]">
-                <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>About</span></Link>
-                <Link href="/treatments"><span className={linkClasses("/treatments")}>Services</span></Link>
-                <Link href="/blog"><span className={linkClasses("/blog")}>Blog</span></Link>
+                <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>Dr Soma</span></Link>
+                <Link href="/treatments"><span className={linkClasses("/treatments")}>Plastic Surgery</span></Link>
+                <Link href="/aesthetic-treatments"><span className={linkClasses("/aesthetic-treatments")}>Aesthetics</span></Link>
+                <Link href="/blog"><span className={linkClasses("/blog")}>Blogs</span></Link>
                 <Link href="/contact"><span className={linkClasses("/contact")}>Contact</span></Link>
               </div>
             </nav>
@@ -94,9 +95,10 @@ const Header = () => {
         </div>
         <nav className="flex flex-col flex-1 p-6 pt-10">
           <div className="flex flex-col gap-8">
-            <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>About</span></Link>
-            <Link href="/treatments" onClick={handleSideNav}><span className={mobileLinkClasses("/treatments")}>Services</span></Link>
-            <Link href="/blog" onClick={handleSideNav}><span className={mobileLinkClasses("/blog")}>Blog</span></Link>
+            <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>Dr Soma</span></Link>
+            <Link href="/treatments" onClick={handleSideNav}><span className={mobileLinkClasses("/treatments")}>Plastic Surgery</span></Link>
+            <Link href="/aesthetic-treatments" onClick={handleSideNav}><span className={mobileLinkClasses("/aesthetic-treatments")}>Aesthetics</span></Link>
+            <Link href="/blog" onClick={handleSideNav}><span className={mobileLinkClasses("/blog")}>Blogs</span></Link>
             <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>Contact</span></Link>
           </div>
           <div className="mt-auto pb-8">
