@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-xs">
-          &copy; {new Date().getFullYear()} SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A). All Rights Reserved.
+          &copy; {new Date().getFullYear()} SJ Clinical Aesthetics Sdn Bhd 200401017853 (656356-A). All Rights Reserved. | <a href="https://daikimedia.com" rel="nofollow" className="hover:text-[#EA622F] transition-colors">Website by DaikiMedia</a>
         </div>
       </div>
     </footer>
