@@ -161,13 +161,12 @@ const BlogDetail = () => {
       </Head>
 
       {/* Banner Section */}
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef} id="banner">
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[150px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef} id="banner">
         <div className="flex containers w-full">
-          <div className="flex w-full flex-col gap-[10px] max-w-[700px]">
-            <h1 className="text-white max-[768px]:!text-[54px] max-[512px]:!text-[42px]">Blog</h1>
-            <h5 className="text-white line-clamp-2">
+          <div className="flex w-full flex-col gap-[10px] max-w-[900px]">
+            <h1 className="text-white max-[768px]:!text-[36px] max-[512px]:!text-[28px] !text-[42px] leading-tight">
               {blog.title}
-            </h5>
+            </h1>
           </div>
         </div>
       </section>
@@ -176,12 +175,8 @@ const BlogDetail = () => {
       <section className="lg:pb-100 pb-50 pt-30 relative z-10" ref={contentRef} id="content">
         <div className="flex w-full containers">
           <div className="flex flex-col gap-30 w-full max-w-4xl mx-auto">
-            {/* Blog Title */}
+            {/* Blog Meta Info */}
             <div className="text-center mb-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {blog.title}
-              </h1>
-
               {/* Meta Info */}
               <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
                 {/* Date */}
@@ -197,7 +192,7 @@ const BlogDetail = () => {
                   <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
-                  <span>{blog.author?.name || 'Dr. Soma Team'}</span>
+                  <span>Dr Kamini</span>
                 </div>
 
                 {/* Read Time */}
@@ -209,10 +204,10 @@ const BlogDetail = () => {
                 </div>
               </div>
 
-              {/* Categories */}
-              {blog.categories && blog.categories.length > 0 && (
+              {/* Categories - Filter out "Blog" category */}
+              {blog.categories && blog.categories.filter(cat => cat.name !== 'Blog').length > 0 && (
                 <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-                  {blog.categories.map((category) => (
+                  {blog.categories.filter(cat => cat.name !== 'Blog').map((category) => (
                     <span
                       key={category.id}
                       className="px-3 py-1 bg-[#FFF5E6] text-[#EA622F] text-sm rounded-full"
@@ -250,13 +245,13 @@ const BlogDetail = () => {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-[#EA622F] text-white text-lg font-bold">
-                      {(blog.author?.name || 'D')[0].toUpperCase()}
+                      {'K'.toUpperCase()}
                     </div>
                   )}
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">{blog.author?.name || 'Dr. Soma Team'}</p>
-                  <p className="text-sm text-gray-600">{blog.date_formatted}</p>
+                  <p className="font-semibold text-gray-800">Dr Kamini</p>
+                  <p className="text-sm text-gray-600">Reviewed by Dr Soma</p>
                 </div>
               </div>
             </div>

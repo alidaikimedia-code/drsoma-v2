@@ -218,8 +218,8 @@ const Blogs = () => {
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                        {/* Category Badge */}
-                        {blog.categories && blog.categories[0] && (
+                        {/* Category Badge - Hide if category is "Blog" */}
+                        {blog.categories && blog.categories[0] && blog.categories[0].name !== 'Blog' && (
                           <div className="absolute top-4 left-4">
                             <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm text-primary text-xs font-semibold rounded-full shadow-sm">
                               {blog.categories[0].name}

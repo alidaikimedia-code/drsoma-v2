@@ -19,7 +19,7 @@ export async function getServerSideProps(ctx) {
   const blogs = await response.data;
 
   const fields = blogs.data.map((i) => ({
-    loc: `${SITE_URL}/blogs/${i.seo_url}`,
+    loc: `${SITE_URL}/blog/${i.seo_url}`,
     lastmod: new Date().toISOString(),
   }));
   return getServerSideSitemapLegacy(ctx, fields);
