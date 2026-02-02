@@ -245,7 +245,6 @@ const Header = () => {
                   </div>
                 </div>
 
-                <Link href="/blog"><span className={linkClasses("/blog")}>Blogs</span></Link>
                 <Link href="/contact"><span className={linkClasses("/contact")}>Contact</span></Link>
               </div>
             </nav>
@@ -381,7 +380,6 @@ const Header = () => {
               </div>
             </div>
 
-            <Link href="/blog" onClick={handleSideNav}><span className={mobileLinkClasses("/blog")}>Blogs</span></Link>
             <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>Contact</span></Link>
           </div>
         </nav>
