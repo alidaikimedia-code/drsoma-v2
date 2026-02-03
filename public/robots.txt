@@ -1,10 +1,4 @@
 User-agent: *
+Disallow:
 
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /payment/
-Disallow: /*.pdf$
-Disallow: /landing/
-
-# Sitemap location - will be dynamically generated during build
 Sitemap: https://drsomaplasticsurgery.com/sitemap.xml

@@ -164,9 +164,9 @@ const Header = () => {
                       <div className="grid grid-cols-4 gap-10">
                         {Object.values(megaMenuData).map((category) => (
                           <div key={category.title} className="flex flex-col">
-                            <h3 className="text-primary font-medium text-[15px] mb-3 pb-2 border-b border-primary/20 normal-case">
+                            <span className="text-primary font-medium text-[15px] mb-3 pb-2 border-b border-primary/20 normal-case block">
                               {category.title}
-                            </h3>
+                            </span>
                             <ul className="flex flex-col gap-2">
                               {category.services.map((service) => (
                                 <li key={service.name}>
@@ -214,9 +214,9 @@ const Header = () => {
                       <div className="grid grid-cols-3 gap-10">
                         {Object.values(aestheticsMenuData).map((category) => (
                           <div key={category.title} className="flex flex-col">
-                            <h3 className="text-primary font-medium text-[15px] mb-3 pb-2 border-b border-primary/20 normal-case">
+                            <span className="text-primary font-medium text-[15px] mb-3 pb-2 border-b border-primary/20 normal-case block">
                               {category.title}
-                            </h3>
+                            </span>
                             <ul className="flex flex-col gap-2">
                               {category.services.map((service) => (
                                 <li key={service.name}>

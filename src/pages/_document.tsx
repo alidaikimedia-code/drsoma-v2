@@ -5,6 +5,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Favicon */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="R5MjYmM1PcvrzXa95Gh0JwuT2o0PCLWlXHl0vb5JgV4" />
         {/* Google Analytics */}
