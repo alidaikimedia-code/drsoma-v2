@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
+            <span className="font-bold text-lg mb-6 block">Quick Links</span>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/about-dr-soma')}>About Dr. Soma</li>
               <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/treatments')}>Our Services</li>
@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Contact</h4>
+            <span className="font-bold text-lg mb-6 block">Contact</span>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="text-[#EA622F] w-[18px] h-[18px] shrink-0 mt-0.5" />
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Clinic Hours */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Clinic Hours</h4>
+            <span className="font-bold text-lg mb-6 block">Clinic Hours</span>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex justify-between">
                 <span>Mon - Fri</span>

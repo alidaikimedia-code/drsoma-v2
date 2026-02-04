@@ -152,10 +152,10 @@ export const fetchWPBlogBySlug = async (slug: string): Promise<WPBlogPost | null
     // Clean the slug - remove trailing slashes
     const cleanSlug = slug.replace(/\/+$/, '').trim();
 
-    // Always use direct WordPress API call (API routes don't work with static export)
-    const apiUrl = `${WP_BLOG_API_URL}/blog/${encodeURIComponent(cleanSlug)}`;
+    // First, fetch blogs list to find the blog ID by slug
+    const apiUrl = `${WP_BLOG_API_URL}/blogs?per_page=100`;
 
-    console.log('Fetching blog by slug:', apiUrl, 'Clean slug:', cleanSlug);
+    console.log('Fetching blogs to find slug:', cleanSlug);
 
     const response = await fetch(apiUrl, {
       method: 'GET',
@@ -168,32 +168,35 @@ export const fetchWPBlogBySlug = async (slug: string): Promise<WPBlogPost | null
 
     clearTimeout(timeoutId);
 
-    // Get response text first for debugging
-    const responseText = await response.text();
-    console.log('Response status:', response.status);
-    console.log('Response text:', responseText.substring(0, 500));
-
     if (!response.ok) {
-      console.error('API Error:', response.status, responseText);
+      console.error('API Error:', response.status);
       return null;
     }
 
-    // Parse JSON
-    let data;
-    try {
-      data = JSON.parse(responseText);
-    } catch (e) {
-      console.error('Failed to parse JSON:', e);
+    const data = await response.json();
+
+    // Find blog by slug
+    let foundBlog: WPBlogPost | null = null;
+    if (data.success && data.blogs && data.blogs.length > 0) {
+      foundBlog = data.blogs.find((blog: WPBlogPost) => blog.slug === cleanSlug) || null;
+    }
+
+    if (!foundBlog) {
+      console.log('Blog not found with slug:', cleanSlug);
       return null;
     }
 
-    console.log('Blog fetched by slug:', data);
+    console.log('Found blog with ID:', foundBlog.id);
 
-    if (data.success && data.blog) {
-      return data.blog;
+    // Now fetch the full blog data by ID to get complete details including images
+    const fullBlog = await fetchWPBlogById(foundBlog.id);
+
+    if (fullBlog) {
+      return fullBlog;
     }
 
-    return null;
+    // Fallback to the blog from list if fetchWPBlogById fails
+    return foundBlog;
   } catch (error) {
     console.error('Error fetching WordPress blog by slug:', error);
     if (error instanceof TypeError && error.message === 'Failed to fetch') {

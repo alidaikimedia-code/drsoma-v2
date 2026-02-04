@@ -1,4 +1,12 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /announcement-demo/
+Disallow: /new-home/
 
+# Host
+Host: https://drsomaplasticsurgery.com
+
+# Sitemaps
 Sitemap: https://drsomaplasticsurgery.com/sitemap.xml
