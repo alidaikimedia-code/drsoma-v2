@@ -2,8 +2,10 @@ import Head from "next/head"
 import Link from "next/link"
 import BaseImage from "@/components/BaseImage"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function BackLiposuctionMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,47 +37,47 @@ export default function BackLiposuctionMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is back liposuction?", answer: "A surgeon-performed fat-removal procedure that contours the back by removing excess subcutaneous fat to reduce rolls, bra bulges, and back fullness." },
-    { question: "How is back liposuction done?", answer: "Small hidden incisions are made, a fine cannula is used after tumescent infiltration, and fat is removed with MicroAire Power-Assisted technology to support smooth, uniform contour." },
-    { question: "When will I see results after back liposuction?", answer: "You'll start noticing improvement at 4–6 weeks, with final contour visible between 3–6 months as swelling fully resolves." },
-    { question: "How long do results last?", answer: "Results are long-lasting because removed fat cells do not regenerate. Stable weight helps preserve contour." },
-    { question: "Can back liposuction remove bra-line fat?", answer: "Yes. Mid-back bra-line bulges are one of the most common treated areas, and many patients notice improved clothing fit early." },
-    { question: "Does back liposuction tighten skin?", answer: "It can help the skin retract if elasticity is good. If skin laxity is significant, additional options may be discussed." },
-    { question: "Is back liposuction painful?", answer: "Discomfort is usually mild to moderate and is manageable with medication. Soreness is more common than sharp pain." },
-    { question: "How long is downtime?", answer: "Many patients return to desk work in 5–7 days. Exercise is usually resumed around 4–6 weeks with surgeon approval." },
-    { question: "Will there be scars?", answer: "Incisions are tiny (3–4mm) and placed discreetly in natural folds. Scars fade significantly over time." },
-    { question: "Is back liposuction safe?", answer: "When performed by a certified plastic surgeon in a proper medical facility, back liposuction is generally safe. Risks exist like any surgery and are explained during consultation." }
+    { question: t('backLipo.faq1Q'), answer: t('backLipo.faq1A') },
+    { question: t('backLipo.faq2Q'), answer: t('backLipo.faq2A') },
+    { question: t('backLipo.faq3Q'), answer: t('backLipo.faq3A') },
+    { question: t('backLipo.faq4Q'), answer: t('backLipo.faq4A') },
+    { question: t('backLipo.faq5Q'), answer: t('backLipo.faq5A') },
+    { question: t('backLipo.faq6Q'), answer: t('backLipo.faq6A') },
+    { question: t('backLipo.faq7Q'), answer: t('backLipo.faq7A') },
+    { question: t('backLipo.faq8Q'), answer: t('backLipo.faq8A') },
+    { question: t('backLipo.faq9Q'), answer: t('backLipo.faq9A') },
+    { question: t('backLipo.faq10Q'), answer: t('backLipo.faq10A') }
   ]
 
   const treatmentAreas = [
-    { name: "Upper Back Rolls", desc: "Between shoulder blades & bra band." },
-    { name: "Bra-Line Bulges", desc: "The most common complaint." },
-    { name: "Lower Back Fullness", desc: "Just above the waistline." },
-    { name: "Side-Back / Axillary", desc: "Near the armpit line." }
+    { name: t('backLipo.area1Name'), desc: t('backLipo.area1Desc') },
+    { name: t('backLipo.area2Name'), desc: t('backLipo.area2Desc') },
+    { name: t('backLipo.area3Name'), desc: t('backLipo.area3Desc') },
+    { name: t('backLipo.area4Name'), desc: t('backLipo.area4Desc') }
   ]
 
   const benefits = [
-    { title: "Reduces Bra-Line Rolls", desc: "Directly targets and removes the bulges that appear above and below the bra strap.", icon: "M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" },
-    { title: "Smoother Silhouette", desc: "Smooths the back contour for a cleaner look in fitted clothing and swimwear.", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
-    { title: "MicroAire PAL Precision", desc: "Surgeon-controlled technology ensures uniformity and less tissue trauma than traditional methods.", icon: "M13 10V3L4 14h7v7l9-11h-7z" }
+    { title: t('backLipo.benefit1Title'), desc: t('backLipo.benefit1Desc'), icon: "M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" },
+    { title: t('backLipo.benefit2Title'), desc: t('backLipo.benefit2Desc'), icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
+    { title: t('backLipo.benefit3Title'), desc: t('backLipo.benefit3Desc'), icon: "M13 10V3L4 14h7v7l9-11h-7z" }
   ]
 
   const lipoTypes = [
-    { title: "MicroAire PAL for Back Rolls", desc: "Designed for controlled, even fat removal across multiple back zones. Offers smoother contour and improved uniformity across roll transitions." },
-    { title: "Targeted Bra-Line Liposuction", desc: "Mid-back focus for patients whose main concern is bra bulges. Refines the bra band line appearance for better clothing comfort." },
-    { title: "Comprehensive Upper Body", desc: "Combines back rolls with waistline blending (flanks). Creates a cleaner hourglass shape and improves side profile proportion." }
+    { title: t('backLipo.type1Title'), desc: t('backLipo.type1Desc') },
+    { title: t('backLipo.type2Title'), desc: t('backLipo.type2Desc') },
+    { title: t('backLipo.type3Title'), desc: t('backLipo.type3Desc') }
   ]
 
   const processSteps = [
-    { num: "1", title: "Marking & Planning", desc: "Standing roll mapping to match bra levels and natural creases." },
-    { num: "2", title: "MicroAire PAL", desc: "Power-Assisted Liposuction to break dense back fat with precision." },
-    { num: "3", title: "Feathering", desc: "Critical blending into flanks and waist for a smooth transition." }
+    { num: "1", title: t('backLipo.step1'), desc: t('backLipo.step1Desc') },
+    { num: "2", title: t('backLipo.step2'), desc: t('backLipo.step2Desc') },
+    { num: "3", title: t('backLipo.step3'), desc: t('backLipo.step3Desc') }
   ]
 
   const testimonials = [
-    { text: "My bra-line bulges are gone and my tops fit so much better. The contour looks smooth, not hollow.", name: "Sabrina, 37" },
-    { text: "I didn't expect such a difference in my back silhouette. Dr. Soma's technique looks natural and even.", name: "Jean, 44" },
-    { text: "Professional, safe, and the result is exactly what I wanted, flatter back rolls without looking overdone.", name: "Aina, 33" }
+    { text: t('backLipo.test1Text'), name: t('backLipo.test1Name') },
+    { text: t('backLipo.test2Text'), name: t('backLipo.test2Name') },
+    { text: t('backLipo.test3Text'), name: t('backLipo.test3Name') }
   ]
 
   return (
@@ -83,7 +85,7 @@ export default function BackLiposuctionMalaysia() {
       <Head>
         <title>Back Liposuction Malaysia | Bra-Line & Roll Removal – Dr. Soma</title>
         <meta name="description" content="Back Liposuction in Malaysia by Certified Plastic Surgeon. Remove bra-line fat and back rolls using MicroAire PAL for a smoother silhouette." />
-      
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -195,18 +197,18 @@ export default function BackLiposuctionMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 shadow-sm animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Certified Plastic Surgeon
+                {t('backLipo.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Back Liposuction in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Smoother Back. Cleaner Lines.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('backLipo.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('backLipo.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Back fat is stubborn and visible in fitted clothing. From bra-line bulges to lower back rolls, we refine the silhouette using advanced MicroAire Power-Assisted Liposuction (PAL) for uniform fat removal and refined transitions.</p>
+                <p style={{fontSize: '14px'}}>{t('backLipo.heroDesc')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Back%20Liposuction%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('backLipo.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
               </div>
@@ -226,7 +228,7 @@ export default function BackLiposuctionMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('backLipo.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('backLipo.happyPatients')}</span>
               </div>
             </div>
 
@@ -246,8 +248,8 @@ export default function BackLiposuctionMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Technology</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">MicroAire Power-Assisted (PAL)</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('backLipo.technology')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('backLipo.techName')}</p>
                     </div>
                   </div>
                 </div>
@@ -261,17 +263,17 @@ export default function BackLiposuctionMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-3 md:mb-6">What Is Back Liposuction?</h2>
+                <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-3 md:mb-6">{t('backLipo.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-2 md:mb-3 text-justify">
-                  Back liposuction is a surgical procedure that removes excess subcutaneous fat from the back to improve contour, reduce rolls, and refine the upper body silhouette.
+                  {t('backLipo.whatDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed font-medium text-justify">
-                  It is not a weight-loss procedure. It is a precision sculpting treatment for fat pockets that do not respond well to diet and exercise.
+                  {t('backLipo.whatDesc2')}
                 </p>
               </div>
 
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Areas Treated</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('backLipo.areasTitle')}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="p-5 rounded-xl border border-zinc-200 bg-zinc-50 hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine">
@@ -292,14 +294,14 @@ export default function BackLiposuctionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-animate="difficulty" className={`transition-all duration-700 ${isVisible('difficulty') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Back Fat Is Difficult to Lose</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('backLipo.difficultyTitle')}</h2>
               <div className="space-y-6 mb-10">
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Back fat often persists even in fit individuals because fat distribution is genetically influenced and the back has dense connective tissue layers. Rolls form where skin naturally folds with movement, creating localized pockets that diet alone cannot &ldquo;spot reduce.&rdquo;
+                  {t('backLipo.difficultyDesc')}
                 </p>
               </div>
 
-              <h3 className="text-xl font-semibold tracking-tight text-[#FE7623] mb-6">How The Procedure Works</h3>
+              <h3 className="text-xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('backLipo.processTitle')}</h3>
               <div className="space-y-5">
                 {processSteps.map((step, i) => (
                   <div key={i} className="flex flex-row items-start gap-4 group cursor-pointer hover:translate-x-2 transition-all duration-300">
@@ -328,9 +330,9 @@ export default function BackLiposuctionMalaysia() {
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-black">Clothing Fit Improvement</h4>
+                    <h4 className="text-sm font-semibold text-black">{t('backLipo.clothingFitTitle')}</h4>
                     <p className="text-xs text-black mt-1 leading-relaxed">
-                      Most patients notice the earliest visible benefit in how bras and fitted tops sit flatter across the back.
+                      {t('backLipo.clothingFitDesc')}
                     </p>
                   </div>
                 </div>
@@ -342,7 +344,7 @@ export default function BackLiposuctionMalaysia() {
         {/* Benefits Grid */}
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="benefits-header" className={`text-2xl font-semibold tracking-tight text-center text-[#FE7623] mb-12 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Benefits of Back Liposuction</h2>
+            <h2 data-animate="benefits-header" className={`text-2xl font-semibold tracking-tight text-center text-[#FE7623] mb-12 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('backLipo.benefitsTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {benefits.map((benefit, i) => (
                 <div key={i} data-animate={`benefit-${i}`} className={`p-8 rounded-2xl border border-zinc-200 bg-white shadow-sm card-3d card-shine hover:border-[#FE7623] transition-all duration-700 ${isVisible(`benefit-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
@@ -371,16 +373,16 @@ export default function BackLiposuctionMalaysia() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FE7623]/20 border border-[#FE7623]/50 text-[#FE7623] text-[10px] font-medium uppercase tracking-widest mb-2">
-                  Safety First
+                  {t('backLipo.safetyFirst')}
                 </div>
-                <h3 className="text-lg font-medium">Hospital-Grade Standards</h3>
-                <p className="text-sm text-zinc-400 mt-2 max-w-xs">Performed in a proper medical facility with comprehensive post-op monitoring.</p>
+                <h3 className="text-lg font-medium">{t('backLipo.hospitalGrade')}</h3>
+                <p className="text-sm text-zinc-400 mt-2 max-w-xs">{t('backLipo.hospitalGradeDesc')}</p>
               </div>
             </div>
 
             {/* Content */}
             <div data-animate="types" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('types') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-2xl font-semibold tracking-tight text-white mb-8">Types of Back Liposuction</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-white mb-8">{t('backLipo.typesTitle')}</h2>
 
               <div className="space-y-8">
                 {lipoTypes.map((type, i) => (
@@ -398,7 +400,7 @@ export default function BackLiposuctionMalaysia() {
 
               <div className="mt-10 pt-8 border-t border-zinc-800">
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Back%20Liposuction%20treatment" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:text-white transition-colors group">
-                  Consult Dr. Soma about your options
+                  {t('backLipo.consultOptions')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
               </div>
@@ -411,22 +413,22 @@ export default function BackLiposuctionMalaysia() {
           <div className="flex containers w-full">
             <div className="flex flex-col w-full">
               <div data-animate="comparison" className={`w-full transition-all duration-700 ${isVisible('comparison') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-2xl font-semibold mb-10 text-center text-[#FE7623]">Back Liposuction vs Flank Liposuction</h2>
+                <h2 className="text-2xl font-semibold mb-10 text-center text-[#FE7623]">{t('backLipo.compareTitle')}</h2>
 
                 <div className="w-full border border-zinc-200 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300">
                   {/* Header */}
                   <div className="grid grid-cols-3 bg-zinc-50 px-6 py-6 border-b border-zinc-200 text-xs font-bold uppercase tracking-wider text-para-black">
-                    <div>Feature</div>
-                    <div className="text-[#FE7623]">Back Liposuction</div>
-                    <div>Flank Liposuction</div>
+                    <div>{t('backLipo.feature')}</div>
+                    <div className="text-[#FE7623]">{t('backLipo.compBack')}</div>
+                    <div>{t('backLipo.compFlank')}</div>
                   </div>
 
                   {/* Rows */}
                   {[
-                    { feat: "Main Goal", back: "Reduce rolls & bra bulges", flank: "Improve waistline & handles", backHighlight: true, flankHighlight: false },
-                    { feat: "Best For", back: "Upper & mid-back fullness", flank: "Side waist bulges", backHighlight: false, flankHighlight: false },
-                    { feat: "Scarring", back: "Minimal", flank: "Minimal", backHighlight: false, flankHighlight: false },
-                    { feat: "Often Combined", back: "Yes", flank: "Yes", backHighlight: true, flankHighlight: true }
+                    { feat: t('backLipo.mainGoal'), back: t('backLipo.backGoal'), flank: t('backLipo.flankGoal'), backHighlight: true, flankHighlight: false },
+                    { feat: t('backLipo.bestFor'), back: t('backLipo.backBestFor'), flank: t('backLipo.flankBestFor'), backHighlight: false, flankHighlight: false },
+                    { feat: t('backLipo.scarring'), back: t('backLipo.minimal'), flank: t('backLipo.minimal'), backHighlight: false, flankHighlight: false },
+                    { feat: t('backLipo.oftenCombined'), back: t('backLipo.yes'), flank: t('backLipo.yes'), backHighlight: true, flankHighlight: true }
                   ].map((row, i) => (
                     <div key={i} className="grid grid-cols-3 px-6 py-6 border-b border-zinc-100 items-center text-sm hover:bg-zinc-50 transition-colors">
                       <div className="font-medium text-header-black">{row.feat}</div>
@@ -451,11 +453,11 @@ export default function BackLiposuctionMalaysia() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Candidates */}
             <div data-animate="candidates" className={`transition-all duration-700 ${isVisible('candidates') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-8">Who Is a Good Candidate?</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-8">{t('backLipo.candidateTitle')}</h2>
               <div className="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm">
-                <h3 className="text-lg font-bold text-zinc-900 mb-6">Ideal Candidate</h3>
+                <h3 className="text-lg font-bold text-zinc-900 mb-6">{t('backLipo.idealTitle')}</h3>
                 <ul className="space-y-4 mb-8">
-                  {["Stable weight", "Localised fat pockets on upper, mid, or lower back", "Good skin elasticity (helps smooth retraction)", "Realistic expectations about gradual results"].map((item, i) => (
+                  {[t('backLipo.ideal1'), t('backLipo.ideal2'), t('backLipo.ideal3'), t('backLipo.ideal4')].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-700 hover:text-zinc-900 transition-colors duration-300">
                       <svg className="w-6 h-6 min-w-[24px] text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -464,9 +466,9 @@ export default function BackLiposuctionMalaysia() {
                 </ul>
 
                 <div className="border-t border-zinc-200 pt-6">
-                  <h4 className="text-lg font-bold text-zinc-900 mb-4">Not Suitable If</h4>
+                  <h4 className="text-lg font-bold text-zinc-900 mb-4">{t('backLipo.notSuitableTitle')}</h4>
                   <ul className="space-y-3">
-                    {["Significant loose skin is the main issue", "Severe obesity"].map((item, i) => (
+                    {[t('backLipo.notSuitable1'), t('backLipo.notSuitable2')].map((item, i) => (
                       <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-500 hover:text-zinc-700 transition-colors duration-300">
                         <svg className="w-6 h-6 min-w-[24px] text-red-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                         <span className="flex-1">{item}</span>
@@ -479,13 +481,13 @@ export default function BackLiposuctionMalaysia() {
 
             {/* Recovery Timeline */}
             <div data-animate="recovery" className={`transition-all duration-700 ${isVisible('recovery') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-8">Recovery Timeline</h2>
+              <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-8">{t('backLipo.recoveryTitle')}</h2>
               <div className="relative space-y-8 pl-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-px before:bg-zinc-200">
                 {[
-                  { time: "Immediately", desc: "Compression garment applied. Walking encouraged same day. Back may feel tight.", active: true },
-                  { time: "Week 1", desc: "Return to desk work for many. Avoid heavy lifting and intense twisting.", active: false },
-                  { time: "Week 4-6", desc: "Resume exercise with approval. Back rolls appear flatter and contour becomes visible.", active: false },
-                  { time: "Month 3-6", desc: "Final shape revealed. Full tissue softening and contour refinement.", active: false }
+                  { time: t('backLipo.recTime1'), desc: t('backLipo.recDesc1'), active: true },
+                  { time: t('backLipo.recTime2'), desc: t('backLipo.recDesc2'), active: false },
+                  { time: t('backLipo.recTime3'), desc: t('backLipo.recDesc3'), active: false },
+                  { time: t('backLipo.recTime4'), desc: t('backLipo.recDesc4'), active: false }
                 ].map((step, i) => (
                   <div key={i} className="relative group cursor-pointer hover:translate-x-2 transition-all duration-300">
                     <div className={`absolute -left-[29px] top-1 w-6 h-6 rounded-full bg-white border-2 z-10 transition-colors duration-300 ${step.active ? 'border-[#FE7623]' : 'border-zinc-200 group-hover:border-[#FE7623]'}`}></div>
@@ -501,7 +503,7 @@ export default function BackLiposuctionMalaysia() {
         {/* Testimonials */}
         <section className="py-8 md:py-24 px-6 bg-white border-t border-zinc-200">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-[#FE7623] text-center mb-12 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Experiences</h2>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-[#FE7623] text-center mb-12 transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('backLipo.storiesTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, i) => (
                 <div key={i} data-animate={`testimonial-${i}`} className={`p-8 rounded-2xl bg-white shadow-sm border border-zinc-100 card-3d card-shine transition-all duration-700 ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
@@ -521,12 +523,12 @@ export default function BackLiposuctionMalaysia() {
         {/* Pricing Guide */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 data-animate="pricing-header" className={`text-2xl font-semibold text-[#FE7623] mb-6 transition-all duration-700 ${isVisible('pricing-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Pricing Guide</h2>
-            <p className="text-sm text-zinc-500 mb-8">Cost varies depending on individual factors.</p>
+            <h2 data-animate="pricing-header" className={`text-2xl font-semibold text-[#FE7623] mb-6 transition-all duration-700 ${isVisible('pricing-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('backLipo.pricingTitle')}</h2>
+            <p className="text-sm text-zinc-500 mb-8">{t('backLipo.pricingDesc')}</p>
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-8 text-left">
-              <h4 className="text-sm font-semibold text-zinc-900 mb-4">Cost Factors Include:</h4>
+              <h4 className="text-sm font-semibold text-zinc-900 mb-4">{t('backLipo.costFactorsTitle')}</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Number of back zones treated", "Whether flanks are included", "Amount of fat to be removed", "Hospital and anaesthesia fees"].map((item, i) => (
+                {[t('backLipo.priceFactor1'), t('backLipo.priceFactor2'), t('backLipo.priceFactor3'), t('backLipo.priceFactor4')].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 hover:text-[#FE7623] transition-colors duration-300">
                     <div className="w-1.5 h-1.5 rounded-full bg-zinc-400"></div>
                     {item}
@@ -534,7 +536,7 @@ export default function BackLiposuctionMalaysia() {
                 ))}
               </div>
               <div className="mt-8 pt-6 border-t border-zinc-200 text-center">
-                <p className="text-sm font-medium text-zinc-900">A full quotation is provided after consultation.</p>
+                <p className="text-sm font-medium text-zinc-900">{t('backLipo.priceNote')}</p>
               </div>
             </div>
           </div>
@@ -547,13 +549,13 @@ export default function BackLiposuctionMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('backLipo.refTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { name: "Harvard Medical School", url: "https://www.health.harvard.edu/", desc: "Describes liposuction as a safe method to remove subcutaneous fat when performed by qualified surgeons.", color: "from-red-500 to-red-600" },
-                { name: "Mayo Clinic", url: "https://www.mayoclinic.org/", desc: "Confirms liposuction permanently removes fat cells from targeted areas, with best maintenance through stable weight.", color: "from-blue-500 to-blue-600" },
-                { name: "PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/", desc: "Studies show power-assisted liposuction (PAL) can improve efficiency and support controlled, uniform fat removal.", color: "from-green-500 to-green-600" }
+                { name: t('backLipo.harvardName'), url: "https://www.health.harvard.edu/", desc: t('backLipo.harvardDesc'), color: "from-red-500 to-red-600" },
+                { name: t('backLipo.mayoName'), url: "https://www.mayoclinic.org/", desc: t('backLipo.mayoDesc'), color: "from-blue-500 to-blue-600" },
+                { name: t('backLipo.pubmedName'), url: "https://pubmed.ncbi.nlm.nih.gov/", desc: t('backLipo.pubmedDesc'), color: "from-green-500 to-green-600" }
               ].map((source, i) => (
                 <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="block p-6 rounded-xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group">
                   <div className="flex items-center justify-between mb-3">
@@ -578,8 +580,8 @@ export default function BackLiposuctionMalaysia() {
                 <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <div>
-                <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                <p className="text-sm text-zinc-500">Get answers to common concerns about back liposuction</p>
+                <h2 className="text-2xl font-semibold text-[#FE7623]">{t('backLipo.faqTitle')}</h2>
+                <p className="text-sm text-zinc-500">{t('backLipo.faqDesc')}</p>
               </div>
             </div>
             <div className="space-y-3">
@@ -629,18 +631,18 @@ export default function BackLiposuctionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Achieve a smoother, cleaner back silhouette.</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('backLipo.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              Dr. Soma combines medical precision, MicroAire PAL technology, and safety-first planning to deliver natural, long-lasting contour improvement.
+              {t('backLipo.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4 md:px-0">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Back%20Liposuction%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('backLipo.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('backLipo.bookConsultation')}
               </Link>
             </div>
 
