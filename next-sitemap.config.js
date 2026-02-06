@@ -5,7 +5,6 @@ module.exports = {
   exclude: [
     "/server-sitemap.xml",
     "/announcement-demo",
-    "/new-home",
     "/aboutus",
     "/blog/test",
     "/blog/video-list",
@@ -17,7 +16,7 @@ module.exports = {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/announcement-demo/", "/new-home/"],
+        disallow: ["/api/", "/announcement-demo/"],
       },
     ],
   },

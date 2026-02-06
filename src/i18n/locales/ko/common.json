@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "drSoma": "Dr Soma", "plasticSurgery": "성형외과", "aesthetics": "미용시술", "contact": "문의하기", "bookConsultation": "상담 예약", "viewAllServices": "모든 서비스 보기", "viewAll": "전체 보기"
+  },
+  "categories": { "body": "바디", "face": "얼굴", "breast": "가슴", "male": "남성" },
+  "services": {
+    "liposuction": "지방흡입", "tummyTuck": "복부성형", "bodyLift": "바디리프트", "armLift": "팔리프트",
+    "faceLift": "안면거상술", "rhinoplasty": "코성형", "eyelidSurgery": "눈꺼풀수술", "browLift": "이마거상술",
+    "breastAugmentation": "가슴확대", "breastLift": "가슴리프트", "breastReduction": "가슴축소", "breastImplantRemoval": "보형물제거",
+    "gynecomastiaSurgery": "여유증수술", "hairTransplant": "모발이식", "jawlineEnhancement": "턱라인성형", "maleRhinoplasty": "남성코성형"
+  },
+  "aestheticCategories": { "injectable": "주사시술", "thread": "실리프팅", "skin": "피부치료" },
+  "aestheticServices": {
+    "botox": "보톡스", "dermalFillers": "필러", "lipFiller": "입술필러", "profhilo": "프로파일로",
+    "threadLift": "실리프팅", "noseThreadLift": "코실리프팅", "scarTreatment": "흉터치료", "laserScarRemoval": "레이저흉터제거", "keloidTreatment": "켈로이드치료"
+  },
+  "footer": {
+    "description": "귀하의 필요에 맞춘 전문 성형외과 및 미용의학 서비스.",
+    "quickLinks": "빠른 링크", "aboutDrSoma": "Dr. Soma 소개", "ourServices": "서비스", "successStories": "성공 사례", "patientResources": "환자 자료",
+    "contact": "연락처", "clinicHours": "진료 시간", "monFri": "월 - 금", "saturday": "토요일", "sunday": "일요일", "closed": "휴진"
+  }
+}

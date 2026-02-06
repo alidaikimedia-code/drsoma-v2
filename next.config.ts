@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Static export only for production build; dev server needs full features for rewrites
+  ...(isProd ? { output: 'export' as const } : {}),
   reactStrictMode: true,
   trailingSlash: true,
   images: {
@@ -25,6 +28,17 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Locale URL rewrites for dev server (production uses .htaccess)
+  ...(!isProd ? {
+    async rewrites() {
+      return [
+        {
+          source: '/:locale(id|zh-cn|zh-my|ms|ko)/:path*',
+          destination: '/:path*',
+        },
+      ];
+    },
+  } : {}),
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,

@@ -3,7 +3,6 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /announcement-demo/
-Disallow: /new-home/
 
 # Host
 Host: https://drsomaplasticsurgery.com

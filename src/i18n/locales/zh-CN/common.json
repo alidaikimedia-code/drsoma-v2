@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "drSoma": "Dr Soma", "plasticSurgery": "整形外科", "aesthetics": "医学美容", "contact": "联系我们", "bookConsultation": "预约咨询", "viewAllServices": "查看所有服务", "viewAll": "查看全部"
+  },
+  "categories": { "body": "身体", "face": "面部", "breast": "胸部", "male": "男性" },
+  "services": {
+    "liposuction": "吸脂手术", "tummyTuck": "腹部整形", "bodyLift": "身体提升", "armLift": "手臂提升",
+    "faceLift": "面部提升", "rhinoplasty": "隆鼻手术", "eyelidSurgery": "眼睑手术", "browLift": "眉部提升",
+    "breastAugmentation": "隆胸手术", "breastLift": "胸部提升", "breastReduction": "缩胸手术", "breastImplantRemoval": "取出胸部假体",
+    "gynecomastiaSurgery": "男性乳房发育手术", "hairTransplant": "植发手术", "jawlineEnhancement": "下颌线塑形", "maleRhinoplasty": "男性隆鼻"
+  },
+  "aestheticCategories": { "injectable": "注射治疗", "thread": "线雕治疗", "skin": "皮肤治疗" },
+  "aestheticServices": {
+    "botox": "肉毒杆菌", "dermalFillers": "真皮填充", "lipFiller": "唇部填充", "profhilo": "Profhilo",
+    "threadLift": "线雕提升", "noseThreadLift": "鼻线提升", "scarTreatment": "疤痕治疗", "laserScarRemoval": "激光祛疤", "keloidTreatment": "瘢痕疙瘩治疗"
+  },
+  "footer": {
+    "description": "专业的整形外科和医学美容服务，量身定制满足您的需求。",
+    "quickLinks": "快速链接", "aboutDrSoma": "关于Dr. Soma", "ourServices": "我们的服务", "successStories": "成功案例", "patientResources": "患者资源",
+    "contact": "联系方式", "clinicHours": "诊所时间", "monFri": "周一 - 周五", "saturday": "周六", "sunday": "周日", "closed": "休息"
+  }
+}
