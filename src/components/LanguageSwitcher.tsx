@@ -50,12 +50,12 @@ const LanguageSwitcher = () => {
       {/* Current Language Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-primary text-primary hover:bg-primary/5 transition-all duration-200"
         aria-label="Select language"
       >
-        <span className="text-[13px] font-semibold tracking-wide">{currentLocale.shortName}</span>
+        <span className="text-[13px] font-semibold tracking-wide text-primary">{currentLocale.shortName}</span>
         <svg
-          className={`w-3 h-3 text-gray-500 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-3 h-3 text-primary transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -74,8 +74,8 @@ const LanguageSwitcher = () => {
           <button
             key={locale.code}
             onClick={() => switchLanguage(locale)}
-            className={`block w-full px-4 py-2.5 text-left text-[13px] font-medium transition-colors duration-150 hover:bg-gray-50 ${
-              locale.code === i18n.language ? 'text-primary bg-primary/5' : 'text-gray-700'
+            className={`block w-full px-4 py-2.5 text-left text-[13px] font-medium transition-colors duration-150 hover:bg-primary/5 ${
+              locale.code === i18n.language ? 'text-primary bg-primary/10 border-l-2 border-primary' : 'text-gray-700 border-l-2 border-transparent'
             }`}
           >
             {locale.name}
