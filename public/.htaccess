@@ -1,0 +1,34 @@
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Enable RewriteEngine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Language URL rewrites - serve same content for locale-prefixed URLs
+# English is default (no prefix needed)
+# /id/     -> Indonesia
+# /zh-cn/  -> Chinese (China)
+# /zh-my/  -> Chinese (Malaysia)
+# /ms/     -> Malay
+# /ko/     -> Korean
+RewriteCond %{REQUEST_URI} ^/(id|zh-cn|zh-my|ms|ko)/(.+)$
+RewriteCond %{DOCUMENT_ROOT}/%2 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/%2 -d
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/(.+)$ /$2 [L]
+
+# Handle locale root URLs (e.g., /id/ -> /)
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/?$ /index.html [L]
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Handle trailing slash for directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.html [L]

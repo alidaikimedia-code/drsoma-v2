@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "drSoma": "Dr Soma",
+    "plasticSurgery": "Plastic surgery",
+    "aesthetics": "Aesthetics",
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "viewAllServices": "View All Services",
+    "viewAll": "View All"
+  },
+  "categories": {
+    "body": "Body",
+    "face": "Face",
+    "breast": "Breast",
+    "male": "Male"
+  },
+  "services": {
+    "liposuction": "Liposuction",
+    "tummyTuck": "Tummy tuck",
+    "bodyLift": "Body lift",
+    "armLift": "Arm lift",
+    "faceLift": "Face lift",
+    "rhinoplasty": "Rhinoplasty",
+    "eyelidSurgery": "Eyelid surgery",
+    "browLift": "Brow lift",
+    "breastAugmentation": "Breast augmentation",
+    "breastLift": "Breast lift",
+    "breastReduction": "Breast reduction",
+    "breastImplantRemoval": "Breast implant removal",
+    "gynecomastiaSurgery": "Gynecomastia surgery",
+    "hairTransplant": "Hair transplant",
+    "jawlineEnhancement": "Jawline enhancement",
+    "maleRhinoplasty": "Male rhinoplasty"
+  },
+  "aestheticCategories": {
+    "injectable": "Injectable treatments",
+    "thread": "Thread treatments",
+    "skin": "Skin treatments"
+  },
+  "aestheticServices": {
+    "botox": "Botox",
+    "dermalFillers": "Dermal fillers",
+    "lipFiller": "Lip filler",
+    "profhilo": "Profhilo",
+    "threadLift": "Thread lift",
+    "noseThreadLift": "Nose thread lift",
+    "scarTreatment": "Scar treatment",
+    "laserScarRemoval": "Laser scar removal",
+    "keloidTreatment": "Keloid treatment"
+  },
+  "footer": {
+    "description": "Professional Plastic Surgery & Aesthetic Medicine tailored to your needs.",
+    "quickLinks": "Quick Links",
+    "aboutDrSoma": "About Dr. Soma",
+    "ourServices": "Our Services",
+    "successStories": "Success Stories",
+    "patientResources": "Patient Resources",
+    "contact": "Contact",
+    "clinicHours": "Clinic Hours",
+    "monFri": "Mon - Fri",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed"
+  }
+}
