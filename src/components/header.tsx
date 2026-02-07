@@ -154,12 +154,12 @@ const Header = () => {
                   onMouseEnter={() => setMegaMenuOpen(true)}
                   onMouseLeave={() => setMegaMenuOpen(false)}
                 >
-                  <span className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
+                  <Link href="/treatments" className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
                     {t('nav.plasticSurgery')}
                     <svg className={`w-3 h-3 transition-transform duration-300 ${megaMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </span>
+                  </Link>
 
                   {/* Mega Menu Dropdown */}
                   <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-8 transition-all duration-300 ${megaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
@@ -291,15 +291,14 @@ const Header = () => {
 
             {/* Mobile Plastic Surgery Submenu */}
             <div>
-              <button
-                className={`flex items-center justify-between w-full ${mobileLinkClasses("/treatments")}`}
-                onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
-              >
-                <span>{t('nav.plasticSurgery')}</span>
-                <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+              <div className={`flex items-center justify-between w-full ${mobileLinkClasses("/treatments")}`}>
+                <Link href="/treatments" onClick={handleSideNav}>{t('nav.plasticSurgery')}</Link>
+                <button onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)} aria-label="Toggle plastic surgery submenu">
+                  <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
               {/* Mobile Submenu Content */}
               <div className={`overflow-hidden transition-all duration-300 ${mobileSubmenuOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
