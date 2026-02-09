@@ -20,6 +20,9 @@ import enFatTransfer from './locales/en/fat-transfer.json';
 import enButtockFat from './locales/en/fat-grafting-buttock.json';
 import enSixPack from './locales/en/six-pack-enhancement.json';
 import enBodyHub from './locales/en/body-hub.json';
+import enFaceHub from './locales/en/face-hub.json';
+import enRhino from './locales/en/rhinoplasty.json';
+import enAsianRhino from './locales/en/asian-rhinoplasty.json';
 
 import idCommon from './locales/id/common.json';
 import idHome from './locales/id/home.json';
@@ -39,6 +42,9 @@ import idFatTransfer from './locales/id/fat-transfer.json';
 import idButtockFat from './locales/id/fat-grafting-buttock.json';
 import idSixPack from './locales/id/six-pack-enhancement.json';
 import idBodyHub from './locales/id/body-hub.json';
+import idFaceHub from './locales/id/face-hub.json';
+import idRhino from './locales/id/rhinoplasty.json';
+import idAsianRhino from './locales/id/asian-rhinoplasty.json';
 
 import zhCNCommon from './locales/zh-CN/common.json';
 import zhCNHome from './locales/zh-CN/home.json';
@@ -58,6 +64,9 @@ import zhCNFatTransfer from './locales/zh-CN/fat-transfer.json';
 import zhCNButtockFat from './locales/zh-CN/fat-grafting-buttock.json';
 import zhCNSixPack from './locales/zh-CN/six-pack-enhancement.json';
 import zhCNBodyHub from './locales/zh-CN/body-hub.json';
+import zhCNFaceHub from './locales/zh-CN/face-hub.json';
+import zhCNRhino from './locales/zh-CN/rhinoplasty.json';
+import zhCNAsianRhino from './locales/zh-CN/asian-rhinoplasty.json';
 
 import zhMYCommon from './locales/zh-MY/common.json';
 import zhMYHome from './locales/zh-MY/home.json';
@@ -77,6 +86,9 @@ import zhMYFatTransfer from './locales/zh-MY/fat-transfer.json';
 import zhMYButtockFat from './locales/zh-MY/fat-grafting-buttock.json';
 import zhMYSixPack from './locales/zh-MY/six-pack-enhancement.json';
 import zhMYBodyHub from './locales/zh-MY/body-hub.json';
+import zhMYFaceHub from './locales/zh-MY/face-hub.json';
+import zhMYRhino from './locales/zh-MY/rhinoplasty.json';
+import zhMYAsianRhino from './locales/zh-MY/asian-rhinoplasty.json';
 
 import msCommon from './locales/ms/common.json';
 import msHome from './locales/ms/home.json';
@@ -96,6 +108,9 @@ import msFatTransfer from './locales/ms/fat-transfer.json';
 import msButtockFat from './locales/ms/fat-grafting-buttock.json';
 import msSixPack from './locales/ms/six-pack-enhancement.json';
 import msBodyHub from './locales/ms/body-hub.json';
+import msFaceHub from './locales/ms/face-hub.json';
+import msRhino from './locales/ms/rhinoplasty.json';
+import msAsianRhino from './locales/ms/asian-rhinoplasty.json';
 
 import koCommon from './locales/ko/common.json';
 import koHome from './locales/ko/home.json';
@@ -115,6 +130,9 @@ import koFatTransfer from './locales/ko/fat-transfer.json';
 import koButtockFat from './locales/ko/fat-grafting-buttock.json';
 import koSixPack from './locales/ko/six-pack-enhancement.json';
 import koBodyHub from './locales/ko/body-hub.json';
+import koFaceHub from './locales/ko/face-hub.json';
+import koRhino from './locales/ko/rhinoplasty.json';
+import koAsianRhino from './locales/ko/asian-rhinoplasty.json';
 
 // Supported locales configuration
 export const locales = [
@@ -162,22 +180,22 @@ export function getLocalizedPath(path: string, localeCode: string): string {
 // Bundled translations from JSON files
 const resources = {
   en: {
-    translation: { ...enCommon, ...enHome, ...enLipo, ...enArmLipo, ...enStomachLipo, ...enThighLipo, ...enBackLipo, ...enChinLipo, ...enTummyTuck, ...enMiniTummyTuck, ...enArmLift, ...enThighLift, ...enBodyLift, ...enBeltLipo, ...enFatTransfer, ...enButtockFat, ...enSixPack, ...enBodyHub },
+    translation: { ...enCommon, ...enHome, ...enLipo, ...enArmLipo, ...enStomachLipo, ...enThighLipo, ...enBackLipo, ...enChinLipo, ...enTummyTuck, ...enMiniTummyTuck, ...enArmLift, ...enThighLift, ...enBodyLift, ...enBeltLipo, ...enFatTransfer, ...enButtockFat, ...enSixPack, ...enBodyHub, ...enFaceHub, ...enRhino, ...enAsianRhino },
   },
   id: {
-    translation: { ...idCommon, ...idHome, ...idLipo, ...idArmLipo, ...idStomachLipo, ...idThighLipo, ...idBackLipo, ...idChinLipo, ...idTummyTuck, ...idMiniTummyTuck, ...idArmLift, ...idThighLift, ...idBodyLift, ...idBeltLipo, ...idFatTransfer, ...idButtockFat, ...idSixPack, ...idBodyHub },
+    translation: { ...idCommon, ...idHome, ...idLipo, ...idArmLipo, ...idStomachLipo, ...idThighLipo, ...idBackLipo, ...idChinLipo, ...idTummyTuck, ...idMiniTummyTuck, ...idArmLift, ...idThighLift, ...idBodyLift, ...idBeltLipo, ...idFatTransfer, ...idButtockFat, ...idSixPack, ...idBodyHub, ...idFaceHub, ...idRhino, ...idAsianRhino },
   },
   'zh-CN': {
-    translation: { ...zhCNCommon, ...zhCNHome, ...zhCNLipo, ...zhCNArmLipo, ...zhCNStomachLipo, ...zhCNThighLipo, ...zhCNBackLipo, ...zhCNChinLipo, ...zhCNTummyTuck, ...zhCNMiniTummyTuck, ...zhCNArmLift, ...zhCNThighLift, ...zhCNBodyLift, ...zhCNBeltLipo, ...zhCNFatTransfer, ...zhCNButtockFat, ...zhCNSixPack, ...zhCNBodyHub },
+    translation: { ...zhCNCommon, ...zhCNHome, ...zhCNLipo, ...zhCNArmLipo, ...zhCNStomachLipo, ...zhCNThighLipo, ...zhCNBackLipo, ...zhCNChinLipo, ...zhCNTummyTuck, ...zhCNMiniTummyTuck, ...zhCNArmLift, ...zhCNThighLift, ...zhCNBodyLift, ...zhCNBeltLipo, ...zhCNFatTransfer, ...zhCNButtockFat, ...zhCNSixPack, ...zhCNBodyHub, ...zhCNFaceHub, ...zhCNRhino, ...zhCNAsianRhino },
   },
   'zh-MY': {
-    translation: { ...zhMYCommon, ...zhMYHome, ...zhMYLipo, ...zhMYArmLipo, ...zhMYStomachLipo, ...zhMYThighLipo, ...zhMYBackLipo, ...zhMYChinLipo, ...zhMYTummyTuck, ...zhMYMiniTummyTuck, ...zhMYArmLift, ...zhMYThighLift, ...zhMYBodyLift, ...zhMYBeltLipo, ...zhMYFatTransfer, ...zhMYButtockFat, ...zhMYSixPack, ...zhMYBodyHub },
+    translation: { ...zhMYCommon, ...zhMYHome, ...zhMYLipo, ...zhMYArmLipo, ...zhMYStomachLipo, ...zhMYThighLipo, ...zhMYBackLipo, ...zhMYChinLipo, ...zhMYTummyTuck, ...zhMYMiniTummyTuck, ...zhMYArmLift, ...zhMYThighLift, ...zhMYBodyLift, ...zhMYBeltLipo, ...zhMYFatTransfer, ...zhMYButtockFat, ...zhMYSixPack, ...zhMYBodyHub, ...zhMYFaceHub, ...zhMYRhino, ...zhMYAsianRhino },
   },
   ms: {
-    translation: { ...msCommon, ...msHome, ...msLipo, ...msArmLipo, ...msStomachLipo, ...msThighLipo, ...msBackLipo, ...msChinLipo, ...msTummyTuck, ...msMiniTummyTuck, ...msArmLift, ...msThighLift, ...msBodyLift, ...msBeltLipo, ...msFatTransfer, ...msButtockFat, ...msSixPack, ...msBodyHub },
+    translation: { ...msCommon, ...msHome, ...msLipo, ...msArmLipo, ...msStomachLipo, ...msThighLipo, ...msBackLipo, ...msChinLipo, ...msTummyTuck, ...msMiniTummyTuck, ...msArmLift, ...msThighLift, ...msBodyLift, ...msBeltLipo, ...msFatTransfer, ...msButtockFat, ...msSixPack, ...msBodyHub, ...msFaceHub, ...msRhino, ...msAsianRhino },
   },
   ko: {
-    translation: { ...koCommon, ...koHome, ...koLipo, ...koArmLipo, ...koStomachLipo, ...koThighLipo, ...koBackLipo, ...koChinLipo, ...koTummyTuck, ...koMiniTummyTuck, ...koArmLift, ...koThighLift, ...koBodyLift, ...koBeltLipo, ...koFatTransfer, ...koButtockFat, ...koSixPack, ...koBodyHub },
+    translation: { ...koCommon, ...koHome, ...koLipo, ...koArmLipo, ...koStomachLipo, ...koThighLipo, ...koBackLipo, ...koChinLipo, ...koTummyTuck, ...koMiniTummyTuck, ...koArmLift, ...koThighLift, ...koBodyLift, ...koBeltLipo, ...koFatTransfer, ...koButtockFat, ...koSixPack, ...koBodyHub, ...koFaceHub, ...koRhino, ...koAsianRhino },
   },
 };
 

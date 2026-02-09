@@ -3,8 +3,10 @@ import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
 
 const FaceHub = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -61,8 +63,8 @@ const FaceHub = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      title: "We listen first",
-      description: "You will never be rushed into a decision.",
+      title: t('faceHub.trust0Title'),
+      description: t('faceHub.trust0Desc'),
     },
     {
       icon: (
@@ -70,8 +72,8 @@ const FaceHub = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      title: "We keep it honest",
-      description: "If a procedure is not suitable, we will say so.",
+      title: t('faceHub.trust1Title'),
+      description: t('faceHub.trust1Desc'),
     },
     {
       icon: (
@@ -79,8 +81,8 @@ const FaceHub = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
       ),
-      title: "We plan for natural results",
-      description: "The goal is harmony, not a \"different face.\"",
+      title: t('faceHub.trust2Title'),
+      description: t('faceHub.trust2Desc'),
     },
     {
       icon: (
@@ -88,8 +90,8 @@ const FaceHub = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      title: "We prioritize safety",
-      description: "Medical assessment comes before any plan.",
+      title: t('faceHub.trust3Title'),
+      description: t('faceHub.trust3Desc'),
     },
     {
       icon: (
@@ -97,103 +99,103 @@ const FaceHub = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      title: "We stay with you",
-      description: "Follow-up and aftercare are part of the service.",
+      title: t('faceHub.trust4Title'),
+      description: t('faceHub.trust4Desc'),
     },
   ];
 
   // Facial treatments data
   const facialTreatments = [
     {
-      title: "Rhinoplasty",
-      subtitle: "Nose Reshaping",
+      title: t('faceHub.rhinoTitle'),
+      subtitle: t('faceHub.rhinoSubtitle'),
       category: "nose",
-      description: "For patients who want a more balanced nose shape, improved facial harmony, or functional improvement.",
-      bestFor: ["Nose shape", "Profile balance", "Facial harmony"],
+      description: t('faceHub.rhinoDesc'),
+      bestFor: [t('faceHub.rhinoBest0'), t('faceHub.rhinoBest1'), t('faceHub.rhinoBest2')],
       href: "/face/rhinoplasty-malaysia",
       image: "/images/Rhinoplasty.jpg",
       featured: true,
     },
     {
-      title: "Asian Rhinoplasty",
-      subtitle: "Natural Asian Proportions",
+      title: t('faceHub.asianRhinoTitle'),
+      subtitle: t('faceHub.asianRhinoSubtitle'),
       category: "nose",
-      description: "For patients who want changes that respect Asian facial structure and keep results soft and natural.",
-      bestFor: ["Bridge definition", "Tip shaping", "Natural proportions"],
+      description: t('faceHub.asianRhinoDesc'),
+      bestFor: [t('faceHub.asianRhinoBest0'), t('faceHub.asianRhinoBest1'), t('faceHub.asianRhinoBest2')],
       href: "/face/asian-rhinoplasty-malaysia",
       image: "/images/Asian Rhinoplasty.jpg",
     },
     {
-      title: "Revision Rhinoplasty",
-      subtitle: "Corrective Surgery",
+      title: t('faceHub.revisionTitle'),
+      subtitle: t('faceHub.revisionSubtitle'),
       category: "nose",
-      description: "For patients who had previous nose surgery and want correction, improvement, or a safer result.",
-      bestFor: ["Shape issues", "Breathing concerns", "Structural correction"],
+      description: t('faceHub.revisionDesc'),
+      bestFor: [t('faceHub.revisionBest0'), t('faceHub.revisionBest1'), t('faceHub.revisionBest2')],
       href: "/face/rhinoplasty-revision-malaysia",
       image: "/images/Revision Rhinoplasty.jpg",
     },
     {
-      title: "Eyelid Surgery",
-      subtitle: "Blepharoplasty",
+      title: t('faceHub.eyelidTitle'),
+      subtitle: t('faceHub.eyelidSubtitle'),
       category: "eyes",
-      description: "For patients who want brighter-looking eyes, reduced heaviness, or improved eyelid shape.",
-      bestFor: ["Droopy eyelids", "Tired look", "Eyelid definition"],
+      description: t('faceHub.eyelidDesc'),
+      bestFor: [t('faceHub.eyelidBest0'), t('faceHub.eyelidBest1'), t('faceHub.eyelidBest2')],
       href: "/face/eyelid-surgery-malaysia",
       image: "/images/eyelid_reduction.png",
       featured: true,
     },
     {
-      title: "Asian Eyelid Surgery",
-      subtitle: "Double Eyelid Creation",
+      title: t('faceHub.asianEyelidTitle'),
+      subtitle: t('faceHub.asianEyelidSubtitle'),
       category: "eyes",
-      description: "For patients who want an eyelid change that still looks natural and suits Asian eyelid anatomy.",
-      bestFor: ["Natural crease", "Gentle definition", "Open look"],
+      description: t('faceHub.asianEyelidDesc'),
+      bestFor: [t('faceHub.asianEyelidBest0'), t('faceHub.asianEyelidBest1'), t('faceHub.asianEyelidBest2')],
       href: "/face/asian-eyelid-surgery-malaysia",
       image: "/images/Asian Eyelid Surgery.jpg",
     },
     {
-      title: "Brow Lift",
-      subtitle: "Forehead Rejuvenation",
+      title: t('faceHub.browLiftTitle'),
+      subtitle: t('faceHub.browLiftSubtitle'),
       category: "lift",
-      description: "For patients who want a more open, rested upper face, especially when brows feel heavy or low.",
-      bestFor: ["Heavy brows", "Tired expression", "Upper face lift"],
+      description: t('faceHub.browLiftDesc'),
+      bestFor: [t('faceHub.browLiftBest0'), t('faceHub.browLiftBest1'), t('faceHub.browLiftBest2')],
       href: "/face/brow-lift-malaysia",
       image: "/images/Brow Lift.jpg",
     },
     {
-      title: "Face Lift",
-      subtitle: "Full Facial Rejuvenation",
+      title: t('faceHub.faceLiftTitle'),
+      subtitle: t('faceHub.faceLiftSubtitle'),
       category: "lift",
-      description: "For patients who want comprehensive facial tightening and a more youthful appearance.",
-      bestFor: ["Sagging skin", "Deep wrinkles", "Facial contour"],
+      description: t('faceHub.faceLiftDesc'),
+      bestFor: [t('faceHub.faceLiftBest0'), t('faceHub.faceLiftBest1'), t('faceHub.faceLiftBest2')],
       href: "/face/face-lift-malaysia",
       image: "/images/Face Lift.jpg",
       featured: true,
     },
     {
-      title: "Neck Lift",
-      subtitle: "Jawline Definition",
+      title: t('faceHub.neckLiftTitle'),
+      subtitle: t('faceHub.neckLiftSubtitle'),
       category: "lift",
-      description: "For patients who want a cleaner jawline and neck contour, especially with loose neck skin.",
-      bestFor: ["Neck sagging", "Loose skin", "Jawline definition"],
+      description: t('faceHub.neckLiftDesc'),
+      bestFor: [t('faceHub.neckLiftBest0'), t('faceHub.neckLiftBest1'), t('faceHub.neckLiftBest2')],
       href: "/face/neck-lift-malaysia",
       image: "/images/Neck Lift.jpg",
     },
     {
-      title: "Buccal Fat Removal",
-      subtitle: "Facial Contouring",
+      title: t('faceHub.buccalTitle'),
+      subtitle: t('faceHub.buccalSubtitle'),
       category: "contour",
-      description: "For patients who feel their cheeks look too full and want a more defined facial contour.",
-      bestFor: ["Cheek fullness", "Facial slimming", "Contour definition"],
+      description: t('faceHub.buccalDesc'),
+      bestFor: [t('faceHub.buccalBest0'), t('faceHub.buccalBest1'), t('faceHub.buccalBest2')],
       href: "/face/buccal-fat-removal-malaysia",
       image: "/images/Buccal Fat Removal.jpg",
     },
     {
-      title: "Chin Augmentation",
-      subtitle: "Profile Enhancement",
+      title: t('faceHub.chinTitle'),
+      subtitle: t('faceHub.chinSubtitle'),
       category: "contour",
-      description: "For patients who want a stronger chin profile and better facial balance.",
-      bestFor: ["Weak chin", "Profile balance", "Jawline definition"],
+      description: t('faceHub.chinDesc'),
+      bestFor: [t('faceHub.chinBest0'), t('faceHub.chinBest1'), t('faceHub.chinBest2')],
       href: "/face/chin-augmentation-malaysia",
       image: "/images/Chin Augmentation.jpg",
     },
@@ -201,97 +203,46 @@ const FaceHub = () => {
 
   // Filter categories
   const filterCategories = [
-    { id: "all", label: "All Treatments" },
-    { id: "nose", label: "Nose" },
-    { id: "eyes", label: "Eyes" },
-    { id: "lift", label: "Lifting" },
-    { id: "contour", label: "Contouring" },
+    { id: "all", label: t('faceHub.filterAll') },
+    { id: "nose", label: t('faceHub.filterNose') },
+    { id: "eyes", label: t('faceHub.filterEyes') },
+    { id: "lift", label: t('faceHub.filterLift') },
+    { id: "contour", label: t('faceHub.filterContour') },
   ];
 
   // Decision guide data
   const decisionGuide = [
-    { concern: "You want to reshape the nose", solution: "Rhinoplasty or Asian Rhinoplasty", href: "/face/rhinoplasty-malaysia" },
-    { concern: "You had nose surgery before and want correction", solution: "Revision Rhinoplasty", href: "/face/rhinoplasty-revision-malaysia" },
-    { concern: "Your eyes look tired or lids feel heavy", solution: "Eyelid Surgery or Asian Eyelid Surgery", href: "/face/eyelid-surgery-malaysia" },
-    { concern: "You want overall facial lifting", solution: "Face Lift or Mini Face Lift", href: "/face/face-lift-malaysia" },
-    { concern: "You want a more open upper face", solution: "Brow Lift", href: "/face/brow-lift-malaysia" },
-    { concern: "Your jawline and neck need tightening", solution: "Neck Lift", href: "/face/neck-lift-malaysia" },
-    { concern: "Your cheeks feel too full", solution: "Buccal Fat Removal", href: "/face/buccal-fat-removal-malaysia" },
-    { concern: "Your chin feels weak in profile", solution: "Chin Augmentation", href: "/face/chin-augmentation-malaysia" },
+    { concern: t('faceHub.concern0'), solution: t('faceHub.solution0'), href: "/face/rhinoplasty-malaysia" },
+    { concern: t('faceHub.concern1'), solution: t('faceHub.solution1'), href: "/face/rhinoplasty-revision-malaysia" },
+    { concern: t('faceHub.concern2'), solution: t('faceHub.solution2'), href: "/face/eyelid-surgery-malaysia" },
+    { concern: t('faceHub.concern3'), solution: t('faceHub.solution3'), href: "/face/face-lift-malaysia" },
+    { concern: t('faceHub.concern4'), solution: t('faceHub.solution4'), href: "/face/brow-lift-malaysia" },
+    { concern: t('faceHub.concern5'), solution: t('faceHub.solution5'), href: "/face/neck-lift-malaysia" },
+    { concern: t('faceHub.concern6'), solution: t('faceHub.solution6'), href: "/face/buccal-fat-removal-malaysia" },
+    { concern: t('faceHub.concern7'), solution: t('faceHub.solution7'), href: "/face/chin-augmentation-malaysia" },
   ];
 
   // Natural results points
-  const naturalResults = [
-    "Smoother transitions, not sharp edges",
-    "Better balance, not an obvious change",
-    "Results that fit your facial structure",
-    "A plan that respects your age and expression",
-  ];
+  const naturalResults = Array.from({ length: 4 }, (_, i) => t(`faceHub.naturalItem${i}`));
 
   // Journey steps
   const journeySteps = [
-    {
-      num: "01",
-      title: "Private Consultation",
-      description: "We talk about what you see, what you feel, and what you hope for. We examine your facial anatomy and discuss realistic outcomes.",
-    },
-    {
-      num: "02",
-      title: "Personalized Plan",
-      description: "A tailored recommendation based on your anatomy, goals, and safety. Clear explanation of procedure, recovery, and expectations.",
-    },
-    {
-      num: "03",
-      title: "Procedure Day",
-      description: "Careful surgical technique focused on precision and natural results. Your comfort and safety are prioritized throughout.",
-    },
-    {
-      num: "04",
-      title: "Recovery & Follow-up",
-      description: "Healing matters. You will receive aftercare instructions, check-ups, and support while your results settle.",
-    },
+    { num: "01", title: t('faceHub.journeyStep1Title'), description: t('faceHub.journeyStep1Desc') },
+    { num: "02", title: t('faceHub.journeyStep2Title'), description: t('faceHub.journeyStep2Desc') },
+    { num: "03", title: t('faceHub.journeyStep3Title'), description: t('faceHub.journeyStep3Desc') },
+    { num: "04", title: t('faceHub.journeyStep4Title'), description: t('faceHub.journeyStep4Desc') },
   ];
 
   // FAQ data
-  const faqData = [
-    {
-      question: "What is facial cosmetic surgery?",
-      answer: "Facial cosmetic surgery includes procedures that refine facial features, restore balance, or refresh appearance while preserving your natural identity.",
-    },
-    {
-      question: "Is facial cosmetic surgery about changing how I look?",
-      answer: "Most patients are not looking to change who they are. The goal is usually to look more refreshed, balanced, and confident while still looking like themselves.",
-    },
-    {
-      question: "How do I know if facial surgery is right for me?",
-      answer: "You do not need to be sure before booking. A consultation helps clarify whether surgery is suitable and which option, if any, fits your concerns.",
-    },
-    {
-      question: "Do I need to decide on a procedure before a consultation?",
-      answer: "No. Most patients start with a concern, not a procedure name. The consultation helps match concerns to the right options.",
-    },
-    {
-      question: "Can multiple facial areas be treated together?",
-      answer: "Some patients combine procedures to improve overall harmony, such as nose and chin balance or face and neck lifting. This depends on suitability and safety.",
-    },
-    {
-      question: "Is facial cosmetic surgery permanent?",
-      answer: "Surgical changes are long-lasting, but natural ageing continues. The goal is improvement, not stopping time.",
-    },
-    {
-      question: "What if I am worried about making the wrong decision?",
-      answer: "That concern is very common. Consultations are meant to provide clarity and honest guidance, not pressure to proceed.",
-    },
-    {
-      question: "Is facial cosmetic surgery only for older patients?",
-      answer: "No. Patients of different ages seek facial surgery for different reasons, from structural concerns to early signs of ageing.",
-    },
-  ];
+  const faqData = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`faceHub.faq${i}Q`),
+    answer: t(`faceHub.faq${i}A`),
+  }));
 
   // Filter treatments
   const filteredTreatments = activeFilter === "all"
     ? facialTreatments
-    : facialTreatments.filter((t) => t.category === activeFilter);
+    : facialTreatments.filter((tr) => tr.category === activeFilter);
 
   return (
     <>
@@ -372,7 +323,7 @@ const FaceHub = () => {
               <div className={`inline-flex items-center gap-3 mb-5 justify-center sm:justify-start ${isVisible("section-0") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary"></div>
                 <span className="text-primary text-sm font-medium tracking-[0.2em] uppercase">
-                  Facial Surgery Hub
+                  {t('faceHub.heroBadge')}
                 </span>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary"></div>
               </div>
@@ -380,20 +331,20 @@ const FaceHub = () => {
               <h1 className={`text-white max-sm:text-4xl text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-4 ${
                 isVisible("section-0") ? "animate-fadeInUp delay-100" : "opacity-100 sm:opacity-0"
               }`}>
-                Facial Cosmetic Surgery
-                <span className="block text-primary font-semibold mt-2">in Malaysia</span>
+                {t('faceHub.heroTitle1')}
+                <span className="block text-primary font-semibold mt-2">{t('faceHub.heroTitle2')}</span>
               </h1>
 
               <p className={`text-white text-base sm:text-lg md:text-xl font-light leading-relaxed mb-4 ${
                 isVisible("section-0") ? "animate-fadeInUp delay-200" : "opacity-100 sm:opacity-0"
               }`}>
-                A calm place to explore facial changes that still look like you
+                {t('faceHub.heroSubtitle')}
               </p>
 
               <p className={`text-white text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto sm:mx-0 ${
                 isVisible("section-0") ? "animate-fadeInUp delay-300" : "opacity-100 sm:opacity-0"
               }`}>
-                Your face is personal. Most patients want something simple: to look like themselves again, just more refreshed, balanced, and confident.
+                {t('faceHub.heroDesc')}
               </p>
 
               {/* CTA Buttons */}
@@ -404,7 +355,7 @@ const FaceHub = () => {
                   href="/contact"
                   className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-500 overflow-hidden text-sm sm:text-base"
                 >
-                  <span className="relative z-10">Book a Private Consultation</span>
+                  <span className="relative z-10">{t('faceHub.bookConsultation')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 </Link>
                 <Link
@@ -414,7 +365,7 @@ const FaceHub = () => {
                   <svg className="w-7 h-7" viewBox="0 0 24 24">
                     <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  WhatsApp Us
+                  {t('faceHub.whatsappUs')}
                 </Link>
               </div>
 
@@ -422,7 +373,7 @@ const FaceHub = () => {
               <p className={`text-white/30 text-xs italic ${
                 isVisible("section-0") ? "animate-fadeInUp delay-500" : "opacity-100 sm:opacity-0"
               }`}>
-                Every face is different. Results vary. A consultation is needed to confirm suitability, safety, and the best approach.
+                {t('faceHub.heroDisclaimer')}
               </p>
             </div>
 
@@ -444,15 +395,15 @@ const FaceHub = () => {
                   {/* Floating Stats Cards - Inside Image */}
                   <div className="absolute top-6 left-6 bg-white/15 backdrop-blur-xl rounded-2xl p-5 border border-white/20 animate-float z-10">
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-primary mb-1">30+</p>
-                      <p className="text-white text-sm">Years Experience</p>
+                      <p className="text-3xl font-bold text-primary mb-1">{t('faceHub.yearsExp')}</p>
+                      <p className="text-white text-sm">{t('faceHub.yearsExpLabel')}</p>
                     </div>
                   </div>
 
                   <div className="absolute bottom-6 right-6 bg-white/15 backdrop-blur-xl rounded-2xl p-5 border border-white/20 animate-float z-10" style={{ animationDelay: "1s" }}>
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-white mb-1">1000+</p>
-                      <p className="text-white text-sm">Happy Patients</p>
+                      <p className="text-3xl font-bold text-white mb-1">{t('faceHub.happyPatients')}</p>
+                      <p className="text-white text-sm">{t('faceHub.happyPatientsLabel')}</p>
                     </div>
                   </div>
                 </div>
@@ -463,7 +414,7 @@ const FaceHub = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounceSoft">
-          <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-white/30 text-xs tracking-widest uppercase">{t('faceHub.scroll')}</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent"></div>
         </div>
       </section>
@@ -480,30 +431,30 @@ const FaceHub = () => {
             <div className={`flex-1 text-center sm:text-left ${isVisible("section-1") ? "animate-slideInLeft" : "opacity-100 sm:opacity-0"}`}>
               <div className="sm:sticky sm:top-32">
                 <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                  Why Choose Us
+                  {t('faceHub.whyChooseUs')}
                 </span>
                 <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight mb-4">
-                  Why patients choose Soma for
-                  <span className="text-primary block">facial surgery in Malaysia</span>
+                  {t('faceHub.whyTitle1')}
+                  <span className="text-primary block">{t('faceHub.whyTitle2')}</span>
                 </h2>
 
                 <p className="text-para-black text-base sm:text-lg mb-4">
-                  When people search facial cosmetic surgery in Malaysia, they usually feel two things at once:
+                  {t('faceHub.whyIntro')}
                 </p>
 
                 <div className="flex gap-4 sm:gap-8 mb-5 justify-center sm:justify-start">
                   <div className="flex-1 border-l-2 border-primary pl-4 text-left">
-                    <p className="text-header-black font-semibold">Hope</p>
-                    <p className="text-para-black text-sm">for a better reflection</p>
+                    <p className="text-header-black font-semibold">{t('faceHub.hope')}</p>
+                    <p className="text-para-black text-sm">{t('faceHub.hopeDesc')}</p>
                   </div>
                   <div className="flex-1 border-l-2 border-gray-200 pl-4 text-left">
-                    <p className="text-header-black font-semibold">Worry</p>
-                    <p className="text-para-black text-sm">about looking unnatural</p>
+                    <p className="text-header-black font-semibold">{t('faceHub.worry')}</p>
+                    <p className="text-para-black text-sm">{t('faceHub.worryDesc')}</p>
                   </div>
                 </div>
 
                 <p className="text-para-black">
-                  We take those fears seriously. Here is how we build trust:
+                  {t('faceHub.trustIntro')}
                 </p>
               </div>
             </div>
@@ -544,13 +495,13 @@ const FaceHub = () => {
             {/* Section Header */}
             <div className={`text-center max-w-3xl mx-auto ${isVisible("section-2") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Our Expertise
+                {t('faceHub.ourExpertise')}
               </span>
               <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
-                Explore <span className="text-primary">Facial Treatments</span>
+                {t('faceHub.exploreTitle1')} <span className="text-primary">{t('faceHub.exploreTitle2')}</span>
               </h2>
               <p className="text-para-black text-base sm:text-lg">
-                Each treatment below has its own full page with details, recovery, and FAQs.
+                {t('faceHub.exploreSubtitle')}
               </p>
             </div>
 
@@ -607,7 +558,7 @@ const FaceHub = () => {
                   {treatment.featured && (
                     <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
                       <span className="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Popular Choice
+                        {t('faceHub.popularChoice')}
                       </span>
                     </div>
                   )}
@@ -650,7 +601,7 @@ const FaceHub = () => {
 
                     {/* CTA */}
                     <div className="flex items-center justify-between pt-4 sm:pt-5 border-t border-gray-100">
-                      <span className="text-primary font-semibold text-sm">View Treatment</span>
+                      <span className="text-primary font-semibold text-sm">{t('faceHub.viewTreatment')}</span>
                       <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-all duration-300">
                         <svg className="w-4 h-4 sm:w-6 sm:h-6 text-primary group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -676,14 +627,14 @@ const FaceHub = () => {
             {/* Section Header */}
             <div className={`text-center max-w-3xl mx-auto ${isVisible("section-3") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Quick Guide
+                {t('faceHub.quickGuide')}
               </span>
               <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
-                Not sure which facial procedure
-                <span className="text-primary block">fits your concern?</span>
+                {t('faceHub.guideTitle1')}
+                <span className="text-primary block">{t('faceHub.guideTitle2')}</span>
               </h2>
               <p className="text-para-black text-base sm:text-lg">
-                This quick guide helps you choose the right page.
+                {t('faceHub.guideSubtitle')}
               </p>
             </div>
 
@@ -723,7 +674,7 @@ const FaceHub = () => {
                 href="/contact"
                 className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white font-medium px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 text-sm sm:text-base"
               >
-                Book a Private Consultation
+                {t('faceHub.bookConsultation')}
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -754,9 +705,9 @@ const FaceHub = () => {
                 {/* Quote Card */}
                 <div className="absolute -bottom-10 -left-10 bg-white rounded-2xl shadow-2xl p-6 max-w-[280px] animate-float">
                   <p className="text-header-black text-lg font-medium italic mb-3">
-                    &ldquo;You will still look like you.&rdquo;
+                    &ldquo;{t('faceHub.quoteText')}&rdquo;
                   </p>
-                  <p className="text-primary text-sm font-semibold">Just more confident in your reflection.</p>
+                  <p className="text-primary text-sm font-semibold">{t('faceHub.quoteSubtext')}</p>
                 </div>
               </div>
             </div>
@@ -764,23 +715,23 @@ const FaceHub = () => {
             {/* Right Content */}
             <div className={`flex-1 text-center sm:text-left ${isVisible("section-4") ? "animate-slideInRight" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                Our Philosophy
+                {t('faceHub.ourPhilosophy')}
               </span>
               <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
-                What &ldquo;natural&rdquo; means
-                <span className="text-primary block">in facial surgery</span>
+                {t('faceHub.naturalTitle1')}
+                <span className="text-primary block">{t('faceHub.naturalTitle2')}</span>
               </h2>
 
               <div className="bg-secondary/50 rounded-2xl p-5 sm:p-6 mb-3 sm:mb-4">
                 <p className="text-header-black text-base sm:text-lg font-medium mb-2">
-                  Natural does not mean &ldquo;no change.&rdquo;
+                  {t('faceHub.naturalNote1')}
                 </p>
                 <p className="text-para-black text-sm sm:text-base">
-                  Natural means people notice you look well, not that you had surgery.
+                  {t('faceHub.naturalNote2')}
                 </p>
               </div>
 
-              <p className="text-para-black text-base sm:text-lg font-medium mb-3 sm:mb-4">Our goal is:</p>
+              <p className="text-para-black text-base sm:text-lg font-medium mb-3 sm:mb-4">{t('faceHub.naturalGoal')}</p>
 
               <div className="space-y-1 sm:space-y-1">
                 {naturalResults.map((item, index) => (
@@ -812,10 +763,10 @@ const FaceHub = () => {
             {/* Section Header */}
             <div className={`text-center max-w-3xl mx-auto ${isVisible("section-5") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-medium tracking-[0.15em] uppercase mb-4">
-                The Process
+                {t('faceHub.theProcess')}
               </span>
               <h2 className="text-header-black text-2xl sm:text-3xl lg:text-4xl font-semibold">
-                Your journey, <span className="text-primary">step by step</span>
+                {t('faceHub.journeyTitle1')} <span className="text-primary">{t('faceHub.journeyTitle2')}</span>
               </h2>
             </div>
 
@@ -855,13 +806,13 @@ const FaceHub = () => {
             {/* Centered Header */}
             <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp" : "opacity-100 sm:opacity-0"}`}>
               <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-3">
-                Got Questions?
+                {t('faceHub.gotQuestions')}
               </span>
               <h2 className="text-header-black mb-4">
-                Frequently <span className="text-primary">Asked Questions</span>
+                {t('faceHub.faqTitle1')} <span className="text-primary">{t('faceHub.faqTitle2')}</span>
               </h2>
               <p className="text-para-black max-w-2xl mx-auto">
-                Find answers to common questions about facial cosmetic surgery procedures
+                {t('faceHub.faqSubtitle')}
               </p>
             </div>
 
@@ -907,12 +858,12 @@ const FaceHub = () => {
 
             {/* Bottom CTA */}
             <div className={`text-center ${isVisible("section-6") ? "animate-fadeInUp delay-500" : "opacity-100 sm:opacity-0"}`}>
-              <p className="text-para-black mb-4 text-sm sm:text-base">Still have questions?</p>
+              <p className="text-para-black mb-4 text-sm sm:text-base">{t('faceHub.stillQuestions')}</p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:shadow-lg text-sm sm:text-base"
               >
-                Contact Us
+                {t('faceHub.contactUs')}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -942,14 +893,14 @@ const FaceHub = () => {
             <h2 className={`text-white text-2xl sm:text-3xl lg:text-5xl font-light mb-3 sm:mb-4 ${
               isVisible("section-7") ? "animate-fadeInUp delay-100" : "opacity-100 sm:opacity-0"
             }`}>
-              Ready to begin a
-              <span className="text-primary font-semibold block mt-2">private consultation?</span>
+              {t('faceHub.ctaTitle1')}
+              <span className="text-primary font-semibold block mt-2">{t('faceHub.ctaTitle2')}</span>
             </h2>
 
             <p className={`text-white text-base sm:text-lg mb-8 sm:mb-12 max-w-xl mx-auto ${
               isVisible("section-7") ? "animate-fadeInUp delay-200" : "opacity-100 sm:opacity-0"
             }`}>
-              Take the first step towards feeling more confident. We are here to listen, guide, and support your journey.
+              {t('faceHub.ctaDesc')}
             </p>
 
             <div className={`flex flex-wrap justify-center gap-4 px-4 sm:px-0 ${
@@ -959,7 +910,7 @@ const FaceHub = () => {
                 href="/contact"
                 className="group relative bg-primary hover:bg-primary/90 text-white font-medium px-8 sm:px-12 py-3 sm:py-5 rounded-full transition-all duration-500 overflow-hidden shadow-xl shadow-primary/30 text-sm sm:text-base"
               >
-                <span className="relative z-10">Book a Private Consultation</span>
+                <span className="relative z-10">{t('faceHub.bookConsultation')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </Link>
               <Link
@@ -969,7 +920,7 @@ const FaceHub = () => {
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                WhatsApp Us
+                {t('faceHub.whatsappUs')}
               </Link>
             </div>
 
@@ -977,7 +928,7 @@ const FaceHub = () => {
             <p className={`text-white/30 text-xs sm:text-sm mt-8 sm:mt-10 ${
               isVisible("section-7") ? "animate-fadeInUp delay-400" : "opacity-100 sm:opacity-0"
             }`}>
-              Your privacy is respected. Consultations are confidential and without obligation.
+              {t('faceHub.ctaDisclaimer')}
             </p>
           </div>
         </div>
