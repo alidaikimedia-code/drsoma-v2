@@ -23,9 +23,11 @@ export const getSiteUrl = (): string => {
   return process.env.NEXT_PUBLIC_SITE_URL || 'https://drsomaplasticsurgery.com';
 };
 
-// Utility function to get full URL for a path
+// Utility function to get full URL for a path (with trailing slash for SEO consistency)
 export const getFullUrl = (path: string): string => {
   const siteUrl = getSiteUrl();
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${siteUrl}${cleanPath}`;
+  // Add trailing slash to match Next.js trailingSlash: true config
+  const pathWithSlash = cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`;
+  return `${siteUrl}${pathWithSlash}`;
 };

@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "drSoma": "Dr Soma",
+    "plasticSurgery": "Pembedahan Plastik",
+    "aesthetics": "Estetika",
+    "contact": "Hubungi Kami",
+    "bookConsultation": "Tempah Konsultasi",
+    "viewAllServices": "Lihat Semua Perkhidmatan",
+    "viewAll": "Lihat Semua"
+  },
+  "categories": {
+    "body": "Badan",
+    "face": "Muka",
+    "breast": "Payudara",
+    "male": "Lelaki"
+  },
+  "services": {
+    "liposuction": "Liposuction",
+    "tummyTuck": "Tummy Tuck",
+    "bodyLift": "Body Lift",
+    "armLift": "Arm Lift",
+    "faceLift": "Face Lift",
+    "rhinoplasty": "Rhinoplasty",
+    "eyelidSurgery": "Pembedahan Kelopak Mata",
+    "browLift": "Brow Lift",
+    "breastAugmentation": "Pembesaran Payudara",
+    "breastLift": "Pengangkatan Payudara",
+    "breastReduction": "Pengurangan Payudara",
+    "breastImplantRemoval": "Pembuangan Implan Payudara",
+    "gynecomastiaSurgery": "Pembedahan Ginekomastia",
+    "hairTransplant": "Pemindahan Rambut",
+    "jawlineEnhancement": "Peningkatan Garis Rahang",
+    "maleRhinoplasty": "Rhinoplasty Lelaki"
+  },
+  "aestheticCategories": {
+    "injectable": "Rawatan Suntikan",
+    "thread": "Rawatan Benang",
+    "skin": "Rawatan Kulit"
+  },
+  "aestheticServices": {
+    "botox": "Botox",
+    "dermalFillers": "Dermal Filler",
+    "lipFiller": "Lip Filler",
+    "profhilo": "Profhilo",
+    "threadLift": "Thread Lift",
+    "noseThreadLift": "Nose Thread Lift",
+    "scarTreatment": "Rawatan Parut",
+    "laserScarRemoval": "Pembuangan Parut Laser",
+    "keloidTreatment": "Rawatan Keloid"
+  },
+  "footer": {
+    "description": "Pembedahan Plastik & Perubatan Estetika profesional disesuaikan untuk keperluan anda.",
+    "quickLinks": "Pautan Pantas",
+    "aboutDrSoma": "Tentang Dr. Soma",
+    "ourServices": "Perkhidmatan Kami",
+    "successStories": "Kisah Kejayaan",
+    "patientResources": "Sumber Pesakit",
+    "contact": "Hubungi",
+    "clinicHours": "Waktu Klinik",
+    "monFri": "Isn - Jum",
+    "saturday": "Sabtu",
+    "sunday": "Ahad",
+    "closed": "Tutup"
+  }
+}

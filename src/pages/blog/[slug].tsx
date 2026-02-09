@@ -1,142 +1,49 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-import { fetchWPBlogById, WPBlogPost } from "@/utils/api";
+import React from "react";
+import { GetStaticProps, GetStaticPaths } from "next";
+import { fetchWPBlogBySlug, fetchWPBlogs, WPBlogPost } from "@/utils/api";
 import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl, getAssetPath } from "@/utils/helper";
 
-const BlogDetail = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const [blog, setBlog] = useState<WPBlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+interface BlogDetailProps {
+  blog: WPBlogPost | null;
+  error?: string;
+}
 
-  // Create refs for each section
-  const bannerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  // Load blog data
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadBlog = async () => {
-      if (!id || typeof id !== 'string') {
-        if (isMounted) {
-          setLoading(false);
-          setError("Invalid blog ID");
-        }
-        return;
-      }
-
-      // Parse ID to number
-      const blogId = parseInt(id, 10);
-      if (isNaN(blogId)) {
-        if (isMounted) {
-          setLoading(false);
-          setError("Invalid blog ID");
-        }
-        return;
-      }
-
-      try {
-        if (isMounted) {
-          setLoading(true);
-          setError(null);
-        }
-
-        const foundBlog = await fetchWPBlogById(blogId);
-
-        if (!isMounted) return;
-
-        if (foundBlog && foundBlog.id) {
-          setBlog(foundBlog);
-        } else {
-          setError("Blog not found");
-        }
-      } catch (err) {
-        console.error('Error loading blog:', err);
-        if (isMounted) {
-          setError(err instanceof Error ? err.message : "Failed to load blog");
-        }
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
-      }
-    };
-
-    setBlog(null);
-    setError(null);
-    loadBlog();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [id]);
-
-  // Loading state
-  if (loading) {
-    return (
-      <div className="flex flex-col w-full min-h-screen bg-[#F9F9F9]">
-        <div className="flex-1 flex items-center justify-center py-16">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#EA622F] mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading blog...</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+const BlogDetail = ({ blog, error }: BlogDetailProps) => {
   // Error state
-  if (error) {
+  if (error || !blog) {
     return (
-      <div className="flex flex-col w-full min-h-screen bg-[#F9F9F9]">
-        <div className="flex-1 flex items-center justify-center py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-[#EA622F] mb-4">
-              Error Loading Blog
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              {error}
-            </p>
-            <button
-              onClick={() => router.push('/blog')}
-              className="bg-[#EA622F] text-white px-6 py-3 rounded-lg hover:bg-[#d55a2a] transition-colors"
-            >
-              Back to Blogs
-            </button>
+      <>
+        <Head>
+          <title>Blog Not Found - Dr. Soma Clinical Aesthetics</title>
+          <meta name="robots" content="noindex" />
+        </Head>
+        <div className="flex flex-col w-full min-h-screen bg-[#F9F9F9]">
+          <div className="flex-1 flex items-center justify-center py-16">
+            <div className="text-center">
+              <h1 className="text-3xl font-bold text-[#EA622F] mb-4">
+                Blog Not Found
+              </h1>
+              <p className="text-gray-600 text-lg mb-8">
+                {error || "The blog you're looking for doesn't exist."}
+              </p>
+              <Link
+                href="/blog"
+                className="bg-[#EA622F] text-white px-6 py-3 rounded-lg hover:bg-[#d55a2a] transition-colors inline-block"
+              >
+                Back to Blogs
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 
-  // No blog data
-  if (!blog) {
-    return (
-      <div className="flex flex-col w-full min-h-screen bg-[#F9F9F9]">
-        <div className="flex-1 flex items-center justify-center py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-[#EA622F] mb-4">
-              Blog Not Found
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              The blog you&apos;re looking for doesn&apos;t exist.
-            </p>
-            <button
-              onClick={() => router.push('/blog')}
-              className="bg-[#EA622F] text-white px-6 py-3 rounded-lg hover:bg-[#d55a2a] transition-colors"
-            >
-              Back to Blogs
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // Get page title
+  const pageTitle = blog.title + " - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia";
 
   // Get excerpt for meta description
   const metaDescription = blog.excerpt
@@ -146,22 +53,23 @@ const BlogDetail = () => {
   return (
     <>
       <Head>
-        <title>{blog.title} - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia</title>
+        <title>{pageTitle}</title>
+        <meta name="title" content={pageTitle} />
         <meta name="description" content={metaDescription} />
         <meta property="og:title" content={`${blog.title} - Dr. Soma Clinical Aesthetics`} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={getFullUrl(`/blog/${blog.id}`)} />
+        <meta property="og:url" content={getFullUrl(`/blog/${blog.slug}`)} />
         <meta property="og:image" content={blog.featured_image?.large || blog.featured_image?.full || ''} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${blog.title} - Dr. Soma Clinical Aesthetics`} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={blog.featured_image?.large || blog.featured_image?.full || ''} />
-        <link rel="canonical" href={getFullUrl(`/blog/${blog.id}`)} />
+        <link rel="canonical" href={getFullUrl(`/blog/${blog.slug}`)} />
       </Head>
 
       {/* Banner Section */}
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[150px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef} id="banner">
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[150px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} id="banner">
         <div className="flex containers w-full">
           <div className="flex w-full flex-col gap-[10px] max-w-[900px]">
             <h1 className="text-white max-[768px]:!text-[36px] max-[512px]:!text-[28px] !text-[42px] leading-tight">
@@ -172,7 +80,7 @@ const BlogDetail = () => {
       </section>
 
       {/* Blog Content Section */}
-      <section className="lg:pb-100 pb-50 pt-30 relative z-10" ref={contentRef} id="content">
+      <section className="lg:pb-100 pb-50 pt-30 relative z-10" id="content">
         <div className="flex w-full containers">
           <div className="flex flex-col gap-30 w-full max-w-4xl mx-auto">
             {/* Blog Meta Info */}
@@ -268,7 +176,7 @@ const BlogDetail = () => {
               {/* Tags */}
               {blog.tags && blog.tags.length > 0 && (
                 <div className="mt-8 pt-6 border-t border-gray-200">
-                  <h4 className="text-sm font-semibold text-gray-600 mb-3">Tags:</h4>
+                  <span className="text-sm font-semibold text-gray-600 mb-3 block">Tags:</span>
                   <div className="flex flex-wrap gap-2">
                     {blog.tags.map((tag) => (
                       <span
@@ -286,12 +194,12 @@ const BlogDetail = () => {
             {/* Related Posts */}
             {blog.related_posts && blog.related_posts.length > 0 && (
               <div className="mt-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Related Articles</h3>
+                <h2 className="text-2xl font-bold text-gray-800 mb-6">Related Articles</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {blog.related_posts.map((relatedBlog) => (
                     <Link
                       key={relatedBlog.id}
-                      href={`/blog/${relatedBlog.id}`}
+                      href={`/blog/${relatedBlog.slug}`}
                       className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
                     >
                       <div className="relative overflow-hidden h-40">
@@ -305,9 +213,9 @@ const BlogDetail = () => {
                       </div>
                       <div className="p-4">
                         <p className="text-xs text-gray-500 mb-2">{relatedBlog.date_formatted}</p>
-                        <h4 className="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-[#EA622F] transition-colors">
+                        <span className="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-[#EA622F] transition-colors block">
                           {relatedBlog.title}
-                        </h4>
+                        </span>
                       </div>
                     </Link>
                   ))}
@@ -398,6 +306,61 @@ const BlogDetail = () => {
       `}</style>
     </>
   );
+};
+
+// Generate static paths for all blog posts
+export const getStaticPaths: GetStaticPaths = async () => {
+  try {
+    // Fetch all blogs to get their slugs
+    const data = await fetchWPBlogs(1, 100);
+
+    const paths = data.blogs?.map((blog) => ({
+      params: { slug: blog.slug }
+    })) || [];
+
+    return {
+      paths,
+      fallback: false // Static export requires fallback: false
+    };
+  } catch (error) {
+    console.error('Error generating static paths:', error);
+    return {
+      paths: [],
+      fallback: false
+    };
+  }
+};
+
+// Static generation for SEO
+export const getStaticProps: GetStaticProps<BlogDetailProps> = async (context) => {
+  const { slug } = context.params as { slug: string };
+
+  try {
+    const blog = await fetchWPBlogBySlug(slug);
+
+    if (!blog) {
+      return {
+        props: {
+          blog: null,
+          error: "Blog not found"
+        }
+      };
+    }
+
+    return {
+      props: {
+        blog
+      }
+    };
+  } catch (error) {
+    console.error('Error fetching blog:', error);
+    return {
+      props: {
+        blog: null,
+        error: "Failed to load blog"
+      }
+    };
+  }
 };
 
 export default BlogDetail;

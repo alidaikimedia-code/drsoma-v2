@@ -3,118 +3,120 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
 import { getFullUrl, getAssetPath } from "@/utils/helper";
 import { Award, BadgeCheck, Users, ShieldCheck, Star, ArrowUpRight } from 'lucide-react';
 
-const testimonials = [
-  {
-    name: "Sarah Andrews",
-    title: "Breast Augmentation Patient",
-    rating: 5,
-    text: "Dr. Soma is incredibly professional and kind. He took the time to explain everything and the results are exactly what I wanted. Highly recommended!"
-  },
-  {
-    name: "Michelle Tan",
-    title: "Rhinoplasty Patient",
-    rating: 5,
-    text: "The best decision I ever made. The team was supportive throughout the entire process, and my recovery was faster than expected. Thank you Dr. Soma!"
-  },
-  {
-    name: "Jessica Lee",
-    title: "Facelift Patient",
-    rating: 5,
-    text: "I look 10 years younger but still like myself. Dr. Soma's work is truly artistic. The staff are also wonderful and made me feel very safe."
-  }
-];
-
-const faqs = [
-  {
-    question: "Do you offer WhatsApp support?",
-    answer: "Yes. Our team is available on WhatsApp for appointment enquiries, basic questions, and follow-up support during clinic hours."
-  },
-  {
-    question: "Where is the clinic located?",
-    answer: "Soma Plastic Surgery (Clinical Aesthetics) is located in Subang Jaya, Malaysia. Full directions and location details are available on our contact page."
-  },
-  {
-    question: "Is parking available at the clinic?",
-    answer: "Yes. Convenient parking is available for patients visiting the clinic."
-  },
-  {
-    question: "Do I need a referral to book an appointment?",
-    answer: "No referral is needed. You can book a consultation directly with our clinic."
-  },
-  {
-    question: "Do you accept walk-in visits?",
-    answer: "Consultations are by appointment to ensure privacy and adequate time for each patient. We recommend booking in advance."
-  },
-  {
-    question: "Does the clinic guarantee results?",
-    answer: "Every treatment is planned carefully, but results can vary between individuals. We focus on safe, realistic, and natural outcomes rather than promises."
-  },
-  {
-    question: "Will I feel pressured to proceed with treatment?",
-    answer: "No. Consultations are for guidance and information. You decide if and when you wish to proceed."
-  },
-  {
-    question: "Is my consultation private and confidential?",
-    answer: "Yes. All consultations and patient information are handled with strict confidentiality and discretion."
-  },
-  {
-    question: "Who will I be consulting with?",
-    answer: "All consultations and procedures are personally handled by Dr Soma, a Consultant Plastic and Reconstructive Surgeon."
-  },
-  {
-    question: "Can I contact the clinic before deciding?",
-    answer: "Absolutely. You are welcome to contact us by phone or WhatsApp to ask general questions before booking a consultation."
-  }
-];
-
-const specialties = [
-  {
-    title: "Face & Rejuvenation",
-    description: "Facelifts, Rhinoplasty, Eyelid Surgery & more.",
-    image: "/images/face_image.png",
-    link: "/face",
-    colSpan: "md:col-span-2"
-  },
-  {
-    title: "Breast Procedures",
-    description: "Augmentation, Lift, Reduction & Reconstruction.",
-    image: "/images/breast_image.png",
-    link: "/breast",
-    colSpan: "md:col-span-1"
-  },
-  {
-    title: "Body Contouring",
-    description: "Liposuction, Tummy Tucks & Mommy Makeovers.",
-    image: "/images/body_image.png",
-    link: "/body",
-    colSpan: "md:col-span-1"
-  },
-  {
-    title: "Reconstructive Surgery",
-    description: "Restoring form and function with precision.",
-    image: "/images/scar_care_image.png",
-    link: "/face",
-    colSpan: "md:col-span-1"
-  },
-  {
-    title: "Non-Surgical Aesthetics",
-    description: "Fillers, Botox, and Skin Treatments.",
-    image: "/images/aesthetic_services.png",
-    link: "/aesthetic-treatments",
-    colSpan: "md:col-span-1"
-  }
-];
-
-const Home = () => {
+const NewHome = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  const testimonials = [
+    {
+      name: t('home.testimonial1Name'),
+      title: t('home.testimonial1Title'),
+      rating: 5,
+      text: t('home.testimonial1Text')
+    },
+    {
+      name: t('home.testimonial2Name'),
+      title: t('home.testimonial2Title'),
+      rating: 5,
+      text: t('home.testimonial2Text')
+    },
+    {
+      name: t('home.testimonial3Name'),
+      title: t('home.testimonial3Title'),
+      rating: 5,
+      text: t('home.testimonial3Text')
+    }
+  ];
+
+  const faqs = [
+    {
+      question: t('home.faq1Q'),
+      answer: t('home.faq1A')
+    },
+    {
+      question: t('home.faq2Q'),
+      answer: t('home.faq2A')
+    },
+    {
+      question: t('home.faq3Q'),
+      answer: t('home.faq3A')
+    },
+    {
+      question: t('home.faq4Q'),
+      answer: t('home.faq4A')
+    },
+    {
+      question: t('home.faq5Q'),
+      answer: t('home.faq5A')
+    },
+    {
+      question: t('home.faq6Q'),
+      answer: t('home.faq6A')
+    },
+    {
+      question: t('home.faq7Q'),
+      answer: t('home.faq7A')
+    },
+    {
+      question: t('home.faq8Q'),
+      answer: t('home.faq8A')
+    },
+    {
+      question: t('home.faq9Q'),
+      answer: t('home.faq9A')
+    },
+    {
+      question: t('home.faq10Q'),
+      answer: t('home.faq10A')
+    }
+  ];
+
+  const specialties = [
+    {
+      title: t('home.specFace'),
+      description: t('home.specFaceDesc'),
+      image: "/images/face_image.png",
+      link: "/face",
+      colSpan: "md:col-span-2"
+    },
+    {
+      title: t('home.specBreast'),
+      description: t('home.specBreastDesc'),
+      image: "/images/breast_image.png",
+      link: "/breast",
+      colSpan: "md:col-span-1"
+    },
+    {
+      title: t('home.specBody'),
+      description: t('home.specBodyDesc'),
+      image: "/images/body_image.png",
+      link: "/body",
+      colSpan: "md:col-span-1"
+    },
+    {
+      title: t('home.specRecon'),
+      description: t('home.specReconDesc'),
+      image: "/images/scar_care_image.png",
+      link: "/face",
+      colSpan: "md:col-span-1"
+    },
+    {
+      title: t('home.specNonSurg'),
+      description: t('home.specNonSurgDesc'),
+      image: "/images/aesthetic_services.png",
+      link: "/aesthetic-treatments",
+      colSpan: "md:col-span-1"
+    }
+  ];
 
   return (
     <>
@@ -124,13 +126,20 @@ const Home = () => {
         <meta property="og:title" content="Soma Plastic Surgery - Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta property="og:description" content="Dr. Somasundaram Sathappan is a Plastic and Reconstructive Surgeon and heads the Soma Plastic Surgery (Clinical Aesthetics) Clinic in Subang Jaya, Malaysia." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={getFullUrl('/')} />
-        <meta property="og:image" content={getFullUrl('/images/dr_soma_hero.png')} />
+        <meta property="og:url" content="https://drsomaplasticsurgery.com/" />
+        <meta property="og:image" content="https://drsomaplasticsurgery.com/images/dr_soma_hero.png" />
         <link rel="canonical" href={getFullUrl('/')} />
+        <link rel="alternate" hrefLang="en" href={getFullUrl('/')} />
+        <link rel="alternate" hrefLang="id" href={getFullUrl('/id')} />
+        <link rel="alternate" hrefLang="zh-Hans-CN" href={getFullUrl('/zh-cn')} />
+        <link rel="alternate" hrefLang="zh-Hans-MY" href={getFullUrl('/zh-my')} />
+        <link rel="alternate" hrefLang="ms" href={getFullUrl('/ms')} />
+        <link rel="alternate" hrefLang="ko" href={getFullUrl('/ko')} />
+        <link rel="alternate" hrefLang="x-default" href={getFullUrl('/')} />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[80vh] md:min-h-[90vh] flex items-center bg-[#F9FAFB] overflow-hidden pt-24 md:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
+      <section className="relative w-full min-h-[90vh] flex items-center bg-[#F9FAFB] overflow-hidden pt-32 lg:pt-36 pb-20 lg:pb-24">
         {/* Background Image - CSS background-image on right side */}
         <div
           className="absolute right-0 top-0 w-full md:w-1/2 h-full bg-cover bg-center md:bg-left-top z-0 opacity-5 md:opacity-100"
@@ -140,78 +149,72 @@ const Home = () => {
         </div>
 
         {/* Content Container */}
-        <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl">
             {/* Badge */}
-            <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-[#EA622F] text-[10px] md:text-xs font-bold tracking-widest uppercase mb-4 md:mb-6">
-              Premier Plastic Surgery Clinic
+            <span className="inline-block py-1 px-3 rounded-full bg-orange-100 text-[#EA622F] text-xs font-bold tracking-widest uppercase mb-6">
+              {t('home.heroBadge')}
             </span>
 
             {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#101010] leading-[1.15] mb-4 md:mb-6">
-              Bring Out The <span className="text-[#EA622F]">Natural Beauty</span> In You
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#101010] leading-[1.1] mb-6">
+              {t('home.heroTitle1')} <span className="text-[#EA622F]">{t('home.heroTitle2')}</span> <br /> {t('home.heroTitle3')}
             </h1>
 
             {/* Description */}
-            <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 max-w-lg leading-relaxed">
-              Experience world-class cosmetic and reconstructive surgery with a focus on safety, artistry, and personalized care.
+            <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+              {t('home.heroDesc')}
             </p>
 
-            {/* Checkmarks - 1 col on mobile, 2 cols on larger */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-y-4 md:gap-x-6 mb-8 md:mb-[52px]">
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            {/* Checkmarks - 2x2 grid */}
+            <div className="grid grid-cols-2 gap-y-4 gap-x-6 mb-10">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-xs md:text-sm">Honest &amp; Ethical Guidance</span>
+                <span className="text-gray-700 font-medium text-sm">{t('home.heroCheck1')}</span>
               </div>
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-xs md:text-sm">Board Certified Surgeon</span>
+                <span className="text-gray-700 font-medium text-sm">{t('home.heroCheck2')}</span>
               </div>
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-xs md:text-sm">Safety First Protocols</span>
+                <span className="text-gray-700 font-medium text-sm">{t('home.heroCheck3')}</span>
               </div>
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M20 6 9 17l-5-5"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700 font-medium text-xs md:text-sm">Natural Looking Results</span>
+                <span className="text-gray-700 font-medium text-sm">{t('home.heroCheck4')}</span>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-12 md:h-14 rounded-full px-6 md:px-8 text-sm md:text-base shadow-lg shadow-orange-500/20 w-full sm:w-auto group"
+                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20"
                 onClick={() => router.push('/contact')}
               >
-                Book A Consultation
-                <svg className="w-5 h-5 md:w-7 md:h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+                {t('home.heroBtn1')}
               </button>
               <button
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-12 md:h-14 rounded-full px-6 md:px-8 text-sm md:text-base w-full sm:w-auto group"
-                onClick={() => router.push('/treatments')}
+                className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base"
+                onClick={() => router.push('/face')}
               >
-                Explore Procedures
-                <svg className="w-5 h-5 md:w-7 md:h-7 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                {t('home.heroBtn2')}
               </button>
             </div>
           </div>
@@ -222,36 +225,36 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-6 md:py-8 bg-white border-b border-gray-100">
+      <section className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 sm:border-x border-gray-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100 border-x border-gray-100">
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">30+ Years Experience</h3>
-              <p className="text-sm text-gray-500 mt-1">In Plastic Surgery</p>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat1Title')}</h3>
+              <p className="text-sm text-gray-500 mt-1">{t('home.stat1Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <BadgeCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">Board Certified</h3>
-              <p className="text-sm text-gray-500 mt-1">Consultant Surgeon</p>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat2Title')}</h3>
+              <p className="text-sm text-gray-500 mt-1">{t('home.stat2Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">Thousands of</h3>
-              <p className="text-sm text-gray-500 mt-1">Happy Patients</p>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat3Title')}</h3>
+              <p className="text-sm text-gray-500 mt-1">{t('home.stat3Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">Patient Safety</h3>
-              <p className="text-sm text-gray-500 mt-1">Our Top Priority</p>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat4Title')}</h3>
+              <p className="text-sm text-gray-500 mt-1">{t('home.stat4Sub')}</p>
             </div>
           </div>
         </div>
@@ -260,9 +263,9 @@ const Home = () => {
       {/* Where Details Matter Section */}
       <section id="about" className="py-[50px] bg-white text-center px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-[#101010] mb-6">Where Details Matter, And You Matter More</h2>
+          <h2 className="text-3xl font-bold text-[#101010] mb-6">{t('home.detailsTitle')}</h2>
           <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed text-lg">
-            Plastic surgery is a journey of self-discovery and enhancement. We are here to guide you with honesty, expertise, and a commitment to natural-looking results.
+            {t('home.detailsDesc')}
           </p>
         </div>
       </section>
@@ -271,10 +274,10 @@ const Home = () => {
       <section id="services" className="py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-3 mb-12 items-center text-center">
-            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Procedures</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">Our Specialties</h2>
+            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.specLabel')}</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">{t('home.specTitle')}</h2>
             <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
-              Comprehensive aesthetic and reconstructive solutions tailored to your unique needs.
+              {t('home.specDesc')}
             </p>
           </div>
 
@@ -303,7 +306,7 @@ const Home = () => {
                       {specialty.description}
                     </p>
                     <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#EA622F] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                      View Options <ArrowUpRight className="w-4 h-4" />
+                      {t('home.viewOptions')} <ArrowUpRight className="w-4 h-4" />
                     </div>
                   </div>
                 </div>
@@ -335,22 +338,22 @@ const Home = () => {
             {/* Doctor Info */}
             <div>
               <div className="flex flex-col gap-3 items-start text-left mb-8">
-                <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Meet The Surgeon</span>
+                <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.surgeonLabel')}</span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">
-                  Dr. Somasundaram Sathappan
+                  {t('home.surgeonName')}
                 </h2>
               </div>
 
               <h3 className="text-xl font-medium text-gray-800 mb-4">
-                Consultant Plastic, Reconstructive &amp; Aesthetic Surgeon
+                {t('home.surgeonTitle')}
               </h3>
 
               <p className="text-gray-600 leading-relaxed mb-6">
-                Dr. Soma is a Consultant Plastic and Reconstructive Surgeon and the Head of Soma Plastic Surgery (Clinical Aesthetics) Clinic in Subang Jaya, Malaysia.
+                {t('home.surgeonBio1')}
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-6">
-                With over three decades of experience, he has helped thousands of patients through aesthetic and reconstructive procedures, always with one goal: safe care and natural-looking outcomes.
+                {t('home.surgeonBio2')}
               </p>
 
               <div className="space-y-4 mb-8">
@@ -359,36 +362,36 @@ const Home = () => {
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="m9 12 2 2 4-4"></path>
                   </svg>
-                  <span className="text-gray-700 flex-1">You are heard, not pushed</span>
+                  <span className="text-gray-700 flex-1">{t('home.surgeonPoint1')}</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5">
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="m9 12 2 2 4-4"></path>
                   </svg>
-                  <span className="text-gray-700 flex-1">Your safety is treated as the top priority</span>
+                  <span className="text-gray-700 flex-1">{t('home.surgeonPoint2')}</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5">
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="m9 12 2 2 4-4"></path>
                   </svg>
-                  <span className="text-gray-700 flex-1">Your results are planned to look like you, not like a trend</span>
+                  <span className="text-gray-700 flex-1">{t('home.surgeonPoint3')}</span>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-14 px-8 min-w-[200px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
                   onClick={() => router.push('/about-dr-soma')}
                 >
-                  Read Full Profile
+                  {t('home.surgeonBtn1')}
                 </button>
                 <button
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 px-8 min-w-[200px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-12 px-6 py-2"
                   onClick={() => router.push('/about-dr-soma')}
                 >
-                  View Credentials
+                  {t('home.surgeonBtn2')}
                 </button>
               </div>
             </div>
@@ -400,10 +403,10 @@ const Home = () => {
       <section className="py-24 bg-white text-[#101010]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-3 items-center text-center mb-20">
-            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Your Journey</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">The Patient Experience</h2>
+            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.journeyLabel')}</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">{t('home.journeyTitle')}</h2>
             <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
-              A seamless, supportive journey from your first call to your final reveal.
+              {t('home.journeyDesc')}
             </p>
           </div>
 
@@ -416,9 +419,9 @@ const Home = () => {
               <div className="w-24 h-24 bg-white border-4 border-gray-100 group-hover:border-[#EA622F] rounded-full flex items-center justify-center text-3xl font-bold mb-8 transition-colors duration-300 mx-auto md:mx-0 shadow-sm text-[#101010]">
                 01
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#101010]">Consultation</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#101010]">{t('home.step1Title')}</h3>
               <p className="text-gray-600 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
-                We listen to your goals and assess your needs in a private, comfortable setting.
+                {t('home.step1Desc')}
               </p>
             </div>
 
@@ -427,9 +430,9 @@ const Home = () => {
               <div className="w-24 h-24 bg-white border-4 border-gray-100 group-hover:border-[#EA622F] rounded-full flex items-center justify-center text-3xl font-bold mb-8 transition-colors duration-300 mx-auto md:mx-0 shadow-sm text-[#101010]">
                 02
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#101010]">Personal Plan</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#101010]">{t('home.step2Title')}</h3>
               <p className="text-gray-600 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
-                Dr. Soma creates a bespoke surgical plan tailored specifically to your anatomy.
+                {t('home.step2Desc')}
               </p>
             </div>
 
@@ -438,9 +441,9 @@ const Home = () => {
               <div className="w-24 h-24 bg-white border-4 border-gray-100 group-hover:border-[#EA622F] rounded-full flex items-center justify-center text-3xl font-bold mb-8 transition-colors duration-300 mx-auto md:mx-0 shadow-sm text-[#101010]">
                 03
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#101010]">Procedure</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#101010]">{t('home.step3Title')}</h3>
               <p className="text-gray-600 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
-                Your surgery is performed with the highest safety standards and care.
+                {t('home.step3Desc')}
               </p>
             </div>
 
@@ -449,9 +452,9 @@ const Home = () => {
               <div className="w-24 h-24 bg-white border-4 border-gray-100 group-hover:border-[#EA622F] rounded-full flex items-center justify-center text-3xl font-bold mb-8 transition-colors duration-300 mx-auto md:mx-0 shadow-sm text-[#101010]">
                 04
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[#101010]">Aftercare</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#101010]">{t('home.step4Title')}</h3>
               <p className="text-gray-600 leading-relaxed max-w-xs md:max-w-none mx-auto md:mx-0">
-                We support your recovery journey with regular follow-ups and guidance.
+                {t('home.step4Desc')}
               </p>
             </div>
           </div>
@@ -462,10 +465,10 @@ const Home = () => {
       <section id="reviews" className="py-24 bg-[#F9FAFB]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-3 mb-12 items-center text-center">
-            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Reviews</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">Patient Stories</h2>
+            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.reviewsLabel')}</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">{t('home.reviewsTitle')}</h2>
             <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
-              Read what our happy patients have to say about their experience with us.
+              {t('home.reviewsDesc')}
             </p>
           </div>
 
@@ -494,10 +497,10 @@ const Home = () => {
       <section className="py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-3 mb-10 items-center text-center">
-            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">Credentials</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#101010] leading-[1.15]">Certifications & Memberships</h2>
+            <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.credLabel')}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#101010] leading-[1.15]">{t('home.credTitle')}</h2>
             <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
-              Recognized by leading medical organizations worldwide.
+              {t('home.credDesc')}
             </p>
           </div>
         </div>
@@ -578,23 +581,23 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-12">
               {/* Left Column */}
               <div>
-                <span className="text-[#EA622F] font-bold tracking-widest uppercase text-sm mb-2 block">Common Questions</span>
-                <h2 className="text-3xl font-bold mb-6">Need Answers?</h2>
-                <p className="text-gray-600 mb-8">Can&apos;t find what you&apos;re looking for? Get in touch with our friendly team.</p>
+                <span className="text-[#EA622F] font-bold tracking-widest uppercase text-sm mb-2 block">{t('home.faqLabel')}</span>
+                <h2 className="text-3xl font-bold mb-6">{t('home.faqTitle')}</h2>
+                <p className="text-gray-600 mb-8">{t('home.faqDesc')}</p>
                 <div className="flex gap-4 justify-center md:justify-start">
                   <button
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-14 px-8 min-w-[200px]"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
                     onClick={() => router.push('/contact')}
                   >
-                    Contact Us
+                    {t('home.faqBtn1')}
                   </button>
                   <a
                     href="https://wa.me/60142616007?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-sm h-14 px-8 min-w-[200px]"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-sm h-12 px-6 py-2"
                   >
-                    WhatsApp Now
+                    {t('home.faqBtn2')}
                   </a>
                 </div>
               </div>
@@ -633,4 +636,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NewHome;

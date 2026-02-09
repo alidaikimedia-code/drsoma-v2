@@ -5,6 +5,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Global site meta */}
+        <meta property="og:site_name" content="Soma Plastic Surgery" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="id_ID" />
+        <meta property="og:locale:alternate" content="zh_CN" />
+        <meta property="og:locale:alternate" content="ms_MY" />
+        <meta property="og:locale:alternate" content="ko_KR" />
         {/* Favicon */}
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function TummyTuckMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,81 +38,81 @@ export default function TummyTuckMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a tummy tuck?", answer: "A tummy tuck is a surgical procedure that removes excess abdominal skin and fat while tightening weakened abdominal muscles to create a flatter abdomen." },
-    { question: "Is a tummy tuck the same as liposuction?", answer: "No. Liposuction removes fat only, while a tummy tuck also removes loose skin and tightens muscles." },
-    { question: "Is tummy tuck surgery safe?", answer: "When performed by a certified plastic surgeon in a regulated facility, it is considered a safe and well-established procedure." },
-    { question: "How long does recovery take?", answer: "Most patients return to daily activities within 2-4 weeks, with final results visible over 3-6 months." },
-    { question: "Will there be a scar?", answer: "Yes, but it is placed low on the abdomen and typically hidden by underwear or swimwear." },
-    { question: "Are tummy tuck results permanent?", answer: "Results are long-lasting if body weight remains stable." },
-    { question: "Can pregnancy affect tummy tuck results?", answer: "Yes. Pregnancy can stretch the abdomen again, so surgery is best after completing childbearing." },
-    { question: "Who should consider a tummy tuck?", answer: "Patients with loose abdominal skin, muscle laxity, stable weight, and realistic expectations." },
-    { question: "Can a tummy tuck improve posture?", answer: "Yes. Muscle repair can enhance core support and posture." },
-    { question: "Can it be combined with other procedures?", answer: "Yes. It is commonly combined with liposuction for enhanced contouring." }
+    { question: t('tummyTuck.faq1Q'), answer: t('tummyTuck.faq1A') },
+    { question: t('tummyTuck.faq2Q'), answer: t('tummyTuck.faq2A') },
+    { question: t('tummyTuck.faq3Q'), answer: t('tummyTuck.faq3A') },
+    { question: t('tummyTuck.faq4Q'), answer: t('tummyTuck.faq4A') },
+    { question: t('tummyTuck.faq5Q'), answer: t('tummyTuck.faq5A') },
+    { question: t('tummyTuck.faq6Q'), answer: t('tummyTuck.faq6A') },
+    { question: t('tummyTuck.faq7Q'), answer: t('tummyTuck.faq7A') },
+    { question: t('tummyTuck.faq8Q'), answer: t('tummyTuck.faq8A') },
+    { question: t('tummyTuck.faq9Q'), answer: t('tummyTuck.faq9A') },
+    { question: t('tummyTuck.faq10Q'), answer: t('tummyTuck.faq10A') }
   ]
 
   const coreIssues = [
-    { icon: "skin", name: "Excess or sagging abdominal skin" },
-    { icon: "fat", name: "Accumulated fat resistant to diet and exercise" },
-    { icon: "muscle", name: "Weakened or separated abdominal muscles (diastasis recti)" }
+    { icon: "skin", name: t('tummyTuck.coreIssue1') },
+    { icon: "fat", name: t('tummyTuck.coreIssue2') },
+    { icon: "muscle", name: t('tummyTuck.coreIssue3') }
   ]
 
   const surgicalSteps = [
-    "Pre-operative markings to guide incision placement and symmetry",
-    "Removal of excess abdominal skin and fat",
-    "Repair and tightening of stretched abdominal muscles",
-    "Repositioning of the belly button when required",
-    "Layered closure to support healing",
-    "Placement of surgical drains when indicated",
-    "Application of compression garments"
+    t('tummyTuck.step1'),
+    t('tummyTuck.step2'),
+    t('tummyTuck.step3'),
+    t('tummyTuck.step4'),
+    t('tummyTuck.step5'),
+    t('tummyTuck.step6'),
+    t('tummyTuck.step7')
   ]
 
   const tummyTypes = [
     {
-      title: "Full Tummy Tuck",
-      features: ["Removes excess skin above and below the navel", "Repairs muscle separation", "Repositions the belly button", "Most comprehensive correction"],
+      title: t('tummyTuck.type1Title'),
+      features: [t('tummyTuck.type1Feat1'), t('tummyTuck.type1Feat2'), t('tummyTuck.type1Feat3'), t('tummyTuck.type1Feat4')],
       highlight: true
     },
     {
-      title: "Mini Tummy Tuck",
-      features: ["Targets mild lower-abdominal skin laxity", "Smaller incision", "Limited or no muscle repair", "Suitable for selected patients"],
+      title: t('tummyTuck.type2Title'),
+      features: [t('tummyTuck.type2Feat1'), t('tummyTuck.type2Feat2'), t('tummyTuck.type2Feat3'), t('tummyTuck.type2Feat4')],
       highlight: false
     },
     {
-      title: "Extended Tummy Tuck",
-      features: ["Addresses excess skin extending to the flanks", "Often chosen after massive weight loss", "Improves waistline contour"],
+      title: t('tummyTuck.type3Title'),
+      features: [t('tummyTuck.type3Feat1'), t('tummyTuck.type3Feat2'), t('tummyTuck.type3Feat3')],
       highlight: false
     }
   ]
 
   const candidateChecklist = [
-    "Excess abdominal skin",
-    "Muscle separation after pregnancy or weight loss",
-    "Stable body weight",
-    "Good general health",
-    "Realistic expectations"
+    t('tummyTuck.suitable1'),
+    t('tummyTuck.suitable2'),
+    t('tummyTuck.suitable3'),
+    t('tummyTuck.suitable4'),
+    t('tummyTuck.suitable5')
   ]
 
   const notRecommendedChecklist = [
-    "Future pregnancy is planned",
-    "Uncontrolled medical conditions",
-    "Weight is unstable or severe obesity is present"
+    t('tummyTuck.notRecommended1'),
+    t('tummyTuck.notRecommended2'),
+    t('tummyTuck.notRecommended3')
   ]
 
   const benefits = [
-    "Removes loose, sagging abdominal skin",
-    "Tightens weakened abdominal muscles",
-    "Improves abdominal contour and firmness",
-    "Enhances posture and core stability",
-    "Produces long-lasting results with stable weight",
-    "Can be combined with liposuction for refinement"
+    t('tummyTuck.benefit1'),
+    t('tummyTuck.benefit2'),
+    t('tummyTuck.benefit3'),
+    t('tummyTuck.benefit4'),
+    t('tummyTuck.benefit5'),
+    t('tummyTuck.benefit6')
   ]
 
   const aftercareItems = [
-    "Compression garment for 6-8 weeks",
-    "Pain relief medication",
-    "Drain care instructions",
-    "Wound care guidance",
-    "Scheduled follow-up visits"
+    t('tummyTuck.aftercare1'),
+    t('tummyTuck.aftercare2'),
+    t('tummyTuck.aftercare3'),
+    t('tummyTuck.aftercare4'),
+    t('tummyTuck.aftercare5')
   ]
 
   return (
@@ -118,7 +120,7 @@ export default function TummyTuckMalaysia() {
       <Head>
         <title>Tummy Tuck Malaysia by Specialist Plastic Surgeon | Abdominoplasty - Dr. Soma</title>
         <meta name="description" content="Looking for tummy tuck in Malaysia? Dr. Soma offers comprehensive abdominoplasty to restore a flatter, firmer abdomen with surgical precision and structured postoperative care." />
-      
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -386,25 +388,25 @@ export default function TummyTuckMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('tummyTuck.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Tummy Tuck in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Restore a Flatter, Firmer Abdomen with Surgical Precision</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('tummyTuck.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('tummyTuck.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify space-y-3" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A tummy tuck, medically known as abdominoplasty, is a surgical procedure designed to restore a flatter, firmer abdominal profile by removing excess skin and fat while tightening weakened abdominal muscles. It is most commonly sought after pregnancy, significant weight loss, or age-related skin laxity—situations where exercise and diet alone cannot correct the underlying structural changes.</p>
-                <p style={{fontSize: '14px'}}>This procedure is intended for individuals who are already close to a stable weight but struggle with loose abdominal skin, muscle separation, or a protruding abdomen that affects comfort, posture, and confidence. When performed correctly, a tummy tuck improves abdominal contour, supports core stability, and delivers long-lasting results.</p>
-                <p style={{fontSize: '14px'}}>In Malaysia, tummy tuck surgery is a regulated medical procedure by: Ministry of Health Malaysia under the Private Healthcare Services framework. This ensures that surgery is performed only by registered medical practitioners in licensed facilities, following established safety and postoperative standards.</p>
-                <p style={{fontSize: '14px'}}>At Dr. Soma Plastic Surgery, tummy tuck procedures are performed personally by Dr. Soma, a certified plastic surgeon with experience in body contouring surgery and structured postoperative care. The approach focuses on safety, anatomical precision, and natural-looking results rather than aggressive overcorrection.</p>
+                <p style={{fontSize: '14px'}}>{t('tummyTuck.heroDesc1')}</p>
+                <p style={{fontSize: '14px'}}>{t('tummyTuck.heroDesc2')}</p>
+                <p style={{fontSize: '14px'}}>{t('tummyTuck.heroDesc3')}</p>
+                <p style={{fontSize: '14px'}}>{t('tummyTuck.heroDesc4')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Tummy%20Tuck%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('tummyTuck.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#process" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  How It Works
+                  {t('tummyTuck.howItWorks')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -424,7 +426,7 @@ export default function TummyTuckMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">1000+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('tummyTuck.trustedBy')} <span className="text-[#FE7623] font-bold">1000+</span> {t('tummyTuck.happyPatients')}</span>
               </div>
             </div>
 
@@ -444,8 +446,8 @@ export default function TummyTuckMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Full Abdominoplasty</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('tummyTuck.procedure')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('tummyTuck.procedureName')}</p>
                     </div>
                   </div>
                 </div>
@@ -459,21 +461,20 @@ export default function TummyTuckMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Tummy Tuck (Abdominoplasty)?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('tummyTuck.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A tummy tuck is a surgical procedure that addresses three core issues of the abdomen. During the procedure, excess skin and fat are removed, and the abdominal muscles are tightened to restore a flatter, firmer abdominal wall. In many cases, the belly button is repositioned to maintain natural proportions.
+                  {t('tummyTuck.whatDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Major medical institutions, including leading surgical bodies and academic hospitals, describe abdominoplasty as a well-established and effective procedure when patient selection, surgical technique, and recovery planning are appropriately managed.
+                  {t('tummyTuck.whatDesc2')}
                 </p>
-                <p className="text-zinc-500 text-sm leading-relaxed text-justify font-medium">
-                  A tummy tuck is <strong>not</strong> a weight-loss surgery. Instead, it is a contour-restoring procedure for patients who have already achieved weight stability but are left with skin laxity and muscle weakness.
+                <p className="text-zinc-500 text-sm leading-relaxed text-justify font-medium" dangerouslySetInnerHTML={{ __html: t('tummyTuck.whatDesc3') }}>
                 </p>
               </div>
 
               {/* Core Issues Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">A Tummy Tuck Addresses These Core Issues</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('tummyTuck.coreIssuesTitle')}</h3>
                 <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {coreIssues.map((issue, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -493,18 +494,18 @@ export default function TummyTuckMalaysia() {
         <section className="py-8 md:py-16 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="changes-header" className={`max-w-3xl mx-auto text-center mb-12 transition-all duration-700 ${isVisible('changes-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Why the Abdomen Changes After Pregnancy or Weight Loss</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('tummyTuck.changesTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed">
-                The abdomen undergoes significant structural stress during pregnancy and major weight fluctuations. Skin fibers stretch beyond their elastic limit, and the rectus abdominal muscles can separate along the midline—a condition known as diastasis recti.
+                {t('tummyTuck.changesDesc')}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { text: "Skin often does not retract fully", icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" },
-                { text: "Muscle separation does not resolve with exercise alone", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
-                { text: "Fat distribution becomes uneven", icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" },
-                { text: "Core support weakens, affecting posture and back comfort", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
+                { text: t('tummyTuck.change1'), icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" },
+                { text: t('tummyTuck.change2'), icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { text: t('tummyTuck.change3'), icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" },
+                { text: t('tummyTuck.change4'), icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
               ].map((item, i) => (
                 <div key={i} data-animate={`changes-${i}`} className={`p-6 bg-white rounded-2xl border border-zinc-100 shadow-lg card-3d card-shine hover:border-[#FE7623] ${isVisible(`changes-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
                   <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center mb-4 group-hover:bg-[#FE7623] transition-all duration-300">
@@ -517,7 +518,7 @@ export default function TummyTuckMalaysia() {
               ))}
             </div>
 
-            <p className="text-center text-sm text-zinc-500 mt-8 max-w-2xl mx-auto">A tummy tuck directly addresses these anatomical changes rather than relying on surface-level fat reduction.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8 max-w-2xl mx-auto">{t('tummyTuck.changesNote')}</p>
           </div>
         </section>
 
@@ -525,8 +526,8 @@ export default function TummyTuckMalaysia() {
         <section id="process" className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="works-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('works-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How a Tummy Tuck Works</h2>
-              <p className="text-zinc-500 text-sm">A tummy tuck is a carefully planned surgical procedure that follows a structured sequence to ensure symmetry, safety, and durable results.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('tummyTuck.processTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('tummyTuck.processDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -541,7 +542,7 @@ export default function TummyTuckMalaysia() {
               </div>
 
               <div data-animate="works-steps" className={`transition-all duration-700 ${isVisible('works-steps') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Key Surgical Steps</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('tummyTuck.stepsTitle')}</h3>
                 <div className="space-y-4">
                   {surgicalSteps.map((step, i) => (
                     <div key={i} className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 p-4 bg-zinc-50 rounded-xl border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 group cursor-pointer text-center md:text-left">
@@ -552,7 +553,7 @@ export default function TummyTuckMalaysia() {
                     </div>
                   ))}
                 </div>
-                <p className="text-zinc-500 text-sm mt-6">By addressing both skin laxity and muscle separation, abdominoplasty achieves results that liposuction alone cannot provide.</p>
+                <p className="text-zinc-500 text-sm mt-6">{t('tummyTuck.processNote')}</p>
               </div>
             </div>
           </div>
@@ -562,8 +563,8 @@ export default function TummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="types-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('types-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Tummy Tuck Procedures</h2>
-              <p className="text-zinc-500 text-sm">The appropriate tummy tuck technique depends on skin excess, muscle condition, and body proportions. A clinical assessment determines the most suitable approach.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('tummyTuck.typesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('tummyTuck.typesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -587,7 +588,7 @@ export default function TummyTuckMalaysia() {
               ))}
             </div>
 
-            <p className="text-center text-sm text-zinc-500 mt-8">Each technique is selected based on anatomy rather than preference alone.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8">{t('tummyTuck.typesNote')}</p>
           </div>
         </section>
 
@@ -608,23 +609,23 @@ export default function TummyTuckMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Regulated & Safe</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('tummyTuck.regulatedSafe')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Performed in licensed facilities under Ministry of Health Malaysia standards.&rdquo;
+                  &ldquo;{t('tummyTuck.regulatedSafeDesc')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate for a Tummy Tuck?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('tummyTuck.candidateTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Ideal candidates typically share specific characteristics that support safe surgery and predictable outcomes.
+                {t('tummyTuck.candidateDesc')}
               </p>
 
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Suitable Candidates Usually Have</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('tummyTuck.suitableTitle')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
@@ -636,7 +637,7 @@ export default function TummyTuckMalaysia() {
               </div>
 
               <div className="pt-8 border-t border-zinc-100">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">A Tummy Tuck May Not Be Recommended If</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('tummyTuck.notRecommendedTitle')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {notRecommendedChecklist.map((item, i) => (
                     <div key={i} className="flex items-center gap-3 text-sm text-zinc-600 p-3 bg-red-50/50 rounded-lg border border-red-100 group">
@@ -645,7 +646,7 @@ export default function TummyTuckMalaysia() {
                     </div>
                   ))}
                 </div>
-                <p className="text-zinc-500 text-sm mt-4">Final suitability is always determined during an in-person consultation.</p>
+                <p className="text-zinc-500 text-sm mt-4">{t('tummyTuck.candidateNote')}</p>
               </div>
             </div>
           </div>
@@ -655,25 +656,25 @@ export default function TummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Tummy Tuck vs Liposuction: Understanding the Difference</h2>
-              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">Many patients confuse tummy tuck surgery with liposuction, but they address different problems.</p>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('tummyTuck.compareTitle')}</h2>
+              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">{t('tummyTuck.compareDesc')}</p>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-4 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-4 md:gap-6">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>Tummy Tuck</span></div>
-                  <div>Liposuction</div>
+                  <div>{t('tummyTuck.feature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>{t('tummyTuck.compTummy')}</span></div>
+                  <div>{t('tummyTuck.compLipo')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Removes Fat", tummy: "Yes", lipo: "Yes" },
-                  { feat: "Removes Loose Skin", tummy: "Yes", lipo: "No" },
-                  { feat: "Tightens Muscles", tummy: "Yes", lipo: "No" },
-                  { feat: "Scarring", tummy: "Longer but hidden", lipo: "Minimal" },
-                  { feat: "Downtime", tummy: "3-4 weeks", lipo: "1-2 weeks" },
-                  { feat: "Best For", tummy: "Loose skin & muscles", lipo: "Fat pockets only" }
+                  { feat: t('tummyTuck.row1Feat'), tummy: t('tummyTuck.row1Tummy'), lipo: t('tummyTuck.row1Lipo') },
+                  { feat: t('tummyTuck.row2Feat'), tummy: t('tummyTuck.row2Tummy'), lipo: t('tummyTuck.row2Lipo') },
+                  { feat: t('tummyTuck.row3Feat'), tummy: t('tummyTuck.row3Tummy'), lipo: t('tummyTuck.row3Lipo') },
+                  { feat: t('tummyTuck.row4Feat'), tummy: t('tummyTuck.row4Tummy'), lipo: t('tummyTuck.row4Lipo') },
+                  { feat: t('tummyTuck.row5Feat'), tummy: t('tummyTuck.row5Tummy'), lipo: t('tummyTuck.row5Lipo') },
+                  { feat: t('tummyTuck.row6Feat'), tummy: t('tummyTuck.row6Tummy'), lipo: t('tummyTuck.row6Lipo') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-4 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[12px] md:text-sm gap-4 md:gap-6 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -683,7 +684,7 @@ export default function TummyTuckMalaysia() {
                 ))}
               </div>
 
-              <p className="text-center text-sm text-zinc-500 mt-8">In some cases, both procedures are combined to achieve optimal contouring.</p>
+              <p className="text-center text-sm text-zinc-500 mt-8">{t('tummyTuck.compareNote')}</p>
             </div>
           </div>
         </section>
@@ -692,34 +693,34 @@ export default function TummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">What Results Can You Expect?</h2>
-              <p className="text-zinc-500 text-sm">Results from a tummy tuck develop gradually as swelling resolves and tissues heal.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('tummyTuck.resultsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('tummyTuck.resultsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1-2",
-                  title: "Early Recovery",
-                  points: ["Swelling, tightness, limited mobility", "Compression garment worn", "Pain medication as needed"],
+                  time: t('tummyTuck.resTime1'),
+                  title: t('tummyTuck.resTitle1'),
+                  points: [t('tummyTuck.resPoint1a'), t('tummyTuck.resPoint1b'), t('tummyTuck.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 3-4",
-                  title: "Improved Comfort",
-                  points: ["Improved comfort and posture", "Return to light activities", "Wound care continues"],
+                  time: t('tummyTuck.resTime2'),
+                  title: t('tummyTuck.resTitle2'),
+                  points: [t('tummyTuck.resPoint2a'), t('tummyTuck.resPoint2b'), t('tummyTuck.resPoint2c')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 6-8",
-                  title: "Visible Flattening",
-                  points: ["Visible abdominal flattening", "Resume moderate exercise", "Scar healing progresses"],
+                  time: t('tummyTuck.resTime3'),
+                  title: t('tummyTuck.resTitle3'),
+                  points: [t('tummyTuck.resPoint3a'), t('tummyTuck.resPoint3b'), t('tummyTuck.resPoint3c')],
                   icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Month 3-6",
-                  title: "Final Contour",
-                  points: ["Final contour emerges", "Swelling fully resolves", "Long-lasting results"],
+                  time: t('tummyTuck.resTime4'),
+                  title: t('tummyTuck.resTitle4'),
+                  points: [t('tummyTuck.resPoint4a'), t('tummyTuck.resPoint4b'), t('tummyTuck.resPoint4c')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -760,10 +761,10 @@ export default function TummyTuckMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Week 1-2</span>
-                <span>Week 3-4</span>
-                <span>Week 6-8</span>
-                <span>Month 3-6</span>
+                <span>{t('tummyTuck.resTime1')}</span>
+                <span>{t('tummyTuck.resTime2')}</span>
+                <span>{t('tummyTuck.resTime3')}</span>
+                <span>{t('tummyTuck.resTime4')}</span>
               </div>
             </div>
           </div>
@@ -772,8 +773,8 @@ export default function TummyTuckMalaysia() {
         {/* Benefits Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="benefits-header" className={`text-2xl font-semibold text-center mb-4 text-[#FE7623] transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Benefits of Tummy Tuck Surgery</h2>
-            <p className="text-zinc-500 text-sm text-center mb-12 max-w-2xl mx-auto">A well-performed tummy tuck offers both aesthetic and functional benefits.</p>
+            <h2 data-animate="benefits-header" className={`text-2xl font-semibold text-center mb-4 text-[#FE7623] transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('tummyTuck.benefitsTitle')}</h2>
+            <p className="text-zinc-500 text-sm text-center mb-12 max-w-2xl mx-auto">{t('tummyTuck.benefitsDesc')}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, i) => (
@@ -783,7 +784,7 @@ export default function TummyTuckMalaysia() {
               ))}
             </div>
 
-            <p className="text-center text-sm text-zinc-500 mt-8">Patients often report improved confidence in clothing and daily comfort.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8">{t('tummyTuck.benefitsNote')}</p>
           </div>
         </section>
 
@@ -791,12 +792,12 @@ export default function TummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-animate="aftercare-content" className={`transition-all duration-700 ${isVisible('aftercare-content') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Post-Operative Recovery and Aftercare</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('tummyTuck.aftercareTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Recovery is a structured process guided by surgical protocols. Early walking is encouraged to support circulation, while strenuous activity is restricted during healing. Discomfort is commonly described as tightness or muscle soreness rather than sharp pain.
+                {t('tummyTuck.aftercareDesc')}
               </p>
 
-              <h4 className="text-sm font-bold text-zinc-900 mb-4">After Surgery, Patients Typically Receive</h4>
+              <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('tummyTuck.aftercareSubtitle')}</h4>
               <div className="space-y-3">
                 {aftercareItems.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
@@ -817,9 +818,9 @@ export default function TummyTuckMalaysia() {
               <div className="absolute inset-0 bg-zinc-900/10"></div>
               <div className="absolute bottom-8 left-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[280px] animate-float">
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Postoperative care and recovery protocols used in tummy tuck surgery align with internationally recognised surgical safety and postoperative standards.&rdquo;
+                  &ldquo;{t('tummyTuck.aftercareQuote')}&rdquo;
                 </p>
-                <p className="text-xs text-[#FE7623] font-semibold mt-2">WHO - Safe Surgery & Postoperative Care</p>
+                <p className="text-xs text-[#FE7623] font-semibold mt-2">{t('tummyTuck.aftercareSource')}</p>
               </div>
             </div>
           </div>
@@ -838,11 +839,11 @@ export default function TummyTuckMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('tummyTuck.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Tummy tuck cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('tummyTuck.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of tummy tuck required", "Amount of skin and fat to remove", "Muscle repair extent", "Combination with liposuction", "Operating time and facility"].map((item, i) => (
+                  {[t('tummyTuck.priceFactor1'), t('tummyTuck.priceFactor2'), t('tummyTuck.priceFactor3'), t('tummyTuck.priceFactor4'), t('tummyTuck.priceFactor5')].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
@@ -850,7 +851,7 @@ export default function TummyTuckMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Tummy%20Tuck%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('tummyTuck.getQuote')}
                 </a>
               </div>
             </div>
@@ -862,8 +863,8 @@ export default function TummyTuckMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about tummy tuck surgery</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('tummyTuck.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('tummyTuck.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -884,7 +885,7 @@ export default function TummyTuckMalaysia() {
                     >
                       <h4 className="text-sm sm:text-base text-zinc-800 font-medium flex-1">{faq.question}</h4>
                       <span className="flex-shrink-0 min-w-[32px] text-2xl sm:text-3xl font-light transition-all duration-300 text-[#FE7623]">
-                        {openFaq === index ? "−" : "+"}
+                        {openFaq === index ? "\u2212" : "+"}
                       </span>
                     </button>
                     <div className={`overflow-hidden transition-all duration-500 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
@@ -908,13 +909,13 @@ export default function TummyTuckMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('tummyTuck.refTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Mayo Clinic", url: "https://www.mayoclinic.org/tests-procedures/tummy-tuck/about/pac-20384892", desc: "Clinical overview recognizing abdominoplasty as an effective and well-established procedure when patient selection, surgical technique, and recovery planning are appropriately managed.", color: "from-blue-500 to-blue-600" },
-                { name: "Ministry of Health Malaysia", url: "https://www.moh.gov.my/", desc: "Regulates private healthcare services, surgical safety standards, facility licensing, and professional accountability in Malaysia.", color: "from-red-500 to-red-600" },
-                { name: "World Health Organization", url: "https://www.who.int/", desc: "Guidelines on safe surgery and postoperative care standards used worldwide.", color: "from-green-500 to-green-600" }
+                { name: t('tummyTuck.ref1Name'), url: "https://www.mayoclinic.org/tests-procedures/tummy-tuck/about/pac-20384892", desc: t('tummyTuck.ref1Desc'), color: "from-blue-500 to-blue-600" },
+                { name: t('tummyTuck.ref2Name'), url: "https://www.moh.gov.my/", desc: t('tummyTuck.ref2Desc'), color: "from-red-500 to-red-600" },
+                { name: t('tummyTuck.ref3Name'), url: "https://www.who.int/", desc: t('tummyTuck.ref3Desc'), color: "from-green-500 to-green-600" }
               ].map((source, i) => (
                 <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
@@ -944,24 +945,24 @@ export default function TummyTuckMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Restore structure, comfort, and proportion.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('tummyTuck.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              A tummy tuck is not about chasing perfection. It is about restoring structure, comfort, and proportion after life events that permanently change the abdomen. When performed with proper planning, surgical precision, and structured aftercare, it delivers predictable, confidence-restoring results.
+              {t('tummyTuck.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Tummy%20Tuck%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('tummyTuck.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('tummyTuck.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["tummy tuck Malaysia", "abdominoplasty", "excess skin removal", "muscle tightening", "body contouring", "Dr. Soma"].map((tag, i) => (
+              {[t('tummyTuck.seoTag1'), t('tummyTuck.seoTag2'), t('tummyTuck.seoTag3'), t('tummyTuck.seoTag4'), t('tummyTuck.seoTag5'), t('tummyTuck.seoTag6')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

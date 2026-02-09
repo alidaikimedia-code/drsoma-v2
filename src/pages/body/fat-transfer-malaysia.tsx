@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function FatTransferMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,72 +38,57 @@ export default function FatTransferMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is fat transfer surgery?", answer: "Fat transfer is a surgical procedure that removes fat from one area of the body and injects it into another area to restore volume and improve contour." },
-    { question: "Is fat transfer permanent?", answer: "The fat that survives after the first few months is generally permanent, as long as body weight remains stable." },
-    { question: "Is fat transfer safe?", answer: "When performed by a certified plastic surgeon in a licensed medical facility, fat transfer is considered a safe and established procedure." },
-    { question: "How long does recovery take?", answer: "Most patients return to normal daily activities within 1–2 weeks, with final results visible after several months." },
-    { question: "Will the transferred fat feel natural?", answer: "Yes. Because it is your own tissue, transferred fat feels soft and natural once healed." },
-    { question: "Can fat transfer be combined with other procedures?", answer: "Yes. It is commonly combined with liposuction, body contouring, or facial rejuvenation procedures." },
-    { question: "How much fat survives after transfer?", answer: "Typically, 60–80% of transferred fat survives long term, depending on technique and individual healing." },
-    { question: "Who should not undergo fat transfer?", answer: "Patients with very low body fat, unstable weight, or uncontrolled medical conditions may not be suitable candidates." }
+    { question: t('fatTransfer.faq1Q'), answer: t('fatTransfer.faq1A') },
+    { question: t('fatTransfer.faq2Q'), answer: t('fatTransfer.faq2A') },
+    { question: t('fatTransfer.faq3Q'), answer: t('fatTransfer.faq3A') },
+    { question: t('fatTransfer.faq4Q'), answer: t('fatTransfer.faq4A') },
+    { question: t('fatTransfer.faq5Q'), answer: t('fatTransfer.faq5A') },
+    { question: t('fatTransfer.faq6Q'), answer: t('fatTransfer.faq6A') },
+    { question: t('fatTransfer.faq7Q'), answer: t('fatTransfer.faq7A') },
+    { question: t('fatTransfer.faq8Q'), answer: t('fatTransfer.faq8A') }
   ]
 
   const processSteps = [
-    { title: "Harvested", desc: "Fat is removed using gentle liposuction from areas such as the abdomen, flanks, thighs, or hips" },
-    { title: "Processed", desc: "The harvested fat is purified to remove excess fluid, oil, and damaged cells" },
-    { title: "Injected", desc: "The purified fat is injected in small amounts using specialised cannulas" }
+    { title: t('fatTransfer.processStep1'), desc: t('fatTransfer.processStep1Desc') },
+    { title: t('fatTransfer.processStep2'), desc: t('fatTransfer.processStep2Desc') },
+    { title: t('fatTransfer.processStep3'), desc: t('fatTransfer.processStep3Desc') }
   ]
 
   const treatmentAreas = [
-    {
-      title: "Facial Fat Transfer",
-      desc: "Restores youthful volume to cheeks, under-eye hollows, temples, nasolabial folds, jawline and chin. Improves facial softness and skin quality."
-    },
-    {
-      title: "Breast Fat Transfer",
-      desc: "Provides mild to moderate volume enhancement, correction of asymmetry, contour improvement after implant removal, and refinement after reconstruction."
-    },
-    {
-      title: "Buttock Fat Transfer",
-      desc: "Enhances buttock shape and projection, fills hip dips, and improves overall lower-body proportion."
-    },
-    {
-      title: "Hand Rejuvenation",
-      desc: "Restores volume to aging hands, reducing the appearance of veins and tendons while improving skin texture."
-    },
-    {
-      title: "Body Contour Refinement",
-      desc: "Corrects contour irregularities after liposuction, massive weight loss, trauma or surgery."
-    }
+    { title: t('fatTransfer.area1Title'), desc: t('fatTransfer.area1Desc') },
+    { title: t('fatTransfer.area2Title'), desc: t('fatTransfer.area2Desc') },
+    { title: t('fatTransfer.area3Title'), desc: t('fatTransfer.area3Desc') },
+    { title: t('fatTransfer.area4Title'), desc: t('fatTransfer.area4Desc') },
+    { title: t('fatTransfer.area5Title'), desc: t('fatTransfer.area5Desc') }
   ]
 
   const benefits = [
-    "Uses your own natural tissue",
-    "No risk of allergic reaction",
-    "Improves contour at donor site",
-    "Soft, realistic appearance",
-    "Long-lasting results",
-    "Can improve skin quality over time"
+    t('fatTransfer.benefit1'),
+    t('fatTransfer.benefit2'),
+    t('fatTransfer.benefit3'),
+    t('fatTransfer.benefit4'),
+    t('fatTransfer.benefit5'),
+    t('fatTransfer.benefit6')
   ]
 
   const candidateChecklist = [
-    "Have adequate donor fat",
-    "Are in good overall health",
-    "Maintain a stable body weight",
-    "Want natural-looking volume enhancement",
-    "Understand that some fat resorption is normal"
+    t('fatTransfer.candidate1'),
+    t('fatTransfer.candidate2'),
+    t('fatTransfer.candidate3'),
+    t('fatTransfer.candidate4'),
+    t('fatTransfer.candidate5')
   ]
 
   const notIdeal = [
-    "Extremely low body fat",
-    "Seeking dramatic size changes in a single procedure"
+    t('fatTransfer.notIdeal1'),
+    t('fatTransfer.notIdeal2')
   ]
 
   const limitations = [
-    "Results are not instant due to swelling and fat settling",
-    "Some fat loss is unavoidable",
-    "Large volume increases may require staged procedures",
-    "Weight fluctuations can affect long-term outcomes"
+    t('fatTransfer.limit1'),
+    t('fatTransfer.limit2'),
+    t('fatTransfer.limit3'),
+    t('fatTransfer.limit4')
   ]
 
   return (
@@ -109,7 +96,7 @@ export default function FatTransferMalaysia() {
       <Head>
         <title>Fat Transfer Malaysia | Natural Volume Restoration – Dr. Soma</title>
         <meta name="description" content="Fat transfer surgery in Malaysia by Dr. Soma. Natural volume restoration using your own body fat for face, breast, buttocks and body contouring. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
-      
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -259,23 +246,23 @@ export default function FatTransferMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('fatTransfer.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Fat Transfer in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Natural Volume Restoration Using Your Own Body Fat</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('fatTransfer.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('fatTransfer.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Fat transfer, also called fat grafting or autologous fat transfer, is a surgical technique that uses your own body fat to restore volume, improve contour, and enhance proportions in targeted areas. Instead of synthetic fillers or implants, the procedure relies on living fat cells harvested from one part of the body and carefully transferred to another.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, fat transfer is a regulated surgical procedure. It must be performed by a registered medical practitioner in a licensed medical facility under standards governed by the Ministry of Health Malaysia, which oversees patient safety, facility licensing, and professional accountability.</p>
+                <p style={{fontSize: '14px'}}>{t('fatTransfer.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('fatTransfer.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Transfer" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('fatTransfer.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('fatTransfer.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -295,7 +282,7 @@ export default function FatTransferMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('fatTransfer.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('fatTransfer.happyPatients')}</span>
               </div>
             </div>
 
@@ -315,8 +302,8 @@ export default function FatTransferMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Natural Volume Restoration</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('fatTransfer.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('fatTransfer.naturalVolumeRestoration')}</p>
                     </div>
                   </div>
                 </div>
@@ -330,12 +317,12 @@ export default function FatTransferMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Fat Transfer?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('fatTransfer.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Fat transfer is a multi-step surgical process where fat is gently removed from areas with excess fat, purified, and reinjected into areas that need volume or contour improvement. Because the fat comes from your own body, the risk of allergic reaction or rejection is extremely low.
+                  {t('fatTransfer.whatDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Clinically, fat grafting is described as a reconstructive and aesthetic technique that improves contour, soft-tissue quality, and volume when patient selection and technique are appropriate. Major institutions such as the Mayo Clinic recognise fat grafting as a well-established option in both cosmetic and reconstructive surgery.
+                  {t('fatTransfer.whatDesc2')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   {processSteps.map((step, i) => (
@@ -346,18 +333,18 @@ export default function FatTransferMalaysia() {
                   ))}
                 </div>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>Note:</strong> Fat transfer is not a weight-loss procedure. Its purpose is reshaping and volume restoration, not fat reduction.</p>
+                  <p className="text-sm text-zinc-700" dangerouslySetInnerHTML={{ __html: t('fatTransfer.noteText') }} />
                 </div>
               </div>
 
               {/* Why Fat Transfer Is Preferred */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Fat Transfer Is Increasingly Preferred</h3>
+                <h3 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('fatTransfer.whyTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Many patients prefer fat transfer over artificial fillers or implants for one simple reason: it feels and looks natural. Transferred fat behaves like normal tissue once it establishes blood supply, integrating into the body rather than sitting as a foreign material.
+                  {t('fatTransfer.whyDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Another reason is efficiency. One procedure can both remove unwanted fat and enhance another area. This dual benefit is especially appealing to patients seeking balanced, proportionate results rather than dramatic changes.
+                  {t('fatTransfer.whyDesc2')}
                 </p>
                 <div className="space-y-3">
                   {benefits.map((item, i) => (
@@ -376,8 +363,8 @@ export default function FatTransferMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="areas-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('areas-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Areas Commonly Treated With Fat Transfer</h2>
-              <p className="text-zinc-500 text-sm">Fat transfer can be used in several parts of the body, depending on individual anatomy and goals.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('fatTransfer.areasTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('fatTransfer.areasDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -398,19 +385,19 @@ export default function FatTransferMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="process-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('process-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Fat Transfer Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm">Fat transfer is a carefully staged procedure that focuses on cell survival and precision.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('fatTransfer.howTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('fatTransfer.howDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { num: "1", title: "Fat Harvesting", desc: "Fat is removed using gentle liposuction from areas such as the abdomen, flanks, thighs, or hips. Low-pressure techniques are used to preserve fat cell viability." },
-                { num: "2", title: "Fat Processing", desc: "The harvested fat is purified to remove excess fluid, oil, and damaged cells. Only healthy fat cells are selected for transfer." },
-                { num: "3", title: "Fat Injection", desc: "The purified fat is injected in small amounts using specialised cannulas. This layered placement improves blood supply and increases long-term fat survival." }
+                { num: t('fatTransfer.step1Num'), title: t('fatTransfer.step1Title'), desc: t('fatTransfer.step1Desc') },
+                { num: t('fatTransfer.step2Num'), title: t('fatTransfer.step2Title'), desc: t('fatTransfer.step2Desc') },
+                { num: t('fatTransfer.step3Num'), title: t('fatTransfer.step3Title'), desc: t('fatTransfer.step3Desc') }
               ].map((step, i) => (
                 <div key={i} data-animate={`step-${i}`} className={`relative bg-zinc-50 pt-14 pb-8 px-8 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`step-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-7 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
-                    Step {step.num}
+                    {t('fatTransfer.stepLabel')} {step.num}
                   </div>
                   <h3 className="text-lg font-bold text-zinc-900 mb-4 group-hover:text-[#FE7623] transition-colors duration-300">{step.title}</h3>
                   <p className="text-sm text-zinc-500">{step.desc}</p>
@@ -419,7 +406,7 @@ export default function FatTransferMalaysia() {
             </div>
 
             <p className="text-sm text-zinc-500 mt-8 text-center max-w-2xl mx-auto">
-              According to the American Society of Plastic Surgeons, careful harvesting, processing, and placement are the most important factors influencing fat graft survival and safety.
+              {t('fatTransfer.howFootnote')}
             </p>
           </div>
         </section>
@@ -430,27 +417,27 @@ export default function FatTransferMalaysia() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="survival-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('survival-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">How Much Fat Actually Survives?</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Not all transferred fat survives. This is a normal and expected biological process.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">{t('fatTransfer.survivalTitle')}</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">{t('fatTransfer.survivalDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="p-6 rounded-2xl bg-zinc-800/50 border border-zinc-700/50 hover:bg-zinc-800 hover:border-[#FE7623]/50 transition-all duration-300 group">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-[#FE7623] font-bold text-3xl">60–80%</span>
+                  <span className="text-[#FE7623] font-bold text-3xl">{t('fatTransfer.survivalStat')}</span>
                 </div>
-                <p className="text-zinc-300 text-sm">Of transferred fat survives long term</p>
+                <p className="text-zinc-300 text-sm">{t('fatTransfer.survivalStatDesc')}</p>
               </div>
               <div className="p-6 rounded-2xl bg-zinc-800/50 border border-zinc-700/50 hover:bg-zinc-800 hover:border-[#FE7623]/50 transition-all duration-300 group">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-zinc-400 font-bold text-xl">Natural Process</span>
+                  <span className="text-zinc-400 font-bold text-xl">{t('fatTransfer.survivalNatural')}</span>
                 </div>
-                <p className="text-zinc-300 text-sm">The remaining fat is naturally absorbed by the body over a few months</p>
+                <p className="text-zinc-300 text-sm">{t('fatTransfer.survivalNaturalDesc')}</p>
               </div>
             </div>
 
             <p className="text-sm text-zinc-400 mt-8 text-center max-w-2xl mx-auto">
-              Because of this, surgeons often slightly overfill the area to compensate for expected resorption. Final results are assessed after swelling resolves and fat stabilises, usually by 3–6 months.
+              {t('fatTransfer.survivalFootnote')}
             </p>
           </div>
         </section>
@@ -459,26 +446,26 @@ export default function FatTransferMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Fat Transfer vs Fillers vs Implants</h2>
-              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">Fat transfer sits between fillers and implants, offering a natural middle ground.</p>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('fatTransfer.compareTitle')}</h2>
+              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">{t('fatTransfer.compareDesc')}</p>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-4 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-2">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623]">Fat Transfer</div>
-                  <div>Dermal Fillers</div>
-                  <div>Implants</div>
+                  <div>{t('fatTransfer.colFeature')}</div>
+                  <div className="text-[#FE7623]">{t('fatTransfer.colFatTransfer')}</div>
+                  <div>{t('fatTransfer.colFillers')}</div>
+                  <div>{t('fatTransfer.colImplants')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Material", transfer: "Your own fat", fillers: "Synthetic", implants: "Medical-grade implant" },
-                  { feat: "Longevity", transfer: "Long-term", fillers: "Temporary", implants: "Long-term" },
-                  { feat: "Look & Feel", transfer: "Very natural", fillers: "Natural but limited", implants: "More structured" },
-                  { feat: "Volume Increase", transfer: "Mild to moderate", fillers: "Small", implants: "Moderate to large" },
-                  { feat: "Foreign Material", transfer: "No", fillers: "Yes", implants: "Yes" },
-                  { feat: "Additional Benefit", transfer: "Body contouring", fillers: "None", implants: "None" }
+                  { feat: t('fatTransfer.row1Feat'), transfer: t('fatTransfer.row1Transfer'), fillers: t('fatTransfer.row1Fillers'), implants: t('fatTransfer.row1Implants') },
+                  { feat: t('fatTransfer.row2Feat'), transfer: t('fatTransfer.row2Transfer'), fillers: t('fatTransfer.row2Fillers'), implants: t('fatTransfer.row2Implants') },
+                  { feat: t('fatTransfer.row3Feat'), transfer: t('fatTransfer.row3Transfer'), fillers: t('fatTransfer.row3Fillers'), implants: t('fatTransfer.row3Implants') },
+                  { feat: t('fatTransfer.row4Feat'), transfer: t('fatTransfer.row4Transfer'), fillers: t('fatTransfer.row4Fillers'), implants: t('fatTransfer.row4Implants') },
+                  { feat: t('fatTransfer.row5Feat'), transfer: t('fatTransfer.row5Transfer'), fillers: t('fatTransfer.row5Fillers'), implants: t('fatTransfer.row5Implants') },
+                  { feat: t('fatTransfer.row6Feat'), transfer: t('fatTransfer.row6Transfer'), fillers: t('fatTransfer.row6Fillers'), implants: t('fatTransfer.row6Implants') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-4 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -496,17 +483,17 @@ export default function FatTransferMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline After Fat Transfer</h2>
-              <p className="text-zinc-500 text-sm">Recovery depends on both the donor and recipient areas.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('fatTransfer.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('fatTransfer.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 pt-4">
               {[
-                { time: "3–5 Days", title: "Initial Phase", desc: "Swelling, mild bruising, soreness" },
-                { time: "1–2 Weeks", title: "Early Recovery", desc: "Most patients return to desk work" },
-                { time: "3–4 Weeks", title: "Healing", desc: "Swelling reduces significantly" },
-                { time: "3 Months", title: "Stabilisation", desc: "Fat stabilisation begins" },
-                { time: "6 Months", title: "Final Results", desc: "Final results visible" }
+                { time: t('fatTransfer.resTime1'), title: t('fatTransfer.resTitle1'), desc: t('fatTransfer.resDesc1') },
+                { time: t('fatTransfer.resTime2'), title: t('fatTransfer.resTitle2'), desc: t('fatTransfer.resDesc2') },
+                { time: t('fatTransfer.resTime3'), title: t('fatTransfer.resTitle3'), desc: t('fatTransfer.resDesc3') },
+                { time: t('fatTransfer.resTime4'), title: t('fatTransfer.resTitle4'), desc: t('fatTransfer.resDesc4') },
+                { time: t('fatTransfer.resTime5'), title: t('fatTransfer.resTitle5'), desc: t('fatTransfer.resDesc5') }
               ].map((step, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative bg-zinc-50 pt-14 pb-6 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-4 px-4 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
@@ -536,13 +523,13 @@ export default function FatTransferMalaysia() {
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate for Fat Transfer?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('fatTransfer.candidateTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                You may be a suitable candidate if you meet the following criteria.
+                {t('fatTransfer.candidateDesc')}
               </p>
 
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Ideal Candidates</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('fatTransfer.candidateChecklistTitle')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -554,7 +541,7 @@ export default function FatTransferMalaysia() {
               </div>
 
               <div className="p-6 bg-red-50 rounded-xl border border-red-100">
-                <h4 className="text-sm font-bold text-red-700 mb-4">Fat Transfer May Not Be Ideal For</h4>
+                <h4 className="text-sm font-bold text-red-700 mb-4">{t('fatTransfer.notIdealTitle')}</h4>
                 <div className="space-y-2">
                   {notIdeal.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-red-600">
@@ -572,8 +559,8 @@ export default function FatTransferMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <div data-animate="limits-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('limits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Limitations and Honest Trade-Offs</h2>
-              <p className="text-zinc-500 text-sm">Fat transfer is powerful, but it has limitations. Understanding these realities leads to better satisfaction and realistic expectations.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('fatTransfer.limitsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('fatTransfer.limitsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -600,11 +587,11 @@ export default function FatTransferMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('fatTransfer.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Fat transfer cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('fatTransfer.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Treatment area(s)", "Volume of fat transferred", "Donor site locations", "Complexity of procedure", "Hospital stay duration"].map((item, i) => (
+                  {[t('fatTransfer.priceFactor1'), t('fatTransfer.priceFactor2'), t('fatTransfer.priceFactor3'), t('fatTransfer.priceFactor4'), t('fatTransfer.priceFactor5')].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -612,7 +599,7 @@ export default function FatTransferMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Transfer" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('fatTransfer.getQuote')}
                 </a>
               </div>
             </div>
@@ -624,8 +611,8 @@ export default function FatTransferMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about fat transfer</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('fatTransfer.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('fatTransfer.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -671,15 +658,15 @@ export default function FatTransferMalaysia() {
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety and Regulation in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">In Malaysia, fat transfer procedures fall under regulated surgical services.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">{t('fatTransfer.safetyTitle')}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{t('fatTransfer.safetyDesc')}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Practitioner Registration", desc: "All procedures must be performed by registered medical practitioners with appropriate credentials.", color: "from-blue-500 to-blue-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Facility Licensing", desc: "Surgical facilities must be licensed by the Ministry of Health Malaysia with proper safety protocols.", color: "from-green-500 to-green-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Postoperative Care", desc: "Proper postoperative care standards following internationally accepted surgical safety and recovery principles.", color: "from-purple-500 to-purple-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
+                { name: t('fatTransfer.safety1Name'), desc: t('fatTransfer.safety1Desc'), color: "from-blue-500 to-blue-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: t('fatTransfer.safety2Name'), desc: t('fatTransfer.safety2Desc'), color: "from-green-500 to-green-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+                { name: t('fatTransfer.safety3Name'), desc: t('fatTransfer.safety3Desc'), color: "from-purple-500 to-purple-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-2">
@@ -708,27 +695,27 @@ export default function FatTransferMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Thoughts</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('fatTransfer.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Fat transfer in Malaysia offers a refined, natural approach to volume restoration and body contouring using your own tissue.
+              {t('fatTransfer.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed with proper technique, realistic planning, and strict medical standards, it delivers results that age with your body rather than fighting against it. The procedure rewards patience, thoughtful surgical planning, and respect for anatomy — qualities that separate good outcomes from exceptional ones.
+              {t('fatTransfer.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Transfer" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('fatTransfer.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('fatTransfer.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["fat transfer Malaysia", "fat grafting", "autologous fat transfer", "natural volume restoration", "body contouring"].map((tag, i) => (
+              {[t('fatTransfer.seoTag1'), t('fatTransfer.seoTag2'), t('fatTransfer.seoTag3'), t('fatTransfer.seoTag4'), t('fatTransfer.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

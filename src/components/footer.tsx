@@ -2,9 +2,11 @@ import React from "react";
 import { useRouter } from 'next/router';
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
 import BaseImage from "@/components/BaseImage";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <footer className="bg-[#111827] text-white pt-16 pb-12">
@@ -23,7 +25,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Professional Plastic Surgery &amp; Aesthetic Medicine tailored to your needs.
+              {t('footer.description')}
             </p>
             <div className="flex gap-4">
               <a
@@ -55,18 +57,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
+            <span className="font-bold text-lg mb-6 block">{t('footer.quickLinks')}</span>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/about-dr-soma')}>About Dr. Soma</li>
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/treatments')}>Our Services</li>
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/success-stories')}>Success Stories</li>
-              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/blog')}>Patient Resources</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/about-dr-soma')}>{t('footer.aboutDrSoma')}</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/treatments')}>{t('footer.ourServices')}</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/success-stories')}>{t('footer.successStories')}</li>
+              <li className="hover:text-[#EA622F] cursor-pointer" onClick={() => router.push('/blog')}>{t('footer.patientResources')}</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Contact</h4>
+            <span className="font-bold text-lg mb-6 block">{t('footer.contact')}</span>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="text-[#EA622F] w-[18px] h-[18px] shrink-0 mt-0.5" />
@@ -90,19 +92,19 @@ const Footer = () => {
 
           {/* Clinic Hours */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Clinic Hours</h4>
+            <span className="font-bold text-lg mb-6 block">{t('footer.clinicHours')}</span>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex justify-between">
-                <span>Mon - Fri</span>
+                <span>{t('footer.monFri')}</span>
                 <span>9:00 AM - 5:00 PM</span>
               </li>
               <li className="flex justify-between">
-                <span>Saturday</span>
+                <span>{t('footer.saturday')}</span>
                 <span>9:00 AM - 1:00 PM</span>
               </li>
               <li className="flex justify-between text-[#EA622F]">
-                <span>Sunday</span>
-                <span>Closed</span>
+                <span>{t('footer.sunday')}</span>
+                <span>{t('footer.closed')}</span>
               </li>
             </ul>
           </div>

@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import BaseImage from "@/components/BaseImage";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   const [sideNavOpened, setSideNavOpened] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -55,43 +58,43 @@ const Header = () => {
   // Mega menu data for Plastic Surgery
   const megaMenuData = {
     body: {
-      title: "Body",
+      title: t('categories.body'),
       link: "/body",
       services: [
-        { name: "Liposuction", link: "/body/liposuction-malaysia" },
-        { name: "Tummy tuck", link: "/body/tummy-tuck-malaysia" },
-        { name: "Body lift", link: "/body/body-lift-malaysia" },
-        { name: "Arm lift", link: "/body/arm-lift-malaysia" },
+        { name: t('services.liposuction'), link: "/body/liposuction-malaysia" },
+        { name: t('services.tummyTuck'), link: "/body/tummy-tuck-malaysia" },
+        { name: t('services.bodyLift'), link: "/body/body-lift-malaysia" },
+        { name: t('services.armLift'), link: "/body/arm-lift-malaysia" },
       ]
     },
     face: {
-      title: "Face",
+      title: t('categories.face'),
       link: "/face",
       services: [
-        { name: "Face lift", link: "/face/face-lift-malaysia" },
-        { name: "Rhinoplasty", link: "/face/rhinoplasty-malaysia" },
-        { name: "Eyelid surgery", link: "/face/eyelid-surgery-malaysia" },
-        { name: "Brow lift", link: "/face/brow-lift-malaysia" },
+        { name: t('services.faceLift'), link: "/face/face-lift-malaysia" },
+        { name: t('services.rhinoplasty'), link: "/face/rhinoplasty-malaysia" },
+        { name: t('services.eyelidSurgery'), link: "/face/eyelid-surgery-malaysia" },
+        { name: t('services.browLift'), link: "/face/brow-lift-malaysia" },
       ]
     },
     breast: {
-      title: "Breast",
+      title: t('categories.breast'),
       link: "/breast",
       services: [
-        { name: "Breast augmentation", link: "/breast/breast-augmentation-malaysia" },
-        { name: "Breast lift", link: "/breast/breast-lift-malaysia" },
-        { name: "Breast reduction", link: "/breast/breast-reduction-malaysia" },
-        { name: "Breast implant removal", link: "/breast/breast-implant-removal-malaysia" },
+        { name: t('services.breastAugmentation'), link: "/breast/breast-augmentation-malaysia" },
+        { name: t('services.breastLift'), link: "/breast/breast-lift-malaysia" },
+        { name: t('services.breastReduction'), link: "/breast/breast-reduction-malaysia" },
+        { name: t('services.breastImplantRemoval'), link: "/breast/breast-implant-removal-malaysia" },
       ]
     },
     male: {
-      title: "Male",
+      title: t('categories.male'),
       link: "/male",
       services: [
-        { name: "Gynecomastia surgery", link: "/male/gynecomastia-surgery-malaysia" },
-        { name: "Hair transplant", link: "/male/hair-transplant-malaysia" },
-        { name: "Jawline enhancement", link: "/male/jawline-enhancement-malaysia" },
-        { name: "Male rhinoplasty", link: "/male/male-rhinoplasty-malaysia" },
+        { name: t('services.gynecomastiaSurgery'), link: "/male/gynecomastia-surgery-malaysia" },
+        { name: t('services.hairTransplant'), link: "/male/hair-transplant-malaysia" },
+        { name: t('services.jawlineEnhancement'), link: "/male/jawline-enhancement-malaysia" },
+        { name: t('services.maleRhinoplasty'), link: "/male/male-rhinoplasty-malaysia" },
       ]
     }
   };
@@ -99,30 +102,30 @@ const Header = () => {
   // Aesthetics menu data
   const aestheticsMenuData = {
     injectable: {
-      title: "Injectable treatments",
+      title: t('aestheticCategories.injectable'),
       link: "/aesthetic-treatments",
       services: [
-        { name: "Botox", link: "/aesthetic-treatments/botox-malaysia" },
-        { name: "Dermal fillers", link: "/aesthetic-treatments/dermal-fillers-malaysia" },
-        { name: "Lip filler", link: "/aesthetic-treatments/lip-filler-malaysia" },
-        { name: "Profhilo", link: "/aesthetic-treatments/profhilo-malaysia" },
+        { name: t('aestheticServices.botox'), link: "/aesthetic-treatments/botox-malaysia" },
+        { name: t('aestheticServices.dermalFillers'), link: "/aesthetic-treatments/dermal-fillers-malaysia" },
+        { name: t('aestheticServices.lipFiller'), link: "/aesthetic-treatments/lip-filler-malaysia" },
+        { name: t('aestheticServices.profhilo'), link: "/aesthetic-treatments/profhilo-malaysia" },
       ]
     },
     thread: {
-      title: "Thread treatments",
+      title: t('aestheticCategories.thread'),
       link: "/aesthetic-treatments",
       services: [
-        { name: "Thread lift", link: "/aesthetic-treatments/thread-lift-malaysia" },
-        { name: "Nose thread lift", link: "/aesthetic-treatments/nose-thread-lift-malaysia" },
+        { name: t('aestheticServices.threadLift'), link: "/aesthetic-treatments/thread-lift-malaysia" },
+        { name: t('aestheticServices.noseThreadLift'), link: "/aesthetic-treatments/nose-thread-lift-malaysia" },
       ]
     },
     skin: {
-      title: "Skin treatments",
+      title: t('aestheticCategories.skin'),
       link: "/aesthetic-treatments",
       services: [
-        { name: "Scar treatment", link: "/aesthetic-treatments/scar-treatment-malaysia" },
-        { name: "Laser scar removal", link: "/aesthetic-treatments/laser-scar-removal-malaysia" },
-        { name: "Keloid treatment", link: "/aesthetic-treatments/keloid-treatment-malaysia" },
+        { name: t('aestheticServices.scarTreatment'), link: "/aesthetic-treatments/scar-treatment-malaysia" },
+        { name: t('aestheticServices.laserScarRemoval'), link: "/aesthetic-treatments/laser-scar-removal-malaysia" },
+        { name: t('aestheticServices.keloidTreatment'), link: "/aesthetic-treatments/keloid-treatment-malaysia" },
       ]
     }
   };
@@ -143,7 +146,7 @@ const Header = () => {
             </Link>
             <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
               <div className="flex flex-nowrap items-center gap-[40px]">
-                <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>Dr Soma</span></Link>
+                <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
 
                 {/* Plastic Surgery with Mega Menu */}
                 <div
@@ -151,12 +154,12 @@ const Header = () => {
                   onMouseEnter={() => setMegaMenuOpen(true)}
                   onMouseLeave={() => setMegaMenuOpen(false)}
                 >
-                  <span className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
-                    Plastic surgery
+                  <Link href="/treatments" className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
+                    {t('nav.plasticSurgery')}
                     <svg className={`w-3 h-3 transition-transform duration-300 ${megaMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </span>
+                  </Link>
 
                   {/* Mega Menu Dropdown */}
                   <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-8 transition-all duration-300 ${megaMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
@@ -183,7 +186,7 @@ const Header = () => {
                               href={category.link}
                               className="mt-3 pt-2 border-t border-gray-100 text-primary text-[13px] font-semibold hover:text-primary/80 transition-colors duration-200 flex items-center gap-1"
                             >
-                              View All Services
+                              {t('nav.viewAllServices')}
                               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
@@ -202,7 +205,7 @@ const Header = () => {
                   onMouseLeave={() => setAestheticsMenuOpen(false)}
                 >
                   <span className={`flex items-center gap-1 cursor-pointer ${linkClasses("/aesthetic-treatments")}`}>
-                    Aesthetics
+                    {t('nav.aesthetics')}
                     <svg className={`w-3 h-3 transition-transform duration-300 ${aestheticsMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -233,7 +236,7 @@ const Header = () => {
                               href={category.link}
                               className="mt-3 pt-2 border-t border-gray-100 text-primary text-[13px] font-semibold hover:text-primary/80 transition-colors duration-200 flex items-center gap-1"
                             >
-                              View All Services
+                              {t('nav.viewAllServices')}
                               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </svg>
@@ -245,21 +248,25 @@ const Header = () => {
                   </div>
                 </div>
 
-                <Link href="/contact"><span className={linkClasses("/contact")}>Contact</span></Link>
+                <Link href="/contact"><span className={linkClasses("/contact")}>{t('nav.contact')}</span></Link>
               </div>
             </nav>
-            <div className="hidden lg:flex items-center flex-shrink-0">
+            <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+              <LanguageSwitcher />
               <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-[14px] font-bold uppercase tracking-wider rounded-sm overflow-hidden transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">
-                <span className="relative z-10">Book Consultation</span>
+                <span className="relative z-10">{t('nav.bookConsultation')}</span>
                 <svg className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-[#ff7a4d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
-            <button className="flex lg:hidden items-center justify-center w-12 h-12 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-                <path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/>
-              </svg>
-            </button>
+            <div className="flex lg:hidden items-center gap-2">
+              <LanguageSwitcher />
+              <button className="flex items-center justify-center w-12 h-12 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                  <path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -280,26 +287,25 @@ const Header = () => {
         </div>
         <nav className="flex flex-col flex-1 p-6 pt-6 overflow-y-auto">
           <div className="flex flex-col gap-4">
-            <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>Dr Soma</span></Link>
+            <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
 
             {/* Mobile Plastic Surgery Submenu */}
             <div>
-              <button
-                className={`flex items-center justify-between w-full ${mobileLinkClasses("/treatments")}`}
-                onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)}
-              >
-                <span>Plastic surgery</span>
-                <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+              <div className={`flex items-center justify-between w-full ${mobileLinkClasses("/treatments")}`}>
+                <Link href="/treatments" onClick={handleSideNav}>{t('nav.plasticSurgery')}</Link>
+                <button onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)} aria-label="Toggle plastic surgery submenu">
+                  <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
               {/* Mobile Submenu Content */}
               <div className={`overflow-hidden transition-all duration-300 ${mobileSubmenuOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pt-4 pl-4 flex flex-col gap-4">
                   {Object.values(megaMenuData).map((category) => (
                     <div key={category.title} className="flex flex-col gap-2">
-                      <h4 className="text-primary font-medium text-[14px] normal-case">{category.title}</h4>
+                      <span className="text-primary font-medium text-[14px] normal-case block">{category.title}</span>
                       <ul className="flex flex-col gap-1 pl-2">
                         {category.services.map((service) => (
                           <li key={service.name}>
@@ -318,7 +324,7 @@ const Header = () => {
                             onClick={handleSideNav}
                             className="text-primary text-[13px] font-medium hover:text-primary/80 transition-colors duration-200 flex items-center gap-1 py-1"
                           >
-                            View All
+                            {t('nav.viewAll')}
                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
@@ -337,7 +343,7 @@ const Header = () => {
                 className={`flex items-center justify-between w-full ${mobileLinkClasses("/aesthetic-treatments")}`}
                 onClick={() => setMobileAestheticsOpen(!mobileAestheticsOpen)}
               >
-                <span>Aesthetics</span>
+                <span>{t('nav.aesthetics')}</span>
                 <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileAestheticsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -348,7 +354,7 @@ const Header = () => {
                 <div className="pt-4 pl-4 flex flex-col gap-4">
                   {Object.values(aestheticsMenuData).map((category) => (
                     <div key={category.title} className="flex flex-col gap-2">
-                      <h4 className="text-primary font-medium text-[14px] normal-case">{category.title}</h4>
+                      <span className="text-primary font-medium text-[14px] normal-case block">{category.title}</span>
                       <ul className="flex flex-col gap-1 pl-2">
                         {category.services.map((service) => (
                           <li key={service.name}>
@@ -367,7 +373,7 @@ const Header = () => {
                             onClick={handleSideNav}
                             className="text-primary text-[13px] font-medium hover:text-primary/80 transition-colors duration-200 flex items-center gap-1 py-1"
                           >
-                            View All
+                            {t('nav.viewAll')}
                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
@@ -380,12 +386,12 @@ const Header = () => {
               </div>
             </div>
 
-            <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>Contact</span></Link>
+            <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>{t('nav.contact')}</span></Link>
           </div>
         </nav>
         <div className="p-4 border-t border-gray-100">
           <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="flex flex-nowrap items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white text-[12px] font-bold uppercase tracking-wider rounded-sm transition-all duration-300 hover:bg-primary/90" onClick={handleSideNav}>
-            <span>Book Consultation</span>
+            <span>{t('nav.bookConsultation')}</span>
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
         </div>

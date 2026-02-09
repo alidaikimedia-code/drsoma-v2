@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function ThighLiftMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,67 +38,67 @@ export default function ThighLiftMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a thigh lift?", answer: "A thigh lift is a surgical procedure that removes excess skin and fat from the thighs to improve firmness and contour." },
-    { question: "Is a thigh lift the same as thigh liposuction?", answer: "No. Liposuction removes fat only, while a thigh lift removes loose skin and reshapes the thighs." },
-    { question: "Is thigh lift surgery safe?", answer: "When performed by a certified plastic surgeon in a regulated facility, it is considered a safe and established procedure." },
-    { question: "How long does recovery take after a thigh lift?", answer: "Most patients resume daily activities within 2–4 weeks, with full recovery over several months." },
-    { question: "Will there be visible scars?", answer: "Yes, but scars are placed strategically and fade over time with proper care." },
-    { question: "Are thigh lift results permanent?", answer: "Results are long-lasting if body weight remains stable." },
-    { question: "Can a thigh lift be combined with other procedures?", answer: "Yes. It is often combined with tummy tuck or body lift surgery after weight loss." },
-    { question: "Does exercise help after a thigh lift?", answer: "Exercise improves muscle tone but cannot replace surgical skin removal." },
-    { question: "Who should consider a thigh lift?", answer: "Patients with loose thigh skin after weight loss or ageing and stable weight." },
-    { question: "Is age a limiting factor?", answer: "Overall health and skin condition are more important than age alone." }
+    { question: t('thighLift.faq1Q'), answer: t('thighLift.faq1A') },
+    { question: t('thighLift.faq2Q'), answer: t('thighLift.faq2A') },
+    { question: t('thighLift.faq3Q'), answer: t('thighLift.faq3A') },
+    { question: t('thighLift.faq4Q'), answer: t('thighLift.faq4A') },
+    { question: t('thighLift.faq5Q'), answer: t('thighLift.faq5A') },
+    { question: t('thighLift.faq6Q'), answer: t('thighLift.faq6A') },
+    { question: t('thighLift.faq7Q'), answer: t('thighLift.faq7A') },
+    { question: t('thighLift.faq8Q'), answer: t('thighLift.faq8A') },
+    { question: t('thighLift.faq9Q'), answer: t('thighLift.faq9A') },
+    { question: t('thighLift.faq10Q'), answer: t('thighLift.faq10A') }
   ]
 
   const causesOfLaxity = [
-    { icon: "scale", name: "Weight Loss" },
-    { icon: "clock", name: "Ageing" },
-    { icon: "dna", name: "Genetics" },
-    { icon: "hormone", name: "Hormonal Changes" },
-    { icon: "gravity", name: "Gravity" },
-    { icon: "friction", name: "Friction" }
+    { icon: "scale", name: t('thighLift.cause1') },
+    { icon: "clock", name: t('thighLift.cause2') },
+    { icon: "dna", name: t('thighLift.cause3') },
+    { icon: "hormone", name: t('thighLift.cause4') },
+    { icon: "gravity", name: t('thighLift.cause5') },
+    { icon: "friction", name: t('thighLift.cause6') }
   ]
 
   const thighLiftTypes = [
     {
-      title: "Inner Thigh Lift (Medial)",
-      desc: "Targets sagging skin along the inner thighs. Incision placed in the groin crease or extending downward.",
-      features: ["Most common technique", "Groin crease incision", "Inner thigh focus"],
+      title: t('thighLift.type1Title'),
+      desc: t('thighLift.type1Desc'),
+      features: [t('thighLift.type1Feat1'), t('thighLift.type1Feat2'), t('thighLift.type1Feat3')],
       highlight: true
     },
     {
-      title: "Outer Thigh Lift",
-      desc: "Addresses laxity of the outer thighs and hips. Incision typically concealed within the waistline.",
-      features: ["Hip contouring", "Waistline incision", "Often combined with other procedures"],
+      title: t('thighLift.type2Title'),
+      desc: t('thighLift.type2Desc'),
+      features: [t('thighLift.type2Feat1'), t('thighLift.type2Feat2'), t('thighLift.type2Feat3')],
       highlight: false
     },
     {
-      title: "Mini Thigh Lift",
-      desc: "Suitable for mild upper inner-thigh laxity. Smaller incision with limited skin removal.",
-      features: ["Minimal scarring", "Shorter recovery", "Mild laxity only"],
+      title: t('thighLift.type3Title'),
+      desc: t('thighLift.type3Desc'),
+      features: [t('thighLift.type3Feat1'), t('thighLift.type3Feat2'), t('thighLift.type3Feat3')],
       highlight: false
     },
     {
-      title: "Extended Thigh Lift",
-      desc: "Corrects extensive laxity extending toward the knee. Often chosen after massive weight loss.",
-      features: ["Comprehensive reshaping", "Post-weight loss", "Knee to groin coverage"],
+      title: t('thighLift.type4Title'),
+      desc: t('thighLift.type4Desc'),
+      features: [t('thighLift.type4Feat1'), t('thighLift.type4Feat2'), t('thighLift.type4Feat3')],
       highlight: false
     }
   ]
 
   const candidateChecklist = [
-    "Loose or sagging thigh skin",
-    "Stable body weight",
-    "Good overall health",
-    "Non-smoker",
-    "Realistic expectations"
+    t('thighLift.candidate1'),
+    t('thighLift.candidate2'),
+    t('thighLift.candidate3'),
+    t('thighLift.candidate4'),
+    t('thighLift.candidate5')
   ]
 
   const notRecommendedFor = [
-    "Unstable weight",
-    "Minimal skin laxity",
-    "Significant medical risk factors",
-    "Future major weight loss planned"
+    t('thighLift.notRec1'),
+    t('thighLift.notRec2'),
+    t('thighLift.notRec3'),
+    t('thighLift.notRec4')
   ]
 
   return (
@@ -342,24 +344,24 @@ export default function ThighLiftMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('thighLift.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Thigh Lift in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Firmer. Smoother. Proportionate.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('thighLift.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('thighLift.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A thigh lift, medically known as thighplasty, is a surgical procedure designed to remove excess skin and fat from the thighs to restore a firmer, smoother, and more proportionate contour. It is most commonly considered after significant weight loss, ageing, or genetic skin laxity—situations where the thigh skin loses elasticity and fails to retract, even with regular exercise.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>This procedure is intended for individuals who are close to a stable, healthy weight but are left with sagging inner or outer thigh skin that causes friction, discomfort in clothing, or dissatisfaction with body proportions. When performed correctly, a thigh lift improves both appearance and daily comfort, particularly during walking and physical activity.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, thigh lift surgery is classified as a regulated surgical procedure. It must be performed by a registered medical practitioner in a licensed healthcare facility under standards governed by the Ministry of Health Malaysia (MOH), which oversees private healthcare services, surgical safety, and professional accountability.</p>
+                <p style={{fontSize: '14px'}}>{t('thighLift.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('thighLift.heroDesc2')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('thighLift.heroDesc3')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thigh%20Lift%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('thighLift.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#process" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  How It Works
+                  {t('thighLift.howItWorks')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -379,7 +381,7 @@ export default function ThighLiftMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('thighLift.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('thighLift.happyPatients')}</span>
               </div>
             </div>
 
@@ -399,8 +401,8 @@ export default function ThighLiftMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Regulated By</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Ministry of Health Malaysia</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('thighLift.regulatedBy')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('thighLift.mohMalaysia')}</p>
                     </div>
                   </div>
                 </div>
@@ -414,33 +416,31 @@ export default function ThighLiftMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Thigh Lift?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A thigh lift is a surgical procedure that removes excess skin and, when necessary, underlying fat from the thighs. The goal is to reshape the thighs by tightening loose tissue and improving overall contour and skin smoothness. It is <strong>not</strong> a weight-loss surgery but a contour-restoring procedure for patients whose skin can no longer tighten naturally.
-                </p>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('thighLift.whatTitle')}</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify" dangerouslySetInnerHTML={{ __html: t('thighLift.whatDesc') }} />
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Removal of sagging skin</span>
+                    <span>{t('thighLift.whatPoint1')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Limited fat removal for contour</span>
+                    <span>{t('thighLift.whatPoint2')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Tightening and redraping skin</span>
+                    <span>{t('thighLift.whatPoint3')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Strategic incision placement</span>
+                    <span>{t('thighLift.whatPoint4')}</span>
                   </div>
                 </div>
               </div>
 
               {/* Causes Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Thigh Skin Becomes Loose</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('thighLift.causesTitle')}</h3>
                 <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {causesOfLaxity.map((cause, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -452,7 +452,7 @@ export default function ThighLiftMalaysia() {
                   ))}
                 </div>
                 <p className="mt-6 text-sm text-zinc-500 leading-relaxed">
-                  The thighs are especially prone to sagging because the skin in this area is thin, mobile, and affected by constant movement. Once skin elasticity is lost, exercise can improve muscle tone but cannot eliminate excess skin.
+                  {t('thighLift.causesDesc')}
                 </p>
               </div>
             </div>
@@ -463,8 +463,8 @@ export default function ThighLiftMalaysia() {
         <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Thigh Lift Procedures</h2>
-              <p className="text-zinc-500 text-sm">The appropriate thigh lift technique is chosen after a detailed clinical assessment based on anatomy, skin quality, and aesthetic goals.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('thighLift.typesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('thighLift.typesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
@@ -489,17 +489,17 @@ export default function ThighLiftMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">How Thigh Lift Surgery Works</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('thighLift.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center relative">
                 <div className="hidden lg:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
                 {[
-                  { num: "1", title: "Markings", desc: "Preoperative planning" },
-                  { num: "2", title: "Removal", desc: "Excess skin & fat" },
-                  { num: "3", title: "Liposuction", desc: "When indicated" },
-                  { num: "4", title: "Tightening", desc: "Repositioning skin" },
-                  { num: "5", title: "Closure", desc: "Layered suturing" },
-                  { num: "6", title: "Compression", desc: "Garment applied" }
+                  { num: "1", title: t('thighLift.processStep1'), desc: t('thighLift.processStep1Desc') },
+                  { num: "2", title: t('thighLift.processStep2'), desc: t('thighLift.processStep2Desc') },
+                  { num: "3", title: t('thighLift.processStep3'), desc: t('thighLift.processStep3Desc') },
+                  { num: "4", title: t('thighLift.processStep4'), desc: t('thighLift.processStep4Desc') },
+                  { num: "5", title: t('thighLift.processStep5'), desc: t('thighLift.processStep5Desc') },
+                  { num: "6", title: t('thighLift.processStep6'), desc: t('thighLift.processStep6Desc') }
                 ].map((step, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500" style={{animationDelay: `${i * 150}ms`}}>
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{step.num}</div>
@@ -528,29 +528,29 @@ export default function ThighLiftMalaysia() {
               {/* Floating Badge */}
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="mb-2">
-                  <span className="text-sm font-bold text-zinc-900">Long-Lasting Results</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('thighLift.floatingBadge')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Results are permanent as long as weight remains stable and healthy habits are maintained.&rdquo;
+                  &ldquo;{t('thighLift.floatingBadgeDesc')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Thigh Lift Surgery</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('thighLift.benefitsTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                For suitable candidates, a thigh lift offers both aesthetic and functional benefits. Patients often report improved confidence and physical comfort in daily activities.
+                {t('thighLift.benefitsDesc')}
               </p>
 
               <div className="space-y-6">
                 {[
-                  { title: "Removes Loose Skin", desc: "Eliminates sagging thigh skin that doesn't respond to exercise." },
-                  { title: "Improves Thigh Shape", desc: "Creates smoother, firmer thigh contours." },
-                  { title: "Reduces Skin Friction", desc: "Eliminates chafing during walking and physical activity." },
-                  { title: "Enhances Clothing Fit", desc: "Improves comfort in fitted clothing and swimwear." },
-                  { title: "Restores Body Proportion", desc: "Balances body contours after weight loss." },
-                  { title: "Long-Lasting Results", desc: "Permanent improvement when weight remains stable." }
+                  { title: t('thighLift.benefit1Title'), desc: t('thighLift.benefit1Desc') },
+                  { title: t('thighLift.benefit2Title'), desc: t('thighLift.benefit2Desc') },
+                  { title: t('thighLift.benefit3Title'), desc: t('thighLift.benefit3Desc') },
+                  { title: t('thighLift.benefit4Title'), desc: t('thighLift.benefit4Desc') },
+                  { title: t('thighLift.benefit5Title'), desc: t('thighLift.benefit5Desc') },
+                  { title: t('thighLift.benefit6Title'), desc: t('thighLift.benefit6Desc') }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3 md:gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                     <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
@@ -570,14 +570,14 @@ export default function ThighLiftMalaysia() {
         {/* Candidates Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-900 text-white">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="cand-header" className={`text-3xl font-semibold tracking-tight text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('cand-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Who Is a Good Candidate?</h2>
+            <h2 data-animate="cand-header" className={`text-3xl font-semibold tracking-tight text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('cand-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('thighLift.candidateTitle')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Ideal Candidates */}
               <div data-animate="cand-ideal" className={`bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-[#FE7623]/50 transition-all duration-500 ${isVisible('cand-ideal') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                 <h3 className="text-xl font-bold text-[#FE7623] mb-6 flex items-center gap-3">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  Ideal Candidates
+                  {t('thighLift.idealTitle')}
                 </h3>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
@@ -593,7 +593,7 @@ export default function ThighLiftMalaysia() {
               <div data-animate="cand-not" className={`bg-zinc-800 p-8 rounded-2xl border border-zinc-700 hover:border-zinc-500 transition-all duration-500 ${isVisible('cand-not') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                 <h3 className="text-xl font-bold text-zinc-400 mb-6 flex items-center gap-3">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                  May Not Be Recommended If
+                  {t('thighLift.notRecommendedTitle')}
                 </h3>
                 <div className="grid grid-cols-1 gap-3">
                   {notRecommendedFor.map((item, i) => (
@@ -603,7 +603,7 @@ export default function ThighLiftMalaysia() {
                     </div>
                   ))}
                 </div>
-                <p className="mt-6 text-xs text-zinc-500">Final suitability is confirmed during an in-person consultation and physical examination.</p>
+                <p className="mt-6 text-xs text-zinc-500">{t('thighLift.notRecNote')}</p>
               </div>
             </div>
           </div>
@@ -613,23 +613,23 @@ export default function ThighLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Thigh Lift vs. Liposuction</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('thighLift.compareTitle')}</h2>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-3 md:gap-4">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>Thigh Lift</span></div>
-                  <div>Liposuction</div>
+                  <div>{t('thighLift.feature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>{t('thighLift.compThighLift')}</span></div>
+                  <div>{t('thighLift.compLipo')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Removes Skin", thighlift: "Yes", thighliftIcon: true, lipo: "No", lipoX: true },
-                  { feat: "Removes Fat", thighlift: "Yes", thighliftIcon: true, lipo: "Yes", lipoIcon: true },
-                  { feat: "Tightens Tissue", thighlift: "Yes", thighliftIcon: true, lipo: "No", lipoX: true },
-                  { feat: "Scarring", thighlift: "Longer but strategic", lipo: "Minimal" },
-                  { feat: "Best For", thighlift: "Loose skin ± fat", lipo: "Fat with good elasticity" }
+                  { feat: t('thighLift.row1Feat'), thighlift: t('thighLift.row1ThighLift'), thighliftIcon: true, lipo: t('thighLift.row1Lipo'), lipoX: true },
+                  { feat: t('thighLift.row2Feat'), thighlift: t('thighLift.row2ThighLift'), thighliftIcon: true, lipo: t('thighLift.row2Lipo'), lipoIcon: true },
+                  { feat: t('thighLift.row3Feat'), thighlift: t('thighLift.row3ThighLift'), thighliftIcon: true, lipo: t('thighLift.row3Lipo'), lipoX: true },
+                  { feat: t('thighLift.row4Feat'), thighlift: t('thighLift.row4ThighLift'), lipo: t('thighLift.row4Lipo') },
+                  { feat: t('thighLift.row5Feat'), thighlift: t('thighLift.row5ThighLift'), lipo: t('thighLift.row5Lipo') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-3 md:gap-4 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -647,9 +647,9 @@ export default function ThighLiftMalaysia() {
               </div>
 
               <div className="mt-8 text-center">
-                <p className="text-sm text-zinc-500 mb-4">In cases of poor skin elasticity, liposuction alone may worsen sagging.</p>
+                <p className="text-sm text-zinc-500 mb-4">{t('thighLift.compareNote')}</p>
                 <Link href="/body/liposuction-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Liposuction Details
+                  {t('thighLift.viewLipoDetails')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -661,34 +661,34 @@ export default function ThighLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline</h2>
-              <p className="text-zinc-500 text-sm">Thigh lift results develop progressively as swelling resolves and tissues heal.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('thighLift.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('thighLift.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1–2",
-                  title: "Early Recovery",
-                  points: ["Swelling, bruising, tightness while walking", "Compression garment worn continuously", "Limited mobility"],
+                  time: t('thighLift.resTime1'),
+                  title: t('thighLift.resTitle1'),
+                  points: [t('thighLift.resPoint1a'), t('thighLift.resPoint1b'), t('thighLift.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 3–4",
-                  title: "Improved Comfort",
-                  points: ["Improved comfort and mobility", "Gradual return to light activities"],
+                  time: t('thighLift.resTime2'),
+                  title: t('thighLift.resTitle2'),
+                  points: [t('thighLift.resPoint2a'), t('thighLift.resPoint2b')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 6–8",
-                  title: "Visible Results",
-                  points: ["Noticeable improvement in thigh contour", "Resume most activities"],
+                  time: t('thighLift.resTime3'),
+                  title: t('thighLift.resTitle3'),
+                  points: [t('thighLift.resPoint3a'), t('thighLift.resPoint3b')],
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 },
                 {
-                  time: "Month 3–6",
-                  title: "Final Results",
-                  points: ["Final results as swelling subsides", "Scars continue to mature and fade"],
+                  time: t('thighLift.resTime4'),
+                  title: t('thighLift.resTitle4'),
+                  points: [t('thighLift.resPoint4a'), t('thighLift.resPoint4b')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -729,11 +729,11 @@ export default function ThighLiftMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Week 1</span>
-                <span>Week 2</span>
-                <span>Week 4</span>
-                <span>Week 8</span>
-                <span>Month 3-6</span>
+                <span>{t('thighLift.progressWeek1')}</span>
+                <span>{t('thighLift.progressWeek2')}</span>
+                <span>{t('thighLift.progressWeek4')}</span>
+                <span>{t('thighLift.progressWeek8')}</span>
+                <span>{t('thighLift.progressMonth36')}</span>
               </div>
             </div>
           </div>
@@ -742,40 +742,40 @@ export default function ThighLiftMalaysia() {
         {/* Scarring Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="scar-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('scar-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Scarring and Scar Care</h2>
+            <h2 data-animate="scar-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('scar-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('thighLift.scarTitle')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div data-animate="scar-content" className={`transition-all duration-700 ${isVisible('scar-content') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                 <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Scarring is an unavoidable aspect of thigh lift surgery, but careful planning minimizes visibility. Realistic expectations regarding scars are an essential part of preoperative counselling.
+                  {t('thighLift.scarDesc')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-zinc-900">Natural Crease Placement</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Scars are placed in natural creases when possible.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('thighLift.scarItem1Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('thighLift.scarItem1Desc')}</p>
                     </div>
                   </div>
                   <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-zinc-900">Gradual Fading</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Scars fade gradually over 6–12 months.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('thighLift.scarItem2Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('thighLift.scarItem2Desc')}</p>
                     </div>
                   </div>
                   <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-zinc-900">Proper Wound Care</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Wound care and sun protection improve scar quality.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('thighLift.scarItem3Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('thighLift.scarItem3Desc')}</p>
                     </div>
                   </div>
                   <div className="flex flex-row items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-bold text-zinc-900">Individual Healing</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Final appearance depends on skin type and healing response.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('thighLift.scarItem4Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('thighLift.scarItem4Desc')}</p>
                     </div>
                   </div>
                 </div>
@@ -786,9 +786,9 @@ export default function ThighLiftMalaysia() {
                   <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#FE7623] to-orange-400 rounded-full flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3">Scars Fade Over Time</h3>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{t('thighLift.scarFadeTitle')}</h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">
-                    Initial scars may appear red or pink but typically fade significantly over 6–12 months, becoming flat and lighter in colour.
+                    {t('thighLift.scarFadeDesc')}
                   </p>
                 </div>
               </div>
@@ -799,16 +799,16 @@ export default function ThighLiftMalaysia() {
         {/* Post-Operative Aftercare */}
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="aftercare-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('aftercare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Post-Operative Recovery and Aftercare</h2>
+            <h2 data-animate="aftercare-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('aftercare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('thighLift.aftercareTitle')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: "Compression Garments", desc: "Worn for 4–6 weeks to support healing", icon: "M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" },
-                { title: "Pain Relief", desc: "Medication provided for comfort management", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
-                { title: "Wound Care", desc: "Detailed instructions for incision care", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
-                { title: "Activity Guidelines", desc: "Movement restrictions and walking encouraged", icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" },
-                { title: "Follow-Up Visits", desc: "Scheduled appointments to monitor progress", icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" },
-                { title: "Exercise Restriction", desc: "Strenuous activity avoided during healing", icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" }
+                { title: t('thighLift.aftercare1Title'), desc: t('thighLift.aftercare1Desc'), icon: "M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" },
+                { title: t('thighLift.aftercare2Title'), desc: t('thighLift.aftercare2Desc'), icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+                { title: t('thighLift.aftercare3Title'), desc: t('thighLift.aftercare3Desc'), icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
+                { title: t('thighLift.aftercare4Title'), desc: t('thighLift.aftercare4Desc'), icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" },
+                { title: t('thighLift.aftercare5Title'), desc: t('thighLift.aftercare5Desc'), icon: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" },
+                { title: t('thighLift.aftercare6Title'), desc: t('thighLift.aftercare6Desc'), icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" }
               ].map((item, i) => (
                 <div key={i} className="p-6 bg-zinc-50 rounded-2xl border border-zinc-200 hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
                   <div className="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center mb-4 group-hover:bg-[#FE7623] group-hover:border-[#FE7623] transition-all duration-300">
@@ -837,11 +837,11 @@ export default function ThighLiftMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('thighLift.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Thigh lift cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('thighLift.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of thigh lift", "Extent of skin removal", "Combined with liposuction", "Operating time", "Facility fees"].map((item, i) => (
+                  {[t('thighLift.priceFactor1'), t('thighLift.priceFactor2'), t('thighLift.priceFactor3'), t('thighLift.priceFactor4'), t('thighLift.priceFactor5')].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 flex-shrink-0 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -849,7 +849,7 @@ export default function ThighLiftMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thigh%20Lift%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('thighLift.getQuote')}
                 </a>
               </div>
             </div>
@@ -861,8 +861,8 @@ export default function ThighLiftMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about thigh lift surgery</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('thighLift.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('thighLift.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -907,13 +907,13 @@ export default function ThighLiftMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Safety & Regulation in Malaysia</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('thighLift.safetyTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Ministry of Health Malaysia", desc: "Thigh lift surgery is regulated under the Private Healthcare Services framework, ensuring surgical safety and professional accountability.", color: "from-blue-500 to-blue-600" },
-                { name: "Licensed Healthcare Facility", desc: "All procedures are performed in accredited, licensed medical facilities with full monitoring protocols.", color: "from-green-500 to-green-600" },
-                { name: "Board-Certified Surgeon", desc: "Dr. Soma is a registered medical practitioner and specialist plastic surgeon with experience in body contouring surgery.", color: "from-purple-500 to-purple-600" }
+                { name: t('thighLift.safety1Name'), desc: t('thighLift.safety1Desc'), color: "from-blue-500 to-blue-600" },
+                { name: t('thighLift.safety2Name'), desc: t('thighLift.safety2Desc'), color: "from-green-500 to-green-600" },
+                { name: t('thighLift.safety3Name'), desc: t('thighLift.safety3Desc'), color: "from-purple-500 to-purple-600" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
@@ -943,24 +943,24 @@ export default function ThighLiftMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Restore smoother, firmer thigh contours.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('thighLift.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              A thigh lift is about restoring comfort, proportion, and confidence. Dr. Soma delivers personalised solutions with surgical precision and structured postoperative care.
+              {t('thighLift.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Thigh%20Lift%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('thighLift.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('thighLift.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["thighplasty", "thigh lift surgery", "loose thigh skin", "inner thigh lift", "body contouring"].map((tag, i) => (
+              {[t('thighLift.seoTag1'), t('thighLift.seoTag2'), t('thighLift.seoTag3'), t('thighLift.seoTag4'), t('thighLift.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

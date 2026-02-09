@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "drSoma": "Dr Soma",
+    "plasticSurgery": "Bedah Plastik",
+    "aesthetics": "Estetika",
+    "contact": "Kontak",
+    "bookConsultation": "Pesan Konsultasi",
+    "viewAllServices": "Lihat Semua Layanan",
+    "viewAll": "Lihat Semua"
+  },
+  "categories": { "body": "Tubuh", "face": "Wajah", "breast": "Payudara", "male": "Pria" },
+  "services": {
+    "liposuction": "Liposuction", "tummyTuck": "Tummy Tuck", "bodyLift": "Body Lift", "armLift": "Arm Lift",
+    "faceLift": "Face Lift", "rhinoplasty": "Rhinoplasty", "eyelidSurgery": "Bedah Kelopak Mata", "browLift": "Brow Lift",
+    "breastAugmentation": "Pembesaran Payudara", "breastLift": "Pengangkatan Payudara", "breastReduction": "Pengurangan Payudara", "breastImplantRemoval": "Pengangkatan Implan Payudara",
+    "gynecomastiaSurgery": "Bedah Ginekomastia", "hairTransplant": "Transplantasi Rambut", "jawlineEnhancement": "Peningkatan Garis Rahang", "maleRhinoplasty": "Rhinoplasty Pria"
+  },
+  "aestheticCategories": { "injectable": "Perawatan Suntik", "thread": "Perawatan Benang", "skin": "Perawatan Kulit" },
+  "aestheticServices": {
+    "botox": "Botox", "dermalFillers": "Dermal Filler", "lipFiller": "Lip Filler", "profhilo": "Profhilo",
+    "threadLift": "Thread Lift", "noseThreadLift": "Nose Thread Lift", "scarTreatment": "Perawatan Bekas Luka", "laserScarRemoval": "Penghapusan Bekas Luka Laser", "keloidTreatment": "Perawatan Keloid"
+  },
+  "footer": {
+    "description": "Bedah Plastik & Kedokteran Estetika profesional disesuaikan dengan kebutuhan Anda.",
+    "quickLinks": "Tautan Cepat", "aboutDrSoma": "Tentang Dr. Soma", "ourServices": "Layanan Kami", "successStories": "Kisah Sukses", "patientResources": "Sumber Daya Pasien",
+    "contact": "Kontak", "clinicHours": "Jam Klinik", "monFri": "Sen - Jum", "saturday": "Sabtu", "sunday": "Minggu", "closed": "Tutup"
+  }
+}

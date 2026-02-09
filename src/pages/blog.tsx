@@ -187,7 +187,7 @@ const Blogs = () => {
                   {blogs.map((blog, index) => (
                     <Link
                       key={blog.id}
-                      href={`/blog/${blog.id}`}
+                      href={`/blog/${blog.slug}`}
                       className={`group bg-white rounded-2xl overflow-hidden transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-primary/20 ${
                         isVisible('section-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                       }`}
