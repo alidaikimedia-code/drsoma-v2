@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function ArmLiftMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,53 +38,53 @@ export default function ArmLiftMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is an arm lift (brachioplasty)?", answer: "An arm lift is a surgical procedure that removes excess loose skin and, if needed, fat from the upper arms. It creates a more toned, contoured appearance, particularly for patients who have lost significant weight or developed skin laxity due to ageing." },
-    { question: "Who is a good candidate for arm lift surgery?", answer: "Ideal candidates include adults with sagging upper-arm skin that causes discomfort or self-consciousness, those at a stable weight, non-smokers (or willing to stop), individuals without medical conditions that impair healing, and people with realistic expectations about outcomes and scars." },
-    { question: "What is the difference between an arm lift and liposuction?", answer: "Liposuction removes excess fat but does not address loose skin. An arm lift removes redundant skin and tightens the remaining tissue. In some cases, both procedures are combined for optimal contouring." },
-    { question: "How long does arm lift surgery take?", answer: "Typically, the surgery takes 2–3 hours, depending on the extent of skin removal and whether liposuction is performed simultaneously." },
-    { question: "What kind of anaesthesia is used?", answer: "General anaesthesia is usually recommended. The specifics will be discussed during your consultation with Dr. Soma." },
-    { question: "What is the expected recovery time?", answer: "Most patients can return to desk-based work within 1–2 weeks. Strenuous activities, heavy lifting, and upper-body exercise are generally restricted for 4–6 weeks. Final contour becomes more visible at 3–6 months." },
-    { question: "Will there be visible scars?", answer: "Yes. Scars are a necessary part of the procedure. They typically run along the inner arm from the armpit towards the elbow. With proper care, scars fade significantly over time and can often be concealed." },
-    { question: "Are arm lift results permanent?", answer: "Yes — the removed skin will not return. However, maintaining a stable weight and following a healthy lifestyle is essential to preserve results." },
-    { question: "Can an arm lift be combined with other procedures?", answer: "Yes. Arm lifts can be combined with breast surgery, liposuction, tummy tucks, or other body contouring procedures as part of a comprehensive body reshaping plan." },
-    { question: "Is arm lift surgery safe in Malaysia?", answer: "When performed by a registered, board-certified plastic surgeon in a licensed healthcare facility — like Dr. Soma — arm lift surgery adheres to national medical standards. Dr. Soma operates under full monitoring protocols with a focus on patient safety." }
+    { question: t('armLift.faq1Q'), answer: t('armLift.faq1A') },
+    { question: t('armLift.faq2Q'), answer: t('armLift.faq2A') },
+    { question: t('armLift.faq3Q'), answer: t('armLift.faq3A') },
+    { question: t('armLift.faq4Q'), answer: t('armLift.faq4A') },
+    { question: t('armLift.faq5Q'), answer: t('armLift.faq5A') },
+    { question: t('armLift.faq6Q'), answer: t('armLift.faq6A') },
+    { question: t('armLift.faq7Q'), answer: t('armLift.faq7A') },
+    { question: t('armLift.faq8Q'), answer: t('armLift.faq8A') },
+    { question: t('armLift.faq9Q'), answer: t('armLift.faq9A') },
+    { question: t('armLift.faq10Q'), answer: t('armLift.faq10A') }
   ]
 
   const causesOfSagging = [
-    { icon: "scale", name: "Weight Loss" },
-    { icon: "clock", name: "Ageing" },
-    { icon: "dna", name: "Genetics" },
-    { icon: "sun", name: "Sun Damage" },
-    { icon: "activity", name: "Inactivity" },
-    { icon: "trending-down", name: "Collagen Loss" }
+    { icon: "scale", name: t('armLift.cause1') },
+    { icon: "clock", name: t('armLift.cause2') },
+    { icon: "dna", name: t('armLift.cause3') },
+    { icon: "sun", name: t('armLift.cause4') },
+    { icon: "activity", name: t('armLift.cause5') },
+    { icon: "trending-down", name: t('armLift.cause6') }
   ]
 
   const armLiftTypes = [
     {
-      title: "Standard Arm Lift",
-      desc: "An incision runs from the armpit to the elbow along the inner arm. This allows for maximum excess skin removal and is ideal for significant skin laxity.",
-      features: ["Maximum skin removal", "Best for significant laxity", "Long-lasting results"],
+      title: t('armLift.type1Title'),
+      desc: t('armLift.type1Desc'),
+      features: [t('armLift.type1Feat1'), t('armLift.type1Feat2'), t('armLift.type1Feat3')],
       highlight: true
     },
     {
-      title: "Limited/Mini Arm Lift",
-      desc: "A shorter incision hidden in the armpit, suitable for patients with mild skin excess near the underarm only.",
-      features: ["Minimal scarring", "Shorter recovery", "Ideal for mild laxity"],
+      title: t('armLift.type2Title'),
+      desc: t('armLift.type2Desc'),
+      features: [t('armLift.type2Feat1'), t('armLift.type2Feat2'), t('armLift.type2Feat3')],
       highlight: false
     },
     {
-      title: "Extended Arm Lift",
-      desc: "For patients with excess skin that extends onto the side of the chest (lateral chest wall), often seen after massive weight loss.",
-      features: ["Addresses chest wall", "Post-weight loss", "Comprehensive contouring"],
+      title: t('armLift.type3Title'),
+      desc: t('armLift.type3Desc'),
+      features: [t('armLift.type3Feat1'), t('armLift.type3Feat2'), t('armLift.type3Feat3')],
       highlight: false
     }
   ]
 
   const candidateChecklist = [
-    "Stable weight",
-    "Significant skin laxity",
-    "Good general health",
-    "Non-smoker"
+    t('armLift.candidate1'),
+    t('armLift.candidate2'),
+    t('armLift.candidate3'),
+    t('armLift.candidate4')
   ]
 
   return (
@@ -338,20 +340,20 @@ export default function ArmLiftMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('armLift.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Arm Lift in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Firmer. Toned. Confident.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('armLift.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('armLift.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>An arm lift, medically known as brachioplasty, is a surgical procedure designed to remove excess skin and fat from the upper arms to create a firmer, more defined contour. It is most commonly sought by individuals who experience sagging or &quot;bat wing&quot; appearance of the arms after significant weight loss, ageing, or genetic skin laxity—changes that do not respond adequately to exercise alone.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>This procedure is intended for people who are close to their ideal weight but are left with loose, hanging skin along the inner or back portion of the upper arms. When performed correctly, an arm lift restores proportion to the arms, improves comfort in clothing, and enhances overall body balance.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, arm lift surgery is classified as a regulated surgical procedure. It must be performed by a registered medical practitioner in a licensed healthcare facility, under standards regulated by the Ministry of Health Malaysia – Private Healthcare Services, which oversees surgical safety, facility licensing, and professional conduct.</p>
+                <p style={{fontSize: '14px'}}>{t('armLift.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('armLift.heroDesc2')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('armLift.heroDesc3')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Lift%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('armLift.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
               </div>
@@ -371,7 +373,7 @@ export default function ArmLiftMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('armLift.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('armLift.happyPatients')}</span>
               </div>
             </div>
 
@@ -391,8 +393,8 @@ export default function ArmLiftMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Regulated By</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Ministry of Health Malaysia</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('armLift.regulatedBy')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('armLift.mohMalaysia')}</p>
                     </div>
                   </div>
                 </div>
@@ -406,29 +408,27 @@ export default function ArmLiftMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is an Arm Lift?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  An arm lift (brachioplasty) is a surgical body contouring procedure that removes excess skin and fat from the upper arms—typically from the underarm area (axilla) to the elbow—to improve shape and reduce sagging. It is <strong>not</strong> a weight-loss treatment, but a contouring solution for skin that has lost its elasticity.
-                </p>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('armLift.whatTitle')}</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify" dangerouslySetInnerHTML={{ __html: t('armLift.whatDesc') }} />
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Removes Excess Loose Skin</span>
+                    <span>{t('armLift.whatPoint1')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Improves Arm Contour & Tone</span>
+                    <span>{t('armLift.whatPoint2')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Long-Lasting Results</span>
+                    <span>{t('armLift.whatPoint3')}</span>
                   </div>
                 </div>
               </div>
 
               {/* Causes Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Upper Arms Become Loose</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('armLift.causesTitle')}</h3>
                 <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {causesOfSagging.map((cause, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -440,7 +440,7 @@ export default function ArmLiftMalaysia() {
                   ))}
                 </div>
                 <p className="mt-6 text-sm text-zinc-500 leading-relaxed">
-                  As we age, our skin gradually loses collagen and elastin—the proteins responsible for firmness and elasticity. Combined with gravity, fluctuating weight, and reduced muscle tone, the upper arms can develop loose, hanging skin that may not respond to exercise alone.
+                  {t('armLift.causesDesc')}
                 </p>
               </div>
             </div>
@@ -451,8 +451,8 @@ export default function ArmLiftMalaysia() {
         <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Arm Lift Procedures</h2>
-              <p className="text-zinc-500 text-sm">Dr. Soma selects the specific technique based on your degree of skin laxity and desired outcome.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('armLift.typesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('armLift.typesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
@@ -477,15 +477,15 @@ export default function ArmLiftMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">How Arm Lift Surgery Works</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('armLift.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
                 {[
-                  { num: "1", title: "Consultation", desc: "Assessment & planning" },
-                  { num: "2", title: "Incision", desc: "Strategic placement" },
-                  { num: "3", title: "Removal", desc: "Excess skin & fat" },
-                  { num: "4", title: "Closure", desc: "Layered suturing" }
+                  { num: "1", title: t('armLift.processStep1'), desc: t('armLift.processStep1Desc') },
+                  { num: "2", title: t('armLift.processStep2'), desc: t('armLift.processStep2Desc') },
+                  { num: "3", title: t('armLift.processStep3'), desc: t('armLift.processStep3Desc') },
+                  { num: "4", title: t('armLift.processStep4'), desc: t('armLift.processStep4Desc') }
                 ].map((step, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500" style={{animationDelay: `${i * 150}ms`}}>
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{step.num}</div>
@@ -515,28 +515,28 @@ export default function ArmLiftMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Long-Lasting Results</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('armLift.floatingBadge')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Results are permanent as long as weight remains stable and healthy habits are maintained.&rdquo;
+                  &ldquo;{t('armLift.floatingBadgeDesc')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Arm Lift Surgery</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('armLift.benefitsTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                An arm lift offers both functional and aesthetic improvements for patients struggling with excess upper arm skin.
+                {t('armLift.benefitsDesc')}
               </p>
 
               <div className="space-y-6">
                 {[
-                  { title: "Removes Loose Skin", desc: "Eliminates sagging 'bat wings' that don't respond to exercise." },
-                  { title: "Improves Arm Shape", desc: "Creates a more toned, defined upper arm contour." },
-                  { title: "Boosts Confidence", desc: "Wear sleeveless clothing and move freely without self-consciousness." },
-                  { title: "Reduces Irritation", desc: "Eliminates chafing or rashes caused by excess skin friction." },
-                  { title: "Long-Lasting Results", desc: "Permanent improvement when weight remains stable." }
+                  { title: t('armLift.benefit1Title'), desc: t('armLift.benefit1Desc') },
+                  { title: t('armLift.benefit2Title'), desc: t('armLift.benefit2Desc') },
+                  { title: t('armLift.benefit3Title'), desc: t('armLift.benefit3Desc') },
+                  { title: t('armLift.benefit4Title'), desc: t('armLift.benefit4Desc') },
+                  { title: t('armLift.benefit5Title'), desc: t('armLift.benefit5Desc') }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                     <div className="flex-shrink-0 w-14 h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
@@ -551,7 +551,7 @@ export default function ArmLiftMalaysia() {
               </div>
 
               <div className="mt-10 pt-10 border-t border-zinc-100">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Good Candidates Checklist</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('armLift.candidateTitle')}</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-2 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -569,23 +569,23 @@ export default function ArmLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Arm Lift vs. Liposuction</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('armLift.compareTitle')}</h2>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-3 md:gap-4">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>Arm Lift</span></div>
-                  <div>Liposuction</div>
+                  <div>{t('armLift.feature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>{t('armLift.compArmLift')}</span></div>
+                  <div>{t('armLift.compLipo')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Removes Fat", armlift: "Partially", armliftIcon: false, lipo: "Yes", lipoIcon: true },
-                  { feat: "Removes Skin", armlift: "Yes", armliftIcon: true, lipo: "No", lipoX: true },
-                  { feat: "Tightens Arm", armlift: "Yes", armliftIcon: true, lipo: "Limited", lipoIcon: false },
-                  { feat: "Scarring", armlift: "Visible", lipo: "Minimal" },
-                  { feat: "Best For", armlift: "Loose skin", lipo: "Excess fat" }
+                  { feat: t('armLift.row1Feat'), armlift: t('armLift.row1ArmLift'), armliftIcon: false, lipo: t('armLift.row1Lipo'), lipoIcon: true },
+                  { feat: t('armLift.row2Feat'), armlift: t('armLift.row2ArmLift'), armliftIcon: true, lipo: t('armLift.row2Lipo'), lipoX: true },
+                  { feat: t('armLift.row3Feat'), armlift: t('armLift.row3ArmLift'), armliftIcon: true, lipo: t('armLift.row3Lipo'), lipoIcon: false },
+                  { feat: t('armLift.row4Feat'), armlift: t('armLift.row4ArmLift'), lipo: t('armLift.row4Lipo') },
+                  { feat: t('armLift.row5Feat'), armlift: t('armLift.row5ArmLift'), lipo: t('armLift.row5Lipo') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-3 md:gap-4 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -603,9 +603,9 @@ export default function ArmLiftMalaysia() {
               </div>
 
               <div className="mt-8 text-center">
-                <p className="text-sm text-zinc-500 mb-4">In some cases, arm lift and liposuction are combined for enhanced contouring.</p>
+                <p className="text-sm text-zinc-500 mb-4">{t('armLift.compareNote')}</p>
                 <Link href="/body/liposuction-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Liposuction Details
+                  {t('armLift.viewLipoDetails')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -617,34 +617,34 @@ export default function ArmLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline</h2>
-              <p className="text-zinc-500 text-sm">Clear Timeline for Your Healing Journey</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('armLift.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('armLift.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1–2",
-                  title: "Early Recovery",
-                  points: ["Swelling, bruising, and mild discomfort", "Compression garment worn continuously", "Avoid raising arms above shoulder level"],
+                  time: t('armLift.resTime1'),
+                  title: t('armLift.resTitle1'),
+                  points: [t('armLift.resPoint1a'), t('armLift.resPoint1b'), t('armLift.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 3–4",
-                  title: "Light Activity",
-                  points: ["Return to desk work or light duties", "Gradual improvement in swelling"],
+                  time: t('armLift.resTime2'),
+                  title: t('armLift.resTitle2'),
+                  points: [t('armLift.resPoint2a'), t('armLift.resPoint2b')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 6+",
-                  title: "Return to Exercise",
-                  points: ["Resume upper-body workouts", "Scars begin fading"],
+                  time: t('armLift.resTime3'),
+                  title: t('armLift.resTitle3'),
+                  points: [t('armLift.resPoint3a'), t('armLift.resPoint3b')],
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 },
                 {
-                  time: "Month 3–6",
-                  title: "Final Results",
-                  points: ["Residual swelling subsides", "Final contour becomes visible", "Scars continue to mature"],
+                  time: t('armLift.resTime4'),
+                  title: t('armLift.resTitle4'),
+                  points: [t('armLift.resPoint4a'), t('armLift.resPoint4b'), t('armLift.resPoint4c')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -685,11 +685,11 @@ export default function ArmLiftMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Week 1</span>
-                <span>Week 2</span>
-                <span>Week 4</span>
-                <span>Week 6</span>
-                <span>Month 3-6</span>
+                <span>{t('armLift.progressWeek1')}</span>
+                <span>{t('armLift.progressWeek2')}</span>
+                <span>{t('armLift.progressWeek4')}</span>
+                <span>{t('armLift.progressWeek6')}</span>
+                <span>{t('armLift.progressMonth36')}</span>
               </div>
             </div>
           </div>
@@ -698,45 +698,45 @@ export default function ArmLiftMalaysia() {
         {/* Scarring Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="scar-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('scar-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Scarring and Scar Management</h2>
+            <h2 data-animate="scar-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('scar-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('armLift.scarTitle')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div data-animate="scar-content" className={`transition-all duration-700 ${isVisible('scar-content') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
                 <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-                  Scarring is an expected outcome of arm lift surgery. The incision is typically placed along the inner arm—where it is less visible—and extends from the armpit towards the elbow.
+                  {t('armLift.scarDesc')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900">Strategic Placement</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Incisions are placed along the inner arm where they are less visible.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('armLift.scarItem1Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('armLift.scarItem1Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900">Proper Wound Care</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Following aftercare instructions helps scars heal cleanly.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('armLift.scarItem2Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('armLift.scarItem2Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900">Sun Protection</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Avoiding sun exposure prevents darkening of scars.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('armLift.scarItem3Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('armLift.scarItem3Desc')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-200 hover:border-[#FE7623] transition-all duration-300">
                     <svg className="w-6 h-6 text-[#FE7623] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900">Silicone Products</h4>
-                      <p className="text-xs text-zinc-500 mt-1">Silicone sheets or gels can be used to support scar maturation.</p>
+                      <h4 className="text-sm font-bold text-zinc-900">{t('armLift.scarItem4Title')}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t('armLift.scarItem4Desc')}</p>
                     </div>
                   </div>
                 </div>
                 <p className="text-sm text-zinc-500 mt-6 italic">
-                  Most patients find that the improvement in arm contour outweighs the presence of scars — particularly as they fade over time.
+                  {t('armLift.scarNote')}
                 </p>
               </div>
 
@@ -745,9 +745,9 @@ export default function ArmLiftMalaysia() {
                   <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-[#FE7623] to-orange-400 rounded-full flex items-center justify-center">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-900 mb-3">Scars Fade Over Time</h3>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-3">{t('armLift.scarFadeTitle')}</h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">
-                    Initial scars may appear red or pink but typically fade significantly over 12–18 months, becoming flat and lighter in colour.
+                    {t('armLift.scarFadeDesc')}
                   </p>
                 </div>
               </div>
@@ -768,11 +768,11 @@ export default function ArmLiftMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('armLift.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Arm lift cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('armLift.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Extent of skin removal", "Type of arm lift", "Combined with liposuction", "Operating time"].map((item, i) => (
+                  {[t('armLift.priceFactor1'), t('armLift.priceFactor2'), t('armLift.priceFactor3'), t('armLift.priceFactor4')].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
@@ -780,7 +780,7 @@ export default function ArmLiftMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Lift%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('armLift.getQuote')}
                 </a>
               </div>
             </div>
@@ -792,8 +792,8 @@ export default function ArmLiftMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about arm lift surgery</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('armLift.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('armLift.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -838,13 +838,13 @@ export default function ArmLiftMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Safety & Regulation in Malaysia</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('armLift.safetyTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Ministry of Health Malaysia", desc: "Arm lift surgery is a regulated procedure. Dr. Soma operates under national guidelines for private healthcare services.", color: "from-blue-500 to-blue-600" },
-                { name: "Licensed Healthcare Facility", desc: "All procedures are performed in accredited, licensed medical facilities with full monitoring protocols.", color: "from-green-500 to-green-600" },
-                { name: "Board-Certified Surgeon", desc: "Dr. Soma is a registered medical practitioner and specialist plastic surgeon with years of experience in body contouring.", color: "from-purple-500 to-purple-600" }
+                { name: t('armLift.safety1Name'), desc: t('armLift.safety1Desc'), color: "from-blue-500 to-blue-600" },
+                { name: t('armLift.safety2Name'), desc: t('armLift.safety2Desc'), color: "from-green-500 to-green-600" },
+                { name: t('armLift.safety3Name'), desc: t('armLift.safety3Desc'), color: "from-purple-500 to-purple-600" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
@@ -874,24 +874,24 @@ export default function ArmLiftMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Achieve firmer, toned upper arms.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('armLift.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              Dr. Soma delivers personalised arm lift solutions with a focus on safety, natural contour, and long-lasting results.
+              {t('armLift.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Arm%20Lift%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('armLift.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('armLift.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["brachioplasty", "arm lift surgery", "bat wings", "loose arm skin", "body contouring"].map((tag, i) => (
+              {[t('armLift.seoTag1'), t('armLift.seoTag2'), t('armLift.seoTag3'), t('armLift.seoTag4'), t('armLift.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

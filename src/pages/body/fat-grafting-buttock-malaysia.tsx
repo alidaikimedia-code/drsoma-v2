@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function FatGraftingButtockMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,56 +38,56 @@ export default function FatGraftingButtockMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is fat grafting to the buttocks?", answer: "A procedure that uses a patient's own fat to enhance buttock shape and volume." },
-    { question: "Is it safe?", answer: "When performed by a trained plastic surgeon following established safety guidelines, it is considered safe." },
-    { question: "How long do results last?", answer: "Surviving fat is permanent if body weight remains stable." },
-    { question: "Will I lose volume over time?", answer: "Some early fat loss is expected; final results stabilise by 3–4 months." },
-    { question: "Is the procedure painful?", answer: "Discomfort is usually mild to moderate and managed with medication." },
-    { question: "Can it be combined with other procedures?", answer: "Yes, commonly with liposuction or body contouring surgeries." }
+    { question: t('buttockFat.faq1Q'), answer: t('buttockFat.faq1A') },
+    { question: t('buttockFat.faq2Q'), answer: t('buttockFat.faq2A') },
+    { question: t('buttockFat.faq3Q'), answer: t('buttockFat.faq3A') },
+    { question: t('buttockFat.faq4Q'), answer: t('buttockFat.faq4A') },
+    { question: t('buttockFat.faq5Q'), answer: t('buttockFat.faq5A') },
+    { question: t('buttockFat.faq6Q'), answer: t('buttockFat.faq6A') }
   ]
 
   const processSteps = [
-    { title: "Harvested", desc: "From donor areas such as the abdomen, flanks, or thighs" },
-    { title: "Purified", desc: "Prepared under sterile conditions" },
-    { title: "Injected", desc: "Carefully into specific layers of the buttocks" }
+    { title: t('buttockFat.processStep1'), desc: t('buttockFat.processStep1Desc') },
+    { title: t('buttockFat.processStep2'), desc: t('buttockFat.processStep2Desc') },
+    { title: t('buttockFat.processStep3'), desc: t('buttockFat.processStep3Desc') }
   ]
 
   const advantages = [
-    "Uses the patient's own tissue",
-    "Produces a softer, more natural look and feel",
-    "Avoids foreign implants",
-    "Allows simultaneous body contouring through liposuction",
-    "Can be customised for subtle or moderate enhancement"
+    t('buttockFat.advantage1'),
+    t('buttockFat.advantage2'),
+    t('buttockFat.advantage3'),
+    t('buttockFat.advantage4'),
+    t('buttockFat.advantage5')
   ]
 
   const procedureSteps = [
-    { num: "1", title: "Assessment", desc: "Preoperative assessment and marking" },
-    { num: "2", title: "Liposuction", desc: "Liposuction from selected donor areas" },
-    { num: "3", title: "Purification", desc: "Fat purification to remove fluid and damaged cells" },
-    { num: "4", title: "Injection", desc: "Controlled, layered fat injection into the buttocks" },
-    { num: "5", title: "Safety", desc: "Avoidance of deep intramuscular injection for safety" },
-    { num: "6", title: "Compression", desc: "Application of compression garments" }
+    { num: t('buttockFat.procStep1Num'), title: t('buttockFat.procStep1Title'), desc: t('buttockFat.procStep1Desc') },
+    { num: t('buttockFat.procStep2Num'), title: t('buttockFat.procStep2Title'), desc: t('buttockFat.procStep2Desc') },
+    { num: t('buttockFat.procStep3Num'), title: t('buttockFat.procStep3Title'), desc: t('buttockFat.procStep3Desc') },
+    { num: t('buttockFat.procStep4Num'), title: t('buttockFat.procStep4Title'), desc: t('buttockFat.procStep4Desc') },
+    { num: t('buttockFat.procStep5Num'), title: t('buttockFat.procStep5Title'), desc: t('buttockFat.procStep5Desc') },
+    { num: t('buttockFat.procStep6Num'), title: t('buttockFat.procStep6Title'), desc: t('buttockFat.procStep6Desc') }
   ]
 
   const safetyPrinciples = [
-    "Subcutaneous-only fat placement",
-    "Avoidance of major blood vessels",
-    "Controlled injection pressure",
-    "Surgeon training and experience"
+    t('buttockFat.safetyPrinciple1'),
+    t('buttockFat.safetyPrinciple2'),
+    t('buttockFat.safetyPrinciple3'),
+    t('buttockFat.safetyPrinciple4')
   ]
 
   const candidateChecklist = [
-    "Have adequate fat for harvesting",
-    "Desire moderate, natural enhancement",
-    "Are in good general health",
-    "Have stable body weight",
-    "Understand that some fat resorption is normal"
+    t('buttockFat.candidate1'),
+    t('buttockFat.candidate2'),
+    t('buttockFat.candidate3'),
+    t('buttockFat.candidate4'),
+    t('buttockFat.candidate5')
   ]
 
   const notRecommended = [
-    "Seeking dramatic enlargement",
-    "Lacking sufficient donor fat",
-    "Unstable body weight"
+    t('buttockFat.notRec1'),
+    t('buttockFat.notRec2'),
+    t('buttockFat.notRec3')
   ]
 
   return (
@@ -93,7 +95,7 @@ export default function FatGraftingButtockMalaysia() {
       <Head>
         <title>Fat Grafting to Buttocks Malaysia | Natural Buttock Enhancement – Dr. Soma</title>
         <meta name="description" content="Fat grafting to buttocks (gluteal fat transfer) in Malaysia by Dr. Soma. Natural buttock enhancement using your own fat. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
-      
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -273,23 +275,23 @@ export default function FatGraftingButtockMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('buttockFat.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Fat Grafting to Buttocks in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Autologous Gluteal Fat Transfer for Natural Buttock Enhancement</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('buttockFat.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('buttockFat.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Buttock shape is governed by anatomy, fat distribution, muscle tone, and skin quality. Weight loss, ageing, or genetic structure can leave the buttocks appearing flat, deflated, or disproportionate to the hips and thighs. Fat grafting to the buttocks, also known as gluteal fat transfer, uses a patient&apos;s own fat to restore volume, projection, and contour in a natural, biologically compatible way.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, fat grafting to the buttocks is classified as a regulated surgical procedure and must be performed by a registered medical practitioner in a licensed medical facility under standards governed by the Ministry of Health Malaysia. Because the procedure involves liposuction, fat processing, and reinjection, it requires advanced anatomical knowledge and strict safety protocols.</p>
+                <p style={{fontSize: '14px'}}>{t('buttockFat.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('buttockFat.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Grafting%20to%20Buttocks" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('buttockFat.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('buttockFat.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -309,7 +311,7 @@ export default function FatGraftingButtockMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('buttockFat.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('buttockFat.happyPatients')}</span>
               </div>
             </div>
 
@@ -329,8 +331,8 @@ export default function FatGraftingButtockMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Natural Buttock Enhancement</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('buttockFat.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('buttockFat.naturalButtockEnhancement')}</p>
                     </div>
                   </div>
                 </div>
@@ -344,9 +346,9 @@ export default function FatGraftingButtockMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Fat Grafting to the Buttocks?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('buttockFat.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Fat grafting to the buttocks is a surgical technique in which fat is harvested, purified, and carefully injected into specific layers of the buttocks to enhance shape and volume.
+                  {t('buttockFat.whatDesc')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   {processSteps.map((step, i) => (
@@ -362,20 +364,20 @@ export default function FatGraftingButtockMalaysia() {
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-red-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                    <span><strong>Not</strong> a substitute for weight gain and does not create muscle</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('buttockFat.notPoint') }} />
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-orange-50 rounded-lg border border-orange-100 hover:border-[#FE7623] transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    <span><strong>Yes</strong> – it reshapes existing contours naturally</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('buttockFat.yesPoint') }} />
                   </div>
                 </div>
               </div>
 
               {/* Why Patients Choose Fat Grafting */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Patients Choose Fat Grafting Over Implants</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('buttockFat.whyTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Fat grafting offers several anatomical and practical advantages over implants. Because fat integrates with surrounding tissues, results evolve gradually as healing occurs.
+                  {t('buttockFat.whyDesc')}
                 </p>
                 <div className="space-y-3">
                   {advantages.map((item, i) => (
@@ -394,12 +396,12 @@ export default function FatGraftingButtockMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="process-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('process-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Fat Grafting to the Buttocks Is Performed</h2>
-              <p className="text-zinc-500 text-sm">The procedure is performed under general anaesthesia in a hospital setting. International safety standards emphasise precise injection planes to reduce complications.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('buttockFat.howTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('buttockFat.howDesc')}</p>
             </div>
 
             <div className="border-t border-zinc-200 pt-12">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">Surgical Process Steps</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('buttockFat.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center relative">
                 <div className="hidden lg:block absolute top-6 left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0"></div>
 
@@ -421,8 +423,8 @@ export default function FatGraftingButtockMalaysia() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="safety-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('safety-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">Safety Considerations in Gluteal Fat Transfer</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Buttock fat grafting requires strict adherence to safety principles. When performed correctly in a regulated facility, fat grafting is considered safe and predictable.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">{t('buttockFat.safetyTitle')}</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">{t('buttockFat.safetyDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -442,20 +444,20 @@ export default function FatGraftingButtockMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-animate="results-content" className={`transition-all duration-700 ${isVisible('results-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Results and Fat Survival</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('buttockFat.resultsTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Not all transferred fat survives. Understanding the typical outcomes helps set realistic expectations for your procedure.
+                {t('buttockFat.resultsDesc')}
               </p>
 
               <div className="space-y-4">
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
                   <div className="flex flex-row items-start gap-3">
                     <div className="flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#FE7623] font-bold text-lg">60-80%</span>
+                      <span className="text-[#FE7623] font-bold text-lg">{t('buttockFat.survivalStat')}</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900 mb-1">Fat Survival Rate</h4>
-                      <p className="text-xs text-zinc-600">Of grafted fat establishes long-term blood supply</p>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1">{t('buttockFat.survivalStatTitle')}</h4>
+                      <p className="text-xs text-zinc-600">{t('buttockFat.survivalStatDesc')}</p>
                     </div>
                   </div>
                 </div>
@@ -464,8 +466,8 @@ export default function FatGraftingButtockMalaysia() {
                   <div className="flex flex-row items-start gap-3">
                     <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900 mb-1">Initial Overcorrection</h4>
-                      <p className="text-xs text-zinc-600">Common to compensate for resorption</p>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1">{t('buttockFat.overcorrectionTitle')}</h4>
+                      <p className="text-xs text-zinc-600">{t('buttockFat.overcorrectionDesc')}</p>
                     </div>
                   </div>
                 </div>
@@ -474,15 +476,13 @@ export default function FatGraftingButtockMalaysia() {
                   <div className="flex flex-row items-start gap-3">
                     <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900 mb-1">Final Shape</h4>
-                      <p className="text-xs text-zinc-600">Becomes evident by 3–4 months</p>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1">{t('buttockFat.finalShapeTitle')}</h4>
+                      <p className="text-xs text-zinc-600">{t('buttockFat.finalShapeDesc')}</p>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-sm text-zinc-500 mt-4 p-3 bg-zinc-50 rounded-lg border border-zinc-100">
-                  <strong>Note:</strong> Stable weight helps preserve results. Significant weight loss after surgery may reduce volume.
-                </p>
+                <p className="text-sm text-zinc-500 mt-4 p-3 bg-zinc-50 rounded-lg border border-zinc-100" dangerouslySetInnerHTML={{ __html: t('buttockFat.resultsNote') }} />
               </div>
             </div>
 
@@ -503,34 +503,34 @@ export default function FatGraftingButtockMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery Timeline</h2>
-              <p className="text-zinc-500 text-sm">Patients are advised to avoid prolonged pressure on the buttocks during early healing.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('buttockFat.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('buttockFat.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1–2",
-                  title: "Initial Recovery",
-                  points: ["Swelling expected", "Restricted sitting", "Use of special cushions"],
+                  time: t('buttockFat.resTime1'),
+                  title: t('buttockFat.resTitle1'),
+                  points: [t('buttockFat.resPoint1a'), t('buttockFat.resPoint1b'), t('buttockFat.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 3–4",
-                  title: "Gradual Return",
-                  points: ["Return to normal activities", "Reduced swelling", "Continued care"],
+                  time: t('buttockFat.resTime2'),
+                  title: t('buttockFat.resTitle2'),
+                  points: [t('buttockFat.resPoint2a'), t('buttockFat.resPoint2b'), t('buttockFat.resPoint2c')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 6–8",
-                  title: "Stabilisation",
-                  points: ["Fat stabilisation phase", "Improved comfort", "Better contour visible"],
+                  time: t('buttockFat.resTime3'),
+                  title: t('buttockFat.resTitle3'),
+                  points: [t('buttockFat.resPoint3a'), t('buttockFat.resPoint3b'), t('buttockFat.resPoint3c')],
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 },
                 {
-                  time: "Month 3+",
-                  title: "Final Results",
-                  points: ["Final contour visible", "Long-term results", "Normal activities resume"],
+                  time: t('buttockFat.resTime4'),
+                  title: t('buttockFat.resTitle4'),
+                  points: [t('buttockFat.resPoint4a'), t('buttockFat.resPoint4b'), t('buttockFat.resPoint4c')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -583,23 +583,23 @@ export default function FatGraftingButtockMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Expert Care</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('buttockFat.floatingBadge')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  Every fat grafting procedure is personally performed by Dr. Soma with hospital-grade safety protocols.
+                  {t('buttockFat.floatingBadgeDesc')}
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Good Candidate?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('buttockFat.candidateTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Ideal candidates generally meet the following criteria to ensure safe and effective results.
+                {t('buttockFat.candidateDesc')}
               </p>
 
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Ideal Candidates</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('buttockFat.candidateChecklistTitle')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -611,7 +611,7 @@ export default function FatGraftingButtockMalaysia() {
               </div>
 
               <div className="p-6 bg-red-50 rounded-xl border border-red-100">
-                <h4 className="text-sm font-bold text-red-700 mb-4">May Require Alternative Options</h4>
+                <h4 className="text-sm font-bold text-red-700 mb-4">{t('buttockFat.notRecTitle')}</h4>
                 <div className="space-y-2">
                   {notRecommended.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-red-600">
@@ -629,25 +629,25 @@ export default function FatGraftingButtockMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Fat Grafting vs Buttock Implants</h2>
-              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">The choice depends on anatomy, goals, and safety considerations discussed during consultation.</p>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('buttockFat.compareTitle')}</h2>
+              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">{t('buttockFat.compareDesc')}</p>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-2">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623]">Fat Grafting</div>
-                  <div>Buttock Implants</div>
+                  <div>{t('buttockFat.colFeature')}</div>
+                  <div className="text-[#FE7623]">{t('buttockFat.colGrafting')}</div>
+                  <div>{t('buttockFat.colImplants')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Material Used", grafting: "Patient's own fat", implants: "Silicone implant" },
-                  { feat: "Look & Feel", grafting: "Natural, soft", implants: "Firm, structured" },
-                  { feat: "Scar Size", grafting: "Small liposuction scars", implants: "Larger incisions" },
-                  { feat: "Body Contouring", grafting: "Dual benefit with liposuction", implants: "Single area only" },
-                  { feat: "Long-term Maintenance", grafting: "Minimal", implants: "Higher maintenance" },
-                  { feat: "Best For", grafting: "Natural contour enhancement", implants: "Structural augmentation" }
+                  { feat: t('buttockFat.row1Feat'), grafting: t('buttockFat.row1Grafting'), implants: t('buttockFat.row1Implants') },
+                  { feat: t('buttockFat.row2Feat'), grafting: t('buttockFat.row2Grafting'), implants: t('buttockFat.row2Implants') },
+                  { feat: t('buttockFat.row3Feat'), grafting: t('buttockFat.row3Grafting'), implants: t('buttockFat.row3Implants') },
+                  { feat: t('buttockFat.row4Feat'), grafting: t('buttockFat.row4Grafting'), implants: t('buttockFat.row4Implants') },
+                  { feat: t('buttockFat.row5Feat'), grafting: t('buttockFat.row5Grafting'), implants: t('buttockFat.row5Implants') },
+                  { feat: t('buttockFat.row6Feat'), grafting: t('buttockFat.row6Grafting'), implants: t('buttockFat.row6Implants') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -673,11 +673,11 @@ export default function FatGraftingButtockMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('buttockFat.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Fat grafting cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('buttockFat.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Volume of fat to be transferred", "Donor site locations", "Complexity of contouring", "Operating time", "Hospital stay duration"].map((item, i) => (
+                  {[t('buttockFat.priceFactor1'), t('buttockFat.priceFactor2'), t('buttockFat.priceFactor3'), t('buttockFat.priceFactor4'), t('buttockFat.priceFactor5')].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -685,7 +685,7 @@ export default function FatGraftingButtockMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Grafting%20to%20Buttocks" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('buttockFat.getQuote')}
                 </a>
               </div>
             </div>
@@ -697,8 +697,8 @@ export default function FatGraftingButtockMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about fat grafting</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('buttockFat.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('buttockFat.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -744,15 +744,15 @@ export default function FatGraftingButtockMalaysia() {
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety, Regulation & Standards in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">In Malaysia, fat grafting procedures are regulated by the Ministry of Health Malaysia.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">{t('buttockFat.regTitle')}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{t('buttockFat.regDesc')}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Ministry of Health Malaysia", desc: "Surgical facilities must be licensed, and surgeons must be fully registered and credentialed.", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Trained Plastic Surgeons", desc: "Gluteal fat transfer should be performed by trained specialists due to its complexity.", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Accredited Facilities", desc: "All procedures performed in licensed hospital settings with full monitoring and sterile environments.", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" }
+                { name: t('buttockFat.reg1Name'), desc: t('buttockFat.reg1Desc'), color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+                { name: t('buttockFat.reg2Name'), desc: t('buttockFat.reg2Desc'), color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: t('buttockFat.reg3Name'), desc: t('buttockFat.reg3Desc'), color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-2">
@@ -783,27 +783,27 @@ export default function FatGraftingButtockMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Perspective</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('buttockFat.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Fat grafting to the buttocks is a refined balance of science and artistry. It reshapes the body using the patient&apos;s own tissue while respecting anatomy and safety.
+              {t('buttockFat.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed under Malaysia&apos;s regulated medical framework by an experienced surgeon, it offers natural-looking, proportionate enhancement without foreign implants. The success of the procedure lies not in volume alone, but in precision, restraint, and biological understanding — the quiet mechanics behind a confident silhouette.
+              {t('buttockFat.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Fat%20Grafting%20to%20Buttocks" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('buttockFat.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('buttockFat.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["fat grafting buttocks", "gluteal fat transfer", "BBL Malaysia", "natural buttock enhancement", "autologous fat transfer"].map((tag, i) => (
+              {[t('buttockFat.seoTag1'), t('buttockFat.seoTag2'), t('buttockFat.seoTag3'), t('buttockFat.seoTag4'), t('buttockFat.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

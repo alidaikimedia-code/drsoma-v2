@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function BeltLipectomyMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,42 +38,42 @@ export default function BeltLipectomyMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a belt lipectomy?", answer: "A circumferential surgery that removes excess skin and fat around the waist, abdomen, and lower back." },
-    { question: "Is belt lipectomy safe?", answer: "When performed by a qualified plastic surgeon in a licensed hospital, it is a well-established and safe procedure." },
-    { question: "How long is recovery?", answer: "Initial recovery takes 2–3 weeks, with continued healing over several months." },
-    { question: "Will there be scars?", answer: "Yes. Scars are unavoidable but placed strategically and tend to fade with time." },
-    { question: "Is the surgery painful?", answer: "Postoperative discomfort is expected but usually controlled with medication." },
-    { question: "Are results permanent?", answer: "Results are long-lasting if body weight remains stable." },
-    { question: "Who should avoid this surgery?", answer: "Patients with unstable weight, uncontrolled medical illness, or unrealistic expectations." }
+    { question: t('beltLipo.faq1Q'), answer: t('beltLipo.faq1A') },
+    { question: t('beltLipo.faq2Q'), answer: t('beltLipo.faq2A') },
+    { question: t('beltLipo.faq3Q'), answer: t('beltLipo.faq3A') },
+    { question: t('beltLipo.faq4Q'), answer: t('beltLipo.faq4A') },
+    { question: t('beltLipo.faq5Q'), answer: t('beltLipo.faq5A') },
+    { question: t('beltLipo.faq6Q'), answer: t('beltLipo.faq6A') },
+    { question: t('beltLipo.faq7Q'), answer: t('beltLipo.faq7A') }
   ]
 
   const areasAddressed = [
-    { name: "Lower Abdomen", icon: "M12 2v20M8 6l4-4 4 4M8 18l4 4 4-4", desc: "Frontal abdominal area" },
-    { name: "Waist & Flanks", icon: "M8 3L4 7l4 4M4 7h16m4 10l-4 4-4-4M20 17H4", desc: "Side contouring" },
-    { name: "Lower Back", icon: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2M12 7m-4 0a4 4 0 1 0 8 0 4 4 0 1 0-8 0", desc: "Posterior tightening" },
-    { name: "Upper Buttock", icon: "M12 12m-10 0a10 10 0 1 0 20 0 10 10 0 1 0-20 0m4 0l4-4 4 4M12 16V8", desc: "Lift through repositioning" }
+    { name: t('beltLipo.area1Name'), icon: "M12 2v20M8 6l4-4 4 4M8 18l4 4 4-4", desc: t('beltLipo.area1Desc') },
+    { name: t('beltLipo.area2Name'), icon: "M8 3L4 7l4 4M4 7h16m4 10l-4 4-4-4M20 17H4", desc: t('beltLipo.area2Desc') },
+    { name: t('beltLipo.area3Name'), icon: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2M12 7m-4 0a4 4 0 1 0 8 0 4 4 0 1 0-8 0", desc: t('beltLipo.area3Desc') },
+    { name: t('beltLipo.area4Name'), icon: "M12 12m-10 0a10 10 0 1 0 20 0 10 10 0 1 0-20 0m4 0l4-4 4 4M12 16V8", desc: t('beltLipo.area4Desc') }
   ]
 
   const candidateChecklist = [
-    "Have undergone massive weight loss (bariatric surgery or lifestyle change)",
-    "Have maintained a stable weight for several months",
-    "Experience circumferential skin laxity around the waist",
-    "Suffer from rashes, hygiene issues, or functional limitation",
-    "Are medically fit for major surgery"
+    t('beltLipo.candidate1'),
+    t('beltLipo.candidate2'),
+    t('beltLipo.candidate3'),
+    t('beltLipo.candidate4'),
+    t('beltLipo.candidate5')
   ]
 
   const notRecommended = [
-    "Unstable weight fluctuations",
-    "Untreated medical conditions",
-    "Unrealistic expectations"
+    t('beltLipo.notRec1'),
+    t('beltLipo.notRec2'),
+    t('beltLipo.notRec3')
   ]
 
   const benefits = [
-    { title: "Circumferential Skin Removal", desc: "Remove excess skin from entire lower torso" },
-    { title: "Improved Waist Definition", desc: "Better torso balance and contour" },
-    { title: "Reduced Skin Irritation", desc: "Elimination of chronic infections and rashes" },
-    { title: "Enhanced Mobility", desc: "Improved posture and physical comfort" },
-    { title: "Long-Lasting Results", desc: "Permanent with stable weight maintenance" }
+    { title: t('beltLipo.benefit1Title'), desc: t('beltLipo.benefit1Desc') },
+    { title: t('beltLipo.benefit2Title'), desc: t('beltLipo.benefit2Desc') },
+    { title: t('beltLipo.benefit3Title'), desc: t('beltLipo.benefit3Desc') },
+    { title: t('beltLipo.benefit4Title'), desc: t('beltLipo.benefit4Desc') },
+    { title: t('beltLipo.benefit5Title'), desc: t('beltLipo.benefit5Desc') }
   ]
 
   return (
@@ -79,7 +81,7 @@ export default function BeltLipectomyMalaysia() {
       <Head>
         <title>Belt Lipectomy Malaysia | Circumferential Body Contouring After Weight Loss – Dr. Soma</title>
         <meta name="description" content="Belt lipectomy surgery in Malaysia by Dr. Soma. 360° circumferential body contouring after massive weight loss to remove excess skin around the entire lower torso. Book consultation today." />
-      
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -259,24 +261,24 @@ export default function BeltLipectomyMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('beltLipo.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Belt Lipectomy in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Circumferential Body Contouring for Excess Skin</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('beltLipo.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('beltLipo.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Massive weight loss changes physiology faster than skin can adapt. When weight reduction is large or rapid, the abdominal and lower-back skin often loses its elastic recoil, creating a circumferential &quot;apron&quot; that wraps around the waist. This is not just a cosmetic issue. Patients commonly experience skin infections, difficulty with movement, poor clothing fit, and persistent discomfort despite achieving a healthy body weight.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>A belt lipectomy is a specialised body contouring surgery designed to remove this 360-degree excess skin and fat around the abdomen, waist, flanks, and lower back. In Malaysia, it is classified as a major surgical procedure and must be performed by a registered medical practitioner in a licensed medical facility under standards regulated by the Ministry of Health Malaysia (MOH).</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>Unlike limited abdominal procedures, belt lipectomy restores balance to the entire lower torso, improving contour, posture, hygiene, and overall quality of life.</p>
+                <p style={{fontSize: '14px'}}>{t('beltLipo.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('beltLipo.heroDesc2')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('beltLipo.heroDesc3')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Belt%20Lipectomy%20surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('beltLipo.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('beltLipo.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -296,7 +298,7 @@ export default function BeltLipectomyMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('beltLipo.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('beltLipo.happyPatients')}</span>
               </div>
             </div>
 
@@ -316,8 +318,8 @@ export default function BeltLipectomyMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">360° Circumferential Contouring</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('beltLipo.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('beltLipo.circumferentialContouring')}</p>
                     </div>
                   </div>
                 </div>
@@ -331,43 +333,43 @@ export default function BeltLipectomyMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">What Is a Belt Lipectomy?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">{t('beltLipo.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A belt lipectomy is a circumferential excisional surgery that removes redundant skin and fat in a continuous &quot;belt-like&quot; pattern around the lower trunk. The incision typically extends around the waistline, allowing simultaneous correction of the abdomen, waist and flanks, lower back, and upper buttock contour.
+                  {t('beltLipo.whatDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Major medical institutions describe circumferential body contouring as an effective reconstructive option for post–massive weight loss patients whose skin laxity cannot be corrected by exercise or diet alone.
+                  {t('beltLipo.whatDesc2')}
                 </p>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-red-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                    <span><strong>Not</strong> a weight-loss surgery – it reshapes after weight has stabilised</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('beltLipo.whatNotPoint') }} />
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-orange-50 rounded-lg border border-orange-100 hover:border-[#FE7623] transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                    <span><strong>Yes</strong> – it improves contour, posture, hygiene, and quality of life</span>
+                    <span dangerouslySetInnerHTML={{ __html: t('beltLipo.whatYesPoint') }} />
                   </div>
                 </div>
               </div>
 
               {/* Belt Lipectomy vs Tummy Tuck */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6 text-center md:text-left">Why Belt Lipectomy Is Different from a Tummy Tuck</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6 text-center md:text-left">{t('beltLipo.whyTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  A common misconception is that a tummy tuck can replace a belt lipectomy. Anatomically, they address different problems.
+                  {t('beltLipo.whyDesc')}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-3 rounded-lg border border-zinc-200 bg-white hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
-                    <h4 className="text-sm font-bold text-zinc-900 mb-2">Tummy Tuck</h4>
-                    <p className="text-xs text-zinc-500">Treats only the <strong>front</strong> of the abdomen</p>
+                    <h4 className="text-sm font-bold text-zinc-900 mb-2">{t('beltLipo.tummyLabel')}</h4>
+                    <p className="text-xs text-zinc-500" dangerouslySetInnerHTML={{ __html: t('beltLipo.tummyDesc') }} />
                   </div>
                   <div className="p-3 rounded-lg border border-zinc-200 bg-white hover:border-[#FE7623] hover:shadow-lg transition-all duration-300 group">
-                    <h4 className="text-sm font-bold text-[#FE7623] mb-2">Belt Lipectomy</h4>
-                    <p className="text-xs text-zinc-700">Treats the <strong>entire circumference</strong> of the lower torso</p>
+                    <h4 className="text-sm font-bold text-[#FE7623] mb-2">{t('beltLipo.beltLabel')}</h4>
+                    <p className="text-xs text-zinc-700" dangerouslySetInnerHTML={{ __html: t('beltLipo.beltDesc') }} />
                   </div>
                 </div>
                 <p className="text-zinc-500 text-sm leading-relaxed mt-4">
-                  Patients who have lost a large amount of weight often have excess skin not only in front, but also along the sides and lower back. Treating one area while leaving the rest uncorrected can lead to imbalance and suboptimal results.
+                  {t('beltLipo.whyDesc2')}
                 </p>
               </div>
             </div>
@@ -378,8 +380,8 @@ export default function BeltLipectomyMalaysia() {
         <section className="py-8 md:py-16 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="areas-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('areas-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Areas Addressed in Belt Lipectomy</h2>
-              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">By tightening tissues circumferentially, the procedure often improves buttock contour without implants.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('beltLipo.areasTitle')}</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">{t('beltLipo.areasDesc')}</p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -402,22 +404,22 @@ export default function BeltLipectomyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="process-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('process-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4 text-center md:text-left">How Belt Lipectomy Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm text-center md:text-left">Belt lipectomy is performed in a hospital setting under general anaesthesia. Because blood supply must be preserved across a long incision, the operation requires advanced surgical planning and experience.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4 text-center md:text-left">{t('beltLipo.processMainTitle')}</h2>
+              <p className="text-zinc-500 text-sm text-center md:text-left">{t('beltLipo.processMainDesc')}</p>
             </div>
 
             <div className="border-t border-zinc-200 pt-12">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">Surgical Process Steps</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('beltLipo.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center relative">
                 <div className="hidden lg:block absolute top-6 left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0"></div>
 
                 {[
-                  { num: "1", title: "Assessment", desc: "Preoperative evaluation & marking" },
-                  { num: "2", title: "Incision", desc: "Circumferential pattern removal" },
-                  { num: "3", title: "Removal", desc: "Excess skin and fat excision" },
-                  { num: "4", title: "Tightening", desc: "Support tissue tightening" },
-                  { num: "5", title: "Closure", desc: "Strategic incision placement" },
-                  { num: "6", title: "Compression", desc: "Medical-grade garments" }
+                  { num: "1", title: t('beltLipo.processStep1'), desc: t('beltLipo.processStep1Desc') },
+                  { num: "2", title: t('beltLipo.processStep2'), desc: t('beltLipo.processStep2Desc') },
+                  { num: "3", title: t('beltLipo.processStep3'), desc: t('beltLipo.processStep3Desc') },
+                  { num: "4", title: t('beltLipo.processStep4'), desc: t('beltLipo.processStep4Desc') },
+                  { num: "5", title: t('beltLipo.processStep5'), desc: t('beltLipo.processStep5Desc') },
+                  { num: "6", title: t('beltLipo.processStep6'), desc: t('beltLipo.processStep6Desc') }
                 ].map((step, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500">
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500">{step.num}</div>
@@ -436,8 +438,8 @@ export default function BeltLipectomyMalaysia() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="benefits-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">Benefits of Belt Lipectomy</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">For many patients, this surgery marks the final step in their weight-loss transformation.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">{t('beltLipo.benefitsTitle')}</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">{t('beltLipo.benefitsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -470,23 +472,23 @@ export default function BeltLipectomyMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Expert Care</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('beltLipo.floatingBadge')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  Every belt lipectomy is personally performed by Dr. Soma with hospital-grade safety protocols.
+                  {t('beltLipo.floatingBadgeDesc')}
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">Who Typically Needs a Belt Lipectomy?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6 text-center md:text-left">{t('beltLipo.candidateTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8 text-center md:text-left">
-                Belt lipectomy is most suitable for patients who meet specific criteria to ensure safe and effective results.
+                {t('beltLipo.candidateDesc')}
               </p>
 
               <div className="mb-8">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4 text-center md:text-left">Ideal Candidates</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4 text-center md:text-left">{t('beltLipo.candidateChecklistTitle')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -498,7 +500,7 @@ export default function BeltLipectomyMalaysia() {
               </div>
 
               <div className="p-6 bg-red-50 rounded-xl border border-red-100">
-                <h4 className="text-sm font-bold text-red-700 mb-4 text-center md:text-left">May Need Further Optimisation</h4>
+                <h4 className="text-sm font-bold text-red-700 mb-4 text-center md:text-left">{t('beltLipo.notRecTitle')}</h4>
                 <div className="space-y-2">
                   {notRecommended.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-red-600">
@@ -516,24 +518,24 @@ export default function BeltLipectomyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Belt Lipectomy vs Lower Body Lift</h2>
-              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">While often used interchangeably, these procedures have subtle differences. The choice depends on skin laxity distribution, anatomy, and patient goals.</p>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-4 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('beltLipo.compareTitle')}</h2>
+              <p className="text-zinc-500 text-sm text-center mb-10 max-w-2xl mx-auto">{t('beltLipo.compareDesc')}</p>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-2">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623]">Belt Lipectomy</div>
-                  <div>Lower Body Lift</div>
+                  <div>{t('beltLipo.feature')}</div>
+                  <div className="text-[#FE7623]">{t('beltLipo.compBelt')}</div>
+                  <div>{t('beltLipo.compBodyLift')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Primary Focus", lipo: "Circumferential skin excision", tummy: "Extensive thigh & buttock reshaping" },
-                  { feat: "Waist Contouring", lipo: "Primary focus", tummy: "Included" },
-                  { feat: "Thigh Reshaping", lipo: "Indirect", tummy: "More extensive" },
-                  { feat: "Buttock Lift", lipo: "Through repositioning", tummy: "More extensive reshaping" },
-                  { feat: "Best For", lipo: "Waist-focused laxity", tummy: "Full lower body laxity" }
+                  { feat: t('beltLipo.row1Feat'), lipo: t('beltLipo.row1Belt'), tummy: t('beltLipo.row1BodyLift') },
+                  { feat: t('beltLipo.row2Feat'), lipo: t('beltLipo.row2Belt'), tummy: t('beltLipo.row2BodyLift') },
+                  { feat: t('beltLipo.row3Feat'), lipo: t('beltLipo.row3Belt'), tummy: t('beltLipo.row3BodyLift') },
+                  { feat: t('beltLipo.row4Feat'), lipo: t('beltLipo.row4Belt'), tummy: t('beltLipo.row4BodyLift') },
+                  { feat: t('beltLipo.row5Feat'), lipo: t('beltLipo.row5Belt'), tummy: t('beltLipo.row5BodyLift') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-3 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-2 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -545,7 +547,7 @@ export default function BeltLipectomyMalaysia() {
 
               <div className="mt-8 text-center">
                 <Link href="/body/body-lift-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Body Lift Details
+                  {t('beltLipo.viewBodyLiftDetails')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -557,34 +559,34 @@ export default function BeltLipectomyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Healing Timeline</h2>
-              <p className="text-zinc-500 text-sm">Healing follows predictable physiological phases when postoperative care is followed carefully.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('beltLipo.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('beltLipo.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1",
-                  title: "Hospital Recovery",
-                  points: ["Hospital stay", "Swelling and drains", "Strict compression garment use"],
+                  time: t('beltLipo.resTime1'),
+                  title: t('beltLipo.resTitle1'),
+                  points: [t('beltLipo.resPoint1a'), t('beltLipo.resPoint1b'), t('beltLipo.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 2–3",
-                  title: "Early Healing",
-                  points: ["Gradual return to light activities", "Reduced swelling", "Continued compression wear"],
+                  time: t('beltLipo.resTime2'),
+                  title: t('beltLipo.resTitle2'),
+                  points: [t('beltLipo.resPoint2a'), t('beltLipo.resPoint2b'), t('beltLipo.resPoint2c')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 4–6",
-                  title: "Improved Comfort",
-                  points: ["Better posture", "Contour definition visible", "Return to most daily activities"],
+                  time: t('beltLipo.resTime3'),
+                  title: t('beltLipo.resTitle3'),
+                  points: [t('beltLipo.resPoint3a'), t('beltLipo.resPoint3b'), t('beltLipo.resPoint3c')],
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 },
                 {
-                  time: "Month 3–6",
-                  title: "Final Results",
-                  points: ["Final contour visible", "Swelling resolves", "Scars continue to mature"],
+                  time: t('beltLipo.resTime4'),
+                  title: t('beltLipo.resTitle4'),
+                  points: [t('beltLipo.resPoint4a'), t('beltLipo.resPoint4b'), t('beltLipo.resPoint4c')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -634,11 +636,11 @@ export default function BeltLipectomyMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('beltLipo.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">Belt lipectomy cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6 text-center md:text-left">{t('beltLipo.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Extent of circumferential correction", "Amount of skin to remove", "Operating time", "Hospital stay duration", "Additional procedures if needed"].map((item, i) => (
+                  {[t('beltLipo.priceFactor1'), t('beltLipo.priceFactor2'), t('beltLipo.priceFactor3'), t('beltLipo.priceFactor4'), t('beltLipo.priceFactor5')].map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -646,7 +648,7 @@ export default function BeltLipectomyMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Belt%20Lipectomy%20surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('beltLipo.getQuote')}
                 </a>
               </div>
             </div>
@@ -658,8 +660,8 @@ export default function BeltLipectomyMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div className="text-center md:text-left">
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about belt lipectomy</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('beltLipo.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('beltLipo.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -705,15 +707,15 @@ export default function BeltLipectomyMalaysia() {
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety, Regulation & Standards in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">In Malaysia, belt lipectomy falls under private healthcare services regulated by the Ministry of Health Malaysia.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">{t('beltLipo.safetyTitle')}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{t('beltLipo.safetyDesc')}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Ministry of Health Malaysia", desc: "Surgical facilities must be licensed, and surgeons must be fully registered and credentialed.", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Trained Plastic Surgeons", desc: "Circumferential body contouring should be performed by trained specialists due to its complexity.", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Accredited Facilities", desc: "All procedures performed in licensed hospital settings with full monitoring and sterile environments.", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" }
+                { name: t('beltLipo.safety1Name'), desc: t('beltLipo.safety1Desc'), color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+                { name: t('beltLipo.safety2Name'), desc: t('beltLipo.safety2Desc'), color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: t('beltLipo.safety3Name'), desc: t('beltLipo.safety3Desc'), color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" }
               ].map((source, i) => (
                 <div key={i} className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-2">
@@ -744,27 +746,27 @@ export default function BeltLipectomyMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Perspective</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('beltLipo.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              A belt lipectomy is not about aesthetics alone. It is a reconstructive procedure that restores comfort, movement, and proportion after massive weight loss.
+              {t('beltLipo.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed under regulated medical standards in Malaysia, it offers durable, life-changing results for the right candidate. A successful outcome depends on proper patient selection, experienced surgical hands, and disciplined postoperative care.
+              {t('beltLipo.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Belt%20Lipectomy%20surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('beltLipo.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('beltLipo.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["belt lipectomy", "circumferential body lift", "360° contouring", "excess skin removal", "post-bariatric surgery"].map((tag, i) => (
+              {[t('beltLipo.seoTag1'), t('beltLipo.seoTag2'), t('beltLipo.seoTag3'), t('beltLipo.seoTag4'), t('beltLipo.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

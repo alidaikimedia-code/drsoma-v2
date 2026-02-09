@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function MiniTummyTuckMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -36,51 +38,51 @@ export default function MiniTummyTuckMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What is a mini tummy tuck?", answer: "A mini tummy tuck is a surgical procedure that removes loose skin from the lower abdomen and may tighten lower abdominal muscles without repositioning the belly button." },
-    { question: "How is a mini tummy tuck different from a full tummy tuck?", answer: "A mini tummy tuck treats only the lower abdomen with a smaller incision, while a full tummy tuck addresses the entire abdomen and includes full muscle repair." },
-    { question: "Is a mini tummy tuck safe?", answer: "When performed by a certified plastic surgeon in a regulated medical facility, it is considered a safe and well-established procedure." },
-    { question: "How long is recovery after a mini tummy tuck?", answer: "Most patients return to normal daily activities within 1–2 weeks, with final results developing over 2–3 months." },
-    { question: "Will there be a scar?", answer: "Yes, but the scar is shorter than a full tummy tuck and placed low on the abdomen, usually hidden by underwear or swimwear." },
-    { question: "Are results permanent?", answer: "Results are long-lasting as long as body weight remains stable." },
-    { question: "Can a mini tummy tuck fix muscle separation?", answer: "Only mild lower-abdominal muscle laxity can be corrected. Significant separation usually requires a full tummy tuck." },
-    { question: "Who is an ideal candidate?", answer: "Patients with mild lower-abdominal skin looseness, stable weight, and realistic expectations." },
-    { question: "Can it be combined with liposuction?", answer: "Yes, it is commonly combined for improved contouring when appropriate." },
-    { question: "Does a mini tummy tuck change the belly button?", answer: "No, the belly button is not repositioned." }
+    { question: t('miniTummy.faq1Q'), answer: t('miniTummy.faq1A') },
+    { question: t('miniTummy.faq2Q'), answer: t('miniTummy.faq2A') },
+    { question: t('miniTummy.faq3Q'), answer: t('miniTummy.faq3A') },
+    { question: t('miniTummy.faq4Q'), answer: t('miniTummy.faq4A') },
+    { question: t('miniTummy.faq5Q'), answer: t('miniTummy.faq5A') },
+    { question: t('miniTummy.faq6Q'), answer: t('miniTummy.faq6A') },
+    { question: t('miniTummy.faq7Q'), answer: t('miniTummy.faq7A') },
+    { question: t('miniTummy.faq8Q'), answer: t('miniTummy.faq8A') },
+    { question: t('miniTummy.faq9Q'), answer: t('miniTummy.faq9A') },
+    { question: t('miniTummy.faq10Q'), answer: t('miniTummy.faq10A') }
   ]
 
   const procedureSteps = [
-    { icon: "user", name: "Removal of loose skin" },
-    { icon: "move-horizontal", name: "Lower muscle tightening" },
-    { icon: "maximize", name: "Shorter incision" },
-    { icon: "smile", name: "Belly button preserved" }
+    { icon: "user", name: t('miniTummy.step1') },
+    { icon: "move-horizontal", name: t('miniTummy.step2') },
+    { icon: "maximize", name: t('miniTummy.step3') },
+    { icon: "smile", name: t('miniTummy.step4') }
   ]
 
   const benefits = [
     {
-      title: "Smaller Incision",
-      desc: "A shorter incision compared to full tummy tuck.",
-      features: ["Shorter scar", "Less visible", "Bikini-line placement"],
+      title: t('miniTummy.benefit1Title'),
+      desc: t('miniTummy.benefit1Desc'),
+      features: [t('miniTummy.benefit1Feat1'), t('miniTummy.benefit1Feat2'), t('miniTummy.benefit1Feat3')],
       highlight: true
     },
     {
-      title: "Faster Recovery",
-      desc: "Quicker return to daily activities.",
-      features: ["1-2 weeks recovery", "Less downtime", "Earlier exercise return"],
+      title: t('miniTummy.benefit2Title'),
+      desc: t('miniTummy.benefit2Desc'),
+      features: [t('miniTummy.benefit2Feat1'), t('miniTummy.benefit2Feat2'), t('miniTummy.benefit2Feat3')],
       highlight: false
     },
     {
-      title: "Targeted Results",
-      desc: "Focused correction for lower abdomen only.",
-      features: ["Lower belly focus", "Natural look", "Proportionate outcome"],
+      title: t('miniTummy.benefit3Title'),
+      desc: t('miniTummy.benefit3Desc'),
+      features: [t('miniTummy.benefit3Feat1'), t('miniTummy.benefit3Feat2'), t('miniTummy.benefit3Feat3')],
       highlight: false
     }
   ]
 
   const candidateChecklist = [
-    "Mild lower-abdominal laxity",
-    "Stable body weight",
-    "Good general health",
-    "Realistic expectations"
+    t('miniTummy.candidate1'),
+    t('miniTummy.candidate2'),
+    t('miniTummy.candidate3'),
+    t('miniTummy.candidate4')
   ]
 
   return (
@@ -416,23 +418,23 @@ export default function MiniTummyTuckMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('miniTummy.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Mini Tummy Tuck in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Targeted. Precise. Faster Recovery.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('miniTummy.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('miniTummy.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A mini tummy tuck, also called mini abdominoplasty, is a refined surgical solution for individuals with mild looseness limited to the lower abdomen, usually below the navel. This condition commonly appears after pregnancy, modest weight changes, or early skin laxity, even in people who maintain a healthy lifestyle.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>Unlike a full tummy tuck, a mini tummy tuck focuses only on the lower abdominal area. It removes excess skin and, when necessary, tightens the lower abdominal muscles—without repositioning the belly button. The result is a smoother, firmer lower abdomen achieved with a shorter incision, reduced surgical extent, and faster recovery.</p>
+                <p style={{fontSize: '14px'}}>{t('miniTummy.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('miniTummy.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Mini%20Tummy%20Tuck%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('miniTummy.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#process" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  How It Works
+                  {t('miniTummy.howItWorks')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -452,7 +454,7 @@ export default function MiniTummyTuckMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('miniTummy.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('miniTummy.happyPatients')}</span>
               </div>
             </div>
 
@@ -472,8 +474,8 @@ export default function MiniTummyTuckMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Lower Abdomen Focused</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('miniTummy.procedure')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('miniTummy.procedureName')}</p>
                     </div>
                   </div>
                 </div>
@@ -487,25 +489,24 @@ export default function MiniTummyTuckMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Mini Tummy Tuck?</h2>
-                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A mini tummy tuck is a limited form of abdominoplasty designed specifically for the lower abdomen. It targets excess skin and mild laxity below the navel, an area that often remains resistant to exercise even in slim individuals. This procedure is <strong>not</strong> a weight-loss treatment, nor is it suitable for patients with significant upper-abdominal skin excess or severe muscle separation.
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('miniTummy.whatTitle')}</h2>
+                <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify" dangerouslySetInnerHTML={{ __html: t('miniTummy.whatDesc') }}>
                 </p>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Removes Lower Abdominal Skin</span>
+                    <span>{t('miniTummy.whatPoint1')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Preserves Natural Belly Button</span>
+                    <span>{t('miniTummy.whatPoint2')}</span>
                   </div>
                 </div>
               </div>
 
               {/* Key Points Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">This Procedure Typically Involves</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('miniTummy.involvesTitle')}</h3>
                 <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {procedureSteps.map((area, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -525,8 +526,8 @@ export default function MiniTummyTuckMalaysia() {
         <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Benefits of a Mini Tummy Tuck</h2>
-              <p className="text-zinc-500 text-sm">For the right candidate, a mini tummy tuck offers several advantages over a full abdominoplasty.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('miniTummy.benefitsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('miniTummy.benefitsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
@@ -551,15 +552,15 @@ export default function MiniTummyTuckMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">Surgical Process Overview</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('miniTummy.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
                 {[
-                  { num: "1", title: "Marking", desc: "Lower abdomen planning" },
-                  { num: "2", title: "Excision", desc: "Skin removal below navel" },
-                  { num: "3", title: "Tightening", desc: "Lower muscle repair" },
-                  { num: "4", title: "Closure", desc: "Layered suturing" }
+                  { num: "1", title: t('miniTummy.processStep1'), desc: t('miniTummy.processStep1Desc') },
+                  { num: "2", title: t('miniTummy.processStep2'), desc: t('miniTummy.processStep2Desc') },
+                  { num: "3", title: t('miniTummy.processStep3'), desc: t('miniTummy.processStep3Desc') },
+                  { num: "4", title: t('miniTummy.processStep4'), desc: t('miniTummy.processStep4Desc') }
                 ].map((step, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500" style={{animationDelay: `${i * 150}ms`}}>
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{step.num}</div>
@@ -589,26 +590,26 @@ export default function MiniTummyTuckMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Regulated & Safe</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('miniTummy.regulatedSafe')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Performed in licensed facilities under Ministry of Health Malaysia standards.&rdquo;
+                  &ldquo;{t('miniTummy.regulatedSafeDesc')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Dr. Soma?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('miniTummy.whyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                At Dr. Soma Plastic Surgery, all mini tummy tuck procedures are performed personally by Dr. Soma, a certified plastic surgeon with experience in body contouring surgery and structured postoperative care. Each procedure is planned conservatively, focusing on proportion, safety, and natural outcomes.
+                {t('miniTummy.whyDesc')}
               </p>
 
               <div className="space-y-6">
                 {[
-                  { icon: "user-check", title: "Certified Plastic Surgeon", desc: "Performed by a board-certified specialist, not a general practitioner." },
-                  { icon: "sliders", title: "Conservative Approach", desc: "Focused on proportion and natural-looking results." },
-                  { icon: "hospital", title: "Hospital Standards", desc: "Full monitoring and sterile environment for maximum safety." }
+                  { icon: "user-check", title: t('miniTummy.whyItem1Title'), desc: t('miniTummy.whyItem1Desc') },
+                  { icon: "sliders", title: t('miniTummy.whyItem2Title'), desc: t('miniTummy.whyItem2Desc') },
+                  { icon: "hospital", title: t('miniTummy.whyItem3Title'), desc: t('miniTummy.whyItem3Desc') }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                     <div className="flex-shrink-0 w-14 h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
@@ -623,7 +624,7 @@ export default function MiniTummyTuckMalaysia() {
               </div>
 
               <div className="mt-10 pt-10 border-t border-zinc-100">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Good Candidates Checklist</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('miniTummy.candidateTitle')}</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -641,24 +642,24 @@ export default function MiniTummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Mini Tummy Tuck vs Full Tummy Tuck</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('miniTummy.compareTitle')}</h2>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-200 text-[10px] sm:text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-3 md:gap-4">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>Mini Tummy</span></div>
-                  <div>Full Tummy</div>
+                  <div>{t('miniTummy.feature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-1 md:gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span><span>{t('miniTummy.compMini')}</span></div>
+                  <div>{t('miniTummy.compFull')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Targets Lower Abdomen Only", mini: "Yes", miniIcon: true, full: "No", fullX: true },
-                  { feat: "Removes Loose Skin", mini: "Limited", full: "Extensive" },
-                  { feat: "Muscle Tightening", mini: "Limited", full: "Full" },
-                  { feat: "Belly Button Reposition", mini: "No", miniX: true, full: "Yes", fullIcon: true },
-                  { feat: "Scar Length", mini: "Shorter", full: "Longer" },
-                  { feat: "Typical Downtime", mini: "1–2 Weeks", full: "3–4 Weeks" }
+                  { feat: t('miniTummy.row1Feat'), mini: t('miniTummy.row1Mini'), miniIcon: true, full: t('miniTummy.row1Full'), fullX: true },
+                  { feat: t('miniTummy.row2Feat'), mini: t('miniTummy.row2Mini'), full: t('miniTummy.row2Full') },
+                  { feat: t('miniTummy.row3Feat'), mini: t('miniTummy.row3Mini'), full: t('miniTummy.row3Full') },
+                  { feat: t('miniTummy.row4Feat'), mini: t('miniTummy.row4Mini'), miniX: true, full: t('miniTummy.row4Full'), fullIcon: true },
+                  { feat: t('miniTummy.row5Feat'), mini: t('miniTummy.row5Mini'), full: t('miniTummy.row5Full') },
+                  { feat: t('miniTummy.row6Feat'), mini: t('miniTummy.row6Mini'), full: t('miniTummy.row6Full') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-3 px-2 py-3 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[10px] sm:text-[11px] md:text-sm gap-3 md:gap-4 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -678,7 +679,7 @@ export default function MiniTummyTuckMalaysia() {
 
               <div className="mt-8 text-center">
                 <Link href="/body/tummy-tuck-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Full Tummy Tuck Details
+                  {t('miniTummy.viewFullDetails')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -690,34 +691,34 @@ export default function MiniTummyTuckMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Expected Results and Recovery Timeline</h2>
-              <p className="text-zinc-500 text-sm">Results appear earlier than full tummy tuck due to reduced swelling and tissue trauma.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('miniTummy.resultsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('miniTummy.resultsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Week 1",
-                  title: "Early Recovery",
-                  points: ["Mild swelling and tightness", "Compression garment worn", "Light walking encouraged"],
+                  time: t('miniTummy.resTime1'),
+                  title: t('miniTummy.resTitle1'),
+                  points: [t('miniTummy.resPoint1a'), t('miniTummy.resPoint1b'), t('miniTummy.resPoint1c')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 2",
-                  title: "Improved Comfort",
-                  points: ["Return to desk work", "Reduced swelling", "Wound care continues"],
+                  time: t('miniTummy.resTime2'),
+                  title: t('miniTummy.resTitle2'),
+                  points: [t('miniTummy.resPoint2a'), t('miniTummy.resPoint2b'), t('miniTummy.resPoint2c')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 4–6",
-                  title: "Visible Results",
-                  points: ["Visible flattening", "Resume light exercise", "Scar healing progresses"],
+                  time: t('miniTummy.resTime3'),
+                  title: t('miniTummy.resTitle3'),
+                  points: [t('miniTummy.resPoint3a'), t('miniTummy.resPoint3b'), t('miniTummy.resPoint3c')],
                   icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Month 3",
-                  title: "Final Contour",
-                  points: ["Final shape revealed", "Swelling fully resolves", "Long-lasting results"],
+                  time: t('miniTummy.resTime4'),
+                  title: t('miniTummy.resTitle4'),
+                  points: [t('miniTummy.resPoint4a'), t('miniTummy.resPoint4b'), t('miniTummy.resPoint4c')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -758,10 +759,10 @@ export default function MiniTummyTuckMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Week 1</span>
-                <span>Week 2</span>
-                <span>Week 4-6</span>
-                <span>Month 3</span>
+                <span>{t('miniTummy.resTime1')}</span>
+                <span>{t('miniTummy.resTime2')}</span>
+                <span>{t('miniTummy.resTime3')}</span>
+                <span>{t('miniTummy.resTime4')}</span>
               </div>
             </div>
           </div>
@@ -770,13 +771,13 @@ export default function MiniTummyTuckMalaysia() {
         {/* Why Not Full Tummy Tuck Section */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="why-not-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('why-not-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Why Some Patients Do Not Need a Full Tummy Tuck</h2>
+            <h2 data-animate="why-not-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('why-not-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('miniTummy.whyNotTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { text: "Mild post-pregnancy lower-abdominal skin laxity", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
-                { text: "Early skin aging without muscle separation", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
-                { text: "Weight fluctuations affecting only lower abdomen", icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" },
-                { text: "'Pouch' below belly button despite overall fitness", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" }
+                { text: t('miniTummy.whyNot1'), icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
+                { text: t('miniTummy.whyNot2'), icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+                { text: t('miniTummy.whyNot3'), icon: "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" },
+                { text: t('miniTummy.whyNot4'), icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" }
               ].map((item, i) => (
                 <div key={i} data-animate={`why-not-${i}`} className={`p-8 bg-white rounded-2xl border border-zinc-100 shadow-lg card-3d card-shine hover:border-[#FE7623] ${isVisible(`why-not-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
                   <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-[#FE7623] transition-all duration-300">
@@ -788,7 +789,7 @@ export default function MiniTummyTuckMalaysia() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-sm text-zinc-500 mt-8 max-w-2xl mx-auto">In these cases, a full tummy tuck would be unnecessary overtreatment. A mini tummy tuck provides correction that matches the anatomical problem.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8 max-w-2xl mx-auto">{t('miniTummy.whyNotNote')}</p>
           </div>
         </section>
 
@@ -805,11 +806,11 @@ export default function MiniTummyTuckMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('miniTummy.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Mini tummy tuck cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('miniTummy.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Amount of skin to remove", "Muscle repair required", "Combination with liposuction", "Operating time"].map((item, i) => (
+                  {[t('miniTummy.priceFactor1'), t('miniTummy.priceFactor2'), t('miniTummy.priceFactor3'), t('miniTummy.priceFactor4')].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
@@ -817,7 +818,7 @@ export default function MiniTummyTuckMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Mini%20Tummy%20Tuck%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('miniTummy.getQuote')}
                 </a>
               </div>
             </div>
@@ -829,8 +830,8 @@ export default function MiniTummyTuckMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about mini tummy tuck</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('miniTummy.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('miniTummy.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -875,13 +876,13 @@ export default function MiniTummyTuckMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('miniTummy.refTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Mayo Clinic", url: "https://www.mayoclinic.org/tests-procedures/tummy-tuck/about/pac-20384892", desc: "Clinical overview recognizing mini abdominoplasty as an appropriate option for carefully selected patients.", color: "from-blue-500 to-blue-600" },
-                { name: "Ministry of Health Malaysia", url: "https://www.moh.gov.my/", desc: "Regulates private healthcare services and surgical safety standards in Malaysia.", color: "from-red-500 to-red-600" },
-                { name: "World Health Organization", url: "https://www.who.int/", desc: "Guidelines on safe surgery and postoperative care standards used worldwide.", color: "from-green-500 to-green-600" }
+                { name: t('miniTummy.ref1Name'), url: "https://www.mayoclinic.org/tests-procedures/tummy-tuck/about/pac-20384892", desc: t('miniTummy.ref1Desc'), color: "from-blue-500 to-blue-600" },
+                { name: t('miniTummy.ref2Name'), url: "https://www.moh.gov.my/", desc: t('miniTummy.ref2Desc'), color: "from-red-500 to-red-600" },
+                { name: t('miniTummy.ref3Name'), url: "https://www.who.int/", desc: t('miniTummy.ref3Desc'), color: "from-green-500 to-green-600" }
               ].map((source, i) => (
                 <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
@@ -911,24 +912,24 @@ export default function MiniTummyTuckMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Refine your lower-abdominal contour.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('miniTummy.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              Mini tummy tuck procedures are planned conservatively, performed personally by the surgeon, and supported by structured postoperative care to ensure safety and natural results.
+              {t('miniTummy.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Mini%20Tummy%20Tuck%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('miniTummy.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('miniTummy.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["mini abdominoplasty", "lower abdomen tightening", "shorter incision", "faster recovery", "body contouring"].map((tag, i) => (
+              {[t('miniTummy.seoTag1'), t('miniTummy.seoTag2'), t('miniTummy.seoTag3'), t('miniTummy.seoTag4'), t('miniTummy.seoTag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
