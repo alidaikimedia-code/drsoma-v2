@@ -2,10 +2,18 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
+import { getLocaleFromPath } from '@/i18n/config'
 
 export default function RhinoplastyRevisionMalaysia() {
+  const { t, i18n } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const detected = getLocaleFromPath(window.location.pathname)
+    if (detected !== i18n.language) i18n.changeLanguage(detected)
+  }, [i18n])
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -34,62 +42,29 @@ export default function RhinoplastyRevisionMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is revision rhinoplasty?", answer: "Revision rhinoplasty is corrective nose surgery performed after a previous rhinoplasty to fix functional or aesthetic problems." },
-    { question: "How long should I wait before revision surgery?", answer: "Most surgeons recommend waiting at least 9–12 months after the initial surgery." },
-    { question: "Is revision rhinoplasty riskier than primary rhinoplasty?", answer: "Yes. It is more complex due to scar tissue and altered anatomy, but safe when performed by experienced surgeons." },
-    { question: "Will I need cartilage grafts?", answer: "In many cases, yes. Grafts help restore support and correct deformities." },
-    { question: "Can breathing problems be fixed during revision?", answer: "Yes. Functional correction is a key goal of revision rhinoplasty." },
-    { question: "Will my nose ever look \"normal\" again?", answer: "In most cases, significant improvement is achievable, though perfection is not guaranteed." },
-    { question: "Is recovery longer than the first surgery?", answer: "Often yes, especially when extensive reconstruction or cartilage grafting is required." }
-  ]
+  const faqs = Array.from({ length: 7 }, (_, i) => ({
+    question: t(`revRhino.faq${i}Q`),
+    answer: t(`revRhino.faq${i}A`),
+  }))
 
-  const revisionReasons = [
-    "Persistent nasal obstruction or breathing difficulty",
-    "Asymmetry or crooked appearance",
-    "Over-reduction of the bridge or tip",
-    "Pinched or collapsed nostrils",
-    "Visible or shifting implants",
-    "Drooping, stiff, or undefined nasal tip",
-    "Unnatural appearance that does not suit the face"
-  ]
+  const revisionReasons = Array.from({ length: 7 }, (_, i) => t(`revRhino.reason${i}`))
 
-  const challenges = [
-    "Scar tissue limiting flexibility",
-    "Missing or weakened cartilage",
-    "Altered blood supply",
-    "Distorted anatomy from prior surgery"
-  ]
+  const challenges = Array.from({ length: 4 }, (_, i) => t(`revRhino.challenge${i}`))
 
-  const techniques = [
-    { title: "Structural Cartilage Reconstruction", desc: "Cartilage grafts are commonly required to restore strength and shape. Sources may include nasal septum (if available), ear cartilage, or rib cartilage for major reconstruction." },
-    { title: "Open Surgical Approach", desc: "Most revision rhinoplasties use an open approach for full visibility and precise correction of complex issues." },
-    { title: "Functional Airway Correction", desc: "Breathing issues are addressed using techniques such as spreader grafts, valve repair, or septal reconstruction." },
-    { title: "Tip Reconstruction", desc: "Rebuilding nasal tip support and definition using cartilage grafts and structural reinforcement techniques." }
-  ]
+  const techniques = Array.from({ length: 4 }, (_, i) => ({
+    title: t(`revRhino.tech${i}Title`),
+    desc: t(`revRhino.tech${i}Desc`),
+  }))
 
-  const comparisonData = [
-    { aspect: "Anatomy", primary: "Untouched", revision: "Scarred/altered" },
-    { aspect: "Difficulty", primary: "Moderate", revision: "High" },
-    { aspect: "Cartilage Availability", primary: "Usually adequate", revision: "Often limited" },
-    { aspect: "Goals", primary: "Shape & balance", revision: "Repair & restore" },
-    { aspect: "Predictability", primary: "Higher", revision: "More variable" }
-  ]
+  const comparisonData = Array.from({ length: 5 }, (_, i) => ({
+    aspect: t(`revRhino.comp${i}Aspect`),
+    primary: t(`revRhino.comp${i}Primary`),
+    revision: t(`revRhino.comp${i}Revision`),
+  }))
 
-  const benefits = [
-    "Improved breathing and airflow",
-    "Better nasal symmetry",
-    "Restored structural support",
-    "More natural facial harmony",
-    "Increased confidence and comfort"
-  ]
+  const benefits = Array.from({ length: 5 }, (_, i) => t(`revRhino.benefit${i}`))
 
-  const expectations = [
-    "Perfect symmetry is not always achievable",
-    "Scar tissue limits extreme refinement",
-    "Some noses need structural strength over sharp definition",
-    "Multiple revisions increase complexity and risk"
-  ]
+  const expectations = Array.from({ length: 4 }, (_, i) => t(`revRhino.expectation${i}`))
 
   return (
     <>
@@ -325,23 +300,23 @@ export default function RhinoplastyRevisionMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('revRhino.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Revision Rhinoplasty in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Corrective Nose Surgery for Function, Structure, and Balance</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('revRhino.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('revRhino.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Revision rhinoplasty is one of the most technically demanding procedures in facial plastic surgery. It is performed to correct problems from a previous nose surgery, whether those issues are aesthetic, structural, functional, or — often — all three at once.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, revision rhinoplasty is a regulated surgical procedure carried out in licensed medical facilities under standards overseen by the Ministry of Health Malaysia. This is not about chasing perfection; it is about restoring function, stability, and facial balance where the first surgery fell short.</p>
+                <p style={{fontSize: '14px'}}>{t('revRhino.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('revRhino.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Revision%20Rhinoplasty" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('revRhino.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('revRhino.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -361,7 +336,7 @@ export default function RhinoplastyRevisionMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('revRhino.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('revRhino.happyPatients')}</span>
               </div>
             </div>
 
@@ -381,8 +356,8 @@ export default function RhinoplastyRevisionMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Corrective Reconstruction</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('revRhino.procedureFocusLabel')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('revRhino.procedureFocusValue')}</p>
                     </div>
                   </div>
                 </div>
@@ -396,23 +371,23 @@ export default function RhinoplastyRevisionMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Revision Rhinoplasty?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('revRhino.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Revision rhinoplasty is a secondary or tertiary nose surgery performed after a previous rhinoplasty. It aims to correct complications, deformities, breathing issues, or unsatisfactory cosmetic outcomes from earlier procedures.
+                  {t('revRhino.whatIsDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Unlike primary rhinoplasty, where surgeons work with untouched anatomy, revision cases involve scar tissue, altered cartilage and bone, reduced structural support, and distorted landmarks. This makes every revision case unique and more complex.
+                  {t('revRhino.whatIsDesc2')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>Important:</strong> Patients seeking revision rhinoplasty are often emotionally exhausted. Many waited months or years hoping the nose would &quot;settle,&quot; only to realise that time alone cannot fix structural problems.</p>
+                  <p className="text-sm text-zinc-700"><strong>Important:</strong> {t('revRhino.whatIsNote')}</p>
                 </div>
               </div>
 
               {/* Why More Complex */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Revision Rhinoplasty Is More Complex</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('revRhino.whyComplexTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Revision rhinoplasty is reconstructive, not merely cosmetic. Surgeons often need to rebuild support before reshaping, which requires advanced techniques and careful staging.
+                  {t('revRhino.whyComplexDesc')}
                 </p>
                 <div className="space-y-3">
                   {challenges.map((item, i) => (
@@ -443,9 +418,9 @@ export default function RhinoplastyRevisionMalaysia() {
 
             {/* Content Section */}
             <div data-animate="reasons-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('reasons-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Common Reasons for Revision Rhinoplasty</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('revRhino.reasonsTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Patients seek revision surgery for several reasons. According to principles outlined by institutions such as the Mayo Clinic, structural integrity and airway function are just as important as appearance in nasal surgery.
+                {t('revRhino.reasonsDesc')}
               </p>
 
               <div className="grid grid-cols-1 gap-3 mb-6">
@@ -464,8 +439,8 @@ export default function RhinoplastyRevisionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="techniques-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('techniques-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Surgical Techniques Used in Revision Rhinoplasty</h2>
-              <p className="text-zinc-500 text-sm">The American Society of Plastic Surgeons highlights that restoring nasal support is critical to long-term success in revision cases.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('revRhino.techniquesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('revRhino.techniquesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
@@ -488,17 +463,17 @@ export default function RhinoplastyRevisionMalaysia() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="comparison-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('comparison-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">Revision Rhinoplasty vs Primary Rhinoplasty</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Revision surgery demands patience — from both surgeon and patient.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">{t('revRhino.comparisonTitle')}</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">{t('revRhino.comparisonDesc')}</p>
             </div>
 
             <div className="overflow-x-auto px-4 md:px-8">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-zinc-700">
-                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">Aspect</th>
-                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">Primary Rhinoplasty</th>
-                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">Revision Rhinoplasty</th>
+                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">{t('revRhino.compAspect')}</th>
+                    <th className="text-left py-4 px-4 text-zinc-400 font-semibold">{t('revRhino.compPrimary')}</th>
+                    <th className="text-left py-4 px-4 text-[#FE7623] font-semibold">{t('revRhino.compRevision')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -519,18 +494,18 @@ export default function RhinoplastyRevisionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="timing-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('timing-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Timing: When Can Revision Rhinoplasty Be Done?</h2>
-              <p className="text-zinc-500 text-sm">Timing matters. Swelling, scar maturation, and tissue healing must fully stabilise before reoperation.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('revRhino.timingTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('revRhino.timingDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8 max-w-3xl mx-auto">
               <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-200">
-                <h3 className="text-lg font-bold text-zinc-900 mb-2">Minor Revisions</h3>
-                <p className="text-sm text-zinc-500">At least 9–12 months after the first surgery</p>
+                <h3 className="text-lg font-bold text-zinc-900 mb-2">{t('revRhino.minorTitle')}</h3>
+                <p className="text-sm text-zinc-500">{t('revRhino.minorDesc')}</p>
               </div>
               <div className="p-6 bg-orange-50 rounded-2xl border border-orange-200">
-                <h3 className="text-lg font-bold text-[#FE7623] mb-2">Major Reconstruction</h3>
-                <p className="text-sm text-zinc-600">Often 12 months or longer for complex cases</p>
+                <h3 className="text-lg font-bold text-[#FE7623] mb-2">{t('revRhino.majorTitle')}</h3>
+                <p className="text-sm text-zinc-600">{t('revRhino.majorDesc')}</p>
               </div>
             </div>
           </div>
@@ -540,17 +515,15 @@ export default function RhinoplastyRevisionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Healing Process</h2>
-              <p className="text-zinc-500 text-sm">Healing after revision rhinoplasty may take longer than the first surgery. Thicker skin and extensive grafting may extend the refinement phase.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('revRhino.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('revRhino.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
-              {[
-                { time: "Week 1", desc: "Swelling, splint in place" },
-                { time: "Week 2", desc: "Visible improvement, bruising subsides" },
-                { time: "Month 1–3", desc: "Gradual refinement" },
-                { time: "Month 6–12", desc: "Final shape and breathing outcome" }
-              ].map((item, i) => (
+              {Array.from({ length: 4 }, (_, i) => ({
+                time: t(`revRhino.timeline${i}Time`),
+                desc: t(`revRhino.timeline${i}Desc`),
+              })).map((item, i) => (
                 <div key={i} data-animate={`timeline-${i}`} className={`relative bg-white pt-14 pb-6 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`timeline-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-4 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {item.time}
@@ -567,9 +540,9 @@ export default function RhinoplastyRevisionMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start px-4 md:px-8">
               <div data-animate="benefits-content" className={`transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Revision Rhinoplasty</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('revRhino.benefitsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  When successful, revision rhinoplasty often provides not just physical relief, but psychological closure.
+                  {t('revRhino.benefitsDesc')}
                 </p>
                 <div className="space-y-3">
                   {benefits.map((item, i) => (
@@ -583,9 +556,9 @@ export default function RhinoplastyRevisionMalaysia() {
 
               {/* Expectations */}
               <div data-animate="expectations-content" className={`transition-all duration-700 ${isVisible('expectations-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Realistic Expectations Matter</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('revRhino.expectationsTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Revision rhinoplasty is about improvement, not erasure of history. Honest preoperative counselling is essential.
+                  {t('revRhino.expectationsDesc')}
                 </p>
                 <div className="space-y-3">
                   {expectations.map((item, i) => (
@@ -613,11 +586,11 @@ export default function RhinoplastyRevisionMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('revRhino.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Revision rhinoplasty cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('revRhino.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Complexity of reconstruction", "Cartilage graft requirements", "Open vs closed approach", "Operating time", "Facility and anaesthesia fees"].map((item, i) => (
+                  {Array.from({ length: 5 }, (_, i) => t(`revRhino.pricing${i}`)).map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -625,7 +598,7 @@ export default function RhinoplastyRevisionMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Revision%20Rhinoplasty" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('revRhino.getQuote')}
                 </a>
               </div>
             </div>
@@ -637,8 +610,8 @@ export default function RhinoplastyRevisionMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about revision rhinoplasty</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('revRhino.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('revRhino.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -684,16 +657,16 @@ export default function RhinoplastyRevisionMalaysia() {
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety and Regulation in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">Revision rhinoplasty is performed in accordance with standards set by the Ministry of Health Malaysia.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">{t('revRhino.safetyTitle')}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{t('revRhino.safetyDesc')}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-4 md:px-8">
               {[
-                { name: "Surgical Facility Licensing", desc: "All procedures performed in licensed and regulated facilities", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Anaesthesia Protocols", desc: "Strict anaesthesia safety and monitoring standards", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Infection Control", desc: "Comprehensive infection control and sterility protocols", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
-                { name: "Postoperative Monitoring", desc: "Aligned with global WHO surgical safety frameworks", color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
+                { name: t('revRhino.safety0Name'), desc: t('revRhino.safety0Desc'), color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+                { name: t('revRhino.safety1Name'), desc: t('revRhino.safety1Desc'), color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+                { name: t('revRhino.safety2Name'), desc: t('revRhino.safety2Desc'), color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
+                { name: t('revRhino.safety3Name'), desc: t('revRhino.safety3Desc'), color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
               ].map((source, i) => (
                 <div key={i} className="block px-6 py-6 rounded-2xl border border-zinc-200 bg-zinc-50 card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center gap-3 mb-3">
@@ -720,27 +693,27 @@ export default function RhinoplastyRevisionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Perspective</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('revRhino.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Revision rhinoplasty exists to correct what a previous surgery could not achieve — whether that means restoring breathing, rebuilding structure, or refining appearance.
+              {t('revRhino.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              It requires advanced surgical skill, realistic expectations, and patience from both surgeon and patient. When performed correctly, revision rhinoplasty can offer not just physical improvement, but emotional relief and renewed confidence.
+              {t('revRhino.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Revision%20Rhinoplasty" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('revRhino.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('revRhino.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["revision rhinoplasty Malaysia", "corrective nose surgery", "secondary rhinoplasty", "nose reconstruction", "failed rhinoplasty repair"].map((tag, i) => (
+              {Array.from({ length: 5 }, (_, i) => t(`revRhino.tag${i}`)).map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

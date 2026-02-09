@@ -2,10 +2,18 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
+import { getLocaleFromPath } from '@/i18n/config'
 
 export default function RhinoplastyMalaysia() {
+  const { t, i18n } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const detected = getLocaleFromPath(window.location.pathname)
+    if (detected !== i18n.language) i18n.changeLanguage(detected)
+  }, [i18n])
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -35,65 +43,42 @@ export default function RhinoplastyMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is rhinoplasty?", answer: "Rhinoplasty is a surgical procedure that reshapes the nose to improve appearance, breathing, or both." },
-    { question: "Is rhinoplasty safe?", answer: "When performed by a qualified surgeon in a licensed medical facility, rhinoplasty is considered safe and well established." },
-    { question: "How long does recovery take after rhinoplasty?", answer: "Most patients return to daily activities within 1–2 weeks, with final results developing over up to a year." },
-    { question: "Will there be visible scars?", answer: "In closed rhinoplasty, scars are inside the nose. In open rhinoplasty, the external scar is small and usually fades well." },
-    { question: "Is rhinoplasty permanent?", answer: "Yes. Results are long lasting, although natural ageing can subtly affect nasal appearance over time." },
-    { question: "Can rhinoplasty fix breathing problems?", answer: "Yes. Functional rhinoplasty can correct structural issues like a deviated septum to improve airflow." }
-  ]
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
+    question: t(`rhino.faq${i}Q`),
+    answer: t(`rhino.faq${i}A`),
+  }))
 
-  const suitableFor = [
-    "Are bothered by the shape or size of their nose",
-    "Have breathing difficulties related to nasal structure",
-    "Have completed facial growth (usually after late teens)",
-    "Are in good general health",
-    "Have realistic expectations"
-  ]
+  const suitableFor = Array.from({ length: 5 }, (_, i) => t(`rhino.suitable${i}`))
 
-  const techniques = [
-    { title: "Open Rhinoplasty", desc: "A small incision is made at the base of the nose, allowing full visibility of nasal structures. Often used for complex reshaping and revision cases." },
-    { title: "Closed Rhinoplasty", desc: "All incisions are placed inside the nostrils. There is no visible external scar, and recovery may be slightly faster for suitable cases." },
-    { title: "Preservation Rhinoplasty", desc: "A modern approach that maintains natural nasal structures while making subtle refinements. It aims for softer, more natural results." },
-    { title: "Revision Rhinoplasty", desc: "Performed to correct or improve the outcome of a previous nose surgery. These cases are more complex and require advanced expertise." }
-  ]
+  const techniques = Array.from({ length: 4 }, (_, i) => ({
+    title: t(`rhino.tech${i}Title`),
+    desc: t(`rhino.tech${i}Desc`),
+  }))
 
-  const procedureSteps = [
-    "Detailed preoperative facial analysis",
-    "Surgical reshaping of bone and cartilage",
-    "Structural support for long-term stability",
-    "Precise closure of incisions",
-    "Application of nasal splint for protection"
-  ]
+  const procedureSteps = Array.from({ length: 5 }, (_, i) => t(`rhino.step${i}`))
 
-  const benefits = [
-    "Improved facial balance",
-    "Enhanced nasal symmetry",
-    "Better breathing function (when structural issues are corrected)",
-    "Long-lasting results",
-    "Increased confidence"
-  ]
+  const benefits = Array.from({ length: 5 }, (_, i) => t(`rhino.benefit${i}`))
 
-  const limitations = [
-    "Swelling can take months to fully resolve",
-    "Perfect symmetry is not realistic",
-    "Revision surgery, while uncommon, may be needed",
-    "Skin thickness affects final definition"
-  ]
+  const limitations = Array.from({ length: 4 }, (_, i) => t(`rhino.limitation${i}`))
 
-  const recoveryTips = [
-    "Keep the head elevated",
-    "Avoid strenuous activity initially",
-    "Protect the nose from impact",
-    "Attend scheduled follow-up visits"
-  ]
+  const recoveryTips = Array.from({ length: 4 }, (_, i) => t(`rhino.recovery${i}`))
 
-  const facialHarmony = [
-    "Forehead–nose–chin alignment",
-    "Lip and nasal tip angle",
-    "Width of the nasal base relative to the eyes",
-    "Ethnic and gender-specific features"
+  const facialHarmony = Array.from({ length: 4 }, (_, i) => t(`rhino.harmony${i}`))
+
+  const pricingItems = Array.from({ length: 5 }, (_, i) => t(`rhino.pricing${i}`))
+
+  const tags = Array.from({ length: 5 }, (_, i) => t(`rhino.tag${i}`))
+
+  const timelineData = Array.from({ length: 4 }, (_, i) => ({
+    time: t(`rhino.timeline${i}Time`),
+    desc: t(`rhino.timeline${i}Desc`),
+  }))
+
+  const safetyData = [
+    { name: t('rhino.safety0Name'), desc: t('rhino.safety0Desc'), color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
+    { name: t('rhino.safety1Name'), desc: t('rhino.safety1Desc'), color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
+    { name: t('rhino.safety2Name'), desc: t('rhino.safety2Desc'), color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
+    { name: t('rhino.safety3Name'), desc: t('rhino.safety3Desc'), color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
   ]
 
   return (
@@ -316,23 +301,23 @@ export default function RhinoplastyMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('rhino.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Rhinoplasty in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Precision Nose Reshaping for Facial Harmony and Function</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('rhino.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('rhino.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Rhinoplasty, commonly known as a nose job, is a surgical procedure that reshapes the nose to improve facial balance, breathing function, or both. It is one of the most technically demanding procedures in plastic surgery because even small changes can significantly affect appearance and airflow.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, rhinoplasty is a regulated surgical procedure performed by registered medical practitioners in licensed facilities under the Ministry of Health Malaysia. The goal is not to create a &quot;perfect nose,&quot; but a nose that fits the face and functions well.</p>
+                <p style={{fontSize: '14px'}}>{t('rhino.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('rhino.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('rhino.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('rhino.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -352,7 +337,7 @@ export default function RhinoplastyMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('rhino.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('rhino.happyPatients')}</span>
               </div>
             </div>
 
@@ -372,8 +357,8 @@ export default function RhinoplastyMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Facial Harmony & Function</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('rhino.procedureFocusLabel')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('rhino.procedureFocusValue')}</p>
                     </div>
                   </div>
                 </div>
@@ -387,35 +372,35 @@ export default function RhinoplastyMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Rhinoplasty?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('rhino.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Rhinoplasty is a surgical procedure that modifies the bone, cartilage, skin, or internal nasal structures to change the shape, size, or function of the nose. It can be cosmetic, functional, or a combination of both.
+                  {t('rhino.whatIsDesc1')}
                 </p>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Major clinical institutions such as the Mayo Clinic describe rhinoplasty as a procedure that can improve nasal appearance while also correcting breathing problems caused by structural abnormalities like a deviated septum.
+                  {t('rhino.whatIsDesc2')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>Note:</strong> Rhinoplasty is not a one-size-fits-all surgery. Each nose has unique anatomy, and the surgical plan must be tailored to facial proportions, skin thickness, and functional needs.</p>
+                  <p className="text-sm text-zinc-700"><strong>Note:</strong> {t('rhino.whatIsNote')}</p>
                 </div>
               </div>
 
               {/* Cosmetic vs Functional */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Cosmetic vs Functional Rhinoplasty</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('rhino.cosmeticVsFunctional')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Understanding the difference helps set realistic expectations.
+                  {t('rhino.cosmeticVsFunctionalDesc')}
                 </p>
                 <div className="space-y-4">
                   <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100">
-                    <h4 className="text-sm font-bold text-zinc-900 mb-2">Cosmetic Rhinoplasty</h4>
-                    <p className="text-sm text-zinc-500">Focuses on appearance. This may include refining the nasal tip, reducing a hump, narrowing the bridge, or improving symmetry.</p>
+                    <h4 className="text-sm font-bold text-zinc-900 mb-2">{t('rhino.cosmeticTitle')}</h4>
+                    <p className="text-sm text-zinc-500">{t('rhino.cosmeticDesc')}</p>
                   </div>
                   <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100">
-                    <h4 className="text-sm font-bold text-zinc-900 mb-2">Functional Rhinoplasty</h4>
-                    <p className="text-sm text-zinc-500">Addresses breathing issues. It may involve correcting a deviated septum, strengthening weak nasal valves, or improving airflow.</p>
+                    <h4 className="text-sm font-bold text-zinc-900 mb-2">{t('rhino.functionalTitle')}</h4>
+                    <p className="text-sm text-zinc-500">{t('rhino.functionalDesc')}</p>
                   </div>
                   <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                    <p className="text-sm text-zinc-700"><strong>Combined Approach:</strong> Many patients undergo both cosmetic and functional rhinoplasty, achieving aesthetic refinement and better breathing in one surgery.</p>
+                    <p className="text-sm text-zinc-700"><strong>{t('rhino.combinedLabel')}</strong> {t('rhino.combinedDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -439,9 +424,9 @@ export default function RhinoplastyMalaysia() {
 
             {/* Content Section */}
             <div data-animate="candidate-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Rhinoplasty Is For</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('rhino.whoIsForTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Rhinoplasty is suitable for patients who meet the following criteria:
+                {t('rhino.whoIsForDesc')}
               </p>
 
               <div className="grid grid-cols-1 gap-3 mb-6">
@@ -454,7 +439,7 @@ export default function RhinoplastyMalaysia() {
               </div>
 
               <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-                <p className="text-sm text-red-700"><strong>Not recommended</strong> for patients seeking drastic changes that do not align with facial anatomy or those with untreated medical conditions that increase surgical risk.</p>
+                <p className="text-sm text-red-700"><strong>{t('rhino.notRecommended')}</strong> {t('rhino.notRecommendedDesc')}</p>
               </div>
             </div>
           </div>
@@ -464,8 +449,8 @@ export default function RhinoplastyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="techniques-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('techniques-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Types of Rhinoplasty Techniques</h2>
-              <p className="text-zinc-500 text-sm">Technique selection depends on anatomy, goals, and surgical judgment.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('rhino.techniquesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('rhino.techniquesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
@@ -488,8 +473,8 @@ export default function RhinoplastyMalaysia() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div data-animate="procedure-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('procedure-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight mb-4">How Rhinoplasty Surgery Is Performed</h2>
-              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">Rhinoplasty is typically performed under general anaesthesia in a hospital setting.</p>
+              <h2 className="text-3xl font-semibold tracking-tight mb-4">{t('rhino.procedureTitle')}</h2>
+              <p className="text-zinc-400 text-sm max-w-2xl mx-auto">{t('rhino.procedureDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -502,7 +487,7 @@ export default function RhinoplastyMalaysia() {
             </div>
 
             <p className="text-sm text-zinc-400 mt-8 text-center max-w-2xl mx-auto">
-              According to guidance from the American Society of Plastic Surgeons, long-term success in rhinoplasty depends on structural support, not just surface appearance.
+              {t('rhino.procedureNote')}
             </p>
           </div>
         </section>
@@ -511,17 +496,12 @@ export default function RhinoplastyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="results-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('results-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">What Results Can You Expect?</h2>
-              <p className="text-zinc-500 text-sm">Rhinoplasty results develop gradually. Patience is essential.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('rhino.resultsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('rhino.resultsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
-              {[
-                { time: "Week 1–2", desc: "Swelling, bruising, nasal splint in place" },
-                { time: "Week 3–4", desc: "Major swelling reduces, nose shape becomes clearer" },
-                { time: "Month 3–6", desc: "Refinement continues" },
-                { time: "12 Months", desc: "Final shape stabilises" }
-              ].map((item, i) => (
+              {timelineData.map((item, i) => (
                 <div key={i} data-animate={`timeline-${i}`} className={`relative bg-zinc-50 pt-14 pb-6 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`timeline-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-4 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {item.time}
@@ -532,7 +512,7 @@ export default function RhinoplastyMalaysia() {
             </div>
 
             <p className="text-sm text-zinc-500 mt-8 text-center max-w-2xl mx-auto">
-              Thicker skin may take longer to reveal fine definition, while thinner skin shows changes earlier.
+              {t('rhino.resultsNote')}
             </p>
           </div>
         </section>
@@ -542,11 +522,11 @@ export default function RhinoplastyMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div data-animate="harmony-content" className={`transition-all duration-700 ${isVisible('harmony-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Rhinoplasty and Facial Harmony</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('rhino.harmonyTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  A successful rhinoplasty does not draw attention to the nose. Instead, it improves overall facial balance. The aim is harmony, not exaggeration.
+                  {t('rhino.harmonyDesc')}
                 </p>
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Surgeons Evaluate:</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('rhino.surgeonsEvaluate')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {facialHarmony.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
@@ -559,9 +539,9 @@ export default function RhinoplastyMalaysia() {
 
               {/* Benefits */}
               <div data-animate="benefits-content" className={`transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Benefits of Rhinoplasty</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('rhino.benefitsTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  For many patients, the emotional impact of feeling comfortable with their appearance is just as important as the physical change.
+                  {t('rhino.benefitsDesc')}
                 </p>
                 <div className="space-y-3">
                   {benefits.map((item, i) => (
@@ -580,8 +560,8 @@ export default function RhinoplastyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <div data-animate="limits-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('limits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Limitations and Honest Trade-Offs</h2>
-              <p className="text-zinc-500 text-sm">Rhinoplasty has limitations that should be understood clearly. Clear communication and realistic expectations lead to better satisfaction.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('rhino.limitationsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('rhino.limitationsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -599,12 +579,12 @@ export default function RhinoplastyMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Aftercare</h2>
-              <p className="text-zinc-500 text-sm">Discomfort is usually mild to moderate and well managed with medication. Breathing may feel blocked temporarily due to swelling.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('rhino.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('rhino.recoveryDesc')}</p>
             </div>
 
             <div className="max-w-2xl mx-auto">
-              <h4 className="text-sm font-bold text-zinc-900 mb-6 text-center">After rhinoplasty, patients are typically advised to:</h4>
+              <h4 className="text-sm font-bold text-zinc-900 mb-6 text-center">{t('rhino.recoveryAdvice')}</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {recoveryTips.map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-4 bg-white rounded-xl border border-zinc-200">
@@ -630,11 +610,11 @@ export default function RhinoplastyMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('rhino.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Rhinoplasty cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('rhino.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Complexity of reshaping", "Open vs closed technique", "Functional corrections needed", "Operating time", "Facility and anaesthesia fees"].map((item, i) => (
+                  {pricingItems.map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -642,7 +622,7 @@ export default function RhinoplastyMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('rhino.getQuote')}
                 </a>
               </div>
             </div>
@@ -654,8 +634,8 @@ export default function RhinoplastyMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about rhinoplasty</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('rhino.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('rhino.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -701,17 +681,12 @@ export default function RhinoplastyMalaysia() {
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
               <div>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">Safety and Regulation in Malaysia</h3>
-                <p className="text-zinc-500 text-sm mt-1">Rhinoplasty in Malaysia is governed by the Ministry of Health Malaysia.</p>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest">{t('rhino.safetyTitle')}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{t('rhino.safetyDesc')}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {[
-                { name: "Surgical Facilities", desc: "All procedures performed in licensed and regulated facilities", color: "from-blue-500 to-blue-600", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-                { name: "Anaesthesia Standards", desc: "Strict anaesthesia protocols and monitoring", color: "from-green-500 to-green-600", icon: "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" },
-                { name: "Practitioner Qualifications", desc: "Performed by registered and credentialed surgeons", color: "from-purple-500 to-purple-600", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
-                { name: "Postoperative Care", desc: "Structured postoperative protocols and follow-up", color: "from-orange-500 to-orange-600", icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" }
-              ].map((source, i) => (
+              {safetyData.map((source, i) => (
                 <div key={i} className="block px-6 py-6 rounded-2xl border border-zinc-200 bg-zinc-50 card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center gap-3 mb-3">
                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${source.color} flex items-center justify-center`}>
@@ -737,27 +712,27 @@ export default function RhinoplastyMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Final Perspective</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('rhino.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Rhinoplasty in Malaysia is a precision procedure that balances aesthetic refinement with functional improvement.
+              {t('rhino.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              When performed by a qualified surgeon with proper planning and realistic expectations, it delivers natural results that enhance facial harmony without drawing attention to the nose itself. The goal is not perfection — it is proportion, balance, and a nose that fits the face.
+              {t('rhino.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Rhinoplasty" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('rhino.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('rhino.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["rhinoplasty Malaysia", "nose job", "nose reshaping", "facial harmony", "nasal surgery"].map((tag, i) => (
+              {tags.map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
