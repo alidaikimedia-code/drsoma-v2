@@ -1,0 +1,60 @@
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Enable RewriteEngine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 301 Redirects - Old site URLs to new site URLs
+RewriteRule ^aboutus/?$ /about-dr-soma/ [R=301,L]
+RewriteRule ^blogs/?$ /blog/ [R=301,L]
+RewriteRule ^contact-us/?$ /contact/ [R=301,L]
+RewriteRule ^servicespage/?$ /treatments/ [R=301,L]
+RewriteRule ^servicespage/breast-augmentation-implant-in-malaysia/?$ /breast/breast-augmentation-malaysia/ [R=301,L]
+RewriteRule ^servicespage/breast-lift/?$ /breast/breast-lift-malaysia/ [R=301,L]
+RewriteRule ^servicespage/safe-breast-reduction-in-malaysia/?$ /breast/breast-reduction-malaysia/ [R=301,L]
+RewriteRule ^servicespage/fat-transfer/?$ /breast/fat-transfer-breast-augmentation-malaysia/ [R=301,L]
+RewriteRule ^servicespage/liposuction-malaysia-remove-unwanted-fat/?$ /body/liposuction-malaysia/ [R=301,L]
+RewriteRule ^servicespage/six-pack-enhancement/?$ /body/six-pack-enhancement-malaysia/ [R=301,L]
+RewriteRule ^servicespage/tummy-tuck-surgery-in-malaysia/?$ /body/tummy-tuck-malaysia/ [R=301,L]
+RewriteRule ^servicespage/blepharoplasty-eyelid-reduction/?$ /face/eyelid-surgery-malaysia/ [R=301,L]
+RewriteRule ^servicespage/face-lift-malaysia-to-combat-aging/?$ /face/face-lift-malaysia/ [R=301,L]
+RewriteRule ^servicespage/otoplasty-pinnaplasty/?$ /face/otoplasty-malaysia/ [R=301,L]
+RewriteRule ^servicespage/rhinoplasty-in-malaysia-enhance-nose-appearance/?$ /face/rhinoplasty-malaysia/ [R=301,L]
+RewriteRule ^servicespage/male-breast-reduction/?$ /male/male-breast-reduction-malaysia/ [R=301,L]
+RewriteRule ^servicespage/penile-enhancement/?$ /male/penile-enhancement-malaysia/ [R=301,L]
+RewriteRule ^servicespage/skin-care/?$ /aesthetic-treatments/ [R=301,L]
+RewriteRule ^servicespage/keloid-scar-treatment-in-malaysia/?$ /aesthetic-treatments/keloid-treatment-malaysia/ [R=301,L]
+RewriteRule ^servicespage/lip-filler-malaysia-no-surgery-needed/?$ /aesthetic-treatments/lip-filler-malaysia/ [R=301,L]
+RewriteRule ^servicespage/safe-thread-lift-in-malaysia/?$ /aesthetic-treatments/thread-lift-malaysia/ [R=301,L]
+RewriteRule ^servicespage/cellular-rejuvenation-therapies/?$ /regenerative-treatments/cellular-rejuvenation-malaysia/ [R=301,L]
+RewriteRule ^servicespage/exion/?$ /regenerative-treatments/exion-treatment-malaysia/ [R=301,L]
+RewriteRule ^servicespage/exosomes-therapy/?$ /regenerative-treatments/prp-treatment-malaysia/ [R=301,L]
+
+# Language URL rewrites - serve same content for locale-prefixed URLs
+# English is default (no prefix needed)
+# /id/     -> Indonesia
+# /zh-cn/  -> Chinese (China)
+# /zh-my/  -> Chinese (Malaysia)
+# /ms/     -> Malay
+# /ko/     -> Korean
+RewriteCond %{REQUEST_URI} ^/(id|zh-cn|zh-my|ms|ko)/(.+)$
+RewriteCond %{DOCUMENT_ROOT}/%2 -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/%2 -d
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/(.+)$ /$2 [L]
+
+# Handle locale root URLs (e.g., /id/ -> /)
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/?$ /index.html [L]
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Handle trailing slash for directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.html [L]
