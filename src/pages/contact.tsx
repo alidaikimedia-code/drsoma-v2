@@ -3,8 +3,10 @@ import BaseImage from "@/components/BaseImage";
 import Head from "next/head";
 import ContactForm from "@/components/contact-form";
 import { getFullUrl } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
   
   // Create refs for each section
@@ -84,17 +86,17 @@ const ContactUs = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full w-fit border border-white/30">
               <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-white text-sm font-medium">Ready to Help You</span>
+              <span className="text-white text-sm font-medium">{t('contact.heroBadge')}</span>
             </div>
             
             {/* Main Title */}
             <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-2xl">
-              <span className="text-primary">Contact</span> Us
+              <span className="text-primary">{t('contact.heroTitle1')}</span> {t('contact.heroTitle2')}
             </h1>
             
             {/* Subtitle */}
             <h5 className="text-lg lg:text-xl text-white/90 font-medium drop-shadow-lg max-w-md">
-              Expert Care Begins With a Conversation
+              {t('contact.heroSubtitle')}
             </h5>
           </div>
         </div>
@@ -116,13 +118,13 @@ const ContactUs = () => {
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
-                Get in Touch
+                {t('contact.getInTouch')}
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                <span className="text-primary">Let&apos;s Start</span> Your Journey
+                <span className="text-primary">{t('contact.journeyTitle1')}</span> {t('contact.journeyTitle2')}
               </h2>
               <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                We&apos;re here to help you on your journey to enhanced beauty and confidence. Contact us for consultations, appointments, or any questions about our services.
+                {t('contact.journeyDesc')}
               </p>
             </div>
 
@@ -139,11 +141,11 @@ const ContactUs = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Location</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{t('contact.locationTitle')}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Soma Plastic Surgery (Clinical Aesthetics)<br />
-                      Subang Jaya, Malaysia<br />
-                      <span className="text-primary font-medium">Conveniently located with easy access and parking facilities.</span>
+                      {t('contact.locationName')}<br />
+                      {t('contact.locationCity')}<br />
+                      <span className="text-primary font-medium">{t('contact.locationNote')}</span>
                     </p>
                   </div>
                 </div>
@@ -161,21 +163,21 @@ const ContactUs = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Operating Hours</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{t('contact.hoursTitle')}</h3>
                     <div className="space-y-2 text-gray-600 text-sm">
                       <p className="flex items-center justify-center gap-2">
                         <span className="w-2 h-2 bg-primary rounded-full"></span>
-                        <span className="font-medium">Mon-Fri: 9am-5pm</span>
+                        <span className="font-medium">{t('contact.hoursMF')}</span>
                       </p>
                       <p className="flex items-center justify-center gap-2">
                         <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                        <span className="font-medium">Sat: 9am-1pm</span>
+                        <span className="font-medium">{t('contact.hoursSat')}</span>
                       </p>
                       <p className="flex items-center justify-center gap-2">
                         <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                        <span className="font-medium">Sunday & Public Holiday: Closed</span>
+                        <span className="font-medium">{t('contact.hoursSun')}</span>
                       </p>
-                      <p className="text-primary font-medium mt-3">Emergency consultations available by appointment.</p>
+                      <p className="text-primary font-medium mt-3">{t('contact.hoursEmergency')}</p>
                     </div>
                   </div>
                 </div>
@@ -192,7 +194,7 @@ const ContactUs = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Contact Information</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{t('contact.contactTitle')}</h3>
                     <div className="space-y-2 text-gray-600 text-sm">
                       <p className="flex items-center justify-center gap-2">
                         <svg width="16" height="16" fill="#EA622F" viewBox="0 0 24 24">
@@ -212,7 +214,7 @@ const ContactUs = () => {
                         </svg>
                         <span className="font-medium">014 261 6007</span>
                       </p>
-                      <p className="text-primary font-medium mt-3">We respond to all inquiries within 24 hours.</p>
+                      <p className="text-primary font-medium mt-3">{t('contact.contactResponse')}</p>
                     </div>
                   </div>
                 </div>

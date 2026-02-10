@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import { getAssetPath } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
 
   // Create refs for each section
@@ -51,10 +53,10 @@ const Services = () => {
         <div className="flex containers w-full relative z-10">
           <div className="flex w-full flex-col gap-[10px] max-w-[406px]">
             <h1 className="text-white font-bold max-[768px]:!text-[54px] max-[512px]:!text-[42px] drop-shadow-lg">
-              Services
+              {t('svc.heroTitle')}
             </h1>
             <h5 className="text-white font-semibold drop-shadow-md">
-              Discover comprehensive plastic surgery and aesthetic treatments tailored to enhance your natural beauty and confidence.
+              {t('svc.heroSubtitle')}
             </h5>
           </div>
         </div>
@@ -67,9 +69,9 @@ const Services = () => {
               isVisible('section-0') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`} style={{ backgroundImage: `url(${getAssetPath('/images/body_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
-                <h2 className="text-header-black">BODY</h2>
+                <h2 className="text-header-black">{t('svc.bodyTitle')}</h2>
                 <p className="text-header-black">
-                  Transform your body with advanced surgical procedures designed to sculpt, contour, and enhance your natural physique. Our body contouring treatments help you achieve the shape you&apos;ve always desired through safe, effective surgical techniques.
+                  {t('svc.bodyDesc')}
                 </p>
               </div>
             </div>
@@ -91,7 +93,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Liposuction (Remove Unwanted Fat)
+                  {t('svc.bodyCard0')}
                 </h4>
               </Link>
               <Link
@@ -109,7 +111,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Tummy Tuck
+                  {t('svc.bodyCard1')}
                 </h4>
               </Link>
               <Link
@@ -127,7 +129,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Keloid Treatment
+                  {t('svc.bodyCard2')}
                 </h4>
               </Link>
             </div>
@@ -136,7 +138,7 @@ const Services = () => {
                 href="/body"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All Body Treatments
+                {t('svc.bodyBtn')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -153,9 +155,9 @@ const Services = () => {
               isVisible('section-1') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`} style={{ backgroundImage: `url(${getAssetPath('/images/face_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
-                <h2 className="text-header-black">FACE</h2>
+                <h2 className="text-header-black">{t('svc.faceTitle')}</h2>
                 <p className="text-header-black">
-                  Rejuvenate and enhance your facial features with precision surgical techniques and advanced aesthetic procedures. From facial lifts to non-surgical treatments, we help restore your youthful appearance and natural beauty.
+                  {t('svc.faceDesc')}
                 </p>
               </div>
             </div>
@@ -177,7 +179,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Face Lift
+                  {t('svc.faceCard0')}
                 </h4>
               </Link>
               <Link
@@ -195,7 +197,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Blepharoplasty/Eyelid Reduction
+                  {t('svc.faceCard1')}
                 </h4>
               </Link>
               <Link
@@ -213,7 +215,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Rhinoplasty
+                  {t('svc.faceCard2')}
                 </h4>
               </Link>
               <Link
@@ -231,7 +233,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Neck Lift
+                  {t('svc.faceCard3')}
                 </h4>
               </Link>
               <Link
@@ -249,7 +251,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Otoplasty/Pinnaplasty
+                  {t('svc.faceCard4')}
                 </h4>
               </Link>
               <Link
@@ -267,7 +269,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Buccal Fat Removal
+                  {t('svc.faceCard5')}
                 </h4>
               </Link>
             </div>
@@ -276,7 +278,7 @@ const Services = () => {
                 href="/face"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All Face Treatments
+                {t('svc.faceBtn')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -293,9 +295,9 @@ const Services = () => {
               isVisible('section-2') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`} style={{ backgroundImage: `url(${getAssetPath('/images/breast_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
-                <h2 className="text-header-black">BREAST</h2>
+                <h2 className="text-header-black">{t('svc.breastTitle')}</h2>
                 <p className="text-header-black">
-                  Achieve your desired breast shape and size through specialized surgical procedures. Our breast surgery services include augmentation, reduction, and lift procedures performed with the highest standards of safety and aesthetic excellence.
+                  {t('svc.breastDesc')}
                 </p>
               </div>
             </div>
@@ -317,7 +319,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Breast Lift
+                  {t('svc.breastCard0')}
                 </h4>
               </Link>
               <Link
@@ -335,7 +337,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Breast Augmentation
+                  {t('svc.breastCard1')}
                 </h4>
               </Link>
               <Link
@@ -353,7 +355,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Safe Breast Reduction
+                  {t('svc.breastCard2')}
                 </h4>
               </Link>
               {/* <Link
@@ -380,7 +382,7 @@ const Services = () => {
                 href="/breast"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All Breast Treatments
+                {t('svc.breastBtn')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -398,10 +400,10 @@ const Services = () => {
             }`}>
               <div className="flex w-full flex-col gap-[10px] py-[33px] px-40 max-w-[668px]">
                 <h2 className="text-header-black">
-                  Male Cosmetic Surgery and Treatment
+                  {t('svc.maleTitle')}
                 </h2>
                 <p className="text-header-black">
-                  Specialized cosmetic procedures designed specifically for men to enhance confidence and achieve desired physical improvements. Our male-focused treatments address unique aesthetic concerns with discretion and professional care.
+                  {t('svc.maleDesc')}
                 </p>
               </div>
               <div className="hidden md:flex flex-shrink-0 w-[250px] ml-auto self-stretch">
@@ -432,7 +434,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  6-Pack Enhancement Liposuction
+                  {t('svc.maleCard0')}
                 </h4>
               </Link>
               <Link
@@ -450,7 +452,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Gynecomastia: Male Breast Reduction
+                  {t('svc.maleCard1')}
                 </h4>
               </Link>
               <Link
@@ -468,7 +470,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Penile Enhancement
+                  {t('svc.maleCard2')}
                 </h4>
               </Link>
             </div>
@@ -477,7 +479,7 @@ const Services = () => {
                 href="/male"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All Male Treatments
+                {t('svc.maleBtn')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -494,9 +496,9 @@ const Services = () => {
               isVisible('section-4') ? 'animate-fadeIn opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`} style={{ backgroundImage: `url(${getAssetPath('/images/face_background.png')})` }}>
               <div className="flex w-full flex-col gap-[10px] max-w-[668px]">
-                <h2 className="text-header-black">AESTHETIC TREATMENTS</h2>
+                <h2 className="text-header-black">{t('svc.aestheticTitle')}</h2>
                 <p className="text-header-black">
-                  Non-surgical solutions for facial rejuvenation, skin improvement, and subtle enhancement. From injectables to advanced skin treatments, explore options that fit your lifestyle with minimal downtime.
+                  {t('svc.aestheticDesc')}
                 </p>
               </div>
             </div>
@@ -518,7 +520,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Thread Lift
+                  {t('svc.aestheticCard0')}
                 </h4>
               </Link>
               <Link
@@ -536,7 +538,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Lip Filler
+                  {t('svc.aestheticCard1')}
                 </h4>
               </Link>
               <Link
@@ -554,7 +556,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Keloid Treatment
+                  {t('svc.aestheticCard2')}
                 </h4>
               </Link>
             </div>
@@ -563,7 +565,7 @@ const Services = () => {
                 href="/aesthetic-treatments"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-[#ea622f] hover:bg-[#d55526] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                View All Aesthetic Treatments
+                {t('svc.aestheticBtn')}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>

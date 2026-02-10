@@ -1,0 +1,42 @@
+{
+  "svc.heroTitle": "Services",
+  "svc.heroSubtitle": "Discover comprehensive plastic surgery and aesthetic treatments tailored to enhance your natural beauty and confidence.",
+
+  "svc.bodyTitle": "BODY",
+  "svc.bodyDesc": "Transform your body with advanced surgical procedures designed to sculpt, contour, and enhance your natural physique. Our body contouring treatments help you achieve the shape you've always desired through safe, effective surgical techniques.",
+  "svc.bodyCard0": "Liposuction (Remove Unwanted Fat)",
+  "svc.bodyCard1": "Tummy Tuck",
+  "svc.bodyCard2": "Keloid Treatment",
+  "svc.bodyBtn": "View All Body Treatments",
+
+  "svc.faceTitle": "FACE",
+  "svc.faceDesc": "Rejuvenate and enhance your facial features with precision surgical techniques and advanced aesthetic procedures. From facial lifts to non-surgical treatments, we help restore your youthful appearance and natural beauty.",
+  "svc.faceCard0": "Face Lift",
+  "svc.faceCard1": "Blepharoplasty/Eyelid Reduction",
+  "svc.faceCard2": "Rhinoplasty",
+  "svc.faceCard3": "Neck Lift",
+  "svc.faceCard4": "Otoplasty/Pinnaplasty",
+  "svc.faceCard5": "Buccal Fat Removal",
+  "svc.faceBtn": "View All Face Treatments",
+
+  "svc.breastTitle": "BREAST",
+  "svc.breastDesc": "Achieve your desired breast shape and size through specialized surgical procedures. Our breast surgery services include augmentation, reduction, and lift procedures performed with the highest standards of safety and aesthetic excellence.",
+  "svc.breastCard0": "Breast Lift",
+  "svc.breastCard1": "Breast Augmentation",
+  "svc.breastCard2": "Safe Breast Reduction",
+  "svc.breastBtn": "View All Breast Treatments",
+
+  "svc.maleTitle": "Male Cosmetic Surgery and Treatment",
+  "svc.maleDesc": "Specialized cosmetic procedures designed specifically for men to enhance confidence and achieve desired physical improvements. Our male-focused treatments address unique aesthetic concerns with discretion and professional care.",
+  "svc.maleCard0": "6-Pack Enhancement Liposuction",
+  "svc.maleCard1": "Gynecomastia: Male Breast Reduction",
+  "svc.maleCard2": "Penile Enhancement",
+  "svc.maleBtn": "View All Male Treatments",
+
+  "svc.aestheticTitle": "AESTHETIC TREATMENTS",
+  "svc.aestheticDesc": "Non-surgical solutions for facial rejuvenation, skin improvement, and subtle enhancement. From injectables to advanced skin treatments, explore options that fit your lifestyle with minimal downtime.",
+  "svc.aestheticCard0": "Thread Lift",
+  "svc.aestheticCard1": "Lip Filler",
+  "svc.aestheticCard2": "Keloid Treatment",
+  "svc.aestheticBtn": "View All Aesthetic Treatments"
+}
