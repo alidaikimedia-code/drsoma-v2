@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function MaleBreastReductionMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -34,38 +36,28 @@ export default function MaleBreastReductionMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is male breast reduction surgery?", answer: "It is a surgical procedure to remove excess fat and glandular tissue from the male chest." },
-    { question: "Is male breast reduction the same as gynecomastia surgery?", answer: "Yes. Male breast reduction is the surgical treatment for gynecomastia." },
-    { question: "Is the surgery permanent?", answer: "Yes. Removed glandular tissue does not grow back." },
-    { question: "Will there be scars?", answer: "Scars are minimal and usually hidden around the areola." },
-    { question: "How long does recovery take?", answer: "Most patients return to work within 7–10 days." },
-    { question: "Can exercise fix gynecomastia?", answer: "Exercise may reduce fat but cannot remove glandular tissue." },
-    { question: "Is the procedure painful?", answer: "Pain is typically mild to moderate and well controlled with medication." },
-    { question: "Is male breast reduction safe?", answer: "Yes, when performed by a qualified plastic surgeon in a regulated facility." }
-  ]
+  const faqs = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`mbr.faq${i}Q`),
+    answer: t(`mbr.faq${i}A`)
+  }))
 
-  const surgicalTechniques = [
-    { title: "Liposuction", desc: "For fatty enlargement." },
-    { title: "Excision", desc: "For firm glandular tissue." },
-    { title: "Combined Technique", desc: "For mixed cases." }
-  ]
+  const surgicalTechniques = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`mbr.tech${i}Title`),
+    desc: t(`mbr.tech${i}Desc`)
+  }))
 
-  const causesOfEnlargement = [
-    "Hormonal imbalance (estrogen–testosterone ratio)",
-    "Puberty-related changes",
-    "Medications or anabolic steroids",
-    "Weight gain and fat accumulation",
-    "Certain medical conditions"
-  ]
+  const causesOfEnlargement = Array.from({ length: 5 }, (_, i) => t(`mbr.cause${i}`))
 
-  const candidateCriteria = [
-    "Have persistent male breast enlargement",
-    "Are in good general health",
-    "Have stable body weight",
-    "Do not respond to exercise or diet alone",
-    "Have realistic expectations"
-  ]
+  const candidateCriteria = Array.from({ length: 5 }, (_, i) => t(`mbr.cand${i}`))
+
+  const recoveryItems = Array.from({ length: 5 }, (_, i) => ({
+    time: t(`mbr.rec${i}Time`),
+    desc: t(`mbr.rec${i}Desc`)
+  }))
+
+  const pricingItems = Array.from({ length: 5 }, (_, i) => t(`mbr.price${i}`))
+
+  const seoTags = Array.from({ length: 5 }, (_, i) => t(`mbr.seoTag${i}`))
 
   return (
     <>
@@ -167,138 +159,137 @@ export default function MaleBreastReductionMalaysia() {
             })
           }}
         />
+        <style dangerouslySetInnerHTML={{ __html: `
+          html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+          }
+
+          .male-breast-page ::selection {
+            background-color: #FE7623;
+            color: white;
+          }
+
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes fadeInRight {
+            from {
+              opacity: 0;
+              transform: translateX(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+
+          @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(254, 118, 35, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(254, 118, 35, 0.4); }
+          }
+
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+          }
+
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+          }
+
+          .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+          }
+
+          .animate-fadeInRight {
+            animation: fadeInRight 0.6s ease-out forwards;
+          }
+
+          .animate-float {
+            animation: float 3s ease-in-out infinite;
+          }
+
+          .animate-glow {
+            animation: glow 2s ease-in-out infinite;
+          }
+
+          .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+          }
+
+          .animate-bounce-slow {
+            animation: bounce 2s ease-in-out infinite;
+          }
+
+          .card-3d {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+          }
+          .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+            box-shadow: 0 25px 50px -12px rgba(254, 118, 35, 0.25);
+          }
+
+          .card-shine {
+            position: relative;
+            overflow: hidden;
+          }
+          .card-shine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+              to bottom right,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0) 40%,
+              rgba(255, 255, 255, 0.4) 50%,
+              rgba(255, 255, 255, 0) 60%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 0.6s;
+          }
+          .card-shine:hover::before {
+            transform: rotate(45deg) translateX(100%);
+          }
+
+          .img-zoom {
+            overflow: hidden;
+          }
+          .img-zoom img {
+            transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+          }
+          .img-zoom:hover img {
+            transform: scale(1.1);
+          }
+
+          .btn-magnetic {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          }
+          .btn-magnetic:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(254, 118, 35, 0.5);
+          }
+        ` }} />
       </Head>
-
-      <style jsx global>{`
-        html, body {
-          overflow-x: hidden;
-          max-width: 100vw;
-        }
-
-        .male-breast-page ::selection {
-          background-color: #FE7623;
-          color: white;
-        }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-
-        @keyframes glow {
-          0%, 100% { box-shadow: 0 0 5px rgba(254, 118, 35, 0.2); }
-          50% { box-shadow: 0 0 20px rgba(254, 118, 35, 0.4); }
-        }
-
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.05); opacity: 0.8; }
-        }
-
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-
-        .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .animate-fadeInRight {
-          animation: fadeInRight 0.6s ease-out forwards;
-        }
-
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-glow {
-          animation: glow 2s ease-in-out infinite;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-bounce-slow {
-          animation: bounce 2s ease-in-out infinite;
-        }
-
-        .card-3d {
-          transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-          transform-style: preserve-3d;
-        }
-        .card-3d:hover {
-          transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-          box-shadow: 0 25px 50px -12px rgba(254, 118, 35, 0.25);
-        }
-
-        .card-shine {
-          position: relative;
-          overflow: hidden;
-        }
-        .card-shine::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 60%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          transform: rotate(45deg) translateX(-100%);
-          transition: transform 0.6s;
-        }
-        .card-shine:hover::before {
-          transform: rotate(45deg) translateX(100%);
-        }
-
-        .img-zoom {
-          overflow: hidden;
-        }
-        .img-zoom img {
-          transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .img-zoom:hover img {
-          transform: scale(1.1);
-        }
-
-        .btn-magnetic {
-          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        .btn-magnetic:hover {
-          transform: translateY(-3px) scale(1.02);
-          box-shadow: 0 10px 30px -10px rgba(254, 118, 35, 0.5);
-        }
-      `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
       <main className="male-breast-page bg-white text-zinc-900 w-full max-w-full">
@@ -310,23 +301,23 @@ export default function MaleBreastReductionMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Regulated by Ministry of Health Malaysia
+                {t('mbr.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Male Breast Reduction in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Surgical Correction of Enlarged Male Chest (Gynecomastia)</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('mbr.title1')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('mbr.subtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Male breast reduction is a surgical procedure designed to treat enlarged male breasts caused by glandular tissue, excess fat, or a combination of both. The goal is to create a flatter, firmer, and more masculine chest contour.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, male breast reduction surgery must be performed in licensed medical facilities under the oversight of the Ministry of Health Malaysia, ensuring patient safety and regulated surgical standards.</p>
+                <p style={{fontSize: '14px'}}>{t('mbr.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('mbr.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('mbr.bookBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('mbr.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -346,7 +337,7 @@ export default function MaleBreastReductionMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">{t('mbr.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('mbr.happyPatients')}</span>
               </div>
             </div>
 
@@ -366,8 +357,8 @@ export default function MaleBreastReductionMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Male Chest Contouring</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('mbr.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('mbr.maleChestContouring')}</p>
                     </div>
                   </div>
                 </div>
@@ -381,20 +372,20 @@ export default function MaleBreastReductionMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Male Breast Reduction?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('mbr.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Male breast reduction is a surgical treatment for gynecomastia, a condition involving abnormal enlargement of male breast tissue. The procedure removes excess glandular tissue, fat, and sometimes loose skin to restore normal chest proportions.
+                  {t('mbr.whatIsDesc')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">According to the <strong>Mayo Clinic</strong>, gynecomastia often does not resolve without surgery when firm glandular tissue is present.</p>
+                  <p className="text-sm text-zinc-700" dangerouslySetInnerHTML={{ __html: t('mbr.mayoNote') }}></p>
                 </div>
               </div>
 
               {/* Causes of Male Breast Enlargement */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Causes of Male Breast Enlargement</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('mbr.causesTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Male breast enlargement may result from:
+                  {t('mbr.causesDesc')}
                 </p>
                 <div className="space-y-3">
                   {causesOfEnlargement.map((item, i) => (
@@ -413,8 +404,8 @@ export default function MaleBreastReductionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="surgery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('surgery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Male Breast Reduction Surgery Is Performed</h2>
-              <p className="text-zinc-500 text-sm">The surgical approach depends on chest composition:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('mbr.surgeryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('mbr.surgeryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8">
@@ -431,7 +422,7 @@ export default function MaleBreastReductionMalaysia() {
 
             <div className="px-4 md:px-8 mt-8">
               <div className="p-4 bg-white rounded-xl border border-zinc-200">
-                <p className="text-sm text-zinc-600 text-center">Small incisions are typically placed along the areola or natural chest folds to reduce visible scarring.</p>
+                <p className="text-sm text-zinc-600 text-center">{t('mbr.scarNote')}</p>
               </div>
             </div>
           </div>
@@ -453,15 +444,13 @@ export default function MaleBreastReductionMalaysia() {
 
             {/* Content Section */}
             <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Clinical Standards</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('mbr.safetyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Male breast reduction surgery is considered safe when performed by trained plastic surgeons following established surgical safety protocols.
+                {t('mbr.safetyDesc1')}
               </p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                General principles of surgical safety align with global recommendations from the <strong>World Health Organization (WHO)</strong> for safe operative care.
-              </p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('mbr.safetyDesc2') }}></p>
               <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> Preoperative assessment ensures suitability and minimizes complications.</p>
+                <p className="text-sm text-green-800"><strong>Important:</strong> {t('mbr.safetyNote')}</p>
               </div>
             </div>
           </div>
@@ -471,18 +460,12 @@ export default function MaleBreastReductionMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery After Male Breast Reduction</h2>
-              <p className="text-zinc-500 text-sm">Post-operative recovery follows timelines consistent with guidance from the NHS for cosmetic and reconstructive procedures.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('mbr.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('mbr.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
-              {[
-                { time: "First 5–7 days", desc: "Swelling, mild discomfort" },
-                { time: "7–10 days", desc: "Return to desk work" },
-                { time: "3–4 weeks", desc: "Resume light exercise" },
-                { time: "6 weeks", desc: "Full activity allowed" },
-                { time: "3 months", desc: "Final chest contour visible" }
-              ].map((item, i) => (
+              {recoveryItems.map((item, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-6 rounded-2xl border border-zinc-200 card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="absolute -top-4 left-6 px-4 py-3 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 transition-all duration-300 z-10">
                     {item.time}
@@ -494,7 +477,7 @@ export default function MaleBreastReductionMalaysia() {
 
             <div className="px-4 md:px-8 mt-8">
               <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                <p className="text-sm text-blue-700 text-center"><strong>Note:</strong> Compression garments are worn to support healing and contour.</p>
+                <p className="text-sm text-blue-700 text-center"><strong>Note:</strong> {t('mbr.compressionNote')}</p>
               </div>
             </div>
           </div>
@@ -505,9 +488,9 @@ export default function MaleBreastReductionMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('mbr.candidateTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be a good candidate if you:
+                  {t('mbr.candidateDesc')}
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
@@ -526,13 +509,13 @@ export default function MaleBreastReductionMalaysia() {
                     <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                       <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
+                    <h3 className="text-xl font-semibold">{t('mbr.importantNoteTitle')}</h3>
                   </div>
                   <p className="text-zinc-300 text-sm mb-4">
-                    Exercise may reduce fat but cannot remove glandular tissue. Surgical treatment is required for definitive correction of true gynecomastia.
+                    {t('mbr.importantDesc1')}
                   </p>
                   <p className="text-zinc-400 text-sm">
-                    A consultation will determine the best approach based on your individual anatomy and goals.
+                    {t('mbr.importantDesc2')}
                   </p>
                 </div>
               </div>
@@ -553,11 +536,11 @@ export default function MaleBreastReductionMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('mbr.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Male breast reduction cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('mbr.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of surgical technique selected", "Extent of tissue removal required", "Combination with liposuction", "Anaesthesia and facility fees", "Surgeon's expertise and experience"].map((item, i) => (
+                  {pricingItems.map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -565,7 +548,7 @@ export default function MaleBreastReductionMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('mbr.getQuoteBtn')}
                 </a>
               </div>
             </div>
@@ -577,8 +560,8 @@ export default function MaleBreastReductionMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about male breast reduction</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('mbr.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('mbr.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -627,27 +610,27 @@ export default function MaleBreastReductionMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Achieve a Flatter, More Confident Chest</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('mbr.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Take the first step towards a masculine chest contour with male breast reduction surgery.
+              {t('mbr.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              Schedule your consultation with our expert team today.
+              {t('mbr.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Male%20Breast%20Reduction%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('mbr.ctaWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('mbr.ctaBookBtn')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Male breast reduction Malaysia", "gynecomastia surgery", "chest contouring", "male plastic surgery", "enlarged male chest"].map((tag, i) => (
+              {seoTags.map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

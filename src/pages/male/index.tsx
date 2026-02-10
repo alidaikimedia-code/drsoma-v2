@@ -3,10 +3,20 @@ import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl, getAssetPath } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
+import { getLocaleFromPath } from "@/i18n/config";
 
 const MaleHub = () => {
+  const { t, i18n } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const locale = getLocaleFromPath(window.location.pathname);
+    if (locale !== i18n.language) {
+      i18n.changeLanguage(locale);
+    }
+  }, [i18n]);
 
   const heroRef = useRef<HTMLDivElement>(null);
   const treatmentsRef = useRef<HTMLDivElement>(null);
@@ -53,22 +63,22 @@ const MaleHub = () => {
   // Treatment categories with data
   const treatmentCategories = [
     {
-      category: "Chest Procedures",
-      description: "Address chest concerns with surgical precision for a flatter, more masculine contour",
+      category: t('mh.cat0Name'),
+      description: t('mh.cat0Desc'),
       categoryImage: "/images/Gynecomastia Surgery men.jpg",
       treatments: [
         {
-          title: "Gynecomastia Surgery",
-          area: "Chest Reshaping",
-          description: "For men with enlarged breast tissue that affects confidence and clothing fit.",
+          title: t('mh.cat0Treat0Title'),
+          area: t('mh.cat0Treat0Area'),
+          description: t('mh.cat0Treat0Desc'),
           href: "/male/gynecomastia-surgery-malaysia",
           image: "/images/Gynecomastia Surgery men.jpg",
-          tag: "Most Popular",
+          tag: t('mh.cat0Treat0Tag'),
         },
         {
-          title: "Male Breast Reduction",
-          area: "Chest Contouring",
-          description: "For men who want a flatter, firmer-looking chest, especially when fat and tissue are involved.",
+          title: t('mh.cat0Treat1Title'),
+          area: t('mh.cat0Treat1Area'),
+          description: t('mh.cat0Treat1Desc'),
           href: "/male/male-breast-reduction-malaysia",
           image: "/images/male_breast_reduction.png",
           tag: null,
@@ -76,30 +86,30 @@ const MaleHub = () => {
       ],
     },
     {
-      category: "Facial Enhancement",
-      description: "Define and enhance masculine facial features while maintaining natural proportions",
+      category: t('mh.cat1Name'),
+      description: t('mh.cat1Desc'),
       categoryImage: "/images/Jawline Enhancement men.jpg",
       treatments: [
         {
-          title: "Jawline Enhancement",
-          area: "Lower Face Definition",
-          description: "For men who want a stronger jawline, sharper lower face definition, and better profile balance.",
+          title: t('mh.cat1Treat0Title'),
+          area: t('mh.cat1Treat0Area'),
+          description: t('mh.cat1Treat0Desc'),
           href: "/male/jawline-enhancement-malaysia",
           image: "/images/Jawline Enhancement men.jpg",
-          tag: "Popular Choice",
+          tag: t('mh.cat1Treat0Tag'),
         },
         {
-          title: "Chin Implant",
-          area: "Profile Enhancement",
-          description: "For men who feel their chin is weak and want stronger profile balance.",
+          title: t('mh.cat1Treat1Title'),
+          area: t('mh.cat1Treat1Area'),
+          description: t('mh.cat1Treat1Desc'),
           href: "/male/chin-implant-malaysia",
           image: "/images/Chin Implant men.jpg",
           tag: null,
         },
         {
-          title: "Male Rhinoplasty",
-          area: "Nose Reshaping",
-          description: "For men who want nose reshaping while keeping strong, masculine facial proportions.",
+          title: t('mh.cat1Treat2Title'),
+          area: t('mh.cat1Treat2Area'),
+          description: t('mh.cat1Treat2Desc'),
           href: "/male/male-rhinoplasty-malaysia",
           image: "/images/Male Rhinoplasty men.jpg",
           tag: null,
@@ -107,33 +117,33 @@ const MaleHub = () => {
       ],
     },
     {
-      category: "Body & Hair",
-      description: "Enhance body definition and restore hairline confidence",
+      category: t('mh.cat2Name'),
+      description: t('mh.cat2Desc'),
       categoryImage: "/images/six_pack_enhancement.jpg",
       treatments: [
         {
-          title: "Six Pack Enhancement",
-          area: "Abdominal Definition",
-          description: "For men who want more visible abdominal definition through detailed contouring.",
+          title: t('mh.cat2Treat0Title'),
+          area: t('mh.cat2Treat0Area'),
+          description: t('mh.cat2Treat0Desc'),
           href: "/male/six-pack-enhancement-malaysia",
           image: "/images/six_pack_enhancement.jpg",
-          tag: "For Athletes",
+          tag: t('mh.cat2Treat0Tag'),
         },
         {
-          title: "Hair Transplant",
-          area: "Hairline Restoration",
-          description: "For men who want to restore hairline density and a more confident appearance.",
+          title: t('mh.cat2Treat1Title'),
+          area: t('mh.cat2Treat1Area'),
+          description: t('mh.cat2Treat1Desc'),
           href: "/male/hair-transplant-malaysia",
           image: "/images/Hair Transplant men.jpg",
           tag: null,
         },
         {
-          title: "Penile Enhancement",
-          area: "Confidence & Comfort",
-          description: "For men exploring improvement in confidence and intimate comfort, with a medical-first discussion.",
+          title: t('mh.cat2Treat2Title'),
+          area: t('mh.cat2Treat2Area'),
+          description: t('mh.cat2Treat2Desc'),
           href: "/male/penile-enhancement-malaysia",
           image: "/images/Penile Enhancement men.jpg",
-          tag: "Discreet",
+          tag: t('mh.cat2Treat2Tag'),
         },
       ],
     },
@@ -141,86 +151,30 @@ const MaleHub = () => {
 
   // Decision guide data
   const decisionGuide = [
-    { concern: "Chest looks enlarged or puffy", solution: "Gynecomastia Surgery or Male Breast Reduction", href: "/male/gynecomastia-surgery-malaysia" },
-    { concern: "Hairline recession or thinning", solution: "Hair Transplant", href: "/male/hair-transplant-malaysia" },
-    { concern: "Want a stronger jawline", solution: "Jawline Enhancement", href: "/male/jawline-enhancement-malaysia" },
-    { concern: "Chin looks weak in profile", solution: "Chin Implant", href: "/male/chin-implant-malaysia" },
-    { concern: "Want nose reshaping that stays masculine", solution: "Male Rhinoplasty", href: "/male/male-rhinoplasty-malaysia" },
-    { concern: "Want more ab definition", solution: "Six Pack Enhancement", href: "/male/six-pack-enhancement-malaysia" },
-    { concern: "Exploring intimate confidence concerns", solution: "Penile Enhancement (consultation required)", href: "/male/penile-enhancement-malaysia" },
+    { concern: t('mh.dg0Concern'), solution: t('mh.dg0Solution'), href: "/male/gynecomastia-surgery-malaysia" },
+    { concern: t('mh.dg1Concern'), solution: t('mh.dg1Solution'), href: "/male/hair-transplant-malaysia" },
+    { concern: t('mh.dg2Concern'), solution: t('mh.dg2Solution'), href: "/male/jawline-enhancement-malaysia" },
+    { concern: t('mh.dg3Concern'), solution: t('mh.dg3Solution'), href: "/male/chin-implant-malaysia" },
+    { concern: t('mh.dg4Concern'), solution: t('mh.dg4Solution'), href: "/male/male-rhinoplasty-malaysia" },
+    { concern: t('mh.dg5Concern'), solution: t('mh.dg5Solution'), href: "/male/six-pack-enhancement-malaysia" },
+    { concern: t('mh.dg6Concern'), solution: t('mh.dg6Solution'), href: "/male/penile-enhancement-malaysia" },
   ];
 
   // FAQ data
-  const faqData = [
-    {
-      question: "What is male cosmetic surgery?",
-      answer: "Male cosmetic surgery includes procedures designed to improve body or facial appearance while preserving masculine proportions and a natural look.",
-    },
-    {
-      question: "Is cosmetic surgery common among men in Malaysia?",
-      answer: "Yes. Many men seek cosmetic procedures for confidence, comfort, and self-image, often choosing to keep it private.",
-    },
-    {
-      question: "Will male cosmetic surgery look obvious?",
-      answer: "Most men want subtle improvements. When planned correctly, results aim to look natural and fit your build, face, and age.",
-    },
-    {
-      question: "Will people be able to tell I had surgery?",
-      answer: "The goal is discreet change. Many people simply notice that you look fitter or more confident, not that you had a procedure.",
-    },
-    {
-      question: "Is male cosmetic surgery safe?",
-      answer: "All procedures carry risks. Safety depends on proper assessment, realistic planning, and careful surgical technique.",
-    },
-    {
-      question: "Do I need to decide on a procedure before booking?",
-      answer: "No. Many men start with a concern rather than a procedure name. The consultation helps clarify suitable options.",
-    },
-    {
-      question: "Is male cosmetic surgery confidential?",
-      answer: "Yes. Consultations and treatments are handled with strict privacy and discretion.",
-    },
-    {
-      question: "Can I talk openly without being judged?",
-      answer: "Absolutely. Consultations are respectful, professional, and focused on your concerns, not assumptions or pressure.",
-    },
-    {
-      question: "Can multiple treatments be combined?",
-      answer: "Some men combine treatments for better overall balance. This depends on health, goals, and safety assessment.",
-    },
-    {
-      question: "Is male cosmetic surgery only for younger men?",
-      answer: "No. Men of different ages seek cosmetic surgery for different reasons, from body contouring to facial balance.",
-    },
-    {
-      question: "Will results last long term?",
-      answer: "Surgical changes are long-lasting, but maintaining results depends on lifestyle, weight stability, and ageing.",
-    },
-    {
-      question: "What if I am unsure or nervous about surgery?",
-      answer: "That is very common. A consultation is meant to give clarity and honest guidance, not push you into a decision.",
-    },
-    {
-      question: "How do I start male cosmetic surgery in Malaysia?",
-      answer: "The first step is a private consultation to discuss your concerns, options, and suitability.",
-    },
-  ];
+  const faqData = Array.from({ length: 13 }, (_, i) => ({
+    question: t(`mh.faq${i}Q`),
+    answer: t(`mh.faq${i}A`),
+  }));
 
   // Journey steps
-  const journeySteps = [
-    { num: 1, title: "Private Consultation", description: "You share your concern. We listen, assess, and explain options in simple words." },
-    { num: 2, title: "Personalized Plan", description: "You get a clear plan covering suitability, expected outcome, recovery, and safety steps." },
-    { num: 3, title: "Procedure Day", description: "Calm, guided care with comfort and safety as the priority." },
-    { num: 4, title: "Recovery & Follow-up", description: "Healing is supported with instructions, check-ups, and ongoing guidance." },
-  ];
+  const journeySteps = Array.from({ length: 4 }, (_, i) => ({
+    num: i + 1,
+    title: t(`mh.j${i}Title`),
+    description: t(`mh.j${i}Desc`),
+  }));
 
   // What natural means
-  const naturalMeans = [
-    "Stronger lines, not exaggerated changes",
-    "Better proportions, not a \"different face\"",
-    "Shaping that still looks like your genetics",
-    "Results that suit your age, build, and lifestyle",
-  ];
+  const naturalMeans = Array.from({ length: 4 }, (_, i) => t(`mh.nat${i}`));
 
   return (
     <>
@@ -386,25 +340,25 @@ const MaleHub = () => {
               <span className={`inline-block bg-primary text-white text-sm font-bold px-4 py-2 rounded-full w-fit uppercase tracking-wide ${
                 isVisible("section-0") ? "animate-fadeInUp" : "opacity-0"
               }`}>
-                Male Cosmetic Hub
+                {t('mh.badge')}
               </span>
 
               <h1 className={`text-primary drop-shadow-lg text-3xl sm:text-4xl lg:text-5xl ${
                 isVisible("section-0") ? "animate-fadeInUp delay-100" : "opacity-0"
               }`}>
-                Male Cosmetic Surgery <span className="text-header-black">in Malaysia</span>
+                {t('mh.title1')} <span className="text-header-black">{t('mh.titleHighlight')}</span>
               </h1>
 
               <p className={`text-white/90 text-lg lg:text-xl font-medium ${
                 isVisible("section-0") ? "animate-fadeInUp delay-200" : "opacity-0"
               }`}>
-                Private, respectful care for men who want to feel confident again
+                {t('mh.subtitle')}
               </p>
 
               <p className={`text-white/80 text-sm lg:text-base leading-relaxed ${
                 isVisible("section-0") ? "animate-fadeInUp delay-300" : "opacity-0"
               }`}>
-                Most men do not talk openly about body or face concerns. They just live with them. They avoid the beach. They wear extra layers. They skip photos. They laugh it off, but it still bothers them. If that feels familiar, you are not alone.
+                {t('mh.heroDesc')}
               </p>
 
               <div className={`flex flex-wrap gap-4 mt-4 justify-center sm:justify-start ${
@@ -414,7 +368,7 @@ const MaleHub = () => {
                   href="/contact"
                   className="bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg uppercase tracking-wide text-sm animate-pulseGlow"
                 >
-                  Book a Private Consultation
+                  {t('mh.bookBtn')}
                 </Link>
                 <Link
                   href="https://wa.me/60142616007"
@@ -423,14 +377,14 @@ const MaleHub = () => {
                   <svg className="w-6 h-6" viewBox="0 0 24 24">
                     <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  WhatsApp Us
+                  {t('mh.whatsAppBtn')}
                 </Link>
               </div>
 
               <p className={`text-white/50 text-xs lg:text-sm italic mt-2 ${
                 isVisible("section-0") ? "animate-fadeInUp delay-500" : "opacity-0"
               }`}>
-                Results vary. Suitability depends on medical assessment. Your privacy is respected at every step.
+                {t('mh.disclaimer')}
               </p>
             </div>
 
@@ -455,8 +409,8 @@ const MaleHub = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-bold text-header-black text-xl">100%</p>
-                      <p className="text-para-black text-sm">Confidential</p>
+                      <p className="font-bold text-header-black text-xl">{t('mh.hundredPercent')}</p>
+                      <p className="text-para-black text-sm">{t('mh.confidential')}</p>
                     </div>
                   </div>
                 </div>
@@ -475,13 +429,13 @@ const MaleHub = () => {
               isVisible("section-1") ? "sm:opacity-100 translate-y-0" : "sm:translate-y-8"
             }`}>
               <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-3">
-                Our Treatments
+                {t('mh.treatLabel')}
               </span>
               <h2 className="text-header-black mb-4">
-                Explore <span className="text-primary">Male Treatments</span>
+                {t('mh.treatTitle1')} <span className="text-primary">{t('mh.treatTitle2')}</span>
               </h2>
               <p className="text-para-black max-w-2xl mx-auto">
-                Each treatment has its own dedicated page with full details, recovery information, and FAQs
+                {t('mh.treatDesc')}
               </p>
             </div>
 
@@ -506,14 +460,14 @@ const MaleHub = () => {
                   {/* Category Info */}
                   <div className="flex flex-col justify-center p-6 lg:py-8 lg:pr-8 lg:pl-0">
                     <span className="text-primary text-xs font-bold uppercase tracking-wider mb-2">
-                      {categoryIndex === 0 ? "Chest Contouring" : categoryIndex === 1 ? "Facial Definition" : "Body & Restoration"}
+                      {categoryIndex === 0 ? t('mh.catLabel0') : categoryIndex === 1 ? t('mh.catLabel1') : t('mh.catLabel2')}
                     </span>
                     <h3 className="text-header-black text-2xl lg:text-3xl font-bold mb-3">
                       {category.category}
                     </h3>
                     <p className="text-para-black mb-4">{category.description}</p>
                     <div className="flex items-center gap-2 text-primary text-sm font-semibold">
-                      <span>{category.treatments.length} Treatments Available</span>
+                      <span>{category.treatments.length} {t('mh.treatmentsAvailable')}</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -565,7 +519,7 @@ const MaleHub = () => {
 
                           {/* CTA Button */}
                           <div className="flex items-center gap-2 text-primary font-semibold text-sm pt-4 border-t border-gray-100">
-                            <span>View Treatment</span>
+                            <span>{t('mh.viewTreatment')}</span>
                             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -582,12 +536,12 @@ const MaleHub = () => {
             <div className={`text-center transition-all duration-700 opacity-100 sm:opacity-0 ${
               isVisible("section-1") ? "sm:opacity-100 translate-y-0" : "sm:translate-y-8"
             }`}>
-              <p className="text-para-black mb-4">Can&apos;t find what you&apos;re looking for?</p>
+              <p className="text-para-black mb-4">{t('mh.cantFind')}</p>
               <Link
                 href="/contact"
                 className="inline-block bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-sm"
               >
-                Book a Private Consultation
+                {t('mh.bookPrivate')}
               </Link>
             </div>
           </div>
@@ -603,10 +557,10 @@ const MaleHub = () => {
               isVisible("section-2") ? "animate-fadeInUp" : "opacity-0"
             }`}>
               <h2 className="text-header-black mb-3">
-                Unsure Which Treatment <span className="text-primary">You Need?</span>
+                {t('mh.dgTitle1')} <span className="text-primary">{t('mh.dgTitle2')}</span>
               </h2>
               <p className="text-para-black">
-                Use this guide to find the right page for your concern
+                {t('mh.dgDesc')}
               </p>
             </div>
 
@@ -654,7 +608,7 @@ const MaleHub = () => {
                 href="/contact"
                 className="inline-block bg-primary hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
-                Book a Private Consultation
+                {t('mh.bookPrivate')}
               </Link>
             </div>
           </div>
@@ -670,15 +624,15 @@ const MaleHub = () => {
               isVisible("section-3") ? "animate-slideInLeft" : "opacity-0"
             }`}>
               <h2 className="text-header-black">
-                What &ldquo;Natural&rdquo; Means <span className="text-primary">for Men</span>
+                {t('mh.natTitle1')} <span className="text-primary">{t('mh.natTitle2')}</span>
               </h2>
 
               <p className="text-para-black text-lg font-medium">
-                Men often want improvement without looking obvious.
+                {t('mh.natSubtitle')}
               </p>
 
               <p className="text-para-black">
-                If your biggest fear is looking unnatural, say it in your consultation. We plan around that. Natural results usually mean:
+                {t('mh.natDesc')}
               </p>
 
               <div className="space-y-4">
@@ -703,7 +657,7 @@ const MaleHub = () => {
               <p className={`text-para-black mt-4 ${
                 isVisible("section-3") ? "animate-fadeInUp delay-600" : "opacity-0"
               }`}>
-                People notice you look fitter. Not that you had a procedure.
+                {t('mh.natClosing')}
               </p>
             </div>
 
@@ -735,7 +689,7 @@ const MaleHub = () => {
               isVisible("section-5") ? "animate-fadeInUp" : "opacity-0"
             }`}>
               <h2 className="text-header-black">
-                Your Journey, <span className="text-primary">Step by Step</span>
+                {t('mh.jTitle1')} <span className="text-primary">{t('mh.jTitle2')}</span>
               </h2>
             </div>
 
@@ -775,13 +729,13 @@ const MaleHub = () => {
               isVisible("section-6") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-3">
-                Got Questions?
+                {t('mh.faqLabel')}
               </span>
               <h2 className="text-header-black mb-4">
-                Male Cosmetic Surgery <span className="text-primary">FAQs</span>
+                {t('mh.faqTitle1')} <span className="text-primary">{t('mh.faqTitle2')}</span>
               </h2>
               <p className="text-para-black max-w-2xl mx-auto">
-                Find answers to common questions about male cosmetic surgery in Malaysia
+                {t('mh.faqDesc')}
               </p>
             </div>
 
@@ -836,13 +790,13 @@ const MaleHub = () => {
             <h2 className={`text-white mb-4 ${
               isVisible("section-7") ? "animate-fadeInUp" : "opacity-0"
             }`}>
-              Ready to Talk Privately?
+              {t('mh.ctaTitle')}
             </h2>
 
             <p className={`text-white mb-8 ${
               isVisible("section-7") ? "animate-fadeInUp delay-200" : "opacity-0"
             }`}>
-              You do not have to decide today. Start by exploring the treatment pages above. When you feel ready, book a private consultation and get clear, honest guidance.
+              {t('mh.ctaDesc')}
             </p>
 
             <div className={`flex flex-wrap justify-center gap-4 ${
@@ -852,7 +806,7 @@ const MaleHub = () => {
                 href="/contact"
                 className="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg uppercase tracking-wide text-sm hover:shadow-2xl"
               >
-                Book a Private Consultation
+                {t('mh.ctaBookBtn')}
               </Link>
               <Link
                 href="https://wa.me/60142616007"
@@ -861,7 +815,7 @@ const MaleHub = () => {
                 <svg className="w-6 h-6" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                WhatsApp Us
+                {t('mh.ctaWhatsApp')}
               </Link>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import BaseImage from "@/components/BaseImage";
 import Head from "next/head";
 import { getFullUrl } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
 
 // Example SVG icons (replace with your own or use a library)
 const DegreeIcon = () => (
@@ -17,37 +18,21 @@ const ExpertiseIcon = () => (
   <svg width="28" height="28" fill="none" stroke="#EA622F" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 7h10v10H7z"/></svg>
 );
 
-const infoCards = [
-  {
-    icon: <DegreeIcon />,
-    title: "Medical Degree",
-    desc: "Royal College of Surgeons, UK",
-  },
-  {
-    icon: <SpecializationIcon />,
-    title: "Specialization",
-    desc: "Plastic & Reconstructive Surgery",
-  },
-  {
-    icon: <ExperienceIcon />,
-    title: "Experience",
-    desc: "30+ Years in Practice",
-  },
-  {
-    icon: <ExpertiseIcon />,
-    title: "Expertise",
-    desc: "Aesthetic & Reconstructive Surgery",
-  },
-];
-
-const stats = [
-  { label: "Happy Patients", value: "1000+" },
-  { label: "Years Experience", value: "30+" },
-  { label: "Successful Surgeries", value: "500+" },
-  { label: "Patient Rating", value: "4.9" },
-];
-
 const About = () => {
+  const { t } = useTranslation();
+
+  const icons = [<DegreeIcon key="degree" />, <SpecializationIcon key="spec" />, <ExperienceIcon key="exp" />, <ExpertiseIcon key="expertise" />];
+  const infoCards = Array.from({ length: 4 }, (_, i) => ({
+    icon: icons[i],
+    title: t(`about.card${i}Title`),
+    desc: t(`about.card${i}Desc`),
+  }));
+
+  const statValues = ["1000+", "30+", "500+", "4.9"];
+  const stats = Array.from({ length: 4 }, (_, i) => ({
+    label: t(`about.stat${i}Label`),
+    value: statValues[i],
+  }));
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
   
   // Create refs for each section
@@ -115,20 +100,20 @@ const About = () => {
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-flex items-center px-3 py-1 bg-orange-50 text-[#EA622F] rounded-full font-semibold text-sm border border-orange-200 tracking-wide shadow-sm">
                   <svg width="18" height="18" fill="#EA622F" className="mr-1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
-                  Board Certified Surgeon
+                  {t('about.badge')}
                 </span>
               </div>
               {/* Heading */}
               <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Meet Dr. Somasundaram Sathappan
+                {t('about.heading')}
               </h1>
               {/* Subheading */}
               <p className="text-lg text-gray-700 mt-2">
-                Dr. Somasundaram Sathappan is a distinguished Plastic and Reconstructive Surgeon who heads the Soma Plastic Surgery (Clinical Aesthetics) Clinic in Subang Jaya, Malaysia.
+                {t('about.subheading')}
               </p>
               {/* Summary */}
               <p className="text-gray-600 mt-2">
-                He obtained his medical degree from the University of Malaya, Kuala Lumpur, in 1989 and subsequently served in Sarawak, Malaysian Borneo, for one and a half years. Upon his return to Kuala Lumpur, he was appointed as a trainee lecturer in the Department of Surgery at the National University of Malaysia. In 1994, he pursued his specialization in Plastic and Reconstructive Surgery at the prestigious Royal College of Surgeons in the United Kingdom, where he honed his skills in both aesthetic and reconstructive procedures. With over three decades of experience, Dr. Soma has performed thousands of successful surgeries, earning him recognition as one of Malaysia&apos;s leading plastic surgeons. His expertise encompasses the full spectrum of plastic surgery, from facial rejuvenation and breast procedures to complex reconstructive surgeries, always prioritizing patient safety and natural-looking results.
+                {t('about.summary')}
               </p>
             </div>
             {/* Right Column */}
@@ -155,8 +140,8 @@ const About = () => {
                     </div>
                   ))}
                 </div>
-                <h2 className="text-xl font-bold text-gray-900 mt-4">Dr. Somasundaram Sathappan</h2>
-                <div className="text-gray-700 mb-2">Plastic & Reconstructive Surgeon</div>
+                <h2 className="text-xl font-bold text-gray-900 mt-4">{t('about.drName')}</h2>
+                <div className="text-gray-700 mb-2">{t('about.drTitle')}</div>
                 <div className="flex items-center gap-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} width="20" height="20" fill="#FFD700" viewBox="0 0 20 20"><polygon points="10,1 12.59,7.36 19.51,7.36 13.96,11.64 16.55,18 10,13.72 3.45,18 6.04,11.64 0.49,7.36 7.41,7.36"/></svg>
@@ -167,15 +152,15 @@ const About = () => {
                 <div className="bg-white rounded-xl shadow-md px-6 py-4 flex items-center gap-3 w-full mt-4">
                   <svg width="24" height="24" fill="none" stroke="#EA622F" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                   <div>
-                    <div className="font-semibold text-gray-800">Available</div>
-                    <div className="text-gray-600 text-sm">Mon-Fri: 9am-5pm</div>
+                    <div className="font-semibold text-gray-800">{t('about.available')}</div>
+                    <div className="text-gray-600 text-sm">{t('about.availableTime')}</div>
                   </div>
                 </div>
               </div>
               {/* Quote Box Below Profile Card */}
               <blockquote className="bg-orange-50 border-l-4 border-[#EA622F] rounded-xl shadow-sm p-6 mt-6 w-full">
-                <span className="italic text-gray-700 text-base block mb-2">The best choice a patient can make is one that leads to their own happiness.</span>
-                <span className="block font-semibold text-[#EA622F] mt-2">— Dr. Somasundaram Sathappan</span>
+                <span className="italic text-gray-700 text-base block mb-2">{t('about.quote')}</span>
+                <span className="block font-semibold text-[#EA622F] mt-2">{t('about.quoteAuthor')}</span>
               </blockquote>
             </div>
           </div>
@@ -209,10 +194,10 @@ const About = () => {
             isVisible('section-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <h2 className="text-3xl font-bold text-header-black text-center mb-4">
-              <span className="text-primary">CA</span> Profile
+              <span className="text-primary">CA</span> {t('about.caProfileTitle')}
             </h2>
             <p className="text-justify text-gray-700 mb-10">
-              At Soma Plastic Surgery (Clinical Aesthetics), we are committed to delivering the highest standards of care in a safe, welcoming environment. Our team combines advanced medical expertise with a patient-centered approach, ensuring every individual receives personalized treatment and support throughout their journey.
+              {t('about.caDesc')}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
@@ -226,7 +211,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Highly Skilled Doctor</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca0')}</div>
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
@@ -239,7 +224,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Aesthetic Services</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca1')}</div>
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
@@ -252,7 +237,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Trained Staff</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca2')}</div>
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
@@ -265,7 +250,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Doctor-Patient Relationship</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca3')}</div>
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
@@ -278,7 +263,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Contactability</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca4')}</div>
               </div>
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
@@ -291,7 +276,7 @@ const About = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">Strategic Location</div>
+                <div className="mt-4 font-semibold text-gray-800 text-center group-hover:text-primary transition-colors duration-300">{t('about.ca5')}</div>
               </div>
             </div>
           </div>

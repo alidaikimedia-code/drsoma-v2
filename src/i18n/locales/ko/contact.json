@@ -1,0 +1,25 @@
+{
+  "contact.heroBadge": "도와드릴 준비가 되어 있습니다",
+  "contact.heroTitle1": "연락",
+  "contact.heroTitle2": "하기",
+  "contact.heroSubtitle": "전문가 진료는 대화로 시작됩니다",
+
+  "contact.getInTouch": "연락하기",
+  "contact.journeyTitle1": "당신의 여정을",
+  "contact.journeyTitle2": "시작합시다",
+  "contact.journeyDesc": "저희는 당신의 아름다움과 자신감 향상을 위한 여정에서 도와드릴 준비가 되어 있습니다. 상담, 예약 또는 저희 서비스에 대한 질문이 있으시면 연락주세요.",
+
+  "contact.locationTitle": "위치",
+  "contact.locationName": "Soma Plastic Surgery (Clinical Aesthetics)",
+  "contact.locationCity": "Subang Jaya, 말레이시아",
+  "contact.locationNote": "접근 및 주차 시설이 편리하게 위치하고 있습니다.",
+
+  "contact.hoursTitle": "운영 시간",
+  "contact.hoursMF": "Mon-Fri: 9am-5pm",
+  "contact.hoursSat": "Sat: 9am-1pm",
+  "contact.hoursSun": "일요일 및 공휴일: 휴무",
+  "contact.hoursEmergency": "응급 상담은 예약으로 가능합니다.",
+
+  "contact.contactTitle": "연락 정보",
+  "contact.contactResponse": "모든 문의에 대해 24시간 이내에 답변드립니다."
+}
