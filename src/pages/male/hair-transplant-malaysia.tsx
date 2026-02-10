@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function HairTransplantMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -34,45 +36,24 @@ export default function HairTransplantMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is a hair transplant?", answer: "A surgical procedure that relocates hair follicles to balding or thinning areas." },
-    { question: "Is hair transplant permanent?", answer: "Yes. Transplanted hair follicles are genetically resistant to hair loss." },
-    { question: "Is the procedure painful?", answer: "Discomfort is minimal and controlled with local anesthesia." },
-    { question: "How long does recovery take?", answer: "Most patients return to work within 3-7 days." },
-    { question: "When will I see results?", answer: "New growth starts around 4 months, with full results by 12 months." },
-    { question: "Will transplanted hair fall out?", answer: "Initial shedding is normal; permanent growth follows." },
-    { question: "Are there visible scars?", answer: "FUE leaves tiny dot scars; FUT leaves a linear scar hidden by hair." },
-    { question: "Is hair transplant safe?", answer: "Yes, when performed by qualified doctors in regulated facilities." }
-  ]
+  const faqs = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`ht.faq${i}Q`),
+    answer: t(`ht.faq${i}A`)
+  }))
 
-  const transplantTechniques = [
-    { title: "Follicular Unit Extraction (FUE)", points: ["Individual follicle harvesting", "No linear scar", "Faster recovery", "Suitable for short hairstyles"] },
-    { title: "Follicular Unit Transplantation (FUT)", points: ["Strip harvesting technique", "Higher graft yield in selected cases", "Linear scar hidden by hair", "Technique selection depends on hair loss pattern"] }
-  ]
+  const transplantTechniques = Array.from({ length: 2 }, (_, i) => ({
+    title: t(`ht.tech${i}Title`),
+    points: Array.from({ length: 4 }, (_, j) => t(`ht.tech${i}Point${j}`))
+  }))
 
-  const causesOfHairLoss = [
-    "Androgenetic alopecia (male or female pattern baldness)",
-    "Genetic predisposition",
-    "Hormonal factors",
-    "Aging",
-    "Trauma or scarring"
-  ]
+  const causesOfHairLoss = Array.from({ length: 5 }, (_, i) => t(`ht.cause${i}`))
 
-  const candidateCriteria = [
-    "Have stable hair loss patterns",
-    "Possess adequate donor hair",
-    "Are in good general health",
-    "Have realistic expectations",
-    "Understand the gradual nature of results"
-  ]
+  const candidateCriteria = Array.from({ length: 5 }, (_, i) => t(`ht.cand${i}`))
 
-  const recoveryTimeline = [
-    { time: "First 3-5 Days", desc: "Mild swelling, redness" },
-    { time: "7-10 Days", desc: "Scabs shed naturally" },
-    { time: "1-3 Months", desc: "Temporary shedding of transplanted hair" },
-    { time: "4-6 Months", desc: "New hair growth begins" },
-    { time: "9-12 Months", desc: "Final results visible" }
-  ]
+  const recoveryTimeline = Array.from({ length: 5 }, (_, i) => ({
+    time: t(`ht.rec${i}Time`),
+    desc: t(`ht.rec${i}Desc`)
+  }))
 
   return (
     <>
@@ -80,9 +61,7 @@ export default function HairTransplantMalaysia() {
         <title>Hair Transplant Malaysia | Natural Hair Restoration by Medical Specialists</title>
         <meta name="description" content="Hair transplant in Malaysia for permanent hair restoration. Learn FUE vs FUT, safety, recovery timeline, results & FAQs." />
         <link rel="canonical" href="https://drsomaplasticsurgery.com/male/hair-transplant-malaysia" />
-      </Head>
-
-      <style jsx global>{`
+        <style dangerouslySetInnerHTML={{ __html: `
         html, body {
           overflow-x: hidden;
           max-width: 100vw;
@@ -211,7 +190,8 @@ export default function HairTransplantMalaysia() {
           transform: translateY(-3px) scale(1.02);
           box-shadow: 0 10px 30px -10px rgba(254, 118, 35, 0.5);
         }
-      `}</style>
+      ` }} />
+      </Head>
 
       <div className="w-full max-w-full overflow-x-hidden">
       <main className="hair-transplant-page bg-white text-zinc-900 w-full max-w-full">
@@ -223,23 +203,23 @@ export default function HairTransplantMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Regulated by Ministry of Health Malaysia
+                {t('ht.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Hair Transplant in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Permanent Surgical Solution for Hair Loss</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('ht.title1')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('ht.subtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Hair transplant surgery is a medically established procedure that restores hair by relocating healthy hair follicles from donor areas to thinning or balding regions. In Malaysia, hair transplant procedures must be performed in licensed medical facilities under regulated clinical standards.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>Medical and surgical procedures are overseen by the Ministry of Health Malaysia, ensuring practitioner qualifications, patient safety, and ethical care.</p>
+                <p style={{fontSize: '14px'}}>{t('ht.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('ht.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Hair%20Transplant%20Procedures" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('ht.bookBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('ht.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -259,7 +239,7 @@ export default function HairTransplantMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">{t('ht.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('ht.happyPatients')}</span>
               </div>
             </div>
 
@@ -279,8 +259,8 @@ export default function HairTransplantMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Natural Hair Restoration</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('ht.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('ht.heroCardLabel')}</p>
                     </div>
                   </div>
                 </div>
@@ -294,20 +274,20 @@ export default function HairTransplantMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Hair Transplant?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ht.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A hair transplant is a surgical procedure in which hair follicles are harvested from genetically resistant donor areas (usually the back or sides of the scalp) and implanted into areas affected by hair loss.
+                  {t('ht.whatIsDesc')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">The <strong>Mayo Clinic</strong> recognizes hair transplantation as a permanent solution for pattern hair loss when performed by trained professionals using proper technique.</p>
+                  <p className="text-sm text-zinc-700" dangerouslySetInnerHTML={{ __html: t('ht.mayoNote') }} />
                 </div>
               </div>
 
               {/* Common Causes of Hair Loss */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Causes of Hair Loss</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('ht.causesTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Hair loss may occur due to:
+                  {t('ht.causesDesc')}
                 </p>
                 <div className="space-y-3">
                   {causesOfHairLoss.map((item, i) => (
@@ -318,7 +298,7 @@ export default function HairTransplantMalaysia() {
                   ))}
                 </div>
                 <div className="mt-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
-                  <p className="text-xs text-zinc-600">Clinical guidance from the <strong>Cleveland Clinic</strong> notes that androgenetic alopecia is the most common cause of progressive hair thinning in both men and women.</p>
+                  <p className="text-xs text-zinc-600" dangerouslySetInnerHTML={{ __html: t('ht.clevelandNote') }} />
                 </div>
               </div>
             </div>
@@ -329,8 +309,8 @@ export default function HairTransplantMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="options-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('options-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Hair Transplant Techniques Used in Malaysia</h2>
-              <p className="text-zinc-500 text-sm">Technique selection depends on hair loss pattern, donor density, and long-term planning:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ht.techTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ht.techDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
@@ -370,15 +350,13 @@ export default function HairTransplantMalaysia() {
 
             {/* Content Section */}
             <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Clinical Standards</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ht.safetyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Hair transplant surgery is considered safe when performed under sterile conditions by trained medical professionals.
+                {t('ht.safetyDesc1')}
               </p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Principles of procedural safety and patient consent align with international standards outlined by the <strong>World Health Organization (WHO)</strong> for safe surgical care.
-              </p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('ht.safetyDesc2') }} />
               <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> Preoperative evaluation ensures appropriate candidacy and minimizes risks.</p>
+                <p className="text-sm text-green-800"><strong>Important:</strong> {t('ht.safetyNote')}</p>
               </div>
             </div>
           </div>
@@ -388,8 +366,8 @@ export default function HairTransplantMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Hair Growth Timeline</h2>
-              <p className="text-zinc-500 text-sm">Post-operative recovery follows timelines consistent with guidance from major healthcare systems such as the NHS.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ht.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ht.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 px-4 md:px-8">
@@ -410,9 +388,9 @@ export default function HairTransplantMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ht.candidateTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be suitable if you:
+                  {t('ht.candidateDesc')}
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
@@ -431,13 +409,13 @@ export default function HairTransplantMalaysia() {
                     <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                       <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
+                    <h3 className="text-xl font-semibold">{t('ht.importantNoteTitle')}</h3>
                   </div>
                   <p className="text-zinc-300 text-sm mb-4">
-                    A thorough consultation ensures the right technique, natural design, and long-term planning for optimal results.
+                    {t('ht.importantDesc1')}
                   </p>
                   <p className="text-zinc-400 text-sm">
-                    Hair transplant results are gradual - patience is key to achieving your desired outcome.
+                    {t('ht.importantDesc2')}
                   </p>
                 </div>
               </div>
@@ -458,11 +436,11 @@ export default function HairTransplantMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('ht.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Hair transplant cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('ht.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Number of grafts required", "FUE vs FUT technique", "Extent of hair loss", "Complexity of the procedure", "Surgeon's expertise and experience"].map((item, i) => (
+                  {Array.from({ length: 5 }, (_, i) => t(`ht.price${i}`)).map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -470,7 +448,7 @@ export default function HairTransplantMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Hair%20Transplant%20Procedures" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('ht.getQuoteBtn')}
                 </a>
               </div>
             </div>
@@ -482,8 +460,8 @@ export default function HairTransplantMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about hair transplant</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('ht.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('ht.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -532,27 +510,27 @@ export default function HairTransplantMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Restore Your Hair with Medically Guided Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('ht.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Restore your hair with medically guided, permanent hair transplant solutions in Malaysia.
+              {t('ht.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              A thorough consultation ensures the right technique, natural design, and long-term results.
+              {t('ht.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Hair%20Transplant%20Procedures" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('ht.ctaWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('ht.ctaBookBtn')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Hair transplant Malaysia", "FUE hair transplant", "FUT hair transplant", "hair restoration", "hair loss treatment"].map((tag, i) => (
+              {Array.from({ length: 5 }, (_, i) => t(`ht.seoTag${i}`)).map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>

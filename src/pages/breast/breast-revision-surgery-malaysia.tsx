@@ -2,8 +2,11 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
+import { getLocaleFromPath } from '@/i18n/config'
 
 export default function BreastRevisionSurgeryMalaysia() {
+  const { t, i18n } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -33,55 +36,49 @@ export default function BreastRevisionSurgeryMalaysia() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const detected = getLocaleFromPath(window.location.pathname)
+    if (detected && detected !== i18n.language) {
+      i18n.changeLanguage(detected)
+    }
+  }, [i18n])
+
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is breast revision surgery?", answer: "Breast revision is corrective surgery performed after previous breast implant or breast surgery to fix complications, improve breast shape, correct implant position, or replace/remove implants." },
-    { question: "How do I know if I need breast revision?", answer: "Common signs include hardness, pain, visible implant shift, asymmetry, rippling, abnormal breast shape, or dissatisfaction with size and contour. A surgical evaluation confirms the cause." },
-    { question: "Is breast revision more complex than first-time breast augmentation?", answer: "Yes. Revision surgery typically involves working with scar tissue, pocket changes, and tissue stretching from prior surgery, making planning and technique more demanding." },
-    { question: "Does revision surgery always require new implants?", answer: "No. Revision may involve implant exchange, implant removal, or reshaping without implants depending on your goals and medical findings." },
-    { question: "What is capsular contracture and can it be fixed?", answer: "Capsular contracture is tightening and hardening of scar tissue around the implant that can cause pain and distortion. It can be treated with capsule release or removal and often implant exchange or pocket adjustment." },
-    { question: "When will I see results after breast revision?", answer: "You may see an early improvement immediately, but swelling and settling take time. Most patients see stable progress at 4–6 weeks, with final refinement from 3–6 months." },
-    { question: "Will a breast lift be needed during revision?", answer: "If sagging, nipple position issues, or stretched skin is present, a lift may be recommended to achieve a natural, youthful contour after correction." },
-    { question: "Are scars worse with revision surgery?", answer: "Scars depend on the revision steps required. Dr. Soma typically uses existing scars when possible and places incisions strategically for the best healing outcome." },
-    { question: "Is breast revision surgery safe?", answer: "When performed by a certified plastic surgeon in an appropriate medical facility, breast revision is generally safe. Risks exist like all surgeries and are explained during consultation. The safest plan is always based on a full assessment of the implant, capsule, pocket stability, and your goals, with the revision technique chosen to match the specific problem being corrected." },
-    { question: "How many revision surgeries can a person have?", answer: "It depends on tissue condition, implant history, and the underlying issue. The goal is to plan a stable, long-term correction to reduce the need for repeated surgeries." }
-  ]
+  const faqs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => ({
+    question: t(`brs.faq${i}Q`),
+    answer: t(`brs.faq${i}A`)
+  }))
 
   const revisionTypes = [
-    { icon: "refresh-cw", name: "Implant Exchange" },
-    { icon: "scissors", name: "Capsulectomy" },
-    { icon: "move", name: "Pocket Repair" },
-    { icon: "arrow-up-circle", name: "Revision Lift" }
+    { icon: "refresh-cw", name: t('brs.revType0') },
+    { icon: "scissors", name: t('brs.revType1') },
+    { icon: "move", name: t('brs.revType2') },
+    { icon: "arrow-up-circle", name: t('brs.revType3') }
   ]
 
   const techniques = [
     {
-      title: "Capsulectomy",
-      desc: "Removal of hardened capsule tissue surrounding the implant.",
-      features: ["Treats contracture", "Reduces pain", "Restores softness"],
+      title: t('brs.tech0Title'),
+      desc: t('brs.tech0Desc'),
+      features: [t('brs.tech0Feat0'), t('brs.tech0Feat1'), t('brs.tech0Feat2')],
       highlight: true
     },
     {
-      title: "Pocket Adjustment",
-      desc: "Repositioning implant pocket for better symmetry and position.",
-      features: ["Corrects malposition", "Fixes bottoming out", "Addresses symmastia"],
+      title: t('brs.tech1Title'),
+      desc: t('brs.tech1Desc'),
+      features: [t('brs.tech1Feat0'), t('brs.tech1Feat1'), t('brs.tech1Feat2')],
       highlight: false
     },
     {
-      title: "Implant Exchange",
-      desc: "Replacing old or ruptured implants with new ones.",
-      features: ["Size change option", "Updated technology", "Fresh start"],
+      title: t('brs.tech2Title'),
+      desc: t('brs.tech2Desc'),
+      features: [t('brs.tech2Feat0'), t('brs.tech2Feat1'), t('brs.tech2Feat2')],
       highlight: false
     }
   ]
 
-  const candidateChecklist = [
-    "Unsatisfied with prior result",
-    "Pain or hardness",
-    "Visible implant shift",
-    "Suspected rupture"
-  ]
+  const candidateChecklist = [0, 1, 2, 3].map(i => t(`brs.candidate${i}`))
 
   return (
     <>
@@ -513,22 +510,22 @@ export default function BreastRevisionSurgeryMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="hidden md:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('brs.badge')}
               </div>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter text-zinc-900 leading-[1.1] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Breast Revision Surgery.</span> <br />
-                <span className="text-[#FE7623] text-[16px] md:text-[22px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Restore. Correct. Refine.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('brs.title1')}</span> <br />
+                <span className="text-[#FE7623] text-[16px] md:text-[22px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('brs.subtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Breast revision is not just a &ldquo;repeat surgery.&rdquo; It is a complex corrective procedure designed to fix implant problems, restore symmetry, and achieve long-term stability.</p>
+                <p style={{fontSize: '14px'}}>{t('brs.heroDesc')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Revision%20Surgery" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('brs.bookBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#problems" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Key Problems
+                  {t('brs.keyProblemsBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -548,7 +545,7 @@ export default function BreastRevisionSurgeryMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('brs.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('brs.happyPatients')}</span>
               </div>
             </div>
 
@@ -568,8 +565,8 @@ export default function BreastRevisionSurgeryMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Certified Plastic Surgeon</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Performed by Dr. Soma</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('brs.certifiedSurgeon')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('brs.performedBy')}</p>
                     </div>
                   </div>
                 </div>
@@ -583,25 +580,25 @@ export default function BreastRevisionSurgeryMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Breast Revision?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('brs.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Breast revision surgery is a corrective procedure performed after previous breast augmentation, lift, or reconstruction. Unlike primary surgery, it deals with scar tissue, altered anatomy, and specific complications.
+                  {t('brs.whatIsDesc')}
                 </p>
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Addresses Root Cause of Issues</span>
+                    <span>{t('brs.defItem0')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
                     <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Restores Natural Balance</span>
+                    <span>{t('brs.defItem1')}</span>
                   </div>
                 </div>
               </div>
 
               {/* Revision Types Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Common Revision Procedures</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('brs.revTypesTitle')}</h3>
                 <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {revisionTypes.map((type, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -624,8 +621,8 @@ export default function BreastRevisionSurgeryMalaysia() {
         <section id="problems" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Revision Techniques</h2>
-              <p className="text-zinc-500 text-sm">Dr. Soma selects the specific approach based on your unique situation and desired outcome.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('brs.techTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('brs.techDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
@@ -650,15 +647,15 @@ export default function BreastRevisionSurgeryMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">Revision Process</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('brs.processTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
                 {[
-                  { num: "1", title: "Assessment", desc: "Full evaluation of prior surgery" },
-                  { num: "2", title: "Planning", desc: "Custom surgical strategy" },
-                  { num: "3", title: "Correction", desc: "Precision surgical execution" },
-                  { num: "4", title: "Stabilisation", desc: "Long-term result support" }
+                  { num: "1", title: t('brs.proc0Title'), desc: t('brs.proc0Desc') },
+                  { num: "2", title: t('brs.proc1Title'), desc: t('brs.proc1Desc') },
+                  { num: "3", title: t('brs.proc2Title'), desc: t('brs.proc2Desc') },
+                  { num: "4", title: t('brs.proc3Title'), desc: t('brs.proc3Desc') }
                 ].map((step, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500" style={{animationDelay: `${i * 150}ms`}}>
                     <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{step.num}</div>
@@ -688,26 +685,26 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Revision Specialist</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('brs.revisionSpecialist')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;Revision requires diagnosis, not guessing. We assess pocket stability and tissue quality before recommending a plan.&rdquo;
+                  &ldquo;{t('brs.revisionQuote')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Dr. Soma?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('brs.whyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Revision surgery involves internal structural correction, not just cosmetic change. Dr. Soma performs a comprehensive assessment to ensure safety and long-term stability.
+                {t('brs.whyDesc')}
               </p>
 
               <div className="space-y-6">
                 {[
-                  { icon: "user-check", title: "Certified Plastic Surgeon", desc: "Performed by a board-certified specialist with extensive revision experience." },
-                  { icon: "sliders", title: "Problem-Focused Approach", desc: "Each revision is tailored to address your specific complications." },
-                  { icon: "hospital", title: "Hospital Standards", desc: "Full monitoring and sterile environment for maximum safety." }
+                  { icon: "user-check", title: t('brs.why0Title'), desc: t('brs.why0Desc') },
+                  { icon: "sliders", title: t('brs.why1Title'), desc: t('brs.why1Desc') },
+                  { icon: "hospital", title: t('brs.why2Title'), desc: t('brs.why2Desc') }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                     <div className="flex-shrink-0 w-14 h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
@@ -722,7 +719,7 @@ export default function BreastRevisionSurgeryMalaysia() {
               </div>
 
               <div className="mt-10 pt-10 border-t border-zinc-100">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Good Candidates Checklist</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('brs.candidateTitle')}</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -742,23 +739,23 @@ export default function BreastRevisionSurgeryMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Procedure Comparison</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('brs.compTitle')}</h2>
 
               <div data-animate="compare-table" className={`hidden md:block w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-4 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-8 py-6 border-b border-zinc-200 text-xs font-bold uppercase tracking-wider text-zinc-500">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>Breast Revision</div>
-                  <div>Implant Removal</div>
-                  <div>New Augmentation</div>
+                  <div>{t('brs.compFeature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>{t('brs.compRevision')}</div>
+                  <div>{t('brs.compRemoval')}</div>
+                  <div>{t('brs.compAug')}</div>
                 </div>
 
                 {/* Rows */}
                 {[
-                  { feat: "Fixes Complications", revision: "Yes", revisionIcon: true, removal: "Sometimes", augmentation: "Not primary" },
-                  { feat: "Changes Implant Size", revision: "Yes", revisionIcon: true, removal: "No", removalX: true, augmentation: "Yes", augIcon: true },
-                  { feat: "Corrects Malposition", revision: "Yes", revisionIcon: true, removal: "No", removalX: true, augmentation: "Sometimes" },
-                  { feat: "Treats Contracture", revision: "Yes", revisionIcon: true, removal: "Yes", removalIcon: true, augmentation: "Not primary" }
+                  { feat: t('brs.compRow0Feat'), revision: t('brs.compRow0Revision'), revisionIcon: true, removal: t('brs.compRow0Removal'), augmentation: t('brs.compRow0Aug') },
+                  { feat: t('brs.compRow1Feat'), revision: t('brs.compRow1Revision'), revisionIcon: true, removal: t('brs.compRow1Removal'), removalX: true, augmentation: t('brs.compRow1Aug'), augIcon: true },
+                  { feat: t('brs.compRow2Feat'), revision: t('brs.compRow2Revision'), revisionIcon: true, removal: t('brs.compRow2Removal'), removalX: true, augmentation: t('brs.compRow2Aug') },
+                  { feat: t('brs.compRow3Feat'), revision: t('brs.compRow3Revision'), revisionIcon: true, removal: t('brs.compRow3Removal'), removalIcon: true, augmentation: t('brs.compRow3Aug') }
                 ].map((row, i) => (
                   <div key={i} className="grid grid-cols-4 px-8 py-6 border-b border-zinc-100 items-center text-sm hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
                     <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
@@ -782,24 +779,24 @@ export default function BreastRevisionSurgeryMalaysia() {
               {/* Mobile Cards */}
               <div className="md:hidden space-y-4">
                 {[
-                  { feat: "Fixes Complications", revision: "Yes", removal: "Sometimes", augmentation: "Not primary" },
-                  { feat: "Changes Implant Size", revision: "Yes", removal: "No", augmentation: "Yes" },
-                  { feat: "Corrects Malposition", revision: "Yes", removal: "No", augmentation: "Sometimes" },
-                  { feat: "Treats Contracture", revision: "Yes", removal: "Yes", augmentation: "Not primary" }
+                  { feat: t('brs.compRow0Feat'), revision: t('brs.compRow0Revision'), removal: t('brs.compRow0Removal'), augmentation: t('brs.compRow0Aug') },
+                  { feat: t('brs.compRow1Feat'), revision: t('brs.compRow1Revision'), removal: t('brs.compRow1Removal'), augmentation: t('brs.compRow1Aug') },
+                  { feat: t('brs.compRow2Feat'), revision: t('brs.compRow2Revision'), removal: t('brs.compRow2Removal'), augmentation: t('brs.compRow2Aug') },
+                  { feat: t('brs.compRow3Feat'), revision: t('brs.compRow3Revision'), removal: t('brs.compRow3Removal'), augmentation: t('brs.compRow3Aug') }
                 ].map((row, i) => (
                   <div key={i} className="bg-white rounded-lg p-4 border border-zinc-200 shadow-sm">
                     <h4 className="font-semibold text-zinc-900 mb-3 text-sm">{row.feat}</h4>
                     <div className="space-y-2 text-xs">
                       <div className="flex justify-between items-start">
-                        <span className="text-[#FE7623] font-medium">Revision:</span>
+                        <span className="text-[#FE7623] font-medium">{t('brs.mobileRevision')}</span>
                         <span className="text-zinc-700 text-right">{row.revision}</span>
                       </div>
                       <div className="flex justify-between items-start">
-                        <span className="text-zinc-500 font-medium">Removal:</span>
+                        <span className="text-zinc-500 font-medium">{t('brs.mobileRemoval')}</span>
                         <span className="text-zinc-600 text-right">{row.removal}</span>
                       </div>
                       <div className="flex justify-between items-start">
-                        <span className="text-zinc-500 font-medium">Augmentation:</span>
+                        <span className="text-zinc-500 font-medium">{t('brs.mobileAug')}</span>
                         <span className="text-zinc-600 text-right">{row.augmentation}</span>
                       </div>
                     </div>
@@ -809,7 +806,7 @@ export default function BreastRevisionSurgeryMalaysia() {
 
               <div className="mt-8 text-center">
                 <Link href="/breast/breast-implant-removal-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Implant Removal Details
+                  {t('brs.viewImplantRemoval')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -821,34 +818,34 @@ export default function BreastRevisionSurgeryMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Post-Operative Recovery</h2>
-              <p className="text-zinc-500 text-sm">Clear Timeline for Your Healing Journey</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('brs.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('brs.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4">
               {[
                 {
-                  time: "Day 1",
-                  title: "Immediate Care",
-                  points: ["Support bra applied", "Mild tightness expected", "Walking encouraged"],
+                  time: t('brs.rec0Time'),
+                  title: t('brs.rec0Title'),
+                  points: [t('brs.rec0Item0'), t('brs.rec0Item1'), t('brs.rec0Item2')],
                   icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 1-2",
-                  title: "Early Healing",
-                  points: ["Swelling reduces", "Desk work resumes", "Drains removed (if used)"],
+                  time: t('brs.rec1Time'),
+                  title: t('brs.rec1Title'),
+                  points: [t('brs.rec1Item0'), t('brs.rec1Item1'), t('brs.rec1Item2')],
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 },
                 {
-                  time: "Week 4-6",
-                  title: "Activity Resumes",
-                  points: ["Light exercise approved", "Implants begin to settle"],
+                  time: t('brs.rec2Time'),
+                  title: t('brs.rec2Title'),
+                  points: [t('brs.rec2Item0'), t('brs.rec2Item1')],
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
                 },
                 {
-                  time: "Month 3-6",
-                  title: "Final Results",
-                  points: ["Softness improves", "Symmetry stabilizes"],
+                  time: t('brs.rec3Time'),
+                  title: t('brs.rec3Title'),
+                  points: [t('brs.rec3Item0'), t('brs.rec3Item1')],
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 }
               ].map((step, i) => (
@@ -889,10 +886,10 @@ export default function BreastRevisionSurgeryMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Day 1</span>
-                <span>Week 1-2</span>
-                <span>Week 4-6</span>
-                <span>Month 3-6</span>
+                <span>{t('brs.rec0Time')}</span>
+                <span>{t('brs.rec1Time')}</span>
+                <span>{t('brs.rec2Time')}</span>
+                <span>{t('brs.rec3Time')}</span>
               </div>
             </div>
           </div>
@@ -901,12 +898,12 @@ export default function BreastRevisionSurgeryMalaysia() {
         {/* Testimonials */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('brs.testimonialsTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { text: "My implant shifted and looked uneven. Dr. Soma corrected the pocket and the result finally looks symmetrical and natural.", name: "Stephanie, 37" },
-                { text: "I had capsular contracture and constant tightness. After revision, the pain is gone and the shape is soft again.", name: "Mei, 43" },
-                { text: "Honest consultation and clear plan. The revision looks balanced and suits my body better than my first surgery.", name: "Ayesha, 34" }
+                { text: t('brs.test0Text'), name: t('brs.test0Author') },
+                { text: t('brs.test1Text'), name: t('brs.test1Author') },
+                { text: t('brs.test2Text'), name: t('brs.test2Author') }
               ].map((testimonial, i) => (
                 <div key={i} data-animate={`testimonial-${i}`} className={`p-8 bg-white rounded-2xl border border-zinc-100 shadow-lg card-3d card-shine hover:border-[#FE7623] text-center sm:text-left ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
                   <div className="flex justify-center sm:justify-start gap-1 text-[#FE7623] mb-4">
@@ -935,11 +932,11 @@ export default function BreastRevisionSurgeryMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('brs.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Costs vary based on surgical complexity. Factors include:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('brs.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Type of complication (Capsule vs Pocket)", "Implant exchange requirement", "Addition of Lift or Fat Transfer"].map((item, i) => (
+                  {[0, 1, 2].map(i => t(`brs.pricingItem${i}`)).map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <div className="flex-shrink-0 w-6 h-6 mt-0.5">
                         <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
@@ -949,7 +946,7 @@ export default function BreastRevisionSurgeryMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Revision%20Surgery" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('brs.pricingBtn')}
                 </a>
               </div>
             </div>
@@ -961,8 +958,8 @@ export default function BreastRevisionSurgeryMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about breast revision</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('brs.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('brs.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -1007,13 +1004,13 @@ export default function BreastRevisionSurgeryMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('brs.scienceTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "Mayo Clinic", url: "https://www.mayoclinic.org/", desc: "Outlines that implants may require additional procedures over time due to complications.", color: "from-blue-500 to-blue-600" },
-                { name: "Harvard Health", url: "https://www.health.harvard.edu/", desc: "Explains assessment for corrective surgery based on symptoms and imaging.", color: "from-red-500 to-red-600" },
-                { name: "PubMed Studies", url: "https://pubmed.ncbi.nlm.nih.gov/", desc: "Clinical literature on capsulectomy techniques and pocket repair strategies.", color: "from-green-500 to-green-600" }
+                { name: t('brs.source0Name'), url: "https://www.mayoclinic.org/", desc: t('brs.source0Desc'), color: "from-blue-500 to-blue-600" },
+                { name: t('brs.source1Name'), url: "https://www.health.harvard.edu/", desc: t('brs.source1Desc'), color: "from-red-500 to-red-600" },
+                { name: t('brs.source2Name'), url: "https://pubmed.ncbi.nlm.nih.gov/", desc: t('brs.source2Desc'), color: "from-green-500 to-green-600" }
               ].map((source, i) => (
                 <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
@@ -1043,25 +1040,25 @@ export default function BreastRevisionSurgeryMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Expert Revision Planning.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('brs.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              Dr. Soma combines advanced corrective technique with safety-first planning to deliver balanced, stable, long-lasting results.
+              {t('brs.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Revision%20Surgery" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('brs.ctaWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('brs.ctaBookBtn')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["breast revision surgery", "implant exchange", "capsular contracture", "pocket repair", "malposition correction"].map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
+              {[0, 1, 2, 3, 4].map(i => (
+                <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{t(`brs.seoTag${i}`)}</span>
               ))}
             </div>
           </div>

@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function JawlineEnhancementMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -34,59 +36,34 @@ export default function JawlineEnhancementMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "What is jawline enhancement?", answer: "A medical procedure that improves jaw definition using fillers or surgery." },
-    { question: "Is jawline enhancement permanent?", answer: "Non-surgical fillers are temporary; surgical options are permanent." },
-    { question: "Is the procedure painful?", answer: "Discomfort is minimal and managed with topical or local anesthesia." },
-    { question: "How long do jawline fillers last?", answer: "Typically 12-18 months, depending on product and metabolism." },
-    { question: "Will my face look unnatural?", answer: "When done correctly, results are subtle and proportionate." },
-    { question: "Is jawline enhancement safe?", answer: "Yes, when performed by trained medical professionals in licensed facilities." },
-    { question: "How soon can I return to work?", answer: "Most patients return the same day or within 24 hours." },
-    { question: "Is jawline enhancement suitable for both men and women?", answer: "Yes, jawline enhancement can be tailored to achieve masculine or feminine facial contours based on individual goals." }
-  ]
+  const faqs = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`jle.faq${i}Q`),
+    answer: t(`jle.faq${i}A`)
+  }))
 
   const enhancementOptions = [
     {
-      title: "Non-Surgical Jawline Enhancement (Dermal Fillers)",
-      points: [
-        "Hyaluronic acid-based fillers",
-        "Immediate contour improvement",
-        "No surgery or general anesthesia",
-        "Temporary results (12-18 months)"
-      ]
+      title: t('jle.opt0Title'),
+      points: Array.from({ length: 4 }, (_, i) => t(`jle.opt0Point${i}`))
     },
     {
-      title: "Surgical Jawline Enhancement",
-      points: [
-        "Implants or bone contouring in selected cases",
-        "Permanent structural enhancement",
-        "Longer recovery period",
-        "Treatment choice depends on jaw structure"
-      ]
+      title: t('jle.opt1Title'),
+      points: Array.from({ length: 4 }, (_, i) => t(`jle.opt1Point${i}`))
     }
   ]
 
-  const whyJawlineMatters = [
-    "Facial balance and symmetry",
-    "Youthful lower-face appearance",
-    "Improved profile and side view",
-    "Masculine or feminine facial contours"
-  ]
+  const whyJawlineMatters = Array.from({ length: 4 }, (_, i) => t(`jle.why${i}`))
 
-  const candidateCriteria = [
-    "Desire improved jaw definition",
-    "Have good skin quality",
-    "Are medically fit",
-    "Have realistic expectations",
-    "Prefer proportionate enhancement"
-  ]
+  const candidateCriteria = Array.from({ length: 5 }, (_, i) => t(`jle.cand${i}`))
 
-  const recoveryTimeline = [
-    { time: "Non-Surgical Fillers", desc: "Mild swelling or bruising for 2-5 days" },
-    { time: "Surgical Procedures", desc: "1-2 weeks initial recovery" },
-    { time: "Final Results", desc: "Settle over several weeks" },
-    { time: "Return to Activities", desc: "Same day for non-surgical patients" }
-  ]
+  const recoveryTimeline = Array.from({ length: 4 }, (_, i) => ({
+    time: t(`jle.rec${i}Time`),
+    desc: t(`jle.rec${i}Desc`)
+  }))
+
+  const pricingItems = Array.from({ length: 5 }, (_, i) => t(`jle.price${i}`))
+
+  const seoTags = Array.from({ length: 5 }, (_, i) => t(`jle.seoTag${i}`))
 
   return (
     <>
@@ -94,138 +71,137 @@ export default function JawlineEnhancementMalaysia() {
         <title>Jawline Enhancement Malaysia | Defined Jawline by Medical Specialists</title>
         <meta name="description" content="Jawline enhancement in Malaysia using fillers or surgical techniques to improve definition and facial balance. Learn procedure, safety, recovery & FAQs." />
         <link rel="canonical" href="https://drsomaplasticsurgery.com/male/jawline-enhancement-malaysia" />
+        <style dangerouslySetInnerHTML={{ __html: `
+          html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+          }
+
+          .jawline-enhancement-page ::selection {
+            background-color: #FE7623;
+            color: white;
+          }
+
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes fadeInRight {
+            from {
+              opacity: 0;
+              transform: translateX(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
+
+          @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(254, 118, 35, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(254, 118, 35, 0.4); }
+          }
+
+          @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+          }
+
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+          }
+
+          .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+          }
+
+          .animate-fadeInRight {
+            animation: fadeInRight 0.6s ease-out forwards;
+          }
+
+          .animate-float {
+            animation: float 3s ease-in-out infinite;
+          }
+
+          .animate-glow {
+            animation: glow 2s ease-in-out infinite;
+          }
+
+          .animate-pulse-slow {
+            animation: pulse 2s ease-in-out infinite;
+          }
+
+          .animate-bounce-slow {
+            animation: bounce 2s ease-in-out infinite;
+          }
+
+          .card-3d {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d;
+          }
+          .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+            box-shadow: 0 25px 50px -12px rgba(254, 118, 35, 0.25);
+          }
+
+          .card-shine {
+            position: relative;
+            overflow: hidden;
+          }
+          .card-shine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+              to bottom right,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0) 40%,
+              rgba(255, 255, 255, 0.4) 50%,
+              rgba(255, 255, 255, 0) 60%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg) translateX(-100%);
+            transition: transform 0.6s;
+          }
+          .card-shine:hover::before {
+            transform: rotate(45deg) translateX(100%);
+          }
+
+          .img-zoom {
+            overflow: hidden;
+          }
+          .img-zoom img {
+            transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+          }
+          .img-zoom:hover img {
+            transform: scale(1.1);
+          }
+
+          .btn-magnetic {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          }
+          .btn-magnetic:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(254, 118, 35, 0.5);
+          }
+        ` }} />
       </Head>
-
-      <style jsx global>{`
-        html, body {
-          overflow-x: hidden;
-          max-width: 100vw;
-        }
-
-        .jawline-enhancement-page ::selection {
-          background-color: #FE7623;
-          color: white;
-        }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-
-        @keyframes glow {
-          0%, 100% { box-shadow: 0 0 5px rgba(254, 118, 35, 0.2); }
-          50% { box-shadow: 0 0 20px rgba(254, 118, 35, 0.4); }
-        }
-
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50% { transform: scale(1.05); opacity: 0.8; }
-        }
-
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-
-        .animate-fadeInUp {
-          animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .animate-fadeInRight {
-          animation: fadeInRight 0.6s ease-out forwards;
-        }
-
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-glow {
-          animation: glow 2s ease-in-out infinite;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-bounce-slow {
-          animation: bounce 2s ease-in-out infinite;
-        }
-
-        .card-3d {
-          transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-          transform-style: preserve-3d;
-        }
-        .card-3d:hover {
-          transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-          box-shadow: 0 25px 50px -12px rgba(254, 118, 35, 0.25);
-        }
-
-        .card-shine {
-          position: relative;
-          overflow: hidden;
-        }
-        .card-shine::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 60%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          transform: rotate(45deg) translateX(-100%);
-          transition: transform 0.6s;
-        }
-        .card-shine:hover::before {
-          transform: rotate(45deg) translateX(100%);
-        }
-
-        .img-zoom {
-          overflow: hidden;
-        }
-        .img-zoom img {
-          transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        .img-zoom:hover img {
-          transform: scale(1.1);
-        }
-
-        .btn-magnetic {
-          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        .btn-magnetic:hover {
-          transform: translateY(-3px) scale(1.02);
-          box-shadow: 0 10px 30px -10px rgba(254, 118, 35, 0.5);
-        }
-      `}</style>
 
       <div className="w-full max-w-full overflow-x-hidden">
       <main className="jawline-enhancement-page bg-white text-zinc-900 w-full max-w-full">
@@ -237,23 +213,23 @@ export default function JawlineEnhancementMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Regulated by Ministry of Health Malaysia
+                {t('jle.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Jawline Enhancement in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Non-Surgical & Surgical Options for a Defined, Balanced Jawline</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('jle.title1')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('jle.subtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Jawline enhancement is a medical aesthetic procedure designed to improve jaw definition, facial symmetry, and lower-face proportions. Treatments may be non-surgical (dermal fillers) or surgical, depending on anatomy and goals.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, aesthetic medical procedures are regulated and performed in licensed facilities under the supervision of the Ministry of Health Malaysia, ensuring patient safety and ethical clinical practice.</p>
+                <p style={{fontSize: '14px'}}>{t('jle.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('jle.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Jawline%20Enhancement%20Procedures" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('jle.bookBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('jle.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -273,7 +249,7 @@ export default function JawlineEnhancementMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">{t('jle.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('jle.happyPatients')}</span>
               </div>
             </div>
 
@@ -293,8 +269,8 @@ export default function JawlineEnhancementMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Procedure Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Defined Facial Contours</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('jle.procedureFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('jle.definedContours')}</p>
                     </div>
                   </div>
                 </div>
@@ -308,20 +284,20 @@ export default function JawlineEnhancementMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Jawline Enhancement?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('jle.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Jawline enhancement improves the contour and structure of the jaw using medical techniques that enhance definition and facial harmony. The goal is not exaggeration, but proportionate enhancement that complements the rest of the face.
+                  {t('jle.whatIsDesc')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700">The <strong>Mayo Clinic</strong> notes that dermal fillers are commonly used to restore or enhance facial contours when performed by trained professionals using approved products.</p>
+                  <p className="text-sm text-zinc-700" dangerouslySetInnerHTML={{ __html: t('jle.mayoNote') }}></p>
                 </div>
               </div>
 
               {/* Why Jawline Definition Matters */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Why Jawline Definition Matters</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('jle.whyTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  A well-defined jawline contributes to:
+                  {t('jle.whyDesc')}
                 </p>
                 <div className="space-y-3">
                   {whyJawlineMatters.map((item, i) => (
@@ -332,7 +308,7 @@ export default function JawlineEnhancementMalaysia() {
                   ))}
                 </div>
                 <div className="mt-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
-                  <p className="text-xs text-zinc-600">According to the <strong>Cleveland Clinic</strong>, facial contouring procedures aim to improve proportion rather than alter identity.</p>
+                  <p className="text-xs text-zinc-600" dangerouslySetInnerHTML={{ __html: t('jle.clevelandNote') }}></p>
                 </div>
               </div>
             </div>
@@ -343,8 +319,8 @@ export default function JawlineEnhancementMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="options-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('options-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Jawline Enhancement Options in Malaysia</h2>
-              <p className="text-zinc-500 text-sm">Treatment choice depends on jaw structure, skin quality, and desired permanence:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('jle.optionsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('jle.optionsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-8">
@@ -384,15 +360,13 @@ export default function JawlineEnhancementMalaysia() {
 
             {/* Content Section */}
             <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety and Medical Standards</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('jle.safetyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                Jawline enhancement must respect facial anatomy, vascular safety zones, and sterile technique.
+                {t('jle.safetyDesc1')}
               </p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                International principles of patient safety and procedural care align with standards published by the <strong>World Health Organization (WHO)</strong> for medical and surgical interventions.
-              </p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('jle.safetyDesc2') }}></p>
               <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Important:</strong> A detailed consultation is essential to minimize risks and ensure appropriate treatment selection.</p>
+                <p className="text-sm text-green-800"><strong>Important:</strong> {t('jle.safetyNote')}</p>
               </div>
             </div>
           </div>
@@ -402,8 +376,8 @@ export default function JawlineEnhancementMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Downtime</h2>
-              <p className="text-zinc-500 text-sm">Recovery depends on the technique used and follows general guidance similar to recommendations by the NHS for cosmetic procedures.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('jle.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('jle.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
@@ -424,9 +398,9 @@ export default function JawlineEnhancementMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('jle.candidateTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  You may be suitable if you:
+                  {t('jle.candidateDesc')}
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
@@ -445,13 +419,13 @@ export default function JawlineEnhancementMalaysia() {
                     <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                       <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
+                    <h3 className="text-xl font-semibold">{t('jle.importantNoteTitle')}</h3>
                   </div>
                   <p className="text-zinc-300 text-sm mb-4">
-                    A medical assessment determines the safest and most effective option for your jawline enhancement goals.
+                    {t('jle.importantDesc1')}
                   </p>
                   <p className="text-zinc-400 text-sm">
-                    The goal is proportionate enhancement that complements your natural facial features.
+                    {t('jle.importantDesc2')}
                   </p>
                 </div>
               </div>
@@ -472,11 +446,11 @@ export default function JawlineEnhancementMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('jle.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Jawline enhancement cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('jle.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Non-surgical vs surgical approach", "Type and amount of filler used", "Complexity of the procedure", "Number of treatment sessions", "Surgeon's expertise and experience"].map((item, i) => (
+                  {pricingItems.map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -484,7 +458,7 @@ export default function JawlineEnhancementMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Jawline%20Enhancement%20Procedures" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('jle.getQuoteBtn')}
                 </a>
               </div>
             </div>
@@ -496,8 +470,8 @@ export default function JawlineEnhancementMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about jawline enhancement</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('jle.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('jle.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -546,27 +520,27 @@ export default function JawlineEnhancementMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Achieve a Defined, Balanced Jawline</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('jle.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Enhance your facial contours with medically guided jawline enhancement solutions in Malaysia.
+              {t('jle.ctaDesc1')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              A thorough consultation ensures the right technique and natural-looking results tailored to your goals.
+              {t('jle.ctaDesc2')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Jawline%20Enhancement%20Procedures" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('jle.ctaWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('jle.ctaBookBtn')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Jawline enhancement Malaysia", "dermal fillers jawline", "jaw contouring", "facial definition", "jawline filler"].map((tag, i) => (
+              {seoTags.map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
