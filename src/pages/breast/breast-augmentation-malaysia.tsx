@@ -2,10 +2,18 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
+import { getLocaleFromPath } from '@/i18n/config'
 
 export default function BreastAugmentationMalaysia() {
+  const { t, i18n } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
+
+  useEffect(() => {
+    const detected = getLocaleFromPath(window.location.pathname)
+    if (detected !== i18n.language) { i18n.changeLanguage(detected) }
+  }, [i18n])
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -35,57 +43,44 @@ export default function BreastAugmentationMalaysia() {
 
   const isVisible = (id: string) => visibleSections.has(id)
 
-  const faqs = [
-    { question: "Is breast augmentation surgery painful?", answer: "Most patients experience moderate discomfort for the first 3–5 days, managed with prescribed medication. Dr. Soma uses muscle-sparing techniques that reduce post-operative pain." },
-    { question: "How do I choose the right implant size?", answer: "During your consultation, Dr. Soma uses 3D imaging and sizers to help visualise outcomes. The goal is to match your body frame, lifestyle, and personal preference for a natural result." },
-    { question: "Will my breast implants look natural?", answer: "Yes — when placed correctly by a certified plastic surgeon, implants look and feel natural. Dr. Soma selects the appropriate implant profile and placement for your anatomy." },
-    { question: "Can I still breastfeed after augmentation?", answer: "Yes. Most techniques preserve milk ducts and nerves, so breastfeeding remains possible. Incisions placed around the areola may carry a slightly higher risk, but it's generally safe." },
-    { question: "How long do breast implants last?", answer: "Modern implants are durable and can last 10–20 years or longer. Routine monitoring (ultrasound or MRI) is recommended every few years to ensure implant integrity." },
-    { question: "What's the difference between saline and silicone implants?", answer: "Silicone implants feel softer and more like natural breast tissue. Saline implants are filled after insertion and may feel firmer. Dr. Soma primarily uses high-quality silicone gel implants for optimal results." },
-    { question: "What is capsular contracture?", answer: "It's when scar tissue around the implant tightens, causing firmness or discomfort. Dr. Soma uses advanced surgical techniques and textured implants to minimise this risk." },
-    { question: "Will I have visible scars?", answer: "Incisions are placed in discreet locations — under the breast fold, around the areola, or in the armpit. Scars typically fade significantly within 6–12 months." },
-    { question: "When can I return to work after surgery?", answer: "Most patients return to desk jobs within 5–7 days. Physical or strenuous work may require 3–4 weeks off." },
-    { question: "Can breast augmentation fix sagging breasts?", answer: "Implants add volume but don't lift. If you have significant sagging, Dr. Soma may recommend combining augmentation with a breast lift (mastopexy) for the best outcome." }
-  ]
+  const faqs = Array.from({ length: 10 }, (_, i) => ({
+    question: t(`ba.faq${i}Q`),
+    answer: t(`ba.faq${i}A`),
+  }))
 
   const implantTypes = [
     {
-      title: "Round Implants",
-      desc: "Provides fullness in the upper breast for a fuller, more lifted appearance.",
-      features: ["Enhanced cleavage", "Symmetrical look", "Popular choice"],
+      title: t('ba.implant0Title'),
+      desc: t('ba.implant0Desc'),
+      features: [t('ba.implant0Feat0'), t('ba.implant0Feat1'), t('ba.implant0Feat2')],
       highlight: true
     },
     {
-      title: "Teardrop (Anatomical)",
-      desc: "Mimics the natural breast slope — fuller at the bottom, tapered at the top.",
-      features: ["Natural shape", "Subtle enhancement", "Ideal for slim frames"],
+      title: t('ba.implant1Title'),
+      desc: t('ba.implant1Desc'),
+      features: [t('ba.implant1Feat0'), t('ba.implant1Feat1'), t('ba.implant1Feat2')],
       highlight: false
     },
     {
-      title: "Smooth vs Textured",
-      desc: "Smooth implants move naturally; textured implants stay in position.",
-      features: ["Personal preference", "Surgeon recommendation", "Based on anatomy"],
+      title: t('ba.implant2Title'),
+      desc: t('ba.implant2Desc'),
+      features: [t('ba.implant2Feat0'), t('ba.implant2Feat1'), t('ba.implant2Feat2')],
       highlight: false
     }
   ]
 
   const incisionTypes = [
-    { icon: "M12 14l9-5-9-5-9 5 9 5z", name: "Inframammary", desc: "Under the breast fold" },
-    { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", name: "Periareolar", desc: "Around the areola" },
-    { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", name: "Transaxillary", desc: "Through the armpit" }
+    { icon: "M12 14l9-5-9-5-9 5 9 5z", name: t('ba.incision0Name'), desc: t('ba.incision0Desc') },
+    { icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", name: t('ba.incision1Name'), desc: t('ba.incision1Desc') },
+    { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", name: t('ba.incision2Name'), desc: t('ba.incision2Desc') }
   ]
 
   const placementOptions = [
-    { title: "Submuscular (Under the Muscle)", points: ["More natural slope", "Better for mammograms", "Ideal for thin patients"] },
-    { title: "Subglandular (Over the Muscle)", points: ["Shorter recovery", "Better for athletes", "Enhanced cleavage"] }
+    { title: t('ba.placement0Title'), points: [t('ba.placement0Point0'), t('ba.placement0Point1'), t('ba.placement0Point2')] },
+    { title: t('ba.placement1Title'), points: [t('ba.placement1Point0'), t('ba.placement1Point1'), t('ba.placement1Point2')] }
   ]
 
-  const candidateChecklist = [
-    "Desire larger or fuller breasts",
-    "Good overall health",
-    "Realistic expectations",
-    "Non-smoker or willing to quit"
-  ]
+  const candidateChecklist = Array.from({ length: 4 }, (_, i) => t(`ba.candidate${i}`))
 
   return (
     <>
@@ -517,24 +512,24 @@ export default function BreastAugmentationMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Board Certified Plastic Surgeon
+                {t('ba.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Breast Augmentation in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Safe. Natural. Personalised.</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('ba.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('ba.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify space-y-4" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Breast size and shape play a major role in body balance and self-confidence. Some women feel their breasts are naturally small, uneven, or have lost volume after pregnancy, weight loss, or aging.</p>
-                <p style={{fontSize: '14px'}}>Breast augmentation is a surgeon-performed procedure designed to enhance breast size, improve shape, restore volume, and create better overall body proportion.</p>
-                <p style={{fontSize: '14px'}}>At Dr. Soma Plastic Surgery, every breast augmentation procedure is performed personally by Dr. Soma, a board-certified plastic surgeon with extensive experience in aesthetic breast surgery. Implant selection, pocket placement, and symmetry planning are tailored precisely to each patient for natural, balanced results.</p>
+                <p style={{fontSize: '14px'}}>{t('ba.heroDesc1')}</p>
+                <p style={{fontSize: '14px'}}>{t('ba.heroDesc2')}</p>
+                <p style={{fontSize: '14px'}}>{t('ba.heroDesc3')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Augmentation%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('ba.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#process" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  How It Works
+                  {t('ba.howItWorks')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -554,7 +549,7 @@ export default function BreastAugmentationMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">Trusted by <span className="text-[#FE7623] font-bold">500+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('ba.trustedBy')} <span className="text-[#FE7623] font-bold">500+</span> {t('ba.happyPatients')}</span>
               </div>
             </div>
 
@@ -574,8 +569,8 @@ export default function BreastAugmentationMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Implant Quality</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Premium Silicone Gel Implants</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('ba.implantQualityLabel')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('ba.implantQualityValue')}</p>
                     </div>
                   </div>
                 </div>
@@ -589,29 +584,23 @@ export default function BreastAugmentationMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div data-animate="def-1" className={`md:col-span-5 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Breast Augmentation?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ba.whatIsTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Breast augmentation (augmentation mammoplasty) is a surgical procedure that uses implants to increase breast size, restore volume lost after pregnancy or weight loss, or improve breast symmetry. It is one of the most popular cosmetic procedures worldwide.
+                  {t('ba.whatIsDesc')}
                 </p>
                 <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
-                    <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Enhances Breast Size & Shape</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
-                    <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Restores Volume After Pregnancy</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
-                    <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    <span>Improves Breast Symmetry</span>
-                  </div>
+                  {Array.from({ length: 3 }, (_, i) => (
+                    <div key={i} className="flex items-center gap-3 text-sm text-zinc-700 p-3 bg-zinc-50 rounded-lg border border-zinc-100 hover:border-[#FE7623] hover:bg-orange-50/30 transition-all duration-300 cursor-pointer group">
+                      <svg className="w-6 h-6 text-[#FE7623] group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>{t(`ba.keyPoint${i}`)}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               {/* Incision Types Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">Incision Options</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('ba.incisionTitle')}</h3>
                 <div className={`grid grid-cols-1 lg:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {incisionTypes.map((incision, i) => (
                     <div key={i} className="p-6 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
@@ -632,8 +621,8 @@ export default function BreastAugmentationMalaysia() {
         <section id="process" className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="tech-header" className={`max-w-2xl mb-12 transition-all duration-700 ${isVisible('tech-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Implant Types</h2>
-              <p className="text-zinc-500 text-sm">Dr. Soma selects the ideal implant type based on your anatomy, lifestyle, and aesthetic goals.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ba.implantTypesTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ba.implantTypesDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
@@ -660,7 +649,7 @@ export default function BreastAugmentationMalaysia() {
 
             {/* Placement Options */}
             <div className="border-t border-zinc-200 pt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">Implant Placement Options</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('ba.placementTitle')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {placementOptions.map((option, i) => (
                   <div key={i} className="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:border-[#FE7623] hover:shadow-xl transition-all duration-300 group">
@@ -682,20 +671,15 @@ export default function BreastAugmentationMalaysia() {
 
             {/* Process Steps */}
             <div className="border-t border-zinc-200 pt-16 mt-16">
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">The Procedure</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-10 text-center">{t('ba.procedureTitle')}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative">
                 <div className="hidden md:block absolute top-6 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-zinc-200 via-[#FE7623]/30 to-zinc-200 z-0 animate-shimmer"></div>
 
-                {[
-                  { num: "1", title: "Consultation", desc: "3D imaging & planning" },
-                  { num: "2", title: "Anaesthesia", desc: "General anaesthesia" },
-                  { num: "3", title: "Implant Insertion", desc: "Precise placement" },
-                  { num: "4", title: "Recovery", desc: "Compression & support" }
-                ].map((step, i) => (
+                {Array.from({ length: 4 }, (_, i) => (
                   <div key={i} className="relative z-10 flex flex-col items-center group cursor-pointer hover:-translate-y-3 transition-all duration-500" style={{animationDelay: `${i * 150}ms`}}>
-                    <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{step.num}</div>
-                    <h4 className="text-sm font-semibold text-zinc-900 mb-1 group-hover:text-[#FE7623] transition-colors duration-300">{step.title}</h4>
-                    <p className="text-xs text-zinc-500 group-hover:text-zinc-700 transition-colors duration-300">{step.desc}</p>
+                    <div className="w-12 h-12 rounded-full bg-white border-2 border-zinc-200 text-sm font-bold flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:text-white group-hover:border-[#FE7623] group-hover:scale-125 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:rotate-[360deg]">{i + 1}</div>
+                    <h4 className="text-sm font-semibold text-zinc-900 mb-1 group-hover:text-[#FE7623] transition-colors duration-300">{t(`ba.proc${i}Title`)}</h4>
+                    <p className="text-xs text-zinc-500 group-hover:text-zinc-700 transition-colors duration-300">{t(`ba.proc${i}Desc`)}</p>
                   </div>
                 ))}
               </div>
@@ -720,41 +704,37 @@ export default function BreastAugmentationMalaysia() {
               <div className="absolute bottom-8 right-8 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 max-w-[260px] animate-float">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-5 h-5 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  <span className="text-sm font-bold text-zinc-900">Natural Results</span>
+                  <span className="text-sm font-bold text-zinc-900">{t('ba.naturalResults')}</span>
                 </div>
                 <p className="text-xs text-zinc-500 leading-relaxed">
-                  &ldquo;We focus on achieving natural-looking results that complement your body proportions.&rdquo;
+                  &ldquo;{t('ba.naturalResultsQuote')}&rdquo;
                 </p>
               </div>
             </div>
 
             {/* Content Section */}
             <div data-animate="why-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('why-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Why Dr. Soma?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ba.whyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                Breast augmentation requires precision, experience, and an artistic eye. Dr. Soma combines surgical expertise with a personalised approach to deliver results that look and feel natural.
+                {t('ba.whyDesc')}
               </p>
 
               <div className="space-y-6">
-                {[
-                  { icon: "user-check", title: "Board-Certified Plastic Surgeon", desc: "Performed by a fully qualified specialist with extensive breast surgery experience." },
-                  { icon: "sliders", title: "Personalised Approach", desc: "Every patient receives a customised plan based on their anatomy, goals, and lifestyle." },
-                  { icon: "hospital", title: "Hospital-Grade Safety", desc: "All procedures are performed in accredited facilities with full monitoring." }
-                ].map((item, i) => (
+                {Array.from({ length: 3 }, (_, i) => (
                   <div key={i} className="flex gap-4 group cursor-pointer hover:translate-x-2 transition-transform duration-300">
                     <div className="flex-shrink-0 w-14 h-14 rounded-full bg-zinc-50 border border-zinc-100 flex items-center justify-center text-[#FE7623] group-hover:bg-[#FE7623] group-hover:text-white group-hover:border-[#FE7623] transition-all duration-300">
                       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{item.title}</h4>
-                      <p className="text-xs text-zinc-500 mt-1">{item.desc}</p>
+                      <h4 className="text-sm font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{t(`ba.why${i}Title`)}</h4>
+                      <p className="text-xs text-zinc-500 mt-1">{t(`ba.why${i}Desc`)}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-10 pt-10 border-t border-zinc-100">
-                <h4 className="text-sm font-bold text-zinc-900 mb-4">Good Candidates Checklist</h4>
+                <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('ba.candidateTitle')}</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">
@@ -772,35 +752,29 @@ export default function BreastAugmentationMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto w-full">
             <div className="flex flex-col w-full">
-              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Breast Augmentation vs. Breast Lift</h2>
+              <h2 data-animate="compare-header" className={`text-2xl font-semibold mb-10 text-center text-[#FE7623] transition-all duration-700 ${isVisible('compare-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('ba.compTitle')}</h2>
 
               <div data-animate="compare-table" className={`w-full border border-zinc-200 rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 ${isVisible('compare-table') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {/* Header */}
                 <div className="grid grid-cols-3 bg-gradient-to-r from-zinc-50 to-orange-50/30 px-4 py-4 md:px-8 md:py-6 border-b border-zinc-200 text-[11px] md:text-xs font-bold uppercase tracking-wider text-zinc-500 gap-4 md:gap-6">
-                  <div>Feature</div>
-                  <div className="text-[#FE7623] flex items-center gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>Augmentation</div>
-                  <div>Breast Lift</div>
+                  <div>{t('ba.compFeature')}</div>
+                  <div className="text-[#FE7623] flex items-center gap-2"><span className="hidden md:block w-2 h-2 rounded-full bg-[#FE7623] animate-pulse"></span>{t('ba.compAug')}</div>
+                  <div>{t('ba.compLift')}</div>
                 </div>
 
                 {/* Rows */}
-                {[
-                  { feat: "Adds Volume", aug: "Yes", lift: "No" },
-                  { feat: "Lifts Sagging Breasts", aug: "No", lift: "Yes" },
-                  { feat: "Reshapes Breast", aug: "Partially", lift: "Yes" },
-                  { feat: "Ideal For", aug: "Small breasts, loss of volume", lift: "Sagging or drooping" },
-                  { feat: "Can Be Combined", aug: "Yes", lift: "Yes" }
-                ].map((row, i) => (
+                {Array.from({ length: 5 }, (_, i) => (
                   <div key={i} className="grid grid-cols-3 px-4 py-4 md:px-8 md:py-6 border-b border-zinc-100 items-center text-[12px] md:text-sm gap-4 md:gap-6 hover:bg-gradient-to-r hover:from-orange-50/30 hover:to-white transition-all duration-300 group cursor-pointer">
-                    <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{row.feat}</div>
-                    <div className="text-[#FE7623] group-hover:font-semibold transition-all duration-300">{row.aug}</div>
-                    <div className="text-zinc-600 group-hover:text-zinc-900 transition-colors duration-300">{row.lift}</div>
+                    <div className="font-semibold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{t(`ba.comp${i}Feat`)}</div>
+                    <div className="text-[#FE7623] group-hover:font-semibold transition-all duration-300">{t(`ba.comp${i}Aug`)}</div>
+                    <div className="text-zinc-600 group-hover:text-zinc-900 transition-colors duration-300">{t(`ba.comp${i}Lift`)}</div>
                   </div>
                 ))}
               </div>
 
               <div className="mt-8 text-center">
                 <Link href="/breast/breast-lift-malaysia" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FE7623] hover:underline group">
-                  View Breast Lift Details
+                  {t('ba.viewBreastLift')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </Link>
               </div>
@@ -812,67 +786,42 @@ export default function BreastAugmentationMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Post-Operative Recovery</h2>
-              <p className="text-zinc-500 text-sm">Clear Timeline for Your Healing Journey</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ba.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ba.recoverySubtitle')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
               {[
-                {
-                  time: "Day 1–3",
-                  title: "Initial Recovery",
-                  points: ["Rest at home", "Mild to moderate discomfort", "Surgical bra worn 24/7"],
-                  icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                },
-                {
-                  time: "Week 1",
-                  title: "Early Healing",
-                  points: ["Swelling and bruising subside", "Return to light activities", "First follow-up visit"],
-                  icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                },
-                {
-                  time: "Week 2–3",
-                  title: "Progress Phase",
-                  points: ["Most patients return to work", "Swelling continues to reduce", "Avoid lifting heavy objects"],
-                  icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                },
-                {
-                  time: "Week 4–6",
-                  title: "Active Recovery",
-                  points: ["Resume exercise (gradual)", "Breast shape settles", "Final bra fitting"],
-                  icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                },
-                {
-                  time: "Month 3–6",
-                  title: "Final Results",
-                  points: ["Implants fully settle", "Natural look and feel", "Scars continue to fade"],
-                  icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                }
-              ].map((step, i) => (
+                "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+                "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+                "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+                "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+              ].map((icon, i) => (
                 <div key={i} data-animate={`recovery-${i}`} className={`relative bg-white pt-14 pb-8 px-8 rounded-2xl border border-zinc-200 shadow-sm card-3d overflow-visible hover:border-[#FE7623] group ${isVisible(`recovery-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 100}ms`}}>
                   {/* Time Badge */}
                   <div className="absolute -top-4 left-6 px-7 py-2 bg-gradient-to-r from-[#FE7623] to-orange-400 text-white text-xs font-bold rounded-full shadow-lg group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-orange-500/30 transition-all duration-300 z-10">
-                    {step.time}
+                    {t(`ba.rec${i}Time`)}
                   </div>
 
                   {/* Icon */}
                   <div className="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-[#FE7623] group-hover:to-orange-400 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-xl transition-all duration-500">
                     <svg className="w-7 h-7 text-[#FE7623] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={icon} />
                     </svg>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-zinc-900 mb-4 group-hover:text-[#FE7623] transition-colors duration-300">{step.title}</h3>
+                  <h3 className="text-lg font-bold text-zinc-900 mb-4 group-hover:text-[#FE7623] transition-colors duration-300">{t(`ba.rec${i}Title`)}</h3>
 
                   {/* Points */}
                   <ul className="space-y-3">
-                    {step.points.map((point, j) => (
+                    {Array.from({ length: 3 }, (_, j) => (
                       <li key={j} className="flex items-start gap-3 text-sm text-zinc-600 group-hover:text-zinc-800 hover:translate-x-2 transition-all duration-300">
                         <svg className="w-6 h-6 min-w-[24px] text-[#FE7623] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>{point}</span>
+                        <span>{t(`ba.rec${i}Point${j}`)}</span>
                       </li>
                     ))}
                   </ul>
@@ -886,11 +835,9 @@ export default function BreastAugmentationMalaysia() {
                 <div className="h-full bg-gradient-to-r from-[#FE7623] to-orange-400 rounded-full w-0 animate-progress" style={{animation: 'progressBar 2s ease-out forwards', animationDelay: '0.5s'}}></div>
               </div>
               <div className="flex justify-between mt-4 text-xs text-zinc-500">
-                <span>Day 1-3</span>
-                <span>Week 1</span>
-                <span>Week 2-3</span>
-                <span>Week 4-6</span>
-                <span>Month 3-6</span>
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span key={i}>{t(`ba.rec${i}Time`)}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -899,21 +846,17 @@ export default function BreastAugmentationMalaysia() {
         {/* Testimonials */}
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>Patient Stories</h2>
+            <h2 data-animate="testimonial-header" className={`text-2xl font-semibold text-center mb-12 text-[#FE7623] transition-all duration-700 ${isVisible('testimonial-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>{t('ba.testimonialsTitle')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { text: "I finally feel confident in my clothes. Dr. Soma listened to exactly what I wanted and delivered beyond expectations.", name: "Mei Ling, 32" },
-                { text: "The results look so natural. Even my close friends couldn't tell I had surgery — they just said I looked great!", name: "Sarah, 28" },
-                { text: "Professional, caring, and the results are amazing. I wish I had done this years ago.", name: "Anita, 41" }
-              ].map((testimonial, i) => (
+              {Array.from({ length: 3 }, (_, i) => (
                 <div key={i} data-animate={`testimonial-${i}`} className={`p-8 bg-white rounded-2xl border border-zinc-100 shadow-lg card-3d card-shine hover:border-[#FE7623] ${isVisible(`testimonial-${i}`) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{transitionDelay: `${i * 150}ms`}}>
                   <div className="flex gap-1 text-[#FE7623] mb-4">
                     {[...Array(5)].map((_, j) => (
                       <svg key={j} className="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                     ))}
                   </div>
-                  <p className="text-sm text-zinc-600 italic mb-6 leading-relaxed">&ldquo;{testimonial.text}&rdquo;</p>
-                  <p className="text-sm font-bold text-zinc-900">— {testimonial.name}</p>
+                  <p className="text-sm text-zinc-600 italic mb-6 leading-relaxed">&ldquo;{t(`ba.test${i}Text`)}&rdquo;</p>
+                  <p className="text-sm font-bold text-zinc-900">— {t(`ba.test${i}Name`)}</p>
                 </div>
               ))}
             </div>
@@ -933,19 +876,19 @@ export default function BreastAugmentationMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('ba.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Breast augmentation cost varies depending on several factors:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('ba.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Implant type & brand", "Surgical technique", "Hospital & anaesthesia fees", "Post-op care & garments"].map((item, i) => (
+                  {Array.from({ length: 4 }, (_, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                      {item}
+                      {t(`ba.pricing${i}`)}
                     </li>
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Augmentation%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow relative z-10">
-                  Get Quote via WhatsApp
+                  {t('ba.getQuote')}
                 </a>
               </div>
             </div>
@@ -957,8 +900,8 @@ export default function BreastAugmentationMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about breast augmentation</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('ba.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('ba.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -1003,23 +946,23 @@ export default function BreastAugmentationMalaysia() {
               <div className="p-2 bg-blue-50 rounded-lg animate-pulse-slow flex-shrink-0">
                 <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               </div>
-              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">Scientific Evidence & References</h3>
+              <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-widest flex-1">{t('ba.authorityTitle')}</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { name: "American Society of Plastic Surgeons", url: "https://www.plasticsurgery.org/", desc: "Breast augmentation is one of the most commonly performed cosmetic procedures with high patient satisfaction rates.", color: "from-red-500 to-red-600" },
-                { name: "Mayo Clinic", url: "https://www.mayoclinic.org/", desc: "Modern breast implants are safe and effective when performed by qualified plastic surgeons.", color: "from-blue-500 to-blue-600" },
-                { name: "PubMed Studies", url: "https://pubmed.ncbi.nlm.nih.gov/", desc: "Research shows high satisfaction rates and improved quality of life following breast augmentation surgery.", color: "from-green-500 to-green-600" }
+                { url: "https://www.plasticsurgery.org/", color: "from-red-500 to-red-600" },
+                { url: "https://www.mayoclinic.org/", color: "from-blue-500 to-blue-600" },
+                { url: "https://pubmed.ncbi.nlm.nih.gov/", color: "from-green-500 to-green-600" }
               ].map((source, i) => (
                 <a key={i} href={source.url} target="_blank" rel="noopener noreferrer" className="block px-8 py-8 rounded-2xl border border-zinc-200 bg-white card-3d card-shine hover:border-[#FE7623] group" style={{transitionDelay: `${i * 100}ms`}}>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${source.color} animate-pulse`}></div>
-                      <span className="text-base font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{source.name}</span>
+                      <span className="text-base font-bold text-zinc-900 group-hover:text-[#FE7623] transition-colors duration-300">{t(`ba.auth${i}Name`)}</span>
                     </div>
                     <svg className="w-6 h-6 text-zinc-400 group-hover:text-[#FE7623] group-hover:rotate-45 group-hover:scale-125 transition-all duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                   </div>
-                  <p className="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors duration-300">{source.desc}</p>
+                  <p className="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors duration-300">{t(`ba.auth${i}Desc`)}</p>
                 </a>
               ))}
             </div>
@@ -1039,25 +982,25 @@ export default function BreastAugmentationMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Enhance your confidence with natural-looking results.</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('ba.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 mb-10 max-w-xl mx-auto">
-              Dr. Soma combines surgical precision with an artistic eye to deliver breast augmentation results that look and feel natural.
+              {t('ba.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Breast%20Augmentation%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-10 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('ba.chatWhatsApp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-10 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('ba.bookConsultationCta')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["breast implants", "augmentation mammoplasty", "silicone implants", "breast enhancement", "cosmetic surgery"].map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
+              {Array.from({ length: 5 }, (_, i) => (
+                <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{t(`ba.tag${i}`)}</span>
               ))}
             </div>
           </div>
