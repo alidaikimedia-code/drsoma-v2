@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from 'react-i18next'
 
 export default function NoseThreadLiftMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,51 +37,66 @@ export default function NoseThreadLiftMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What does a nose thread lift do?", answer: "It enhances the nasal bridge and tip using absorbable threads to improve contour without surgery." },
-    { question: "Is a nose thread lift safe?", answer: "Yes, when performed by a qualified medical practitioner using regulated medical threads." },
-    { question: "How long do nose thread lift results last?", answer: "Results usually last between 12 and 18 months." },
-    { question: "Is the procedure painful?", answer: "Discomfort is minimal, as local anaesthesia is used." },
-    { question: "Is there downtime after a nose thread lift?", answer: "Most patients return to daily activities within 1–2 days." },
-    { question: "Can a nose thread lift replace rhinoplasty?", answer: "No. It offers subtle enhancement and cannot correct major structural issues." },
-    { question: "Can the threads be felt or seen?", answer: "Temporary tightness may be felt initially but usually resolves as tissues settle." },
-    { question: "Who should avoid nose thread lift treatment?", answer: "Patients with severe nasal deformities, active infections, or unrealistic expectations may not be suitable." }
+    { question: t('ntl.faq1Q'), answer: t('ntl.faq1A') },
+    { question: t('ntl.faq2Q'), answer: t('ntl.faq2A') },
+    { question: t('ntl.faq3Q'), answer: t('ntl.faq3A') },
+    { question: t('ntl.faq4Q'), answer: t('ntl.faq4A') },
+    { question: t('ntl.faq5Q'), answer: t('ntl.faq5A') },
+    { question: t('ntl.faq6Q'), answer: t('ntl.faq6A') },
+    { question: t('ntl.faq7Q'), answer: t('ntl.faq7A') },
+    { question: t('ntl.faq8Q'), answer: t('ntl.faq8A') }
   ]
 
   const howItWorks = [
-    { title: "Nasal Assessment", desc: "Detailed nasal and facial assessment to plan thread placement" },
-    { title: "Local Anaesthesia", desc: "Application of local anaesthesia for patient comfort" },
-    { title: "Thread Placement", desc: "Strategic placement of PDO threads along the nasal framework" },
-    { title: "Immediate Lifting", desc: "Immediate lifting effect with gradual collagen stimulation" }
+    { title: t('ntl.how1Title'), desc: t('ntl.how1Desc') },
+    { title: t('ntl.how2Title'), desc: t('ntl.how2Desc') },
+    { title: t('ntl.how3Title'), desc: t('ntl.how3Desc') },
+    { title: t('ntl.how4Title'), desc: t('ntl.how4Desc') }
   ]
 
   const improvements = [
-    "Increase nasal bridge height",
-    "Improve nose definition",
-    "Support and refine the nasal tip",
-    "Create a straighter-appearing profile",
-    "Enhance facial balance"
+    t('ntl.improve1'),
+    t('ntl.improve2'),
+    t('ntl.improve3'),
+    t('ntl.improve4'),
+    t('ntl.improve5')
   ]
 
   const benefits = [
-    { title: "Non-Surgical", desc: "No implants or bone alteration required" },
-    { title: "Immediate Results", desc: "Visible improvement right after treatment" },
-    { title: "Minimal Downtime", desc: "Return to normal activities within 1-2 days" },
-    { title: "Natural Look", desc: "Gradual collagen support for natural refinement" }
+    { title: t('ntl.benefit1Title'), desc: t('ntl.benefit1Desc') },
+    { title: t('ntl.benefit2Title'), desc: t('ntl.benefit2Desc') },
+    { title: t('ntl.benefit3Title'), desc: t('ntl.benefit3Desc') },
+    { title: t('ntl.benefit4Title'), desc: t('ntl.benefit4Desc') }
   ]
 
   const candidateCriteria = [
-    "Want non-surgical nose enhancement",
-    "Have a low to moderate nasal bridge",
-    "Prefer minimal downtime",
-    "Have realistic expectations",
-    "Are in good general health"
+    t('ntl.candidate1'),
+    t('ntl.candidate2'),
+    t('ntl.candidate3'),
+    t('ntl.candidate4'),
+    t('ntl.candidate5')
   ]
 
   const recoveryTimeline = [
-    { time: "Day 1", desc: "Same-day outpatient procedure, immediate improvement visible" },
-    { time: "Day 2-3", desc: "Mild swelling, return to normal activities" },
-    { time: "Week 4-6", desc: "Continued refinement as collagen develops" },
-    { time: "12-18 Months", desc: "Results typically last, depending on thread type" }
+    { time: t('ntl.recovery1Time'), desc: t('ntl.recovery1Desc') },
+    { time: t('ntl.recovery2Time'), desc: t('ntl.recovery2Desc') },
+    { time: t('ntl.recovery3Time'), desc: t('ntl.recovery3Desc') },
+    { time: t('ntl.recovery4Time'), desc: t('ntl.recovery4Desc') }
+  ]
+
+  const safetyItems = [
+    t('ntl.safetyItem1'),
+    t('ntl.safetyItem2'),
+    t('ntl.safetyItem3'),
+    t('ntl.safetyItem4')
+  ]
+
+  const pricingItems = [
+    t('ntl.pricing1'),
+    t('ntl.pricing2'),
+    t('ntl.pricing3'),
+    t('ntl.pricing4'),
+    t('ntl.pricing5')
   ]
 
   return (
@@ -231,23 +248,23 @@ export default function NoseThreadLiftMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                Non-Surgical Treatment
+                {t('ntl.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Nose Thread Lift in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Non-Surgical Nose Enhancement with Minimal Downtime</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('ntl.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[18px] md:text-[28px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('ntl.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>A nose thread lift is a minimally invasive aesthetic procedure designed to enhance the nasal bridge and tip without surgery. It is commonly chosen by patients who want subtle nose height, improved definition, and a more balanced side profile — without implants or long recovery time.</p>
-                <p style={{fontSize: '14px', marginTop: '12px'}}>In Malaysia, aesthetic procedures using medical devices must be performed by licensed medical practitioners in regulated facilities. The absorbable threads used in nose thread lifts are classified as regulated medical devices, as outlined by the U.S. Food and Drug Administration (FDA).</p>
+                <p style={{fontSize: '14px'}}>{t('ntl.heroDesc1')}</p>
+                <p style={{fontSize: '14px', marginTop: '12px'}}>{t('ntl.heroDesc2')}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Nose%20Thread%20Lift" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('ntl.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#learn-more" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Learn More
+                  {t('ntl.learnMore')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -267,7 +284,7 @@ export default function NoseThreadLiftMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">Trusted by <span className="text-[#FE7623] font-bold">800+</span> happy patients</span>
+                <span className="text-sm text-zinc-600 font-medium text-center sm:text-left">{t('ntl.trustedBy')} <span className="text-[#FE7623] font-bold">800+</span> {t('ntl.happyPatients')}</span>
               </div>
             </div>
 
@@ -287,8 +304,8 @@ export default function NoseThreadLiftMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Treatment Focus</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">Nose Enhancement</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('ntl.treatmentFocus')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('ntl.noseEnhancement')}</p>
                     </div>
                   </div>
                 </div>
@@ -302,20 +319,20 @@ export default function NoseThreadLiftMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 px-4 md:px-8">
               <div data-animate="def-1" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-1') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is a Nose Thread Lift?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ntl.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  A nose thread lift uses absorbable polydioxanone (PDO) threads inserted along the nasal bridge and tip to provide structural support and mild lifting. These threads create immediate mechanical elevation while also stimulating collagen formation as they dissolve.
+                  {t('ntl.whatDesc')}
                 </p>
                 <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                  <p className="text-sm text-zinc-700"><strong>PDO sutures</strong> have a long history of use in medical procedures and are designed to be safely absorbed by the body over time under regulated standards.</p>
+                  <p className="text-sm text-zinc-700" dangerouslySetInnerHTML={{ __html: t('ntl.whatPdoInfo') }}></p>
                 </div>
               </div>
 
               {/* What Can It Improve */}
               <div data-animate="def-2" className={`md:col-span-6 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">What Can a Nose Thread Lift Improve?</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('ntl.improveTitle')}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Major clinical institutions such as the Mayo Clinic explain that thread-based lifting procedures are intended for subtle contour improvement:
+                  {t('ntl.improveDesc')}
                 </p>
                 <div className="space-y-3">
                   {improvements.map((item, i) => (
@@ -334,8 +351,8 @@ export default function NoseThreadLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="howit-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('howit-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">How Nose Thread Lift Works</h2>
-              <p className="text-zinc-500 text-sm">The treatment is usually completed within 30–45 minutes and does not require hospital admission:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ntl.howTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ntl.howDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
@@ -356,8 +373,8 @@ export default function NoseThreadLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="benefits-header" className={`max-w-3xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('benefits-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Benefits of Nose Thread Lift</h2>
-              <p className="text-zinc-500 text-sm">Clinical reviews indexed by NCBI / PubMed indicate that absorbable thread techniques can provide predictable aesthetic improvement with an acceptable safety profile when performed by trained practitioners:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ntl.benefitsTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ntl.benefitsDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
@@ -390,12 +407,12 @@ export default function NoseThreadLiftMalaysia() {
 
             {/* Content Section */}
             <div data-animate="safety-content" className={`order-1 lg:order-2 transition-all duration-700 ${isVisible('safety-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Safety, Risks, and Expectations</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ntl.safetyTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                When performed by experienced medical professionals, a nose thread lift is generally safe. Temporary effects may include:
+                {t('ntl.safetyDesc')}
               </p>
               <div className="space-y-3 mb-6">
-                {["Mild swelling", "Bruising", "Tenderness", "Temporary asymmetry during early healing"].map((item, i) => (
+                {safetyItems.map((item, i) => (
                   <div key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-600 p-3 bg-white rounded-lg border border-zinc-200">
                     <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <span className="flex-1">{item}</span>
@@ -403,7 +420,7 @@ export default function NoseThreadLiftMalaysia() {
                 ))}
               </div>
               <div className="p-4 bg-green-50 rounded-xl border border-green-100">
-                <p className="text-sm text-green-800"><strong>Note:</strong> A nose thread lift does not replace surgical rhinoplasty and is best suited for patients seeking modest enhancement rather than major reshaping.</p>
+                <p className="text-sm text-green-800" dangerouslySetInnerHTML={{ __html: t('ntl.safetyNote') }}></p>
               </div>
             </div>
           </div>
@@ -413,8 +430,8 @@ export default function NoseThreadLiftMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div data-animate="recovery-header" className={`max-w-2xl mb-12 px-4 md:px-8 transition-all duration-700 ${isVisible('recovery-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Recovery and Results Timeline</h2>
-              <p className="text-zinc-500 text-sm">Same-day outpatient procedure with minimal downtime. Here&apos;s what to expect:</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('ntl.recoveryTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('ntl.recoveryDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-8">
@@ -435,9 +452,9 @@ export default function NoseThreadLiftMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-4 md:px-8">
               <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('ntl.candidateTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                  Nose thread lift may be suitable for individuals who:
+                  {t('ntl.candidateDesc')}
                 </p>
                 <div className="space-y-3">
                   {candidateCriteria.map((item, i) => (
@@ -456,13 +473,13 @@ export default function NoseThreadLiftMalaysia() {
                     <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                       <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 className="text-xl font-semibold">Important Note</h3>
+                    <h3 className="text-xl font-semibold">{t('ntl.importantNote')}</h3>
                   </div>
                   <p className="text-zinc-300 text-sm mb-4">
-                    A nose thread lift is about refinement, not reconstruction. When used appropriately, it offers a safe, non-surgical option for enhancing nasal definition with minimal interruption to daily life.
+                    {t('ntl.importantNoteDesc1')}
                   </p>
                   <p className="text-zinc-400 text-sm">
-                    A medical consultation is essential to determine anatomical suitability and set realistic expectations.
+                    {t('ntl.importantNoteDesc2')}
                   </p>
                 </div>
               </div>
@@ -483,11 +500,11 @@ export default function NoseThreadLiftMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Pricing Guide</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('ntl.pricingTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Nose thread lift cost varies depending on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('ntl.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Number of threads required", "Thread type and quality (PDO)", "Complexity of enhancement", "Practitioner expertise", "Clinic location and facilities"].map((item, i) => (
+                  {pricingItems.map((item, i) => (
                     <li key={i} className="flex flex-row items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 min-w-[24px] flex-shrink-0 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       <span className="flex-1">{item}</span>
@@ -495,7 +512,7 @@ export default function NoseThreadLiftMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Nose%20Thread%20Lift" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('ntl.getQuote')}
                 </a>
               </div>
             </div>
@@ -507,8 +524,8 @@ export default function NoseThreadLiftMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common questions about nose thread lift</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('ntl.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('ntl.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -557,27 +574,27 @@ export default function NoseThreadLiftMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">Enhance Your Nose Without Surgery</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default px-4">{t('ntl.ctaTitle')}</h2>
             <p className="text-base sm:text-lg text-zinc-500 mb-6 max-w-3xl mx-auto px-4">
-              Discover the benefits of nose thread lift for subtle, natural-looking nose enhancement with minimal downtime.
+              {t('ntl.ctaDesc')}
             </p>
             <p className="text-sm text-zinc-600 mb-10 pb-[7px] max-w-3xl mx-auto px-4">
-              Schedule a consultation to learn if nose thread lift is the right choice for your aesthetic goals.
+              {t('ntl.ctaConsultation')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 px-6 md:px-10">
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Nose%20Thread%20Lift" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-12 py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('ntl.chatWhatsapp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group">
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('ntl.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {["Nose thread lift Malaysia", "non-surgical rhinoplasty", "PDO nose threads", "nose enhancement", "nose contouring"].map((tag, i) => (
+              {[t('ntl.tag1'), t('ntl.tag2'), t('ntl.tag3'), t('ntl.tag4'), t('ntl.tag5')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
               ))}
             </div>
