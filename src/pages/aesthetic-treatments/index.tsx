@@ -3,8 +3,10 @@ import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import Head from "next/head";
 import { getFullUrl, getAssetPath } from "@/utils/helper";
+import { useTranslation } from "react-i18next";
 
 const AestheticTreatmentsHub = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
 
@@ -54,61 +56,61 @@ const AestheticTreatmentsHub = () => {
   // Treatment categories with data
   const treatmentCategories = [
     {
-      category: "Injectable Treatments",
-      description: "Non-surgical solutions for facial rejuvenation, volume restoration, and wrinkle reduction using advanced injectable techniques.",
+      category: t('aesHub.cat1Name'),
+      description: t('aesHub.cat1Desc'),
       categoryImage: "/images/lip_filler.png",
       treatments: [
         {
-          title: "Dermal Fillers",
-          area: "Face & Lips",
-          description: "Restore volume, smooth lines, and enhance facial contours with hyaluronic acid fillers.",
+          title: t('aesHub.dermalFillersTitle'),
+          area: t('aesHub.dermalFillersArea'),
+          description: t('aesHub.dermalFillersDesc'),
           href: "/aesthetic-treatments/dermal-fillers-malaysia",
           image: "/images/lip_filler.png",
-          tag: "Most Popular",
+          tag: t('aesHub.dermalFillersTag'),
         },
         {
-          title: "Lip Filler",
-          area: "Lips",
-          description: "Add natural volume and definition to your lips for a fuller, more balanced appearance.",
+          title: t('aesHub.lipFillerTitle'),
+          area: t('aesHub.lipFillerArea'),
+          description: t('aesHub.lipFillerDesc'),
           href: "/aesthetic-treatments/lip-filler-malaysia",
           image: "/images/lip_filler.png",
           tag: null,
         },
         {
-          title: "Botox",
-          area: "Face & Neck",
-          description: "Reduce fine lines, wrinkles, and prevent new ones from forming with muscle-relaxing injections.",
+          title: t('aesHub.botoxTitle'),
+          area: t('aesHub.botoxArea'),
+          description: t('aesHub.botoxDesc'),
           href: "/aesthetic-treatments/botox-malaysia",
           image: "/images/botox.jpg",
-          tag: "Quick Treatment",
+          tag: t('aesHub.botoxTag'),
         },
         {
-          title: "Profhilo Treatment",
-          area: "Face & Body",
-          description: "Bio-remodelling treatment that improves skin hydration, elasticity, and overall quality.",
+          title: t('aesHub.profhiloTitle'),
+          area: t('aesHub.profhiloArea'),
+          description: t('aesHub.profhiloDesc'),
           href: "/aesthetic-treatments/profhilo-malaysia",
           image: "/images/profhilo.jpg",
-          tag: "Skin Quality",
+          tag: t('aesHub.profhiloTag'),
         },
       ],
     },
     {
-      category: "Thread Treatments",
-      description: "Lifting and contouring without surgery using dissolvable threads for natural-looking results.",
+      category: t('aesHub.cat2Name'),
+      description: t('aesHub.cat2Desc'),
       categoryImage: "/images/Safe_thread_in_face.png",
       treatments: [
         {
-          title: "Thread Lift",
-          area: "Face & Neck",
-          description: "Lift and tighten sagging skin using absorbable threads for a natural, refreshed look.",
+          title: t('aesHub.threadLiftTitle'),
+          area: t('aesHub.threadLiftArea'),
+          description: t('aesHub.threadLiftDesc'),
           href: "/aesthetic-treatments/thread-lift-malaysia",
           image: "/images/Safe_thread_in_face.png",
-          tag: "Non-Surgical Lift",
+          tag: t('aesHub.threadLiftTag'),
         },
         {
-          title: "Nose Thread Lift",
-          area: "Nose",
-          description: "Enhance your nose shape and profile without surgery using specialized threads.",
+          title: t('aesHub.noseThreadTitle'),
+          area: t('aesHub.noseThreadArea'),
+          description: t('aesHub.noseThreadDesc'),
           href: "/aesthetic-treatments/nose-thread-lift-malaysia",
           image: "/images/rhinoplasty_in_nose.png",
           tag: null,
@@ -116,46 +118,46 @@ const AestheticTreatmentsHub = () => {
       ],
     },
     {
-      category: "Skin Treatments",
-      description: "Address specific skin concerns including scars, keloids, acne, and skin texture issues.",
+      category: t('aesHub.cat3Name'),
+      description: t('aesHub.cat3Desc'),
       categoryImage: "/images/skin_care_image.png",
       treatments: [
         {
-          title: "Keloid Treatment",
-          area: "Various Areas",
-          description: "Reduce and flatten raised keloid scars using specialized injection and treatment protocols.",
+          title: t('aesHub.keloidTitle'),
+          area: t('aesHub.keloidArea'),
+          description: t('aesHub.keloidDesc'),
           href: "/aesthetic-treatments/keloid-treatment-malaysia",
           image: "/images/keloid_treatment.png",
-          tag: "Specialized Care",
+          tag: t('aesHub.keloidTag'),
         },
         {
-          title: "Scar Treatment",
-          area: "Face & Body",
-          description: "Improve the appearance of acne scars, surgical scars, and other skin irregularities.",
+          title: t('aesHub.scarTitle'),
+          area: t('aesHub.scarArea'),
+          description: t('aesHub.scarDesc'),
           href: "/aesthetic-treatments/scar-treatment-malaysia",
           image: "/images/skin_care_image.png",
           tag: null,
         },
         {
-          title: "Laser Scar Removal",
-          area: "Face & Body",
-          description: "Advanced laser technology to reduce scar visibility and improve skin texture.",
+          title: t('aesHub.laserScarTitle'),
+          area: t('aesHub.laserScarArea'),
+          description: t('aesHub.laserScarDesc'),
           href: "/aesthetic-treatments/laser-scar-removal-malaysia",
           image: "/images/skin_care_image.png",
-          tag: "Advanced Technology",
+          tag: t('aesHub.laserScarTag'),
         },
         {
-          title: "Chemical Peel",
-          area: "Face",
-          description: "Resurface skin and address pigmentation, fine lines, and dull complexion.",
+          title: t('aesHub.chemPeelTitle'),
+          area: t('aesHub.chemPeelArea'),
+          description: t('aesHub.chemPeelDesc'),
           href: "/aesthetic-treatments/chemical-peel-malaysia",
           image: "/images/chemical_peel.jpg",
           tag: null,
         },
         {
-          title: "Acne Treatment",
-          area: "Face & Body",
-          description: "Comprehensive solutions for active acne and preventing future breakouts.",
+          title: t('aesHub.acneTitle'),
+          area: t('aesHub.acneArea'),
+          description: t('aesHub.acneDesc'),
           href: "/aesthetic-treatments/acne-treatment-malaysia",
           image: "/images/acne.jpg",
           tag: null,
@@ -166,68 +168,44 @@ const AestheticTreatmentsHub = () => {
 
   // Decision guide data
   const decisionGuide = [
-    { concern: "Fine lines and wrinkles around eyes or forehead", solution: "Botox", href: "/aesthetic-treatments/botox-malaysia" },
-    { concern: "Lost facial volume or hollow cheeks", solution: "Dermal Fillers", href: "/aesthetic-treatments/dermal-fillers-malaysia" },
-    { concern: "Thin or undefined lips", solution: "Lip Filler", href: "/aesthetic-treatments/lip-filler-malaysia" },
-    { concern: "Sagging skin without surgery", solution: "Thread Lift", href: "/aesthetic-treatments/thread-lift-malaysia" },
-    { concern: "Flat nose bridge or tip", solution: "Nose Thread Lift", href: "/aesthetic-treatments/nose-thread-lift-malaysia" },
-    { concern: "Dull, dehydrated skin", solution: "Profhilo", href: "/aesthetic-treatments/profhilo-malaysia" },
-    { concern: "Keloid or raised scars", solution: "Keloid Treatment", href: "/aesthetic-treatments/keloid-treatment-malaysia" },
-    { concern: "Acne scars or skin texture issues", solution: "Scar Treatment / Laser", href: "/aesthetic-treatments/scar-treatment-malaysia" },
-    { concern: "Active acne or breakouts", solution: "Acne Treatment", href: "/aesthetic-treatments/acne-treatment-malaysia" },
-    { concern: "Uneven skin tone or pigmentation", solution: "Chemical Peel", href: "/aesthetic-treatments/chemical-peel-malaysia" },
+    { concern: t('aesHub.concern1'), solution: t('aesHub.solution1'), href: "/aesthetic-treatments/botox-malaysia" },
+    { concern: t('aesHub.concern2'), solution: t('aesHub.solution2'), href: "/aesthetic-treatments/dermal-fillers-malaysia" },
+    { concern: t('aesHub.concern3'), solution: t('aesHub.solution3'), href: "/aesthetic-treatments/lip-filler-malaysia" },
+    { concern: t('aesHub.concern4'), solution: t('aesHub.solution4'), href: "/aesthetic-treatments/thread-lift-malaysia" },
+    { concern: t('aesHub.concern5'), solution: t('aesHub.solution5'), href: "/aesthetic-treatments/nose-thread-lift-malaysia" },
+    { concern: t('aesHub.concern6'), solution: t('aesHub.solution6'), href: "/aesthetic-treatments/profhilo-malaysia" },
+    { concern: t('aesHub.concern7'), solution: t('aesHub.solution7'), href: "/aesthetic-treatments/keloid-treatment-malaysia" },
+    { concern: t('aesHub.concern8'), solution: t('aesHub.solution8'), href: "/aesthetic-treatments/scar-treatment-malaysia" },
+    { concern: t('aesHub.concern9'), solution: t('aesHub.solution9'), href: "/aesthetic-treatments/acne-treatment-malaysia" },
+    { concern: t('aesHub.concern10'), solution: t('aesHub.solution10'), href: "/aesthetic-treatments/chemical-peel-malaysia" },
   ];
 
   // Safety and ethics points
   const safetyPoints = [
-    "Proper medical indication",
-    "Informed consent",
-    "Realistic outcome counseling",
-    "Adherence to safety protocols",
+    t('aesHub.safety1'),
+    t('aesHub.safety2'),
+    t('aesHub.safety3'),
+    t('aesHub.safety4'),
   ];
 
   // Why use hub points
   const whyHubPoints = [
-    "Understand treatment categories clearly",
-    "Compare different treatment options",
-    "Navigate procedures logically",
-    "Make informed, medically grounded decisions",
+    t('aesHub.why1'),
+    t('aesHub.why2'),
+    t('aesHub.why3'),
+    t('aesHub.why4'),
   ];
 
   // FAQ data
   const faqData = [
-    {
-      question: "What are aesthetic treatments?",
-      answer: "Aesthetic treatments include both surgical and non-surgical medical procedures aimed at improving appearance, restoring proportions, and addressing age-related or structural concerns. According to the U.S. FDA, aesthetic medical procedures must meet defined safety and efficacy standards and be delivered by trained medical professionals.",
-    },
-    {
-      question: "Are aesthetic treatments regulated in Malaysia?",
-      answer: "Yes. All aesthetic treatments in Malaysia are regulated by the Ministry of Health Malaysia (MOH), which governs practitioner qualifications, licensed facilities, and patient safety standards.",
-    },
-    {
-      question: "How long do results last?",
-      answer: "Duration varies by treatment. Botox typically lasts 3-4 months, dermal fillers 6-18 months depending on the area, and thread lifts 1-2 years. Individual results may vary.",
-    },
-    {
-      question: "Is there downtime after aesthetic treatments?",
-      answer: "Most aesthetic treatments have minimal downtime. You may experience mild swelling or bruising for a few days, but most patients return to normal activities immediately.",
-    },
-    {
-      question: "Will results look natural?",
-      answer: "Our approach focuses on subtle enhancement that respects your natural features. The goal is to look refreshed and rejuvenated, not overdone.",
-    },
-    {
-      question: "How do I know which treatment is right for me?",
-      answer: "A consultation allows us to assess your concerns, skin condition, and goals to recommend the most suitable treatment plan for you.",
-    },
-    {
-      question: "Are the treatments painful?",
-      answer: "Most treatments involve minimal discomfort. Topical numbing cream is often applied, and many fillers contain lidocaine for comfort during the procedure.",
-    },
-    {
-      question: "What is the difference between Botox and fillers?",
-      answer: "Botox relaxes muscles to reduce dynamic wrinkles (those formed by movement), while fillers add volume to fill lines, restore volume, and enhance contours.",
-    },
+    { question: t('aesHub.faq1Q'), answer: t('aesHub.faq1A') },
+    { question: t('aesHub.faq2Q'), answer: t('aesHub.faq2A') },
+    { question: t('aesHub.faq3Q'), answer: t('aesHub.faq3A') },
+    { question: t('aesHub.faq4Q'), answer: t('aesHub.faq4A') },
+    { question: t('aesHub.faq5Q'), answer: t('aesHub.faq5A') },
+    { question: t('aesHub.faq6Q'), answer: t('aesHub.faq6A') },
+    { question: t('aesHub.faq7Q'), answer: t('aesHub.faq7A') },
+    { question: t('aesHub.faq8Q'), answer: t('aesHub.faq8A') },
   ];
 
   return (
@@ -259,25 +237,25 @@ const AestheticTreatmentsHub = () => {
               <span className={`inline-block bg-primary text-white text-sm font-bold px-4 py-2 rounded-full w-fit uppercase tracking-wide ${
                 isVisible("section-0") ? "animate-fadeInUp" : "opacity-0"
               }`}>
-                Aesthetic Treatments Hub
+                {t('aesHub.badge')}
               </span>
 
               <h1 className={`text-primary drop-shadow-lg text-3xl sm:text-4xl lg:text-5xl ${
                 isVisible("section-0") ? "animate-fadeInUp delay-100" : "opacity-0"
               }`}>
-                Comprehensive Surgical & Non-Surgical <span className="text-header-black">Aesthetic Solutions in Malaysia</span>
+                {t('aesHub.heroTitle1')} <span className="text-header-black">{t('aesHub.heroTitle2')}</span>
               </h1>
 
               <p className={`text-white/90 text-lg lg:text-xl font-medium ${
                 isVisible("section-0") ? "animate-fadeInUp delay-200" : "opacity-0"
               }`}>
-                Medical science, surgical precision, and artistic judgment combined
+                {t('aesHub.heroSubtitle')}
               </p>
 
               <p className={`text-white/80 text-sm lg:text-base leading-relaxed ${
                 isVisible("section-0") ? "animate-fadeInUp delay-300" : "opacity-0"
               }`}>
-                Aesthetic medicine combines medical science, surgical precision, and artistic judgment to enhance appearance while preserving natural harmony. Our Aesthetic Treatments Hub serves as a central guide to facial, body, and advanced cosmetic procedures available in Malaysia, designed to help patients make informed, ethical, and medically sound decisions.
+                {t('aesHub.heroDesc')}
               </p>
 
               <div className={`flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 ${
@@ -286,7 +264,7 @@ const AestheticTreatmentsHub = () => {
                 <svg className="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                <span className="text-white text-sm font-medium">Regulated by: Ministry of Health Malaysia</span>
+                <span className="text-white text-sm font-medium">{t('aesHub.regulatedBy')}</span>
               </div>
 
               <div className={`flex flex-wrap gap-4 mt-4 justify-center sm:justify-start ${
@@ -296,7 +274,7 @@ const AestheticTreatmentsHub = () => {
                   href="/contact"
                   className="bg-primary hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg uppercase tracking-wide text-sm animate-pulseGlow"
                 >
-                  Book a Consultation
+                  {t('aesHub.bookConsultation')}
                 </Link>
                 <Link
                   href="https://wa.me/60142616007"
@@ -305,7 +283,7 @@ const AestheticTreatmentsHub = () => {
                   <svg className="w-6 h-6" viewBox="0 0 24 24">
                     <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  WhatsApp Us
+                  {t('aesHub.whatsappUs')}
                 </Link>
               </div>
             </div>
@@ -331,8 +309,8 @@ const AestheticTreatmentsHub = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-bold text-header-black text-xl">MOH Regulated</p>
-                      <p className="text-para-black text-sm">Licensed Facility</p>
+                      <p className="font-bold text-header-black text-xl">{t('aesHub.mohRegulated')}</p>
+                      <p className="text-para-black text-sm">{t('aesHub.licensedFacility')}</p>
                     </div>
                   </div>
                 </div>
@@ -367,15 +345,15 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-1") ? "animate-slideInRight" : "opacity-0"
             }`}>
               <h2 className="text-header-black">
-                What Are <span className="text-primary">Aesthetic Treatments?</span>
+                {t('aesHub.whatTitle1')} <span className="text-primary">{t('aesHub.whatTitle2')}</span>
               </h2>
 
               <p className="text-para-black text-lg">
-                Aesthetic treatments include both surgical and non-surgical medical procedures aimed at improving appearance, restoring proportions, and addressing age-related or structural concerns.
+                {t('aesHub.whatDesc1')}
               </p>
 
               <p className="text-para-black">
-                According to the U.S. Food and Drug Administration (FDA), aesthetic medical procedures must meet defined safety and efficacy standards and be delivered by trained medical professionals.
+                {t('aesHub.whatDesc2')}
               </p>
 
             </div>
@@ -392,13 +370,13 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-2") ? "sm:opacity-100 translate-y-0" : "sm:translate-y-8"
             }`}>
               <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-3">
-                Our Services
+                {t('aesHub.ourServices')}
               </span>
               <h2 className="text-header-black mb-4">
-                Categories of <span className="text-primary">Aesthetic Treatments</span>
+                {t('aesHub.catTitle1')} <span className="text-primary">{t('aesHub.catTitle2')}</span>
               </h2>
               <p className="text-para-black max-w-2xl mx-auto">
-                Each treatment has its own dedicated page with full details, procedure information, and FAQs
+                {t('aesHub.catDesc')}
               </p>
             </div>
 
@@ -427,7 +405,7 @@ const AestheticTreatmentsHub = () => {
                     </h3>
                     <p className="text-para-black mb-4">{category.description}</p>
                     <div className="flex items-center gap-2 text-primary text-sm font-semibold">
-                      <span>{category.treatments.length} Treatments Available</span>
+                      <span>{category.treatments.length} {t('aesHub.treatmentsAvailable')}</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -479,7 +457,7 @@ const AestheticTreatmentsHub = () => {
 
                           {/* CTA Button */}
                           <div className="flex items-center gap-2 text-primary font-semibold text-sm pt-4 border-t border-gray-100">
-                            <span>View Treatment</span>
+                            <span>{t('aesHub.viewTreatment')}</span>
                             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -504,10 +482,10 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-3") ? "animate-fadeInUp" : "opacity-0"
             }`}>
               <h2 className="text-header-black mb-3">
-                Unsure Which Treatment <span className="text-primary">You Need?</span>
+                {t('aesHub.decisionTitle1')} <span className="text-primary">{t('aesHub.decisionTitle2')}</span>
               </h2>
               <p className="text-para-black">
-                Use this guide to find the right treatment for your concern
+                {t('aesHub.decisionDesc')}
               </p>
             </div>
 
@@ -559,15 +537,15 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-4") ? "animate-slideInLeft" : "opacity-0"
             }`}>
               <h2 className="text-header-black">
-                Safety, Ethics, and <span className="text-primary">Patient Selection</span>
+                {t('aesHub.safetyTitle1')} <span className="text-primary">{t('aesHub.safetyTitle2')}</span>
               </h2>
 
               <p className="text-para-black text-lg font-medium">
-                Ethical aesthetic practice is based on patient safety and informed decision-making.
+                {t('aesHub.safetySubtitle')}
               </p>
 
               <p className="text-para-black">
-                The UK National Health Service (NHS) advises patients to choose qualified practitioners and accredited facilities for all cosmetic procedures.
+                {t('aesHub.safetyDesc')}
               </p>
 
               <div className="space-y-4">
@@ -634,11 +612,11 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-5") ? "animate-slideInRight" : "opacity-0"
             }`}>
               <h2 className="text-header-black">
-                Why Use an <span className="text-primary">Aesthetic Treatments Hub?</span>
+                {t('aesHub.whyTitle1')} <span className="text-primary">{t('aesHub.whyTitle2')}</span>
               </h2>
 
               <p className="text-para-black">
-                An aesthetic hub allows patients to navigate treatment options clearly and make informed, medically grounded decisions.
+                {t('aesHub.whyDesc')}
               </p>
 
               <div className="space-y-4">
@@ -662,7 +640,7 @@ const AestheticTreatmentsHub = () => {
 
               <div className="bg-secondary rounded-xl p-6 mt-4">
                 <p className="text-para-black italic">
-                  Rather than focusing on trends, this approach prioritizes anatomy, safety, and long-term outcomes.
+                  {t('aesHub.whyQuote')}
                 </p>
               </div>
             </div>
@@ -679,13 +657,13 @@ const AestheticTreatmentsHub = () => {
               isVisible("section-6") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-3">
-                Got Questions?
+                {t('aesHub.faqBadge')}
               </span>
               <h2 className="text-header-black mb-4">
-                Frequently <span className="text-primary">Asked Questions</span>
+                {t('aesHub.faqTitle1')} <span className="text-primary">{t('aesHub.faqTitle2')}</span>
               </h2>
               <p className="text-para-black max-w-2xl mx-auto">
-                Find answers to common questions about aesthetic treatments
+                {t('aesHub.faqDesc')}
               </p>
             </div>
 
@@ -740,13 +718,13 @@ const AestheticTreatmentsHub = () => {
             <h2 className={`text-white mb-4 ${
               isVisible("section-7") ? "animate-fadeInUp" : "opacity-0"
             }`}>
-              Final Note
+              {t('aesHub.ctaTitle')}
             </h2>
 
             <p className={`text-white text-lg mb-8 ${
               isVisible("section-7") ? "animate-fadeInUp delay-200" : "opacity-0"
             }`}>
-              Aesthetic treatments are not about perfection—they are about proportion, confidence, and harmony. A structured approach helps you make informed decisions that prioritize your safety and long-term satisfaction.
+              {t('aesHub.ctaDesc')}
             </p>
 
             <div className={`flex flex-wrap justify-center gap-4 ${
@@ -756,7 +734,7 @@ const AestheticTreatmentsHub = () => {
                 href="/contact"
                 className="bg-white hover:bg-gray-100 text-primary font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-110 shadow-lg uppercase tracking-wide text-sm hover:shadow-2xl"
               >
-                Book a Consultation
+                {t('aesHub.bookConsultation')}
               </Link>
               <Link
                 href="https://wa.me/60142616007"
@@ -765,7 +743,7 @@ const AestheticTreatmentsHub = () => {
                 <svg className="w-6 h-6" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                WhatsApp Us
+                {t('aesHub.whatsappUs')}
               </Link>
             </div>
           </div>

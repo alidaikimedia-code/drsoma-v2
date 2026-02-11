@@ -50,6 +50,13 @@ import enPenileEnhancement from './locales/en/penile-enhancement.json';
 import enAbout from './locales/en/about.json';
 import enContact from './locales/en/contact.json';
 import enTreatments from './locales/en/treatments.json';
+import enAesHub from './locales/en/aesthetic-treatments.json';
+import enDermalFillers from './locales/en/dermal-fillers.json';
+import enLipFiller from './locales/en/lip-filler.json';
+import enBotox from './locales/en/botox.json';
+import enProfhilo from './locales/en/profhilo.json';
+import enThreadLift from './locales/en/thread-lift.json';
+import enNoseThreadLift from './locales/en/nose-thread-lift.json';
 
 import idCommon from './locales/id/common.json';
 import idHome from './locales/id/home.json';
@@ -99,6 +106,13 @@ import idPenileEnhancement from './locales/id/penile-enhancement.json';
 import idAbout from './locales/id/about.json';
 import idContact from './locales/id/contact.json';
 import idTreatments from './locales/id/treatments.json';
+import idAesHub from './locales/id/aesthetic-treatments.json';
+import idDermalFillers from './locales/id/dermal-fillers.json';
+import idLipFiller from './locales/id/lip-filler.json';
+import idBotox from './locales/id/botox.json';
+import idProfhilo from './locales/id/profhilo.json';
+import idThreadLift from './locales/id/thread-lift.json';
+import idNoseThreadLift from './locales/id/nose-thread-lift.json';
 
 import zhCNCommon from './locales/zh-CN/common.json';
 import zhCNHome from './locales/zh-CN/home.json';
@@ -148,6 +162,13 @@ import zhCNPenileEnhancement from './locales/zh-CN/penile-enhancement.json';
 import zhCNAbout from './locales/zh-CN/about.json';
 import zhCNContact from './locales/zh-CN/contact.json';
 import zhCNTreatments from './locales/zh-CN/treatments.json';
+import zhCNAesHub from './locales/zh-CN/aesthetic-treatments.json';
+import zhCNDermalFillers from './locales/zh-CN/dermal-fillers.json';
+import zhCNLipFiller from './locales/zh-CN/lip-filler.json';
+import zhCNBotox from './locales/zh-CN/botox.json';
+import zhCNProfhilo from './locales/zh-CN/profhilo.json';
+import zhCNThreadLift from './locales/zh-CN/thread-lift.json';
+import zhCNNoseThreadLift from './locales/zh-CN/nose-thread-lift.json';
 
 import zhMYCommon from './locales/zh-MY/common.json';
 import zhMYHome from './locales/zh-MY/home.json';
@@ -197,6 +218,13 @@ import zhMYPenileEnhancement from './locales/zh-MY/penile-enhancement.json';
 import zhMYAbout from './locales/zh-MY/about.json';
 import zhMYContact from './locales/zh-MY/contact.json';
 import zhMYTreatments from './locales/zh-MY/treatments.json';
+import zhMYAesHub from './locales/zh-MY/aesthetic-treatments.json';
+import zhMYDermalFillers from './locales/zh-MY/dermal-fillers.json';
+import zhMYLipFiller from './locales/zh-MY/lip-filler.json';
+import zhMYBotox from './locales/zh-MY/botox.json';
+import zhMYProfhilo from './locales/zh-MY/profhilo.json';
+import zhMYThreadLift from './locales/zh-MY/thread-lift.json';
+import zhMYNoseThreadLift from './locales/zh-MY/nose-thread-lift.json';
 
 import msCommon from './locales/ms/common.json';
 import msHome from './locales/ms/home.json';
@@ -246,6 +274,13 @@ import msPenileEnhancement from './locales/ms/penile-enhancement.json';
 import msAbout from './locales/ms/about.json';
 import msContact from './locales/ms/contact.json';
 import msTreatments from './locales/ms/treatments.json';
+import msAesHub from './locales/ms/aesthetic-treatments.json';
+import msDermalFillers from './locales/ms/dermal-fillers.json';
+import msLipFiller from './locales/ms/lip-filler.json';
+import msBotox from './locales/ms/botox.json';
+import msProfhilo from './locales/ms/profhilo.json';
+import msThreadLift from './locales/ms/thread-lift.json';
+import msNoseThreadLift from './locales/ms/nose-thread-lift.json';
 
 import koCommon from './locales/ko/common.json';
 import koHome from './locales/ko/home.json';
@@ -295,6 +330,13 @@ import koPenileEnhancement from './locales/ko/penile-enhancement.json';
 import koAbout from './locales/ko/about.json';
 import koContact from './locales/ko/contact.json';
 import koTreatments from './locales/ko/treatments.json';
+import koAesHub from './locales/ko/aesthetic-treatments.json';
+import koDermalFillers from './locales/ko/dermal-fillers.json';
+import koLipFiller from './locales/ko/lip-filler.json';
+import koBotox from './locales/ko/botox.json';
+import koProfhilo from './locales/ko/profhilo.json';
+import koThreadLift from './locales/ko/thread-lift.json';
+import koNoseThreadLift from './locales/ko/nose-thread-lift.json';
 
 // Supported locales configuration
 export const locales = [
@@ -342,22 +384,22 @@ export function getLocalizedPath(path: string, localeCode: string): string {
 // Bundled translations from JSON files
 const resources = {
   en: {
-    translation: { ...enCommon, ...enHome, ...enLipo, ...enArmLipo, ...enStomachLipo, ...enThighLipo, ...enBackLipo, ...enChinLipo, ...enTummyTuck, ...enMiniTummyTuck, ...enArmLift, ...enThighLift, ...enBodyLift, ...enBeltLipo, ...enFatTransfer, ...enButtockFat, ...enSixPack, ...enBodyHub, ...enFaceHub, ...enRhino, ...enAsianRhino, ...enRevRhino, ...enEyelid, ...enAsianEyelid, ...enBrowLift, ...enFaceLift, ...enNeckLift, ...enBuccalFat, ...enChinAug, ...enBreastHub, ...enBreastAug, ...enBreastLift, ...enBreastRed, ...enFatTransferBreast, ...enBreastImplantRemoval, ...enBreastRevision, ...enMaleHub, ...enGynecomastia, ...enMaleBreastReduction, ...enJawlineEnhancement, ...enChinImplant, ...enMaleRhinoplasty, ...enSixPackPage, ...enHairTransplant, ...enPenileEnhancement, ...enAbout, ...enContact, ...enTreatments },
+    translation: { ...enCommon, ...enHome, ...enLipo, ...enArmLipo, ...enStomachLipo, ...enThighLipo, ...enBackLipo, ...enChinLipo, ...enTummyTuck, ...enMiniTummyTuck, ...enArmLift, ...enThighLift, ...enBodyLift, ...enBeltLipo, ...enFatTransfer, ...enButtockFat, ...enSixPack, ...enBodyHub, ...enFaceHub, ...enRhino, ...enAsianRhino, ...enRevRhino, ...enEyelid, ...enAsianEyelid, ...enBrowLift, ...enFaceLift, ...enNeckLift, ...enBuccalFat, ...enChinAug, ...enBreastHub, ...enBreastAug, ...enBreastLift, ...enBreastRed, ...enFatTransferBreast, ...enBreastImplantRemoval, ...enBreastRevision, ...enMaleHub, ...enGynecomastia, ...enMaleBreastReduction, ...enJawlineEnhancement, ...enChinImplant, ...enMaleRhinoplasty, ...enSixPackPage, ...enHairTransplant, ...enPenileEnhancement, ...enAbout, ...enContact, ...enTreatments, ...enAesHub, ...enDermalFillers, ...enLipFiller, ...enBotox, ...enProfhilo, ...enThreadLift, ...enNoseThreadLift },
   },
   id: {
-    translation: { ...idCommon, ...idHome, ...idLipo, ...idArmLipo, ...idStomachLipo, ...idThighLipo, ...idBackLipo, ...idChinLipo, ...idTummyTuck, ...idMiniTummyTuck, ...idArmLift, ...idThighLift, ...idBodyLift, ...idBeltLipo, ...idFatTransfer, ...idButtockFat, ...idSixPack, ...idBodyHub, ...idFaceHub, ...idRhino, ...idAsianRhino, ...idRevRhino, ...idEyelid, ...idAsianEyelid, ...idBrowLift, ...idFaceLift, ...idNeckLift, ...idBuccalFat, ...idChinAug, ...idBreastHub, ...idBreastAug, ...idBreastLift, ...idBreastRed, ...idFatTransferBreast, ...idBreastImplantRemoval, ...idBreastRevision, ...idMaleHub, ...idGynecomastia, ...idMaleBreastReduction, ...idJawlineEnhancement, ...idChinImplant, ...idMaleRhinoplasty, ...idSixPackPage, ...idHairTransplant, ...idPenileEnhancement, ...idAbout, ...idContact, ...idTreatments },
+    translation: { ...idCommon, ...idHome, ...idLipo, ...idArmLipo, ...idStomachLipo, ...idThighLipo, ...idBackLipo, ...idChinLipo, ...idTummyTuck, ...idMiniTummyTuck, ...idArmLift, ...idThighLift, ...idBodyLift, ...idBeltLipo, ...idFatTransfer, ...idButtockFat, ...idSixPack, ...idBodyHub, ...idFaceHub, ...idRhino, ...idAsianRhino, ...idRevRhino, ...idEyelid, ...idAsianEyelid, ...idBrowLift, ...idFaceLift, ...idNeckLift, ...idBuccalFat, ...idChinAug, ...idBreastHub, ...idBreastAug, ...idBreastLift, ...idBreastRed, ...idFatTransferBreast, ...idBreastImplantRemoval, ...idBreastRevision, ...idMaleHub, ...idGynecomastia, ...idMaleBreastReduction, ...idJawlineEnhancement, ...idChinImplant, ...idMaleRhinoplasty, ...idSixPackPage, ...idHairTransplant, ...idPenileEnhancement, ...idAbout, ...idContact, ...idTreatments, ...idAesHub, ...idDermalFillers, ...idLipFiller, ...idBotox, ...idProfhilo, ...idThreadLift, ...idNoseThreadLift },
   },
   'zh-CN': {
-    translation: { ...zhCNCommon, ...zhCNHome, ...zhCNLipo, ...zhCNArmLipo, ...zhCNStomachLipo, ...zhCNThighLipo, ...zhCNBackLipo, ...zhCNChinLipo, ...zhCNTummyTuck, ...zhCNMiniTummyTuck, ...zhCNArmLift, ...zhCNThighLift, ...zhCNBodyLift, ...zhCNBeltLipo, ...zhCNFatTransfer, ...zhCNButtockFat, ...zhCNSixPack, ...zhCNBodyHub, ...zhCNFaceHub, ...zhCNRhino, ...zhCNAsianRhino, ...zhCNRevRhino, ...zhCNEyelid, ...zhCNAsianEyelid, ...zhCNBrowLift, ...zhCNFaceLift, ...zhCNNeckLift, ...zhCNBuccalFat, ...zhCNChinAug, ...zhCNBreastHub, ...zhCNBreastAug, ...zhCNBreastLift, ...zhCNBreastRed, ...zhCNFatTransferBreast, ...zhCNBreastImplantRemoval, ...zhCNBreastRevision, ...zhCNMaleHub, ...zhCNGynecomastia, ...zhCNMaleBreastReduction, ...zhCNJawlineEnhancement, ...zhCNChinImplant, ...zhCNMaleRhinoplasty, ...zhCNSixPackPage, ...zhCNHairTransplant, ...zhCNPenileEnhancement, ...zhCNAbout, ...zhCNContact, ...zhCNTreatments },
+    translation: { ...zhCNCommon, ...zhCNHome, ...zhCNLipo, ...zhCNArmLipo, ...zhCNStomachLipo, ...zhCNThighLipo, ...zhCNBackLipo, ...zhCNChinLipo, ...zhCNTummyTuck, ...zhCNMiniTummyTuck, ...zhCNArmLift, ...zhCNThighLift, ...zhCNBodyLift, ...zhCNBeltLipo, ...zhCNFatTransfer, ...zhCNButtockFat, ...zhCNSixPack, ...zhCNBodyHub, ...zhCNFaceHub, ...zhCNRhino, ...zhCNAsianRhino, ...zhCNRevRhino, ...zhCNEyelid, ...zhCNAsianEyelid, ...zhCNBrowLift, ...zhCNFaceLift, ...zhCNNeckLift, ...zhCNBuccalFat, ...zhCNChinAug, ...zhCNBreastHub, ...zhCNBreastAug, ...zhCNBreastLift, ...zhCNBreastRed, ...zhCNFatTransferBreast, ...zhCNBreastImplantRemoval, ...zhCNBreastRevision, ...zhCNMaleHub, ...zhCNGynecomastia, ...zhCNMaleBreastReduction, ...zhCNJawlineEnhancement, ...zhCNChinImplant, ...zhCNMaleRhinoplasty, ...zhCNSixPackPage, ...zhCNHairTransplant, ...zhCNPenileEnhancement, ...zhCNAbout, ...zhCNContact, ...zhCNTreatments, ...zhCNAesHub, ...zhCNDermalFillers, ...zhCNLipFiller, ...zhCNBotox, ...zhCNProfhilo, ...zhCNThreadLift, ...zhCNNoseThreadLift },
   },
   'zh-MY': {
-    translation: { ...zhMYCommon, ...zhMYHome, ...zhMYLipo, ...zhMYArmLipo, ...zhMYStomachLipo, ...zhMYThighLipo, ...zhMYBackLipo, ...zhMYChinLipo, ...zhMYTummyTuck, ...zhMYMiniTummyTuck, ...zhMYArmLift, ...zhMYThighLift, ...zhMYBodyLift, ...zhMYBeltLipo, ...zhMYFatTransfer, ...zhMYButtockFat, ...zhMYSixPack, ...zhMYBodyHub, ...zhMYFaceHub, ...zhMYRhino, ...zhMYAsianRhino, ...zhMYRevRhino, ...zhMYEyelid, ...zhMYAsianEyelid, ...zhMYBrowLift, ...zhMYFaceLift, ...zhMYNeckLift, ...zhMYBuccalFat, ...zhMYChinAug, ...zhMYBreastHub, ...zhMYBreastAug, ...zhMYBreastLift, ...zhMYBreastRed, ...zhMYFatTransferBreast, ...zhMYBreastImplantRemoval, ...zhMYBreastRevision, ...zhMYMaleHub, ...zhMYGynecomastia, ...zhMYMaleBreastReduction, ...zhMYJawlineEnhancement, ...zhMYChinImplant, ...zhMYMaleRhinoplasty, ...zhMYSixPackPage, ...zhMYHairTransplant, ...zhMYPenileEnhancement, ...zhMYAbout, ...zhMYContact, ...zhMYTreatments },
+    translation: { ...zhMYCommon, ...zhMYHome, ...zhMYLipo, ...zhMYArmLipo, ...zhMYStomachLipo, ...zhMYThighLipo, ...zhMYBackLipo, ...zhMYChinLipo, ...zhMYTummyTuck, ...zhMYMiniTummyTuck, ...zhMYArmLift, ...zhMYThighLift, ...zhMYBodyLift, ...zhMYBeltLipo, ...zhMYFatTransfer, ...zhMYButtockFat, ...zhMYSixPack, ...zhMYBodyHub, ...zhMYFaceHub, ...zhMYRhino, ...zhMYAsianRhino, ...zhMYRevRhino, ...zhMYEyelid, ...zhMYAsianEyelid, ...zhMYBrowLift, ...zhMYFaceLift, ...zhMYNeckLift, ...zhMYBuccalFat, ...zhMYChinAug, ...zhMYBreastHub, ...zhMYBreastAug, ...zhMYBreastLift, ...zhMYBreastRed, ...zhMYFatTransferBreast, ...zhMYBreastImplantRemoval, ...zhMYBreastRevision, ...zhMYMaleHub, ...zhMYGynecomastia, ...zhMYMaleBreastReduction, ...zhMYJawlineEnhancement, ...zhMYChinImplant, ...zhMYMaleRhinoplasty, ...zhMYSixPackPage, ...zhMYHairTransplant, ...zhMYPenileEnhancement, ...zhMYAbout, ...zhMYContact, ...zhMYTreatments, ...zhMYAesHub, ...zhMYDermalFillers, ...zhMYLipFiller, ...zhMYBotox, ...zhMYProfhilo, ...zhMYThreadLift, ...zhMYNoseThreadLift },
   },
   ms: {
-    translation: { ...msCommon, ...msHome, ...msLipo, ...msArmLipo, ...msStomachLipo, ...msThighLipo, ...msBackLipo, ...msChinLipo, ...msTummyTuck, ...msMiniTummyTuck, ...msArmLift, ...msThighLift, ...msBodyLift, ...msBeltLipo, ...msFatTransfer, ...msButtockFat, ...msSixPack, ...msBodyHub, ...msFaceHub, ...msRhino, ...msAsianRhino, ...msRevRhino, ...msEyelid, ...msAsianEyelid, ...msBrowLift, ...msFaceLift, ...msNeckLift, ...msBuccalFat, ...msChinAug, ...msBreastHub, ...msBreastAug, ...msBreastLift, ...msBreastRed, ...msFatTransferBreast, ...msBreastImplantRemoval, ...msBreastRevision, ...msMaleHub, ...msGynecomastia, ...msMaleBreastReduction, ...msJawlineEnhancement, ...msChinImplant, ...msMaleRhinoplasty, ...msSixPackPage, ...msHairTransplant, ...msPenileEnhancement, ...msAbout, ...msContact, ...msTreatments },
+    translation: { ...msCommon, ...msHome, ...msLipo, ...msArmLipo, ...msStomachLipo, ...msThighLipo, ...msBackLipo, ...msChinLipo, ...msTummyTuck, ...msMiniTummyTuck, ...msArmLift, ...msThighLift, ...msBodyLift, ...msBeltLipo, ...msFatTransfer, ...msButtockFat, ...msSixPack, ...msBodyHub, ...msFaceHub, ...msRhino, ...msAsianRhino, ...msRevRhino, ...msEyelid, ...msAsianEyelid, ...msBrowLift, ...msFaceLift, ...msNeckLift, ...msBuccalFat, ...msChinAug, ...msBreastHub, ...msBreastAug, ...msBreastLift, ...msBreastRed, ...msFatTransferBreast, ...msBreastImplantRemoval, ...msBreastRevision, ...msMaleHub, ...msGynecomastia, ...msMaleBreastReduction, ...msJawlineEnhancement, ...msChinImplant, ...msMaleRhinoplasty, ...msSixPackPage, ...msHairTransplant, ...msPenileEnhancement, ...msAbout, ...msContact, ...msTreatments, ...msAesHub, ...msDermalFillers, ...msLipFiller, ...msBotox, ...msProfhilo, ...msThreadLift, ...msNoseThreadLift },
   },
   ko: {
-    translation: { ...koCommon, ...koHome, ...koLipo, ...koArmLipo, ...koStomachLipo, ...koThighLipo, ...koBackLipo, ...koChinLipo, ...koTummyTuck, ...koMiniTummyTuck, ...koArmLift, ...koThighLift, ...koBodyLift, ...koBeltLipo, ...koFatTransfer, ...koButtockFat, ...koSixPack, ...koBodyHub, ...koFaceHub, ...koRhino, ...koAsianRhino, ...koRevRhino, ...koEyelid, ...koAsianEyelid, ...koBrowLift, ...koFaceLift, ...koNeckLift, ...koBuccalFat, ...koChinAug, ...koBreastHub, ...koBreastAug, ...koBreastLift, ...koBreastRed, ...koFatTransferBreast, ...koBreastImplantRemoval, ...koBreastRevision, ...koMaleHub, ...koGynecomastia, ...koMaleBreastReduction, ...koJawlineEnhancement, ...koChinImplant, ...koMaleRhinoplasty, ...koSixPackPage, ...koHairTransplant, ...koPenileEnhancement, ...koAbout, ...koContact, ...koTreatments },
+    translation: { ...koCommon, ...koHome, ...koLipo, ...koArmLipo, ...koStomachLipo, ...koThighLipo, ...koBackLipo, ...koChinLipo, ...koTummyTuck, ...koMiniTummyTuck, ...koArmLift, ...koThighLift, ...koBodyLift, ...koBeltLipo, ...koFatTransfer, ...koButtockFat, ...koSixPack, ...koBodyHub, ...koFaceHub, ...koRhino, ...koAsianRhino, ...koRevRhino, ...koEyelid, ...koAsianEyelid, ...koBrowLift, ...koFaceLift, ...koNeckLift, ...koBuccalFat, ...koChinAug, ...koBreastHub, ...koBreastAug, ...koBreastLift, ...koBreastRed, ...koFatTransferBreast, ...koBreastImplantRemoval, ...koBreastRevision, ...koMaleHub, ...koGynecomastia, ...koMaleBreastReduction, ...koJawlineEnhancement, ...koChinImplant, ...koMaleRhinoplasty, ...koSixPackPage, ...koHairTransplant, ...koPenileEnhancement, ...koAbout, ...koContact, ...koTreatments, ...koAesHub, ...koDermalFillers, ...koLipFiller, ...koBotox, ...koProfhilo, ...koThreadLift, ...koNoseThreadLift },
   },
 };
 

@@ -2,8 +2,10 @@ import Head from "next/head"
 import BaseImage from "@/components/BaseImage"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 export default function BotoxMalaysia() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
 
@@ -35,45 +37,45 @@ export default function BotoxMalaysia() {
   const isVisible = (id: string) => visibleSections.has(id)
 
   const faqs = [
-    { question: "What does Botox treat?", answer: "Botox treats dynamic wrinkles caused by facial muscle movement, such as forehead lines, frown lines, and crow&apos;s feet." },
-    { question: "Is Botox safe?", answer: "Yes, when performed by a qualified medical practitioner using approved products in a regulated clinical setting." },
-    { question: "Will Botox make my face look frozen?", answer: "When administered conservatively, Botox softens wrinkles while preserving natural facial expressions." },
-    { question: "How long does Botox last?", answer: "Results typically last 3 to 4 months, depending on dosage, treatment area, and individual muscle activity." },
-    { question: "Is Botox painful?", answer: "Discomfort is minimal. Injections are quick and use very fine needles." },
-    { question: "Is there downtime after Botox?", answer: "Most patients return to normal activities immediately, with minor redness or swelling resolving quickly." },
-    { question: "Can Botox prevent wrinkles?", answer: "Yes, when used early, Botox can help prevent deep wrinkle formation by reducing repetitive muscle contraction." },
-    { question: "Who should avoid Botox?", answer: "Pregnant or breastfeeding individuals, those with neuromuscular disorders, or certain medical conditions may be advised to postpone treatment." }
+    { question: t('btx.faq1Q'), answer: t('btx.faq1A') },
+    { question: t('btx.faq2Q'), answer: t('btx.faq2A') },
+    { question: t('btx.faq3Q'), answer: t('btx.faq3A') },
+    { question: t('btx.faq4Q'), answer: t('btx.faq4A') },
+    { question: t('btx.faq5Q'), answer: t('btx.faq5A') },
+    { question: t('btx.faq6Q'), answer: t('btx.faq6A') },
+    { question: t('btx.faq7Q'), answer: t('btx.faq7A') },
+    { question: t('btx.faq8Q'), answer: t('btx.faq8A') }
   ]
 
   const treatmentAreas = [
-    { name: "Forehead Lines", desc: "Horizontal lines reduction" },
-    { name: "Frown Lines", desc: "Glabellar lines smoothing" },
-    { name: "Crow's Feet", desc: "Eye area wrinkles" },
-    { name: "Jaw Slimming", desc: "Masseter reduction" },
-    { name: "Bunny Lines", desc: "Nose wrinkle correction" },
-    { name: "Neck Bands", desc: "Platysmal bands" }
+    { name: t('btx.area1Name'), desc: t('btx.area1Desc') },
+    { name: t('btx.area2Name'), desc: t('btx.area2Desc') },
+    { name: t('btx.area3Name'), desc: t('btx.area3Desc') },
+    { name: t('btx.area4Name'), desc: t('btx.area4Desc') },
+    { name: t('btx.area5Name'), desc: t('btx.area5Desc') },
+    { name: t('btx.area6Name'), desc: t('btx.area6Desc') }
   ]
 
   const benefits = [
-    "Visible wrinkle softening within days",
-    "No surgery or incisions",
-    "Minimal downtime",
-    "Preventive anti-aging benefits",
-    "Temporary and adjustable results"
+    t('btx.benefit1'),
+    t('btx.benefit2'),
+    t('btx.benefit3'),
+    t('btx.benefit4'),
+    t('btx.benefit5')
   ]
 
   const candidateCriteria = [
-    "Have dynamic facial wrinkles",
-    "Want non-surgical facial rejuvenation",
-    "Seek preventive anti-aging treatment",
-    "Are in good general health",
-    "Have realistic expectations"
+    t('btx.candidate1'),
+    t('btx.candidate2'),
+    t('btx.candidate3'),
+    t('btx.candidate4'),
+    t('btx.candidate5')
   ]
 
   const timelineData = [
-    { label: "Onset of Effect", value: "3–5 days" },
-    { label: "Peak Results", value: "10–14 days" },
-    { label: "Duration", value: "3–4 months" }
+    { label: t('btx.timeline1Label'), value: t('btx.timeline1Value') },
+    { label: t('btx.timeline2Label'), value: t('btx.timeline2Value') },
+    { label: t('btx.timeline3Label'), value: t('btx.timeline3Value') }
   ]
 
   return (
@@ -236,23 +238,23 @@ export default function BotoxMalaysia() {
             <div className="order-1 lg:order-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-50 border border-zinc-200 text-zinc-600 text-[10px] font-semibold uppercase tracking-widest mb-4 md:mb-8 animate-fadeInUp opacity-0 hover:border-[#FE7623] hover:bg-orange-50 transition-all duration-300" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE7623] animate-pulse"></span>
-                MOH Regulated Treatment
+                {t('btx.badge')}
               </div>
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-zinc-900 leading-[1.05] mb-3 md:mb-6 animate-fadeInUp opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">Botox in Malaysia.</span> <br />
-                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">Medical Wrinkle Reduction & Preventive Facial Rejuvenation</span>
+                <span className="hover:text-[#FE7623] transition-colors duration-300 cursor-default">{t('btx.heroTitle')}</span> <br />
+                <span className="text-[#FE7623] text-[20px] md:text-[30px] tracking-[1px] transition-colors duration-300 cursor-default mt-[10px] block">{t('btx.heroSubtitle')}</span>
               </h1>
               <div className="text-zinc-600 leading-relaxed mb-4 md:mb-8 max-w-xl animate-fadeInUp opacity-0 text-justify" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-                <p style={{fontSize: '14px'}}>Botox is a non-surgical injectable treatment used to soften dynamic facial wrinkles caused by repetitive muscle movement. In Malaysia, Botox is widely used for forehead lines, frown lines, crow&apos;s feet, jaw slimming, and preventive anti-aging, delivering subtle, refreshed results when administered correctly.</p>
+                <p style={{fontSize: '14px'}}>{t('btx.heroDesc')}</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp opacity-0" style={{animationDelay: '0.35s', animationFillMode: 'forwards'}}>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Botox%20treatment" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/20 group animate-glow">
-                  Book Consultation
+                  {t('btx.bookConsultation')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                 </a>
                 <a href="#areas" className="btn-magnetic inline-flex justify-center items-center gap-2 bg-white border-2 border-zinc-200 text-zinc-700 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] group">
-                  Treatment Areas
+                  {t('btx.treatmentAreasBtn')}
                   <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-y-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
                 </a>
               </div>
@@ -274,8 +276,8 @@ export default function BotoxMalaysia() {
                       <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
                     <div>
-                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">Treatment Time</p>
-                      <p className="text-sm md:text-base font-semibold text-zinc-900">10–20 Minutes</p>
+                      <p className="text-[10px] md:text-xs font-bold uppercase tracking-wide text-zinc-400">{t('btx.treatmentTime')}</p>
+                      <p className="text-sm md:text-base font-semibold text-zinc-900">{t('btx.treatmentDuration')}</p>
                     </div>
                   </div>
                 </div>
@@ -289,23 +291,23 @@ export default function BotoxMalaysia() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div data-animate="what-1" className={`transition-all duration-700 ${isVisible('what-1') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">What Is Botox?</h2>
+                <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('btx.whatTitle')}</h2>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-6 text-justify">
-                  Botox is a purified form of botulinum toxin type A that temporarily relaxes targeted facial muscles. By reducing excessive muscle activity, Botox smooths dynamic wrinkles while preserving natural facial expression.
+                  {t('btx.whatDesc')}
                 </p>
                 <div className="bg-zinc-50 border border-zinc-200 rounded-xl" style={{padding: '10px', paddingLeft: '20px'}}>
                   <div className="flex items-start gap-3">
                     <svg className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <p className="text-sm text-zinc-600">
-                      The U.S. Food and Drug Administration (FDA) has approved botulinum toxin type A for multiple cosmetic indications, including glabellar lines, forehead lines, and crow&apos;s feet.
+                      {t('btx.whatFda')}
                     </p>
                   </div>
                 </div>
               </div>
 
               <div data-animate="what-2" className={`transition-all duration-700 ${isVisible('what-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-xl font-semibold tracking-tight text-zinc-900 mb-4">Common Treatment Areas</h3>
-                <p className="text-zinc-500 text-sm mb-6">Botox can be used for both cosmetic and functional purposes. Clinical guidance from the Mayo Clinic notes that precise dosing and accurate muscle targeting are essential for safe, natural-looking outcomes.</p>
+                <h3 className="text-xl font-semibold tracking-tight text-zinc-900 mb-4">{t('btx.areasTitle')}</h3>
+                <p className="text-zinc-500 text-sm mb-6">{t('btx.areasDesc')}</p>
                 <div className="grid grid-cols-2 gap-4">
                   {treatmentAreas.map((area, i) => (
                     <div key={i} className="bg-zinc-50 p-4 rounded-xl border border-zinc-200 hover:border-[#FE7623] group transition-all duration-300">
@@ -333,9 +335,9 @@ export default function BotoxMalaysia() {
             </div>
 
             <div data-animate="benefits-content" className={`transition-all duration-700 ${isVisible('benefits-content') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Benefits of Botox Treatment</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('btx.benefitsTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                When used early, Botox can help prevent deep wrinkle formation by reducing repetitive muscle contraction.
+                {t('btx.benefitsDesc')}
               </p>
 
               <div className="space-y-4">
@@ -356,8 +358,8 @@ export default function BotoxMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto">
             <div data-animate="safety-header" className={`text-center mb-12 transition-all duration-700 ${isVisible('safety-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Safety, Risks, and Expectations</h2>
-              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">Botox is considered safe when administered by trained medical professionals. Temporary side effects may include mild swelling, bruising, headache, or localized muscle weakness. Serious complications are rare when correct technique and dosing are used.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('btx.safetyTitle')}</h2>
+              <p className="text-zinc-500 text-sm max-w-2xl mx-auto">{t('btx.safetyDesc')}</p>
             </div>
 
             <div className="bg-white rounded-2xl border border-zinc-200 p-8 shadow-lg">
@@ -366,9 +368,9 @@ export default function BotoxMalaysia() {
                   <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-zinc-900 mb-2">Medical Evidence</h3>
+                  <h3 className="text-lg font-bold text-zinc-900 mb-2">{t('btx.evidenceTitle')}</h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">
-                    Medical literature indexed by the National Center for Biotechnology Information (NCBI) confirms that botulinum toxin has a strong safety profile when used within approved indications and clinical guidelines.
+                    {t('btx.evidenceDesc')}
                   </p>
                 </div>
               </div>
@@ -380,8 +382,8 @@ export default function BotoxMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <div data-animate="procedure-header" className={`text-center mb-16 transition-all duration-700 ${isVisible('procedure-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">Procedure, Downtime, and Longevity</h2>
-              <p className="text-zinc-500 text-sm">Botox treatment typically takes 10–20 minutes. There is little to no downtime, and most patients resume normal activities the same day.</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-4">{t('btx.procedureTitle')}</h2>
+              <p className="text-zinc-500 text-sm">{t('btx.procedureDesc')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -395,7 +397,7 @@ export default function BotoxMalaysia() {
               ))}
             </div>
 
-            <p className="text-center text-sm text-zinc-500 mt-8">Regular maintenance helps sustain results over time.</p>
+            <p className="text-center text-sm text-zinc-500 mt-8">{t('btx.longevityNote')}</p>
           </div>
         </section>
 
@@ -403,9 +405,9 @@ export default function BotoxMalaysia() {
         <section className="py-8 md:py-24 px-6 bg-zinc-50">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-animate="candidate-content" className={`transition-all duration-700 ${isVisible('candidate-content') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">Who Is a Suitable Candidate?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#FE7623] mb-6">{t('btx.candidateTitle')}</h2>
               <p className="text-zinc-500 text-sm leading-relaxed mb-8">
-                A medical consultation ensures appropriate dosing and individualized treatment planning.
+                {t('btx.candidateDesc')}
               </p>
 
               <div className="space-y-4">
@@ -443,11 +445,11 @@ export default function BotoxMalaysia() {
                   <div className="p-2 bg-[#FE7623]/20 rounded-lg">
                     <svg className="w-6 h-6 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   </div>
-                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">Consultation</h3>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FE7623] transition-colors duration-300">{t('btx.consultationTitle')}</h3>
                 </div>
-                <p className="text-zinc-400 text-sm mb-6">Botox pricing varies based on:</p>
+                <p className="text-zinc-400 text-sm mb-6">{t('btx.pricingDesc')}</p>
                 <ul className="space-y-4 mb-8">
-                  {["Number of units required", "Treatment areas", "Individual goals", "Maintenance frequency"].map((item, i) => (
+                  {[t('btx.pricing1'), t('btx.pricing2'), t('btx.pricing3'), t('btx.pricing4')].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-zinc-300 hover:text-white hover:translate-x-2 transition-all duration-300">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#FE7623] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                       {item}
@@ -455,7 +457,7 @@ export default function BotoxMalaysia() {
                   ))}
                 </ul>
                 <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Botox%20treatment" className="btn-magnetic block w-full text-center bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-4 rounded-full text-sm font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-lg shadow-orange-500/30 animate-glow">
-                  Get Quote via WhatsApp
+                  {t('btx.getQuote')}
                 </a>
               </div>
             </div>
@@ -467,8 +469,8 @@ export default function BotoxMalaysia() {
                   <svg className="w-8 h-8 text-[#FE7623]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[#FE7623]">Frequently Asked Questions</h2>
-                  <p className="text-sm text-zinc-500">Get answers to common concerns about Botox</p>
+                  <h2 className="text-2xl font-semibold text-[#FE7623]">{t('btx.faqTitle')}</h2>
+                  <p className="text-sm text-zinc-500">{t('btx.faqDesc')}</p>
                 </div>
               </div>
               <div className="space-y-3">
@@ -517,24 +519,24 @@ export default function BotoxMalaysia() {
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
             </div>
 
-            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">Final Note</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-[#FE7623] mb-6 transition-colors duration-300 cursor-default">{t('btx.ctaTitle')}</h2>
             <p className="text-lg text-zinc-500 max-w-3xl mx-auto" style={{marginBottom: '10px'}}>
-              Botox is a proven, effective treatment for both wrinkle reduction and prevention. When administered by qualified professionals with proper technique, it delivers natural-looking results that refresh your appearance while maintaining your unique expressions.
+              {t('btx.ctaDesc')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4" style={{marginTop: '20px'}}>
               <a href="https://wa.me/60142616007?text=Hi%2C%20I%27m%20interested%20in%20Botox%20treatment" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-gradient-to-r from-[#FE7623] to-orange-500 text-white py-5 rounded-full text-base font-semibold hover:from-[#e56010] hover:to-orange-400 transition-all duration-300 shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/50 group animate-glow" style={{paddingLeft: '20px', paddingRight: '20px'}}>
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-                Chat with Us on WhatsApp
+                {t('btx.chatWhatsapp')}
               </a>
               <Link href="/contact" className="btn-magnetic w-full sm:w-auto inline-flex justify-center items-center gap-3 bg-white text-zinc-900 border-2 border-zinc-200 py-5 rounded-full text-base font-medium hover:bg-zinc-50 transition-all duration-300 hover:border-[#FE7623] hover:text-[#FE7623] hover:shadow-xl group" style={{paddingLeft: '20px', paddingRight: '20px'}}>
                 <svg className="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                Book Consultation
+                {t('btx.bookConsultation')}
               </Link>
             </div>
 
             {/* SEO Tags */}
             <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["botox", "wrinkle reduction", "anti-aging", "forehead lines", "crow&apos;s feet", "facial rejuvenation"].map((tag, i) => (
+              {[t('btx.tag1'), t('btx.tag2'), t('btx.tag3'), t('btx.tag4'), t('btx.tag5'), t('btx.tag6')].map((tag, i) => (
                 <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20">{tag}</span>
               ))}
             </div>
