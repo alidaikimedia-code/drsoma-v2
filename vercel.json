@@ -52,6 +52,18 @@
     { "source": "/servicespage/exosomes-therapy", "destination": "/regenerative-treatments/prp-treatment-malaysia", "permanent": true },
     { "source": "/servicespage/exosomes-therapy/", "destination": "/regenerative-treatments/prp-treatment-malaysia", "permanent": true }
   ],
+  "rewrites": [
+    { "source": "/id/", "destination": "/" },
+    { "source": "/zh-cn/", "destination": "/" },
+    { "source": "/zh-my/", "destination": "/" },
+    { "source": "/ms/", "destination": "/" },
+    { "source": "/ko/", "destination": "/" },
+    { "source": "/id/:path*", "destination": "/:path*" },
+    { "source": "/zh-cn/:path*", "destination": "/:path*" },
+    { "source": "/zh-my/:path*", "destination": "/:path*" },
+    { "source": "/ms/:path*", "destination": "/:path*" },
+    { "source": "/ko/:path*", "destination": "/:path*" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
