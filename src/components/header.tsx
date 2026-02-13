@@ -17,6 +17,7 @@ const Header = () => {
 
   // Check if we're on the new-home page for transparent header
   const isHomePage = router.pathname === '/new-home' || router.pathname === '/';
+  const isBlogPage = router.pathname === '/blog' || router.pathname.startsWith('/blog/');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -252,7 +253,7 @@ const Header = () => {
               </div>
             </nav>
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-              <LanguageSwitcher />
+              {!isBlogPage && <LanguageSwitcher />}
               <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-[14px] font-bold uppercase tracking-wider rounded-sm overflow-hidden transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">
                 <span className="relative z-10">{t('nav.bookConsultation')}</span>
                 <svg className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -260,7 +261,7 @@ const Header = () => {
               </a>
             </div>
             <div className="flex lg:hidden items-center gap-2">
-              <LanguageSwitcher />
+              {!isBlogPage && <LanguageSwitcher />}
               <button className="flex items-center justify-center w-12 h-12 transition-transform duration-300 active:scale-95 text-black" onClick={handleSideNav} aria-label="Toggle menu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
                   <path d="M2 11H22V13H2zM2 5H22V7H2zM2 17H22V19H2z"/>
