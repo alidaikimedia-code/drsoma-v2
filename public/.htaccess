@@ -41,18 +41,28 @@ RewriteRule ^servicespage/exosomes-therapy/?$ /regenerative-treatments/prp-treat
 # /zh-my/  -> Chinese (Malaysia)
 # /ms/     -> Malay
 # /ko/     -> Korean
-RewriteCond %{REQUEST_URI} ^/(id|zh-cn|zh-my|ms|ko)/(.+)$
-RewriteCond %{DOCUMENT_ROOT}/%2 -f [OR]
-RewriteCond %{DOCUMENT_ROOT}/%2 -d
-RewriteRule ^(id|zh-cn|zh-my|ms|ko)/(.+)$ /$2 [L]
+
+# Locale paths - strip prefix and serve .html file directly
+# e.g. /ms/contact -> /contact.html, /id/body/liposuction-malaysia -> /body/liposuction-malaysia.html
+RewriteCond %{REQUEST_URI} ^/(id|zh-cn|zh-my|ms|ko)/(.+?)/?$
+RewriteCond %{DOCUMENT_ROOT}/%2.html -f
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/(.+?)/?$ /$2.html [L]
+
+# Locale paths - handle directory-style pages (index.html inside folder)
+RewriteCond %{REQUEST_URI} ^/(id|zh-cn|zh-my|ms|ko)/(.+?)/?$
+RewriteCond %{DOCUMENT_ROOT}/%2/index.html -f
+RewriteRule ^(id|zh-cn|zh-my|ms|ko)/(.+?)/?$ /$2/index.html [L]
 
 # Handle locale root URLs (e.g., /id/ -> /)
 RewriteRule ^(id|zh-cn|zh-my|ms|ko)/?$ /index.html [L]
 
-# Remove .html extension
+# Serve .html files for clean URLs (any path depth, with or without trailing slash)
+# e.g. /contact -> /contact.html, /body/liposuction-malaysia -> /body/liposuction-malaysia.html
+RewriteCond %{REQUEST_URI} ^/(.+?)/?$
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 
 # Handle trailing slash for directories
 RewriteCond %{REQUEST_FILENAME} !-f
