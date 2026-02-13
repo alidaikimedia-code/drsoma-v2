@@ -3,11 +3,13 @@ import BaseImage from "@/components/BaseImage";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { getLocalizedPath } from "@/i18n/config";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lp = (path: string) => getLocalizedPath(path, i18n.language);
   const [sideNavOpened, setSideNavOpened] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
@@ -142,12 +144,12 @@ const Header = () => {
       >
         <div className="containers px-[30px]">
           <div className="flex flex-nowrap items-center justify-between h-[80px] lg:h-[90px]">
-            <Link href="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+            <Link href={lp("/")} className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
               <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={80} height={80} className="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px]" />
             </Link>
             <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
               <div className="flex flex-nowrap items-center gap-[40px]">
-                <Link href="/about-dr-soma"><span className={linkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
+                <Link href={lp("/about-dr-soma")}><span className={linkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
 
                 {/* Plastic Surgery with Mega Menu */}
                 <div
@@ -155,7 +157,7 @@ const Header = () => {
                   onMouseEnter={() => setMegaMenuOpen(true)}
                   onMouseLeave={() => setMegaMenuOpen(false)}
                 >
-                  <Link href="/treatments" className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
+                  <Link href={lp("/treatments")} className={`flex items-center gap-1 cursor-pointer ${linkClasses("/treatments")}`}>
                     {t('nav.plasticSurgery')}
                     <svg className={`w-3 h-3 transition-transform duration-300 ${megaMenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -175,7 +177,7 @@ const Header = () => {
                               {category.services.map((service) => (
                                 <li key={service.name}>
                                   <Link
-                                    href={service.link}
+                                    href={lp(service.link)}
                                     className="text-gray-600 text-[13px] hover:text-primary transition-colors duration-200 block py-1"
                                   >
                                     {service.name}
@@ -184,7 +186,7 @@ const Header = () => {
                               ))}
                             </ul>
                             <Link
-                              href={category.link}
+                              href={lp(category.link)}
                               className="mt-3 pt-2 border-t border-gray-100 text-primary text-[13px] font-semibold hover:text-primary/80 transition-colors duration-200 flex items-center gap-1"
                             >
                               {t('nav.viewAllServices')}
@@ -225,7 +227,7 @@ const Header = () => {
                               {category.services.map((service) => (
                                 <li key={service.name}>
                                   <Link
-                                    href={service.link}
+                                    href={lp(service.link)}
                                     className="text-gray-600 text-[13px] hover:text-primary transition-colors duration-200 block py-1"
                                   >
                                     {service.name}
@@ -234,7 +236,7 @@ const Header = () => {
                               ))}
                             </ul>
                             <Link
-                              href={category.link}
+                              href={lp(category.link)}
                               className="mt-3 pt-2 border-t border-gray-100 text-primary text-[13px] font-semibold hover:text-primary/80 transition-colors duration-200 flex items-center gap-1"
                             >
                               {t('nav.viewAllServices')}
@@ -249,7 +251,7 @@ const Header = () => {
                   </div>
                 </div>
 
-                <Link href="/contact"><span className={linkClasses("/contact")}>{t('nav.contact')}</span></Link>
+                <Link href={lp("/contact")}><span className={linkClasses("/contact")}>{t('nav.contact')}</span></Link>
               </div>
             </nav>
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
@@ -279,7 +281,7 @@ const Header = () => {
       {/* Mobile Side Navigation */}
       <div className={`fixed top-0 left-0 z-[70] flex flex-col w-[300px] max-w-[85vw] h-screen bg-white lg:hidden transition-transform duration-500 ease-out ${sideNavOpened ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex flex-nowrap items-center justify-between p-6 border-b border-black/10">
-          <Link href="/" onClick={handleSideNav}><BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={60} height={60} /></Link>
+          <Link href={lp("/")} onClick={handleSideNav}><BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={60} height={60} /></Link>
           <button className="flex items-center justify-center w-12 h-12 rounded-full bg-black/5 text-black transition-all duration-300 hover:bg-black/10 active:scale-95" onClick={handleSideNav} aria-label="Close menu">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -288,12 +290,12 @@ const Header = () => {
         </div>
         <nav className="flex flex-col flex-1 p-6 pt-6 overflow-y-auto">
           <div className="flex flex-col gap-4">
-            <Link href="/about-dr-soma" onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
+            <Link href={lp("/about-dr-soma")} onClick={handleSideNav}><span className={mobileLinkClasses("/about-dr-soma")}>{t('nav.drSoma')}</span></Link>
 
             {/* Mobile Plastic Surgery Submenu */}
             <div>
               <div className={`flex items-center justify-between w-full ${mobileLinkClasses("/treatments")}`}>
-                <Link href="/treatments" onClick={handleSideNav}>{t('nav.plasticSurgery')}</Link>
+                <Link href={lp("/treatments")} onClick={handleSideNav}>{t('nav.plasticSurgery')}</Link>
                 <button onClick={() => setMobileSubmenuOpen(!mobileSubmenuOpen)} aria-label="Toggle plastic surgery submenu">
                   <svg className={`w-6 h-6 min-w-[24px] transition-transform duration-300 ${mobileSubmenuOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -311,7 +313,7 @@ const Header = () => {
                         {category.services.map((service) => (
                           <li key={service.name}>
                             <Link
-                              href={service.link}
+                              href={lp(service.link)}
                               onClick={handleSideNav}
                               className="text-gray-600 text-[13px] hover:text-primary transition-colors duration-200 block py-1"
                             >
@@ -321,7 +323,7 @@ const Header = () => {
                         ))}
                         <li>
                           <Link
-                            href={category.link}
+                            href={lp(category.link)}
                             onClick={handleSideNav}
                             className="text-primary text-[13px] font-medium hover:text-primary/80 transition-colors duration-200 flex items-center gap-1 py-1"
                           >
@@ -360,7 +362,7 @@ const Header = () => {
                         {category.services.map((service) => (
                           <li key={service.name}>
                             <Link
-                              href={service.link}
+                              href={lp(service.link)}
                               onClick={handleSideNav}
                               className="text-gray-600 text-[13px] hover:text-primary transition-colors duration-200 block py-1"
                             >
@@ -370,7 +372,7 @@ const Header = () => {
                         ))}
                         <li>
                           <Link
-                            href={category.link}
+                            href={lp(category.link)}
                             onClick={handleSideNav}
                             className="text-primary text-[13px] font-medium hover:text-primary/80 transition-colors duration-200 flex items-center gap-1 py-1"
                           >
@@ -387,7 +389,7 @@ const Header = () => {
               </div>
             </div>
 
-            <Link href="/contact" onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>{t('nav.contact')}</span></Link>
+            <Link href={lp("/contact")} onClick={handleSideNav}><span className={mobileLinkClasses("/contact")}>{t('nav.contact')}</span></Link>
           </div>
         </nav>
         <div className="p-4 border-t border-gray-100">
