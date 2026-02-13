@@ -11,7 +11,7 @@ import * as gtag from "@/utils/gtag";
 // Initialize i18next
 import '@/i18n/config';
 import i18n from '@/i18n/config';
-import { getLocaleFromPath } from '@/i18n/config';
+import { getLocaleFromPath, getLocalizedPath } from '@/i18n/config';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function App({ Component, pageProps }: any) {
@@ -53,6 +53,24 @@ export default function App({ Component, pageProps }: any) {
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  // After client-side navigation, update URL with locale prefix
+  // This allows <Link> to use real paths (for Next.js routing) while
+  // keeping locale in the URL for display and sharing
+  useEffect(() => {
+    const handleRouteChangeForLocale = (url: string) => {
+      const currentLang = i18n.language;
+      if (currentLang && currentLang !== 'en') {
+        const localizedUrl = getLocalizedPath(url, currentLang);
+        window.history.replaceState(window.history.state, '', localizedUrl);
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChangeForLocale);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChangeForLocale);
     };
   }, [router.events]);
 

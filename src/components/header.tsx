@@ -3,13 +3,14 @@ import BaseImage from "@/components/BaseImage";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { getLocalizedPath } from "@/i18n/config";
+// getLocalizedPath removed - URL locale prefix is now handled centrally by _app.tsx
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation();
-  const lp = (path: string) => getLocalizedPath(path, i18n.language);
+  // lp() is now identity - URL locale prefix handled by _app.tsx after navigation
+  const lp = (path: string) => path;
   const [sideNavOpened, setSideNavOpened] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
