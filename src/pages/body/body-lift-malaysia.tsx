@@ -116,6 +116,7 @@ export default function BodyLiftMalaysia() {
       <Head>
         <title>Body Lift Malaysia | Comprehensive Body Contouring After Weight Loss – Dr. Soma</title>
         <meta name="description" content="Body lift surgery in Malaysia by Dr. Soma. Comprehensive body contouring after massive weight loss to remove excess skin and reshape your body. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/body-lift-malaysia/" />
       
         <script
           type="application/ld+json"

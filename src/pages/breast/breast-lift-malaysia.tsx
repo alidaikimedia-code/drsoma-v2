@@ -61,6 +61,7 @@ export default function BreastLiftMalaysia() {
       <Head>
         <title>Breast Lift Malaysia (Mastopexy) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon for Breast Lift in Malaysia. Lift, reshape and restore natural youthful contour." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/breast-lift-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

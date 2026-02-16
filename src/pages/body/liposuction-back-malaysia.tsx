@@ -85,6 +85,7 @@ export default function BackLiposuctionMalaysia() {
       <Head>
         <title>Back Liposuction Malaysia | Bra-Line & Roll Removal – Dr. Soma</title>
         <meta name="description" content="Back Liposuction in Malaysia by Certified Plastic Surgeon. Remove bra-line fat and back rolls using MicroAire PAL for a smoother silhouette." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-back-malaysia/" />
 
         <script
           type="application/ld+json"

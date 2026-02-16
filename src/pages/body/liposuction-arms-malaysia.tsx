@@ -83,6 +83,7 @@ export default function ArmLiposuctionMalaysia() {
       <Head>
         <title>Arm Liposuction Malaysia | Slimmer Arms & Definition – Dr. Soma</title>
         <meta name="description" content="Arm Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn tricep and underarm fat using MicroAire PAL for natural, defined results." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-arms-malaysia/" />
 
         <script
           type="application/ld+json"

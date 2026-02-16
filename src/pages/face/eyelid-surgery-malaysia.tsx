@@ -94,6 +94,7 @@ export default function EyelidSurgeryMalaysia() {
       <Head>
         <title>Eyelid Surgery Malaysia | Blepharoplasty – Dr. Soma</title>
         <meta name="description" content="Eyelid surgery (blepharoplasty) in Malaysia by Dr. Soma. Brighter, refreshed, and youthful eyes. Expert eye rejuvenation in licensed facility. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/eyelid-surgery-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

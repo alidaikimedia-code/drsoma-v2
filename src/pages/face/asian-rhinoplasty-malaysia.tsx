@@ -88,6 +88,7 @@ export default function AsianRhinoplastyMalaysia() {
       <Head>
         <title>Asian Rhinoplasty Malaysia | Ethnic Nose Surgery – Dr. Soma</title>
         <meta name="description" content="Asian rhinoplasty in Malaysia by Dr. Soma — expert ethnic nose surgery that enhances facial harmony while preserving your natural features. Book a consultation." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/asian-rhinoplasty-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

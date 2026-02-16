@@ -90,6 +90,7 @@ export default function MiniTummyTuckMalaysia() {
       <Head>
         <title>Mini Tummy Tuck Malaysia by Specialist Plastic Surgeon | Lower Abdomen Tightening – Dr. Soma</title>
         <meta name="description" content="Looking for mini tummy tuck in Malaysia? Dr. Soma offers targeted lower-abdominal tightening with a smaller incision for faster recovery and natural results." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/mini-tummy-tuck-malaysia/" />
       
         <script
           type="application/ld+json"

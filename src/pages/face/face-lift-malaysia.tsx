@@ -71,6 +71,7 @@ export default function FaceLiftMalaysia() {
       <Head>
         <title>Face Lift Malaysia | Rhytidectomy Surgery – Dr. Soma</title>
         <meta name="description" content="Face lift (rhytidectomy) surgery in Malaysia by Dr. Soma. Surgical facial rejuvenation for natural, long-lasting results. Expert facial contouring. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/face-lift-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

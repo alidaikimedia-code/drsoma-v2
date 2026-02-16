@@ -86,6 +86,7 @@ export default function RhinoplastyMalaysia() {
       <Head>
         <title>Rhinoplasty Malaysia | Nose Reshaping Surgery – Dr. Soma</title>
         <meta name="description" content="Rhinoplasty in Malaysia by Dr. Soma. Precision nose reshaping for facial harmony and improved breathing. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/rhinoplasty-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

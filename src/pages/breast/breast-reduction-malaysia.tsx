@@ -60,6 +60,7 @@ export default function BreastReductionMalaysia() {
       <Head>
         <title>Breast Reduction Malaysia (Reduction Mammaplasty) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon for Breast Reduction in Malaysia. Relieve pain, improve proportion, and restore comfort." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/breast-reduction-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

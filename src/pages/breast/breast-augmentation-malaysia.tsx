@@ -87,6 +87,7 @@ export default function BreastAugmentationMalaysia() {
       <Head>
         <title>Breast Augmentation Malaysia | Implants by Specialist Plastic Surgeon – Dr. Soma</title>
         <meta name="description" content="Looking for breast augmentation in Malaysia? Dr. Soma offers safe, natural-looking breast implants using premium silicone gel. Personalised consultation, hospital-grade safety." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/breast-augmentation-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -91,6 +91,7 @@ export default function ChinLiposuctionMalaysia() {
       <Head>
         <title>Chin Liposuction Malaysia | Double Chin Removal & Jawline – Dr. Soma</title>
         <meta name="description" content="Chin Liposuction in Malaysia by Certified Plastic Surgeon. Remove double chin fat and define the jawline for a sharper neck angle and natural profile." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-chin-malaysia/" />
 
         <script
           type="application/ld+json"

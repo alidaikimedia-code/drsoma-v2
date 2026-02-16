@@ -450,6 +450,7 @@ export default function BreastHubPage() {
       <Head>
         <title>Breast Surgery in Malaysia | Breast Procedures and Treatments</title>
         <meta name="description" content="Explore breast surgery options in Malaysia including breast augmentation, breast lift, breast reduction, fat transfer, implant removal, revision surgery, and capsular contracture correction. View each treatment page and book a private consultation." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/" />
         {/* Alternative Meta Title: Breast Treatments Malaysia | Augmentation, Lift, Reduction and Revision */}
         <script
           type="application/ld+json"

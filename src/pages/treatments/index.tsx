@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Head from "next/head";
 import BaseImage from "@/components/BaseImage";
 import Link from "next/link";
 import { getAssetPath } from "@/utils/helper";
@@ -48,6 +49,9 @@ const Services = () => {
 
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/treatments/" />
+      </Head>
       <section className="flex bg-no-repeat bg-cover bg-center py-100 lg:py-[175px] relative" style={{ backgroundImage: `url(${getAssetPath('/images/service_page_banner_image.png')})` }}>
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="flex containers w-full relative z-10">

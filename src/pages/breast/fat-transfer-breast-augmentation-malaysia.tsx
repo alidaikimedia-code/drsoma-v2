@@ -54,6 +54,7 @@ export default function FatTransferBreastAugmentation() {
       <Head>
         <title>Fat Transfer Breast Augmentation Malaysia | Natural Enhancement – Dr. Soma</title>
         <meta name="description" content="Fat Transfer Breast Augmentation in Malaysia by certified plastic surgeon Dr. Soma. No implants, natural softness, subtle enhancement using your own body fat." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/fat-transfer-breast-augmentation-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -85,6 +85,7 @@ export default function BreastRevisionSurgeryMalaysia() {
       <Head>
         <title>Breast Revision Surgery Malaysia | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Certified Plastic Surgeon performed Breast Revision in Malaysia. Correct capsular contracture, implant malposition, and asymmetry. Restore natural balance." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/breast-revision-surgery-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

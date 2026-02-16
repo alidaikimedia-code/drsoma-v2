@@ -106,6 +106,7 @@ export default function ThighLiftMalaysia() {
       <Head>
         <title>Thigh Lift Malaysia by Specialist Plastic Surgeon | Remove Loose Thigh Skin Safely – Dr. Soma</title>
         <meta name="description" content="Looking for safe, surgeon-performed thigh lift (thighplasty) in Malaysia? Dr. Soma offers advanced body contouring to remove excess thigh skin for firmer, smoother contours." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/thigh-lift-malaysia/" />
       
         <script
           type="application/ld+json"

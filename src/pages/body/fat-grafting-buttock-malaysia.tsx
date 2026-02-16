@@ -95,6 +95,7 @@ export default function FatGraftingButtockMalaysia() {
       <Head>
         <title>Fat Grafting to Buttocks Malaysia | Natural Buttock Enhancement – Dr. Soma</title>
         <meta name="description" content="Fat grafting to buttocks (gluteal fat transfer) in Malaysia by Dr. Soma. Natural buttock enhancement using your own fat. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/fat-grafting-buttock-malaysia/" />
 
         <script
           type="application/ld+json"

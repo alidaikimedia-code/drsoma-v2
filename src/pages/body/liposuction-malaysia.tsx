@@ -98,6 +98,7 @@ export default function LiposuctionMalaysia() {
       <Head>
         <title>Liposuction Malaysia by Specialist Plastic Surgeon | Remove Stubborn Fat Safely – Dr. Soma</title>
         <meta name="description" content="Looking for safe, surgeon-performed liposuction in Malaysia? Dr. Soma offers advanced body contouring using MicroAire Power-Assisted Liposuction for long-lasting, natural results." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-malaysia/" />
 
         <script
           type="application/ld+json"
