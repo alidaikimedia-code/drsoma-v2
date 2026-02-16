@@ -24,14 +24,29 @@ const ContactForm: React.FC<ContactFormProps> = () => {
     setStatus(null);
 
     try {
-      // Send to WhatsApp
-      const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A*Message:* ${formData.message}`;
-      const whatsappUrl = `https://wa.me/60142616007?text=${whatsappMessage}`;
+      const response = await fetch("https://formsubmit.co/ajax/info@drsomaplasticsurgery.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: `New Contact Form: ${formData.subject}`,
+          _template: "table",
+        }),
+      });
 
-      window.open(whatsappUrl, "_blank");
-
-      setStatus({ type: "success", text: "Thank you! Redirecting to WhatsApp..." });
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      if (response.ok) {
+        setStatus({ type: "success", text: "Thank you! Your message has been sent successfully. We'll get back to you soon." });
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setStatus({ type: "error", text: "Something went wrong. Please try again." });
+      }
     } catch {
       setStatus({ type: "error", text: "Something went wrong. Please try again." });
     } finally {
