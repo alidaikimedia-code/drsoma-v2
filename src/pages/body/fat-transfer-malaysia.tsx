@@ -96,6 +96,7 @@ export default function FatTransferMalaysia() {
       <Head>
         <title>Fat Transfer Malaysia | Natural Volume Restoration – Dr. Soma</title>
         <meta name="description" content="Fat transfer surgery in Malaysia by Dr. Soma. Natural volume restoration using your own body fat for face, breast, buttocks and body contouring. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/fat-transfer-malaysia/" />
 
         <script
           type="application/ld+json"

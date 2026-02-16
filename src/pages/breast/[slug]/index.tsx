@@ -2034,6 +2034,7 @@ export default function BreastTreatmentPage({ treatment }: PageProps) {
       <Head>
         <title>{treatment.title} | Dr. Soma Plastic Surgery</title>
         <meta name="description" content={treatment.heroDescription.substring(0, 160)} />
+        <link rel="canonical" href={`https://drsomaplasticsurgery.com/breast/${treatment.slug}/`} />
       </Head>
       
       <main className="min-h-screen bg-white">

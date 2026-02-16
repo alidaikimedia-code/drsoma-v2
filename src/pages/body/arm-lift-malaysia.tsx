@@ -92,6 +92,7 @@ export default function ArmLiftMalaysia() {
       <Head>
         <title>Arm Lift Malaysia by Specialist Plastic Surgeon | Remove Loose Upper Arm Skin Safely – Dr. Soma</title>
         <meta name="description" content="Looking for safe, surgeon-performed arm lift (brachioplasty) in Malaysia? Dr. Soma offers advanced body contouring to remove excess upper arm skin for firmer, toned arms." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/arm-lift-malaysia/" />
       
         <script
           type="application/ld+json"

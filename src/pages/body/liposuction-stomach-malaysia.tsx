@@ -75,6 +75,7 @@ export default function StomachLiposuctionMalaysia() {
       <Head>
         <title>Stomach Liposuction Malaysia | Belly Fat Removal – Dr. Soma</title>
         <meta name="description" content="Stomach Liposuction in Malaysia by Certified Plastic Surgeon. Remove stubborn belly fat and refine waistline using MicroAire PAL." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-stomach-malaysia/" />
 
         <script
           type="application/ld+json"

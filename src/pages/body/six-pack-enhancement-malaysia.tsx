@@ -96,6 +96,7 @@ export default function SixPackEnhancementMalaysia() {
       <Head>
         <title>Six Pack Enhancement Malaysia | Abdominal Sculpting – Dr. Soma</title>
         <meta name="description" content="Six pack enhancement in Malaysia by Dr. Soma. High-definition abdominal liposculpture for a more defined, athletic appearance. Certified plastic surgeon with hospital-grade safety. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/six-pack-enhancement-malaysia/" />
 
         <script
           type="application/ld+json"

@@ -64,6 +64,7 @@ export default function BreastImplantRemovalMalaysia() {
       <Head>
         <title>Breast Implant Removal Malaysia (Explant Surgery) | Dr. Soma Plastic Surgery</title>
         <meta name="description" content="Safe breast implant removal (explant) and capsulectomy in Malaysia. Performed by certified plastic surgeon Dr. Soma. Restoration of natural proportions." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/breast/breast-implant-removal-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

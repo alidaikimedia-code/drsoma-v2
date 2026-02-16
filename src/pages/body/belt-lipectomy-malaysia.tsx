@@ -81,6 +81,7 @@ export default function BeltLipectomyMalaysia() {
       <Head>
         <title>Belt Lipectomy Malaysia | Circumferential Body Contouring After Weight Loss – Dr. Soma</title>
         <meta name="description" content="Belt lipectomy surgery in Malaysia by Dr. Soma. 360° circumferential body contouring after massive weight loss to remove excess skin around the entire lower torso. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/belt-lipectomy-malaysia/" />
 
         <script
           type="application/ld+json"

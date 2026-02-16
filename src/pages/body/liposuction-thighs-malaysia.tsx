@@ -89,6 +89,7 @@ export default function ThighLiposuctionMalaysia() {
       <Head>
         <title>Thigh Liposuction Malaysia | Inner & Outer Thigh Fat Removal – Dr. Soma</title>
         <meta name="description" content="Thigh Liposuction in Malaysia by Certified Plastic Surgeon. Slimmer legs and smoother shape using MicroAire PAL. Inner and Outer thigh fat removal." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/liposuction-thighs-malaysia/" />
 
         <script
           type="application/ld+json"

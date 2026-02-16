@@ -120,6 +120,7 @@ export default function TummyTuckMalaysia() {
       <Head>
         <title>Tummy Tuck Malaysia by Specialist Plastic Surgeon | Abdominoplasty - Dr. Soma</title>
         <meta name="description" content="Looking for tummy tuck in Malaysia? Dr. Soma offers comprehensive abdominoplasty to restore a flatter, firmer abdomen with surgical precision and structured postoperative care." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/body/tummy-tuck-malaysia/" />
 
         <script
           type="application/ld+json"

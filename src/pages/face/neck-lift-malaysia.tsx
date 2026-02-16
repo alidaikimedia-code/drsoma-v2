@@ -71,6 +71,7 @@ export default function NeckLiftMalaysia() {
       <Head>
         <title>Neck Lift Malaysia | Cervicoplasty Surgery – Dr. Soma</title>
         <meta name="description" content="Neck lift (cervicoplasty) surgery in Malaysia by Dr. Soma. Restore a defined jawline and youthful neck contour. Expert surgical rejuvenation. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/neck-lift-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -63,6 +63,7 @@ export default function GynecomastiaSurgeryMalaysia() {
       <Head>
         <title>Gynecomastia Surgery Malaysia | Male Breast Reduction – Dr. Soma</title>
         <meta name="description" content="Gynecomastia surgery in Malaysia by Dr. Soma. Male breast reduction for a firmer, masculine chest. Expert surgical treatment. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/male/gynecomastia-surgery-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

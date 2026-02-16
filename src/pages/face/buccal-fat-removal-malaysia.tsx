@@ -68,6 +68,7 @@ export default function BuccalFatRemovalMalaysia() {
       <Head>
         <title>Buccal Fat Removal Malaysia | Cheek Reduction Surgery – Dr. Soma</title>
         <meta name="description" content="Buccal fat removal surgery in Malaysia by Dr. Soma. Facial contouring for a slimmer, more defined look. Expert cheek reduction surgery. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/buccal-fat-removal-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

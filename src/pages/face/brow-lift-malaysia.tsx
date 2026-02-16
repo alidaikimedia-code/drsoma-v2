@@ -71,6 +71,7 @@ export default function BrowLiftMalaysia() {
       <Head>
         <title>Brow Lift Malaysia | Forehead Lift Surgery – Dr. Soma</title>
         <meta name="description" content="Brow lift (forehead lift) surgery in Malaysia by Dr. Soma. Restore a youthful, refreshed brow position with natural-looking results. Expert facial rejuvenation. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/brow-lift-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

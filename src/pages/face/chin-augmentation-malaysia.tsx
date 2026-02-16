@@ -71,6 +71,7 @@ export default function ChinAugmentationMalaysia() {
       <Head>
         <title>Chin Augmentation Malaysia | Genioplasty Surgery – Dr. Soma</title>
         <meta name="description" content="Chin augmentation (genioplasty) surgery in Malaysia by Dr. Soma. Enhance facial balance and jawline definition. Expert chin enhancement surgery. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/chin-augmentation-malaysia/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

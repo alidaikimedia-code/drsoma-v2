@@ -91,6 +91,7 @@ export default function OtoplastyMalaysia() {
       <Head>
         <title>Otoplasty Malaysia | Ear Pinning Surgery by Plastic Surgeon - Dr. Soma</title>
         <meta name="description" content="Otoplasty (ear pinning surgery) in Malaysia by Dr. Soma. Surgical ear reshaping for natural, balanced facial proportions. Expert ear correction. Book consultation today." />
+        <link rel="canonical" href="https://drsomaplasticsurgery.com/face/otoplasty-malaysia/" />
       </Head>
 
       <style jsx global>{`
