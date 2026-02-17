@@ -80,7 +80,7 @@ const MaleHub = () => {
           area: t('mh.cat0Treat1Area'),
           description: t('mh.cat0Treat1Desc'),
           href: "/male/male-breast-reduction-malaysia",
-          image: "/images/male_breast_reduction.png",
+          image: "/images/male_breast_reduction.webp",
           tag: null,
         },
       ],

@@ -278,7 +278,7 @@ export default function DermalFillersMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/lip_filler.png"
+                src="/images/lip_filler.webp"
                 alt="Dermal Fillers in Malaysia"
                 fill
                 className="object-cover opacity-95"
@@ -341,7 +341,7 @@ export default function DermalFillersMalaysia() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
             <div data-animate="benefits-image" className={`relative rounded-2xl overflow-hidden shadow-2xl img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 min-h-[300px] ${isVisible('benefits-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <BaseImage
-                src="/images/lip_filler.png"
+                src="/images/lip_filler.webp"
                 alt="Benefits of Dermal Fillers"
                 fill
                 className="object-cover"
@@ -444,7 +444,7 @@ export default function DermalFillersMalaysia() {
 
             <div data-animate="candidate-image" className={`relative rounded-2xl overflow-hidden aspect-[4/3] shadow-xl img-zoom ${isVisible('candidate-image') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <BaseImage
-                src="/images/lip_filler.png"
+                src="/images/lip_filler.webp"
                 alt="Dermal Fillers Candidate"
                 fill
                 className="object-cover"

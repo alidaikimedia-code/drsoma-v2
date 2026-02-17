@@ -661,13 +661,13 @@ const getFallbackAnnouncements = (): Announcement[] => {
       status: 'published',
       created_at: '2024-12-19T14:30:00Z',
       asset: {
-        url: '/images/dr_soma_small_pic.png',
+        url: '/images/dr_soma_small_pic.webp',
         imageInfo: {
-          key: 'dr_soma_small_pic.png',
+          key: 'dr_soma_small_pic.webp',
           mimeType: 'image/png',
-          originalName: 'dr_soma_small_pic.png',
+          originalName: 'dr_soma_small_pic.webp',
           size: 1024,
-          url: '/images/dr_soma_small_pic.png'
+          url: '/images/dr_soma_small_pic.webp'
         }
       }
     },

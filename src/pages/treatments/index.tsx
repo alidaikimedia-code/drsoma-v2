@@ -88,7 +88,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-0') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/liposuction.png"
+                  src="/images/liposuction.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -106,7 +106,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-0') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/tummy_tuck.png"
+                  src="/images/tummy_tuck.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -124,7 +124,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-0') ? '0.3s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/keloid_treatment.png"
+                  src="/images/keloid_treatment.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -174,7 +174,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-1') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/face_lift.png"
+                  src="/images/face_lift.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -192,7 +192,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-1') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/eyelid_reduction.png"
+                  src="/images/eyelid_reduction.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -210,7 +210,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-1') ? '0.3s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/rhinoplasty_in_nose.png"
+                  src="/images/rhinoplasty_in_nose.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -246,7 +246,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-1') ? '0.5s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/pinnaplasty_in_ear.png"
+                  src="/images/pinnaplasty_in_ear.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -314,7 +314,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-2') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/breast_lift.png"
+                  src="/images/breast_lift.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -332,7 +332,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-2') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/breast_augmentation.png"
+                  src="/images/breast_augmentation.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -350,7 +350,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-2') ? '0.3s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/safe_breast_reduction.png"
+                  src="/images/safe_breast_reduction.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -429,7 +429,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-3') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/pack_enhancement.png"
+                  src="/images/pack_enhancement.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -447,7 +447,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-3') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/male_breast_reduction.png"
+                  src="/images/male_breast_reduction.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -515,7 +515,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-4') ? '0.1s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/Safe_thread_in_face.png"
+                  src="/images/Safe_thread_in_face.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -533,7 +533,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-4') ? '0.2s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/lip_filler.png"
+                  src="/images/lip_filler.webp"
                   width={280}
                   height={320}
                   loading="lazy"
@@ -551,7 +551,7 @@ const Services = () => {
                 style={{ animationDelay: isVisible('section-4') ? '0.3s' : '0s' }}
               >
                 <BaseImage
-                  src="/images/keloid_treatment.png"
+                  src="/images/keloid_treatment.webp"
                   width={280}
                   height={320}
                   loading="lazy"

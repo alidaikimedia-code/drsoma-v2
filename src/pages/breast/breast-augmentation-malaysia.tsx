@@ -557,7 +557,7 @@ export default function BreastAugmentationMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/breast_augmentation.png"
+                src="/images/breast_augmentation.webp"
                 alt="Breast Augmentation in Malaysia"
                 fill
                 className="object-cover opacity-95"

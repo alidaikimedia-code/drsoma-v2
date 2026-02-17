@@ -20,7 +20,7 @@ const Exion = () => {
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <BaseImage
-                  src="/images/pinnaplasty_in_ear.png"
+                  src="/images/pinnaplasty_in_ear.webp"
                   width={500}
                   height={350}
                   loading="lazy"
@@ -326,7 +326,7 @@ const Exion = () => {
           {
             title: "Exosomes Therapy",
             description: "Cellular therapy for regeneration and healing",
-            image: "/images/cellular_rejuvenation.png",
+            image: "/images/cellular_rejuvenation.webp",
             href: "/treatments/exosomes-therapy",
             badge: "Related",
             badgeColor: "primary"
@@ -334,7 +334,7 @@ const Exion = () => {
           {
             title: "Cellular Rejuvenation",
             description: "Advanced therapies for cellular regeneration and rejuvenation",
-            image: "/images/face_image.png",
+            image: "/images/face_image.webp",
             href: "/regenerative-treatments/cellular-rejuvenation-malaysia",
             badge: "Popular",
             badgeColor: "blue"
@@ -342,7 +342,7 @@ const Exion = () => {
           {
             title: "Advanced Skin Care",
             description: "Comprehensive skin care treatments for optimal skin health",
-            image: "/images/skin_care_image.png",
+            image: "/images/skin_care_image.webp",
             href: "/treatments/skin-care",
             badge: "Non-Surgical",
             badgeColor: "green"
@@ -350,7 +350,7 @@ const Exion = () => {
           {
             title: "Advanced Wound Management",
             description: "Specialized treatment protocols for optimal healing",
-            image: "/images/advanced_wound_management.png",
+            image: "/images/advanced_wound_management.webp",
             href: "/treatments/advanced-wound-management",
             badge: "Specialized",
             badgeColor: "purple"

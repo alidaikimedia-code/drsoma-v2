@@ -353,7 +353,7 @@ export default function BreastImplantRemovalMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/breast/breast-implant-removal.png"
+                src="/breast/breast-implant-removal.webp"
                 alt="Breast Implant Removal Malaysia"
                 fill
                 className="object-cover opacity-95"

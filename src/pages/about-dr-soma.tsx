@@ -124,7 +124,7 @@ const About = () => {
               }`}>
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2">
                   <BaseImage
-                    src="/images/dr_soma_small_pic.png"
+                    src="/images/dr_soma_small_pic.webp"
                     width={140}
                     height={140}
                     alt="Dr. Soma"
@@ -203,7 +203,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/highly_skilled_doctor.png" 
+                    src="/images/highly_skilled_doctor.webp" 
                     width={180} 
                     height={180} 
                     alt="Highly Skilled Doctor" 
@@ -216,7 +216,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/aesthetic_services.png" 
+                    src="/images/aesthetic_services.webp" 
                     width={180} 
                     height={180} 
                     alt="Aesthetic Services" 
@@ -229,7 +229,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/trained_staffs.png" 
+                    src="/images/trained_staffs.webp" 
                     width={180} 
                     height={180} 
                     alt="Trained Staff" 
@@ -242,7 +242,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/doctor_patient_relationship.png" 
+                    src="/images/doctor_patient_relationship.webp" 
                     width={180} 
                     height={180} 
                     alt="Doctor Patient Relationship" 
@@ -255,7 +255,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/contactability.png" 
+                    src="/images/contactability.webp" 
                     width={180} 
                     height={180} 
                     alt="Contactability" 
@@ -268,7 +268,7 @@ const About = () => {
               <div className="group bg-white rounded-xl shadow-md p-4 flex flex-col items-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 <div className="relative overflow-hidden rounded-lg">
                   <BaseImage 
-                    src="/images/strategic_location.png" 
+                    src="/images/strategic_location.webp" 
                     width={180} 
                     height={180} 
                     alt="Strategic Location" 

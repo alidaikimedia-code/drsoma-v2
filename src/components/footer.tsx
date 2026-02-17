@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="mb-6">
               <BaseImage
-                src="/images/dr_soma_logo.png"
+                src="/images/dr_soma_logo.webp"
                 alt="Dr. Soma Plastic Surgery Logo"
                 width={80}
                 height={80}

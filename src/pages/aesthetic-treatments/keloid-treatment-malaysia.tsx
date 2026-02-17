@@ -357,7 +357,7 @@ export default function KeloidTreatmentMalaysia() {
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 img-zoom transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
               <BaseImage
-                src="/images/keloid_treatment.png"
+                src="/images/keloid_treatment.webp"
                 alt="Keloid Treatment in Malaysia"
                 fill
                 className="object-cover opacity-95"
@@ -453,7 +453,7 @@ export default function KeloidTreatmentMalaysia() {
 
             <div data-animate="why-image" className={`relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('why-image') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <BaseImage
-                src="/images/keloid_treatment.png"
+                src="/images/keloid_treatment.webp"
                 alt="Keloid Treatment"
                 fill
                 className="object-cover"
@@ -497,7 +497,7 @@ export default function KeloidTreatmentMalaysia() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div data-animate="safety-image" className={`relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl order-2 lg:order-1 img-zoom hover:shadow-[0_25px_60px_-15px_rgba(254,118,35,0.3)] transition-all duration-700 ${isVisible('safety-image') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <BaseImage
-                src="/images/keloid_treatment.png"
+                src="/images/keloid_treatment.webp"
                 alt="Keloid Treatment Safety"
                 fill
                 className="object-cover"

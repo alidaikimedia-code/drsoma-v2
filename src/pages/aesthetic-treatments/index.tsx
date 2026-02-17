@@ -58,14 +58,14 @@ const AestheticTreatmentsHub = () => {
     {
       category: t('aesHub.cat1Name'),
       description: t('aesHub.cat1Desc'),
-      categoryImage: "/images/lip_filler.png",
+      categoryImage: "/images/lip_filler.webp",
       treatments: [
         {
           title: t('aesHub.dermalFillersTitle'),
           area: t('aesHub.dermalFillersArea'),
           description: t('aesHub.dermalFillersDesc'),
           href: "/aesthetic-treatments/dermal-fillers-malaysia",
-          image: "/images/lip_filler.png",
+          image: "/images/lip_filler.webp",
           tag: t('aesHub.dermalFillersTag'),
         },
         {
@@ -73,7 +73,7 @@ const AestheticTreatmentsHub = () => {
           area: t('aesHub.lipFillerArea'),
           description: t('aesHub.lipFillerDesc'),
           href: "/aesthetic-treatments/lip-filler-malaysia",
-          image: "/images/lip_filler.png",
+          image: "/images/lip_filler.webp",
           tag: null,
         },
         {
@@ -97,14 +97,14 @@ const AestheticTreatmentsHub = () => {
     {
       category: t('aesHub.cat2Name'),
       description: t('aesHub.cat2Desc'),
-      categoryImage: "/images/Safe_thread_in_face.png",
+      categoryImage: "/images/Safe_thread_in_face.webp",
       treatments: [
         {
           title: t('aesHub.threadLiftTitle'),
           area: t('aesHub.threadLiftArea'),
           description: t('aesHub.threadLiftDesc'),
           href: "/aesthetic-treatments/thread-lift-malaysia",
-          image: "/images/Safe_thread_in_face.png",
+          image: "/images/Safe_thread_in_face.webp",
           tag: t('aesHub.threadLiftTag'),
         },
         {
@@ -112,7 +112,7 @@ const AestheticTreatmentsHub = () => {
           area: t('aesHub.noseThreadArea'),
           description: t('aesHub.noseThreadDesc'),
           href: "/aesthetic-treatments/nose-thread-lift-malaysia",
-          image: "/images/rhinoplasty_in_nose.png",
+          image: "/images/rhinoplasty_in_nose.webp",
           tag: null,
         },
       ],
@@ -120,14 +120,14 @@ const AestheticTreatmentsHub = () => {
     {
       category: t('aesHub.cat3Name'),
       description: t('aesHub.cat3Desc'),
-      categoryImage: "/images/skin_care_image.png",
+      categoryImage: "/images/skin_care_image.webp",
       treatments: [
         {
           title: t('aesHub.keloidTitle'),
           area: t('aesHub.keloidArea'),
           description: t('aesHub.keloidDesc'),
           href: "/aesthetic-treatments/keloid-treatment-malaysia",
-          image: "/images/keloid_treatment.png",
+          image: "/images/keloid_treatment.webp",
           tag: t('aesHub.keloidTag'),
         },
         {
@@ -135,7 +135,7 @@ const AestheticTreatmentsHub = () => {
           area: t('aesHub.scarArea'),
           description: t('aesHub.scarDesc'),
           href: "/aesthetic-treatments/scar-treatment-malaysia",
-          image: "/images/skin_care_image.png",
+          image: "/images/skin_care_image.webp",
           tag: null,
         },
         {
@@ -143,7 +143,7 @@ const AestheticTreatmentsHub = () => {
           area: t('aesHub.laserScarArea'),
           description: t('aesHub.laserScarDesc'),
           href: "/aesthetic-treatments/laser-scar-removal-malaysia",
-          image: "/images/skin_care_image.png",
+          image: "/images/skin_care_image.webp",
           tag: t('aesHub.laserScarTag'),
         },
         {
@@ -217,7 +217,7 @@ const AestheticTreatmentsHub = () => {
         <meta property="og:description" content="Explore our aesthetic treatments hub in Malaysia covering facial surgery, body contouring, and advanced non-surgical enhancements delivered by qualified specialists." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl("/aesthetic-treatments")} />
-        <meta property="og:image" content={getFullUrl("/images/face_image.png")} />
+        <meta property="og:image" content={getFullUrl("/images/face_image.webp")} />
         <link rel="canonical" href="https://drsomaplasticsurgery.com/aesthetic-treatments" />
       </Head>
 
@@ -294,7 +294,7 @@ const AestheticTreatmentsHub = () => {
             }`}>
               <div className="relative">
                 <BaseImage
-                  src="/images/face_image.png"
+                  src="/images/face_image.webp"
                   width={450}
                   height={400}
                   alt="Aesthetic Treatments Malaysia"
@@ -574,7 +574,7 @@ const AestheticTreatmentsHub = () => {
             }`}>
               <div className="relative group">
                 <BaseImage
-                  src="/images/highly_skilled_doctor.png"
+                  src="/images/highly_skilled_doctor.webp"
                   width={500}
                   height={400}
                   alt="Safety and Ethics"
@@ -597,7 +597,7 @@ const AestheticTreatmentsHub = () => {
             }`}>
               <div className="relative group">
                 <BaseImage
-                  src="/images/doctor_patient_relationship.png"
+                  src="/images/doctor_patient_relationship.webp"
                   width={500}
                   height={450}
                   alt="Why Use Aesthetic Hub"

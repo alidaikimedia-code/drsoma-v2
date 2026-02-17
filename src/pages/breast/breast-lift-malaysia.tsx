@@ -331,7 +331,7 @@ export default function BreastLiftMalaysia() {
 
             {/* Hero Image */}
             <div className="order-2 lg:order-2 relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-[4/3] group animate-fadeInRight opacity-0 transition-all duration-500" style={{animationDelay: '0.3s', animationFillMode: 'forwards', boxShadow: '0 10px 40px -10px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1)'}}>
-              <BaseImage src="/images/breast_lift.png" alt="Breast Lift Surgery Malaysia" fill className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-105" priority />
+              <BaseImage src="/images/breast_lift.webp" alt="Breast Lift Surgery Malaysia" fill className="object-cover opacity-95 transition-transform duration-700 group-hover:scale-105" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent"></div>
               <div className="hidden md:block absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
                 <div className="bg-white backdrop-blur-md p-3 md:p-5 rounded-xl border border-zinc-100 shadow-xl group-hover:translate-y-[-5px] transition-transform duration-500">
