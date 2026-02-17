@@ -1,22 +1,18 @@
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://drsomaplasticsurgery.com",
+  siteUrl: "https://drsomaplasticsurgery.com",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: [
-    "/server-sitemap.xml",
-    "/announcement-demo",
-    "/aboutus",
+    "/404",
     "/blog/test",
     "/blog/video-list",
     "/blog/contact-us",
-    "/404",
   ],
   robotsTxtOptions: {
     policies: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/announcement-demo/"],
       },
     ],
   },
@@ -31,7 +27,7 @@ module.exports = {
       };
     }
 
-    // Main category pages - high priority (check both with and without trailing slash)
+    // Main category pages - high priority
     const mainPages = [
       "/body", "/body/",
       "/face", "/face/",
@@ -43,6 +39,7 @@ module.exports = {
       "/blog", "/blog/",
       "/success-stories", "/success-stories/",
       "/treatments", "/treatments/",
+      "/regenerative-treatments", "/regenerative-treatments/",
     ];
     if (mainPages.includes(path)) {
       return {

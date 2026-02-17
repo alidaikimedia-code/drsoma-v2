@@ -8,6 +8,10 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Force non-www (www -> no-www)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
 # Return 410 Gone for old WordPress URLs (images, uploads, etc.)
 # Tells search engines these resources are permanently removed
 RewriteRule ^wp-content/ - [G,L]
@@ -39,6 +43,22 @@ RewriteRule ^servicespage/safe-thread-lift-in-malaysia/?$ /aesthetic-treatments/
 RewriteRule ^servicespage/cellular-rejuvenation-therapies/?$ /regenerative-treatments/cellular-rejuvenation-malaysia/ [R=301,L]
 RewriteRule ^servicespage/exion/?$ /regenerative-treatments/exion-treatment-malaysia/ [R=301,L]
 RewriteRule ^servicespage/exosomes-therapy/?$ /regenerative-treatments/prp-treatment-malaysia/ [R=301,L]
+RewriteRule ^servicespage/advanced-wound-management/?$ /treatments/advanced-wound-management/ [R=301,L]
+
+# Old WordPress blog posts at root -> redirect to /blog/
+RewriteRule ^arm-liposuction-malaysia/?$ /blog/arm-liposuction-malaysia/ [R=301,L]
+RewriteRule ^facelift-kuala-lumpur-malaysia/?$ /blog/facelift-kuala-lumpur-malaysia/ [R=301,L]
+RewriteRule ^facelift-price-malaysia/?$ /blog/facelift-price-malaysia/ [R=301,L]
+RewriteRule ^guide-liposuction-malaysia/?$ /blog/guide-liposuction-malaysia/ [R=301,L]
+RewriteRule ^kos-sedut-lemak/?$ /blog/kos-sedut-lemak/ [R=301,L]
+RewriteRule ^liposuction-price-malaysia/?$ /blog/liposuction-price-malaysia/ [R=301,L]
+RewriteRule ^panduan-pembedahan-sedut-lemak/?$ /blog/panduan-pembedahan-sedut-lemak/ [R=301,L]
+RewriteRule ^sedut-lemak-dagu-malaysia/?$ /blog/sedut-lemak-dagu-malaysia/ [R=301,L]
+RewriteRule ^sedut-lemak-lengan-malaysia/?$ /blog/sedut-lemak-lengan-malaysia/ [R=301,L]
+RewriteRule ^sedut-lemak-paha/?$ /blog/sedut-lemak-paha/ [R=301,L]
+RewriteRule ^sedut-lemak-perut/?$ /blog/sedut-lemak-perut/ [R=301,L]
+RewriteRule ^stomach-liposuction-malaysia/?$ /blog/stomach-liposuction-malaysia/ [R=301,L]
+RewriteRule ^thigh-liposuction-malaysia/?$ /blog/thigh-liposuction-malaysia/ [R=301,L]
 
 # Language URL rewrites - serve same content for locale-prefixed URLs
 # English is default (no prefix needed)
