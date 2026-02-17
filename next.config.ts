@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   // Static export only for production build; dev server needs full features for rewrites
   ...(isProd ? { output: 'export' as const } : {}),
   reactStrictMode: true,
+  compiler: {
+    removeConsole: isProd,
+  },
   trailingSlash: true,
   async redirects() {
     return [

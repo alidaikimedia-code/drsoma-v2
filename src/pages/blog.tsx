@@ -134,14 +134,14 @@ const Blogs = () => {
         <meta property="og:description" content="Read informative articles about plastic surgery, aesthetic treatments, and beauty tips from Dr. Soma Clinical Aesthetics in Malaysia." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl('/blog')} />
-        <meta property="og:image" content={getFullUrl('/images/blog_page_banner_image.png')} />
+        <meta property="og:image" content={getFullUrl('/images/blog_page_banner_image.webp')} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta name="twitter:description" content="Read informative articles about plastic surgery, aesthetic treatments, and beauty tips from Dr. Soma Clinical Aesthetics in Malaysia." />
-        <meta name="twitter:image" content={getFullUrl('/images/blog_page_banner_image.png')} />
+        <meta name="twitter:image" content={getFullUrl('/images/blog_page_banner_image.webp')} />
         <link rel="canonical" href={getFullUrl('/blog')} />
       </Head>
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} ref={bannerRef}>
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.webp')})` }} ref={bannerRef}>
         <div className="flex containers w-full">
           <div className={`flex w-full flex-col gap-[10px] max-w-[406px] transition-all duration-700 ${
             isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -205,14 +205,14 @@ const Blogs = () => {
                       {/* Featured Image */}
                       <div className="relative overflow-hidden h-52">
                         <BaseImage
-                          src={blog.featured_image?.medium || blog.featured_image?.large || blog.featured_image?.full || "/images/blog_image.png"}
+                          src={blog.featured_image?.medium || blog.featured_image?.large || blog.featured_image?.full || "/images/blog_image.webp"}
                           alt={blog.title}
                           width={400}
                           height={220}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = "/images/blog_image.png";
+                            target.src = "/images/blog_image.webp";
                           }}
                         />
                         {/* Gradient Overlay */}

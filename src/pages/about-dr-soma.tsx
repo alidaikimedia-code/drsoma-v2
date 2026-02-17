@@ -80,11 +80,11 @@ const About = () => {
         <meta property="og:description" content="Learn about Dr. Somasundaram Sathappan, a leading plastic surgeon in Malaysia with over 30 years of experience in aesthetic and reconstructive surgery." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl('/about-dr-soma')} />
-        <meta property="og:image" content={getFullUrl('/images/dr_soma_pic.png')} />
+        <meta property="og:image" content={getFullUrl('/images/dr_soma_pic.webp')} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Us - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta name="twitter:description" content="Learn about Dr. Somasundaram Sathappan, a leading plastic surgeon in Malaysia with over 30 years of experience in aesthetic and reconstructive surgery." />
-        <meta name="twitter:image" content={getFullUrl('/images/dr_soma_pic.png')} />
+        <meta name="twitter:image" content={getFullUrl('/images/dr_soma_pic.webp')} />
         <link rel="canonical" href={getFullUrl('/about-dr-soma')} />
       </Head>
       
