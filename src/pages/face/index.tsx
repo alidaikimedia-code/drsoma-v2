@@ -141,7 +141,7 @@ const FaceHub = () => {
       description: t('faceHub.eyelidDesc'),
       bestFor: [t('faceHub.eyelidBest0'), t('faceHub.eyelidBest1'), t('faceHub.eyelidBest2')],
       href: "/face/eyelid-surgery-malaysia",
-      image: "/images/eyelid_reduction.png",
+      image: "/images/eyelid_reduction.webp",
       featured: true,
     },
     {
@@ -253,7 +253,7 @@ const FaceHub = () => {
         <meta property="og:description" content="Explore facial cosmetic surgery options in Malaysia. Natural-looking results that still look like you." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl("/face")} />
-        <meta property="og:image" content={getFullUrl("/images/face_lift.png")} />
+        <meta property="og:image" content={getFullUrl("/images/face_lift.webp")} />
         <link rel="canonical" href={getFullUrl("/face")} />
         <script
           type="application/ld+json"
@@ -286,7 +286,7 @@ const FaceHub = () => {
               "url": "https://drsomaplasticsurgery.com/face",
               "description": "Explore facial cosmetic surgery options in Malaysia with Dr. Soma. From rhinoplasty to face lift, find procedures that enhance your natural beauty in a safe, professional environment.",
               "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127},
-              "image": "https://drsomaplasticsurgery.com/images/face_lift.png"
+              "image": "https://drsomaplasticsurgery.com/images/face_lift.webp"
             })
           }}
         />
@@ -385,7 +385,7 @@ const FaceHub = () => {
                 {/* Main Image Container */}
                 <div className="relative w-[400px] h-[500px] rounded-3xl overflow-hidden border border-white/10">
                   <BaseImage
-                    src="/images/face_image.png"
+                    src="/images/face_image.webp"
                     fill
                     alt="Facial Surgery"
                     className="object-cover"
@@ -693,7 +693,7 @@ const FaceHub = () => {
               <div className="relative">
                 <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden">
                   <BaseImage
-                    src="/images/face_lift_image.png"
+                    src="/images/face_lift_image.webp"
                     fill
                     alt="Natural Results"
                     className="object-cover"

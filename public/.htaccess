@@ -8,6 +8,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Return 410 Gone for old WordPress URLs (images, uploads, etc.)
+# Tells search engines these resources are permanently removed
+RewriteRule ^wp-content/ - [G,L]
+RewriteRule ^wp-includes/ - [G,L]
+RewriteRule ^wp-admin/ - [G,L]
+
 # 301 Redirects - Old site URLs to new site URLs
 RewriteRule ^aboutus/?$ /about-dr-soma/ [R=301,L]
 RewriteRule ^blogs/?$ /blog/ [R=301,L]

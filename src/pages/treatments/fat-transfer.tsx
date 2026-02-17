@@ -52,7 +52,7 @@ const FatTransfer = () => {
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <BaseImage
-                  src="/images/liposuction.png"
+                  src="/images/liposuction.webp"
                   width={500}
                   height={350}
                   loading="lazy"
@@ -322,7 +322,7 @@ const FatTransfer = () => {
           {
             title: "Liposuction",
             description: "Remove unwanted fat and sculpt your body with advanced liposuction techniques",
-            image: "/images/liposuction.png",
+            image: "/images/liposuction.webp",
             href: "/body/liposuction-malaysia",
             badge: "Related",
             badgeColor: "primary"
@@ -330,7 +330,7 @@ const FatTransfer = () => {
           {
             title: "Tummy Tuck",
             description: "Flatten and tighten abdomen with abdominoplasty",
-            image: "/images/tummy_tuck.png",
+            image: "/images/tummy_tuck.webp",
             href: "/body/tummy-tuck-malaysia",
             badge: "Popular",
             badgeColor: "blue"
@@ -338,7 +338,7 @@ const FatTransfer = () => {
           {
             title: "6-Pack Enhancement",
             description: "Achieve defined abdominal muscles with surgical enhancement",
-            image: "/images/pack_enhancement.png",
+            image: "/images/pack_enhancement.webp",
             href: "/body/six-pack-enhancement-malaysia",
             badge: "Trending",
             badgeColor: "green"
@@ -346,7 +346,7 @@ const FatTransfer = () => {
           {
             title: "Male Breast Reduction",
             description: "Flatter, more masculine chest contour with gynecomastia surgery",
-            image: "/images/male_breast_reduction.png",
+            image: "/images/male_breast_reduction.webp",
             href: "/male/male-breast-reduction-malaysia",
             badge: "Specialized",
             badgeColor: "purple"

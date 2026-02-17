@@ -20,7 +20,7 @@ const SkinCare = () => {
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <BaseImage
-                  src="/images/skin_care_image.png"
+                  src="/images/skin_care_image.webp"
                   width={500}
                   height={350}
                   loading="lazy"
@@ -194,7 +194,7 @@ const SkinCare = () => {
           {
             title: "Cellular Rejuvenation",
             description: "Advanced therapies for cellular regeneration and rejuvenation",
-            image: "/images/cellular_rejuvenation.png",
+            image: "/images/cellular_rejuvenation.webp",
             href: "/regenerative-treatments/cellular-rejuvenation-malaysia",
             badge: "Related",
             badgeColor: "primary"
@@ -202,7 +202,7 @@ const SkinCare = () => {
           {
             title: "Exosomes Therapy",
             description: "Cellular therapy for regeneration and healing",
-            image: "/images/cellular_rejuvenation.png",
+            image: "/images/cellular_rejuvenation.webp",
             href: "/treatments/exosomes-therapy",
             badge: "Popular",
             badgeColor: "blue"
@@ -210,7 +210,7 @@ const SkinCare = () => {
           {
             title: "EXION",
             description: "The future of non-invasive aesthetic enhancement",
-            image: "/images/skin_healing_image.png",
+            image: "/images/skin_healing_image.webp",
             href: "/regenerative-treatments/exion-treatment-malaysia",
             badge: "Non-Surgical",
             badgeColor: "green"
@@ -218,7 +218,7 @@ const SkinCare = () => {
           {
             title: "Advanced Wound Management",
             description: "Specialized treatment protocols for optimal healing",
-            image: "/images/advanced_wound_management.png",
+            image: "/images/advanced_wound_management.webp",
             href: "/treatments/advanced-wound-management",
             badge: "Specialized",
             badgeColor: "purple"

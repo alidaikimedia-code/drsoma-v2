@@ -146,7 +146,7 @@ const Header = () => {
         <div className="containers px-[30px]">
           <div className="flex flex-nowrap items-center justify-between h-[80px] lg:h-[90px]">
             <Link href={lp("/")} className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
-              <BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={80} height={80} className="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px]" />
+              <BaseImage src="/images/dr_soma_logo.webp" alt="Dr. Soma Clinical Aesthetics Logo" width={80} height={80} className="w-[65px] h-[65px] lg:w-[75px] lg:h-[75px]" />
             </Link>
             <nav className="hidden lg:flex items-center justify-center flex-1 px-10">
               <div className="flex flex-nowrap items-center gap-[40px]">
@@ -282,7 +282,7 @@ const Header = () => {
       {/* Mobile Side Navigation */}
       <div className={`fixed top-0 left-0 z-[70] flex flex-col w-[300px] max-w-[85vw] h-screen bg-white lg:hidden transition-transform duration-500 ease-out ${sideNavOpened ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex flex-nowrap items-center justify-between p-6 border-b border-black/10">
-          <Link href={lp("/")} onClick={handleSideNav}><BaseImage src="/images/dr_soma_logo.png" alt="Dr. Soma Clinical Aesthetics Logo" width={60} height={60} /></Link>
+          <Link href={lp("/")} onClick={handleSideNav}><BaseImage src="/images/dr_soma_logo.webp" alt="Dr. Soma Clinical Aesthetics Logo" width={60} height={60} /></Link>
           <button className="flex items-center justify-center w-12 h-12 rounded-full bg-black/5 text-black transition-all duration-300 hover:bg-black/10 active:scale-95" onClick={handleSideNav} aria-label="Close menu">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

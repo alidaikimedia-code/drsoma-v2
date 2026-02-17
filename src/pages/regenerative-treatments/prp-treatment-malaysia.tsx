@@ -69,7 +69,7 @@ const PRPTreatmentMalaysia = () => {
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <BaseImage
-                  src="/images/cellular_rejuvenation.png"
+                  src="/images/cellular_rejuvenation.webp"
                   width={500}
                   height={350}
                   loading="lazy"
@@ -319,7 +319,7 @@ const PRPTreatmentMalaysia = () => {
           {
             title: "Cellular Rejuvenation",
             description: "Advanced therapies for cellular regeneration and rejuvenation",
-            image: "/images/cellular_rejuvenation.png",
+            image: "/images/cellular_rejuvenation.webp",
             href: "/regenerative-treatments/cellular-rejuvenation-malaysia",
             badge: "Related",
             badgeColor: "primary"
@@ -327,7 +327,7 @@ const PRPTreatmentMalaysia = () => {
           {
             title: "Advanced Skin Care",
             description: "Comprehensive skin care treatments for optimal skin health",
-            image: "/images/skin_care_image.png",
+            image: "/images/skin_care_image.webp",
             href: "/treatments/skin-care",
             badge: "Popular",
             badgeColor: "blue"
@@ -335,7 +335,7 @@ const PRPTreatmentMalaysia = () => {
           {
             title: "EXION Treatment",
             description: "The future of non-invasive aesthetic enhancement",
-            image: "/images/skin_healing_image.png",
+            image: "/images/skin_healing_image.webp",
             href: "/regenerative-treatments/exion-treatment-malaysia",
             badge: "Non-Surgical",
             badgeColor: "green"

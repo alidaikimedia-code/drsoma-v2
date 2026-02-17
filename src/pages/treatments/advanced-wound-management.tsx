@@ -52,7 +52,7 @@ const AdvancedWoundManagement = () => {
               {/* Service Image Card - Left Side */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
                 <BaseImage
-                  src="/images/advanced_wound_management.png"
+                  src="/images/advanced_wound_management.webp"
                   width={500}
                   height={350}
                   loading="lazy"
@@ -273,7 +273,7 @@ const AdvancedWoundManagement = () => {
           {
             title: "Keloid Treatment",
             description: "Specialized treatment for keloid scars and wound complications",
-            image: "/images/keloid_treatment.png",
+            image: "/images/keloid_treatment.webp",
             href: "/aesthetic-treatments/keloid-treatment-malaysia",
             badge: "Related",
             badgeColor: "primary"
@@ -281,7 +281,7 @@ const AdvancedWoundManagement = () => {
           {
             title: "Fat Transfer",
             description: "Natural enhancement using your body's own fat for volume restoration",
-            image: "/images/eyelid_reduction.png",
+            image: "/images/eyelid_reduction.webp",
             href: "/treatments/fat-transfer",
             badge: "Popular",
             badgeColor: "blue"
@@ -289,7 +289,7 @@ const AdvancedWoundManagement = () => {
           {
             title: "Advanced Skin Care",
             description: "Comprehensive skin care treatments for optimal skin health",
-            image: "/images/rhinoplasty_in_nose.png",
+            image: "/images/rhinoplasty_in_nose.webp",
             href: "/treatments/skin-care",
             badge: "Non-Surgical",
             badgeColor: "green"
@@ -297,7 +297,7 @@ const AdvancedWoundManagement = () => {
           {
             title: "Cellular Rejuvenation",
             description: "Advanced therapies for cellular regeneration and rejuvenation",
-            image: "/images/Safe_thread_in_face.png",
+            image: "/images/Safe_thread_in_face.webp",
             href: "/regenerative-treatments/cellular-rejuvenation-malaysia",
             badge: "Specialized",
             badgeColor: "purple"

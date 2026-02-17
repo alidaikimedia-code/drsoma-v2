@@ -84,35 +84,35 @@ const NewHome = () => {
     {
       title: t('home.specFace'),
       description: t('home.specFaceDesc'),
-      image: "/images/face_image.png",
+      image: "/images/face_image.webp",
       link: "/face",
       colSpan: "md:col-span-2"
     },
     {
       title: t('home.specBreast'),
       description: t('home.specBreastDesc'),
-      image: "/images/breast_image.png",
+      image: "/images/breast_image.webp",
       link: "/breast",
       colSpan: "md:col-span-1"
     },
     {
       title: t('home.specBody'),
       description: t('home.specBodyDesc'),
-      image: "/images/body_image.png",
+      image: "/images/body_image.webp",
       link: "/body",
       colSpan: "md:col-span-1"
     },
     {
       title: t('home.specRecon'),
       description: t('home.specReconDesc'),
-      image: "/images/scar_care_image.png",
+      image: "/images/scar_care_image.webp",
       link: "/face",
       colSpan: "md:col-span-1"
     },
     {
       title: t('home.specNonSurg'),
       description: t('home.specNonSurgDesc'),
-      image: "/images/aesthetic_services.png",
+      image: "/images/aesthetic_services.webp",
       link: "/aesthetic-treatments",
       colSpan: "md:col-span-1"
     }

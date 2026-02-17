@@ -20,10 +20,10 @@ const bestForCounts = [4, 3, 3, 2, 3, 3, 4]
 // Static treatment metadata (non-translatable)
 const treatmentMeta = [
   { icon: Sparkles, category: "enhancement", image: "/breast/breast-augmentation.jpg", href: "/breast/breast-augmentation-malaysia" },
-  { icon: RefreshCw, category: "enhancement", image: "/breast/breast-lift.png", href: "/breast/breast-lift-malaysia" },
-  { icon: Minus, category: "enhancement", image: "/breast/breast-reduction.png", href: "/breast/breast-reduction-malaysia" },
+  { icon: RefreshCw, category: "enhancement", image: "/breast/breast-lift.webp", href: "/breast/breast-lift-malaysia" },
+  { icon: Minus, category: "enhancement", image: "/breast/breast-reduction.webp", href: "/breast/breast-reduction-malaysia" },
   { icon: Droplets, category: "enhancement", image: "/breast/fat-transfer-breast-augmentation-malaysia", href: "/breast/fat-transfer-breast-augmentation-malaysia" },
-  { icon: XCircle, category: "revision", image: "/breast/breast-implant-removal.png", href: "/breast/breast-implant-removal-malaysia" },
+  { icon: XCircle, category: "revision", image: "/breast/breast-implant-removal.webp", href: "/breast/breast-implant-removal-malaysia" },
   { icon: Settings, category: "revision", image: "/breast/breast-revision.avif", href: "/breast/breast-revision-surgery-malaysia" },
   { icon: AlertCircle, category: "revision", image: "/breast/capsular-contracture.jpeg", href: "/breast/capsular-contracture-correction-malaysia" },
 ]
@@ -91,7 +91,7 @@ function HeroSection({ t }: { t: (key: string) => string }) {
           <div className="relative hidden lg:block">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <BaseImage
-                src="/breast/breast-hero.png"
+                src="/breast/breast-hero.webp"
                 alt="Breast surgery consultation"
                 fill
                 className="object-cover"

@@ -38,6 +38,18 @@ export default function Document() {
             />
           </>
         )}
+        {/* Google tag (gtag.js) - G-7LF9EQM7KP */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LF9EQM7KP" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7LF9EQM7KP');
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />

@@ -241,7 +241,7 @@ const BodyHub = () => {
         <meta property="og:description" content="Explore body contouring options in Malaysia with Dr. Soma Clinical Aesthetics. From liposuction to tummy tuck, find the right procedure for your goals." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl("/body")} />
-        <meta property="og:image" content={getFullUrl("/images/liposuction.png")} />
+        <meta property="og:image" content={getFullUrl("/images/liposuction.webp")} />
         <link rel="canonical" href={getFullUrl("/body")} />
         <script
           type="application/ld+json"
@@ -280,7 +280,7 @@ const BodyHub = () => {
               "url": "https://drsomaplasticsurgery.com/body",
               "description": "Explore body contouring options in Malaysia with Dr. Soma Clinical Aesthetics. From liposuction to tummy tuck, find the right procedure for your goals in a calm, professional environment.",
               "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 127},
-              "image": "https://drsomaplasticsurgery.com/images/liposuction.png"
+              "image": "https://drsomaplasticsurgery.com/images/liposuction.webp"
             })
           }}
         />
@@ -356,7 +356,7 @@ const BodyHub = () => {
             }`}>
               <div className="relative">
                 <BaseImage
-                  src="/images/liposuction.png"
+                  src="/images/liposuction.webp"
                   width={450}
                   height={400}
                   alt="Body Contouring Malaysia"
