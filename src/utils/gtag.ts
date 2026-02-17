@@ -1,10 +1,10 @@
 // Google Analytics utility functions
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
+export const GA_TRACKING_ID = 'G-7LF9EQM7KP';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID!, {
+    window.gtag('config', GA_TRACKING_ID, {
       page_location: url,
     });
   }
@@ -24,15 +24,6 @@ export const event = ({ action, category, label, value }: {
       value: value,
     });
   }
-};
-
-// Custom event for announcement interactions
-export const trackAnnouncementEvent = (action: string, announcementId: string, title: string) => {
-  event({
-    action,
-    category: 'Announcement',
-    label: `${title} (${announcementId})`,
-  });
 };
 
 // Custom event for form submissions
@@ -69,4 +60,4 @@ export const trackContactAction = (action: string, method: string) => {
     category: 'Contact',
     label: method,
   });
-}; 
+};

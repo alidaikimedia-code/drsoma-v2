@@ -652,7 +652,7 @@ const BodyHub = () => {
             }`}>
               <div className="relative group">
                 <BaseImage
-                  src="/images/dr_soma_pic.png"
+                  src="/images/dr_soma_pic.webp"
                   width={500}
                   height={450}
                   alt="Dr. Soma Clinical Aesthetics"

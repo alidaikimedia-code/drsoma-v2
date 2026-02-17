@@ -136,6 +136,8 @@ const NewHome = () => {
         <link rel="alternate" hrefLang="ms" href={getFullUrl('/ms')} />
         <link rel="alternate" hrefLang="ko" href={getFullUrl('/ko')} />
         <link rel="alternate" hrefLang="x-default" href={getFullUrl('/')} />
+        {/* Preload hero LCP image */}
+        <link rel="preload" as="image" href="/images/Dr%20Soma%20Hero%20Image.png" />
       </Head>
 
       {/* Hero Section */}

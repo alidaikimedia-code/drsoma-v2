@@ -83,14 +83,14 @@ const SuccessStories = () => {
         <meta property="og:description" content="Read inspiring success stories and testimonials from Dr. Soma's patients. Real stories, real results from our satisfied patients in Malaysia." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={getFullUrl('/success-stories')} />
-        <meta property="og:image" content={getFullUrl('/images/success_stories_banner_image.png')} />
+        <meta property="og:image" content={getFullUrl('/images/success_stories_banner_image.webp')} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Success Stories - Dr. Soma Clinical Aesthetics | Plastic Surgeon Malaysia" />
         <meta name="twitter:description" content="Read inspiring success stories and testimonials from Dr. Soma's patients. Real stories, real results from our satisfied patients in Malaysia." />
-        <meta name="twitter:image" content={getFullUrl('/images/success_stories_banner_image.png')} />
+        <meta name="twitter:image" content={getFullUrl('/images/success_stories_banner_image.webp')} />
         <link rel="canonical" href={getFullUrl('/success-stories')} />
       </Head>
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/success_stories_banner_image.png')})` }} ref={bannerRef}>
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/success_stories_banner_image.webp')})` }} ref={bannerRef}>
         <div className="flex containers w-full">
           <div className={`flex w-full flex-col gap-[10px] max-w-[406px] transition-all duration-700 ${
             isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

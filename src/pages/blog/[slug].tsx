@@ -69,7 +69,7 @@ const BlogDetail = ({ blog, error }: BlogDetailProps) => {
       </Head>
 
       {/* Banner Section */}
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[150px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.png')})` }} id="banner">
+      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[150px]" style={{ backgroundImage: `url(${getAssetPath('/images/blog_page_banner_image.webp')})` }} id="banner">
         <div className="flex containers w-full">
           <div className="flex w-full flex-col gap-[10px] max-w-[900px]">
             <h1 className="text-white max-[768px]:!text-[36px] max-[512px]:!text-[28px] !text-[42px] leading-tight">
@@ -204,7 +204,7 @@ const BlogDetail = ({ blog, error }: BlogDetailProps) => {
                     >
                       <div className="relative overflow-hidden h-40">
                         <BaseImage
-                          src={relatedBlog.featured_image?.medium || relatedBlog.featured_image?.thumbnail || "/images/blog_image.png"}
+                          src={relatedBlog.featured_image?.medium || relatedBlog.featured_image?.thumbnail || "/images/blog_image.webp"}
                           alt={relatedBlog.title}
                           width={300}
                           height={160}

@@ -52,7 +52,7 @@ const Services = () => {
       <Head>
         <link rel="canonical" href="https://drsomaplasticsurgery.com/treatments/" />
       </Head>
-      <section className="flex bg-no-repeat bg-cover bg-center py-100 lg:py-[175px] relative" style={{ backgroundImage: `url(${getAssetPath('/images/service_page_banner_image.png')})` }}>
+      <section className="flex bg-no-repeat bg-cover bg-center py-100 lg:py-[175px] relative" style={{ backgroundImage: `url(${getAssetPath('/images/service_page_banner_image.webp')})` }}>
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="flex containers w-full relative z-10">
           <div className="flex w-full flex-col gap-[10px] max-w-[406px]">
@@ -362,24 +362,6 @@ const Services = () => {
                   {t('svc.breastCard2')}
                 </h4>
               </Link>
-              {/* <Link
-                href={"/treatments/ariom-breast-implant"}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slideInUp"
-                style={{ animationDelay: isVisible('section-2') ? '0.4s' : '0s' }}
-              >
-                <BaseImage
-                  src="/images/arion_breast_implant.png"
-                  width={280}
-                  height={320}
-                  loading="lazy"
-                  alt="Arion Breast Implant"
-                  className="w-full h-[320px] object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <h4 className="absolute bottom-6 left-4 right-4 text-white font-semibold text-lg text-center">
-                  Arion Breast Implant
-                </h4>
-              </Link> */}
             </div>
             <div className="flex justify-center mt-8">
               <Link

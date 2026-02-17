@@ -1,5 +1,4 @@
 import { Html, Main, NextScript, Head } from "next/document";
-import { GA_TRACKING_ID } from "@/utils/gtag";
 
 export default function Document() {
   return (
@@ -17,28 +16,11 @@ export default function Document() {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="R5MjYmM1PcvrzXa95Gh0JwuT2o0PCLWlXHl0vb5JgV4" />
-        {/* Google Analytics */}
-        {GA_TRACKING_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_location: window.location.href,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
-        {/* Google tag (gtag.js) - G-7LF9EQM7KP */}
+        {/* Google Fonts - preconnect + non-blocking stylesheet */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" />
+        {/* Google Analytics - G-7LF9EQM7KP */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LF9EQM7KP" />
         <script
           dangerouslySetInnerHTML={{
