@@ -90,15 +90,40 @@ const SuccessStories = () => {
         <meta name="twitter:image" content={getFullUrl('/images/success_stories_banner_image.webp')} />
         <link rel="canonical" href={getFullUrl('/success-stories')} />
       </Head>
-      <section className="flex bg-no-repeat bg-cover py-100 lg:py-[175px]" style={{ backgroundImage: `url(${getAssetPath('/images/success_stories_banner_image.webp')})` }} ref={bannerRef}>
-        <div className="flex containers w-full">
-          <div className={`flex w-full flex-col gap-[10px] max-w-[406px] transition-all duration-700 ${
-            isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      {/* Hero Banner Section */}
+      <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center overflow-hidden" ref={bannerRef}>
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-primary/30">
+          <BaseImage
+            src="/images/success_stories_banner_image.webp"
+            alt="Success Stories Banner"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-orange-500/20 animate-pulse"></div>
+
+        {/* Content */}
+        <div className="flex containers w-full relative z-10">
+          <div className={`flex w-full flex-col gap-4 max-w-xl transition-all duration-1000 ${
+            isVisible('section-0') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}>
-            <h1 className="text-secondary max-[768px]:!text-[54px] max-[512px]:!text-[42px]">
-              Success Stories
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 backdrop-blur-sm rounded-full w-fit border border-white/30">
+              <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
+              <span className="text-white text-sm font-medium">Patient Testimonials</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-2xl" style={{ textTransform: 'none' }}>
+              <span className="text-primary">Success</span> Stories
             </h1>
-            <h5 className="text-white">
+
+            {/* Subtitle */}
+            <h5 className="text-lg lg:text-xl text-white font-medium drop-shadow-lg max-w-md" style={{ textTransform: 'none' }}>
               Real stories, real results from our satisfied patients
             </h5>
           </div>

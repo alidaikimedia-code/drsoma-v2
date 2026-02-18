@@ -723,14 +723,6 @@ export default function EyelidSurgeryMalaysia() {
               </Link>
             </div>
 
-            {/* Related Links */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {tags.map((tag, i) => (
-                <Link key={i} href={tagLinks[i]} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-500 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 border border-zinc-200 hover:border-[#FE7623]/20">
-                  {tag}
-                </Link>
-              ))}
-            </div>
           </div>
         </section>
       </main>

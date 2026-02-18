@@ -579,11 +579,6 @@ export default function LiposuctionMalaysia() {
                 {t('lipo.bookConsultation')}
               </Link>
             </div>
-            <div className="mt-16 flex flex-wrap justify-center gap-3">
-              {["subcutaneous fat", "adipocytes", "MicroAire PAL", "tumescent anesthesia", "body contouring"].map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-zinc-50 rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-transparent hover:border-[#FE7623]/20">{tag}</span>
-              ))}
-            </div>
           </div>
         </section>
       </main>
