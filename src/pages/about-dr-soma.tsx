@@ -28,7 +28,7 @@ const About = () => {
     desc: t(`about.card${i}Desc`),
   }));
 
-  const statValues = ["1000+", "30+", "500+", "4.9"];
+  const statValues = ["1,000+", "30+", "500+", "4.9"];
   const stats = Array.from({ length: 4 }, (_, i) => ({
     label: t(`about.stat${i}Label`),
     value: statValues[i],

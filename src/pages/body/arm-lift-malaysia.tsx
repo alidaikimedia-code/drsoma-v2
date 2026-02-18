@@ -430,13 +430,16 @@ export default function ArmLiftMalaysia() {
               {/* Causes Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
                 <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('armLift.causesTitle')}</h3>
+                <p className="text-sm text-zinc-700 leading-relaxed mb-6">
+                  Causes include weight loss, ageing, genetics, sun damage, inactivity, and collagen loss.
+                </p>
                 <div className={`grid grid-cols-2 md:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {causesOfSagging.map((cause, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
                       <svg className="w-6 h-6 sm:w-7 sm:h-7 mx-auto mb-3 text-zinc-400 group-hover:text-[#FE7623] group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                       </svg>
-                      <span className="text-sm font-semibold text-zinc-700 group-hover:text-[#FE7623] transition-colors duration-300">{cause.name}</span>
+                      <span className="text-sm font-semibold text-zinc-700 group-hover:text-[#FE7623] transition-colors duration-300" style={{ textTransform: 'capitalize' }}>{cause.name}</span>
                     </div>
                   ))}
                 </div>
@@ -553,6 +556,7 @@ export default function ArmLiftMalaysia() {
 
               <div className="mt-10 pt-10 border-t border-zinc-100">
                 <h4 className="text-sm font-bold text-zinc-900 mb-4">{t('armLift.candidateTitle')}</h4>
+                <p className="text-sm text-zinc-700 leading-relaxed mb-4">{t('armLift.candidateSummary')}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {candidateChecklist.map((item, i) => (
                     <div key={i} className="flex flex-row items-start gap-2 text-sm text-zinc-600 group cursor-pointer hover:text-[#FE7623] transition-colors duration-300">

@@ -75,7 +75,7 @@ const Footer = () => {
                 <div className="flex flex-col">
                   <span>Klinik Plastic Surgery Soma</span>
                   <span>45B, 2nd Floor, Jalan SS15/5A,</span>
-                  <span>47500, Subang Jaya, Selangor,</span>
+                  <span>47500 Subang Jaya, Selangor,</span>
                   <span>Malaysia</span>
                 </div>
               </li>

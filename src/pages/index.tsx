@@ -159,7 +159,7 @@ const NewHome = () => {
             </span>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#101010] leading-[1.1] mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#101010] leading-[1.1] mb-6" style={{ textTransform: 'none' }}>
               {t('home.heroTitle1')} <span className="text-[#EA622F]">{t('home.heroTitle2')}</span> <br /> {t('home.heroTitle3')}
             </h1>
 
@@ -208,12 +208,14 @@ const NewHome = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] hover:shadow-md h-14 rounded-full px-8 text-base shadow-lg shadow-orange-500/20"
+                style={{ textTransform: 'none' }}
                 onClick={() => router.push('/contact')}
               >
                 {t('home.heroBtn1')}
               </button>
               <button
                 className="inline-flex items-center justify-center whitespace-nowrap font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 border bg-background shadow-sm hover:text-accent-foreground border-[#EA622F] text-[#EA622F] hover:bg-[#EA622F]/10 h-14 rounded-full px-8 text-base"
+                style={{ textTransform: 'none' }}
                 onClick={() => router.push('/face')}
               >
                 {t('home.heroBtn2')}
@@ -234,28 +236,28 @@ const NewHome = () => {
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat1Title')}</h3>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight" style={{ textTransform: 'capitalize' }}>{t('home.stat1Title')}</h3>
               <p className="text-sm text-gray-500 mt-1">{t('home.stat1Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <BadgeCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat2Title')}</h3>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight" style={{ textTransform: 'capitalize' }}>{t('home.stat2Title')}</h3>
               <p className="text-sm text-gray-500 mt-1">{t('home.stat2Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat3Title')}</h3>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight" style={{ textTransform: 'capitalize' }}>{t('home.stat3Title')}</h3>
               <p className="text-sm text-gray-500 mt-1">{t('home.stat3Sub')}</p>
             </div>
             <div className="flex flex-col items-center justify-center py-10 px-4 text-center group hover:bg-gray-50 transition-colors">
               <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center text-[#EA622F] mb-4 group-hover:scale-110 transition-transform duration-300">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900 leading-tight">{t('home.stat4Title')}</h3>
+              <h3 className="font-bold text-lg text-gray-900 leading-tight" style={{ textTransform: 'capitalize' }}>{t('home.stat4Title')}</h3>
               <p className="text-sm text-gray-500 mt-1">{t('home.stat4Sub')}</p>
             </div>
           </div>
@@ -265,7 +267,7 @@ const NewHome = () => {
       {/* Where Details Matter Section */}
       <section id="about" className="py-[50px] bg-white text-center px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-[#101010] mb-6">{t('home.detailsTitle')}</h2>
+          <h2 className="text-3xl font-bold text-[#101010] mb-6" style={{ textTransform: 'none' }}>{t('home.detailsTitle')}</h2>
           <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed text-lg">
             {t('home.detailsDesc')}
           </p>
@@ -277,7 +279,7 @@ const NewHome = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col gap-3 mb-12 items-center text-center">
             <span className="text-[#EA622F] font-semibold tracking-wider text-sm uppercase">{t('home.specLabel')}</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]">{t('home.specTitle')}</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#101010] leading-[1.15]" style={{ textTransform: 'capitalize' }}>{t('home.specTitle')}</h2>
             <p className="text-gray-600 text-lg max-w-2xl leading-relaxed mt-2">
               {t('home.specDesc')}
             </p>
@@ -589,6 +591,7 @@ const NewHome = () => {
                 <div className="flex gap-4 justify-center md:justify-start">
                   <button
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#EA622F] text-white hover:bg-[#d55627] shadow-sm hover:shadow-md h-12 px-6 py-2"
+                    style={{ textTransform: 'capitalize' }}
                     onClick={() => router.push('/contact')}
                   >
                     {t('home.faqBtn1')}
@@ -598,6 +601,7 @@ const NewHome = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 select-none active:scale-95 bg-[#25D366] text-white hover:bg-[#20bd5a] shadow-sm h-12 px-6 py-2"
+                    style={{ textTransform: 'capitalize' }}
                   >
                     {t('home.faqBtn2')}
                   </a>

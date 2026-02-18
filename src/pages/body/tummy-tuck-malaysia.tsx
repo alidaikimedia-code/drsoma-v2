@@ -427,7 +427,7 @@ export default function TummyTuckMalaysia() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm text-zinc-600 font-medium">{t('tummyTuck.trustedBy')} <span className="text-[#FE7623] font-bold">1000+</span> {t('tummyTuck.happyPatients')}</span>
+                <span className="text-sm text-zinc-600 font-medium">{t('tummyTuck.trustedBy')} <span className="text-[#FE7623] font-bold">1,000</span> {t('tummyTuck.happyPatients')}</span>
               </div>
             </div>
 
@@ -475,7 +475,7 @@ export default function TummyTuckMalaysia() {
 
               {/* Core Issues Grid */}
               <div data-animate="def-2" className={`md:col-span-7 transition-all duration-700 ${isVisible('def-2') ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <h3 className="text-sm font-bold text-[#FE7623] uppercase tracking-wide mb-6">{t('tummyTuck.coreIssuesTitle')}</h3>
+                <h3 className="text-sm font-bold text-[#FE7623] tracking-wide mb-6" style={{ textTransform: 'capitalize' }}>{t('tummyTuck.coreIssuesTitle')}</h3>
                 <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 ${isVisible('def-2') ? 'stagger-animation' : ''}`}>
                   {coreIssues.map((issue, i) => (
                     <div key={i} className="p-4 rounded-xl border border-zinc-200 text-center hover:border-[#FE7623] hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group cursor-pointer card-shine ripple bg-white">
