@@ -692,11 +692,7 @@ export default function BreastLiftMalaysia() {
             <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-4 sm:mb-6">{t('bl.pricingTitle')}</h2>
             <div className="bg-white p-5 sm:p-8 rounded-xl sm:rounded-2xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-500">
               <p className="text-para-black text-xs sm:text-sm mb-4 sm:mb-6">{t('bl.pricingDesc')}</p>
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-                {[t('bl.price0'), t('bl.price1'), t('bl.price2'), t('bl.price3'), t('bl.price4')].map((item, i) => (
-                  <span key={i} className="px-2 py-1 sm:px-3 sm:py-1 bg-zinc-100 rounded-full text-[10px] sm:text-xs text-para-black hover:bg-[#FE7623] hover:text-white transition-all duration-300 cursor-pointer">{item}</span>
-                ))}
-              </div>
+              <p className="text-para-black text-xs sm:text-sm mb-6 sm:mb-8">{t('bl.price0')}</p>
               <p className="text-xs sm:text-sm font-semibold text-header-black">{t('bl.pricingNote')}</p>
             </div>
           </div>

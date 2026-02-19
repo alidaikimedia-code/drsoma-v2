@@ -663,11 +663,7 @@ export default function BreastReductionMalaysia() {
             <h2 className="text-2xl font-semibold tracking-tight text-[#FE7623] mb-4 sm:mb-6">{t('br.pricingTitle')}</h2>
             <div className="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all duration-500">
               <p className="text-para-black text-sm mb-6">{t('br.pricingDesc')}</p>
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <span key={i} className="px-3 py-1 bg-zinc-100 rounded-full text-xs text-para-black hover:bg-[#FE7623] hover:text-white transition-all cursor-pointer">{t(`br.price${i}`)}</span>
-                ))}
-              </div>
+              <p className="text-para-black text-xs sm:text-sm mb-6 sm:mb-8">{t('br.price0')}</p>
               <p className="text-sm font-semibold text-header-black">{t('br.pricingNote')}</p>
             </div>
           </div>
