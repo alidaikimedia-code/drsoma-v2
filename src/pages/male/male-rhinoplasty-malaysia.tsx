@@ -516,13 +516,6 @@ export default function MaleRhinoplastyMalaysia() {
                 {t('mr.ctaBookBtn')}
               </Link>
             </div>
-
-            {/* SEO Tags */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-              {Array.from({ length: 5 }, (_, i) => t(`mr.seoTag${i}`)).map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-white rounded-full text-xs text-zinc-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 hover:text-[#FE7623] hover:scale-110 transition-all duration-300 cursor-default border border-zinc-200 hover:border-[#FE7623]/20" style={{animationDelay: `${i * 100}ms`}}>{tag}</span>
-              ))}
-            </div>
           </div>
         </section>
       </main>
